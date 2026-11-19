@@ -1,0 +1,5 @@
+; operator.new @ 00c44830
+00c44830	adrp x16,0xcc0000
+00c44834	ldr x17,[x16, #0x400]
+00c44838	add x16,x16,#0x400
+00c4483c	br x17

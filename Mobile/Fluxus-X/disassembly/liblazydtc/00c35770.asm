@@ -1,0 +1,5 @@
+; CT_POLICY_EVAL_CTX_free @ 00c35770
+00c35770	adrp x16,0xcb8000
+00c35774	ldr x17,[x16, #0xba0]
+00c35778	add x16,x16,#0xba0
+00c3577c	br x17

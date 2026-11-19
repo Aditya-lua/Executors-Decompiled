@@ -1,0 +1,5 @@
+; CTLOG_STORE_free @ 00c35730
+00c35730	adrp x16,0xcb8000
+00c35734	ldr x17,[x16, #0xb80]
+00c35738	add x16,x16,#0xb80
+00c3573c	br x17

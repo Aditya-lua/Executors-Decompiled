@@ -1,0 +1,7 @@
+; EVP_CIPHER_meth_free @ 00a86570
+00a86570	cbz x0,0x00a86584
+00a86574	ldr w8,[x0, #0x18]
+00a86578	cmp w8,#0x2
+00a8657c	b.ne 0x00a86584
+00a86580	b 0x00c3cd40
+00a86584	ret

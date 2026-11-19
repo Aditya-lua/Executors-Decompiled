@@ -1,0 +1,27 @@
+; OSSL_ENCODER_CTX_new @ 00a61104
+00a61104	str x19,[sp, #-0x20]!
+00a61108	adrp x1,0x2d3000
+00a6110c	add x1,x1,#0xb3c
+00a61110	mov w0,#0x68
+00a61114	mov w2,#0x28f
+00a61118	stp x29,x30,[sp, #0x10]
+00a6111c	add x29,sp,#0x10
+00a61120	bl 0x00c34250
+00a61124	mov x19,x0
+00a61128	cbnz x0,0x00a6115c
+00a6112c	bl 0x00c342a0
+00a61130	adrp x0,0x2d3000
+00a61134	adrp x2,0x2a5000
+00a61138	add x0,x0,#0xb3c
+00a6113c	add x2,x2,#0xfcf
+00a61140	mov w1,#0x290
+00a61144	bl 0x00c342b0
+00a61148	mov w1,#0x100
+00a6114c	mov w0,#0x3b
+00a61150	movk w1,#0xc, LSL #16
+00a61154	mov x2,xzr
+00a61158	bl 0x00c342c0
+00a6115c	ldp x29,x30,[sp, #0x10]
+00a61160	mov x0,x19
+00a61164	ldr x19,[sp], #0x20
+00a61168	ret

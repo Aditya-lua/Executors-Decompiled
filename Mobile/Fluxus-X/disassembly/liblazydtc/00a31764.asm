@@ -1,0 +1,70 @@
+; EC_POINT_set_affine_coordinates @ 00a31764
+00a31764	str x21,[sp, #-0x30]!
+00a31768	stp x20,x19,[sp, #0x10]
+00a3176c	stp x29,x30,[sp, #0x20]
+00a31770	ldr x9,[x0]
+00a31774	add x29,sp,#0x20
+00a31778	ldr x8,[x9, #0x78]
+00a3177c	cbz x8,0x00a317b8
+00a31780	ldr x10,[x1]
+00a31784	mov x21,x1
+00a31788	cmp x9,x10
+00a3178c	b.eq 0x00a317fc
+00a31790	bl 0x00c342a0
+00a31794	adrp x0,0x29e000
+00a31798	adrp x2,0x2d1000
+00a3179c	add x0,x0,#0xa7
+00a317a0	add x2,x2,#0x83f
+00a317a4	mov w1,#0x365
+00a317a8	bl 0x00c342b0
+00a317ac	mov w0,#0x10
+00a317b0	mov w1,#0x65
+00a317b4	b 0x00a317e0
+00a317b8	bl 0x00c342a0
+00a317bc	adrp x0,0x29e000
+00a317c0	adrp x2,0x2d1000
+00a317c4	add x0,x0,#0xa7
+00a317c8	add x2,x2,#0x83f
+00a317cc	mov w1,#0x361
+00a317d0	bl 0x00c342b0
+00a317d4	mov w1,#0x101
+00a317d8	mov w0,#0x10
+00a317dc	movk w1,#0xc, LSL #16
+00a317e0	mov x2,xzr
+00a317e4	bl 0x00c342c0
+00a317e8	mov w0,wzr
+00a317ec	ldp x29,x30,[sp, #0x20]
+00a317f0	ldp x20,x19,[sp, #0x10]
+00a317f4	ldr x21,[sp], #0x30
+00a317f8	ret
+00a317fc	ldr w9,[x0, #0x20]
+00a31800	mov x19,x4
+00a31804	mov x20,x0
+00a31808	cbz w9,0x00a3181c
+00a3180c	ldr w10,[x21, #0x8]
+00a31810	cbz w10,0x00a3181c
+00a31814	cmp w9,w10
+00a31818	b.ne 0x00a31790
+00a3181c	mov x0,x20
+00a31820	mov x1,x21
+00a31824	mov x4,x19
+00a31828	blr x8
+00a3182c	cbz w0,0x00a317ec
+00a31830	mov x0,x20
+00a31834	mov x1,x21
+00a31838	mov x2,x19
+00a3183c	bl 0x00a31878
+00a31840	cmp w0,#0x0
+00a31844	b.le 0x00a31850
+00a31848	mov w0,#0x1
+00a3184c	b 0x00a317ec
+00a31850	bl 0x00c342a0
+00a31854	adrp x0,0x29e000
+00a31858	adrp x2,0x2d1000
+00a3185c	add x0,x0,#0xa7
+00a31860	add x2,x2,#0x83f
+00a31864	mov w1,#0x36c
+00a31868	bl 0x00c342b0
+00a3186c	mov w0,#0x10
+00a31870	mov w1,#0x6b
+00a31874	b 0x00a317e0

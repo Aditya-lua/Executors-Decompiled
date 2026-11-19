@@ -1,0 +1,19 @@
+; FUN_008a27f8 @ 008a27f8
+008a27f8	ldp x8,x11,[x1]
+008a27fc	ldp x9,x10,[x0]
+008a2800	add x8,x8,x9
+008a2804	and x1,x11,x10
+008a2808	and x9,x8,#-0x7f7f7f7f7f7f7f80
+008a280c	and x10,x1,#0x101010101010101
+008a2810	and x8,x8,#0x7f7f7f7f7f7f7f7f
+008a2814	sub x9,x9,x9, LSR #0x7
+008a2818	orr x10,x10,#0x1
+008a281c	cmn x1,#0x1
+008a2820	orr x8,x9,x8
+008a2824	csel x9,xzr,x10,eq
+008a2828	add x8,x9,x8
+008a282c	and x9,x8,#-0x7f7f7f7f7f7f7f80
+008a2830	and x8,x8,#0x7f7f7f7f7f7f7f7f
+008a2834	sub x9,x9,x9, LSR #0x7
+008a2838	orr x0,x9,x8
+008a283c	ret

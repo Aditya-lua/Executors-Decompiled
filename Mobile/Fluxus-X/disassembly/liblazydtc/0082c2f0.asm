@@ -1,0 +1,12 @@
+; _INIT_88 @ 0082c2f0
+0082c2f0	movi v0.2D,#0x0
+0082c2f4	adrp x1,0xd1d000
+0082c2f8	add x1,x1,#0x128
+0082c2fc	mov w8,#0x3f800000
+0082c300	nop
+0082c304	adr x0,0x7fbc70
+0082c308	adrp x2,0xc48000
+0082c30c	add x2,x2,#0x880
+0082c310	str w8,[x1, #0x20]
+0082c314	stp q0,q0,[x1]
+0082c318	b 0x00c2fe70

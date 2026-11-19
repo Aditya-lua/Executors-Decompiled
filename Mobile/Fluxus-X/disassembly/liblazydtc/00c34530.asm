@@ -1,0 +1,5 @@
+; pqueue_find @ 00c34530
+00c34530	adrp x16,0xcb8000
+00c34534	ldr x17,[x16, #0x280]
+00c34538	add x16,x16,#0x280
+00c3453c	br x17

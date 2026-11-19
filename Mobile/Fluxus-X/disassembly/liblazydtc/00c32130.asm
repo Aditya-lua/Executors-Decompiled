@@ -1,0 +1,5 @@
+; ASN1_STRING_get0_data @ 00c32130
+00c32130	adrp x16,0xcb7000
+00c32134	ldr x17,[x16, #0x80]
+00c32138	add x16,x16,#0x80
+00c3213c	br x17

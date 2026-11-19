@@ -1,0 +1,87 @@
+; FUN_0090c7ec @ 0090c7ec
+0090c7ec	str x23,[sp, #-0x40]!
+0090c7f0	stp x22,x21,[sp, #0x10]
+0090c7f4	stp x20,x19,[sp, #0x20]
+0090c7f8	stp x29,x30,[sp, #0x30]
+0090c7fc	add x29,sp,#0x30
+0090c800	ldr x22,[x0, #0x10]
+0090c804	mov x19,x0
+0090c808	mov x20,x1
+0090c80c	cbz x22,0x0090c924
+0090c810	ldr w21,[x22, #0x98]
+0090c814	cmn w21,#0x1
+0090c818	b.eq 0x0090c924
+0090c81c	cbz x20,0x0090c868
+0090c820	ldrb w8,[x20, #0xa85]
+0090c824	tbz w8,#0x4,0x0090c868
+0090c828	ldr x8,[x20, #0x12a0]
+0090c82c	cbz x8,0x0090c83c
+0090c830	ldr w8,[x8, #0x8]
+0090c834	cmp w8,#0x1
+0090c838	b.lt 0x0090c868
+0090c83c	ldr x8,[x19]
+0090c840	ldr w8,[x8, #0xc]
+0090c844	cmp w8,#0x1
+0090c848	b.lt 0x0090c868
+0090c84c	adrp x2,0x2db000
+0090c850	add x2,x2,#0x143
+0090c854	mov x0,x20
+0090c858	mov x1,x19
+0090c85c	mov w3,w21
+0090c860	bl 0x00904ddc
+0090c864	ldr w21,[x22, #0x98]
+0090c868	ldr x23,[x19, #0x18]
+0090c86c	ldrsw x8,[x19, #0x20]
+0090c870	add x8,x23,x8, LSL #0x2
+0090c874	ldr w9,[x8, #0x220]
+0090c878	cmp w21,w9
+0090c87c	b.ne 0x0090c890
+0090c880	add x8,x8,#0x220
+0090c884	mov w9,#0xffffffff
+0090c888	str w9,[x8]
+0090c88c	ldr w21,[x22, #0x98]
+0090c890	cbz x23,0x0090c8d8
+0090c894	ldrb w8,[x22, #0x134]
+0090c898	tbnz w8,#0x1,0x0090c8d8
+0090c89c	ldr x8,[x23, #0x18]
+0090c8a0	cbz x8,0x0090c8d8
+0090c8a4	mov x0,x20
+0090c8a8	mov w1,w21
+0090c8ac	bl 0x0092e498
+0090c8b0	mov w1,#0x1
+0090c8b4	mov x0,x20
+0090c8b8	bl 0x0092f198
+0090c8bc	ldp x8,x0,[x23, #0x18]
+0090c8c0	mov w1,w21
+0090c8c4	blr x8
+0090c8c8	mov x0,x20
+0090c8cc	mov w1,wzr
+0090c8d0	bl 0x0092f198
+0090c8d4	b 0x0090c8f0
+0090c8d8	cbz x23,0x0090c8e8
+0090c8dc	mov x0,x20
+0090c8e0	mov w1,w21
+0090c8e4	bl 0x0092e498
+0090c8e8	mov w0,w21
+0090c8ec	bl 0x00c31bf0
+0090c8f0	ldrb w8,[x22, #0x134]
+0090c8f4	mov w9,#0xffffffff
+0090c8f8	str w9,[x22, #0x98]
+0090c8fc	tbz w8,#0x3,0x0090c914
+0090c900	ldr w9,[x19, #0x20]
+0090c904	cbnz w9,0x0090c914
+0090c908	ldr x8,[x19, #0x18]
+0090c90c	str xzr,[x8, #0x38]
+0090c910	ldrb w8,[x22, #0x134]
+0090c914	and w8,w8,#0xfffffff7
+0090c918	stp xzr,xzr,[x22, #0x110]
+0090c91c	strb w8,[x22, #0x134]
+0090c920	stp xzr,xzr,[x22, #0x100]
+0090c924	ldrb w8,[x19, #0x24]
+0090c928	and w8,w8,#0xfe
+0090c92c	strb w8,[x19, #0x24]
+0090c930	ldp x29,x30,[sp, #0x30]
+0090c934	ldp x20,x19,[sp, #0x20]
+0090c938	ldp x22,x21,[sp, #0x10]
+0090c93c	ldr x23,[sp], #0x40
+0090c940	ret

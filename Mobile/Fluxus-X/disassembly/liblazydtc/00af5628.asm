@@ -1,0 +1,4 @@
+; d2i_ACCESS_DESCRIPTION @ 00af5628
+00af5628	adrp x3,0xc7e000
+00af562c	add x3,x3,#0x668
+00af5630	b 0x00c36150

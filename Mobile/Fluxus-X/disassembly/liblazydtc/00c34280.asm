@@ -1,0 +1,5 @@
+; DTLS_RECORD_LAYER_new @ 00c34280
+00c34280	adrp x16,0xcb8000
+00c34284	ldr x17,[x16, #0x128]
+00c34288	add x16,x16,#0x128
+00c3428c	br x17

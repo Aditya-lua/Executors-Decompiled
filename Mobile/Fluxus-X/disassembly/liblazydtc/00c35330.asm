@@ -1,0 +1,5 @@
+; OPENSSL_sk_dup @ 00c35330
+00c35330	adrp x16,0xcb8000
+00c35334	ldr x17,[x16, #0x980]
+00c35338	add x16,x16,#0x980
+00c3533c	br x17

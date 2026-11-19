@@ -1,0 +1,4 @@
+; d2i_PKCS7_ENC_CONTENT @ 00abe124
+00abe124	adrp x3,0xc7b000
+00abe128	add x3,x3,#0x980
+00abe12c	b 0x00c36150

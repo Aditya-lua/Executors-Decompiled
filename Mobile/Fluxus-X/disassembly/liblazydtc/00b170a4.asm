@@ -1,0 +1,4 @@
+; NETSCAPE_SPKI_new @ 00b170a4
+00b170a4	adrp x0,0xc81000
+00b170a8	add x0,x0,#0xe70
+00b170ac	b 0x00c372e0

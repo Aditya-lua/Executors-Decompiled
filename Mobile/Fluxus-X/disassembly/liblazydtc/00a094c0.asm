@@ -1,0 +1,54 @@
+; BN_mod_lshift1 @ 00a094c0
+00a094c0	str x21,[sp, #-0x30]!
+00a094c4	stp x20,x19,[sp, #0x10]
+00a094c8	stp x29,x30,[sp, #0x20]
+00a094cc	add x29,sp,#0x20
+00a094d0	mov x21,x3
+00a094d4	mov x19,x2
+00a094d8	mov x20,x0
+00a094dc	bl 0x00c39050
+00a094e0	cbz w0,0x00a09584
+00a094e4	cmp x20,x19
+00a094e8	b.eq 0x00a09548
+00a094ec	mov x0,xzr
+00a094f0	mov x1,x20
+00a094f4	mov x2,x20
+00a094f8	mov x3,x19
+00a094fc	mov x4,x21
+00a09500	bl 0x00c38ab0
+00a09504	cbz w0,0x00a09584
+00a09508	ldr w8,[x20, #0x10]
+00a0950c	cbz w8,0x00a09580
+00a09510	ldr w8,[x19, #0x10]
+00a09514	adrp x9,0xcb5000
+00a09518	adrp x10,0xcb5000
+00a0951c	ldr x9,[x9, #0x3d0]
+00a09520	ldr x10,[x10, #0x3c8]
+00a09524	mov x0,x20
+00a09528	mov x1,x20
+00a0952c	mov x2,x19
+00a09530	ldp x29,x30,[sp, #0x20]
+00a09534	ldp x20,x19,[sp, #0x10]
+00a09538	cmp w8,#0x0
+00a0953c	csel x3,x10,x9,eq
+00a09540	ldr x21,[sp], #0x30
+00a09544	br x3
+00a09548	bl 0x00c342a0
+00a0954c	adrp x0,0x2b4000
+00a09550	adrp x2,0x2d1000
+00a09554	add x0,x0,#0x47
+00a09558	add x2,x2,#0x736
+00a0955c	mov w1,#0x15
+00a09560	bl 0x00c342b0
+00a09564	mov w1,#0x106
+00a09568	orr w0,wzr,#0x3
+00a0956c	movk w1,#0x8, LSL #16
+00a09570	mov x2,xzr
+00a09574	bl 0x00c342c0
+00a09578	mov w0,wzr
+00a0957c	b 0x00a09584
+00a09580	mov w0,#0x1
+00a09584	ldp x29,x30,[sp, #0x20]
+00a09588	ldp x20,x19,[sp, #0x10]
+00a0958c	ldr x21,[sp], #0x30
+00a09590	ret

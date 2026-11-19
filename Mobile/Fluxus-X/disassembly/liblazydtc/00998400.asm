@@ -1,0 +1,20 @@
+; ix::WebSocketTransport::unmaskReceiveBuffer @ 00998400
+00998400	ldrb w8,[x1, #0x8]
+00998404	cbz w8,0x00998448
+00998408	ldr x8,[x1, #0x18]
+0099840c	cbz x8,0x00998448
+00998410	mov x8,xzr
+00998414	ldr w9,[x1]
+00998418	ldr x10,[x0, #0x38]
+0099841c	and x11,x8,#0x3
+00998420	add x11,x1,x11
+00998424	ldrb w11,[x11, #0x20]
+00998428	add x9,x10,x9
+0099842c	ldrb w10,[x9, x8]
+00998430	eor w10,w10,w11
+00998434	strb w10,[x9, x8]
+00998438	ldr x9,[x1, #0x18]
+0099843c	add x8,x8,#0x1
+00998440	cmp x8,x9
+00998444	b.ne 0x00998414
+00998448	ret

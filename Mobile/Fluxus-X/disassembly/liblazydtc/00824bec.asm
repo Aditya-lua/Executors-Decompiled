@@ -1,0 +1,47 @@
+; FUN_00824bec @ 00824bec
+00824bec	stp x29,x30,[sp, #-0x50]!
+00824bf0	str x28,[sp, #0x10]
+00824bf4	stp x24,x23,[sp, #0x20]
+00824bf8	stp x22,x21,[sp, #0x30]
+00824bfc	stp x20,x19,[sp, #0x40]
+00824c00	mov x29,sp
+00824c04	sub sp,sp,#0x2c0
+00824c08	mrs x24,tpidr_el0
+00824c0c	mov x19,x8
+00824c10	mov x23,x0
+00824c14	ldr x8,[x24, #0x28]
+00824c18	mov x0,sp
+00824c1c	mov x20,x3
+00824c20	mov x21,x2
+00824c24	mov x22,x1
+00824c28	stur x8,[x29, #-0x8]
+00824c2c	bl 0x00c304b0
+00824c30	mov x0,sp
+00824c34	mov x1,x23
+00824c38	bl 0x00c304c0
+00824c3c	mov x0,sp
+00824c40	mov x1,x22
+00824c44	bl 0x00c30500
+00824c48	mov x0,sp
+00824c4c	mov x1,x21
+00824c50	bl 0x00c304d0
+00824c54	mov x0,sp
+00824c58	mov x1,x20
+00824c5c	bl 0x00c304e0
+00824c60	mov x0,sp
+00824c64	mov x8,x19
+00824c68	bl 0x00c30540
+00824c6c	mov x0,sp
+00824c70	bl 0x00826308
+00824c74	ldr x8,[x24, #0x28]
+00824c78	ldur x9,[x29, #-0x8]
+00824c7c	cmp x8,x9
+00824c80	b.ne 0x00824cc4
+00824c84	add sp,sp,#0x2c0
+00824c88	ldp x20,x19,[sp, #0x40]
+00824c8c	ldr x28,[sp, #0x10]
+00824c90	ldp x22,x21,[sp, #0x30]
+00824c94	ldp x24,x23,[sp, #0x20]
+00824c98	ldp x29,x30,[sp], #0x50
+00824c9c	ret
+00824cc4	bl 0x00c2fec0

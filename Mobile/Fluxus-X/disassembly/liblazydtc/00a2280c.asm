@@ -1,0 +1,52 @@
+; DSO_ctrl @ 00a2280c
+00a2280c	stp x29,x30,[sp, #-0x10]!
+00a22810	mov x29,sp
+00a22814	cbz x0,0x00a22838
+00a22818	cmp w1,#0x3
+00a2281c	b.eq 0x00a22864
+00a22820	cmp w1,#0x2
+00a22824	b.eq 0x00a22878
+00a22828	cmp w1,#0x1
+00a2282c	b.ne 0x00a22884
+00a22830	ldrsw x8,[x0, #0x14]
+00a22834	b 0x00a228cc
+00a22838	bl 0x00c342a0
+00a2283c	adrp x0,0x2a7000
+00a22840	adrp x2,0x2c1000
+00a22844	add x0,x0,#0xdd6
+00a22848	add x2,x2,#0xad7
+00a2284c	mov w1,#0xc3
+00a22850	bl 0x00c342b0
+00a22854	mov w1,#0x102
+00a22858	mov w0,#0x25
+00a2285c	movk w1,#0xc, LSL #16
+00a22860	b 0x00a228c0
+00a22864	ldr w9,[x0, #0x14]
+00a22868	mov x8,xzr
+00a2286c	orr w9,w9,w2
+00a22870	str w9,[x0, #0x14]
+00a22874	b 0x00a228cc
+00a22878	mov x8,xzr
+00a2287c	str w2,[x0, #0x14]
+00a22880	b 0x00a228cc
+00a22884	ldr x8,[x0]
+00a22888	cbz x8,0x00a2289c
+00a2288c	ldr x4,[x8, #0x20]
+00a22890	cbz x4,0x00a2289c
+00a22894	ldp x29,x30,[sp], #0x10
+00a22898	br x4
+00a2289c	bl 0x00c342a0
+00a228a0	adrp x0,0x2a7000
+00a228a4	adrp x2,0x2c1000
+00a228a8	add x0,x0,#0xdd6
+00a228ac	add x2,x2,#0xad7
+00a228b0	mov w1,#0xd7
+00a228b4	bl 0x00c342b0
+00a228b8	mov w0,#0x25
+00a228bc	mov w1,#0x6c
+00a228c0	mov x2,xzr
+00a228c4	bl 0x00c342c0
+00a228c8	mov x8,#-0x1
+00a228cc	mov x0,x8
+00a228d0	ldp x29,x30,[sp], #0x10
+00a228d4	ret

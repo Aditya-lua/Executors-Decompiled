@@ -1,0 +1,13 @@
+; ossl_err_load_SSL_strings @ 009b1748
+009b1748	stp x29,x30,[sp, #-0x10]!
+009b174c	mov w0,#0x123
+009b1750	movk w0,#0xa00, LSL #16
+009b1754	mov x29,sp
+009b1758	bl 0x00c35520
+009b175c	cbnz x0,0x009b176c
+009b1760	adrp x0,0xc55000
+009b1764	add x0,x0,#0x530
+009b1768	bl 0x00c35510
+009b176c	mov w0,#0x1
+009b1770	ldp x29,x30,[sp], #0x10
+009b1774	ret

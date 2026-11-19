@@ -1,0 +1,4 @@
+; d2i_PKEY_USAGE_PERIOD @ 00b012b4
+00b012b4	adrp x3,0xc80000
+00b012b8	add x3,x3,#0xbb0
+00b012bc	b 0x00c36150

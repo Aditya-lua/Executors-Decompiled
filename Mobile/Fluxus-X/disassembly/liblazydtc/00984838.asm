@@ -1,0 +1,11 @@
+; ix::Socket::isReadyToWrite @ 00984838
+00984838	add x8,x0,#0x8
+0098483c	ldar w9,[x8]
+00984840	cmn w9,#0x1
+00984844	b.eq 0x00984858
+00984848	ldar w2,[x8]
+0098484c	add x3,x0,#0x38
+00984850	mov w0,wzr
+00984854	b 0x00c33550
+00984858	orr w0,wzr,#0x3
+0098485c	ret

@@ -1,0 +1,33 @@
+; FUN_00c1441c @ 00c1441c
+00c1441c	bti c
+00c14420	ldp x9,x8,[x0]
+00c14424	str xzr,[x1]
+00c14428	cmp x8,x9
+00c1442c	b.eq 0x00c14440
+00c14430	ldrb w10,[x9]
+00c14434	sub w11,w10,#0x3a
+00c14438	cmn w11,#0xa
+00c1443c	b.cs 0x00c14448
+00c14440	mov w0,#0x1
+00c14444	ret
+00c14448	sub w10,w10,#0x30
+00c1444c	cmp w10,#0x9
+00c14450	b.hi 0x00c14494
+00c14454	mov x10,xzr
+00c14458	add x9,x9,#0x1
+00c1445c	add x10,x10,x10, LSL #0x2
+00c14460	str x9,[x0]
+00c14464	cmp x9,x8
+00c14468	lsl x10,x10,#0x1
+00c1446c	str x10,[x1]
+00c14470	ldurb w11,[x9, #-0x1]
+00c14474	add x10,x11,x10
+00c14478	sub x10,x10,#0x30
+00c1447c	str x10,[x1]
+00c14480	b.eq 0x00c14494
+00c14484	ldrb w11,[x9], #0x1
+00c14488	sub w11,w11,#0x30
+00c1448c	cmp w11,#0x9
+00c14490	b.ls 0x00c1445c
+00c14494	mov w0,wzr
+00c14498	ret

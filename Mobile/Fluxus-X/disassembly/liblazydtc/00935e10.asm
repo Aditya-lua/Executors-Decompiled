@@ -1,0 +1,84 @@
+; FUN_00935e10 @ 00935e10
+00935e10	str x23,[sp, #-0x40]!
+00935e14	stp x22,x21,[sp, #0x10]
+00935e18	stp x20,x19,[sp, #0x20]
+00935e1c	stp x29,x30,[sp, #0x30]
+00935e20	add x29,sp,#0x30
+00935e24	adrp x8,0xcc4000
+00935e28	add x8,x8,#0x690
+00935e2c	mov x22,x1
+00935e30	mov x20,x0
+00935e34	mov w0,#0x1
+00935e38	ldr x8,[x8]
+00935e3c	orr w1,wzr,#0x38
+00935e40	mov x19,x2
+00935e44	blr x8
+00935e48	mov x21,x0
+00935e4c	cbz x0,0x00935ecc
+00935e50	adrp x8,0xc4f000
+00935e54	add x8,x8,#0xb58
+00935e58	mov w9,#0x4
+00935e5c	str x21,[x21, #0x10]
+00935e60	stp x22,x19,[x21, #0x20]
+00935e64	str x8,[x21]
+00935e68	str w9,[x21, #0x18]
+00935e6c	str xzr,[x21, #0x30]
+00935e70	ldr x22,[x20, #0x138]
+00935e74	cbz x22,0x00935eb0
+00935e78	adrp x23,0xcc4000
+00935e7c	add x23,x23,#0x678
+00935e80	ldr x8,[x22, #0x8]
+00935e84	mov x0,x20
+00935e88	mov x1,x22
+00935e8c	str x8,[x20, #0x138]
+00935e90	ldr x8,[x22]
+00935e94	ldr x8,[x8, #0x18]
+00935e98	blr x8
+00935e9c	ldr x8,[x23]
+00935ea0	mov x0,x22
+00935ea4	blr x8
+00935ea8	ldr x22,[x20, #0x138]
+00935eac	cbnz x22,0x00935e80
+00935eb0	mov x0,x20
+00935eb4	mov x1,x21
+00935eb8	bl 0x00935924
+00935ebc	mov w21,w0
+00935ec0	ldrb w8,[x20, #0xa85]
+00935ec4	tbnz w8,#0x4,0x00935eec
+00935ec8	b 0x00935f2c
+00935ecc	adrp x8,0xcc4000
+00935ed0	add x8,x8,#0x678
+00935ed4	ldr x8,[x8]
+00935ed8	blr x8
+00935edc	mov w21,#0x1b
+00935ee0	cbz x20,0x00935f2c
+00935ee4	ldrb w8,[x20, #0xa85]
+00935ee8	tbz w8,#0x4,0x00935f2c
+00935eec	ldr x8,[x20, #0x12a0]
+00935ef0	cbz x8,0x00935f44
+00935ef4	ldr w8,[x8, #0x8]
+00935ef8	cmp w8,#0x1
+00935efc	b.lt 0x00935f2c
+00935f00	adrp x8,0xcc4000
+00935f04	add x8,x8,#0x698
+00935f08	ldr w8,[x8, #0x8]
+00935f0c	cmp w8,#0x0
+00935f10	b.le 0x00935f2c
+00935f14	adrp x1,0x2d7000
+00935f18	add x1,x1,#0x278
+00935f1c	mov x0,x20
+00935f20	mov x2,x19
+00935f24	mov w3,w21
+00935f28	bl 0x00904f80
+00935f2c	mov w0,w21
+00935f30	ldp x29,x30,[sp, #0x30]
+00935f34	ldp x20,x19,[sp, #0x20]
+00935f38	ldp x22,x21,[sp, #0x10]
+00935f3c	ldr x23,[sp], #0x40
+00935f40	ret
+00935f44	adrp x8,0xcc4000
+00935f48	add x8,x8,#0x698
+00935f4c	ldr w8,[x8, #0x8]
+00935f50	cmp w8,#0x1
+00935f54	b.ge 0x00935f14
+00935f58	b 0x00935f2c

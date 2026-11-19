@@ -1,0 +1,4 @@
+; EVP_aes_192_cfb128 @ 00a87068
+00a87068	adrp x0,0xc61000
+00a8706c	add x0,x0,#0xf78
+00a87070	ret

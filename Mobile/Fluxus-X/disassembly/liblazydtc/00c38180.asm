@@ -1,0 +1,5 @@
+; ASN1_PRINTABLESTRING_free @ 00c38180
+00c38180	adrp x16,0xcba000
+00c38184	ldr x17,[x16, #0xa8]
+00c38188	add x16,x16,#0xa8
+00c3818c	br x17

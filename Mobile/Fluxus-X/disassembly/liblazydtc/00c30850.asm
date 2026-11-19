@@ -1,0 +1,5 @@
+; <EXTERNAL>::cos @ 00c30850
+00c30850	adrp x16,0xcb6000
+00c30854	ldr x17,[x16, #0x410]
+00c30858	add x16,x16,#0x410
+00c3085c	br x17

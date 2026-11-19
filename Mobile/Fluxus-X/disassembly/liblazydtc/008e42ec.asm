@@ -1,0 +1,3 @@
+; FUN_008e42ec @ 008e42ec
+008e42ec	mov w24,#0x3b000000
+008e42f0	b 0x008e3bb4

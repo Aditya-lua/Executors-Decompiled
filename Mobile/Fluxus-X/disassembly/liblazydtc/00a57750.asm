@@ -1,0 +1,27 @@
+; EVP_MD_CTX_free @ 00a57750
+00a57750	cbz x0,0x00a577b4
+00a57754	str x19,[sp, #-0x20]!
+00a57758	mov w1,#0x400
+00a5775c	stp x29,x30,[sp, #0x10]
+00a57760	add x29,sp,#0x10
+00a57764	mov x19,x0
+00a57768	bl 0x00c3c1d0
+00a5776c	cbnz w0,0x00a5777c
+00a57770	ldr x0,[x19, #0x28]
+00a57774	bl 0x00c34620
+00a57778	str xzr,[x19, #0x28]
+00a5777c	mov x0,x19
+00a57780	mov w1,wzr
+00a57784	mov w2,wzr
+00a57788	bl 0x00a573e4
+00a5778c	mov w1,#0x48
+00a57790	mov x0,x19
+00a57794	bl 0x00c34750
+00a57798	ldp x29,x30,[sp, #0x10]
+00a5779c	adrp x1,0x2b7000
+00a577a0	add x1,x1,#0xc61
+00a577a4	mov w2,#0x8d
+00a577a8	mov x0,x19
+00a577ac	ldr x19,[sp], #0x20
+00a577b0	b 0x00c32310
+00a577b4	ret

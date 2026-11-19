@@ -1,0 +1,1453 @@
+{
+  "binary_sha256": "5241de4be0daeb2a193604d26b9e6a9b528757ffd74fb61b961e6ed8ae1c88cc",
+  "scope": "Independent application-region .init_array constructors; in-memory surrogates only",
+  "constructors": 175,
+  "returned": 173,
+  "stopped": 2,
+  "candidate_strings": 63,
+  "import_calls": {
+    "__cxa_guard_acquire": 31,
+    "__cxa_atexit": 89,
+    "__cxa_guard_release": 31,
+    "malloc": 47,
+    "pthread_create": 1,
+    "memcpy": 29,
+    "memset": 13,
+    "free": 5,
+    "strlen": 25,
+    "memmove": 2,
+    "strcmp": 33
+  },
+  "runs": [
+    {
+      "initializer_elf_vaddr": "0x6fbcc8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 1,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x6fbd8c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fbe84",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fbf94",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc07c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc1a8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc304",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc424",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc578",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc724",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 2,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 2
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc83c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 1,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc900",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 1,
+        "malloc": 1,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x6fc9ec",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 1,
+        "malloc": 1,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x6fcad0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_guard_acquire": 1,
+        "malloc": 1,
+        "__cxa_atexit": 1,
+        "__cxa_guard_release": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x6fdafc",
+      "status": "stopped",
+      "diagnostic": [
+        "Unsupported import: pthread_create"
+      ],
+      "import_calls": {
+        "malloc": 3,
+        "pthread_create": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x6ff5dc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7038ac",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x704df4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70536c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 5,
+        "__cxa_guard_acquire": 4,
+        "memcpy": 4,
+        "__cxa_guard_release": 4
+      },
+      "candidate_strings_added": 4
+    },
+    {
+      "initializer_elf_vaddr": "0x705cb8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705cec",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705d20",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705d54",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705d88",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705dbc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705df0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705e24",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705e58",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705e8c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705ec0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705ef4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705f28",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705f5c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705f90",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705fc4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x705ff8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70602c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706060",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706094",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7060c8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7060fc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706130",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706164",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706198",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7061cc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706200",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706234",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706268",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70629c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7062d0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706304",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706338",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70636c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7063a0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7063d4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706408",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70643c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706470",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7064a4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7064d8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70650c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706540",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706574",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7065a8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7065dc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706610",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706644",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706678",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7066ac",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7066e0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706714",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706748",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70677c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7067b0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7067e4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706818",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70684c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x706880",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7073dc",
+      "status": "stopped",
+      "diagnostic": [
+        "Instruction/time bound reached"
+      ],
+      "import_calls": {
+        "__cxa_atexit": 1,
+        "malloc": 6,
+        "memset": 6,
+        "free": 1,
+        "memcpy": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7088b8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x70ed18",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 3
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7158f0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 2,
+        "__cxa_guard_acquire": 1,
+        "__cxa_guard_release": 1
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x717fdc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7202bc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 4,
+        "__cxa_guard_acquire": 2,
+        "__cxa_guard_release": 2,
+        "strlen": 3,
+        "memcpy": 2,
+        "memmove": 2,
+        "malloc": 1
+      },
+      "candidate_strings_added": 3
+    },
+    {
+      "initializer_elf_vaddr": "0x729020",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 3,
+        "malloc": 5,
+        "__cxa_guard_acquire": 1,
+        "__cxa_guard_release": 1
+      },
+      "candidate_strings_added": 6
+    },
+    {
+      "initializer_elf_vaddr": "0x72c2f0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x72f0fc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x730eb0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x737970",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 2
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x73f754",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 2
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x74e7bc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 3
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x74e8b0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7515f0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751620",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751650",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751680",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7516b0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7516e0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751710",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751740",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751770",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7517a0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7517d0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751800",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751830",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751860",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751890",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7518c0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7518f0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751920",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751950",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751980",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7519b0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7519e0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751a10",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751a40",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751a70",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751aa0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751ad0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751b00",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751b30",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751b60",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751b90",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751bc0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751bf0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751c20",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751c50",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751c80",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751cb0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751ce0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751d10",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x751d40",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7563ac",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "strcmp": 17,
+        "__cxa_atexit": 5,
+        "strlen": 22,
+        "memcpy": 22,
+        "malloc": 28,
+        "memset": 6,
+        "free": 4
+      },
+      "candidate_strings_added": 22
+    },
+    {
+      "initializer_elf_vaddr": "0x773084",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "malloc": 1,
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 17
+    },
+    {
+      "initializer_elf_vaddr": "0x77cb30",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x77cbb0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x77fabc",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x79b7ec",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "strcmp": 12
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7a0e9c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7aa28c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {},
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7aebb0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7af330",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7af35c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7af388",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7af464",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7af490",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b232c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b34b8",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b34e4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b3510",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b353c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b3e78",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b4c5c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b5258",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b7204",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1,
+        "strcmp": 4
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b7388",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b7440",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b74a4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b8c20",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1,
+        "memset": 1
+      },
+      "candidate_strings_added": 1
+    },
+    {
+      "initializer_elf_vaddr": "0x7b9794",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b97c0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b98a4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7b9b28",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7ba4ac",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7ba510",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7bdf4c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7bdf78",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7be25c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7be3b4",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7be3e0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7be40c",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7be448",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7c8e04",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7cac18",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    },
+    {
+      "initializer_elf_vaddr": "0x7cdad0",
+      "status": "returned",
+      "diagnostic": [],
+      "import_calls": {
+        "__cxa_atexit": 1
+      },
+      "candidate_strings_added": 0
+    }
+  ]
+}

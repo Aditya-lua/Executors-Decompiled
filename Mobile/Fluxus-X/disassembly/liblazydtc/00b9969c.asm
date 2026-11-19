@@ -1,0 +1,70 @@
+; mbedtls_psa_rsa_export_key @ 00b9969c
+00b9969c	sub sp,sp,#0x50
+00b996a0	stp x24,x23,[sp, #0x10]
+00b996a4	stp x22,x21,[sp, #0x20]
+00b996a8	stp x20,x19,[sp, #0x30]
+00b996ac	stp x29,x30,[sp, #0x40]
+00b996b0	add x29,sp,#0x40
+00b996b4	mrs x23,tpidr_el0
+00b996b8	ldr x8,[x23, #0x28]
+00b996bc	mov x21,x2
+00b996c0	mvn w9,w0
+00b996c4	mov x19,x4
+00b996c8	mov x20,x3
+00b996cc	add x24,x2,x3
+00b996d0	tst w9,#0x7000
+00b996d4	mov x2,sp
+00b996d8	mov x0,x1
+00b996dc	mov x1,x21
+00b996e0	str x8,[sp, #0x8]
+00b996e4	str x24,[sp]
+00b996e8	b.ne 0x00b99730
+00b996ec	bl 0x00c433c0
+00b996f0	mov w22,w0
+00b996f4	tbnz w0,#0x1f,0x00b9973c
+00b996f8	sbfiz x8,x22,#0x1,#0x20
+00b996fc	cmp x8,x20
+00b99700	sxtw x22,w22
+00b99704	b.ls 0x00b99758
+00b99708	cmp x22,x20
+00b9970c	b.cs 0x00b9977c
+00b99710	sub x1,x24,x22
+00b99714	mov x0,x21
+00b99718	mov x2,x22
+00b9971c	bl 0x00c2ff60
+00b99720	add x0,x21,x22
+00b99724	sub x2,x20,x22
+00b99728	mov w1,wzr
+00b9972c	b 0x00b99778
+00b99730	bl 0x00c433d0
+00b99734	mov w22,w0
+00b99738	tbz w0,#0x1f,0x00b996f8
+00b9973c	mov x0,x21
+00b99740	mov w1,wzr
+00b99744	mov x2,x20
+00b99748	bl 0x00c301c0
+00b9974c	mov w0,w22
+00b99750	bl 0x00c42bf0
+00b99754	b 0x00b99784
+00b99758	sub x20,x24,x22
+00b9975c	mov x0,x21
+00b99760	mov x1,x20
+00b99764	mov x2,x22
+00b99768	bl 0x00c2ffd0
+00b9976c	mov x0,x20
+00b99770	mov w1,wzr
+00b99774	mov x2,x22
+00b99778	bl 0x00c301c0
+00b9977c	mov w0,wzr
+00b99780	str x22,[x19]
+00b99784	ldr x8,[x23, #0x28]
+00b99788	ldr x9,[sp, #0x8]
+00b9978c	cmp x8,x9
+00b99790	b.ne 0x00b997ac
+00b99794	ldp x29,x30,[sp, #0x40]
+00b99798	ldp x20,x19,[sp, #0x30]
+00b9979c	ldp x22,x21,[sp, #0x20]
+00b997a0	ldp x24,x23,[sp, #0x10]
+00b997a4	add sp,sp,#0x50
+00b997a8	ret
+00b997ac	bl 0x00c2fec0

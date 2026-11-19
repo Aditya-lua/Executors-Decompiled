@@ -1,0 +1,14 @@
+; FUN_0090c144 @ 0090c144
+0090c144	str x19,[sp, #-0x20]!
+0090c148	stp x29,x30,[sp, #0x10]
+0090c14c	add x29,sp,#0x10
+0090c150	mov w19,w2
+0090c154	cbz x1,0x0090c160
+0090c158	mov w1,w19
+0090c15c	bl 0x0092e498
+0090c160	mov w0,w19
+0090c164	bl 0x00c31bf0
+0090c168	ldp x29,x30,[sp, #0x10]
+0090c16c	mov w0,wzr
+0090c170	ldr x19,[sp], #0x20
+0090c174	ret

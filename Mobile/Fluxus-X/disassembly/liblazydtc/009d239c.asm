@@ -1,0 +1,46 @@
+; tls_construct_ctos_maxfragmentlen @ 009d239c
+009d239c	stp x20,x19,[sp, #-0x20]!
+009d23a0	stp x29,x30,[sp, #0x10]
+009d23a4	ldrb w8,[x0, #0xb4c]
+009d23a8	add x29,sp,#0x10
+009d23ac	cbz w8,0x009d2440
+009d23b0	mov x20,x1
+009d23b4	mov x19,x0
+009d23b8	mov w1,#0x1
+009d23bc	mov w2,#0x2
+009d23c0	mov x0,x20
+009d23c4	bl 0x00c343a0
+009d23c8	cbz w0,0x009d2404
+009d23cc	mov w1,#0x2
+009d23d0	mov x0,x20
+009d23d4	bl 0x00c343b0
+009d23d8	cbz w0,0x009d2404
+009d23dc	ldrb w1,[x19, #0xb4c]
+009d23e0	mov w2,#0x1
+009d23e4	mov x0,x20
+009d23e8	bl 0x00c343a0
+009d23ec	cbz w0,0x009d2404
+009d23f0	mov x0,x20
+009d23f4	bl 0x00c34350
+009d23f8	cbz w0,0x009d2404
+009d23fc	mov w0,#0x1
+009d2400	b 0x009d2444
+009d2404	bl 0x00c342a0
+009d2408	adrp x0,0x2bf000
+009d240c	adrp x2,0x2b7000
+009d2410	add x0,x0,#0x967
+009d2414	add x2,x2,#0x7fe
+009d2418	mov w1,#0x4e
+009d241c	bl 0x00c342b0
+009d2420	mov w2,#0x103
+009d2424	mov w1,#0x50
+009d2428	movk w2,#0xc, LSL #16
+009d242c	mov x0,x19
+009d2430	mov x3,xzr
+009d2434	bl 0x00c34410
+009d2438	mov w0,wzr
+009d243c	b 0x009d2444
+009d2440	mov w0,#0x2
+009d2444	ldp x29,x30,[sp, #0x10]
+009d2448	ldp x20,x19,[sp], #0x20
+009d244c	ret

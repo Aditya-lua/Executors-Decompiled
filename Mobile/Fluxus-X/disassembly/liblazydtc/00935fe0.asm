@@ -1,0 +1,19 @@
+; FUN_00935fe0 @ 00935fe0
+00935fe0	stp x20,x19,[sp, #-0x20]!
+00935fe4	stp x29,x30,[sp, #0x10]
+00935fe8	add x29,sp,#0x10
+00935fec	ldr x20,[x0, #0x138]
+00935ff0	mov x19,x0
+00935ff4	cbz x20,0x00936018
+00935ff8	ldr x8,[x20]
+00935ffc	mov x0,x19
+00936000	mov x1,x20
+00936004	ldr x8,[x8, #0x40]
+00936008	blr x8
+0093600c	cbnz w0,0x0093601c
+00936010	ldr x20,[x20, #0x8]
+00936014	cbnz x20,0x00935ff8
+00936018	mov w0,wzr
+0093601c	ldp x29,x30,[sp, #0x10]
+00936020	ldp x20,x19,[sp], #0x20
+00936024	ret

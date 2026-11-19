@@ -1,0 +1,53 @@
+; tls_parse_ctos_sig_algs @ 009d6fd4
+009d6fd4	sub sp,sp,#0x30
+009d6fd8	stp x29,x30,[sp, #0x20]
+009d6fdc	ldr x8,[x1, #0x8]
+009d6fe0	str x19,[sp, #0x10]
+009d6fe4	mov x19,x0
+009d6fe8	add x29,sp,#0x20
+009d6fec	subs x10,x8,#0x2
+009d6ff0	b.cc 0x009d7044
+009d6ff4	ldr x9,[x1]
+009d6ff8	ldrb w11,[x9]
+009d6ffc	ldrb w8,[x9, #0x1]
+009d7000	bfm x8,x11,#0x38,#0x7
+009d7004	cmp x10,x8
+009d7008	b.ne 0x009d7044
+009d700c	add x9,x9,#0x2
+009d7010	add x10,x9,x8
+009d7014	stp x10,xzr,[x1]
+009d7018	stp x9,x8,[sp]
+009d701c	cbz x8,0x009d7044
+009d7020	ldr w8,[x19, #0x4d0]
+009d7024	cbnz w8,0x009d703c
+009d7028	mov x1,sp
+009d702c	mov x0,x19
+009d7030	mov w2,wzr
+009d7034	bl 0x00c36770
+009d7038	cbz w0,0x009d7088
+009d703c	mov w0,#0x1
+009d7040	b 0x009d7078
+009d7044	bl 0x00c342a0
+009d7048	adrp x0,0x2d7000
+009d704c	adrp x2,0x2a5000
+009d7050	add x0,x0,#0xae0
+009d7054	add x2,x2,#0xb30
+009d7058	mov w1,#0x120
+009d705c	bl 0x00c342b0
+009d7060	mov w1,#0x32
+009d7064	mov w2,#0x6e
+009d7068	mov x0,x19
+009d706c	mov x3,xzr
+009d7070	bl 0x00c34410
+009d7074	mov w0,wzr
+009d7078	ldp x29,x30,[sp, #0x20]
+009d707c	ldr x19,[sp, #0x10]
+009d7080	add sp,sp,#0x30
+009d7084	ret
+009d7088	bl 0x00c342a0
+009d708c	adrp x0,0x2d7000
+009d7090	adrp x2,0x2a5000
+009d7094	add x0,x0,#0xae0
+009d7098	add x2,x2,#0xb30
+009d709c	mov w1,#0x125
+009d70a0	b 0x009d705c

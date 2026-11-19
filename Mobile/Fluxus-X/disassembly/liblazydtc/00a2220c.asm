@@ -1,0 +1,90 @@
+; DSA_verify @ 00a2220c
+00a2220c	sub sp,sp,#0x60
+00a22210	stp x22,x21,[sp, #0x30]
+00a22214	mov x22,x1
+00a22218	adrp x1,0x2a3000
+00a2221c	mov w21,w2
+00a22220	add x1,x1,#0xecc
+00a22224	mov w0,#0x10
+00a22228	mov w2,#0x24
+00a2222c	stp x24,x23,[sp, #0x20]
+00a22230	stp x20,x19,[sp, #0x40]
+00a22234	stp x29,x30,[sp, #0x50]
+00a22238	add x29,sp,#0x50
+00a2223c	mov x20,x5
+00a22240	mov w19,w4
+00a22244	mov x23,x3
+00a22248	stp xzr,x3,[sp, #0x8]
+00a2224c	bl 0x00c34250
+00a22250	mov x24,x0
+00a22254	cbz x0,0x00a222a4
+00a22258	str x24,[sp, #0x18]
+00a2225c	sxtw x24,w19
+00a22260	add x0,sp,#0x18
+00a22264	add x1,sp,#0x10
+00a22268	mov x2,x24
+00a2226c	bl 0x00a21e14
+00a22270	cbz x0,0x00a222e0
+00a22274	ldr x0,[sp, #0x18]
+00a22278	add x1,sp,#0x8
+00a2227c	bl 0x00a21f44
+00a22280	cmp w0,w19
+00a22284	b.ne 0x00a222ec
+00a22288	ldr x1,[sp, #0x8]
+00a2228c	mov x0,x23
+00a22290	mov x2,x24
+00a22294	bl 0x00c300b0
+00a22298	cbz w0,0x00a222f8
+00a2229c	mov w20,#0xffffffff
+00a222a0	b 0x00a22310
+00a222a4	bl 0x00c342a0
+00a222a8	adrp x0,0x2a3000
+00a222ac	adrp x2,0x2b7000
+00a222b0	add x0,x0,#0xecc
+00a222b4	add x2,x2,#0x9c0
+00a222b8	mov w1,#0x26
+00a222bc	bl 0x00c342b0
+00a222c0	mov w1,#0x100
+00a222c4	mov w0,#0xa
+00a222c8	movk w1,#0xc, LSL #16
+00a222cc	mov x2,xzr
+00a222d0	bl 0x00c342c0
+00a222d4	str x24,[sp, #0x18]
+00a222d8	mov w20,#0xffffffff
+00a222dc	b 0x00a22354
+00a222e0	mov w19,#0xffffffff
+00a222e4	mov w20,#0xffffffff
+00a222e8	b 0x00a22310
+00a222ec	mov w20,#0xffffffff
+00a222f0	mov w19,w0
+00a222f4	b 0x00a22310
+00a222f8	ldr x2,[sp, #0x18]
+00a222fc	mov x0,x22
+00a22300	mov w1,w21
+00a22304	mov x3,x20
+00a22308	bl 0x00c3a370
+00a2230c	mov w20,w0
+00a22310	ldr x0,[sp, #0x8]
+00a22314	adrp x2,0x2a3000
+00a22318	sxtw x1,w19
+00a2231c	add x2,x2,#0xecc
+00a22320	mov w3,#0xd3
+00a22324	bl 0x00c345e0
+00a22328	ldr x19,[sp, #0x18]
+00a2232c	cbz x19,0x00a22354
+00a22330	ldr x0,[x19]
+00a22334	bl 0x00c322e0
+00a22338	ldr x0,[x19, #0x8]
+00a2233c	bl 0x00c322e0
+00a22340	adrp x1,0x2a3000
+00a22344	add x1,x1,#0xecc
+00a22348	orr w2,wzr,#0x30
+00a2234c	mov x0,x19
+00a22350	bl 0x00c32310
+00a22354	mov w0,w20
+00a22358	ldp x29,x30,[sp, #0x50]
+00a2235c	ldp x20,x19,[sp, #0x40]
+00a22360	ldp x22,x21,[sp, #0x30]
+00a22364	ldp x24,x23,[sp, #0x20]
+00a22368	add sp,sp,#0x60
+00a2236c	ret

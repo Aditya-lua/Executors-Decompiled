@@ -1,0 +1,42 @@
+; mbedtls_ct_zeroize_if @ 00b736a4
+00b736a4	mov x10,xzr
+00b736a8	cmp x2,#0x4
+00b736ac	mvn w8,w0
+00b736b0	b.cc 0x00b736d8
+00b736b4	mov x9,xzr
+00b736b8	ldr w11,[x1, x9#0x0]
+00b736bc	add x10,x9,#0x4
+00b736c0	add x12,x9,#0x8
+00b736c4	cmp x12,x2
+00b736c8	and w11,w11,w8
+00b736cc	str w11,[x1, x9#0x0]
+00b736d0	mov x9,x10
+00b736d4	b.ls 0x00b736b8
+00b736d8	cmp x10,x2
+00b736dc	b.cs 0x00b73744
+00b736e0	sub x9,x2,x10
+00b736e4	cmp x9,#0x1f
+00b736e8	b.ls 0x00b73728
+00b736ec	and x11,x9,#-0x20
+00b736f0	add x12,x1,x10
+00b736f4	dup v0.16B,w8
+00b736f8	add x10,x10,x11
+00b736fc	add x12,x12,#0x10
+00b73700	mov x13,x11
+00b73704	ldp q1,q2,[x12, #-0x10]
+00b73708	subs x13,x13,#0x20
+00b7370c	and v1.16B,v1.16B,v0.16B
+00b73710	and v2.16B,v2.16B,v0.16B
+00b73714	stp q1,q2,[x12, #-0x10]
+00b73718	add x12,x12,#0x20
+00b7371c	b.ne 0x00b73704
+00b73720	cmp x9,x11
+00b73724	b.eq 0x00b73744
+00b73728	add x9,x1,x10
+00b7372c	sub x10,x2,x10
+00b73730	ldrb w11,[x9]
+00b73734	subs x10,x10,#0x1
+00b73738	and w11,w11,w8
+00b7373c	strb w11,[x9], #0x1
+00b73740	b.ne 0x00b73730
+00b73744	ret

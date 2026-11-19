@@ -1,0 +1,36 @@
+; ENGINE_register_all_digests @ 00a53534
+00a53534	str x21,[sp, #-0x30]!
+00a53538	stp x20,x19,[sp, #0x10]
+00a5353c	stp x29,x30,[sp, #0x20]
+00a53540	add x29,sp,#0x20
+00a53544	bl 0x00c32380
+00a53548	cbz x0,0x00a535b0
+00a5354c	adrp x20,0xd21000
+00a53550	adrp x21,0xa53000
+00a53554	mov x19,x0
+00a53558	add x20,x20,#0x9e8
+00a5355c	add x21,x21,#0x528
+00a53560	ldr x8,[x19, #0x40]
+00a53564	cbz x8,0x00a535a0
+00a53568	add x2,sp,#0x8
+00a5356c	mov x0,x19
+00a53570	mov x1,xzr
+00a53574	mov w3,wzr
+00a53578	blr x8
+00a5357c	cmp w0,#0x0
+00a53580	b.le 0x00a535a0
+00a53584	ldr x3,[sp, #0x8]
+00a53588	mov w4,w0
+00a5358c	mov x0,x20
+00a53590	mov x1,x21
+00a53594	mov x2,x19
+00a53598	mov w5,wzr
+00a5359c	bl 0x00c3bce0
+00a535a0	mov x0,x19
+00a535a4	bl 0x00c323a0
+00a535a8	mov x19,x0
+00a535ac	cbnz x0,0x00a53560
+00a535b0	ldp x29,x30,[sp, #0x20]
+00a535b4	ldp x20,x19,[sp, #0x10]
+00a535b8	ldr x21,[sp], #0x30
+00a535bc	ret

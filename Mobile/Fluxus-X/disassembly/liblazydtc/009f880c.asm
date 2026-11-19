@@ -1,0 +1,4 @@
+; UINT64_it @ 009f880c
+009f880c	adrp x0,0xc59000
+009f8810	add x0,x0,#0x310
+009f8814	ret

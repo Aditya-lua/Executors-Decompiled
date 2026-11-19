@@ -1,0 +1,4 @@
+; d2i_PBE2PARAM @ 00a6a588
+00a6a588	adrp x3,0xc5e000
+00a6a58c	add x3,x3,#0x9f0
+00a6a590	b 0x00c36150

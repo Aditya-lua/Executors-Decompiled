@@ -1,0 +1,19 @@
+; EC_POINT_free @ 00a3042c
+00a3042c	cbz x0,0x00a30470
+00a30430	str x19,[sp, #-0x20]!
+00a30434	stp x29,x30,[sp, #0x10]
+00a30438	ldr x8,[x0]
+00a3043c	mov x19,x0
+00a30440	add x29,sp,#0x10
+00a30444	ldr x8,[x8, #0x58]
+00a30448	cbz x8,0x00a30454
+00a3044c	mov x0,x19
+00a30450	blr x8
+00a30454	ldp x29,x30,[sp, #0x10]
+00a30458	adrp x1,0x29e000
+00a3045c	add x1,x1,#0xa7
+00a30460	mov w2,#0x2f0
+00a30464	mov x0,x19
+00a30468	ldr x19,[sp], #0x20
+00a3046c	b 0x00c32310
+00a30470	ret

@@ -1,0 +1,5 @@
+; CRYPTO_zalloc @ 00c34250
+00c34250	adrp x16,0xcb8000
+00c34254	ldr x17,[x16, #0x110]
+00c34258	add x16,x16,#0x110
+00c3425c	br x17

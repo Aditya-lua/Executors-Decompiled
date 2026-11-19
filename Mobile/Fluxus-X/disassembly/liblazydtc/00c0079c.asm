@@ -1,0 +1,64 @@
+; std::__ndk1::__codecvt_utf16<wchar_t,true>::do_in @ 00c0079c
+00c0079c	bti c
+00c007a0	sub x8,x3,x2
+00c007a4	cmp x8,#0x2
+00c007a8	b.lt 0x00c007d0
+00c007ac	ldr w8,[x0, #0x20]
+00c007b0	tbz w8,#0x2,0x00c007d0
+00c007b4	ldrb w8,[x2]
+00c007b8	cmp w8,#0xff
+00c007bc	b.ne 0x00c007d0
+00c007c0	ldrb w8,[x2, #0x1]
+00c007c4	cmp w8,#0xfe
+00c007c8	cset w8,eq
+00c007cc	add x2,x2,w8, UXTW  #0x1
+00c007d0	sub x8,x3,#0x1
+00c007d4	cmp x2,x8
+00c007d8	b.cs 0x00c00874
+00c007dc	ldr x9,[x0, #0x18]
+00c007e0	mov w10,#0xd800
+00c007e4	mov w11,#0xdc00
+00c007e8	b 0x00c007fc
+00c007ec	add x2,x2,x0
+00c007f0	str w12,[x5], #0x4
+00c007f4	cmp x2,x8
+00c007f8	b.cs 0x00c00874
+00c007fc	cmp x5,x6
+00c00800	b.cs 0x00c00874
+00c00804	ldrb w14,[x2, #0x1]
+00c00808	ldrb w12,[x2]
+00c0080c	lsl w13,w14,#0x8
+00c00810	bfm w12,w14,#0x18,#0x7
+00c00814	and w13,w13,#0xfc00
+00c00818	cmp w13,w10
+00c0081c	b.eq 0x00c00838
+00c00820	cmp w13,w11
+00c00824	b.eq 0x00c00888
+00c00828	cmp x9,w12, UXTW 
+00c0082c	mov w0,#0x2
+00c00830	b.cs 0x00c007ec
+00c00834	b 0x00c0087c
+00c00838	sub x13,x3,x2
+00c0083c	cmp x13,#0x4
+00c00840	b.lt 0x00c00890
+00c00844	ldrb w13,[x2, #0x3]
+00c00848	and w14,w13,#0xfc
+00c0084c	cmp w14,#0xdc
+00c00850	b.ne 0x00c00888
+00c00854	ldrb w14,[x2, #0x2]
+00c00858	bfm w14,w13,#0x18,#0x1
+00c0085c	bfm w14,w12,#0x16,#0x9
+00c00860	add w12,w14,#0x10, LSL #12
+00c00864	cmp x9,x12
+00c00868	b.cc 0x00c00888
+00c0086c	mov w0,#0x4
+00c00870	b 0x00c007ec
+00c00874	cmp x2,x3
+00c00878	cset w0,cc
+00c0087c	str x2,[x4]
+00c00880	str x5,[x7]
+00c00884	ret
+00c00888	mov w0,#0x2
+00c0088c	b 0x00c0087c
+00c00890	mov w0,#0x1
+00c00894	b 0x00c0087c

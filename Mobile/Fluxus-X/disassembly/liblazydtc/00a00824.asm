@@ -1,0 +1,46 @@
+; BIO_new_mem_buf @ 00a00824
+00a00824	stp x20,x19,[sp, #-0x20]!
+00a00828	stp x29,x30,[sp, #0x10]
+00a0082c	add x29,sp,#0x10
+00a00830	cbz x0,0x00a00844
+00a00834	mov x19,x0
+00a00838	tbnz w1,#0x1f,0x00a0087c
+00a0083c	sxtw x20,w1
+00a00840	b 0x00a00888
+00a00844	bl 0x00c342a0
+00a00848	adrp x0,0x29f000
+00a0084c	adrp x2,0x2d7000
+00a00850	add x0,x0,#0xf2e
+00a00854	add x2,x2,#0xc50
+00a00858	mov w1,#0x5a
+00a0085c	bl 0x00c342b0
+00a00860	mov w1,#0x102
+00a00864	mov w0,#0x20
+00a00868	movk w1,#0xc, LSL #16
+00a0086c	mov x2,xzr
+00a00870	bl 0x00c342c0
+00a00874	mov x0,xzr
+00a00878	b 0x00a008cc
+00a0087c	mov x0,x19
+00a00880	bl 0x00c2ff50
+00a00884	mov x20,x0
+00a00888	adrp x0,0xc59000
+00a0088c	add x0,x0,#0x548
+00a00890	bl 0x00c32240
+00a00894	cbz x0,0x00a008cc
+00a00898	ldr x8,[x0, #0x40]
+00a0089c	ldr x9,[x8]
+00a008a0	stp x20,x19,[x9]
+00a008a4	str x20,[x9, #0x10]
+00a008a8	ldr x8,[x8, #0x8]
+00a008ac	ldr q0,[x9, #0x10]
+00a008b0	str q0,[x8, #0x10]
+00a008b4	ldr q0,[x9]
+00a008b8	str q0,[x8]
+00a008bc	ldr w8,[x0, #0x30]
+00a008c0	str wzr,[x0, #0x38]
+00a008c4	orr w8,w8,#0x200
+00a008c8	str w8,[x0, #0x30]
+00a008cc	ldp x29,x30,[sp, #0x10]
+00a008d0	ldp x20,x19,[sp], #0x20
+00a008d4	ret

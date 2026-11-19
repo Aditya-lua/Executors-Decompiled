@@ -1,0 +1,14 @@
+; FUN_0097019c @ 0097019c
+0097019c	str x19,[sp, #-0x20]!
+009701a0	stp x29,x30,[sp, #0x10]
+009701a4	add x29,sp,#0x10
+009701a8	mov x19,x0
+009701ac	ldr x0,[x0, #0xdc0]
+009701b0	cbz x0,0x009701c4
+009701b4	bl 0x00c32360
+009701b8	ldr x0,[x19, #0xdc0]
+009701bc	bl 0x00c32370
+009701c0	str xzr,[x19, #0xdc0]
+009701c4	ldp x29,x30,[sp, #0x10]
+009701c8	ldr x19,[sp], #0x20
+009701cc	ret

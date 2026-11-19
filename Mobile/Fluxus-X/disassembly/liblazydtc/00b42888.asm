@@ -1,0 +1,64 @@
+; ossl_prov_import_key @ 00b42888
+00b42888	str x23,[sp, #-0x40]!
+00b4288c	stp x20,x19,[sp, #0x20]
+00b42890	mov x19,x3
+00b42894	mov w20,w2
+00b42898	add x8,x0,#0x8
+00b4289c	stp x22,x21,[sp, #0x10]
+00b428a0	stp x29,x30,[sp, #0x30]
+00b428a4	add x29,sp,#0x30
+00b428a8	ldur w9,[x8, #-0x8]
+00b428ac	cbnz w9,0x00b428c0
+00b428b0	b 0x00b428d0
+00b428b4	add x8,x8,#0x10
+00b428b8	ldur w9,[x8, #-0x8]
+00b428bc	cbz w9,0x00b428d0
+00b428c0	cmp w9,#0x1
+00b428c4	b.ne 0x00b428b4
+00b428c8	ldr x8,[x8]
+00b428cc	b 0x00b428d4
+00b428d0	mov x8,xzr
+00b428d4	add x9,x0,#0x8
+00b428d8	ldur w10,[x9, #-0x8]
+00b428dc	cbnz w10,0x00b428f0
+00b428e0	b 0x00b42900
+00b428e4	add x9,x9,#0x10
+00b428e8	ldur w10,[x9, #-0x8]
+00b428ec	cbz w10,0x00b42900
+00b428f0	cmp w10,#0xa
+00b428f4	b.ne 0x00b428e4
+00b428f8	ldr x22,[x9]
+00b428fc	b 0x00b42904
+00b42900	mov x22,xzr
+00b42904	add x9,x0,#0x8
+00b42908	ldur w10,[x9, #-0x8]
+00b4290c	cbnz w10,0x00b42920
+00b42910	b 0x00b42968
+00b42914	add x9,x9,#0x10
+00b42918	ldur w10,[x9, #-0x8]
+00b4291c	cbz w10,0x00b42968
+00b42920	cmp w10,#0x28
+00b42924	b.ne 0x00b42914
+00b42928	cbz x22,0x00b42968
+00b4292c	cbz x8,0x00b42968
+00b42930	ldr x23,[x9]
+00b42934	mov x21,xzr
+00b42938	cbz x23,0x00b4296c
+00b4293c	mov x0,x1
+00b42940	blr x8
+00b42944	mov x21,x0
+00b42948	cbz x0,0x00b42960
+00b4294c	mov x0,x21
+00b42950	mov w1,w20
+00b42954	mov x2,x19
+00b42958	blr x23
+00b4295c	cbnz w0,0x00b4296c
+00b42960	mov x0,x21
+00b42964	blr x22
+00b42968	mov x21,xzr
+00b4296c	mov x0,x21
+00b42970	ldp x29,x30,[sp, #0x30]
+00b42974	ldp x20,x19,[sp, #0x20]
+00b42978	ldp x22,x21,[sp, #0x10]
+00b4297c	ldr x23,[sp], #0x40
+00b42980	ret

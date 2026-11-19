@@ -1,0 +1,5 @@
+; EVP_PKEY_derive @ 00c34690
+00c34690	adrp x16,0xcb8000
+00c34694	ldr x17,[x16, #0x330]
+00c34698	add x16,x16,#0x330
+00c3469c	br x17

@@ -1,0 +1,26 @@
+; _INIT_159 @ 008b7440
+008b7440	stp x29,x30,[sp, #-0x10]!
+008b7444	mov x29,sp
+008b7448	movi v0.2D,#0x0
+008b744c	adrp x1,0xd1f000
+008b7450	add x1,x1,#0x540
+008b7454	mov w8,#0x3f800000
+008b7458	nop
+008b745c	adr x0,0x7fbc70
+008b7460	adrp x2,0xc48000
+008b7464	add x2,x2,#0x880
+008b7468	str w8,[x1, #0x20]
+008b746c	stp q0,q0,[x1]
+008b7470	bl 0x00c2fe70
+008b7474	adrp x9,0xd1e000
+008b7478	adrp x8,0xd1f000
+008b747c	add x8,x8,#0x568
+008b7480	ldr x10,[x9, #0xec0]
+008b7484	adrp x11,0x2ca000
+008b7488	add x11,x11,#0xc1f
+008b748c	strh wzr,[x8]
+008b7490	str wzr,[x8, #0x18]
+008b7494	stp x11,x10,[x8, #0x8]
+008b7498	str x8,[x9, #0xec0]
+008b749c	ldp x29,x30,[sp], #0x10
+008b74a0	ret

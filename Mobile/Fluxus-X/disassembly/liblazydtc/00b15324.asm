@@ -1,0 +1,59 @@
+; X509_NAME_add_entry_by_txt @ 00b15324
+00b15324	stp x26,x25,[sp, #-0x50]!
+00b15328	stp x22,x21,[sp, #0x20]
+00b1532c	mov x22,x1
+00b15330	mov x21,x0
+00b15334	mov x0,x1
+00b15338	mov w1,wzr
+00b1533c	stp x24,x23,[sp, #0x10]
+00b15340	stp x20,x19,[sp, #0x30]
+00b15344	stp x29,x30,[sp, #0x40]
+00b15348	add x29,sp,#0x40
+00b1534c	mov w19,w6
+00b15350	mov w20,w5
+00b15354	mov w23,w4
+00b15358	mov x24,x3
+00b1535c	mov w25,w2
+00b15360	bl 0x00c39690
+00b15364	cbz x0,0x00b153bc
+00b15368	mov x26,x0
+00b1536c	mov x0,xzr
+00b15370	mov x1,x26
+00b15374	mov w2,w25
+00b15378	mov x3,x24
+00b1537c	mov w4,w23
+00b15380	bl 0x00b14f48
+00b15384	mov x22,x0
+00b15388	mov x0,x26
+00b1538c	bl 0x00c37660
+00b15390	cbz x22,0x00b153f0
+00b15394	mov x0,x21
+00b15398	mov x1,x22
+00b1539c	mov w2,w20
+00b153a0	mov w3,w19
+00b153a4	bl 0x00b15038
+00b153a8	mov w19,w0
+00b153ac	mov x0,x22
+00b153b0	bl 0x00c40940
+00b153b4	mov w0,w19
+00b153b8	b 0x00b153f4
+00b153bc	bl 0x00c342a0
+00b153c0	adrp x0,0x2a0000
+00b153c4	adrp x2,0x2d6000
+00b153c8	add x0,x0,#0xe2d
+00b153cc	add x2,x2,#0x80b
+00b153d0	orr w1,wzr,#0xfc
+00b153d4	bl 0x00c342b0
+00b153d8	adrp x2,0x2ad000
+00b153dc	add x2,x2,#0x7ba
+00b153e0	mov w0,#0xb
+00b153e4	mov w1,#0x77
+00b153e8	mov x3,x22
+00b153ec	bl 0x00c342c0
+00b153f0	mov w0,wzr
+00b153f4	ldp x29,x30,[sp, #0x40]
+00b153f8	ldp x20,x19,[sp, #0x30]
+00b153fc	ldp x22,x21,[sp, #0x20]
+00b15400	ldp x24,x23,[sp, #0x10]
+00b15404	ldp x26,x25,[sp], #0x50
+00b15408	ret

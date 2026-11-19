@@ -1,0 +1,88 @@
+; SCT_validate @ 00a142b8
+00a142b8	sub sp,sp,#0x40
+00a142bc	stp x22,x21,[sp, #0x10]
+00a142c0	stp x20,x19,[sp, #0x20]
+00a142c4	stp x29,x30,[sp, #0x30]
+00a142c8	stp xzr,xzr,[sp]
+00a142cc	ldr w8,[x0]
+00a142d0	mov x20,x0
+00a142d4	add x29,sp,#0x30
+00a142d8	cbz w8,0x00a142ec
+00a142dc	mov w8,#0x5
+00a142e0	mov w21,wzr
+00a142e4	str w8,[x20, #0x60]
+00a142e8	b 0x00a143e4
+00a142ec	mov x21,x1
+00a142f0	ldr x0,[x1, #0x10]
+00a142f4	ldp x1,x2,[x20, #0x18]
+00a142f8	bl 0x00c39750
+00a142fc	cbz x0,0x00a143fc
+00a14300	mov x22,x0
+00a14304	ldp x0,x1,[x21, #0x20]
+00a14308	bl 0x00c398a0
+00a1430c	mov x19,x0
+00a14310	cbz x0,0x00a143c8
+00a14314	mov x0,x22
+00a14318	bl 0x00c39770
+00a1431c	mov x1,x0
+00a14320	mov x0,sp
+00a14324	bl 0x00c39910
+00a14328	cmp w0,#0x1
+00a1432c	b.ne 0x00a143c8
+00a14330	ldr x1,[sp]
+00a14334	mov x0,x19
+00a14338	bl 0x00c398d0
+00a1433c	cmp w0,#0x1
+00a14340	b.ne 0x00a143c8
+00a14344	ldr w8,[x20, #0x58]
+00a14348	cmp w8,#0x1
+00a1434c	b.ne 0x00a14384
+00a14350	ldr x0,[x21, #0x8]
+00a14354	cbz x0,0x00a14404
+00a14358	bl 0x00c32cb0
+00a1435c	mov x1,x0
+00a14360	add x0,sp,#0x8
+00a14364	bl 0x00c39910
+00a14368	cmp w0,#0x1
+00a1436c	b.ne 0x00a143c8
+00a14370	ldr x1,[sp, #0x8]
+00a14374	mov x0,x19
+00a14378	bl 0x00c398c0
+00a1437c	cmp w0,#0x1
+00a14380	b.ne 0x00a143c8
+00a14384	ldr x1,[x21, #0x18]
+00a14388	mov x0,x19
+00a1438c	bl 0x00c398e0
+00a14390	ldr x1,[x21]
+00a14394	mov x0,x19
+00a14398	mov x2,xzr
+00a1439c	bl 0x00c398b0
+00a143a0	cmp w0,#0x1
+00a143a4	b.ne 0x00a14404
+00a143a8	mov x0,x19
+00a143ac	mov x1,x20
+00a143b0	bl 0x00c398f0
+00a143b4	cmp w0,#0x1
+00a143b8	mov w8,#0x2
+00a143bc	cset w21,eq
+00a143c0	cinc w8,w8,ne
+00a143c4	b 0x00a1440c
+00a143c8	mov w21,#0xffffffff
+00a143cc	ldr x0,[sp, #0x8]
+00a143d0	bl 0x00c39900
+00a143d4	ldr x0,[sp]
+00a143d8	bl 0x00c39900
+00a143dc	mov x0,x19
+00a143e0	bl 0x00c39890
+00a143e4	mov w0,w21
+00a143e8	ldp x29,x30,[sp, #0x30]
+00a143ec	ldp x20,x19,[sp, #0x20]
+00a143f0	ldp x22,x21,[sp, #0x10]
+00a143f4	add sp,sp,#0x40
+00a143f8	ret
+00a143fc	mov w8,#0x1
+00a14400	b 0x00a142e0
+00a14404	mov w21,wzr
+00a14408	mov w8,#0x4
+00a1440c	str w8,[x20, #0x60]
+00a14410	b 0x00a143cc

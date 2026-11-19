@@ -1,0 +1,5 @@
+; PROXY_CERT_INFO_EXTENSION_new @ 00c409e0
+00c409e0	adrp x16,0xcbe000
+00c409e4	ldr x17,[x16, #0x4d8]
+00c409e8	add x16,x16,#0x4d8
+00c409ec	br x17

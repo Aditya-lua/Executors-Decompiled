@@ -1,0 +1,53 @@
+; tls13_save_handshake_digest_for_pha @ 009e41e4
+009e41e4	str x19,[sp, #-0x20]!
+009e41e8	stp x29,x30,[sp, #0x10]
+009e41ec	ldr x8,[x0, #0xbc8]
+009e41f0	add x29,sp,#0x10
+009e41f4	cbz x8,0x009e4208
+009e41f8	mov w0,#0x1
+009e41fc	ldp x29,x30,[sp, #0x10]
+009e4200	ldr x19,[sp], #0x20
+009e4204	ret
+009e4208	mov w1,#0x1
+009e420c	mov x19,x0
+009e4210	bl 0x00c345a0
+009e4214	cbz w0,0x009e41fc
+009e4218	bl 0x00c31fa0
+009e421c	str x0,[x19, #0xbc8]
+009e4220	cbz x0,0x009e4278
+009e4224	ldr x1,[x19, #0x190]
+009e4228	bl 0x00c34bf0
+009e422c	cbnz w0,0x009e41f8
+009e4230	bl 0x00c342a0
+009e4234	adrp x0,0x2bb000
+009e4238	adrp x2,0x2c5000
+009e423c	add x0,x0,#0x912
+009e4240	add x2,x2,#0x763
+009e4244	mov w1,#0x953
+009e4248	bl 0x00c342b0
+009e424c	mov w2,#0x103
+009e4250	mov w1,#0x50
+009e4254	movk w2,#0xc, LSL #16
+009e4258	mov x0,x19
+009e425c	mov x3,xzr
+009e4260	bl 0x00c34410
+009e4264	ldr x0,[x19, #0xbc8]
+009e4268	bl 0x00c31f90
+009e426c	mov w0,wzr
+009e4270	str xzr,[x19, #0xbc8]
+009e4274	b 0x009e41fc
+009e4278	bl 0x00c342a0
+009e427c	adrp x0,0x2bb000
+009e4280	adrp x2,0x2c5000
+009e4284	add x0,x0,#0x912
+009e4288	add x2,x2,#0x763
+009e428c	mov w1,#0x94e
+009e4290	bl 0x00c342b0
+009e4294	mov w2,#0x103
+009e4298	mov w1,#0x50
+009e429c	movk w2,#0xc, LSL #16
+009e42a0	mov x0,x19
+009e42a4	mov x3,xzr
+009e42a8	bl 0x00c34410
+009e42ac	mov w0,wzr
+009e42b0	b 0x009e41fc

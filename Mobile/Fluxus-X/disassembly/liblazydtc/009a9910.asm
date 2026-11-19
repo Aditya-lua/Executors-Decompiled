@@ -1,0 +1,43 @@
+; ssl3_write @ 009a9910
+009a9910	str x23,[sp, #-0x40]!
+009a9914	stp x22,x21,[sp, #0x10]
+009a9918	stp x20,x19,[sp, #0x20]
+009a991c	stp x29,x30,[sp, #0x30]
+009a9920	add x29,sp,#0x30
+009a9924	mov x19,x3
+009a9928	mov x20,x2
+009a992c	mov x21,x1
+009a9930	mov x22,x0
+009a9934	bl 0x00c30710
+009a9938	str wzr,[x0]
+009a993c	ldr w8,[x22, #0x1ac]
+009a9940	cbz w8,0x009a9988
+009a9944	add x23,x22,#0xc58
+009a9948	mov x0,x23
+009a994c	bl 0x00c347c0
+009a9950	cbnz w0,0x009a9988
+009a9954	mov x0,x23
+009a9958	bl 0x00c347d0
+009a995c	cbnz w0,0x009a9988
+009a9960	mov x0,x22
+009a9964	bl 0x00c344e0
+009a9968	cbnz w0,0x009a9988
+009a996c	mov x0,x22
+009a9970	bl 0x00c34830
+009a9974	ldr d0,[x22, #0x1b0]
+009a9978	movi v1.2S,#0x1
+009a997c	str wzr,[x22, #0x1ac]
+009a9980	add v0.2S,v0.2S,v1.2S
+009a9984	str d0,[x22, #0x1b0]
+009a9988	ldr x8,[x22, #0x8]
+009a998c	mov x0,x22
+009a9990	mov x2,x21
+009a9994	mov x3,x20
+009a9998	ldr x5,[x8, #0x70]
+009a999c	mov x4,x19
+009a99a0	ldp x29,x30,[sp, #0x30]
+009a99a4	ldp x20,x19,[sp, #0x20]
+009a99a8	ldp x22,x21,[sp, #0x10]
+009a99ac	mov w1,#0x17
+009a99b0	ldr x23,[sp], #0x40
+009a99b4	br x5

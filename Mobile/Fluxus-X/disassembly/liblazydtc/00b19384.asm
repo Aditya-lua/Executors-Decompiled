@@ -1,0 +1,80 @@
+; OSSL_HTTP_transfer @ 00b19384
+00b19384	sub sp,sp,#0x50
+00b19388	stp x29,x30,[sp, #0x40]
+00b1938c	add x29,sp,#0x40
+00b19390	ldr w10,[x29, #0x60]
+00b19394	str x21,[sp, #0x20]
+00b19398	stp x20,x19,[sp, #0x30]
+00b1939c	mov x21,x3
+00b193a0	mov x19,x0
+00b193a4	cbz x0,0x00b193b0
+00b193a8	ldr x20,[x19]
+00b193ac	cbnz x20,0x00b193f4
+00b193b0	ldp x8,x12,[x29, #0x18]
+00b193b4	ldr x9,[x29, #0x10]
+00b193b8	ldr w11,[x29, #0x28]
+00b193bc	mov x0,x1
+00b193c0	mov x1,x2
+00b193c4	mov x2,x5
+00b193c8	mov x3,x6
+00b193cc	mov x5,x7
+00b193d0	mov x6,x9
+00b193d4	mov x7,x8
+00b193d8	str w10,[sp, #0x10]
+00b193dc	str w11,[sp, #0x8]
+00b193e0	str x12,[sp]
+00b193e4	bl 0x00b186ec
+00b193e8	mov x20,x0
+00b193ec	cbz x0,0x00b194b4
+00b193f0	mov w10,#0xffffffff
+00b193f4	ldr w8,[x29, #0x68]
+00b193f8	ldr x7,[x29, #0x58]
+00b193fc	ldr w6,[x29, #0x50]
+00b19400	ldp x4,x5,[x29, #0x40]
+00b19404	ldp x2,x3,[x29, #0x30]
+00b19408	mov x0,x20
+00b1940c	mov x1,x21
+00b19410	str w8,[sp, #0x8]
+00b19414	str w10,[sp]
+00b19418	bl 0x00b18a8c
+00b1941c	cbz w0,0x00b19448
+00b19420	mov x0,x20
+00b19424	mov x1,xzr
+00b19428	bl 0x00b18c64
+00b1942c	mov x21,x0
+00b19430	cbz x0,0x00b1943c
+00b19434	ldr w8,[x20, #0xa0]
+00b19438	cbnz w8,0x00b19480
+00b1943c	ldr x8,[x20, #0x28]
+00b19440	cbnz x8,0x00b19454
+00b19444	b 0x00b19474
+00b19448	mov x21,xzr
+00b1944c	ldr x8,[x20, #0x28]
+00b19450	cbz x8,0x00b19474
+00b19454	ldr x0,[x20, #0x18]
+00b19458	ldr x1,[x20, #0x30]
+00b1945c	cmp x21,#0x0
+00b19460	cset w3,ne
+00b19464	mov w2,wzr
+00b19468	blr x8
+00b1946c	cbz x0,0x00b194a0
+00b19470	str x0,[x20, #0x18]
+00b19474	mov x0,x20
+00b19478	bl 0x00b171a0
+00b1947c	mov x20,xzr
+00b19480	cbz x19,0x00b19488
+00b19484	str x20,[x19]
+00b19488	mov x0,x21
+00b1948c	ldp x29,x30,[sp, #0x40]
+00b19490	ldp x20,x19,[sp, #0x30]
+00b19494	ldr x21,[sp, #0x20]
+00b19498	add sp,sp,#0x50
+00b1949c	ret
+00b194a0	mov x0,x20
+00b194a4	bl 0x00b171a0
+00b194a8	mov x0,x21
+00b194ac	bl 0x00c31a40
+00b194b0	mov x20,xzr
+00b194b4	mov x21,xzr
+00b194b8	cbnz x19,0x00b19484
+00b194bc	b 0x00b19488

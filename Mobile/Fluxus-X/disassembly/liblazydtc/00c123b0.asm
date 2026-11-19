@@ -1,0 +1,114 @@
+; FUN_00c123b0 @ 00c123b0
+00c123b0	paciasp
+00c123b4	stp x29,x30,[sp, #-0x40]!
+00c123b8	stp x24,x23,[sp, #0x10]
+00c123bc	stp x22,x21,[sp, #0x20]
+00c123c0	stp x20,x19,[sp, #0x30]
+00c123c4	mov x29,sp
+00c123c8	movi v0.2D,#0x0
+00c123cc	mov x22,x0
+00c123d0	mov x21,x0
+00c123d4	mov x19,x1
+00c123d8	mov x20,x0
+00c123dc	mov x23,x0
+00c123e0	add x8,x19,#0x2b0
+00c123e4	add x24,x0,#0x98
+00c123e8	str q0,[x22, #0x20]!
+00c123ec	stp x1,x22,[x0]
+00c123f0	str q0,[x21, #0x58]!
+00c123f4	str q0,[x0, #0x30]
+00c123f8	stur q0,[x0, #0x68]
+00c123fc	stur q0,[x0, #0x78]
+00c12400	stur q0,[x0, #0x88]
+00c12404	ldr x1,[x1, #0x298]
+00c12408	str x21,[x23, #0x40]!
+00c1240c	stp x22,x23,[x0, #0x10]
+00c12410	cmp x1,x8
+00c12414	stp x21,x24,[x0, #0x48]
+00c12418	b.eq 0x00c12444
+00c1241c	str x1,[x20, #0x8]
+00c12420	add x9,x19,#0x2d0
+00c12424	mov x1,x8
+00c12428	ldr q0,[x19, #0x2a0]
+00c1242c	mov x0,x21
+00c12430	str q0,[x20, #0x10]
+00c12434	str x8,[x19, #0x298]
+00c12438	str x8,[x19, #0x2a0]
+00c1243c	str x9,[x19, #0x2a8]
+00c12440	b 0x00c12480
+00c12444	ldr x8,[x19, #0x2a0]
+00c12448	subs x2,x8,x1
+00c1244c	b.eq 0x00c12468
+00c12450	mov x0,x22
+00c12454	bl 0x00c2ff60
+00c12458	ldr x8,[x19, #0x2a0]
+00c1245c	ldr x1,[x19, #0x298]
+00c12460	ldr x0,[x23]
+00c12464	b 0x00c12470
+00c12468	mov x0,x21
+00c1246c	mov x8,x1
+00c12470	sub x8,x8,x1
+00c12474	add x8,x22,x8
+00c12478	str x8,[x20, #0x10]
+00c1247c	str x1,[x19, #0x2a0]
+00c12480	ldr x8,[x19, #0x240]
+00c12484	add x9,x19,#0x258
+00c12488	cmp x8,x9
+00c1248c	b.eq 0x00c124cc
+00c12490	cmp x0,x21
+00c12494	str x8,[x23]
+00c12498	b.eq 0x00c124e8
+00c1249c	ldr x8,[x19, #0x248]
+00c124a0	str x0,[x19, #0x240]
+00c124a4	ldr x9,[x20, #0x48]
+00c124a8	str x8,[x20, #0x48]
+00c124ac	ldr x8,[x19, #0x250]
+00c124b0	str x9,[x19, #0x248]
+00c124b4	ldr x10,[x20, #0x50]
+00c124b8	str x8,[x20, #0x50]
+00c124bc	ldr x9,[x19, #0x240]
+00c124c0	str x10,[x19, #0x250]
+00c124c4	str x9,[x19, #0x248]
+00c124c8	b 0x00c12554
+00c124cc	cmp x0,x21
+00c124d0	b.eq 0x00c12508
+00c124d4	bl 0x00c30960
+00c124d8	stp x21,x21,[x20, #0x40]
+00c124dc	ldr x8,[x19, #0x240]
+00c124e0	str x24,[x20, #0x50]
+00c124e4	b 0x00c1250c
+00c124e8	add x8,x19,#0x248
+00c124ec	ldr q0,[x8]
+00c124f0	add x8,x19,#0x298
+00c124f4	stur q0,[x20, #0x48]
+00c124f8	str x9,[x19, #0x240]
+00c124fc	str x9,[x19, #0x248]
+00c12500	str x8,[x19, #0x250]
+00c12504	b 0x00c12554
+00c12508	mov x21,x0
+00c1250c	ldr x9,[x19, #0x248]
+00c12510	subs x2,x9,x8
+00c12514	b.eq 0x00c12534
+00c12518	mov x0,x21
+00c1251c	mov x1,x8
+00c12520	bl 0x00c2ff60
+00c12524	ldr x21,[x23]
+00c12528	ldr x9,[x19, #0x248]
+00c1252c	ldr x8,[x19, #0x240]
+00c12530	b 0x00c12538
+00c12534	mov x9,x8
+00c12538	sub x9,x9,x8
+00c1253c	add x9,x21,x9
+00c12540	str x9,[x20, #0x48]
+00c12544	str x8,[x19, #0x248]
+00c12548	ldr x19,[x20]
+00c1254c	ldr x1,[x19, #0x298]
+00c12550	ldr x9,[x19, #0x240]
+00c12554	str x1,[x19, #0x2a0]
+00c12558	str x9,[x19, #0x248]
+00c1255c	ldp x20,x19,[sp, #0x30]
+00c12560	ldp x22,x21,[sp, #0x20]
+00c12564	ldp x24,x23,[sp, #0x10]
+00c12568	ldp x29,x30,[sp], #0x40
+00c1256c	autiasp
+00c12570	ret

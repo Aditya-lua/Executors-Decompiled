@@ -1,0 +1,28 @@
+; BN_new @ 00a0192c
+00a0192c	stp x29,x30,[sp, #-0x10]!
+00a01930	adrp x1,0x2b5000
+00a01934	add x1,x1,#0xa6d
+00a01938	orr w0,wzr,#0x18
+00a0193c	mov w2,#0xf7
+00a01940	mov x29,sp
+00a01944	bl 0x00c34250
+00a01948	cbz x0,0x00a0195c
+00a0194c	mov w8,#0x1
+00a01950	str w8,[x0, #0x14]
+00a01954	ldp x29,x30,[sp], #0x10
+00a01958	ret
+00a0195c	bl 0x00c342a0
+00a01960	adrp x0,0x2b5000
+00a01964	adrp x2,0x2d1000
+00a01968	add x0,x0,#0xa6d
+00a0196c	add x2,x2,#0x72f
+00a01970	orr w1,wzr,#0xf8
+00a01974	bl 0x00c342b0
+00a01978	mov w1,#0x100
+00a0197c	orr w0,wzr,#0x3
+00a01980	movk w1,#0xc, LSL #16
+00a01984	mov x2,xzr
+00a01988	bl 0x00c342c0
+00a0198c	mov x0,xzr
+00a01990	ldp x29,x30,[sp], #0x10
+00a01994	ret

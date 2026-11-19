@@ -1,0 +1,85 @@
+; FUN_009ad72c @ 009ad72c
+009ad72c	str x25,[sp, #-0x50]!
+009ad730	stp x22,x21,[sp, #0x20]
+009ad734	stp x20,x19,[sp, #0x30]
+009ad738	mov w20,w2
+009ad73c	mov x21,x0
+009ad740	mov x0,x1
+009ad744	mov x1,xzr
+009ad748	mov x2,xzr
+009ad74c	mov x3,xzr
+009ad750	mov x4,xzr
+009ad754	stp x24,x23,[sp, #0x10]
+009ad758	stp x29,x30,[sp, #0x40]
+009ad75c	add x29,sp,#0x40
+009ad760	bl 0x00c34ea0
+009ad764	mov x19,x0
+009ad768	cbz x0,0x009ad854
+009ad76c	mov x0,x19
+009ad770	bl 0x00c34e70
+009ad774	cbz w0,0x009ad784
+009ad778	mov w22,#0x1
+009ad77c	bl 0x00c323e0
+009ad780	b 0x009ad858
+009ad784	sub w23,w20,#0x1
+009ad788	mov w22,#0x1
+009ad78c	mov x0,x19
+009ad790	bl 0x00c34e80
+009ad794	cbnz w0,0x009ad844
+009ad798	mov x0,x19
+009ad79c	bl 0x00c34e90
+009ad7a0	cbz x0,0x009ad838
+009ad7a4	mov x24,x0
+009ad7a8	bl 0x00c34e50
+009ad7ac	cmp w0,#0x5
+009ad7b0	b.eq 0x009ad7e4
+009ad7b4	cmp w0,#0x1
+009ad7b8	b.ne 0x009ad830
+009ad7bc	cmp w20,#0x1
+009ad7c0	b.lt 0x009ad830
+009ad7c4	mov x0,x24
+009ad7c8	bl 0x00c34e40
+009ad7cc	mov x1,x0
+009ad7d0	mov x0,x21
+009ad7d4	mov w2,w23
+009ad7d8	bl 0x009ad72c
+009ad7dc	mov w22,w0
+009ad7e0	b 0x009ad830
+009ad7e4	mov x0,x24
+009ad7e8	bl 0x00c34e30
+009ad7ec	cbz x0,0x009ad854
+009ad7f0	bl 0x00c32d20
+009ad7f4	cbz x0,0x009ad854
+009ad7f8	bl 0x00c34f50
+009ad7fc	cbz x0,0x009ad854
+009ad800	mov x25,x0
+009ad804	mov x0,x21
+009ad808	mov x1,x25
+009ad80c	bl 0x00c34760
+009ad810	tbnz w0,#0x1f,0x009ad820
+009ad814	mov x0,x25
+009ad818	bl 0x00c34810
+009ad81c	b 0x009ad830
+009ad820	mov x0,x21
+009ad824	mov x1,x25
+009ad828	bl 0x00c347a0
+009ad82c	cbz w0,0x009ad84c
+009ad830	mov x0,x24
+009ad834	bl 0x00c34e20
+009ad838	mov x0,x19
+009ad83c	bl 0x00c34e70
+009ad840	cbz w0,0x009ad78c
+009ad844	bl 0x00c323e0
+009ad848	b 0x009ad858
+009ad84c	mov x0,x25
+009ad850	bl 0x00c34810
+009ad854	mov w22,wzr
+009ad858	mov x0,x19
+009ad85c	bl 0x00c34e60
+009ad860	mov w0,w22
+009ad864	ldp x29,x30,[sp, #0x40]
+009ad868	ldp x20,x19,[sp, #0x30]
+009ad86c	ldp x22,x21,[sp, #0x20]
+009ad870	ldp x24,x23,[sp, #0x10]
+009ad874	ldr x25,[sp], #0x50
+009ad878	ret

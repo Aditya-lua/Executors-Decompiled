@@ -1,0 +1,4 @@
+; i2d_ASN1_TYPE @ 009f7c50
+009f7c50	adrp x2,0xc58000
+009f7c54	add x2,x2,#0xec8
+009f7c58	b 0x00c36170

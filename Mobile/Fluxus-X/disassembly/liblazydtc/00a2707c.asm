@@ -1,0 +1,31 @@
+; ossl_ec_set_ecdh_cofactor_mode @ 00a2707c
+00a2707c	stp x20,x19,[sp, #-0x20]!
+00a27080	stp x29,x30,[sp, #0x10]
+00a27084	add x29,sp,#0x10
+00a27088	mov w20,w1
+00a2708c	mov x19,x0
+00a27090	bl 0x00c36880
+00a27094	mov x1,x0
+00a27098	cmp w20,#0x1
+00a2709c	mov w0,wzr
+00a270a0	b.hi 0x00a270bc
+00a270a4	mov x0,x1
+00a270a8	bl 0x00c3aa20
+00a270ac	cbz x0,0x00a270bc
+00a270b0	bl 0x00c38d20
+00a270b4	cbz w0,0x00a270c8
+00a270b8	mov w0,#0x1
+00a270bc	ldp x29,x30,[sp, #0x10]
+00a270c0	ldp x20,x19,[sp], #0x20
+00a270c4	ret
+00a270c8	cbz w20,0x00a270e4
+00a270cc	cmp w20,#0x1
+00a270d0	b.ne 0x00a270b8
+00a270d4	mov w1,#0x1000
+00a270d8	mov x0,x19
+00a270dc	bl 0x00c3ab40
+00a270e0	b 0x00a270b8
+00a270e4	mov w1,#0x1000
+00a270e8	mov x0,x19
+00a270ec	bl 0x00c3ac70
+00a270f0	b 0x00a270b8

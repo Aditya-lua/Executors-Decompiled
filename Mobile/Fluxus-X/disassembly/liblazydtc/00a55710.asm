@@ -1,0 +1,57 @@
+; ERR_set_debug @ 00a55710
+00a55710	str x25,[sp, #-0x50]!
+00a55714	stp x24,x23,[sp, #0x10]
+00a55718	stp x22,x21,[sp, #0x20]
+00a5571c	stp x20,x19,[sp, #0x30]
+00a55720	stp x29,x30,[sp, #0x40]
+00a55724	add x29,sp,#0x40
+00a55728	mov x19,x2
+00a5572c	mov w20,w1
+00a55730	mov x22,x0
+00a55734	bl 0x00c3be80
+00a55738	cbz x0,0x00a557d8
+00a5573c	ldrsw x24,[x0, #0x380]
+00a55740	mov x21,x0
+00a55744	adrp x1,0x2d3000
+00a55748	add x1,x1,#0xaa2
+00a5574c	add x23,x0,x24, LSL #0x3
+00a55750	ldr x0,[x23, #0x240]
+00a55754	orr w2,wzr,#0x38
+00a55758	add x25,x23,#0x240
+00a5575c	bl 0x00c32310
+00a55760	cbz x22,0x00a55784
+00a55764	ldrb w8,[x22]
+00a55768	cbz w8,0x00a55784
+00a5576c	adrp x1,0x2d3000
+00a55770	add x1,x1,#0xaa2
+00a55774	orr w2,wzr,#0x3c
+00a55778	mov x0,x22
+00a5577c	bl 0x00c34600
+00a55780	b 0x00a55788
+00a55784	mov x0,xzr
+00a55788	add x8,x21,x24, LSL #0x2
+00a5578c	str x0,[x25]
+00a55790	str w20,[x8, #0x2c0]
+00a55794	ldr x0,[x23, #0x300]
+00a55798	adrp x1,0x2d3000
+00a5579c	add x1,x1,#0xaa2
+00a557a0	orr w2,wzr,#0x3e
+00a557a4	add x20,x23,#0x300
+00a557a8	bl 0x00c32310
+00a557ac	cbz x19,0x00a557d0
+00a557b0	ldrb w8,[x19]
+00a557b4	cbz w8,0x00a557d0
+00a557b8	adrp x1,0x2d3000
+00a557bc	add x1,x1,#0xaa2
+00a557c0	mov w2,#0x42
+00a557c4	mov x0,x19
+00a557c8	bl 0x00c34600
+00a557cc	b 0x00a557d4
+00a557d0	mov x0,xzr
+00a557d4	str x0,[x20]
+00a557d8	ldp x29,x30,[sp, #0x40]
+00a557dc	ldp x20,x19,[sp, #0x30]
+00a557e0	ldp x22,x21,[sp, #0x20]
+00a557e4	ldp x24,x23,[sp, #0x10]
+00a557e8	ldr x25,[sp], #0x50
+00a557ec	ret

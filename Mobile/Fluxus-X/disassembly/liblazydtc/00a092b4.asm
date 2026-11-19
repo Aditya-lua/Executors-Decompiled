@@ -1,0 +1,36 @@
+; BN_mod_sub_quick @ 00a092b4
+00a092b4	stp x20,x19,[sp, #-0x20]!
+00a092b8	cmp x0,x3
+00a092bc	stp x29,x30,[sp, #0x10]
+00a092c0	add x29,sp,#0x10
+00a092c4	b.eq 0x00a092f8
+00a092c8	mov x19,x3
+00a092cc	mov x20,x0
+00a092d0	bl 0x00c38880
+00a092d4	cbz w0,0x00a09334
+00a092d8	ldr w8,[x20, #0x10]
+00a092dc	cbz w8,0x00a09330
+00a092e0	ldp x29,x30,[sp, #0x10]
+00a092e4	mov x0,x20
+00a092e8	mov x1,x20
+00a092ec	mov x2,x19
+00a092f0	ldp x20,x19,[sp], #0x20
+00a092f4	b 0x00c38870
+00a092f8	bl 0x00c342a0
+00a092fc	adrp x0,0x2b4000
+00a09300	adrp x2,0x2a5000
+00a09304	add x0,x0,#0x47
+00a09308	add x2,x2,#0xc95
+00a0930c	mov w1,#0xc3
+00a09310	bl 0x00c342b0
+00a09314	mov w1,#0x106
+00a09318	orr w0,wzr,#0x3
+00a0931c	movk w1,#0x8, LSL #16
+00a09320	mov x2,xzr
+00a09324	bl 0x00c342c0
+00a09328	mov w0,wzr
+00a0932c	b 0x00a09334
+00a09330	mov w0,#0x1
+00a09334	ldp x29,x30,[sp, #0x10]
+00a09338	ldp x20,x19,[sp], #0x20
+00a0933c	ret

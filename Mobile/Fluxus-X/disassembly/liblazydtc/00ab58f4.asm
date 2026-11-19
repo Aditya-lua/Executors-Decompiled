@@ -1,0 +1,4 @@
+; d2i_NETSCAPE_CERT_SEQUENCE @ 00ab58f4
+00ab58f4	adrp x3,0xc7a000
+00ab58f8	add x3,x3,#0xec8
+00ab58fc	b 0x00c36150

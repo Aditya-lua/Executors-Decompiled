@@ -1,0 +1,5 @@
+; HMAC_Init_ex @ 00c36930
+00c36930	adrp x16,0xcb9000
+00c36934	ldr x17,[x16, #0x480]
+00c36938	add x16,x16,#0x480
+00c3693c	br x17

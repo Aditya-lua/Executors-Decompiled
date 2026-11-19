@@ -1,0 +1,65 @@
+; ossl_asn1_type_get_octetstring_int @ 00a60324
+00a60324	str x25,[sp, #-0x50]!
+00a60328	stp x24,x23,[sp, #0x10]
+00a6032c	stp x22,x21,[sp, #0x20]
+00a60330	stp x20,x19,[sp, #0x30]
+00a60334	stp x29,x30,[sp, #0x40]
+00a60338	ldr w8,[x0]
+00a6033c	mov x19,xzr
+00a60340	add x29,sp,#0x40
+00a60344	cmp w8,#0x10
+00a60348	b.ne 0x00a603c8
+00a6034c	ldr x8,[x0, #0x8]
+00a60350	mov x23,x1
+00a60354	mov x1,x0
+00a60358	cbz x8,0x00a603c4
+00a6035c	adrp x0,0xc5d000
+00a60360	add x0,x0,#0x758
+00a60364	mov w22,w3
+00a60368	mov x20,x2
+00a6036c	bl 0x00c37a80
+00a60370	mov x19,x0
+00a60374	cbz x0,0x00a603c8
+00a60378	ldr x24,[x19]
+00a6037c	ldrsw x25,[x19, #0x8]
+00a60380	mov x0,x24
+00a60384	bl 0x00c32140
+00a60388	mov w21,w0
+00a6038c	cbz x23,0x00a60394
+00a60390	str x25,[x23]
+00a60394	cbz x20,0x00a603b8
+00a60398	cmp w21,w22
+00a6039c	mov x0,x24
+00a603a0	csel w22,w21,w22,lt
+00a603a4	bl 0x00c32130
+00a603a8	mov x1,x0
+00a603ac	sxtw x2,w22
+00a603b0	mov x0,x20
+00a603b4	bl 0x00c2ffd0
+00a603b8	cmn w21,#0x1
+00a603bc	b.ne 0x00a603f8
+00a603c0	b 0x00a603c8
+00a603c4	mov x19,xzr
+00a603c8	bl 0x00c342a0
+00a603cc	adrp x0,0x2d9000
+00a603d0	adrp x2,0x2cf000
+00a603d4	add x0,x0,#0xc95
+00a603d8	add x2,x2,#0xb8d
+00a603dc	mov w1,#0xb7
+00a603e0	bl 0x00c342b0
+00a603e4	mov w0,#0xd
+00a603e8	mov w1,#0x6d
+00a603ec	mov x2,xzr
+00a603f0	bl 0x00c342c0
+00a603f4	mov w21,#0xffffffff
+00a603f8	adrp x1,0xc5d000
+00a603fc	add x1,x1,#0x758
+00a60400	mov x0,x19
+00a60404	bl 0x00c36160
+00a60408	mov w0,w21
+00a6040c	ldp x29,x30,[sp, #0x40]
+00a60410	ldp x20,x19,[sp, #0x30]
+00a60414	ldp x22,x21,[sp, #0x20]
+00a60418	ldp x24,x23,[sp, #0x10]
+00a6041c	ldr x25,[sp], #0x50
+00a60420	ret

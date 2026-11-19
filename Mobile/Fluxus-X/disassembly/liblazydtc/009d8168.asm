@@ -1,0 +1,77 @@
+; tls_parse_ctos_supported_groups @ 009d8168
+009d8168	sub sp,sp,#0x30
+009d816c	stp x20,x19,[sp, #0x10]
+009d8170	stp x29,x30,[sp, #0x20]
+009d8174	ldr x8,[x1, #0x8]
+009d8178	mov x19,x0
+009d817c	add x29,sp,#0x20
+009d8180	subs x11,x8,#0x2
+009d8184	b.cc 0x009d8228
+009d8188	ldr x10,[x1]
+009d818c	ldrb w8,[x10, #0x1]
+009d8190	ldrb w12,[x10]
+009d8194	mov x9,x8
+009d8198	bfm x9,x12,#0x38,#0x7
+009d819c	cmp x11,x9
+009d81a0	b.ne 0x009d8228
+009d81a4	add x10,x10,#0x2
+009d81a8	add x11,x10,x9
+009d81ac	stp x11,xzr,[x1]
+009d81b0	stp x10,x9,[sp]
+009d81b4	cbz x9,0x009d8228
+009d81b8	tbnz w8,#0x0,0x009d8228
+009d81bc	ldr w8,[x19, #0x4d0]
+009d81c0	cbz w8,0x009d81ec
+009d81c4	ldr x8,[x19, #0x8]
+009d81c8	ldr x9,[x8, #0xc0]
+009d81cc	ldrb w9,[x9, #0x60]
+009d81d0	tbnz w9,#0x3,0x009d8220
+009d81d4	ldr w8,[x8]
+009d81d8	mov w0,#0x1
+009d81dc	cmp w8,#0x304
+009d81e0	b.lt 0x009d825c
+009d81e4	cmp w8,#0x10, LSL #12
+009d81e8	b.eq 0x009d825c
+009d81ec	ldr x0,[x19, #0xad8]
+009d81f0	adrp x1,0x2d7000
+009d81f4	add x1,x1,#0xae0
+009d81f8	mov w2,#0x38c
+009d81fc	add x20,x19,#0xad8
+009d8200	bl 0x00c32310
+009d8204	add x2,x19,#0xad0
+009d8208	mov x0,sp
+009d820c	mov x1,x20
+009d8210	str xzr,[x19, #0xad8]
+009d8214	str xzr,[x19, #0xad0]
+009d8218	bl 0x00c36780
+009d821c	cbz w0,0x009d826c
+009d8220	mov w0,#0x1
+009d8224	b 0x009d825c
+009d8228	bl 0x00c342a0
+009d822c	adrp x0,0x2d7000
+009d8230	adrp x2,0x2d1000
+009d8234	add x0,x0,#0xae0
+009d8238	add x2,x2,#0x689
+009d823c	mov w1,#0x387
+009d8240	bl 0x00c342b0
+009d8244	mov w1,#0x32
+009d8248	mov w2,#0x6e
+009d824c	mov x0,x19
+009d8250	mov x3,xzr
+009d8254	bl 0x00c34410
+009d8258	mov w0,wzr
+009d825c	ldp x29,x30,[sp, #0x20]
+009d8260	ldp x20,x19,[sp, #0x10]
+009d8264	add sp,sp,#0x30
+009d8268	ret
+009d826c	bl 0x00c342a0
+009d8270	adrp x0,0x2d7000
+009d8274	adrp x2,0x2d1000
+009d8278	add x0,x0,#0xae0
+009d827c	add x2,x2,#0x689
+009d8280	mov w1,#0x392
+009d8284	bl 0x00c342b0
+009d8288	mov w2,#0x103
+009d828c	mov w1,#0x50
+009d8290	movk w2,#0xc, LSL #16
+009d8294	b 0x009d824c

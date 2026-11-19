@@ -1,0 +1,50 @@
+; engine_cleanup_add_last @ 00a514bc
+00a514bc	str x21,[sp, #-0x30]!
+00a514c0	adrp x21,0xd21000
+00a514c4	ldr x8,[x21, #0x998]
+00a514c8	stp x20,x19,[sp, #0x10]
+00a514cc	mov x19,x0
+00a514d0	stp x29,x30,[sp, #0x20]
+00a514d4	add x29,sp,#0x20
+00a514d8	cbnz x8,0x00a514e8
+00a514dc	bl 0x00c34780
+00a514e0	str x0,[x21, #0x998]
+00a514e4	cbz x0,0x00a51570
+00a514e8	adrp x1,0x2a2000
+00a514ec	add x1,x1,#0x2ee
+00a514f0	mov w0,#0x8
+00a514f4	mov w2,#0x80
+00a514f8	bl 0x00c32320
+00a514fc	cbz x0,0x00a51524
+00a51500	str x19,[x0]
+00a51504	mov x20,x0
+00a51508	ldr x0,[x21, #0x998]
+00a5150c	mov x1,x20
+00a51510	bl 0x00c347a0
+00a51514	cmp w0,#0x0
+00a51518	b.le 0x00a51558
+00a5151c	mov w0,#0x1
+00a51520	b 0x00a51570
+00a51524	bl 0x00c342a0
+00a51528	adrp x0,0x2a2000
+00a5152c	adrp x2,0x2c7000
+00a51530	add x0,x0,#0x2ee
+00a51534	add x2,x2,#0x91b
+00a51538	mov w1,#0x81
+00a5153c	bl 0x00c342b0
+00a51540	mov w1,#0x100
+00a51544	mov w0,#0x26
+00a51548	movk w1,#0xc, LSL #16
+00a5154c	mov x2,xzr
+00a51550	bl 0x00c342c0
+00a51554	b 0x00a5156c
+00a51558	adrp x1,0x2a2000
+00a5155c	add x1,x1,#0x2ee
+00a51560	mov w2,#0xa1
+00a51564	mov x0,x20
+00a51568	bl 0x00c32310
+00a5156c	mov w0,wzr
+00a51570	ldp x29,x30,[sp, #0x20]
+00a51574	ldp x20,x19,[sp, #0x10]
+00a51578	ldr x21,[sp], #0x30
+00a5157c	ret

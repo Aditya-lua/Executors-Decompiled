@@ -1,0 +1,53 @@
+; ix::WebSocketServer::setOnClientMessageCallback @ 00993658
+00993658	sub sp,sp,#0x70
+0099365c	str x21,[sp, #0x40]
+00993660	stp x20,x19,[sp, #0x50]
+00993664	stp x29,x30,[sp, #0x60]
+00993668	add x29,sp,#0x60
+0099366c	mrs x20,tpidr_el0
+00993670	ldr x8,[x20, #0x28]
+00993674	add x19,x0,#0x280
+00993678	stur x8,[x29, #-0x28]
+0099367c	ldr x8,[x1, #0x20]
+00993680	cbz x8,0x009936a4
+00993684	cmp x1,x8
+00993688	b.eq 0x009936ac
+0099368c	ldr x9,[x8]
+00993690	mov x0,x8
+00993694	ldr x9,[x9, #0x10]
+00993698	blr x9
+0099369c	str x0,[sp, #0x20]
+009936a0	b 0x009936c8
+009936a4	str xzr,[sp, #0x20]
+009936a8	b 0x009936c8
+009936ac	mov x9,sp
+009936b0	str x9,[sp, #0x20]
+009936b4	ldr x9,[x8]
+009936b8	mov x1,sp
+009936bc	mov x0,x8
+009936c0	ldr x9,[x9, #0x18]
+009936c4	blr x9
+009936c8	mov x0,sp
+009936cc	mov x1,x19
+009936d0	mov x21,sp
+009936d4	bl 0x00c33e30
+009936d8	ldr x0,[sp, #0x20]
+009936dc	cmp x21,x0
+009936e0	b.eq 0x009936f4
+009936e4	cbz x0,0x00993700
+009936e8	ldr x8,[x0]
+009936ec	ldr x8,[x8, #0x28]
+009936f0	b 0x009936fc
+009936f4	ldr x8,[x0]
+009936f8	ldr x8,[x8, #0x20]
+009936fc	blr x8
+00993700	ldr x8,[x20, #0x28]
+00993704	ldur x9,[x29, #-0x28]
+00993708	cmp x8,x9
+0099370c	b.ne 0x00993724
+00993710	ldp x29,x30,[sp, #0x60]
+00993714	ldp x20,x19,[sp, #0x50]
+00993718	ldr x21,[sp, #0x40]
+0099371c	add sp,sp,#0x70
+00993720	ret
+00993724	bl 0x00c2fec0

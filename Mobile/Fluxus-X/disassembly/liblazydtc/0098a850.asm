@@ -1,0 +1,58 @@
+; ix::SocketServer::closeTerminatedThreads @ 0098a850
+0098a850	stp x24,x23,[sp, #-0x40]!
+0098a854	stp x22,x21,[sp, #0x10]
+0098a858	stp x20,x19,[sp, #0x20]
+0098a85c	stp x29,x30,[sp, #0x30]
+0098a860	add x29,sp,#0x30
+0098a864	add x19,x0,#0xa0
+0098a868	mov x20,x0
+0098a86c	mov x0,x19
+0098a870	bl 0x00c2ff10
+0098a874	ldr x21,[x20, #0x90]
+0098a878	add x23,x20,#0x88
+0098a87c	cmp x23,x21
+0098a880	b.eq 0x0098a91c
+0098a884	ldr x0,[x21, #0x10]
+0098a888	bl 0x00c32e80
+0098a88c	tbz w0,#0x0,0x0098a90c
+0098a890	add x22,x21,#0x20
+0098a894	ldr x8,[x22]
+0098a898	cbz x8,0x0098a8a4
+0098a89c	mov x0,x22
+0098a8a0	bl 0x00c31920
+0098a8a4	ldp x8,x24,[x21]
+0098a8a8	mov x0,x22
+0098a8ac	str x24,[x8, #0x8]
+0098a8b0	ldr x9,[x21, #0x8]
+0098a8b4	str x8,[x9]
+0098a8b8	ldr x8,[x20, #0x98]
+0098a8bc	sub x8,x8,#0x1
+0098a8c0	str x8,[x20, #0x98]
+0098a8c4	bl 0x00c2ff80
+0098a8c8	ldr x22,[x21, #0x18]
+0098a8cc	cbz x22,0x0098a900
+0098a8d0	add x8,x22,#0x8
+0098a8d4	ldaxr x9,[x8]
+0098a8d8	sub x10,x9,#0x1
+0098a8dc	stlxr w11,x10,[x8]
+0098a8e0	cbnz w11,0x0098a8d4
+0098a8e4	cbnz x9,0x0098a900
+0098a8e8	ldr x8,[x22]
+0098a8ec	mov x0,x22
+0098a8f0	ldr x8,[x8, #0x10]
+0098a8f4	blr x8
+0098a8f8	mov x0,x22
+0098a8fc	bl 0x00c2ff00
+0098a900	mov x0,x21
+0098a904	bl 0x00c301d0
+0098a908	b 0x0098a910
+0098a90c	ldr x24,[x21, #0x8]
+0098a910	cmp x23,x24
+0098a914	mov x21,x24
+0098a918	b.ne 0x0098a884
+0098a91c	mov x0,x19
+0098a920	ldp x29,x30,[sp, #0x30]
+0098a924	ldp x20,x19,[sp, #0x20]
+0098a928	ldp x22,x21,[sp, #0x10]
+0098a92c	ldp x24,x23,[sp], #0x40
+0098a930	b 0x00c2ff20

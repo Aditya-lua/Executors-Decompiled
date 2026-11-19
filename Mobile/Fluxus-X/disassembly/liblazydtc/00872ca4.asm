@@ -1,0 +1,76 @@
+; FUN_00872ca4 @ 00872ca4
+00872ca4	stp x29,x30,[sp, #-0x30]!
+00872ca8	stp x22,x21,[sp, #0x10]
+00872cac	stp x20,x19,[sp, #0x20]
+00872cb0	mov x29,sp
+00872cb4	mov x19,x0
+00872cb8	ldr x0,[x0, #0x58]
+00872cbc	cbz x0,0x00872cec
+00872cc0	bl 0x00c301d0
+00872cc4	ldr x0,[x19, #0x70]
+00872cc8	str xzr,[x19, #0x58]
+00872ccc	bl 0x00c301d0
+00872cd0	mov x0,xzr
+00872cd4	stp xzr,xzr,[x19, #0x60]
+00872cd8	str xzr,[x19, #0x70]
+00872cdc	bl 0x00c301d0
+00872ce0	mov w8,#0x40
+00872ce4	str xzr,[x19, #0x78]
+00872ce8	strb w8,[x19, #0x88]
+00872cec	ldr x0,[x19, #0x70]
+00872cf0	bl 0x00c301d0
+00872cf4	ldr x0,[x19, #0x40]
+00872cf8	cbz x0,0x00872d0c
+00872cfc	ldr x8,[x19, #0x50]
+00872d00	str x0,[x19, #0x48]
+00872d04	sub x1,x8,x0
+00872d08	bl 0x00c2fe80
+00872d0c	ldr x21,[x19, #0x28]
+00872d10	cbz x21,0x00872d5c
+00872d14	ldr x8,[x19, #0x30]
+00872d18	mov x0,x21
+00872d1c	cmp x21,x8
+00872d20	b.eq 0x00872d4c
+00872d24	sub x20,x8,#0x30
+00872d28	mov x22,x20
+00872d2c	ldr x8,[x22], #-0x30
+00872d30	mov x0,x20
+00872d34	ldr x8,[x8]
+00872d38	blr x8
+00872d3c	cmp x20,x21
+00872d40	mov x20,x22
+00872d44	b.ne 0x00872d2c
+00872d48	ldr x0,[x19, #0x28]
+00872d4c	ldr x8,[x19, #0x38]
+00872d50	str x21,[x19, #0x30]
+00872d54	sub x1,x8,x0
+00872d58	bl 0x00c2fe80
+00872d5c	ldr x20,[x19, #0x10]
+00872d60	cbz x20,0x00872dc0
+00872d64	ldr x21,[x19, #0x18]
+00872d68	mov x0,x20
+00872d6c	cmp x20,x21
+00872d70	b.ne 0x00872d84
+00872d74	b 0x00872da4
+00872d78	sub x21,x21,#0x30
+00872d7c	cmp x21,x20
+00872d80	b.eq 0x00872da0
+00872d84	ldurb w8,[x21, #-0x18]
+00872d88	tbz w8,#0x0,0x00872d78
+00872d8c	ldur x8,[x21, #-0x18]
+00872d90	ldur x0,[x21, #-0x8]
+00872d94	and x1,x8,#-0x2
+00872d98	bl 0x00c2fe80
+00872d9c	b 0x00872d78
+00872da0	ldr x0,[x19, #0x10]
+00872da4	ldr x8,[x19, #0x20]
+00872da8	str x20,[x19, #0x18]
+00872dac	sub x1,x8,x0
+00872db0	ldp x20,x19,[sp, #0x20]
+00872db4	ldp x22,x21,[sp, #0x10]
+00872db8	ldp x29,x30,[sp], #0x30
+00872dbc	b 0x00c2fe80
+00872dc0	ldp x20,x19,[sp, #0x20]
+00872dc4	ldp x22,x21,[sp, #0x10]
+00872dc8	ldp x29,x30,[sp], #0x30
+00872dcc	ret

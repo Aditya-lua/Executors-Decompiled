@@ -1,0 +1,39 @@
+; tls_construct_ctos_etm @ 009d31e8
+009d31e8	stp x20,x19,[sp, #-0x20]!
+009d31ec	stp x29,x30,[sp, #0x10]
+009d31f0	ldrb w8,[x0, #0x9ea]
+009d31f4	add x29,sp,#0x10
+009d31f8	tbnz w8,#0x3,0x009d3234
+009d31fc	mov x20,x1
+009d3200	mov x19,x0
+009d3204	mov w1,#0x16
+009d3208	mov w2,#0x2
+009d320c	mov x0,x20
+009d3210	bl 0x00c343a0
+009d3214	cbz w0,0x009d323c
+009d3218	mov w2,#0x2
+009d321c	mov x0,x20
+009d3220	mov x1,xzr
+009d3224	bl 0x00c343a0
+009d3228	cbz w0,0x009d323c
+009d322c	mov w0,#0x1
+009d3230	b 0x009d3274
+009d3234	mov w0,#0x2
+009d3238	b 0x009d3274
+009d323c	bl 0x00c342a0
+009d3240	adrp x0,0x2bf000
+009d3244	adrp x2,0x2b3000
+009d3248	add x0,x0,#0x967
+009d324c	add x2,x2,#0xefb
+009d3250	orr w1,wzr,#0x1e0
+009d3254	bl 0x00c342b0
+009d3258	mov w2,#0x103
+009d325c	mov w1,#0x50
+009d3260	movk w2,#0xc, LSL #16
+009d3264	mov x0,x19
+009d3268	mov x3,xzr
+009d326c	bl 0x00c34410
+009d3270	mov w0,wzr
+009d3274	ldp x29,x30,[sp, #0x10]
+009d3278	ldp x20,x19,[sp], #0x20
+009d327c	ret

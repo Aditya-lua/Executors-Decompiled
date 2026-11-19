@@ -1,0 +1,5 @@
+; X509_set_pubkey @ 00b0c834
+00b0c834	cbz x0,0x00b0c840
+00b0c838	add x0,x0,#0x50
+00b0c83c	b 0x00c39910
+00b0c840	ret

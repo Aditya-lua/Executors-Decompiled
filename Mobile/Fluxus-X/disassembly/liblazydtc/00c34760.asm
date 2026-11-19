@@ -1,0 +1,5 @@
+; OPENSSL_sk_find @ 00c34760
+00c34760	adrp x16,0xcb8000
+00c34764	ldr x17,[x16, #0x398]
+00c34768	add x16,x16,#0x398
+00c3476c	br x17

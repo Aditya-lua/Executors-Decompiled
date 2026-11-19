@@ -1,0 +1,28 @@
+; ossl_kdf_data_free @ 00b5111c
+00b5111c	str x19,[sp, #-0x20]!
+00b51120	stp x29,x30,[sp, #0x10]
+00b51124	add x29,sp,#0x10
+00b51128	cbz x0,0x00b51158
+00b5112c	mov x19,x0
+00b51130	add x9,x0,#0x8
+00b51134	ldxr w8,[x9]
+00b51138	subs w10,w8,#0x1
+00b5113c	stxr w11,w10,[x9]
+00b51140	cbnz w11,0x00b51134
+00b51144	b.ne 0x00b51150
+00b51148	dmb ISHLD
+00b5114c	b 0x00b51164
+00b51150	cmp w8,#0x1
+00b51154	b.le 0x00b51164
+00b51158	ldp x29,x30,[sp, #0x10]
+00b5115c	ldr x19,[sp], #0x20
+00b51160	ret
+00b51164	ldr x0,[x19, #0x10]
+00b51168	bl 0x00c34d40
+00b5116c	ldp x29,x30,[sp, #0x10]
+00b51170	adrp x1,0x2b0000
+00b51174	add x1,x1,#0xe92
+00b51178	orr w2,wzr,#0x3f
+00b5117c	mov x0,x19
+00b51180	ldr x19,[sp], #0x20
+00b51184	b 0x00c32310

@@ -1,0 +1,95 @@
+; tls1_set_groups @ 009c158c
+009c158c	sub sp,sp,#0x50
+009c1590	stp x23,xzr,[sp, #0x10]
+009c1594	stp x22,x21,[sp, #0x20]
+009c1598	stp x20,x19,[sp, #0x30]
+009c159c	stp x29,x30,[sp, #0x40]
+009c15a0	add x29,sp,#0x40
+009c15a4	str xzr,[sp, #0x8]
+009c15a8	cbz x3,0x009c1690
+009c15ac	mov x20,x1
+009c15b0	adrp x1,0x2c3000
+009c15b4	mov x22,x2
+009c15b8	mov x21,x0
+009c15bc	lsl x0,x3,#0x1
+009c15c0	add x1,x1,#0x5d8
+009c15c4	mov w2,#0x2b3
+009c15c8	mov x19,x3
+009c15cc	bl 0x00c32320
+009c15d0	cbz x0,0x009c16b8
+009c15d4	adrp x9,0x74c000
+009c15d8	mov x23,x0
+009c15dc	mov x8,xzr
+009c15e0	add x9,x9,#0xc34
+009c15e4	mov w10,#0x1
+009c15e8	add x11,sp,#0x8
+009c15ec	add x12,sp,#0x18
+009c15f0	ldr w15,[x22, x8, LSL #0x2]
+009c15f4	mov x13,xzr
+009c15f8	add x14,x9,#0x4
+009c15fc	ldur w16,[x14, #-0x4]
+009c1600	cmp w16,w15
+009c1604	b.eq 0x009c161c
+009c1608	add x13,x13,#0x1
+009c160c	cmp x13,#0x2a
+009c1610	add x14,x14,#0x8
+009c1614	b.cc 0x009c15fc
+009c1618	b 0x009c1678
+009c161c	ldrh w14,[x14]
+009c1620	cmp x13,#0x25
+009c1624	csel x13,x12,x11,cc
+009c1628	ldr x15,[x13]
+009c162c	and x16,x14,#0xff
+009c1630	lsl x16,x10,x16
+009c1634	tst x16,x15
+009c1638	b.ne 0x009c1678
+009c163c	orr x15,x16,x15
+009c1640	str x15,[x13]
+009c1644	strh w14,[x23, x8, LSL #0x1]
+009c1648	add x8,x8,#0x1
+009c164c	cmp x8,x19
+009c1650	b.cc 0x009c15f0
+009c1654	ldr x0,[x21]
+009c1658	adrp x1,0x2c3000
+009c165c	add x1,x1,#0x5d8
+009c1660	mov w2,#0x2c4
+009c1664	bl 0x00c32310
+009c1668	mov w0,#0x1
+009c166c	str x23,[x21]
+009c1670	str x19,[x20]
+009c1674	b 0x009c16ec
+009c1678	adrp x1,0x2c3000
+009c167c	add x1,x1,#0x5d8
+009c1680	mov w2,#0x2c9
+009c1684	mov x0,x23
+009c1688	bl 0x00c32310
+009c168c	b 0x009c16e8
+009c1690	bl 0x00c342a0
+009c1694	adrp x0,0x2c3000
+009c1698	adrp x2,0x2c5000
+009c169c	add x0,x0,#0x5d8
+009c16a0	add x2,x2,#0x6f9
+009c16a4	mov w1,#0x2b0
+009c16a8	bl 0x00c342b0
+009c16ac	mov w0,#0x14
+009c16b0	mov w1,#0x10f
+009c16b4	b 0x009c16e0
+009c16b8	bl 0x00c342a0
+009c16bc	adrp x0,0x2c3000
+009c16c0	adrp x2,0x2c5000
+009c16c4	add x0,x0,#0x5d8
+009c16c8	add x2,x2,#0x6f9
+009c16cc	mov w1,#0x2b4
+009c16d0	bl 0x00c342b0
+009c16d4	mov w1,#0x100
+009c16d8	mov w0,#0x14
+009c16dc	movk w1,#0xc, LSL #16
+009c16e0	mov x2,xzr
+009c16e4	bl 0x00c342c0
+009c16e8	mov w0,wzr
+009c16ec	ldp x29,x30,[sp, #0x40]
+009c16f0	ldp x20,x19,[sp, #0x30]
+009c16f4	ldp x22,x21,[sp, #0x20]
+009c16f8	ldr x23,[sp, #0x10]
+009c16fc	add sp,sp,#0x50
+009c1700	ret

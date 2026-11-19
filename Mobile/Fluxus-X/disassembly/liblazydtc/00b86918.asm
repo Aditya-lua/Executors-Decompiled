@@ -1,0 +1,80 @@
+; psa_validate_unstructured_key_bit_size @ 00b86918
+00b86918	and w8,w0,#0xffff
+00b8691c	mov w9,#0x2003
+00b86920	cmp w8,w9
+00b86924	mov w0,#0xffffff7a
+00b86928	b.gt 0x00b8696c
+00b8692c	mov w9,#0xffffee00
+00b86930	add w9,w8,w9
+00b86934	cmp w9,#0x5
+00b86938	b.hi 0x00b86950
+00b8693c	mov w10,#0x1
+00b86940	lsl w9,w10,w9
+00b86944	mov w10,#0x29
+00b86948	tst w9,w10
+00b8694c	b.ne 0x00b86a3c
+00b86950	mov w9,#0x1001
+00b86954	cmp w8,w9
+00b86958	b.eq 0x00b86a3c
+00b8695c	mov w9,#0x1100
+00b86960	cmp w8,w9
+00b86964	b.eq 0x00b86a3c
+00b86968	b 0x00b86a48
+00b8696c	mov w9,#0x23ff
+00b86970	cmp w8,w9
+00b86974	b.le 0x00b869bc
+00b86978	mov w9,#0x2406
+00b8697c	cmp w8,w9
+00b86980	b.eq 0x00b869f4
+00b86984	mov w9,#0x2403
+00b86988	cmp w8,w9
+00b8698c	b.eq 0x00b86a14
+00b86990	mov w9,#0x2400
+00b86994	cmp w8,w9
+00b86998	b.ne 0x00b86a48
+00b8699c	cmp x1,#0x80
+00b869a0	b.eq 0x00b86a3c
+00b869a4	cmp x1,#0xc0
+00b869a8	b.eq 0x00b86a3c
+00b869ac	cmp x1,#0x100
+00b869b0	b.eq 0x00b86a3c
+00b869b4	mov w0,#0xffffff79
+00b869b8	ret
+00b869bc	mov w9,#0x2004
+00b869c0	cmp w8,w9
+00b869c4	b.eq 0x00b86a34
+00b869c8	mov w9,#0x2301
+00b869cc	cmp w8,w9
+00b869d0	b.ne 0x00b86a48
+00b869d4	cmp x1,#0x40
+00b869d8	b.eq 0x00b86a3c
+00b869dc	cmp x1,#0x80
+00b869e0	b.eq 0x00b86a3c
+00b869e4	cmp x1,#0xc0
+00b869e8	b.eq 0x00b86a3c
+00b869ec	mov w0,#0xffffff79
+00b869f0	ret
+00b869f4	cmp x1,#0x80
+00b869f8	b.eq 0x00b86a3c
+00b869fc	cmp x1,#0xc0
+00b86a00	b.eq 0x00b86a3c
+00b86a04	cmp x1,#0x100
+00b86a08	b.eq 0x00b86a3c
+00b86a0c	mov w0,#0xffffff79
+00b86a10	ret
+00b86a14	cmp x1,#0x80
+00b86a18	b.eq 0x00b86a3c
+00b86a1c	cmp x1,#0xc0
+00b86a20	b.eq 0x00b86a3c
+00b86a24	cmp x1,#0x100
+00b86a28	b.eq 0x00b86a3c
+00b86a2c	mov w0,#0xffffff79
+00b86a30	ret
+00b86a34	cmp x1,#0x100
+00b86a38	b.ne 0x00b86a4c
+00b86a3c	tst x1,#0x7
+00b86a40	mov w8,#0xffffff79
+00b86a44	csel w0,wzr,w8,eq
+00b86a48	ret
+00b86a4c	mov w0,#0xffffff79
+00b86a50	ret

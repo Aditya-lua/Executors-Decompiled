@@ -1,0 +1,45 @@
+; BN_set_bit @ 00a02708
+00a02708	stp x22,x21,[sp, #-0x30]!
+00a0270c	stp x20,x19,[sp, #0x10]
+00a02710	stp x29,x30,[sp, #0x20]
+00a02714	add x29,sp,#0x20
+00a02718	tbnz w1,#0x1f,0x00a027a4
+00a0271c	ldr w8,[x0, #0x8]
+00a02720	lsr w22,w1,#0x6
+00a02724	mov w19,w1
+00a02728	mov x20,x0
+00a0272c	cmp w8,w22
+00a02730	b.gt 0x00a0277c
+00a02734	ldr w9,[x20, #0xc]
+00a02738	add w21,w22,#0x1
+00a0273c	cmp w9,w22
+00a02740	b.gt 0x00a02758
+00a02744	mov x0,x20
+00a02748	mov w1,w21
+00a0274c	bl 0x00a01a04
+00a02750	cbz x0,0x00a027a8
+00a02754	ldr w8,[x20, #0x8]
+00a02758	subs w9,w22,w8
+00a0275c	b.lt 0x00a02778
+00a02760	ldr x10,[x20]
+00a02764	lsl x9,x9,#0x3
+00a02768	add x2,x9,#0x8
+00a0276c	mov w1,wzr
+00a02770	add x0,x10,w8, SXTW  #0x3
+00a02774	bl 0x00c301c0
+00a02778	str w21,[x20, #0x8]
+00a0277c	ldr x8,[x20]
+00a02780	mov w9,w22
+00a02784	lsl x9,x9,#0x3
+00a02788	and w11,w19,#0x3f
+00a0278c	ldr x10,[x8, x9#0x0]
+00a02790	mov w0,#0x1
+00a02794	lsl x11,x0,x11
+00a02798	orr x10,x10,x11
+00a0279c	str x10,[x8, x9#0x0]
+00a027a0	b 0x00a027a8
+00a027a4	mov w0,wzr
+00a027a8	ldp x29,x30,[sp, #0x20]
+00a027ac	ldp x20,x19,[sp, #0x10]
+00a027b0	ldp x22,x21,[sp], #0x30
+00a027b4	ret

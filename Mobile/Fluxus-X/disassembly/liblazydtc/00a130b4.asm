@@ -1,0 +1,82 @@
+; i2o_SCT_signature @ 00a130b4
+00a130b4	str x21,[sp, #-0x30]!
+00a130b8	stp x20,x19,[sp, #0x10]
+00a130bc	stp x29,x30,[sp, #0x20]
+00a130c0	add x29,sp,#0x20
+00a130c4	mov x21,x1
+00a130c8	mov x20,x0
+00a130cc	bl 0x00c39870
+00a130d0	cbz w0,0x00a13104
+00a130d4	ldr w8,[x20]
+00a130d8	cbz w8,0x00a1315c
+00a130dc	bl 0x00c342a0
+00a130e0	adrp x0,0x2d9000
+00a130e4	adrp x2,0x2bd000
+00a130e8	add x0,x0,#0xa3f
+00a130ec	add x2,x2,#0x85f
+00a130f0	mov w1,#0xa4
+00a130f4	bl 0x00c342b0
+00a130f8	mov w0,#0x32
+00a130fc	mov w1,#0x67
+00a13100	b 0x00a13128
+00a13104	bl 0x00c342a0
+00a13108	adrp x0,0x2d9000
+00a1310c	adrp x2,0x2bd000
+00a13110	add x0,x0,#0xa3f
+00a13114	add x2,x2,#0x85f
+00a13118	mov w1,#0x9f
+00a1311c	bl 0x00c342b0
+00a13120	mov w0,#0x32
+00a13124	mov w1,#0x6b
+00a13128	mov x2,xzr
+00a1312c	bl 0x00c342c0
+00a13130	adrp x1,0x2d9000
+00a13134	add x1,x1,#0xa3f
+00a13138	mov w2,#0xc4
+00a1313c	mov x0,xzr
+00a13140	bl 0x00c32310
+00a13144	mov w19,#0xffffffff
+00a13148	mov w0,w19
+00a1314c	ldp x29,x30,[sp, #0x20]
+00a13150	ldp x20,x19,[sp, #0x10]
+00a13154	ldr x21,[sp], #0x30
+00a13158	ret
+00a1315c	ldr x8,[x20, #0x50]
+00a13160	add x19,x8,#0x4
+00a13164	cbz x21,0x00a13148
+00a13168	ldr x8,[x21]
+00a1316c	cbz x8,0x00a13178
+00a13170	add x0,x8,x19
+00a13174	b 0x00a13194
+00a13178	adrp x1,0x2d9000
+00a1317c	add x1,x1,#0xa3f
+00a13180	mov w2,#0xb4
+00a13184	mov x0,x19
+00a13188	bl 0x00c32320
+00a1318c	mov x8,x0
+00a13190	cbz x0,0x00a131cc
+00a13194	str x0,[x21]
+00a13198	ldrb w9,[x20, #0x40]
+00a1319c	add x0,x8,#0x4
+00a131a0	strb w9,[x8]
+00a131a4	ldrb w9,[x20, #0x41]
+00a131a8	strb w9,[x8, #0x1]
+00a131ac	ldr x9,[x20, #0x50]
+00a131b0	lsr x9,x9,#0x8
+00a131b4	strb w9,[x8, #0x2]
+00a131b8	ldr x9,[x20, #0x50]
+00a131bc	strb w9,[x8, #0x3]
+00a131c0	ldp x1,x2,[x20, #0x48]
+00a131c4	bl 0x00c2ffd0
+00a131c8	b 0x00a13148
+00a131cc	bl 0x00c342a0
+00a131d0	adrp x0,0x2d9000
+00a131d4	adrp x2,0x2bd000
+00a131d8	add x0,x0,#0xa3f
+00a131dc	add x2,x2,#0x85f
+00a131e0	mov w1,#0xb6
+00a131e4	bl 0x00c342b0
+00a131e8	mov w1,#0x100
+00a131ec	mov w0,#0x32
+00a131f0	movk w1,#0xc, LSL #16
+00a131f4	b 0x00a13128

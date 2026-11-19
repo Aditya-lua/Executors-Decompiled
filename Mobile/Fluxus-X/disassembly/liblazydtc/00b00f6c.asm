@@ -1,0 +1,4 @@
+; i2d_PROXY_POLICY @ 00b00f6c
+00b00f6c	adrp x2,0xc80000
+00b00f70	add x2,x2,#0x948
+00b00f74	b 0x00c36170

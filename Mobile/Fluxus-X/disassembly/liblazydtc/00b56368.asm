@@ -1,0 +1,21 @@
+; FUN_00b56368 @ 00b56368
+00b56368	sub sp,sp,#0x20
+00b5636c	adrp x8,0xb56000
+00b56370	adrp x3,0xb56000
+00b56374	adrp x4,0xb56000
+00b56378	adrp x5,0xb56000
+00b5637c	adrp x6,0xb56000
+00b56380	adrp x7,0xb56000
+00b56384	add x8,x8,#0xf74
+00b56388	add x3,x3,#0xbf8
+00b5638c	add x4,x4,#0x3b8
+00b56390	add x5,x5,#0xcb4
+00b56394	add x6,x6,#0xe28
+00b56398	add x7,x7,#0xe80
+00b5639c	stp x29,x30,[sp, #0x10]
+00b563a0	add x29,sp,#0x10
+00b563a4	str x8,[sp]
+00b563a8	bl 0x00c41810
+00b563ac	ldp x29,x30,[sp, #0x10]
+00b563b0	add sp,sp,#0x20
+00b563b4	ret

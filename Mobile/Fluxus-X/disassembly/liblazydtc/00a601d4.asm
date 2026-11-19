@@ -1,0 +1,65 @@
+; ASN1_TYPE_get_int_octetstring @ 00a601d4
+00a601d4	str x25,[sp, #-0x50]!
+00a601d8	stp x24,x23,[sp, #0x10]
+00a601dc	stp x22,x21,[sp, #0x20]
+00a601e0	stp x20,x19,[sp, #0x30]
+00a601e4	stp x29,x30,[sp, #0x40]
+00a601e8	ldr w8,[x0]
+00a601ec	mov x19,xzr
+00a601f0	add x29,sp,#0x40
+00a601f4	cmp w8,#0x10
+00a601f8	b.ne 0x00a60278
+00a601fc	ldr x8,[x0, #0x8]
+00a60200	mov x23,x1
+00a60204	mov x1,x0
+00a60208	cbz x8,0x00a60274
+00a6020c	adrp x0,0xc5d000
+00a60210	add x0,x0,#0x6d0
+00a60214	mov w22,w3
+00a60218	mov x20,x2
+00a6021c	bl 0x00c37a80
+00a60220	mov x19,x0
+00a60224	cbz x0,0x00a60278
+00a60228	ldr x24,[x19, #0x8]
+00a6022c	ldrsw x25,[x19]
+00a60230	mov x0,x24
+00a60234	bl 0x00c32140
+00a60238	mov w21,w0
+00a6023c	cbz x23,0x00a60244
+00a60240	str x25,[x23]
+00a60244	cbz x20,0x00a60268
+00a60248	cmp w21,w22
+00a6024c	mov x0,x24
+00a60250	csel w22,w21,w22,lt
+00a60254	bl 0x00c32130
+00a60258	mov x1,x0
+00a6025c	sxtw x2,w22
+00a60260	mov x0,x20
+00a60264	bl 0x00c2ffd0
+00a60268	cmn w21,#0x1
+00a6026c	b.ne 0x00a602a8
+00a60270	b 0x00a60278
+00a60274	mov x19,xzr
+00a60278	bl 0x00c342a0
+00a6027c	adrp x0,0x2d9000
+00a60280	adrp x2,0x2d5000
+00a60284	add x0,x0,#0xc95
+00a60288	add x2,x2,#0xce9
+00a6028c	mov w1,#0x80
+00a60290	bl 0x00c342b0
+00a60294	mov w0,#0xd
+00a60298	mov w1,#0x6d
+00a6029c	mov x2,xzr
+00a602a0	bl 0x00c342c0
+00a602a4	mov w21,#0xffffffff
+00a602a8	adrp x1,0xc5d000
+00a602ac	add x1,x1,#0x6d0
+00a602b0	mov x0,x19
+00a602b4	bl 0x00c36160
+00a602b8	mov w0,w21
+00a602bc	ldp x29,x30,[sp, #0x40]
+00a602c0	ldp x20,x19,[sp, #0x30]
+00a602c4	ldp x22,x21,[sp, #0x20]
+00a602c8	ldp x24,x23,[sp, #0x10]
+00a602cc	ldr x25,[sp], #0x50
+00a602d0	ret

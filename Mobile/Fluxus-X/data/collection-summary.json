@@ -1,0 +1,16 @@
+{
+  "included_files": 81167,
+  "included_bytes": 286762378,
+  "java_files": 13384,
+  "smali_files": 26664,
+  "dex_class_defs": 26664,
+  "java_diagnostics": 144,
+  "redactions": 3,
+  "counts_by_root": {
+    "decompiled": 41187,
+    "data": 16,
+    "disassembly": 19982,
+    "pseudocode": 19982
+  },
+  "maximum_file_bytes": 8388608
+}

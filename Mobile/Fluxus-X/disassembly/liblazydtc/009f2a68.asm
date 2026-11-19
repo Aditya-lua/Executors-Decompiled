@@ -1,0 +1,4 @@
+; PKCS8_PRIV_KEY_INFO_free @ 009f2a68
+009f2a68	adrp x1,0xc58000
+009f2a6c	add x1,x1,#0xa40
+009f2a70	b 0x00c36160

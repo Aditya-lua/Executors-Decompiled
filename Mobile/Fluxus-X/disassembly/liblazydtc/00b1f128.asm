@@ -1,0 +1,4 @@
+; X509_CERT_AUX_new @ 00b1f128
+00b1f128	adrp x0,0xc82000
+00b1f12c	add x0,x0,#0xc60
+00b1f130	b 0x00c372e0

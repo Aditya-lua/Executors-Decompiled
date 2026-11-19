@@ -1,0 +1,35 @@
+; custom_exts_copy_flags @ 009d6170
+009d6170	ldr x8,[x1, #0x8]
+009d6174	cbz x8,0x009d61f0
+009d6178	ldr x9,[x1]
+009d617c	ldr x10,[x0, #0x8]
+009d6180	mov x11,xzr
+009d6184	cbz x10,0x009d61e0
+009d6188	ldr w13,[x9, #0x4]
+009d618c	ldrh w14,[x9]
+009d6190	ldr x12,[x0]
+009d6194	mov x15,xzr
+009d6198	ldrh w16,[x12]
+009d619c	cmp w16,w14
+009d61a0	b.ne 0x009d61c0
+009d61a4	cmp w13,#0x2
+009d61a8	b.eq 0x009d61d4
+009d61ac	ldr w16,[x12, #0x4]
+009d61b0	cmp w16,w13
+009d61b4	b.eq 0x009d61d8
+009d61b8	cmp w16,#0x2
+009d61bc	b.eq 0x009d61d8
+009d61c0	add x15,x15,#0x1
+009d61c4	cmp x15,x10
+009d61c8	add x12,x12,#0x38
+009d61cc	b.cc 0x009d6198
+009d61d0	b 0x009d61e0
+009d61d4	cbz x12,0x009d61e0
+009d61d8	ldr w13,[x9, #0xc]
+009d61dc	str w13,[x12, #0xc]
+009d61e0	add x11,x11,#0x1
+009d61e4	cmp x11,x8
+009d61e8	add x9,x9,#0x38
+009d61ec	b.cc 0x009d6184
+009d61f0	mov w0,#0x1
+009d61f4	ret

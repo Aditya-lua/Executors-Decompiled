@@ -1,0 +1,5 @@
+; ASN1_STRING_new @ 00c37950
+00c37950	adrp x16,0xcb9000
+00c37954	ldr x17,[x16, #0xc90]
+00c37958	add x16,x16,#0xc90
+00c3795c	br x17

@@ -1,0 +1,5 @@
+; OSSL_PARAM_get_uint @ 00c36520
+00c36520	adrp x16,0xcb9000
+00c36524	ldr x17,[x16, #0x278]
+00c36528	add x16,x16,#0x278
+00c3652c	br x17

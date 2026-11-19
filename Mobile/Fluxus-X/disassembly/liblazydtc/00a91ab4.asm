@@ -1,0 +1,31 @@
+; FUN_00a91ab4 @ 00a91ab4
+00a91ab4	ldr x8,[x0, #0x78]
+00a91ab8	cbz x1,0x00a91afc
+00a91abc	ldr w9,[x1]
+00a91ac0	str w9,[x8]
+00a91ac4	ldr w9,[x1, #0x4]
+00a91ac8	str w9,[x8, #0x4]
+00a91acc	ldr w9,[x1, #0x8]
+00a91ad0	str w9,[x8, #0x8]
+00a91ad4	ldr w9,[x1, #0xc]
+00a91ad8	str w9,[x8, #0xc]
+00a91adc	ldr w9,[x1, #0x10]
+00a91ae0	str w9,[x8, #0x10]
+00a91ae4	ldr w9,[x1, #0x14]
+00a91ae8	str w9,[x8, #0x14]
+00a91aec	ldr w9,[x1, #0x18]
+00a91af0	str w9,[x8, #0x18]
+00a91af4	ldr w9,[x1, #0x1c]
+00a91af8	str w9,[x8, #0x1c]
+00a91afc	cbz x2,0x00a91b20
+00a91b00	ldr w9,[x2]
+00a91b04	str w9,[x8, #0x20]
+00a91b08	ldr w9,[x2, #0x4]
+00a91b0c	str w9,[x8, #0x24]
+00a91b10	ldr w9,[x2, #0x8]
+00a91b14	str w9,[x8, #0x28]
+00a91b18	ldr w9,[x2, #0xc]
+00a91b1c	str w9,[x8, #0x2c]
+00a91b20	mov w0,#0x1
+00a91b24	str wzr,[x8, #0x70]
+00a91b28	ret

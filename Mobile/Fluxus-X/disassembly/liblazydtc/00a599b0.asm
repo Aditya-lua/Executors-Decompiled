@@ -1,0 +1,5 @@
+; EVP_ENCODE_CTX_free @ 00a599b0
+00a599b0	adrp x1,0x2b4000
+00a599b4	add x1,x1,#0x242
+00a599b8	mov w2,#0x86
+00a599bc	b 0x00c32310

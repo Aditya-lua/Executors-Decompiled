@@ -1,0 +1,34 @@
+; ossl_dsa_generate_public_key @ 00a79704
+00a79704	str x23,[sp, #-0x40]!
+00a79708	stp x22,x21,[sp, #0x10]
+00a7970c	stp x20,x19,[sp, #0x20]
+00a79710	stp x29,x30,[sp, #0x30]
+00a79714	add x29,sp,#0x30
+00a79718	mov x21,x3
+00a7971c	mov x23,x2
+00a79720	mov x22,x1
+00a79724	mov x20,x0
+00a79728	bl 0x00c37710
+00a7972c	cbz x0,0x00a7976c
+00a79730	mov w2,#0x4
+00a79734	mov x1,x23
+00a79738	mov x19,x0
+00a7973c	bl 0x00c38df0
+00a79740	ldr x1,[x22, #0x18]
+00a79744	ldr x3,[x22, #0x8]
+00a79748	mov x0,x21
+00a7974c	mov x2,x19
+00a79750	mov x4,x20
+00a79754	bl 0x00c38ad0
+00a79758	cmp w0,#0x0
+00a7975c	mov x0,x19
+00a79760	cset w20,ne
+00a79764	bl 0x00c322e0
+00a79768	b 0x00a79770
+00a7976c	mov w20,wzr
+00a79770	mov w0,w20
+00a79774	ldp x29,x30,[sp, #0x30]
+00a79778	ldp x20,x19,[sp, #0x20]
+00a7977c	ldp x22,x21,[sp, #0x10]
+00a79780	ldr x23,[sp], #0x40
+00a79784	ret

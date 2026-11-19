@@ -1,0 +1,4 @@
+; ECPKPARAMETERS_it @ 00a24480
+00a24480	adrp x0,0xc5a000
+00a24484	add x0,x0,#0xde8
+00a24488	ret

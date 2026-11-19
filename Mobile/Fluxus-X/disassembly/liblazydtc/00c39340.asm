@@ -1,0 +1,5 @@
+; CMAC_Init @ 00c39340
+00c39340	adrp x16,0xcba000
+00c39344	ldr x17,[x16, #0x988]
+00c39348	add x16,x16,#0x988
+00c3934c	br x17

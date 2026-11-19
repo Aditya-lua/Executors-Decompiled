@@ -1,0 +1,5 @@
+; ASN1_ENUMERATED_to_BN @ 00c37550
+00c37550	adrp x16,0xcb9000
+00c37554	ldr x17,[x16, #0xa90]
+00c37558	add x16,x16,#0xa90
+00c3755c	br x17

@@ -1,0 +1,5 @@
+; PEM_read_bio_X509_AUX @ 00c32650
+00c32650	adrp x16,0xcb7000
+00c32654	ldr x17,[x16, #0x310]
+00c32658	add x16,x16,#0x310
+00c3265c	br x17

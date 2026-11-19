@@ -1,0 +1,4 @@
+; d2i_SXNET @ 00b04e20
+00b04e20	adrp x3,0xc80000
+00b04e24	add x3,x3,#0xfc8
+00b04e28	b 0x00c36150

@@ -1,0 +1,16 @@
+; FUN_0084f14c @ 0084f14c
+0084f14c	ldr x8,[x0, #0x28]
+0084f150	cbz x8,0x0084f180
+0084f154	lsl x9,x8,#0x3
+0084f158	ldr x8,[x0, #0x20]
+0084f15c	sub x9,x9,#0x8
+0084f160	ldr x10,[x8], #0x8
+0084f164	ldr w10,[x10, #0x1c]
+0084f168	cmp w10,#0x1
+0084f16c	cset w0,eq
+0084f170	ccmp x9,#0x0,#0x4,ne
+0084f174	sub x9,x9,#0x8
+0084f178	b.ne 0x0084f160
+0084f17c	ret
+0084f180	mov w0,wzr
+0084f184	ret

@@ -1,0 +1,5 @@
+; OBJ_obj2nid @ 00c37750
+00c37750	adrp x16,0xcb9000
+00c37754	ldr x17,[x16, #0xb90]
+00c37758	add x16,x16,#0xb90
+00c3775c	br x17

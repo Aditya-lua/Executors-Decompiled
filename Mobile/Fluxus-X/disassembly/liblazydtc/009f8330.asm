@@ -1,0 +1,16 @@
+; X509_ALGOR_get0 @ 009f8330
+009f8330	cbz x0,0x009f833c
+009f8334	ldr x8,[x3]
+009f8338	str x8,[x0]
+009f833c	cbz x1,0x009f835c
+009f8340	ldr x8,[x3, #0x8]
+009f8344	cbz x8,0x009f8360
+009f8348	ldr w9,[x8]
+009f834c	str w9,[x1]
+009f8350	cbz x2,0x009f835c
+009f8354	ldr x8,[x8, #0x8]
+009f8358	str x8,[x2]
+009f835c	ret
+009f8360	mov w8,#0xffffffff
+009f8364	str w8,[x1]
+009f8368	ret

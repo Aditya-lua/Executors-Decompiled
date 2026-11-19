@@ -1,0 +1,33 @@
+; FUN_00916ce4 @ 00916ce4
+00916ce4	str x21,[sp, #-0x30]!
+00916ce8	stp x20,x19,[sp, #0x10]
+00916cec	stp x29,x30,[sp, #0x20]
+00916cf0	add x29,sp,#0x20
+00916cf4	ldr x8,[x0, #0xd0]
+00916cf8	mov w20,w2
+00916cfc	mov x19,x0
+00916d00	mov x21,x1
+00916d04	cbz x8,0x00916d18
+00916d08	orr w1,wzr,#0x3
+00916d0c	mov w2,#0x2
+00916d10	mov x0,x19
+00916d14	bl 0x0093f628
+00916d18	mov x0,x19
+00916d1c	mov x1,x21
+00916d20	mov w2,w20
+00916d24	bl 0x00916d64
+00916d28	mov x20,x0
+00916d2c	cbz x0,0x00916d3c
+00916d30	ldr x8,[x20, #0x10]
+00916d34	add x8,x8,#0x1
+00916d38	str x8,[x20, #0x10]
+00916d3c	ldr x8,[x19, #0xd0]
+00916d40	cbz x8,0x00916d50
+00916d44	orr w1,wzr,#0x3
+00916d48	mov x0,x19
+00916d4c	bl 0x0093f680
+00916d50	mov x0,x20
+00916d54	ldp x29,x30,[sp, #0x20]
+00916d58	ldp x20,x19,[sp, #0x10]
+00916d5c	ldr x21,[sp], #0x30
+00916d60	ret

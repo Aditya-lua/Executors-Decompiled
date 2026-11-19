@@ -1,0 +1,5 @@
+; ASN1_OCTET_STRING_cmp @ 00c37780
+00c37780	adrp x16,0xcb9000
+00c37784	ldr x17,[x16, #0xba8]
+00c37788	add x16,x16,#0xba8
+00c3778c	br x17

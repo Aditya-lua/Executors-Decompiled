@@ -1,0 +1,5 @@
+; ASN1_IA5STRING_new @ 00c38150
+00c38150	adrp x16,0xcba000
+00c38154	ldr x17,[x16, #0x90]
+00c38158	add x16,x16,#0x90
+00c3815c	br x17

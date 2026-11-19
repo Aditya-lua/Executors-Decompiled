@@ -1,0 +1,5 @@
+; BIO_set_data @ 00c32290
+00c32290	adrp x16,0xcb7000
+00c32294	ldr x17,[x16, #0x130]
+00c32298	add x16,x16,#0x130
+00c3229c	br x17

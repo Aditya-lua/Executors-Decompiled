@@ -1,0 +1,7 @@
+; i2d_EC_PUBKEY_fp @ 00b16314
+00b16314	adrp x8,0xcb5000
+00b16318	ldr x8,[x8, #0x718]
+00b1631c	mov x2,x1
+00b16320	mov x1,x0
+00b16324	mov x0,x8
+00b16328	b 0x00c37500

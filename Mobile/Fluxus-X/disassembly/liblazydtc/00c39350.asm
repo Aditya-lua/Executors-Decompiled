@@ -1,0 +1,5 @@
+; CMAC_Update @ 00c39350
+00c39350	adrp x16,0xcba000
+00c39354	ldr x17,[x16, #0x990]
+00c39358	add x16,x16,#0x990
+00c3935c	br x17

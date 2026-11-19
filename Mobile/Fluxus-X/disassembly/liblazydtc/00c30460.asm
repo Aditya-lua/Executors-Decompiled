@@ -1,0 +1,5 @@
+; <EXTERNAL>::rmdir @ 00c30460
+00c30460	adrp x16,0xcb6000
+00c30464	ldr x17,[x16, #0x218]
+00c30468	add x16,x16,#0x218
+00c3046c	br x17

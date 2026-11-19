@@ -1,0 +1,5 @@
+; X509_ALGOR_free @ 00c38240
+00c38240	adrp x16,0xcba000
+00c38244	ldr x17,[x16, #0x108]
+00c38248	add x16,x16,#0x108
+00c3824c	br x17

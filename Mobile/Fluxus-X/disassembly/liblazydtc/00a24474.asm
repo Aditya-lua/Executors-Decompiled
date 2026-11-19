@@ -1,0 +1,4 @@
+; ECPARAMETERS_free @ 00a24474
+00a24474	adrp x1,0xc5a000
+00a24478	add x1,x1,#0xcc0
+00a2447c	b 0x00c36160

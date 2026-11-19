@@ -1,0 +1,51 @@
+; evp_keymgmt_util_try_import @ 00a654fc
+00a654fc	str x21,[sp, #-0x30]!
+00a65500	stp x20,x19,[sp, #0x10]
+00a65504	stp x29,x30,[sp, #0x20]
+00a65508	mov x19,x1
+00a6550c	ldr x1,[x1, #0x8]
+00a65510	mov x20,x0
+00a65514	add x29,sp,#0x20
+00a65518	cbz x1,0x00a6552c
+00a6551c	mov w21,wzr
+00a65520	ldr x8,[x20]
+00a65524	cbnz x8,0x00a6554c
+00a65528	b 0x00a65560
+00a6552c	ldr x0,[x19]
+00a65530	bl 0x00c3d210
+00a65534	str x0,[x19, #0x8]
+00a65538	cbz x0,0x00a65580
+00a6553c	mov x1,x0
+00a65540	mov w21,#0x1
+00a65544	ldr x8,[x20]
+00a65548	cbz x8,0x00a65560
+00a6554c	ldr x0,[x19]
+00a65550	ldr w2,[x19, #0x10]
+00a65554	mov x3,x20
+00a65558	bl 0x00c3d3a0
+00a6555c	cbz w0,0x00a65568
+00a65560	mov w0,#0x1
+00a65564	b 0x00a655b4
+00a65568	cbz w21,0x00a655b0
+00a6556c	ldp x0,x1,[x19]
+00a65570	bl 0x00c3b730
+00a65574	mov w0,wzr
+00a65578	str xzr,[x19, #0x8]
+00a6557c	b 0x00a655b4
+00a65580	bl 0x00c342a0
+00a65584	adrp x0,0x2cd000
+00a65588	adrp x2,0x2d9000
+00a6558c	add x0,x0,#0xabe
+00a65590	add x2,x2,#0xcc3
+00a65594	mov w1,#0x25
+00a65598	bl 0x00c342b0
+00a6559c	mov w1,#0x100
+00a655a0	orr w0,wzr,#0x6
+00a655a4	movk w1,#0xc, LSL #16
+00a655a8	mov x2,xzr
+00a655ac	bl 0x00c342c0
+00a655b0	mov w0,wzr
+00a655b4	ldp x29,x30,[sp, #0x20]
+00a655b8	ldp x20,x19,[sp, #0x10]
+00a655bc	ldr x21,[sp], #0x30
+00a655c0	ret

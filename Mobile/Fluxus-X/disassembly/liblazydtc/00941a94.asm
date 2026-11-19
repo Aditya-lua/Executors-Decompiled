@@ -1,0 +1,55 @@
+; FUN_00941a94 @ 00941a94
+00941a94	str x23,[sp, #-0x40]!
+00941a98	stp x22,x21,[sp, #0x10]
+00941a9c	stp x20,x19,[sp, #0x20]
+00941aa0	stp x29,x30,[sp, #0x30]
+00941aa4	add x29,sp,#0x30
+00941aa8	mov x22,x2
+00941aac	mov x19,x1
+00941ab0	mov w21,w0
+00941ab4	bl 0x00c30710
+00941ab8	cbz x22,0x00941b50
+00941abc	ldr w23,[x0]
+00941ac0	mov x20,x0
+00941ac4	mov w0,w21
+00941ac8	mov x1,x19
+00941acc	mov x2,x22
+00941ad0	strb wzr,[x19]
+00941ad4	bl 0x00c31fe0
+00941ad8	cbz w0,0x00941afc
+00941adc	ldrb w8,[x19]
+00941ae0	cbnz w8,0x00941afc
+00941ae4	adrp x2,0x2c8000
+00941ae8	add x2,x2,#0xf39
+00941aec	mov x0,x19
+00941af0	mov x1,x22
+00941af4	mov w3,w21
+00941af8	bl 0x00c31b70
+00941afc	mov w1,#0xa
+00941b00	mov x0,x19
+00941b04	bl 0x00c31d40
+00941b08	cbz x0,0x00941b1c
+00941b0c	sub x8,x0,x19
+00941b10	cmp x8,#0x2
+00941b14	b.lt 0x00941b1c
+00941b18	strb wzr,[x0]
+00941b1c	mov w1,#0xd
+00941b20	mov x0,x19
+00941b24	bl 0x00c31d40
+00941b28	cbz x0,0x00941b3c
+00941b2c	sub x8,x0,x19
+00941b30	cmp x8,#0x1
+00941b34	b.lt 0x00941b3c
+00941b38	strb wzr,[x0]
+00941b3c	ldr w8,[x20]
+00941b40	cmp w8,w23
+00941b44	b.eq 0x00941b54
+00941b48	str w23,[x20]
+00941b4c	b 0x00941b54
+00941b50	mov x19,xzr
+00941b54	mov x0,x19
+00941b58	ldp x29,x30,[sp, #0x30]
+00941b5c	ldp x20,x19,[sp, #0x20]
+00941b60	ldp x22,x21,[sp, #0x10]
+00941b64	ldr x23,[sp], #0x40
+00941b68	ret

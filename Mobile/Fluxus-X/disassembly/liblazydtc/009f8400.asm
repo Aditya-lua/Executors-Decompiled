@@ -1,0 +1,22 @@
+; X509_ALGOR_cmp @ 009f8400
+009f8400	stp x20,x19,[sp, #-0x20]!
+009f8404	stp x29,x30,[sp, #0x10]
+009f8408	mov x19,x1
+009f840c	mov x20,x0
+009f8410	ldr x0,[x0]
+009f8414	ldr x1,[x1]
+009f8418	add x29,sp,#0x10
+009f841c	bl 0x00c37ab0
+009f8420	mov w8,w0
+009f8424	cbnz w0,0x009f8438
+009f8428	ldr x0,[x20, #0x8]
+009f842c	ldr x1,[x19, #0x8]
+009f8430	orr x9,x0,x1
+009f8434	cbnz x9,0x009f8448
+009f8438	ldp x29,x30,[sp, #0x10]
+009f843c	mov w0,w8
+009f8440	ldp x20,x19,[sp], #0x20
+009f8444	ret
+009f8448	ldp x29,x30,[sp, #0x10]
+009f844c	ldp x20,x19,[sp], #0x20
+009f8450	b 0x00c37a10

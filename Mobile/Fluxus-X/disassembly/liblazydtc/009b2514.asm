@@ -1,0 +1,26 @@
+; SSL_CTX_set_session_id_context @ 009b2514
+009b2514	stp x29,x30,[sp, #-0x10]!
+009b2518	cmp w2,#0x21
+009b251c	mov x29,sp
+009b2520	b.cc 0x009b255c
+009b2524	bl 0x00c342a0
+009b2528	adrp x0,0x2c5000
+009b252c	adrp x2,0x2b3000
+009b2530	add x0,x0,#0x652
+009b2534	add x2,x2,#0xdb5
+009b2538	mov w1,#0x37d
+009b253c	bl 0x00c342b0
+009b2540	mov w0,#0x14
+009b2544	mov w1,#0x111
+009b2548	mov x2,xzr
+009b254c	bl 0x00c342c0
+009b2550	mov w0,wzr
+009b2554	ldp x29,x30,[sp], #0x10
+009b2558	ret
+009b255c	mov w2,w2
+009b2560	str x2,[x0, #0x180]
+009b2564	add x0,x0,#0x188
+009b2568	bl 0x00c2ffd0
+009b256c	mov w0,#0x1
+009b2570	ldp x29,x30,[sp], #0x10
+009b2574	ret

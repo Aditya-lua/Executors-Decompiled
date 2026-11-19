@@ -1,0 +1,51 @@
+; bn_mul_mont_fixed_top @ 00a03048
+00a03048	stp x24,x23,[sp, #-0x40]!
+00a0304c	stp x22,x21,[sp, #0x10]
+00a03050	stp x20,x19,[sp, #0x20]
+00a03054	stp x29,x30,[sp, #0x30]
+00a03058	ldr w8,[x1, #0x8]
+00a0305c	ldr w9,[x2, #0x8]
+00a03060	ldr w10,[x3, #0x28]
+00a03064	mov w24,wzr
+00a03068	add x29,sp,#0x30
+00a0306c	add w8,w9,w8
+00a03070	cmp w8,w10, LSL #0x1
+00a03074	b.gt 0x00a030f8
+00a03078	mov x21,x0
+00a0307c	mov x0,x4
+00a03080	mov x19,x4
+00a03084	mov x20,x3
+00a03088	mov x23,x2
+00a0308c	mov x22,x1
+00a03090	bl 0x00c38a90
+00a03094	mov x0,x19
+00a03098	bl 0x00c38a40
+00a0309c	mov x24,x0
+00a030a0	cbz x0,0x00a030f0
+00a030a4	mov x0,x24
+00a030a8	mov x1,x22
+00a030ac	cmp x22,x23
+00a030b0	b.eq 0x00a030e0
+00a030b4	mov x2,x23
+00a030b8	mov x3,x19
+00a030bc	bl 0x00c38ff0
+00a030c0	cbz w0,0x00a030ec
+00a030c4	mov x0,x21
+00a030c8	mov x1,x24
+00a030cc	mov x2,x20
+00a030d0	bl 0x00a03110
+00a030d4	cmp w0,#0x0
+00a030d8	cset w24,ne
+00a030dc	b 0x00a030f0
+00a030e0	mov x2,x19
+00a030e4	bl 0x00c39010
+00a030e8	cbnz w0,0x00a030c4
+00a030ec	mov w24,wzr
+00a030f0	mov x0,x19
+00a030f4	bl 0x00c38a20
+00a030f8	ldp x29,x30,[sp, #0x30]
+00a030fc	ldp x20,x19,[sp, #0x20]
+00a03100	ldp x22,x21,[sp, #0x10]
+00a03104	mov w0,w24
+00a03108	ldp x24,x23,[sp], #0x40
+00a0310c	ret

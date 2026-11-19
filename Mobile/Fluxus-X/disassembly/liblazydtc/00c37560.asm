@@ -1,0 +1,5 @@
+; ASN1_INTEGER_cmp @ 00c37560
+00c37560	adrp x16,0xcb9000
+00c37564	ldr x17,[x16, #0xa98]
+00c37568	add x16,x16,#0xa98
+00c3756c	br x17

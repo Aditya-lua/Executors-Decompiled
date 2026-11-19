@@ -1,0 +1,143 @@
+; FUN_00a46500 @ 00a46500
+00a46500	stp x26,x25,[sp, #-0x40]!
+00a46504	stp x24,x23,[sp, #0x10]
+00a46508	stp x22,x21,[sp, #0x20]
+00a4650c	stp x20,x19,[sp, #0x30]
+00a46510	ldpsw x6,x7,[x1]
+00a46514	ldpsw x10,x21,[x1, #0x8]
+00a46518	ldpsw x8,x19,[x1, #0x10]
+00a4651c	ldpsw x13,x14,[x1, #0x18]
+00a46520	ldpsw x11,x12,[x1, #0x20]
+00a46524	mov w3,#0x26
+00a46528	lsl x16,x6,#0x1
+00a4652c	lsl x1,x7,#0x1
+00a46530	lsl x5,x10,#0x1
+00a46534	mul x22,x19,x19
+00a46538	mul x24,x6,x6
+00a4653c	mov w9,#0x13
+00a46540	lsl x15,x21,#0x1
+00a46544	mul x25,x16,x7
+00a46548	mul x26,x1,x7
+00a4654c	mul x7,x1,x10
+00a46550	madd x24,x22,x3,x24
+00a46554	mul x22,x8,x5
+00a46558	lsl x17,x8,#0x1
+00a4655c	lsl x2,x19,#0x1
+00a46560	mul x23,x13,x9
+00a46564	madd x7,x21,x16,x7
+00a46568	madd x22,x15,x21,x22
+00a4656c	mul x21,x5,x21
+00a46570	madd x26,x10,x16,x26
+00a46574	mul x6,x10,x10
+00a46578	madd x24,x23,x17,x24
+00a4657c	madd x25,x23,x2,x25
+00a46580	madd x23,x23,x13,x26
+00a46584	mul x26,x15,x8
+00a46588	madd x21,x8,x1,x21
+00a4658c	mul x4,x14,x3
+00a46590	madd x26,x19,x5,x26
+00a46594	madd x21,x19,x16,x21
+00a46598	mul x19,x17,x19
+00a4659c	madd x6,x15,x1,x6
+00a465a0	mul x18,x11,x9
+00a465a4	mul x20,x8,x8
+00a465a8	madd x19,x13,x15,x19
+00a465ac	madd x24,x4,x15,x24
+00a465b0	madd x6,x8,x16,x6
+00a465b4	madd x20,x13,x5,x20
+00a465b8	madd x19,x14,x5,x19
+00a465bc	madd x5,x18,x5,x24
+00a465c0	mul x24,x13,x18
+00a465c4	madd x6,x4,x14,x6
+00a465c8	add x6,x6,x24, LSL #0x1
+00a465cc	madd x24,x4,x8,x25
+00a465d0	madd x7,x4,x13,x7
+00a465d4	madd x4,x4,x2,x23
+00a465d8	madd x23,x13,x1,x26
+00a465dc	madd x23,x14,x16,x23
+00a465e0	lsl x14,x14,#0x1
+00a465e4	mul x3,x12,x3
+00a465e8	madd x20,x2,x15,x20
+00a465ec	madd x22,x2,x1,x22
+00a465f0	madd x20,x14,x1,x20
+00a465f4	madd x19,x11,x1,x19
+00a465f8	madd x1,x3,x1,x5
+00a465fc	madd x5,x18,x2,x7
+00a46600	madd x2,x3,x2,x6
+00a46604	madd x6,x18,x15,x24
+00a46608	madd x10,x3,x10,x6
+00a4660c	madd x6,x18,x14,x21
+00a46610	madd x7,x13,x16,x22
+00a46614	madd x13,x3,x13,x6
+00a46618	mov w6,#0x2000000
+00a4661c	madd x17,x18,x17,x4
+00a46620	madd x18,x18,x11,x7
+00a46624	add x7,x2,x6
+00a46628	mov w4,#0x1000000
+00a4662c	madd x20,x11,x16,x20
+00a46630	add x13,x13,x7, ASR #0x1a
+00a46634	madd x8,x3,x8,x5
+00a46638	madd x5,x3,x12,x20
+00a4663c	madd x12,x12,x16,x19
+00a46640	add x16,x1,x6
+00a46644	madd x14,x3,x14,x18
+00a46648	add x18,x13,x4
+00a4664c	madd x15,x3,x15,x17
+00a46650	and x17,x16,#-0x4000000
+00a46654	add x14,x14,x18, ASR #0x19
+00a46658	madd x11,x3,x11,x23
+00a4665c	sub x17,x1,x17
+00a46660	add x1,x14,x6
+00a46664	add x11,x11,x1, ASR #0x1a
+00a46668	add x3,x11,x4
+00a4666c	add x5,x5,x3, ASR #0x19
+00a46670	add x19,x5,x6
+00a46674	add x12,x12,x19, ASR #0x1a
+00a46678	add x20,x12,x4
+00a4667c	asr x21,x20,#0x19
+00a46680	add x10,x10,x16, ASR #0x1a
+00a46684	madd x9,x21,x9,x17
+00a46688	add x17,x10,x4
+00a4668c	add x15,x15,x17, ASR #0x19
+00a46690	and w17,w17,#0xfe000000
+00a46694	sub w10,w10,w17
+00a46698	and w17,w18,#0xfe000000
+00a4669c	sub w13,w13,w17
+00a466a0	add x17,x15,x6
+00a466a4	add x8,x8,x17, ASR #0x1a
+00a466a8	and w17,w17,#0xfc000000
+00a466ac	and x16,x7,#-0x4000000
+00a466b0	sub w15,w15,w17
+00a466b4	and w17,w1,#0xfc000000
+00a466b8	sub x16,x2,x16
+00a466bc	sub w14,w14,w17
+00a466c0	add x17,x8,x4
+00a466c4	add x16,x16,x17, ASR #0x19
+00a466c8	and w17,w17,#0xfe000000
+00a466cc	sub w8,w8,w17
+00a466d0	and w17,w3,#0xfe000000
+00a466d4	sub w11,w11,w17
+00a466d8	stp w15,w8,[x0, #0x8]
+00a466dc	add x8,x16,x6
+00a466e0	stp w14,w11,[x0, #0x18]
+00a466e4	lsr x11,x8,#0x1a
+00a466e8	and w8,w8,#0xfc000000
+00a466ec	add w11,w13,w11
+00a466f0	sub w8,w16,w8
+00a466f4	stp w8,w11,[x0, #0x10]
+00a466f8	and w8,w20,#0xfe000000
+00a466fc	add x11,x9,x6
+00a46700	and w13,w19,#0xfc000000
+00a46704	sub w8,w12,w8
+00a46708	lsr x12,x11,#0x1a
+00a4670c	and w11,w11,#0xfc000000
+00a46710	sub w13,w5,w13
+00a46714	add w10,w10,w12
+00a46718	sub w9,w9,w11
+00a4671c	stp w9,w10,[x0]
+00a46720	stp w13,w8,[x0, #0x20]
+00a46724	ldp x20,x19,[sp, #0x30]
+00a46728	ldp x22,x21,[sp, #0x20]
+00a4672c	ldp x24,x23,[sp, #0x10]
+00a46730	ldp x26,x25,[sp], #0x40
+00a46734	ret

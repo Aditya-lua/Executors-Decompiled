@@ -1,0 +1,23 @@
+; FUN_008e4254 @ 008e4254
+008e4254	str x30,[sp, #-0x20]!
+008e4258	stp x20,x19,[sp, #0x10]
+008e425c	ldr x20,[x0, #0x8]
+008e4260	adrp x8,0xc4e000
+008e4264	mov x19,x0
+008e4268	add x8,x8,#0x2a8
+008e426c	str x8,[x0]
+008e4270	cbz x20,0x008e4298
+008e4274	adrp x8,0xc4e000
+008e4278	add x8,x8,#0x400
+008e427c	mov x0,x20
+008e4280	ldr x9,[x8, #0x18]
+008e4284	add x8,x8,#0x10
+008e4288	str x8,[x20]
+008e428c	blr x9
+008e4290	mov x0,x20
+008e4294	bl 0x00c301d0
+008e4298	str xzr,[x19, #0x8]
+008e429c	mov x0,x19
+008e42a0	ldp x20,x19,[sp, #0x10]
+008e42a4	ldr x30,[sp], #0x20
+008e42a8	b 0x008e479c

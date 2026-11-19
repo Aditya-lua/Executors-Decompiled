@@ -1,0 +1,27 @@
+; ENGINE_cmd_is_executable @ 00a50708
+00a50708	stp x29,x30,[sp, #-0x10]!
+00a5070c	sxtw x2,w1
+00a50710	mov w1,#0x12
+00a50714	mov x3,xzr
+00a50718	mov x4,xzr
+00a5071c	mov x29,sp
+00a50720	bl 0x00a50370
+00a50724	tbnz w0,#0x1f,0x00a50738
+00a50728	tst w0,#0x7
+00a5072c	cset w0,ne
+00a50730	ldp x29,x30,[sp], #0x10
+00a50734	ret
+00a50738	bl 0x00c342a0
+00a5073c	adrp x0,0x2d7000
+00a50740	adrp x2,0x2d1000
+00a50744	add x0,x0,#0xdf4
+00a50748	add x2,x2,#0x969
+00a5074c	mov w1,#0xba
+00a50750	bl 0x00c342b0
+00a50754	mov w0,#0x26
+00a50758	mov w1,#0x8a
+00a5075c	mov x2,xzr
+00a50760	bl 0x00c342c0
+00a50764	mov w0,wzr
+00a50768	ldp x29,x30,[sp], #0x10
+00a5076c	ret

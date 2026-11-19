@@ -1,0 +1,4 @@
+; ACCESS_DESCRIPTION_it @ 00af561c
+00af561c	adrp x0,0xc7e000
+00af5620	add x0,x0,#0x668
+00af5624	ret

@@ -1,0 +1,14 @@
+package v9;
+
+import java.util.regex.Pattern;
+
+/* JADX INFO: loaded from: classes.dex */
+public class o {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final Pattern f34247a = Pattern.compile("\\$\\{(.*?)\\}");
+
+    public static boolean a(String str) {
+        return str == null || str.trim().isEmpty();
+    }
+}

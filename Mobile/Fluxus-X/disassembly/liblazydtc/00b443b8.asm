@@ -1,0 +1,33 @@
+; FUN_00b443b8 @ 00b443b8
+00b443b8	stp x29,x30,[sp, #-0x10]!
+00b443bc	mov x29,sp
+00b443c0	bl 0x00c41000
+00b443c4	cbz w0,0x00b443f0
+00b443c8	adrp x1,0x2a6000
+00b443cc	add x1,x1,#0xc47
+00b443d0	orr w0,wzr,#0x18
+00b443d4	mov w2,#0x33
+00b443d8	bl 0x00c34250
+00b443dc	cbz x0,0x00b443fc
+00b443e0	orr w8,wzr,#0x38
+00b443e4	str x8,[x0]
+00b443e8	ldp x29,x30,[sp], #0x10
+00b443ec	ret
+00b443f0	mov x0,xzr
+00b443f4	ldp x29,x30,[sp], #0x10
+00b443f8	ret
+00b443fc	bl 0x00c342a0
+00b44400	adrp x0,0x2a6000
+00b44404	adrp x2,0x2a6000
+00b44408	add x0,x0,#0xc47
+00b4440c	add x2,x2,#0xc75
+00b44410	mov w1,#0x35
+00b44414	bl 0x00c342b0
+00b44418	mov w1,#0x100
+00b4441c	mov w0,#0x39
+00b44420	movk w1,#0xc, LSL #16
+00b44424	mov x2,xzr
+00b44428	bl 0x00c342c0
+00b4442c	mov x0,xzr
+00b44430	ldp x29,x30,[sp], #0x10
+00b44434	ret

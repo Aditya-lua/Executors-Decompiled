@@ -1,0 +1,67 @@
+; CT_POLICY_EVAL_CTX_new_ex @ 00a13924
+00a13924	str x21,[sp, #-0x30]!
+00a13928	stp x20,x19,[sp, #0x10]
+00a1392c	mov x20,x1
+00a13930	adrp x1,0x29e000
+00a13934	mov x21,x0
+00a13938	add x1,x1,#0x9
+00a1393c	orr w0,wzr,#0x30
+00a13940	orr w2,wzr,#0x1f
+00a13944	stp x29,x30,[sp, #0x20]
+00a13948	add x29,sp,#0x20
+00a1394c	bl 0x00c34250
+00a13950	mov x19,x0
+00a13954	cbz x0,0x00a1399c
+00a13958	str x21,[x19, #0x20]
+00a1395c	cbz x20,0x00a1397c
+00a13960	adrp x1,0x29e000
+00a13964	add x1,x1,#0x9
+00a13968	mov w2,#0x28
+00a1396c	mov x0,x20
+00a13970	bl 0x00c34600
+00a13974	str x0,[x19, #0x28]
+00a13978	cbz x0,0x00a139d0
+00a1397c	mov x0,xzr
+00a13980	bl 0x00c30970
+00a13984	mov w9,#0x93e0
+00a13988	mov w8,#0x3e8
+00a1398c	movk w9,#0x4, LSL #16
+00a13990	madd x8,x0,x8,x9
+00a13994	str x8,[x19, #0x18]
+00a13998	b 0x00a13a18
+00a1399c	bl 0x00c342a0
+00a139a0	adrp x0,0x29e000
+00a139a4	adrp x2,0x2c1000
+00a139a8	add x0,x0,#0x9
+00a139ac	add x2,x2,#0xa7d
+00a139b0	mov w1,#0x22
+00a139b4	bl 0x00c342b0
+00a139b8	mov w1,#0x100
+00a139bc	mov w0,#0x32
+00a139c0	movk w1,#0xc, LSL #16
+00a139c4	mov x2,xzr
+00a139c8	bl 0x00c342c0
+00a139cc	b 0x00a13a18
+00a139d0	bl 0x00c342a0
+00a139d4	adrp x20,0x29e000
+00a139d8	add x20,x20,#0x9
+00a139dc	adrp x2,0x2c1000
+00a139e0	add x2,x2,#0xa7d
+00a139e4	mov w1,#0x2a
+00a139e8	mov x0,x20
+00a139ec	bl 0x00c342b0
+00a139f0	mov w1,#0x100
+00a139f4	mov w0,#0x32
+00a139f8	movk w1,#0xc, LSL #16
+00a139fc	mov x2,xzr
+00a13a00	bl 0x00c342c0
+00a13a04	mov w2,#0x2b
+00a13a08	mov x0,x19
+00a13a0c	mov x1,x20
+00a13a10	bl 0x00c32310
+00a13a14	mov x19,xzr
+00a13a18	mov x0,x19
+00a13a1c	ldp x29,x30,[sp, #0x20]
+00a13a20	ldp x20,x19,[sp, #0x10]
+00a13a24	ldr x21,[sp], #0x30
+00a13a28	ret

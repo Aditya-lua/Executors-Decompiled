@@ -1,0 +1,10 @@
+package tb;
+
+import androidx.annotation.NonNull;
+import com.google.android.gms.tasks.Task;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface j<TResult, TContinuationResult> {
+    @NonNull
+    Task<TContinuationResult> then(TResult tresult);
+}

@@ -1,0 +1,21 @@
+; ix::SelectInterruptPipe::~SelectInterruptPipe @ 00985724
+00985724	stp x20,x19,[sp, #-0x20]!
+00985728	stp x29,x30,[sp, #0x10]
+0098572c	add x29,sp,#0x10
+00985730	adrp x8,0xcb4000
+00985734	mov x19,x0
+00985738	ldr w0,[x0, #0x8]
+0098573c	ldr x8,[x8, #0xfa0]
+00985740	add x8,x8,#0x10
+00985744	str x8,[x19]
+00985748	bl 0x00c31bf0
+0098574c	ldr w0,[x19, #0xc]
+00985750	bl 0x00c31bf0
+00985754	movi d0,#-0x1
+00985758	add x0,x19,#0x10
+0098575c	str d0,[x19, #0x8]
+00985760	bl 0x00c2fee0
+00985764	ldp x29,x30,[sp, #0x10]
+00985768	mov x0,x19
+0098576c	ldp x20,x19,[sp], #0x20
+00985770	b 0x00c33480

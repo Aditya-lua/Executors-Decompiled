@@ -1,0 +1,26 @@
+; X509_INFO_new @ 009f8724
+009f8724	stp x29,x30,[sp, #-0x10]!
+009f8728	adrp x1,0x2c3000
+009f872c	add x1,x1,#0x6ff
+009f8730	mov w0,#0x40
+009f8734	mov w2,#0x14
+009f8738	mov x29,sp
+009f873c	bl 0x00c34250
+009f8740	cbz x0,0x009f874c
+009f8744	ldp x29,x30,[sp], #0x10
+009f8748	ret
+009f874c	bl 0x00c342a0
+009f8750	adrp x0,0x2c3000
+009f8754	adrp x2,0x2d3000
+009f8758	add x0,x0,#0x6ff
+009f875c	add x2,x2,#0x8e4
+009f8760	mov w1,#0x16
+009f8764	bl 0x00c342b0
+009f8768	mov w1,#0x100
+009f876c	mov w0,#0xd
+009f8770	movk w1,#0xc, LSL #16
+009f8774	mov x2,xzr
+009f8778	bl 0x00c342c0
+009f877c	mov x0,xzr
+009f8780	ldp x29,x30,[sp], #0x10
+009f8784	ret

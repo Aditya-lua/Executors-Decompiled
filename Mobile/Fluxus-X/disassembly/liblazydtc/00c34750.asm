@@ -1,0 +1,5 @@
+; OPENSSL_cleanse @ 00c34750
+00c34750	adrp x16,0xcb8000
+00c34754	ldr x17,[x16, #0x390]
+00c34758	add x16,x16,#0x390
+00c3475c	br x17

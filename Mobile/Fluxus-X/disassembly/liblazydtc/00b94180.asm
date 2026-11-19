@@ -1,0 +1,53 @@
+; mbedtls_ecp_check_privkey @ 00b94180
+00b94180	str x21,[sp, #-0x30]!
+00b94184	stp x20,x19,[sp, #0x10]
+00b94188	stp x29,x30,[sp, #0x20]
+00b9418c	add x29,sp,#0x20
+00b94190	ldr x8,[x0, #0x38]
+00b94194	mov x20,x0
+00b94198	mov x19,x1
+00b9419c	cbz x8,0x00b941d8
+00b941a0	ldr x8,[x20, #0x48]
+00b941a4	cbz x8,0x00b941e0
+00b941a8	mov w1,#0x1
+00b941ac	mov x0,x19
+00b941b0	bl 0x00c41b40
+00b941b4	mov w21,#0xffffb380
+00b941b8	tbnz w0,#0x1f,0x00b94234
+00b941bc	add x1,x20,#0x68
+00b941c0	mov x0,x19
+00b941c4	bl 0x00c41b50
+00b941c8	mov w8,#0x4c80
+00b941cc	and w8,w8,w0, ASR #0x1f
+00b941d0	add w0,w8,w21
+00b941d4	b 0x00b94238
+00b941d8	mov w21,#0xffffb080
+00b941dc	b 0x00b94234
+00b941e0	mov x0,x19
+00b941e4	mov x1,xzr
+00b941e8	bl 0x00c41be0
+00b941ec	cbnz w0,0x00b94230
+00b941f0	mov w1,#0x1
+00b941f4	mov x0,x19
+00b941f8	bl 0x00c41be0
+00b941fc	cbnz w0,0x00b94230
+00b94200	mov x0,x19
+00b94204	bl 0x00c41b30
+00b94208	ldr x9,[x20, #0x80]
+00b9420c	sub x8,x0,#0x1
+00b94210	cmp x8,x9
+00b94214	b.ne 0x00b94230
+00b94218	cmp x8,#0xfe
+00b9421c	b.ne 0x00b94248
+00b94220	mov w1,#0x2
+00b94224	mov x0,x19
+00b94228	bl 0x00c41be0
+00b9422c	cbz w0,0x00b94248
+00b94230	mov w21,#0xffffb380
+00b94234	mov w0,w21
+00b94238	ldp x29,x30,[sp, #0x20]
+00b9423c	ldp x20,x19,[sp, #0x10]
+00b94240	ldr x21,[sp], #0x30
+00b94244	ret
+00b94248	mov w21,wzr
+00b9424c	b 0x00b94234

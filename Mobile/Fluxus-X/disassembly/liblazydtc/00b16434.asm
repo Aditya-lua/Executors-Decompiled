@@ -1,0 +1,43 @@
+; X509_digest @ 00b16434
+00b16434	stp x22,x21,[sp, #-0x30]!
+00b16438	mov x22,x1
+00b1643c	adrp x1,0x2d1000
+00b16440	mov x21,x0
+00b16444	add x1,x1,#0x42e
+00b16448	mov x0,x22
+00b1644c	stp x20,x19,[sp, #0x10]
+00b16450	stp x29,x30,[sp, #0x20]
+00b16454	add x29,sp,#0x20
+00b16458	mov x20,x3
+00b1645c	mov x19,x2
+00b16460	bl 0x00c34610
+00b16464	cbz w0,0x00b164b4
+00b16468	ldr w8,[x21, #0xe8]
+00b1646c	mov w9,#0x100
+00b16470	movk w9,#0x10, LSL #16
+00b16474	and w8,w8,w9
+00b16478	cmp w8,#0x100
+00b1647c	b.ne 0x00b164b4
+00b16480	cbz x20,0x00b1648c
+00b16484	mov w8,#0x14
+00b16488	str w8,[x20]
+00b1648c	ldr w8,[x21, #0x148]
+00b16490	add x9,x21,#0x138
+00b16494	mov w0,#0x1
+00b16498	str w8,[x19, #0x10]
+00b1649c	ldr q0,[x9]
+00b164a0	str q0,[x19]
+00b164a4	ldp x29,x30,[sp, #0x20]
+00b164a8	ldp x20,x19,[sp, #0x10]
+00b164ac	ldp x22,x21,[sp], #0x30
+00b164b0	ret
+00b164b4	bl 0x00c36190
+00b164b8	ldp x5,x6,[x21, #0x170]
+00b164bc	mov x3,x19
+00b164c0	mov x4,x20
+00b164c4	ldp x29,x30,[sp, #0x20]
+00b164c8	ldp x20,x19,[sp, #0x10]
+00b164cc	mov x1,x22
+00b164d0	mov x2,x21
+00b164d4	ldp x22,x21,[sp], #0x30
+00b164d8	b 0x00c37480

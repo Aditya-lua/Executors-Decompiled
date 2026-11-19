@@ -1,0 +1,17 @@
+; X509_VERIFY_PARAM_get0 @ 00b14834
+00b14834	cmp w0,#0x4
+00b14838	b.gt 0x00b14850
+00b1483c	adrp x8,0xc81000
+00b14840	add x8,x8,#0xc08
+00b14844	orr w9,wzr,#0x70
+00b14848	smaddl x0,w0,w9,x8
+00b1484c	ret
+00b14850	stp x29,x30,[sp, #-0x10]!
+00b14854	adrp x8,0xd22000
+00b14858	ldr x8,[x8, #0x7f0]
+00b1485c	sub w1,w0,#0x5
+00b14860	mov x29,sp
+00b14864	mov x0,x8
+00b14868	bl 0x00c32610
+00b1486c	ldp x29,x30,[sp], #0x10
+00b14870	ret

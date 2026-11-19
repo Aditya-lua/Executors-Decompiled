@@ -1,0 +1,72 @@
+; OPENSSL_init_ssl @ 009b1598
+009b1598	str x19,[sp, #-0x20]!
+009b159c	adrp x8,0xd21000
+009b15a0	ldrb w8,[x8, #0x8c8]
+009b15a4	stp x29,x30,[sp, #0x10]
+009b15a8	add x29,sp,#0x10
+009b15ac	cmp w8,#0x1
+009b15b0	b.ne 0x009b1604
+009b15b4	adrp x8,0xd21000
+009b15b8	ldrb w9,[x8, #0x8c4]
+009b15bc	mov w0,wzr
+009b15c0	tbnz w9,#0x0,0x009b16a8
+009b15c4	mov w9,#0x1
+009b15c8	strb w9,[x8, #0x8c4]
+009b15cc	bl 0x00c342a0
+009b15d0	adrp x0,0x2bd000
+009b15d4	adrp x2,0x2d7000
+009b15d8	add x0,x0,#0x4d8
+009b15dc	add x2,x2,#0x8c9
+009b15e0	mov w1,#0x67
+009b15e4	bl 0x00c342b0
+009b15e8	mov w1,#0x105
+009b15ec	mov w0,#0x14
+009b15f0	movk w1,#0xc, LSL #16
+009b15f4	mov x2,xzr
+009b15f8	bl 0x00c342c0
+009b15fc	mov w0,wzr
+009b1600	b 0x009b16a8
+009b1604	lsr x8,x0,#0x1
+009b1608	and x8,x8,#0x40
+009b160c	mov w9,#0x4c
+009b1610	eor x8,x8,x9
+009b1614	mov x19,x0
+009b1618	orr x0,x8,x0
+009b161c	bl 0x00c35500
+009b1620	cbz w0,0x009b16a8
+009b1624	adrp x0,0xd21000
+009b1628	adrp x1,0x9b1000
+009b162c	add x0,x0,#0x8cc
+009b1630	add x1,x1,#0x6b4
+009b1634	bl 0x00c34d60
+009b1638	cbz w0,0x009b16a8
+009b163c	adrp x8,0xd21000
+009b1640	ldrb w8,[x8, #0x8d0]
+009b1644	mov w0,wzr
+009b1648	cbz w8,0x009b16a8
+009b164c	tbz w19,#0x14,0x009b1678
+009b1650	adrp x0,0xd21000
+009b1654	adrp x1,0x9b1000
+009b1658	add x0,x0,#0x8d4
+009b165c	add x1,x1,#0x6ec
+009b1660	bl 0x00c34d60
+009b1664	cbz w0,0x009b16a8
+009b1668	adrp x8,0xd21000
+009b166c	ldrb w8,[x8, #0x8d8]
+009b1670	mov w0,wzr
+009b1674	cbz w8,0x009b16a8
+009b1678	tbz w19,#0x15,0x009b16a4
+009b167c	adrp x0,0xd21000
+009b1680	adrp x1,0x9b1000
+009b1684	add x0,x0,#0x8d4
+009b1688	add x1,x1,#0x6fc
+009b168c	bl 0x00c34d60
+009b1690	cbz w0,0x009b16a8
+009b1694	adrp x8,0xd21000
+009b1698	ldrb w8,[x8, #0x8d8]
+009b169c	mov w0,wzr
+009b16a0	cbz w8,0x009b16a8
+009b16a4	mov w0,#0x1
+009b16a8	ldp x29,x30,[sp, #0x10]
+009b16ac	ldr x19,[sp], #0x20
+009b16b0	ret

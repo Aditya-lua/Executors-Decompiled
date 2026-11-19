@@ -1,0 +1,4 @@
+; d2i_PKCS7_SIGN_ENVELOPE @ 00abe160
+00abe160	adrp x3,0xc7b000
+00abe164	add x3,x3,#0x9b8
+00abe168	b 0x00c36150

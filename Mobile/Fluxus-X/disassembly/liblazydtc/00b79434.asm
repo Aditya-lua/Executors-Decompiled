@@ -1,0 +1,9 @@
+; mbedtls_md_hmac_update @ 00b79434
+00b79434	cbz x0,0x00b7944c
+00b79438	ldr x8,[x0]
+00b7943c	cbz x8,0x00b7944c
+00b79440	ldr x8,[x0, #0x10]
+00b79444	cbz x8,0x00b7944c
+00b79448	b 0x00c42870
+00b7944c	mov w0,#0xffffaf00
+00b79450	ret

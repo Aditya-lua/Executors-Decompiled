@@ -1,0 +1,32 @@
+; SSL_CTX_set_ct_validation_callback @ 009b82fc
+009b82fc	str x21,[sp, #-0x30]!
+009b8300	stp x20,x19,[sp, #0x10]
+009b8304	mov x19,x2
+009b8308	mov x21,x1
+009b830c	mov x20,x0
+009b8310	stp x29,x30,[sp, #0x20]
+009b8314	add x29,sp,#0x20
+009b8318	cbz x1,0x009b8360
+009b831c	mov w1,#0x12
+009b8320	mov x0,x20
+009b8324	bl 0x00c359a0
+009b8328	cbz w0,0x009b8360
+009b832c	bl 0x00c342a0
+009b8330	adrp x0,0x2c5000
+009b8334	adrp x2,0x2cb000
+009b8338	add x0,x0,#0x652
+009b833c	add x2,x2,#0x4cc
+009b8340	mov w1,#0x1455
+009b8344	bl 0x00c342b0
+009b8348	mov w0,#0x14
+009b834c	mov w1,#0xce
+009b8350	mov x2,xzr
+009b8354	bl 0x00c342c0
+009b8358	mov w0,wzr
+009b835c	b 0x009b8368
+009b8360	mov w0,#0x1
+009b8364	stp x21,x19,[x20, #0x1d0]
+009b8368	ldp x29,x30,[sp, #0x20]
+009b836c	ldp x20,x19,[sp, #0x10]
+009b8370	ldr x21,[sp], #0x30
+009b8374	ret

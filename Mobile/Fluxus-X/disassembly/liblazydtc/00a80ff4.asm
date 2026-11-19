@@ -1,0 +1,60 @@
+; OSSL_LIB_CTX_new_from_dispatch @ 00a80ff4
+00a80ff4	stp x20,x19,[sp, #-0x20]!
+00a80ff8	mov x20,x1
+00a80ffc	adrp x1,0x2aa000
+00a81000	add x1,x1,#0x296
+00a81004	mov w0,#0x1c8
+00a81008	orr w2,wzr,#0xc0
+00a8100c	stp x29,x30,[sp, #0x10]
+00a81010	add x29,sp,#0x10
+00a81014	bl 0x00c34250
+00a81018	mov x19,x0
+00a8101c	cbz x0,0x00a810d0
+00a81020	mov x0,x19
+00a81024	bl 0x00a80e90
+00a81028	cbz w0,0x00a81074
+00a8102c	mov x0,x19
+00a81030	mov x1,x20
+00a81034	bl 0x00c387d0
+00a81038	cbnz w0,0x00a810d0
+00a8103c	adrp x0,0xd21000
+00a81040	adrp x1,0xa81000
+00a81044	add x0,x0,#0xd5c
+00a81048	add x1,x1,#0x348
+00a8104c	bl 0x00c34d60
+00a81050	cbz w0,0x00a81084
+00a81054	adrp x8,0xd21000
+00a81058	ldr w8,[x8, #0xd60]
+00a8105c	mov x0,xzr
+00a81060	cbz w8,0x00a81088
+00a81064	adrp x0,0xd21000
+00a81068	add x0,x0,#0xd58
+00a8106c	bl 0x00c38360
+00a81070	b 0x00a81088
+00a81074	adrp x1,0x2aa000
+00a81078	add x1,x1,#0x296
+00a8107c	mov w2,#0xc3
+00a81080	b 0x00a810c4
+00a81084	mov x0,xzr
+00a81088	adrp x8,0xd21000
+00a8108c	add x8,x8,#0xb90
+00a81090	cmp x0,#0x0
+00a81094	csel x8,x8,x0,eq
+00a81098	cmp x8,x19
+00a8109c	b.eq 0x00a810cc
+00a810a0	ldrb w8,[x19, #0x1c0]
+00a810a4	tbz w8,#0x0,0x00a810b0
+00a810a8	mov x0,x19
+00a810ac	bl 0x00c3df40
+00a810b0	mov x0,x19
+00a810b4	bl 0x00a80d0c
+00a810b8	adrp x1,0x2aa000
+00a810bc	add x1,x1,#0x296
+00a810c0	mov w2,#0xfb
+00a810c4	mov x0,x19
+00a810c8	bl 0x00c32310
+00a810cc	mov x19,xzr
+00a810d0	ldp x29,x30,[sp, #0x10]
+00a810d4	mov x0,x19
+00a810d8	ldp x20,x19,[sp], #0x20
+00a810dc	ret

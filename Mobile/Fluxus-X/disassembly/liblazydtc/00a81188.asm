@@ -1,0 +1,57 @@
+; OSSL_LIB_CTX_new_child @ 00a81188
+00a81188	str x21,[sp, #-0x30]!
+00a8118c	stp x20,x19,[sp, #0x10]
+00a81190	stp x29,x30,[sp, #0x20]
+00a81194	add x29,sp,#0x20
+00a81198	mov x20,x1
+00a8119c	mov x21,x0
+00a811a0	bl 0x00a80ff4
+00a811a4	mov x19,x0
+00a811a8	cbz x0,0x00a81254
+00a811ac	mov x0,x19
+00a811b0	mov x1,x21
+00a811b4	mov x2,x20
+00a811b8	bl 0x00c3df50
+00a811bc	cbz w0,0x00a811d0
+00a811c0	ldrb w8,[x19, #0x1c0]
+00a811c4	orr w8,w8,#0x1
+00a811c8	strb w8,[x19, #0x1c0]
+00a811cc	b 0x00a81254
+00a811d0	adrp x0,0xd21000
+00a811d4	adrp x1,0xa81000
+00a811d8	add x0,x0,#0xd5c
+00a811dc	add x1,x1,#0x348
+00a811e0	bl 0x00c34d60
+00a811e4	cbz w0,0x00a81208
+00a811e8	adrp x8,0xd21000
+00a811ec	ldr w8,[x8, #0xd60]
+00a811f0	mov x0,xzr
+00a811f4	cbz w8,0x00a8120c
+00a811f8	adrp x0,0xd21000
+00a811fc	add x0,x0,#0xd58
+00a81200	bl 0x00c38360
+00a81204	b 0x00a8120c
+00a81208	mov x0,xzr
+00a8120c	adrp x8,0xd21000
+00a81210	add x8,x8,#0xb90
+00a81214	cmp x0,#0x0
+00a81218	csel x8,x8,x0,eq
+00a8121c	cmp x8,x19
+00a81220	b.eq 0x00a81250
+00a81224	ldrb w8,[x19, #0x1c0]
+00a81228	tbz w8,#0x0,0x00a81234
+00a8122c	mov x0,x19
+00a81230	bl 0x00c3df40
+00a81234	mov x0,x19
+00a81238	bl 0x00a80d0c
+00a8123c	adrp x1,0x2aa000
+00a81240	add x1,x1,#0x296
+00a81244	mov w2,#0xfb
+00a81248	mov x0,x19
+00a8124c	bl 0x00c32310
+00a81250	mov x19,xzr
+00a81254	mov x0,x19
+00a81258	ldp x29,x30,[sp, #0x20]
+00a8125c	ldp x20,x19,[sp, #0x10]
+00a81260	ldr x21,[sp], #0x30
+00a81264	ret

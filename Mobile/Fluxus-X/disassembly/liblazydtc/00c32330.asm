@@ -1,0 +1,5 @@
+; ENGINE_by_id @ 00c32330
+00c32330	adrp x16,0xcb7000
+00c32334	ldr x17,[x16, #0x180]
+00c32338	add x16,x16,#0x180
+00c3233c	br x17

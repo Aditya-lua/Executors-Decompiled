@@ -1,0 +1,5 @@
+; PEM_write_bio_X509 @ 00c32660
+00c32660	adrp x16,0xcb7000
+00c32664	ldr x17,[x16, #0x318]
+00c32668	add x16,x16,#0x318
+00c3266c	br x17

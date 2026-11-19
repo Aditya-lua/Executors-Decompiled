@@ -1,0 +1,6 @@
+; FUN_0086f78c @ 0086f78c
+0086f78c	stp x29,x30,[sp, #-0x10]!
+0086f790	mov x29,sp
+0086f794	adrp x0,0x2ca000
+0086f798	add x0,x0,#0xa6b
+0086f79c	bl 0x007fe138

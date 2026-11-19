@@ -1,0 +1,4 @@
+; i2d_X509_REQ @ 00b1e778
+00b1e778	adrp x2,0xc82000
+00b1e77c	add x2,x2,#0x7b0
+00b1e780	b 0x00c36170

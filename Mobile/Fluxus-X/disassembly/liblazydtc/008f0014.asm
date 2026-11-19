@@ -1,0 +1,34 @@
+; cpr::Session::Patch @ 008f0014
+008f0014	stp x20,x19,[sp, #-0x20]!
+008f0018	stp x29,x30,[sp, #0x10]
+008f001c	add x29,sp,#0x10
+008f0020	ldr x9,[x0, #0x18]
+008f0024	mov x19,x0
+008f0028	mov w1,#0x2c
+008f002c	mov x2,xzr
+008f0030	ldr x0,[x9]
+008f0034	mov x20,x8
+008f0038	bl 0x00c317c0
+008f003c	ldr x8,[x19, #0x18]
+008f0040	adrp x2,0x2a9000
+008f0044	add x2,x2,#0x4a0
+008f0048	mov w1,#0x2734
+008f004c	ldr x0,[x8]
+008f0050	bl 0x00c317c0
+008f0054	mov x0,x19
+008f0058	bl 0x00c31270
+008f005c	ldr x8,[x19, #0x2a0]
+008f0060	cbz x8,0x008f0078
+008f0064	ldp x29,x30,[sp, #0x10]
+008f0068	mov x8,x20
+008f006c	mov x0,x19
+008f0070	ldp x20,x19,[sp], #0x20
+008f0074	b 0x00c313b0
+008f0078	mov x0,x19
+008f007c	bl 0x00c31250
+008f0080	ldp x29,x30,[sp, #0x10]
+008f0084	mov w1,w0
+008f0088	mov x8,x20
+008f008c	mov x0,x19
+008f0090	ldp x20,x19,[sp], #0x20
+008f0094	b 0x00c31380

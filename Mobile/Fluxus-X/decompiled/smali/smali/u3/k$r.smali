@@ -1,0 +1,114 @@
+.class public final Lu3/k$r;
+.super Lkotlin/jvm/internal/m;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lu3/k;-><init>(Lu3/e0;Ljava/util/List;Lu3/e;Lav/p0;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/m;",
+        "Lkotlin/jvm/functions/Function0<",
+        "Lu3/f0<",
+        "TT;>;>;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\n\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0001\"\u0004\u0008\u0000\u0010\u0000H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
+    }
+    d2 = {
+        "T",
+        "Lu3/f0;",
+        "b",
+        "()Lu3/f0;"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic i:Lu3/k;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lu3/k<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lu3/k;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lu3/k<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lu3/k$r;->i:Lu3/k;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/m;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lu3/f0;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lu3/f0<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lu3/k$r;->i:Lu3/k;
+
+    invoke-static {v0}, Lu3/k;->f(Lu3/k;)Lu3/e0;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lu3/e0;->a()Lu3/f0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lu3/k$r;->b()Lu3/f0;
+
+    move-result-object v0
+
+    return-object v0
+.end method

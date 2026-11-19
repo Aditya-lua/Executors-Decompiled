@@ -1,0 +1,86 @@
+; EVP_PKEY_asn1_find_str @ 009f04ac
+009f04ac	sub sp,sp,#0x60
+009f04b0	stp x22,x21,[sp, #0x30]
+009f04b4	stp x20,x19,[sp, #0x40]
+009f04b8	mov w20,w2
+009f04bc	mov x19,x1
+009f04c0	cmn w2,#0x1
+009f04c4	mov x21,x0
+009f04c8	stp x26,x25,[sp, #0x10]
+009f04cc	stp x24,x23,[sp, #0x20]
+009f04d0	stp x29,x30,[sp, #0x50]
+009f04d4	add x29,sp,#0x50
+009f04d8	b.eq 0x009f04e4
+009f04dc	cbnz x21,0x009f04f4
+009f04e0	b 0x009f0538
+009f04e4	mov x0,x19
+009f04e8	bl 0x00c2ff50
+009f04ec	mov x20,x0
+009f04f0	cbz x21,0x009f0538
+009f04f4	add x0,sp,#0x8
+009f04f8	mov x1,x19
+009f04fc	mov w2,w20
+009f0500	bl 0x00c37b50
+009f0504	cbz x0,0x009f0534
+009f0508	mov x22,x0
+009f050c	ldr x0,[sp, #0x8]
+009f0510	bl 0x00c323b0
+009f0514	ldr x8,[sp, #0x8]
+009f0518	cmp w0,#0x0
+009f051c	csel x22,xzr,x22,eq
+009f0520	mov x0,x8
+009f0524	bl 0x00c32370
+009f0528	ldr x8,[sp, #0x8]
+009f052c	str x8,[x21]
+009f0530	b 0x009f05e0
+009f0534	str xzr,[x21]
+009f0538	adrp x24,0xd21000
+009f053c	ldr x0,[x24, #0x8e0]
+009f0540	cbz x0,0x009f055c
+009f0544	bl 0x00c325e0
+009f0548	cmn w0,#0xf
+009f054c	mov x22,xzr
+009f0550	b.lt 0x009f05e0
+009f0554	add w8,w0,#0x10
+009f0558	b 0x009f0560
+009f055c	mov w8,#0x10
+009f0560	adrp x26,0xcc8000
+009f0564	sxtw x21,w20
+009f0568	sxtw x25,w8
+009f056c	add x26,x26,#0x608
+009f0570	cmp w25,#0x10
+009f0574	b.gt 0x009f058c
+009f0578	add x8,x26,x25, LSL #0x3
+009f057c	ldur x22,[x8, #-0x8]
+009f0580	ldrb w8,[x22, #0x8]
+009f0584	tbz w8,#0x0,0x009f05a4
+009f0588	b 0x009f05cc
+009f058c	ldr x0,[x24, #0x8e0]
+009f0590	sub w1,w25,#0x11
+009f0594	bl 0x00c32610
+009f0598	mov x22,x0
+009f059c	ldrb w8,[x22, #0x8]
+009f05a0	tbnz w8,#0x0,0x009f05cc
+009f05a4	ldr x23,[x22, #0x10]
+009f05a8	mov x0,x23
+009f05ac	bl 0x00c2ff50
+009f05b0	cmp w20,w0
+009f05b4	b.ne 0x009f05cc
+009f05b8	mov x0,x23
+009f05bc	mov x1,x19
+009f05c0	mov x2,x21
+009f05c4	bl 0x00c35ef0
+009f05c8	cbz w0,0x009f05e0
+009f05cc	sub x25,x25,#0x1
+009f05d0	add x8,x25,#0x1
+009f05d4	cmp x8,#0x1
+009f05d8	b.gt 0x009f0570
+009f05dc	mov x22,xzr
+009f05e0	mov x0,x22
+009f05e4	ldp x29,x30,[sp, #0x50]
+009f05e8	ldp x20,x19,[sp, #0x40]
+009f05ec	ldp x22,x21,[sp, #0x30]
+009f05f0	ldp x24,x23,[sp, #0x20]
+009f05f4	ldp x26,x25,[sp, #0x10]
+009f05f8	add sp,sp,#0x60
+009f05fc	ret

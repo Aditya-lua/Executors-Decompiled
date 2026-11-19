@@ -1,0 +1,84 @@
+; FUN_0090a514 @ 0090a514
+0090a514	sub sp,sp,#0x60
+0090a518	stp x26,x25,[sp, #0x10]
+0090a51c	stp x24,x23,[sp, #0x20]
+0090a520	stp x22,x21,[sp, #0x30]
+0090a524	stp x20,x19,[sp, #0x40]
+0090a528	stp x29,x30,[sp, #0x50]
+0090a52c	add x29,sp,#0x50
+0090a530	mrs x26,tpidr_el0
+0090a534	ldr x8,[x26, #0x28]
+0090a538	add x25,x1,w2, SXTW  #0x3
+0090a53c	mov w22,w4
+0090a540	mov x23,x3
+0090a544	str x8,[sp, #0x8]
+0090a548	ldr x8,[x25, #0x248]
+0090a54c	mov w19,w2
+0090a550	mov x20,x1
+0090a554	mov x21,x0
+0090a558	mov w24,wzr
+0090a55c	cbz x8,0x0090a590
+0090a560	ldr x8,[x26, #0x28]
+0090a564	ldr x9,[sp, #0x8]
+0090a568	cmp x8,x9
+0090a56c	b.ne 0x0090a65c
+0090a570	mov w0,w24
+0090a574	ldp x29,x30,[sp, #0x50]
+0090a578	ldp x20,x19,[sp, #0x40]
+0090a57c	ldp x22,x21,[sp, #0x30]
+0090a580	ldp x24,x23,[sp, #0x20]
+0090a584	ldp x26,x25,[sp, #0x10]
+0090a588	add sp,sp,#0x60
+0090a58c	ret
+0090a590	ldr x8,[x20, #0x3a8]
+0090a594	ldr w8,[x8, #0x8c]
+0090a598	cmp w8,#0x2
+0090a59c	b.ne 0x0090a5c8
+0090a5a0	mov x0,x21
+0090a5a4	mov x1,x20
+0090a5a8	mov w2,w19
+0090a5ac	mov x3,x23
+0090a5b0	bl 0x0090ba88
+0090a5b4	mov w24,w0
+0090a5b8	cbnz w0,0x0090a560
+0090a5bc	add x8,x25,#0x248
+0090a5c0	ldr x8,[x8]
+0090a5c4	cbnz x8,0x0090a560
+0090a5c8	adrp x8,0xcb4000
+0090a5cc	ldrb w24,[x20, #0x572]
+0090a5d0	ldr x8,[x8, #0xdd0]
+0090a5d4	mov w0,#0x1
+0090a5d8	orr w1,wzr,#0x18
+0090a5dc	str xzr,[sp]
+0090a5e0	ldr x8,[x8]
+0090a5e4	blr x8
+0090a5e8	mov x25,x0
+0090a5ec	cbz x0,0x0090a628
+0090a5f0	adrp x1,0xcc4000
+0090a5f4	add x1,x1,#0x7b8
+0090a5f8	mov x0,sp
+0090a5fc	mov x2,x25
+0090a600	str wzr,[x25]
+0090a604	str x23,[x25, #0x8]
+0090a608	stp w22,w24,[x25, #0x10]
+0090a60c	bl 0x00907328
+0090a610	ldr x8,[sp]
+0090a614	cmp w0,#0x0
+0090a618	mov w24,w0
+0090a61c	csel x0,xzr,x25,eq
+0090a620	csel x22,x8,xzr,eq
+0090a624	b 0x0090a630
+0090a628	mov x22,xzr
+0090a62c	mov w24,#0x1b
+0090a630	adrp x8,0xcc4000
+0090a634	add x8,x8,#0x678
+0090a638	ldr x8,[x8]
+0090a63c	blr x8
+0090a640	cbnz w24,0x0090a560
+0090a644	mov x0,x21
+0090a648	mov x1,x20
+0090a64c	mov w2,w19
+0090a650	mov x3,x22
+0090a654	bl 0x0090738c
+0090a658	b 0x0090a560
+0090a65c	bl 0x00c2fec0

@@ -1,0 +1,54 @@
+; cpr::sslctx_function_load_ca_cert_from_buffer @ 00901f88
+00901f88	sub sp,sp,#0x40
+00901f8c	str x21,[sp, #0x10]
+00901f90	stp x20,x19,[sp, #0x20]
+00901f94	stp x29,x30,[sp, #0x30]
+00901f98	add x29,sp,#0x30
+00901f9c	mrs x21,tpidr_el0
+00901fa0	ldr x8,[x21, #0x28]
+00901fa4	mov x20,x1
+00901fa8	str x8,[sp, #0x8]
+00901fac	cbz x1,0x0090200c
+00901fb0	cbz x2,0x0090200c
+00901fb4	mov w1,#0xffffffff
+00901fb8	mov x0,x2
+00901fbc	str xzr,[sp]
+00901fc0	bl 0x00c31a50
+00901fc4	mov x1,sp
+00901fc8	mov x2,xzr
+00901fcc	mov x3,xzr
+00901fd0	mov x19,x0
+00901fd4	bl 0x00c31a60
+00901fd8	ldr x8,[sp]
+00901fdc	cbz x8,0x00902018
+00901fe0	mov x0,x20
+00901fe4	bl 0x00c31a70
+00901fe8	ldr x1,[sp]
+00901fec	bl 0x00c31a80
+00901ff0	cbz w0,0x00902024
+00901ff4	ldr x0,[sp]
+00901ff8	bl 0x00c31a90
+00901ffc	mov x0,x19
+00902000	bl 0x00c31a40
+00902004	mov w0,wzr
+00902008	b 0x00902034
+0090200c	adrp x0,0x746000
+00902010	add x0,x0,#0x3c0
+00902014	b 0x0090202c
+00902018	adrp x0,0x746000
+0090201c	add x0,x0,#0x350
+00902020	b 0x0090202c
+00902024	adrp x0,0x746000
+00902028	add x0,x0,#0x400
+0090202c	bl 0x00c30760
+00902030	mov w0,#0x2a
+00902034	ldr x8,[x21, #0x28]
+00902038	ldr x9,[sp, #0x8]
+0090203c	cmp x8,x9
+00902040	b.ne 0x00902058
+00902044	ldp x29,x30,[sp, #0x30]
+00902048	ldp x20,x19,[sp, #0x20]
+0090204c	ldr x21,[sp, #0x10]
+00902050	add sp,sp,#0x40
+00902054	ret
+00902058	bl 0x00c2fec0

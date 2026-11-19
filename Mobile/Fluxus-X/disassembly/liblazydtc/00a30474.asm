@@ -1,0 +1,54 @@
+; EC_GROUP_clear_free @ 00a30474
+00a30474	cbz x0,0x00a30544
+00a30478	stp x20,x19,[sp, #-0x20]!
+00a3047c	stp x29,x30,[sp, #0x10]
+00a30480	ldr x9,[x0]
+00a30484	mov x19,x0
+00a30488	add x29,sp,#0x10
+00a3048c	ldr x8,[x9, #0x18]
+00a30490	cbnz x8,0x00a3049c
+00a30494	ldr x8,[x9, #0x10]
+00a30498	cbz x8,0x00a304a4
+00a3049c	mov x0,x19
+00a304a0	blr x8
+00a304a4	ldr w8,[x19, #0x98]
+00a304a8	cmp w8,#0x5
+00a304ac	b.ne 0x00a304b8
+00a304b0	ldr x0,[x19, #0xa0]
+00a304b4	bl 0x00c3b090
+00a304b8	ldr x0,[x19, #0x90]
+00a304bc	str xzr,[x19, #0xa0]
+00a304c0	bl 0x00c38f70
+00a304c4	ldr x20,[x19, #0x8]
+00a304c8	cbz x20,0x00a30500
+00a304cc	ldr x9,[x20]
+00a304d0	ldr x8,[x9, #0x60]
+00a304d4	cbnz x8,0x00a304e0
+00a304d8	ldr x8,[x9, #0x58]
+00a304dc	cbz x8,0x00a304e8
+00a304e0	mov x0,x20
+00a304e4	blr x8
+00a304e8	adrp x2,0x29e000
+00a304ec	add x2,x2,#0xa7
+00a304f0	orr w1,wzr,#0x30
+00a304f4	mov w3,#0x2fc
+00a304f8	mov x0,x20
+00a304fc	bl 0x00c345e0
+00a30500	ldr x0,[x19, #0x10]
+00a30504	bl 0x00c322e0
+00a30508	ldr x0,[x19, #0x18]
+00a3050c	bl 0x00c322e0
+00a30510	ldp x0,x1,[x19, #0x30]
+00a30514	adrp x20,0x29e000
+00a30518	add x20,x20,#0xa7
+00a3051c	mov w3,#0x9b
+00a30520	mov x2,x20
+00a30524	bl 0x00c345e0
+00a30528	ldp x29,x30,[sp, #0x10]
+00a3052c	mov w1,#0xb8
+00a30530	mov w3,#0x9c
+00a30534	mov x0,x19
+00a30538	mov x2,x20
+00a3053c	ldp x20,x19,[sp], #0x20
+00a30540	b 0x00c345e0
+00a30544	ret

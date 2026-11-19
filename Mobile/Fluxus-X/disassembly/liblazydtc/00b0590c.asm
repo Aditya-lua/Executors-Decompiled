@@ -1,0 +1,94 @@
+; FUN_00b0590c @ 00b0590c
+00b0590c	str x23,[sp, #-0x40]!
+00b05910	stp x22,x21,[sp, #0x10]
+00b05914	stp x20,x19,[sp, #0x20]
+00b05918	stp x29,x30,[sp, #0x30]
+00b0591c	ldr x23,[x3]
+00b05920	mov x19,x3
+00b05924	mov x21,x2
+00b05928	mov x22,x1
+00b0592c	add x29,sp,#0x30
+00b05930	cbz x0,0x00b05970
+00b05934	adrp x1,0x2c2000
+00b05938	add x1,x1,#0x5ca
+00b0593c	mov w2,#0x2f
+00b05940	bl 0x00c34600
+00b05944	mov x20,x0
+00b05948	cbz x0,0x00b05964
+00b0594c	cbz x22,0x00b05978
+00b05950	mov x0,x22
+00b05954	mov w1,wzr
+00b05958	mov x2,x21
+00b0595c	bl 0x00c300a0
+00b05960	cbz x0,0x00b05980
+00b05964	mov x22,xzr
+00b05968	mov x21,xzr
+00b0596c	b 0x00b059f0
+00b05970	mov x20,xzr
+00b05974	cbnz x22,0x00b05950
+00b05978	mov x21,xzr
+00b0597c	b 0x00b059a0
+00b05980	adrp x2,0x2c2000
+00b05984	add x2,x2,#0x5ca
+00b05988	mov w3,#0x35
+00b0598c	mov x0,x22
+00b05990	mov x1,x21
+00b05994	bl 0x00c36180
+00b05998	mov x21,x0
+00b0599c	cbz x0,0x00b059ec
+00b059a0	adrp x1,0x2c2000
+00b059a4	add x1,x1,#0x5ca
+00b059a8	orr w0,wzr,#0x18
+00b059ac	mov w2,#0x39
+00b059b0	bl 0x00c32320
+00b059b4	mov x22,x0
+00b059b8	cbz x0,0x00b059f0
+00b059bc	cbnz x23,0x00b059cc
+00b059c0	bl 0x00c34780
+00b059c4	str x0,[x19]
+00b059c8	cbz x0,0x00b059f0
+00b059cc	stp xzr,x20,[x22]
+00b059d0	str x21,[x22, #0x10]
+00b059d4	ldr x0,[x19]
+00b059d8	mov x1,x22
+00b059dc	bl 0x00c347a0
+00b059e0	cbz w0,0x00b059f0
+00b059e4	mov w0,#0x1
+00b059e8	b 0x00b05a6c
+00b059ec	mov x22,xzr
+00b059f0	bl 0x00c342a0
+00b059f4	adrp x0,0x2c2000
+00b059f8	adrp x2,0x2c6000
+00b059fc	add x0,x0,#0x5ca
+00b05a00	add x2,x2,#0x34b
+00b05a04	mov w1,#0x44
+00b05a08	bl 0x00c342b0
+00b05a0c	mov w1,#0x100
+00b05a10	mov w0,#0x22
+00b05a14	movk w1,#0xc, LSL #16
+00b05a18	mov x2,xzr
+00b05a1c	bl 0x00c342c0
+00b05a20	cbnz x23,0x00b05a30
+00b05a24	ldr x0,[x19]
+00b05a28	bl 0x00c34770
+00b05a2c	str xzr,[x19]
+00b05a30	adrp x19,0x2c2000
+00b05a34	add x19,x19,#0x5ca
+00b05a38	mov w2,#0x49
+00b05a3c	mov x0,x22
+00b05a40	mov x1,x19
+00b05a44	bl 0x00c32310
+00b05a48	mov w2,#0x4a
+00b05a4c	mov x0,x20
+00b05a50	mov x1,x19
+00b05a54	bl 0x00c32310
+00b05a58	mov w2,#0x4b
+00b05a5c	mov x0,x21
+00b05a60	mov x1,x19
+00b05a64	bl 0x00c32310
+00b05a68	mov w0,wzr
+00b05a6c	ldp x29,x30,[sp, #0x30]
+00b05a70	ldp x20,x19,[sp, #0x20]
+00b05a74	ldp x22,x21,[sp, #0x10]
+00b05a78	ldr x23,[sp], #0x40
+00b05a7c	ret

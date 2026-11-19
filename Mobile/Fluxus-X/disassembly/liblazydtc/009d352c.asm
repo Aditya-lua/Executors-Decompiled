@@ -1,0 +1,62 @@
+; tls_construct_ctos_psk_kex_modes @ 009d352c
+009d352c	str x21,[sp, #-0x30]!
+009d3530	stp x20,x19,[sp, #0x10]
+009d3534	stp x29,x30,[sp, #0x20]
+009d3538	ldr x21,[x0, #0x9e8]
+009d353c	mov x20,x1
+009d3540	mov x19,x0
+009d3544	mov w1,#0x2d
+009d3548	mov w2,#0x2
+009d354c	mov x0,x20
+009d3550	add x29,sp,#0x20
+009d3554	bl 0x00c343a0
+009d3558	cbz w0,0x009d35d8
+009d355c	mov w1,#0x2
+009d3560	mov x0,x20
+009d3564	bl 0x00c343b0
+009d3568	cbz w0,0x009d35d8
+009d356c	mov w1,#0x1
+009d3570	mov x0,x20
+009d3574	bl 0x00c343b0
+009d3578	cbz w0,0x009d35d8
+009d357c	mov w1,#0x1
+009d3580	mov w2,#0x1
+009d3584	mov x0,x20
+009d3588	bl 0x00c343a0
+009d358c	cbz w0,0x009d35d8
+009d3590	tbz w21,#0xa,0x009d35a8
+009d3594	mov w2,#0x1
+009d3598	mov x0,x20
+009d359c	mov x1,xzr
+009d35a0	bl 0x00c343a0
+009d35a4	cbz w0,0x009d35d8
+009d35a8	mov x0,x20
+009d35ac	bl 0x00c34350
+009d35b0	cbz w0,0x009d35d8
+009d35b4	mov x0,x20
+009d35b8	bl 0x00c34350
+009d35bc	cbz w0,0x009d35d8
+009d35c0	and x8,x21,#0x400
+009d35c4	lsr x8,x8,#0xa
+009d35c8	orr w8,w8,#0x2
+009d35cc	mov w0,#0x1
+009d35d0	str w8,[x19, #0xb28]
+009d35d4	b 0x009d3610
+009d35d8	bl 0x00c342a0
+009d35dc	adrp x0,0x2bf000
+009d35e0	adrp x2,0x2ad000
+009d35e4	add x0,x0,#0x967
+009d35e8	add x2,x2,#0x903
+009d35ec	mov w1,#0x244
+009d35f0	bl 0x00c342b0
+009d35f4	mov w2,#0x103
+009d35f8	mov w1,#0x50
+009d35fc	movk w2,#0xc, LSL #16
+009d3600	mov x0,x19
+009d3604	mov x3,xzr
+009d3608	bl 0x00c34410
+009d360c	mov w0,wzr
+009d3610	ldp x29,x30,[sp, #0x20]
+009d3614	ldp x20,x19,[sp, #0x10]
+009d3618	ldr x21,[sp], #0x30
+009d361c	ret

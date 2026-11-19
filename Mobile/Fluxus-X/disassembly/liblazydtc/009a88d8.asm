@@ -1,0 +1,18 @@
+; ssl3_callback_ctrl @ 009a88d8
+009a88d8	cmp w1,#0x4f
+009a88dc	b.eq 0x009a8900
+009a88e0	cmp w1,#0x38
+009a88e4	b.eq 0x009a8908
+009a88e8	cmp w1,#0x6
+009a88ec	mov x8,xzr
+009a88f0	b.ne 0x009a8914
+009a88f4	ldr x8,[x0, #0x898]
+009a88f8	add x8,x8,#0x10
+009a88fc	b 0x009a890c
+009a8900	add x8,x0,#0xc50
+009a8904	b 0x009a890c
+009a8908	add x8,x0,#0xa48
+009a890c	str x2,[x8]
+009a8910	mov w8,#0x1
+009a8914	mov x0,x8
+009a8918	ret

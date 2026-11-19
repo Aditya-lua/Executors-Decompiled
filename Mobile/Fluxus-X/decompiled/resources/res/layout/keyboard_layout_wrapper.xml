@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/keyboard_layout" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.roblox.client.RbxKeyboard android:layout_gravity="top" android:id="@id/gl_edit_text" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="36.0dp" android:ems="10">
+        <requestFocus />
+    </com.roblox.client.RbxKeyboard>
+</FrameLayout>

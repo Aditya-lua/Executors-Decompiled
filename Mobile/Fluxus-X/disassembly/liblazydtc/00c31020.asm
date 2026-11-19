@@ -1,0 +1,5 @@
+; curl_free @ 00c31020
+00c31020	adrp x16,0xcb6000
+00c31024	ldr x17,[x16, #0x7f8]
+00c31028	add x16,x16,#0x7f8
+00c3102c	br x17

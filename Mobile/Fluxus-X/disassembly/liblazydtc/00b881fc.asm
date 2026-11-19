@@ -1,0 +1,93 @@
+; psa_hash_compare @ 00b881fc
+00b881fc	sub sp,sp,#0xa0
+00b88200	str x25,[sp, #0x50]
+00b88204	stp x24,x23,[sp, #0x60]
+00b88208	stp x22,x21,[sp, #0x70]
+00b8820c	stp x20,x19,[sp, #0x80]
+00b88210	stp x29,x30,[sp, #0x90]
+00b88214	add x29,sp,#0x90
+00b88218	mrs x25,tpidr_el0
+00b8821c	ldr x8,[x25, #0x28]
+00b88220	and w9,w0,#0x7f000000
+00b88224	mov w10,#0x2000000
+00b88228	mov x20,x4
+00b8822c	mov x21,x3
+00b88230	mov x22,x2
+00b88234	mov x24,x1
+00b88238	mov w23,w0
+00b8823c	cmp w9,w10
+00b88240	str x8,[sp, #0x48]
+00b88244	b.ne 0x00b88274
+00b88248	cbz x22,0x00b8827c
+00b8824c	mov w1,#0x1
+00b88250	mov x0,x22
+00b88254	bl 0x00c30a30
+00b88258	mov x19,x0
+00b8825c	cbz x0,0x00b882e4
+00b88260	mov x0,x19
+00b88264	mov x1,x24
+00b88268	mov x2,x22
+00b8826c	bl 0x00c2ffd0
+00b88270	b 0x00b88280
+00b88274	mov w23,#0xffffff79
+00b88278	b 0x00b88338
+00b8827c	mov x19,xzr
+00b88280	add x3,sp,#0x8
+00b88284	mov w4,#0x40
+00b88288	mov x5,sp
+00b8828c	mov w0,w23
+00b88290	mov x1,x19
+00b88294	mov x2,x22
+00b88298	bl 0x00c43000
+00b8829c	mov w23,w0
+00b882a0	cbz w0,0x00b882ac
+00b882a4	mov x22,xzr
+00b882a8	b 0x00b8831c
+00b882ac	ldr x8,[sp]
+00b882b0	cmp x8,x20
+00b882b4	b.ne 0x00b882f0
+00b882b8	cbz x20,0x00b882fc
+00b882bc	mov w1,#0x1
+00b882c0	mov x0,x20
+00b882c4	bl 0x00c30a30
+00b882c8	mov x22,x0
+00b882cc	cbz x0,0x00b882e8
+00b882d0	mov x0,x22
+00b882d4	mov x1,x21
+00b882d8	mov x2,x20
+00b882dc	bl 0x00c2ffd0
+00b882e0	b 0x00b88300
+00b882e4	mov x22,xzr
+00b882e8	mov w23,#0xffffff73
+00b882ec	b 0x00b8831c
+00b882f0	mov x22,xzr
+00b882f4	mov w23,#0xffffff6b
+00b882f8	b 0x00b8831c
+00b882fc	mov x22,xzr
+00b88300	add x1,sp,#0x8
+00b88304	mov x0,x22
+00b88308	mov x2,x20
+00b8830c	bl 0x00c42190
+00b88310	cmp w0,#0x0
+00b88314	mov w8,#0xffffff6b
+00b88318	csel w23,wzr,w8,eq
+00b8831c	add x0,sp,#0x8
+00b88320	mov w1,#0x40
+00b88324	bl 0x00c42220
+00b88328	mov x0,x19
+00b8832c	bl 0x00c30960
+00b88330	mov x0,x22
+00b88334	bl 0x00c30960
+00b88338	ldr x8,[x25, #0x28]
+00b8833c	ldr x9,[sp, #0x48]
+00b88340	cmp x8,x9
+00b88344	b.ne 0x00b88368
+00b88348	mov w0,w23
+00b8834c	ldp x29,x30,[sp, #0x90]
+00b88350	ldp x20,x19,[sp, #0x80]
+00b88354	ldp x22,x21,[sp, #0x70]
+00b88358	ldp x24,x23,[sp, #0x60]
+00b8835c	ldr x25,[sp, #0x50]
+00b88360	add sp,sp,#0xa0
+00b88364	ret
+00b88368	bl 0x00c2fec0

@@ -1,0 +1,161 @@
+; tls_construct_certificate_request @ 009e7fb4
+009e7fb4	str x21,[sp, #-0x30]!
+009e7fb8	stp x20,x19,[sp, #0x10]
+009e7fbc	stp x29,x30,[sp, #0x20]
+009e7fc0	ldr x8,[x0, #0x8]
+009e7fc4	mov x19,x0
+009e7fc8	mov x20,x1
+009e7fcc	add x29,sp,#0x20
+009e7fd0	ldr x9,[x8, #0xc0]
+009e7fd4	ldrb w9,[x9, #0x60]
+009e7fd8	tbnz w9,#0x3,0x009e807c
+009e7fdc	ldr w8,[x8]
+009e7fe0	cmp w8,#0x304
+009e7fe4	b.lt 0x009e807c
+009e7fe8	cmp w8,#0x10, LSL #12
+009e7fec	b.eq 0x009e807c
+009e7ff0	ldr w8,[x19, #0xba8]
+009e7ff4	cmp w8,#0x3
+009e7ff8	b.ne 0x009e8120
+009e7ffc	ldr x0,[x19, #0xbb0]
+009e8000	adrp x21,0x2bd000
+009e8004	add x21,x21,#0x74c
+009e8008	mov w2,#0xaac
+009e800c	mov x1,x21
+009e8010	bl 0x00c32310
+009e8014	mov w8,#0x20
+009e8018	mov w0,#0x20
+009e801c	mov w2,#0xaae
+009e8020	mov x1,x21
+009e8024	str x8,[x19, #0xbb8]
+009e8028	bl 0x00c32320
+009e802c	str x0,[x19, #0xbb0]
+009e8030	cbz x0,0x009e81f8
+009e8034	ldr x8,[x19, #0x9a8]
+009e8038	mov x1,x0
+009e803c	ldr x2,[x19, #0xbb8]
+009e8040	mov w3,wzr
+009e8044	ldr x0,[x8]
+009e8048	bl 0x00c347b0
+009e804c	cmp w0,#0x1
+009e8050	b.lt 0x009e81dc
+009e8054	ldr x1,[x19, #0xbb0]
+009e8058	ldr x2,[x19, #0xbb8]
+009e805c	mov w3,#0x1
+009e8060	mov x0,x20
+009e8064	bl 0x00c36f70
+009e8068	cbz w0,0x009e81dc
+009e806c	mov x0,x19
+009e8070	bl 0x00c371c0
+009e8074	cbnz w0,0x009e8134
+009e8078	b 0x009e8110
+009e807c	mov w1,#0x1
+009e8080	mov x0,x20
+009e8084	bl 0x00c343b0
+009e8088	cbz w0,0x009e80d8
+009e808c	mov x0,x19
+009e8090	mov x1,x20
+009e8094	bl 0x00c34880
+009e8098	cbz w0,0x009e80d8
+009e809c	mov x0,x20
+009e80a0	bl 0x00c34350
+009e80a4	cbz w0,0x009e80d8
+009e80a8	ldr x8,[x19, #0x8]
+009e80ac	ldr x8,[x8, #0xc0]
+009e80b0	ldrb w8,[x8, #0x60]
+009e80b4	tbnz w8,#0x1,0x009e8168
+009e80b8	mov x0,x19
+009e80bc	bl 0x00c36ef0
+009e80c0	mov x1,x0
+009e80c4	mov x0,x19
+009e80c8	mov x2,x20
+009e80cc	bl 0x00c36ea0
+009e80d0	cbnz w0,0x009e8150
+009e80d4	b 0x009e8110
+009e80d8	bl 0x00c342a0
+009e80dc	adrp x0,0x2bd000
+009e80e0	adrp x2,0x2cd000
+009e80e4	add x0,x0,#0x74c
+009e80e8	add x2,x2,#0x792
+009e80ec	mov w1,#0xad2
+009e80f0	bl 0x00c342b0
+009e80f4	mov w2,#0x103
+009e80f8	mov w1,#0x50
+009e80fc	movk w2,#0xc, LSL #16
+009e8100	mov x0,x19
+009e8104	mov x3,xzr
+009e8108	bl 0x00c34410
+009e810c	mov w0,wzr
+009e8110	ldp x29,x30,[sp, #0x20]
+009e8114	ldp x20,x19,[sp, #0x10]
+009e8118	ldr x21,[sp], #0x30
+009e811c	ret
+009e8120	mov w2,#0x1
+009e8124	mov x0,x20
+009e8128	mov x1,xzr
+009e812c	bl 0x00c343a0
+009e8130	cbz w0,0x009e8218
+009e8134	mov w2,#0x4000
+009e8138	mov x0,x19
+009e813c	mov x1,x20
+009e8140	mov x3,xzr
+009e8144	mov x4,xzr
+009e8148	bl 0x00c36e60
+009e814c	cbz w0,0x009e8110
+009e8150	ldr w8,[x19, #0xbc0]
+009e8154	mov w0,#0x1
+009e8158	str w0,[x19, #0x348]
+009e815c	add w8,w8,#0x1
+009e8160	str w8,[x19, #0xbc0]
+009e8164	b 0x009e8110
+009e8168	mov w1,#0x1
+009e816c	add x2,sp,#0x8
+009e8170	mov x0,x19
+009e8174	bl 0x00c366d0
+009e8178	mov x21,x0
+009e817c	mov w1,#0x2
+009e8180	mov x0,x20
+009e8184	bl 0x00c343b0
+009e8188	cbz w0,0x009e81c0
+009e818c	mov w1,#0x1
+009e8190	mov x0,x20
+009e8194	bl 0x00c36e80
+009e8198	cbz w0,0x009e81c0
+009e819c	ldr x2,[sp, #0x8]
+009e81a0	mov x0,x19
+009e81a4	mov x1,x20
+009e81a8	mov x3,x21
+009e81ac	bl 0x00c366c0
+009e81b0	cbz w0,0x009e81c0
+009e81b4	mov x0,x20
+009e81b8	bl 0x00c34350
+009e81bc	cbnz w0,0x009e80b8
+009e81c0	bl 0x00c342a0
+009e81c4	adrp x0,0x2bd000
+009e81c8	adrp x2,0x2cd000
+009e81cc	add x0,x0,#0x74c
+009e81d0	add x2,x2,#0x792
+009e81d4	mov w1,#0xade
+009e81d8	b 0x009e80f0
+009e81dc	bl 0x00c342a0
+009e81e0	adrp x0,0x2bd000
+009e81e4	adrp x2,0x2cd000
+009e81e8	add x0,x0,#0x74c
+009e81ec	add x2,x2,#0x792
+009e81f0	mov w1,#0xab7
+009e81f4	b 0x009e80f0
+009e81f8	str xzr,[x19, #0xbb8]
+009e81fc	bl 0x00c342a0
+009e8200	adrp x0,0x2bd000
+009e8204	adrp x2,0x2cd000
+009e8208	add x0,x0,#0x74c
+009e820c	add x2,x2,#0x792
+009e8210	mov w1,#0xab0
+009e8214	b 0x009e80f0
+009e8218	bl 0x00c342a0
+009e821c	adrp x0,0x2bd000
+009e8220	adrp x2,0x2cd000
+009e8224	add x0,x0,#0x74c
+009e8228	add x2,x2,#0x792
+009e822c	mov w1,#0xac1
+009e8230	b 0x009e80f0

@@ -1,0 +1,56 @@
+; std::__ndk1::basic_ostream<char,std::__ndk1::char_traits<char>>::write @ 00900830
+00900830	sub sp,sp,#0x50
+00900834	stp x22,x21,[sp, #0x20]
+00900838	stp x20,x19,[sp, #0x30]
+0090083c	stp x29,x30,[sp, #0x40]
+00900840	add x29,sp,#0x40
+00900844	mrs x22,tpidr_el0
+00900848	ldr x8,[x22, #0x28]
+0090084c	mov x20,x2
+00900850	mov x19,x0
+00900854	mov x21,x1
+00900858	str x8,[sp, #0x18]
+0090085c	strb wzr,[sp, #0x8]
+00900860	str x0,[sp, #0x10]
+00900864	ldr x8,[x0]
+00900868	ldur x8,[x8, #-0x18]
+0090086c	add x8,x0,x8
+00900870	ldr w9,[x8, #0x20]
+00900874	cbz w9,0x009008a8
+00900878	add x0,sp,#0x8
+0090087c	bl 0x00c30e60
+00900880	ldr x8,[x22, #0x28]
+00900884	ldr x9,[sp, #0x18]
+00900888	cmp x8,x9
+0090088c	b.ne 0x00900908
+00900890	mov x0,x19
+00900894	ldp x29,x30,[sp, #0x40]
+00900898	ldp x20,x19,[sp, #0x30]
+0090089c	ldp x22,x21,[sp, #0x20]
+009008a0	add sp,sp,#0x50
+009008a4	ret
+009008a8	ldr x0,[x8, #0x88]
+009008ac	cbz x0,0x009008b4
+009008b0	bl 0x00c30e50
+009008b4	mov w8,#0x1
+009008b8	strb w8,[sp, #0x8]
+009008bc	cbz x20,0x00900878
+009008c0	ldr x8,[x19]
+009008c4	ldur x8,[x8, #-0x18]
+009008c8	add x8,x19,x8
+009008cc	ldr x0,[x8, #0x28]
+009008d0	ldr x8,[x0]
+009008d4	ldr x8,[x8, #0x60]
+009008d8	mov x1,x21
+009008dc	mov x2,x20
+009008e0	blr x8
+009008e4	cmp x0,x20
+009008e8	b.eq 0x00900878
+009008ec	ldr x8,[x19]
+009008f0	ldur x8,[x8, #-0x18]
+009008f4	add x0,x19,x8
+009008f8	ldr w8,[x0, #0x20]
+009008fc	orr w1,w8,#0x1
+00900900	bl 0x00c30130
+00900904	b 0x00900878
+00900908	bl 0x00c2fec0

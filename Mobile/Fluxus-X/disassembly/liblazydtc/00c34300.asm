@@ -1,0 +1,5 @@
+; SSL_get_rbio @ 00c34300
+00c34300	adrp x16,0xcb8000
+00c34304	ldr x17,[x16, #0x168]
+00c34308	add x16,x16,#0x168
+00c3430c	br x17

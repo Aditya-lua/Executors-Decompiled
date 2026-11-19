@@ -1,0 +1,31 @@
+; mbedtls_ct_memcmp_partial @ 00b73144
+00b73144	mov x8,x0
+00b73148	mov w0,wzr
+00b7314c	cbz x2,0x00b731b8
+00b73150	mov x9,xzr
+00b73154	sub x10,x2,x4
+00b73158	ldrb w11,[x8, x9]
+00b7315c	ldrb w12,[x1, x9]
+00b73160	mov x13,x9
+00b73164	mov x14,x9
+00b73168	eor x15,x3,x13
+00b7316c	sub x13,x13,x3
+00b73170	bic x13,x13,x15
+00b73174	and x15,x15,x3
+00b73178	orr x15,x13,x15
+00b7317c	asr x13,x15,#0x3f
+00b73180	eor x15,x10,x14
+00b73184	sub x14,x14,x10
+00b73188	bic x14,x14,x15
+00b7318c	and x15,x15,x10
+00b73190	orr x15,x14,x15
+00b73194	asr x14,x15,#0x3f
+00b73198	bic w13,w14,w13
+00b7319c	eor w11,w12,w11
+00b731a0	and w11,w13,w11
+00b731a4	add x9,x9,#0x1
+00b731a8	and w11,w11,#0xff
+00b731ac	cmp x2,x9
+00b731b0	orr w0,w11,w0
+00b731b4	b.ne 0x00b73158
+00b731b8	ret

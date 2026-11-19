@@ -1,0 +1,5 @@
+; OSSL_STORE_INFO_new_NAME @ 00c40290
+00c40290	adrp x16,0xcbe000
+00c40294	ldr x17,[x16, #0x130]
+00c40298	add x16,x16,#0x130
+00c4029c	br x17

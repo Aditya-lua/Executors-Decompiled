@@ -1,0 +1,3 @@
+; ASN1_INTEGER_new @ 009f7998
+009f7998	mov w0,#0x2
+009f799c	b 0x00c378b0

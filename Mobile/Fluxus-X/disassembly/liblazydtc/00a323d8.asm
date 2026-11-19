@@ -1,0 +1,33 @@
+; EC_GROUP_get_trinomial_basis @ 00a323d8
+00a323d8	cbz x0,0x00a32454
+00a323dc	ldr x8,[x0]
+00a323e0	ldr w8,[x8, #0x4]
+00a323e4	cmp w8,#0x197
+00a323e8	b.ne 0x00a32404
+00a323ec	ldr w8,[x0, #0x48]
+00a323f0	cbz w8,0x00a32404
+00a323f4	ldr w8,[x0, #0x4c]
+00a323f8	cbz w8,0x00a32404
+00a323fc	ldr w9,[x0, #0x50]
+00a32400	cbz w9,0x00a32448
+00a32404	stp x29,x30,[sp, #-0x10]!
+00a32408	mov x29,sp
+00a3240c	bl 0x00c342a0
+00a32410	adrp x0,0x29e000
+00a32414	adrp x2,0x2d3000
+00a32418	add x0,x0,#0xa7
+00a3241c	add x2,x2,#0xa13
+00a32420	mov w1,#0x54a
+00a32424	bl 0x00c342b0
+00a32428	mov w1,#0x101
+00a3242c	mov w0,#0x10
+00a32430	movk w1,#0xc, LSL #16
+00a32434	mov x2,xzr
+00a32438	bl 0x00c342c0
+00a3243c	mov w0,wzr
+00a32440	ldp x29,x30,[sp], #0x10
+00a32444	ret
+00a32448	cbz x1,0x00a32450
+00a3244c	str w8,[x1]
+00a32450	mov w0,#0x1
+00a32454	ret

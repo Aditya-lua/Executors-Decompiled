@@ -1,0 +1,27 @@
+# Only derived text belongs in this target folder.
+# These are recovered Java/smali namespaces, not analysis work directories.
+!decompiled/**/work/
+!decompiled/**/work/**
+*.apk
+*.apks
+*.dex
+*.so
+*.dll
+*.exe
+*.jar
+*.class
+*.zip
+*.tar*
+*.gz
+*.png
+*.jpg
+*.webp
+*.ttf
+*.otf
+*.bin
+*.gpr
+*.rep/
+__pycache__/
+.env*
+/work/
+/checkpoints/

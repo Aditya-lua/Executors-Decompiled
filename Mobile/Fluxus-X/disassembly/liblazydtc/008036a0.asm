@@ -1,0 +1,15 @@
+; FUN_008036a0 @ 008036a0
+008036a0	ldrb w8,[x0, #0x11]
+008036a4	cmp w8,#0x1
+008036a8	b.ne 0x008036d4
+008036ac	adrp x8,0x29c000
+008036b0	ldr q0,[x0]
+008036b4	mov w9,#0x8d
+008036b8	ldr q1,[x8, #0x530]
+008036bc	ldrb w8,[x0, #0x10]
+008036c0	strb wzr,[x0, #0x11]
+008036c4	eor v0.16B,v0.16B,v1.16B
+008036c8	eor w8,w8,w9
+008036cc	strb w8,[x0, #0x10]
+008036d0	str q0,[x0]
+008036d4	ret

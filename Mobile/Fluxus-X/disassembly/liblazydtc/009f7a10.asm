@@ -1,0 +1,4 @@
+; d2i_ASN1_UTF8STRING @ 009f7a10
+009f7a10	adrp x3,0xc58000
+009f7a14	add x3,x3,#0xc28
+009f7a18	b 0x00c36150

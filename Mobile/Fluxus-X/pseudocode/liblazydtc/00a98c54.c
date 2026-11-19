@@ -1,0 +1,15 @@
+/* Ghidra 12.2 pseudocode; native types and names may be inferred.
+ * Binary: liblazydtc.so; entry: 00a98c54
+ */
+
+int FUN_00a98c54(undefined8 param_1,void *param_2,size_t param_3)
+
+{
+  int iVar1;
+  WHIRLPOOL_CTX *c;
+  
+  c = (WHIRLPOOL_CTX *)EVP_MD_CTX_get0_md_data();
+  iVar1 = WHIRLPOOL_Update(c,param_2,param_3);
+  return iVar1;
+}
+

@@ -1,0 +1,24 @@
+; OSSL_HTTP_close @ 00b19328
+00b19328	stp x20,x19,[sp, #-0x20]!
+00b1932c	mov x19,x0
+00b19330	stp x29,x30,[sp, #0x10]
+00b19334	add x29,sp,#0x10
+00b19338	cbz x0,0x00b19360
+00b1933c	ldr x8,[x19, #0x28]
+00b19340	cbz x8,0x00b19360
+00b19344	mov w3,w1
+00b19348	ldr x0,[x19, #0x18]
+00b1934c	ldr x1,[x19, #0x30]
+00b19350	mov w2,wzr
+00b19354	blr x8
+00b19358	cbz x0,0x00b1937c
+00b1935c	str x0,[x19, #0x18]
+00b19360	mov w20,#0x1
+00b19364	mov x0,x19
+00b19368	bl 0x00b171a0
+00b1936c	ldp x29,x30,[sp, #0x10]
+00b19370	mov w0,w20
+00b19374	ldp x20,x19,[sp], #0x20
+00b19378	ret
+00b1937c	mov w20,wzr
+00b19380	b 0x00b19364

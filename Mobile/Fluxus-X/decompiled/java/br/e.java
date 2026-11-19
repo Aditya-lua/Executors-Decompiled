@@ -1,0 +1,62 @@
+package br;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
+import xq.t;
+import xq.u;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class e implements s5.a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final LinearLayout f4577a;
+
+    @NonNull
+    public final TextView b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final ThemeableLottieAnimationView f4578c;
+
+    public e(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView) {
+        this.f4577a = linearLayout;
+        this.b = textView;
+        this.f4578c = themeableLottieAnimationView;
+    }
+
+    @NonNull
+    public static e a(@NonNull View view) {
+        int i10 = t.f37027h;
+        TextView textView = (TextView) s5.b.a(view, i10);
+        if (textView != null) {
+            i10 = t.f37031l;
+            ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) s5.b.a(view, i10);
+            if (themeableLottieAnimationView != null) {
+                return new e((LinearLayout) view, textView, themeableLottieAnimationView);
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    }
+
+    @NonNull
+    public static e c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(u.f37049e, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // s5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public LinearLayout getRoot() {
+        return this.f4577a;
+    }
+}

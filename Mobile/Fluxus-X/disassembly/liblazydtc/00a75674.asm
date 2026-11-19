@@ -1,0 +1,9 @@
+; EVP_PKEY_meth_free @ 00a75674
+00a75674	cbz x0,0x00a75680
+00a75678	ldrb w8,[x0, #0x4]
+00a7567c	tbnz w8,#0x0,0x00a75684
+00a75680	ret
+00a75684	adrp x1,0x2c3000
+00a75688	add x1,x1,#0xa9f
+00a7568c	mov w2,#0x1cc
+00a75690	b 0x00c32310

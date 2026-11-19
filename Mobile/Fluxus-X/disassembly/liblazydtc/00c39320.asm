@@ -1,0 +1,5 @@
+; CMAC_CTX_new @ 00c39320
+00c39320	adrp x16,0xcba000
+00c39324	ldr x17,[x16, #0x978]
+00c39328	add x16,x16,#0x978
+00c3932c	br x17

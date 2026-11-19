@@ -1,0 +1,26 @@
+; FUN_00b24320 @ 00b24320
+00b24320	stp x20,x19,[sp, #-0x20]!
+00b24324	mov x8,x1
+00b24328	add x20,x0,#0xa8
+00b2432c	mov x19,x0
+00b24330	lsl w1,w2,#0x3
+00b24334	mov x0,x8
+00b24338	mov x2,x20
+00b2433c	stp x29,x30,[sp, #0x10]
+00b24340	add x29,sp,#0x10
+00b24344	bl 0x00c37370
+00b24348	adrp x4,0xcb5000
+00b2434c	ldr w1,[x19, #0x10]
+00b24350	ldr w2,[x19, #0x8]
+00b24354	ldr x4,[x4, #0x310]
+00b24358	add x0,x19,#0x50
+00b2435c	mov x3,x20
+00b24360	bl 0x00c3e2b0
+00b24364	ldrb w8,[x19]
+00b24368	str xzr,[x19, #0x88]
+00b2436c	mov w0,#0x1
+00b24370	orr w8,w8,#0x2
+00b24374	strb w8,[x19]
+00b24378	ldp x29,x30,[sp, #0x10]
+00b2437c	ldp x20,x19,[sp], #0x20
+00b24380	ret

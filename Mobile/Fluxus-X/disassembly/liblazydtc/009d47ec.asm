@@ -1,0 +1,78 @@
+; tls_parse_stoc_ec_pt_formats @ 009d47ec
+009d47ec	stp x22,x21,[sp, #-0x30]!
+009d47f0	stp x20,x19,[sp, #0x10]
+009d47f4	stp x29,x30,[sp, #0x20]
+009d47f8	ldr x9,[x1, #0x8]
+009d47fc	mov x19,x0
+009d4800	add x29,sp,#0x20
+009d4804	cbz x9,0x009d4838
+009d4808	ldr x10,[x1]
+009d480c	sub x21,x9,#0x1
+009d4810	mov x20,x10
+009d4814	ldrb w8,[x20], #0x1
+009d4818	cmp x21,x8
+009d481c	b.ne 0x009d4838
+009d4820	add x9,x10,x9
+009d4824	stp x9,xzr,[x1]
+009d4828	ldr w9,[x19, #0x4d0]
+009d482c	cbz w9,0x009d487c
+009d4830	mov w0,#0x1
+009d4834	b 0x009d486c
+009d4838	bl 0x00c342a0
+009d483c	adrp x0,0x2bf000
+009d4840	adrp x2,0x2bb000
+009d4844	add x0,x0,#0x967
+009d4848	add x2,x2,#0x8a8
+009d484c	mov w1,#0x532
+009d4850	bl 0x00c342b0
+009d4854	mov w1,#0x32
+009d4858	mov w2,#0x6e
+009d485c	mov x0,x19
+009d4860	mov x3,xzr
+009d4864	bl 0x00c34410
+009d4868	mov w0,wzr
+009d486c	ldp x29,x30,[sp, #0x20]
+009d4870	ldp x20,x19,[sp, #0x10]
+009d4874	ldp x22,x21,[sp], #0x30
+009d4878	ret
+009d487c	cbz w8,0x009d48c8
+009d4880	ldr x0,[x19, #0xab8]
+009d4884	adrp x22,0x2bf000
+009d4888	add x22,x22,#0x967
+009d488c	mov w2,#0x53d
+009d4890	mov x1,x22
+009d4894	str xzr,[x19, #0xab0]
+009d4898	bl 0x00c32310
+009d489c	mov w2,#0x53e
+009d48a0	mov x0,x21
+009d48a4	mov x1,x22
+009d48a8	bl 0x00c32320
+009d48ac	str x0,[x19, #0xab8]
+009d48b0	cbz x0,0x009d48f0
+009d48b4	mov x1,x20
+009d48b8	mov x2,x21
+009d48bc	str x21,[x19, #0xab0]
+009d48c0	bl 0x00c2ffd0
+009d48c4	b 0x009d4830
+009d48c8	bl 0x00c342a0
+009d48cc	adrp x0,0x2bf000
+009d48d0	adrp x2,0x2bb000
+009d48d4	add x0,x0,#0x967
+009d48d8	add x2,x2,#0x8a8
+009d48dc	mov w1,#0x538
+009d48e0	bl 0x00c342b0
+009d48e4	mov w1,#0x32
+009d48e8	mov w2,#0x10f
+009d48ec	b 0x009d485c
+009d48f0	str xzr,[x19, #0xab0]
+009d48f4	bl 0x00c342a0
+009d48f8	adrp x0,0x2bf000
+009d48fc	adrp x2,0x2bb000
+009d4900	add x0,x0,#0x967
+009d4904	add x2,x2,#0x8a8
+009d4908	mov w1,#0x541
+009d490c	bl 0x00c342b0
+009d4910	mov w2,#0x103
+009d4914	mov w1,#0x50
+009d4918	movk w2,#0xc, LSL #16
+009d491c	b 0x009d485c

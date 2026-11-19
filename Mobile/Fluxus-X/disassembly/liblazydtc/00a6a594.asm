@@ -1,0 +1,4 @@
+; i2d_PBE2PARAM @ 00a6a594
+00a6a594	adrp x2,0xc5e000
+00a6a598	add x2,x2,#0x9f0
+00a6a59c	b 0x00c36170

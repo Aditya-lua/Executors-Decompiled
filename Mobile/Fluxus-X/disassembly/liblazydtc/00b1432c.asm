@@ -1,0 +1,28 @@
+; X509_VERIFY_PARAM_set1 @ 00b1432c
+00b1432c	stp x20,x19,[sp, #-0x20]!
+00b14330	stp x29,x30,[sp, #0x10]
+00b14334	add x29,sp,#0x10
+00b14338	cbz x0,0x00b14358
+00b1433c	ldr w20,[x0, #0x10]
+00b14340	mov x19,x0
+00b14344	orr w8,w20,#0x1
+00b14348	str w8,[x0, #0x10]
+00b1434c	bl 0x00b13e20
+00b14350	str w20,[x19, #0x10]
+00b14354	b 0x00b1438c
+00b14358	bl 0x00c342a0
+00b1435c	adrp x0,0x2d8000
+00b14360	adrp x2,0x2ce000
+00b14364	add x0,x0,#0xa44
+00b14368	add x2,x2,#0x588
+00b1436c	mov w1,#0xe4
+00b14370	bl 0x00c342b0
+00b14374	mov w1,#0x102
+00b14378	mov w0,#0xb
+00b1437c	movk w1,#0xc, LSL #16
+00b14380	mov x2,xzr
+00b14384	bl 0x00c342c0
+00b14388	mov w0,wzr
+00b1438c	ldp x29,x30,[sp, #0x10]
+00b14390	ldp x20,x19,[sp], #0x20
+00b14394	ret

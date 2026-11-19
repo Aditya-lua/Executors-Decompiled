@@ -1,0 +1,28 @@
+; std::__ndk1::__time_get_c_storage<char>::__months @ 00c030fc
+00c030fc	paciasp
+00c03100	stp x29,x30,[sp, #-0x10]!
+00c03104	mov x29,sp
+00c03108	adrp x8,0xd27000
+00c0310c	add x8,x8,#0x328
+00c03110	ldarb w9,[x8]
+00c03114	adrp x8,0xd27000
+00c03118	tbz w9,#0x0,0x00c0312c
+00c0311c	ldr x0,[x8, #0x320]
+00c03120	ldp x29,x30,[sp], #0x10
+00c03124	autiasp
+00c03128	ret
+00c0312c	adrp x0,0xd27000
+00c03130	add x0,x0,#0x328
+00c03134	bl 0x00c2fe90
+00c03138	adrp x8,0xd27000
+00c0313c	cbz w0,0x00c0311c
+00c03140	bl 0x00c03168
+00c03144	adrp x9,0xd27000
+00c03148	add x9,x9,#0x6b0
+00c0314c	adrp x8,0xd27000
+00c03150	adrp x0,0xd27000
+00c03154	add x0,x0,#0x328
+00c03158	str x9,[x8, #0x320]
+00c0315c	bl 0x00c2fea0
+00c03160	adrp x8,0xd27000
+00c03164	b 0x00c0311c

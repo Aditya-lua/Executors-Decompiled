@@ -1,0 +1,12 @@
+; _INIT_19 @ 008038ac
+008038ac	movi v0.2D,#0x0
+008038b0	adrp x1,0xcca000
+008038b4	add x1,x1,#0xb90
+008038b8	mov w8,#0x3f800000
+008038bc	nop
+008038c0	adr x0,0x7fbc70
+008038c4	adrp x2,0xc48000
+008038c8	add x2,x2,#0x880
+008038cc	str w8,[x1, #0x20]
+008038d0	stp q0,q0,[x1]
+008038d4	b 0x00c2fe70

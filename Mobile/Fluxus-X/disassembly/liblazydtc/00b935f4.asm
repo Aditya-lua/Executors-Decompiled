@@ -1,0 +1,99 @@
+; mbedtls_ecp_muladd_restartable @ 00b935f4
+00b935f4	sub sp,sp,#0xf0
+00b935f8	stp x28,x27,[sp, #0x90]
+00b935fc	stp x26,x25,[sp, #0xa0]
+00b93600	stp x24,x23,[sp, #0xb0]
+00b93604	stp x22,x21,[sp, #0xc0]
+00b93608	stp x20,x19,[sp, #0xd0]
+00b9360c	stp x29,x30,[sp, #0xe0]
+00b93610	add x29,sp,#0xe0
+00b93614	mrs x20,tpidr_el0
+00b93618	ldr x8,[x20, #0x28]
+00b9361c	mov x26,x5
+00b93620	mov x27,x4
+00b93624	mov x28,x3
+00b93628	stur x8,[x29, #-0x58]
+00b9362c	ldr x8,[x0, #0x38]
+00b93630	mov x19,x2
+00b93634	mov x21,x0
+00b93638	mov x22,x1
+00b9363c	cbz x8,0x00b93740
+00b93640	ldr x8,[x21, #0x48]
+00b93644	cbz x8,0x00b93740
+00b93648	add x0,sp,#0x18
+00b9364c	add x23,sp,#0x18
+00b93650	bl 0x00c41c00
+00b93654	add x0,x23,#0x10
+00b93658	str x0,[sp, #0x10]
+00b9365c	bl 0x00c41c00
+00b93660	add x0,x23,#0x20
+00b93664	str x0,[sp, #0x8]
+00b93668	bl 0x00c41c00
+00b9366c	add x25,sp,#0x48
+00b93670	add x0,sp,#0x48
+00b93674	add x23,x25,#0x10
+00b93678	bl 0x00c41c00
+00b9367c	mov x0,x23
+00b93680	add x24,x25,#0x20
+00b93684	bl 0x00c41c00
+00b93688	mov x0,x24
+00b9368c	add x25,x25,#0x30
+00b93690	bl 0x00c41c00
+00b93694	mov x0,x25
+00b93698	bl 0x00c41c00
+00b9369c	add x1,sp,#0x18
+00b936a0	mov x0,x21
+00b936a4	mov x2,x19
+00b936a8	mov x3,x28
+00b936ac	bl 0x00b9377c
+00b936b0	mov w28,w0
+00b936b4	cbnz w0,0x00b93704
+00b936b8	mov x0,x21
+00b936bc	mov x1,x22
+00b936c0	mov x2,x27
+00b936c4	mov x3,x26
+00b936c8	bl 0x00b9377c
+00b936cc	mov w28,w0
+00b936d0	cbnz w0,0x00b93704
+00b936d4	add x2,sp,#0x18
+00b936d8	add x4,sp,#0x48
+00b936dc	mov x0,x21
+00b936e0	mov x1,x22
+00b936e4	mov x3,x22
+00b936e8	bl 0x00b93970
+00b936ec	mov w28,w0
+00b936f0	cbnz w0,0x00b93704
+00b936f4	mov x0,x21
+00b936f8	mov x1,x22
+00b936fc	bl 0x00b93e20
+00b93700	mov w28,w0
+00b93704	add x0,sp,#0x48
+00b93708	bl 0x00c41bb0
+00b9370c	mov x0,x23
+00b93710	bl 0x00c41bb0
+00b93714	mov x0,x24
+00b93718	bl 0x00c41bb0
+00b9371c	mov x0,x25
+00b93720	bl 0x00c41bb0
+00b93724	add x0,sp,#0x18
+00b93728	bl 0x00c41bb0
+00b9372c	ldr x0,[sp, #0x10]
+00b93730	bl 0x00c41bb0
+00b93734	ldr x0,[sp, #0x8]
+00b93738	bl 0x00c41bb0
+00b9373c	b 0x00b93744
+00b93740	mov w28,#0xffffb180
+00b93744	ldr x8,[x20, #0x28]
+00b93748	ldur x9,[x29, #-0x58]
+00b9374c	cmp x8,x9
+00b93750	b.ne 0x00b93778
+00b93754	mov w0,w28
+00b93758	ldp x29,x30,[sp, #0xe0]
+00b9375c	ldp x20,x19,[sp, #0xd0]
+00b93760	ldp x22,x21,[sp, #0xc0]
+00b93764	ldp x24,x23,[sp, #0xb0]
+00b93768	ldp x26,x25,[sp, #0xa0]
+00b9376c	ldp x28,x27,[sp, #0x90]
+00b93770	add sp,sp,#0xf0
+00b93774	ret
+00b93778	bl 0x00c2fec0

@@ -1,0 +1,5 @@
+; EVP_PKEY_CTX_free @ 00c34620
+00c34620	adrp x16,0xcb8000
+00c34624	ldr x17,[x16, #0x2f8]
+00c34628	add x16,x16,#0x2f8
+00c3462c	br x17

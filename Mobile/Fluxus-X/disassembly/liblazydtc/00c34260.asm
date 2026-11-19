@@ -1,0 +1,5 @@
+; DTLS_RECORD_LAYER_clear @ 00c34260
+00c34260	adrp x16,0xcb8000
+00c34264	ldr x17,[x16, #0x118]
+00c34268	add x16,x16,#0x118
+00c3426c	br x17

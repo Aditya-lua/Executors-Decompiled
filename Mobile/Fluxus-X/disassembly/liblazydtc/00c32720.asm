@@ -1,0 +1,5 @@
+; SSL_CTX_free @ 00c32720
+00c32720	adrp x16,0xcb7000
+00c32724	ldr x17,[x16, #0x378]
+00c32728	add x16,x16,#0x378
+00c3272c	br x17

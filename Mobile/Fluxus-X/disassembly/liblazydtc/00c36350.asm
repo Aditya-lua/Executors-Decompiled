@@ -1,0 +1,5 @@
+; EVP_KEYMGMT_free @ 00c36350
+00c36350	adrp x16,0xcb9000
+00c36354	ldr x17,[x16, #0x190]
+00c36358	add x16,x16,#0x190
+00c3635c	br x17

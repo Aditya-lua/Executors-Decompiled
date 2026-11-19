@@ -1,0 +1,5 @@
+; OCSP_SINGLERESP_get1_ext_d2i @ 00c35850
+00c35850	adrp x16,0xcb8000
+00c35854	ldr x17,[x16, #0xc10]
+00c35858	add x16,x16,#0xc10
+00c3585c	br x17

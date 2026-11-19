@@ -1,0 +1,29 @@
+; ossl_ec_GFp_simple_group_init @ 00a394d8
+00a394d8	str x19,[sp, #-0x20]!
+00a394dc	stp x29,x30,[sp, #0x10]
+00a394e0	add x29,sp,#0x10
+00a394e4	mov x19,x0
+00a394e8	bl 0x00c37710
+00a394ec	str x0,[x19, #0x40]
+00a394f0	bl 0x00c37710
+00a394f4	str x0,[x19, #0x60]
+00a394f8	bl 0x00c37710
+00a394fc	ldr x8,[x19, #0x40]
+00a39500	str x0,[x19, #0x68]
+00a39504	cbz x8,0x00a39520
+00a39508	cbz x0,0x00a39520
+00a3950c	ldr x9,[x19, #0x60]
+00a39510	cbz x9,0x00a39520
+00a39514	mov w0,#0x1
+00a39518	str wzr,[x19, #0x70]
+00a3951c	b 0x00a3953c
+00a39520	mov x0,x8
+00a39524	bl 0x00c36290
+00a39528	ldr x0,[x19, #0x60]
+00a3952c	bl 0x00c36290
+00a39530	ldr x0,[x19, #0x68]
+00a39534	bl 0x00c36290
+00a39538	mov w0,wzr
+00a3953c	ldp x29,x30,[sp, #0x10]
+00a39540	ldr x19,[sp], #0x20
+00a39544	ret

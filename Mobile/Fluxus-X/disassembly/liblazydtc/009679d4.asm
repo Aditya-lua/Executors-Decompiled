@@ -1,0 +1,10 @@
+; FUN_009679d4 @ 009679d4
+009679d4	ldrb w9,[x0, #0x5a9]
+009679d8	mov w10,#0xb
+009679dc	add x8,x0,#0x5f8
+009679e0	add x1,x0,#0x530
+009679e4	orr w9,w9,w10
+009679e8	mov w2,#0xc8
+009679ec	strb w9,[x0, #0x5a9]
+009679f0	mov x0,x8
+009679f4	b 0x00c2ffd0

@@ -1,0 +1,5 @@
+; EVP_CIPHER_get_mode @ 00c35290
+00c35290	adrp x16,0xcb8000
+00c35294	ldr x17,[x16, #0x930]
+00c35298	add x16,x16,#0x930
+00c3529c	br x17

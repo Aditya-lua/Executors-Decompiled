@@ -1,0 +1,4 @@
+; PROXY_CERT_INFO_EXTENSION_new @ 00b00fb4
+00b00fb4	adrp x0,0xc80000
+00b00fb8	add x0,x0,#0x980
+00b00fbc	b 0x00c372e0

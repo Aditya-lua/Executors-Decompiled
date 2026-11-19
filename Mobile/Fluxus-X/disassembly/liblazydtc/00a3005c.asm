@@ -1,0 +1,8 @@
+; EC_KEY_METHOD_free @ 00a3005c
+00a3005c	ldrb w8,[x0, #0x8]
+00a30060	tbnz w8,#0x0,0x00a30068
+00a30064	ret
+00a30068	adrp x1,0x2cd000
+00a3006c	add x1,x1,#0x943
+00a30070	mov w2,#0xc5
+00a30074	b 0x00c32310

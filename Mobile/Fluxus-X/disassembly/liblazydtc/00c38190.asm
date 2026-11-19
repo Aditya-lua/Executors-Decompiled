@@ -1,0 +1,5 @@
+; ASN1_UTF8STRING_free @ 00c38190
+00c38190	adrp x16,0xcba000
+00c38194	ldr x17,[x16, #0xb0]
+00c38198	add x16,x16,#0xb0
+00c3819c	br x17

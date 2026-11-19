@@ -1,0 +1,14 @@
+; FUN_0084d870 @ 0084d870
+0084d870	ldr x8,[x0, #0x10]
+0084d874	cbz x8,0x0084d89c
+0084d878	stp x29,x30,[sp, #-0x20]!
+0084d87c	str x19,[sp, #0x10]
+0084d880	mov x29,sp
+0084d884	mov x19,x0
+0084d888	mov x0,x8
+0084d88c	bl 0x00c2ff00
+0084d890	mov x0,x19
+0084d894	ldr x19,[sp, #0x10]
+0084d898	ldp x29,x30,[sp], #0x20
+0084d89c	mov w1,#0x18
+0084d8a0	b 0x00c2fe80

@@ -1,0 +1,14 @@
+; _INIT_42 @ 008060c8
+008060c8	adrp x8,0xd1b000
+008060cc	ldrb w9,[x8, #0xd8]
+008060d0	tbnz w9,#0x0,0x008060f8
+008060d4	adrp x9,0xcb4000
+008060d8	mov w11,#0x1
+008060dc	ldr x9,[x9, #0x9b0]
+008060e0	strb w11,[x8, #0xd8]
+008060e4	ldr w10,[x9]
+008060e8	add w8,w10,#0x1
+008060ec	adrp x10,0xd1b000
+008060f0	str w8,[x9]
+008060f4	str w8,[x10, #0xd0]
+008060f8	ret

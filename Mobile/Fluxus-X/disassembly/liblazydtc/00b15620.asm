@@ -1,0 +1,8 @@
+; X509_REQ_set_version @ 00b15620
+00b15620	cbz x0,0x00b15638
+00b15624	ldr x8,[x0, #0x18]
+00b15628	mov w9,#0x1
+00b1562c	str w9,[x0, #0x10]
+00b15630	mov x0,x8
+00b15634	b 0x00c375b0
+00b15638	ret

@@ -1,0 +1,3 @@
+; ASN1_INTEGER_get_int64 @ 009f3204
+009f3204	mov w2,#0x2
+009f3208	b 0x009f320c

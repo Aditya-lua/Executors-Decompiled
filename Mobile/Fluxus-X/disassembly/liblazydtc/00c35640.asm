@@ -1,0 +1,5 @@
+; BIO_push @ 00c35640
+00c35640	adrp x16,0xcb8000
+00c35644	ldr x17,[x16, #0xb08]
+00c35648	add x16,x16,#0xb08
+00c3564c	br x17

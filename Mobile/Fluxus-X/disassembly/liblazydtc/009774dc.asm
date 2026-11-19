@@ -1,0 +1,159 @@
+; ix::HttpClient::request @ 009774dc
+009774dc	sub sp,sp,#0xc0
+009774e0	str x27,[sp, #0x60]
+009774e4	stp x26,x25,[sp, #0x70]
+009774e8	stp x24,x23,[sp, #0x80]
+009774ec	stp x22,x21,[sp, #0x90]
+009774f0	stp x20,x19,[sp, #0xa0]
+009774f4	stp x29,x30,[sp, #0xb0]
+009774f8	add x29,sp,#0xb0
+009774fc	mrs x26,tpidr_el0
+00977500	ldr x9,[x26, #0x28]
+00977504	mov x23,x5
+00977508	mov x25,x4
+0097750c	mov x24,x3
+00977510	str x9,[sp, #0x58]
+00977514	stp xzr,xzr,[sp, #0x48]
+00977518	str xzr,[sp, #0x40]
+0097751c	ldr x9,[x4, #0x18]
+00977520	mov x19,x2
+00977524	mov x20,x1
+00977528	mov x21,x0
+0097752c	mov x22,x8
+00977530	cbz x9,0x00977598
+00977534	add x8,sp,#0x28
+00977538	add x27,sp,#0x28
+0097753c	bl 0x00c32fe0
+00977540	ldr x8,[x23]
+00977544	add x0,x8,#0x60
+00977548	cmp x0,x27
+0097754c	b.eq 0x00977574
+00977550	ldrb w8,[sp, #0x28]
+00977554	ldp x10,x9,[sp, #0x30]
+00977558	add x11,sp,#0x28
+0097755c	orr x11,x11,#0x1
+00977560	tst w8,#0x1
+00977564	lsr w12,w8,#0x1
+00977568	csel x1,x11,x9,eq
+0097756c	csel x2,x12,x10,eq
+00977570	bl 0x00c31090
+00977574	add x8,sp,#0x10
+00977578	add x1,sp,#0x28
+0097757c	mov x2,x25
+00977580	mov x3,x24
+00977584	bl 0x00c32ff0
+00977588	ldrb w8,[sp, #0x40]
+0097758c	tbnz w8,#0x0,0x009775b8
+00977590	strh wzr,[sp, #0x40]
+00977594	b 0x009775d8
+00977598	add x8,sp,#0x28
+0097759c	mov x0,x21
+009775a0	mov x1,x24
+009775a4	bl 0x00c32fd0
+009775a8	ldrb w8,[sp, #0x40]
+009775ac	tbnz w8,#0x0,0x009775fc
+009775b0	strh wzr,[sp, #0x40]
+009775b4	b 0x0097761c
+009775b8	ldr x8,[sp, #0x50]
+009775bc	strb wzr,[x8]
+009775c0	ldrb w8,[sp, #0x40]
+009775c4	str xzr,[sp, #0x48]
+009775c8	tbz w8,#0x0,0x009775d8
+009775cc	ldr x0,[sp, #0x50]
+009775d0	bl 0x00c301d0
+009775d4	str xzr,[sp, #0x40]
+009775d8	ldr x8,[sp, #0x20]
+009775dc	ldr q0,[sp, #0x10]
+009775e0	ldrb w9,[sp, #0x28]
+009775e4	str x8,[sp, #0x50]
+009775e8	str q0,[sp, #0x40]
+009775ec	tbz w9,#0x0,0x0097762c
+009775f0	ldr x0,[sp, #0x38]
+009775f4	bl 0x00c301d0
+009775f8	b 0x0097762c
+009775fc	ldr x8,[sp, #0x50]
+00977600	strb wzr,[x8]
+00977604	ldrb w8,[sp, #0x40]
+00977608	str xzr,[sp, #0x48]
+0097760c	tbz w8,#0x0,0x0097761c
+00977610	ldr x0,[sp, #0x50]
+00977614	bl 0x00c301d0
+00977618	str xzr,[sp, #0x40]
+0097761c	ldr x8,[sp, #0x38]
+00977620	ldur q0,[sp, #0x28]
+00977624	str x8,[sp, #0x50]
+00977628	str q0,[sp, #0x40]
+0097762c	ldr x8,[x23]
+00977630	ldrb w9,[x8, #0x8a]
+00977634	cbz w9,0x00977688
+00977638	add x8,sp,#0x28
+0097763c	add x0,sp,#0x40
+00977640	bl 0x00c32f00
+00977644	ldrb w8,[sp, #0x40]
+00977648	tbnz w8,#0x0,0x00977654
+0097764c	strh wzr,[sp, #0x40]
+00977650	b 0x00977674
+00977654	ldr x8,[sp, #0x50]
+00977658	strb wzr,[x8]
+0097765c	ldrb w8,[sp, #0x40]
+00977660	str xzr,[sp, #0x48]
+00977664	tbz w8,#0x0,0x00977674
+00977668	ldr x0,[sp, #0x50]
+0097766c	bl 0x00c301d0
+00977670	str xzr,[sp, #0x40]
+00977674	ldr x8,[sp, #0x38]
+00977678	ldur q0,[sp, #0x28]
+0097767c	str x8,[sp, #0x50]
+00977680	str q0,[sp, #0x40]
+00977684	ldr x8,[x23]
+00977688	str x8,[sp]
+0097768c	ldr x8,[x23, #0x8]
+00977690	str x8,[sp, #0x8]
+00977694	cbz x8,0x009776ac
+00977698	add x8,x8,#0x8
+0097769c	ldxr x9,[x8]
+009776a0	add x9,x9,#0x1
+009776a4	stxr w10,x9,[x8]
+009776a8	cbnz w10,0x0097769c
+009776ac	add x3,sp,#0x40
+009776b0	mov x4,sp
+009776b4	mov x8,x22
+009776b8	mov x0,x21
+009776bc	mov x1,x20
+009776c0	mov x2,x19
+009776c4	mov w5,wzr
+009776c8	bl 0x00c33010
+009776cc	ldr x19,[sp, #0x8]
+009776d0	cbz x19,0x009776ec
+009776d4	add x8,x19,#0x8
+009776d8	ldaxr x9,[x8]
+009776dc	sub x10,x9,#0x1
+009776e0	stlxr w11,x10,[x8]
+009776e4	cbnz w11,0x009776d8
+009776e8	cbz x9,0x0097772c
+009776ec	ldrb w8,[sp, #0x40]
+009776f0	tbz w8,#0x0,0x009776fc
+009776f4	ldr x0,[sp, #0x50]
+009776f8	bl 0x00c301d0
+009776fc	ldr x8,[x26, #0x28]
+00977700	ldr x9,[sp, #0x58]
+00977704	cmp x8,x9
+00977708	b.ne 0x00977750
+0097770c	ldp x29,x30,[sp, #0xb0]
+00977710	ldp x20,x19,[sp, #0xa0]
+00977714	ldp x22,x21,[sp, #0x90]
+00977718	ldp x24,x23,[sp, #0x80]
+0097771c	ldp x26,x25,[sp, #0x70]
+00977720	ldr x27,[sp, #0x60]
+00977724	add sp,sp,#0xc0
+00977728	ret
+0097772c	ldr x8,[x19]
+00977730	mov x0,x19
+00977734	ldr x8,[x8, #0x10]
+00977738	blr x8
+0097773c	mov x0,x19
+00977740	bl 0x00c2ff00
+00977744	ldrb w8,[sp, #0x40]
+00977748	tbnz w8,#0x0,0x009776f4
+0097774c	b 0x009776fc
+00977750	bl 0x00c2fec0

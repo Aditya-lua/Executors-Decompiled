@@ -1,0 +1,57 @@
+; ix::WebSocketServer::handleConnection @ 00993728
+00993728	sub sp,sp,#0x60
+0099372c	str x21,[sp, #0x30]
+00993730	stp x20,x19,[sp, #0x40]
+00993734	stp x29,x30,[sp, #0x50]
+00993738	add x29,sp,#0x50
+0099373c	mrs x21,tpidr_el0
+00993740	ldr x8,[x21, #0x28]
+00993744	mov x19,x2
+00993748	str x8,[sp, #0x28]
+0099374c	ldr x8,[x1]
+00993750	str xzr,[x1]
+00993754	str x8,[sp, #0x20]
+00993758	ldp x8,x20,[x2]
+0099375c	stp x8,x20,[sp, #0x10]
+00993760	cbz x20,0x00993778
+00993764	add x8,x20,#0x8
+00993768	ldxr x9,[x8]
+0099376c	add x9,x9,#0x1
+00993770	stxr w10,x9,[x8]
+00993774	cbnz w10,0x00993768
+00993778	stp xzr,xzr,[sp]
+0099377c	add x1,sp,#0x20
+00993780	add x2,sp,#0x10
+00993784	mov x3,sp
+00993788	bl 0x00c33370
+0099378c	cbz x20,0x009937c0
+00993790	add x8,x20,#0x8
+00993794	ldaxr x9,[x8]
+00993798	sub x10,x9,#0x1
+0099379c	stlxr w11,x10,[x8]
+009937a0	cbnz w11,0x00993794
+009937a4	cbnz x9,0x009937c0
+009937a8	ldr x8,[x20]
+009937ac	mov x0,x20
+009937b0	ldr x8,[x8, #0x10]
+009937b4	blr x8
+009937b8	mov x0,x20
+009937bc	bl 0x00c2ff00
+009937c0	ldr x0,[sp, #0x20]
+009937c4	str xzr,[sp, #0x20]
+009937c8	cbz x0,0x009937d8
+009937cc	ldr x8,[x0]
+009937d0	ldr x8,[x8, #0x8]
+009937d4	blr x8
+009937d8	ldr x0,[x19]
+009937dc	bl 0x00c32e50
+009937e0	ldr x8,[x21, #0x28]
+009937e4	ldr x9,[sp, #0x28]
+009937e8	cmp x8,x9
+009937ec	b.ne 0x00993804
+009937f0	ldp x29,x30,[sp, #0x50]
+009937f4	ldp x20,x19,[sp, #0x40]
+009937f8	ldr x21,[sp, #0x30]
+009937fc	add sp,sp,#0x60
+00993800	ret
+00993804	bl 0x00c2fec0

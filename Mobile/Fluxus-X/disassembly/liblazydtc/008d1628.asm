@@ -1,0 +1,19 @@
+; LZ4_compress_destSize_extState @ 008d1628
+008d1628	stp x29,x30,[sp, #-0x20]!
+008d162c	str x19,[sp, #0x10]
+008d1630	mov x29,sp
+008d1634	mov x19,x0
+008d1638	bl 0x008d1670
+008d163c	cbz x19,0x008d1664
+008d1640	mov x8,x19
+008d1644	and x9,x19,#0x7
+008d1648	cbnz x9,0x008d1664
+008d164c	mov w19,w0
+008d1650	mov x0,x8
+008d1654	mov w1,wzr
+008d1658	mov w2,#0x4020
+008d165c	bl 0x00c301c0
+008d1660	mov w0,w19
+008d1664	ldr x19,[sp, #0x10]
+008d1668	ldp x29,x30,[sp], #0x20
+008d166c	ret

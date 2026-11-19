@@ -1,0 +1,30 @@
+; FUN_008719d4 @ 008719d4
+008719d4	stp x29,x30,[sp, #-0x30]!
+008719d8	str x21,[sp, #0x10]
+008719dc	stp x20,x19,[sp, #0x20]
+008719e0	mov x29,sp
+008719e4	ldr x20,[x0, #0x8]
+008719e8	mov x19,x0
+008719ec	adrp x21,0xc4a000
+008719f0	add x21,x21,#0x6d8
+008719f4	ldr x8,[x19, #0x10]
+008719f8	cmp x20,x8
+008719fc	b.eq 0x00871a18
+00871a00	ldrsw x9,[x8, #-0x58]!
+00871a04	str x8,[x19, #0x10]
+00871a08	ldr x9,[x21, x9, LSL #0x3]
+00871a0c	add x0,x8,#0x8
+00871a10	blr x9
+00871a14	b 0x008719f4
+00871a18	ldr x0,[x19]
+00871a1c	cbz x0,0x00871a38
+00871a20	ldr x8,[x19, #0x18]
+00871a24	sub x1,x8,x0
+00871a28	ldp x20,x19,[sp, #0x20]
+00871a2c	ldr x21,[sp, #0x10]
+00871a30	ldp x29,x30,[sp], #0x30
+00871a34	b 0x00c2fe80
+00871a38	ldp x20,x19,[sp, #0x20]
+00871a3c	ldr x21,[sp, #0x10]
+00871a40	ldp x29,x30,[sp], #0x30
+00871a44	ret

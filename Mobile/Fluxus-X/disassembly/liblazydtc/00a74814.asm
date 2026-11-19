@@ -1,0 +1,21 @@
+; EVP_PKEY_keygen @ 00a74814
+00a74814	ldr w8,[x0]
+00a74818	cmp w8,#0x4
+00a7481c	b.ne 0x00a74824
+00a74820	b 0x00a744d0
+00a74824	stp x29,x30,[sp, #-0x10]!
+00a74828	mov x29,sp
+00a7482c	bl 0x00c342a0
+00a74830	adrp x0,0x2d9000
+00a74834	adrp x2,0x2cf000
+00a74838	add x0,x0,#0xd3a
+00a7483c	add x2,x2,#0xc41
+00a74840	mov w1,#0x10f
+00a74844	bl 0x00c342b0
+00a74848	orr w0,wzr,#0x6
+00a7484c	mov w1,#0x97
+00a74850	mov x2,xzr
+00a74854	bl 0x00c342c0
+00a74858	mov w0,#0xffffffff
+00a7485c	ldp x29,x30,[sp], #0x10
+00a74860	ret

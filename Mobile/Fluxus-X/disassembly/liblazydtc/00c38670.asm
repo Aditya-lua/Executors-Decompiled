@@ -1,0 +1,5 @@
+; BIO_vfree @ 00c38670
+00c38670	adrp x16,0xcba000
+00c38674	ldr x17,[x16, #0x320]
+00c38678	add x16,x16,#0x320
+00c3867c	br x17

@@ -1,0 +1,38 @@
+; FUN_00b643a4 @ 00b643a4
+00b643a4	ldr w8,[x0]
+00b643a8	strb w8,[x1]
+00b643ac	ldr w8,[x0]
+00b643b0	lsr w8,w8,#0x8
+00b643b4	strb w8,[x1, #0x1]
+00b643b8	ldrh w8,[x0, #0x2]
+00b643bc	strb w8,[x1, #0x2]
+00b643c0	ldrb w8,[x0, #0x3]
+00b643c4	strb w8,[x1, #0x3]
+00b643c8	ldr w8,[x0, #0x4]
+00b643cc	strb w8,[x1, #0x4]
+00b643d0	ldr w8,[x0, #0x4]
+00b643d4	lsr w8,w8,#0x8
+00b643d8	strb w8,[x1, #0x5]
+00b643dc	ldrh w8,[x0, #0x6]
+00b643e0	strb w8,[x1, #0x6]
+00b643e4	ldrb w8,[x0, #0x7]
+00b643e8	strb w8,[x1, #0x7]
+00b643ec	ldr w8,[x0, #0x8]
+00b643f0	strb w8,[x1, #0x8]
+00b643f4	ldr w8,[x0, #0x8]
+00b643f8	lsr w8,w8,#0x8
+00b643fc	strb w8,[x1, #0x9]
+00b64400	ldrh w8,[x0, #0xa]
+00b64404	strb w8,[x1, #0xa]
+00b64408	ldrb w8,[x0, #0xb]
+00b6440c	strb w8,[x1, #0xb]
+00b64410	ldr w8,[x0, #0xc]
+00b64414	strb w8,[x1, #0xc]
+00b64418	ldr w8,[x0, #0xc]
+00b6441c	lsr w8,w8,#0x8
+00b64420	strb w8,[x1, #0xd]
+00b64424	ldrh w8,[x0, #0xe]
+00b64428	strb w8,[x1, #0xe]
+00b6442c	ldrb w8,[x0, #0xf]
+00b64430	strb w8,[x1, #0xf]
+00b64434	ret

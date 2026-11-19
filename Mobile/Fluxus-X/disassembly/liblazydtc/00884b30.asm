@@ -1,0 +1,20 @@
+; FUN_00884b30 @ 00884b30
+00884b30	mov x8,x0
+00884b34	ldr w0,[x0, #0x64c]
+00884b38	add w9,w0,w2
+00884b3c	cmp w9,#0x100
+00884b40	b.cs 0x00884b5c
+00884b44	ldr w10,[x8, #0x650]
+00884b48	str w9,[x8, #0x64c]
+00884b4c	cmp w10,w9
+00884b50	csel w9,w10,w9,hi
+00884b54	str w9,[x8, #0x650]
+00884b58	ret
+00884b5c	stp x29,x30,[sp, #-0x10]!
+00884b60	mov x29,sp
+00884b64	adrp x8,0x2d0000
+00884b68	add x8,x8,#0xc00
+00884b6c	add x0,x1,#0xc
+00884b70	mov x1,x8
+00884b74	mov w3,#0xff
+00884b78	bl 0x0087fcd8

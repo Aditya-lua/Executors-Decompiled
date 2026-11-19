@@ -1,0 +1,5 @@
+; OSSL_STORE_INFO_get0_CERT @ 00c34e30
+00c34e30	adrp x16,0xcb8000
+00c34e34	ldr x17,[x16, #0x700]
+00c34e38	add x16,x16,#0x700
+00c34e3c	br x17

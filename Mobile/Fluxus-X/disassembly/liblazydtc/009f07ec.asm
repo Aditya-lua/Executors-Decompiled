@@ -1,0 +1,85 @@
+; EVP_PKEY_asn1_new @ 009f07ec
+009f07ec	str x23,[sp, #-0x40]!
+009f07f0	stp x22,x21,[sp, #0x10]
+009f07f4	mov w22,w1
+009f07f8	adrp x1,0x2af000
+009f07fc	stp x20,x19,[sp, #0x20]
+009f0800	mov x20,x2
+009f0804	mov w23,w0
+009f0808	add x1,x1,#0xc32
+009f080c	mov w0,#0x140
+009f0810	mov w2,#0xdf
+009f0814	stp x29,x30,[sp, #0x30]
+009f0818	add x29,sp,#0x30
+009f081c	mov x21,x3
+009f0820	bl 0x00c34250
+009f0824	mov x19,x0
+009f0828	cbz x0,0x009f08f4
+009f082c	orr w8,w22,#0x2
+009f0830	sxtw x8,w8
+009f0834	stp w23,w23,[x19]
+009f0838	str x8,[x19, #0x8]
+009f083c	cbz x21,0x009f085c
+009f0840	adrp x1,0x2af000
+009f0844	add x1,x1,#0xc32
+009f0848	mov w2,#0xeb
+009f084c	mov x0,x21
+009f0850	bl 0x00c34600
+009f0854	str x0,[x19, #0x18]
+009f0858	cbz x0,0x009f087c
+009f085c	cbz x20,0x009f0924
+009f0860	adrp x1,0x2af000
+009f0864	add x1,x1,#0xc32
+009f0868	mov w2,#0xf1
+009f086c	mov x0,x20
+009f0870	bl 0x00c34600
+009f0874	str x0,[x19, #0x10]
+009f0878	cbnz x0,0x009f0924
+009f087c	ldrb w8,[x19, #0x8]
+009f0880	tbz w8,#0x1,0x009f08bc
+009f0884	ldr x0,[x19, #0x10]
+009f0888	adrp x20,0x2af000
+009f088c	add x20,x20,#0xc32
+009f0890	mov w2,#0x114
+009f0894	mov x1,x20
+009f0898	bl 0x00c32310
+009f089c	ldr x0,[x19, #0x18]
+009f08a0	mov w2,#0x115
+009f08a4	mov x1,x20
+009f08a8	bl 0x00c32310
+009f08ac	mov w2,#0x116
+009f08b0	mov x0,x19
+009f08b4	mov x1,x20
+009f08b8	bl 0x00c32310
+009f08bc	bl 0x00c342a0
+009f08c0	adrp x0,0x2af000
+009f08c4	adrp x2,0x2b9000
+009f08c8	add x0,x0,#0xc32
+009f08cc	add x2,x2,#0xaed
+009f08d0	mov w1,#0xfa
+009f08d4	bl 0x00c342b0
+009f08d8	mov w1,#0x100
+009f08dc	mov w0,#0xd
+009f08e0	movk w1,#0xc, LSL #16
+009f08e4	mov x2,xzr
+009f08e8	bl 0x00c342c0
+009f08ec	mov x19,xzr
+009f08f0	b 0x009f0924
+009f08f4	bl 0x00c342a0
+009f08f8	adrp x0,0x2af000
+009f08fc	adrp x2,0x2b9000
+009f0900	add x0,x0,#0xc32
+009f0904	add x2,x2,#0xaed
+009f0908	mov w1,#0xe2
+009f090c	bl 0x00c342b0
+009f0910	mov w1,#0x100
+009f0914	mov w0,#0xd
+009f0918	movk w1,#0xc, LSL #16
+009f091c	mov x2,xzr
+009f0920	bl 0x00c342c0
+009f0924	mov x0,x19
+009f0928	ldp x29,x30,[sp, #0x30]
+009f092c	ldp x20,x19,[sp, #0x20]
+009f0930	ldp x22,x21,[sp, #0x10]
+009f0934	ldr x23,[sp], #0x40
+009f0938	ret

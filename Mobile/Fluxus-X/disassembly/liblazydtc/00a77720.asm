@@ -1,0 +1,41 @@
+; EVP_PKEY_CTX_ctrl_str @ 00a77720
+00a77720	stp x22,x21,[sp, #-0x30]!
+00a77724	stp x20,x19,[sp, #0x10]
+00a77728	stp x29,x30,[sp, #0x20]
+00a7772c	add x29,sp,#0x20
+00a77730	mov x19,x2
+00a77734	mov x20,x1
+00a77738	mov x21,x0
+00a7773c	bl 0x00c35250
+00a77740	mov x0,x19
+00a77744	bl 0x00c2ff50
+00a77748	add x6,x0,#0x1
+00a7774c	mov w1,#0xffffffff
+00a77750	mov w2,#0xffffffff
+00a77754	mov w3,#0xffffffff
+00a77758	mov x0,x21
+00a7775c	mov x4,x20
+00a77760	mov x5,x19
+00a77764	bl 0x00a772a4
+00a77768	cmn w0,#0x2
+00a7776c	b.ne 0x00a77778
+00a77770	bl 0x00c35240
+00a77774	b 0x00a77790
+00a77778	mov w22,w0
+00a7777c	bl 0x00c35ed0
+00a77780	cmp w22,#0x1
+00a77784	b.lt 0x00a777ac
+00a77788	ldr w8,[x21]
+00a7778c	cbz w8,0x00a777ac
+00a77790	mov x1,x20
+00a77794	mov x2,x19
+00a77798	ldp x29,x30,[sp, #0x20]
+00a7779c	ldp x20,x19,[sp, #0x10]
+00a777a0	mov x0,x21
+00a777a4	ldp x22,x21,[sp], #0x30
+00a777a8	b 0x00a777c0
+00a777ac	ldp x29,x30,[sp, #0x20]
+00a777b0	ldp x20,x19,[sp, #0x10]
+00a777b4	mov w0,w22
+00a777b8	ldp x22,x21,[sp], #0x30
+00a777bc	ret

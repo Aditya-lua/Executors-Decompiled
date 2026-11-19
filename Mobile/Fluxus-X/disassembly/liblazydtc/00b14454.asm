@@ -1,0 +1,3 @@
+; X509_VERIFY_PARAM_set_purpose @ 00b14454
+00b14454	add x0,x0,#0x20
+00b14458	b 0x00c40a30

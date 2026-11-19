@@ -1,0 +1,4 @@
+; d2i_PROXY_CERT_INFO_EXTENSION @ 00b00f9c
+00b00f9c	adrp x3,0xc80000
+00b00fa0	add x3,x3,#0x980
+00b00fa4	b 0x00c36150

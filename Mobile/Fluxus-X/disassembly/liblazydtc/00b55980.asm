@@ -1,0 +1,24 @@
+; FUN_00b55980 @ 00b55980
+00b55980	stp x22,x21,[sp, #-0x30]!
+00b55984	stp x20,x19,[sp, #0x10]
+00b55988	stp x29,x30,[sp, #0x20]
+00b5598c	add x29,sp,#0x20
+00b55990	mov x19,x2
+00b55994	mov x21,x1
+00b55998	mov x22,x0
+00b5599c	bl 0x00c41000
+00b559a0	cbz w0,0x00b559c4
+00b559a4	mov w20,#0x1
+00b559a8	add x0,x22,#0x10
+00b559ac	mov x1,x21
+00b559b0	str w20,[x22, #0x8]
+00b559b4	bl 0x00c3e470
+00b559b8	mov w8,#0x10
+00b559bc	str x8,[x19]
+00b559c0	b 0x00b559c8
+00b559c4	mov w20,wzr
+00b559c8	mov w0,w20
+00b559cc	ldp x29,x30,[sp, #0x20]
+00b559d0	ldp x20,x19,[sp, #0x10]
+00b559d4	ldp x22,x21,[sp], #0x30
+00b559d8	ret

@@ -1,0 +1,96 @@
+; tls_construct_ctos_supported_versions @ 009d33b0
+009d33b0	str x21,[sp, #-0x30]!
+009d33b4	stp x20,x19,[sp, #0x10]
+009d33b8	mov x20,x1
+009d33bc	add x1,sp,#0xc
+009d33c0	add x2,sp,#0x8
+009d33c4	mov x3,xzr
+009d33c8	stp x29,x30,[sp, #0x20]
+009d33cc	add x29,sp,#0x20
+009d33d0	mov x19,x0
+009d33d4	bl 0x00c365c0
+009d33d8	cbz w0,0x009d340c
+009d33dc	mov w21,w0
+009d33e0	bl 0x00c342a0
+009d33e4	adrp x0,0x2bf000
+009d33e8	adrp x2,0x2cb000
+009d33ec	add x0,x0,#0x967
+009d33f0	add x2,x2,#0x5ec
+009d33f4	mov w1,#0x213
+009d33f8	bl 0x00c342b0
+009d33fc	mov w1,#0x50
+009d3400	mov x0,x19
+009d3404	mov w2,w21
+009d3408	b 0x009d34d8
+009d340c	ldr w8,[sp, #0x8]
+009d3410	cmp w8,#0x304
+009d3414	b.ge 0x009d3420
+009d3418	mov w0,#0x2
+009d341c	b 0x009d34e4
+009d3420	mov w1,#0x2b
+009d3424	mov w2,#0x2
+009d3428	mov x0,x20
+009d342c	bl 0x00c343a0
+009d3430	cbz w0,0x009d34ac
+009d3434	mov w1,#0x2
+009d3438	mov x0,x20
+009d343c	bl 0x00c343b0
+009d3440	cbz w0,0x009d34ac
+009d3444	mov w1,#0x1
+009d3448	mov x0,x20
+009d344c	bl 0x00c343b0
+009d3450	cbz w0,0x009d34ac
+009d3454	ldp w8,w9,[sp, #0x8]
+009d3458	sxtw x8,w8
+009d345c	cmp w8,w9
+009d3460	b.lt 0x009d348c
+009d3464	add x21,x8,#0x1
+009d3468	sub x21,x21,#0x1
+009d346c	mov w2,#0x2
+009d3470	mov x0,x20
+009d3474	mov x1,x21
+009d3478	bl 0x00c343a0
+009d347c	cbz w0,0x009d3510
+009d3480	ldrsw x8,[sp, #0xc]
+009d3484	cmp x21,x8
+009d3488	b.gt 0x009d3468
+009d348c	mov x0,x20
+009d3490	bl 0x00c34350
+009d3494	cbz w0,0x009d34f4
+009d3498	mov x0,x20
+009d349c	bl 0x00c34350
+009d34a0	cbz w0,0x009d34f4
+009d34a4	mov w0,#0x1
+009d34a8	b 0x009d34e4
+009d34ac	bl 0x00c342a0
+009d34b0	adrp x0,0x2bf000
+009d34b4	adrp x2,0x2cb000
+009d34b8	add x0,x0,#0x967
+009d34bc	add x2,x2,#0x5ec
+009d34c0	mov w1,#0x221
+009d34c4	bl 0x00c342b0
+009d34c8	mov w2,#0x103
+009d34cc	mov w1,#0x50
+009d34d0	movk w2,#0xc, LSL #16
+009d34d4	mov x0,x19
+009d34d8	mov x3,xzr
+009d34dc	bl 0x00c34410
+009d34e0	mov w0,wzr
+009d34e4	ldp x29,x30,[sp, #0x20]
+009d34e8	ldp x20,x19,[sp, #0x10]
+009d34ec	ldr x21,[sp], #0x30
+009d34f0	ret
+009d34f4	bl 0x00c342a0
+009d34f8	adrp x0,0x2bf000
+009d34fc	adrp x2,0x2cb000
+009d3500	add x0,x0,#0x967
+009d3504	add x2,x2,#0x5ec
+009d3508	mov w1,#0x22c
+009d350c	b 0x009d34c4
+009d3510	bl 0x00c342a0
+009d3514	adrp x0,0x2bf000
+009d3518	adrp x2,0x2cb000
+009d351c	add x0,x0,#0x967
+009d3520	add x2,x2,#0x5ec
+009d3524	mov w1,#0x227
+009d3528	b 0x009d34c4

@@ -1,0 +1,5 @@
+; OPENSSL_sk_new @ 00c35340
+00c35340	adrp x16,0xcb8000
+00c35344	ldr x17,[x16, #0x988]
+00c35348	add x16,x16,#0x988
+00c3534c	br x17

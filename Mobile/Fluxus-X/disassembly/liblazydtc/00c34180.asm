@@ -1,0 +1,5 @@
+; ssl3_ctrl @ 00c34180
+00c34180	adrp x16,0xcb8000
+00c34184	ldr x17,[x16, #0xa8]
+00c34188	add x16,x16,#0xa8
+00c3418c	br x17

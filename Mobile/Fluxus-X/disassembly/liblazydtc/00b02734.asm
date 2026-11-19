@@ -1,0 +1,36 @@
+; X509_PURPOSE_set @ 00b02734
+00b02734	sub sp,sp,#0x50
+00b02738	sub w8,w1,#0x1
+00b0273c	stp x20,x19,[sp, #0x30]
+00b02740	mov w19,w1
+00b02744	cmp w8,#0x8
+00b02748	mov x20,x0
+00b0274c	stp x29,x30,[sp, #0x40]
+00b02750	add x29,sp,#0x40
+00b02754	b.ls 0x00b02774
+00b02758	adrp x8,0xd22000
+00b0275c	ldr x0,[x8, #0x7e0]
+00b02760	cbz x0,0x00b02780
+00b02764	mov x1,sp
+00b02768	str w19,[sp]
+00b0276c	bl 0x00c34760
+00b02770	tbnz w0,#0x1f,0x00b02780
+00b02774	mov w0,#0x1
+00b02778	str w19,[x20]
+00b0277c	b 0x00b027b0
+00b02780	bl 0x00c342a0
+00b02784	adrp x0,0x2a2000
+00b02788	adrp x2,0x2ae000
+00b0278c	add x0,x0,#0xe25
+00b02790	add x2,x2,#0x7b1
+00b02794	mov w1,#0x65
+00b02798	bl 0x00c342b0
+00b0279c	mov w0,#0x22
+00b027a0	mov w1,#0x92
+00b027a4	mov x2,xzr
+00b027a8	bl 0x00c342c0
+00b027ac	mov w0,wzr
+00b027b0	ldp x29,x30,[sp, #0x40]
+00b027b4	ldp x20,x19,[sp, #0x30]
+00b027b8	add sp,sp,#0x50
+00b027bc	ret

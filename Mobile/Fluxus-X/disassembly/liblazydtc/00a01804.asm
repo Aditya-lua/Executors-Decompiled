@@ -1,0 +1,36 @@
+; BN_clear_free @ 00a01804
+00a01804	str x19,[sp, #-0x20]!
+00a01808	stp x29,x30,[sp, #0x10]
+00a0180c	add x29,sp,#0x10
+00a01810	cbz x0,0x00a0184c
+00a01814	mov x19,x0
+00a01818	ldr x0,[x0]
+00a0181c	cbz x0,0x00a01844
+00a01820	ldr w8,[x19, #0x14]
+00a01824	tbnz w8,#0x1,0x00a01844
+00a01828	ldrsw x9,[x19, #0xc]
+00a0182c	adrp x2,0x2b5000
+00a01830	add x2,x2,#0xa6d
+00a01834	lsl x1,x9,#0x3
+00a01838	tbnz w8,#0x3,0x00a01858
+00a0183c	mov w3,#0xcf
+00a01840	bl 0x00c345e0
+00a01844	ldrb w8,[x19, #0x14]
+00a01848	tbnz w8,#0x0,0x00a01868
+00a0184c	ldp x29,x30,[sp, #0x10]
+00a01850	ldr x19,[sp], #0x20
+00a01854	ret
+00a01858	mov w3,#0xcd
+00a0185c	bl 0x00c38e10
+00a01860	ldrb w8,[x19, #0x14]
+00a01864	tbz w8,#0x0,0x00a0184c
+00a01868	orr w1,wzr,#0x18
+00a0186c	mov x0,x19
+00a01870	bl 0x00c34750
+00a01874	ldp x29,x30,[sp, #0x10]
+00a01878	adrp x1,0x2b5000
+00a0187c	add x1,x1,#0xa6d
+00a01880	mov w2,#0xdd
+00a01884	mov x0,x19
+00a01888	ldr x19,[sp], #0x20
+00a0188c	b 0x00c32310

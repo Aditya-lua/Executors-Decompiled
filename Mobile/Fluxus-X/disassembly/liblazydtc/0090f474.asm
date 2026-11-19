@@ -1,0 +1,86 @@
+; FUN_0090f474 @ 0090f474
+0090f474	stp x28,x27,[sp, #-0x60]!
+0090f478	stp x26,x25,[sp, #0x10]
+0090f47c	stp x24,x23,[sp, #0x20]
+0090f480	stp x22,x21,[sp, #0x30]
+0090f484	stp x20,x19,[sp, #0x40]
+0090f488	stp x29,x30,[sp, #0x50]
+0090f48c	add x29,sp,#0x50
+0090f490	mov x20,x0
+0090f494	cbz x0,0x0090f57c
+0090f498	ldr x8,[x20, #0x18]
+0090f49c	ldr x27,[x8]
+0090f4a0	cbz x27,0x0090f57c
+0090f4a4	ldr w26,[x20, #0x10]
+0090f4a8	rev w8,w1
+0090f4ac	mov x24,xzr
+0090f4b0	mov x19,xzr
+0090f4b4	mov w23,#0x8
+0090f4b8	lsr w25,w8,#0x10
+0090f4bc	ldr x0,[x20]
+0090f4c0	bl 0x00c2ff50
+0090f4c4	adrp x8,0xcc4000
+0090f4c8	add x8,x8,#0x690
+0090f4cc	cmp w26,#0xa
+0090f4d0	mov w9,#0x10
+0090f4d4	orr w10,wzr,#0x1c
+0090f4d8	ldr x8,[x8]
+0090f4dc	csel x28,x10,x9,eq
+0090f4e0	add x9,x0,x28
+0090f4e4	mov x22,x0
+0090f4e8	add x1,x9,#0x31
+0090f4ec	mov w0,#0x1
+0090f4f0	blr x8
+0090f4f4	mov x21,x0
+0090f4f8	cbz x0,0x0090f5a0
+0090f4fc	add x8,x21,#0x30
+0090f500	add x0,x8,x28
+0090f504	stp x0,x8,[x21, #0x18]
+0090f508	ldr x1,[x20]
+0090f50c	add x2,x22,#0x1
+0090f510	bl 0x00c2ffd0
+0090f514	cmp x19,#0x0
+0090f518	csel x19,x21,x19,eq
+0090f51c	cbz x24,0x0090f524
+0090f520	str x21,[x24, #0x28]
+0090f524	ldr w26,[x20, #0x10]
+0090f528	mov w8,#0x1
+0090f52c	str w28,[x21, #0x10]
+0090f530	cmp w26,#0xa
+0090f534	stp w26,w8,[x21, #0x4]
+0090f538	b.eq 0x0090f550
+0090f53c	cmp w26,#0x2
+0090f540	b.ne 0x0090f564
+0090f544	ldr w8,[x27]
+0090f548	str w8,[x21, #0x34]
+0090f54c	b 0x0090f558
+0090f550	ldr q0,[x27]
+0090f554	stur q0,[x21, #0x38]
+0090f558	ldr w26,[x20, #0x10]
+0090f55c	strh w25,[x21, #0x32]
+0090f560	strh w26,[x21, #0x30]
+0090f564	ldr x8,[x20, #0x18]
+0090f568	mov x24,x21
+0090f56c	ldr x27,[x8, x23#0x0]
+0090f570	add x23,x23,#0x8
+0090f574	cbnz x27,0x0090f4bc
+0090f578	b 0x0090f580
+0090f57c	mov x19,xzr
+0090f580	mov x0,x19
+0090f584	ldp x29,x30,[sp, #0x50]
+0090f588	ldp x20,x19,[sp, #0x40]
+0090f58c	ldp x22,x21,[sp, #0x30]
+0090f590	ldp x24,x23,[sp, #0x20]
+0090f594	ldp x26,x25,[sp, #0x10]
+0090f598	ldp x28,x27,[sp], #0x60
+0090f59c	ret
+0090f5a0	cbz x19,0x0090f580
+0090f5a4	adrp x20,0xcc4000
+0090f5a8	add x20,x20,#0x678
+0090f5ac	ldr x8,[x20]
+0090f5b0	ldr x21,[x19, #0x28]
+0090f5b4	mov x0,x19
+0090f5b8	blr x8
+0090f5bc	mov x19,x21
+0090f5c0	cbnz x21,0x0090f5ac
+0090f5c4	b 0x0090f580

@@ -1,0 +1,54 @@
+; tls_parse_stoc_maxfragmentlen @ 009d461c
+009d461c	str x19,[sp, #-0x20]!
+009d4620	stp x29,x30,[sp, #0x10]
+009d4624	ldr x8,[x1, #0x8]
+009d4628	mov x19,x0
+009d462c	add x29,sp,#0x10
+009d4630	cmp x8,#0x1
+009d4634	b.ne 0x009d466c
+009d4638	ldr x9,[x1]
+009d463c	ldrb w8,[x9], #0x1
+009d4640	sub w10,w8,#0x1
+009d4644	cmp w10,#0x4
+009d4648	stp x9,xzr,[x1]
+009d464c	b.cs 0x009d4694
+009d4650	ldrb w9,[x19, #0xb4c]
+009d4654	cmp w8,w9
+009d4658	b.ne 0x009d46b0
+009d465c	ldr x9,[x19, #0x918]
+009d4660	mov w0,#0x1
+009d4664	strb w8,[x9, #0x368]
+009d4668	b 0x009d46e4
+009d466c	bl 0x00c342a0
+009d4670	adrp x0,0x2bf000
+009d4674	adrp x2,0x2b9000
+009d4678	add x0,x0,#0x967
+009d467c	add x2,x2,#0xa38
+009d4680	mov w1,#0x4ef
+009d4684	bl 0x00c342b0
+009d4688	mov w1,#0x32
+009d468c	mov w2,#0x6e
+009d4690	b 0x009d46d4
+009d4694	bl 0x00c342a0
+009d4698	adrp x0,0x2bf000
+009d469c	adrp x2,0x2b9000
+009d46a0	add x0,x0,#0x967
+009d46a4	add x2,x2,#0xa38
+009d46a8	mov w1,#0x4f6
+009d46ac	b 0x009d46c8
+009d46b0	bl 0x00c342a0
+009d46b4	adrp x0,0x2bf000
+009d46b8	adrp x2,0x2b9000
+009d46bc	add x0,x0,#0x967
+009d46c0	add x2,x2,#0xa38
+009d46c4	mov w1,#0x502
+009d46c8	bl 0x00c342b0
+009d46cc	mov w1,#0x2f
+009d46d0	mov w2,#0xe8
+009d46d4	mov x0,x19
+009d46d8	mov x3,xzr
+009d46dc	bl 0x00c34410
+009d46e0	mov w0,wzr
+009d46e4	ldp x29,x30,[sp, #0x10]
+009d46e8	ldr x19,[sp], #0x20
+009d46ec	ret

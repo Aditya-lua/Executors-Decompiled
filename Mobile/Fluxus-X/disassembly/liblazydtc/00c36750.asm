@@ -1,0 +1,5 @@
+; tls1_lookup_md @ 00c36750
+00c36750	adrp x16,0xcb9000
+00c36754	ldr x17,[x16, #0x390]
+00c36758	add x16,x16,#0x390
+00c3675c	br x17

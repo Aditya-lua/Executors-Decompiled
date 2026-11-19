@@ -1,0 +1,40 @@
+; FUN_008a11e8 @ 008a11e8
+008a11e8	mov x8,x0
+008a11ec	and w0,w8,#0x7f
+008a11f0	cmp w0,#0x7f
+008a11f4	b.eq 0x008a1280
+008a11f8	cbz x2,0x008a1280
+008a11fc	ubfx w9,w8,#0x8,#0x7
+008a1200	ldrb w10,[x1]
+008a1204	cmp x2,#0x1
+008a1208	msub w0,w9,w10,w0
+008a120c	b.eq 0x008a1280
+008a1210	ubfx w9,w8,#0x10,#0x7
+008a1214	ldrb w10,[x1, #0x1]
+008a1218	cmp x2,#0x2
+008a121c	msub w0,w9,w10,w0
+008a1220	b.eq 0x008a1280
+008a1224	ubfx w9,w8,#0x18,#0x7
+008a1228	ldrb w10,[x1, #0x2]
+008a122c	cmp x2,#0x3
+008a1230	msub w0,w9,w10,w0
+008a1234	b.eq 0x008a1280
+008a1238	ubfx x9,x8,#0x20,#0x7
+008a123c	ldrb w10,[x1, #0x3]
+008a1240	cmp x2,#0x4
+008a1244	msub w0,w9,w10,w0
+008a1248	b.eq 0x008a1280
+008a124c	ubfx x9,x8,#0x28,#0x7
+008a1250	ldrb w10,[x1, #0x4]
+008a1254	cmp x2,#0x5
+008a1258	msub w0,w9,w10,w0
+008a125c	b.eq 0x008a1280
+008a1260	ubfx x9,x8,#0x30,#0x7
+008a1264	ldrb w10,[x1, #0x5]
+008a1268	cmp x2,#0x6
+008a126c	msub w0,w9,w10,w0
+008a1270	b.eq 0x008a1280
+008a1274	ubfx x8,x8,#0x38,#0x7
+008a1278	ldrb w9,[x1, #0x6]
+008a127c	msub w0,w8,w9,w0
+008a1280	ret

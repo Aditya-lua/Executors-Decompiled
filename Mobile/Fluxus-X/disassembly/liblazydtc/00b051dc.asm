@@ -1,0 +1,32 @@
+; SXNET_get_id_INTEGER @ 00b051dc
+00b051dc	stp x22,x21,[sp, #-0x30]!
+00b051e0	stp x20,x19,[sp, #0x10]
+00b051e4	stp x29,x30,[sp, #0x20]
+00b051e8	mov x19,x0
+00b051ec	ldr x0,[x0, #0x8]
+00b051f0	add x29,sp,#0x20
+00b051f4	mov x20,x1
+00b051f8	bl 0x00c325e0
+00b051fc	cmp w0,#0x1
+00b05200	b.lt 0x00b0523c
+00b05204	mov w21,wzr
+00b05208	ldr x0,[x19, #0x8]
+00b0520c	mov w1,w21
+00b05210	bl 0x00c32610
+00b05214	mov x22,x0
+00b05218	ldr x0,[x0]
+00b0521c	mov x1,x20
+00b05220	bl 0x00c37560
+00b05224	cbz w0,0x00b05244
+00b05228	ldr x0,[x19, #0x8]
+00b0522c	add w21,w21,#0x1
+00b05230	bl 0x00c325e0
+00b05234	cmp w21,w0
+00b05238	b.lt 0x00b05208
+00b0523c	mov x0,xzr
+00b05240	b 0x00b05248
+00b05244	ldr x0,[x22, #0x8]
+00b05248	ldp x29,x30,[sp, #0x20]
+00b0524c	ldp x20,x19,[sp, #0x10]
+00b05250	ldp x22,x21,[sp], #0x30
+00b05254	ret

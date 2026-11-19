@@ -1,0 +1,19 @@
+; FUN_00b03358 @ 00b03358
+00b03358	stp x20,x19,[sp, #-0x20]!
+00b0335c	stp x29,x30,[sp, #0x10]
+00b03360	add x29,sp,#0x10
+00b03364	mov w20,w2
+00b03368	mov x19,x1
+00b0336c	bl 0x00b03290
+00b03370	cbnz w20,0x00b0338c
+00b03374	cbz w0,0x00b0338c
+00b03378	ldrb w8,[x19, #0xe8]
+00b0337c	tbz w8,#0x1,0x00b0338c
+00b03380	ldrb w8,[x19, #0xec]
+00b03384	mov w1,wzr
+00b03388	tbz w8,#0x5,0x00b03390
+00b0338c	mov w1,w0
+00b03390	ldp x29,x30,[sp, #0x10]
+00b03394	mov w0,w1
+00b03398	ldp x20,x19,[sp], #0x20
+00b0339c	ret

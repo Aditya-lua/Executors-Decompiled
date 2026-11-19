@@ -1,0 +1,125 @@
+; std::__ndk1::__split_buffer<std::__ndk1::pair<std::__ndk1::shared_ptr<ix::HttpRequestArgs>,std::__ndk1::function<void(std::__ndk1::shared_ptr<ix::HttpResponse>const&)>>*,std::__ndk1::allocator<std::__ndk1::pair<std::__ndk1::shared_ptr<ix::HttpRequestArgs>,std::__ndk1::function<void(std::__ndk1::shared_ptr<ix::HttpResponse>const&)>>*>>::push_back @ 009796c4
+009796c4	stp x24,x23,[sp, #-0x40]!
+009796c8	stp x22,x21,[sp, #0x10]
+009796cc	stp x20,x19,[sp, #0x20]
+009796d0	stp x29,x30,[sp, #0x30]
+009796d4	add x29,sp,#0x30
+009796d8	ldp x23,x8,[x0, #0x10]
+009796dc	mov x19,x0
+009796e0	mov x20,x1
+009796e4	cmp x23,x8
+009796e8	b.ne 0x0097984c
+009796ec	ldp x22,x21,[x19]
+009796f0	subs x9,x21,x22
+009796f4	b.ls 0x0097973c
+009796f8	asr x8,x9,#0x3
+009796fc	add x9,x8,#0x1
+00979700	add x10,x8,#0x2
+00979704	cmp x9,#0x0
+00979708	csinc x8,x10,x8,lt
+0097970c	subs x2,x23,x21
+00979710	asr x8,x8,#0x1
+00979714	sub x22,x21,x8, LSL #0x3
+00979718	asr x23,x2,#0x3
+0097971c	b.eq 0x00979760
+00979720	mov x0,x22
+00979724	mov x1,x21
+00979728	neg x24,x8
+0097972c	bl 0x00c2ff60
+00979730	ldr x8,[x19, #0x8]
+00979734	add x8,x8,x24, LSL #0x3
+00979738	b 0x00979764
+0097973c	subs x8,x8,x22
+00979740	asr x8,x8,#0x2
+00979744	csinc x24,x8,xzr,ne
+00979748	cbz x24,0x00979770
+0097974c	lsr x8,x24,#0x3d
+00979750	cbnz x8,0x00979874
+00979754	lsl x0,x24,#0x3
+00979758	bl 0x00c2fed0
+0097975c	b 0x00979774
+00979760	mov x8,x22
+00979764	add x23,x22,x23, LSL #0x3
+00979768	stp x8,x23,[x19, #0x8]
+0097976c	b 0x0097984c
+00979770	mov x0,xzr
+00979774	lsr x13,x24,#0x2
+00979778	cmp x21,x23
+0097977c	add x9,x0,x13, LSL #0x3
+00979780	add x8,x0,x24, LSL #0x3
+00979784	b.eq 0x009797b0
+00979788	sub x10,x23,#0x8
+0097978c	sub x10,x10,x21
+00979790	lsr x14,x10,#0x3
+00979794	add x11,x13,x14
+00979798	add x12,x14,#0x1
+0097979c	cmp x12,#0x4
+009797a0	add x10,x11,#0x1
+009797a4	b.cs 0x009797b8
+009797a8	mov x11,x9
+009797ac	b 0x0097981c
+009797b0	mov x23,x9
+009797b4	b 0x00979834
+009797b8	add x14,x21,x14, LSL #0x3
+009797bc	add x14,x14,#0x8
+009797c0	cmp x9,x14
+009797c4	b.cs 0x009797dc
+009797c8	add x11,x0,x11, LSL #0x3
+009797cc	add x11,x11,#0x8
+009797d0	cmp x21,x11
+009797d4	mov x11,x9
+009797d8	b.cc 0x0097981c
+009797dc	and x14,x12,#0x3ffffffffffffffc
+009797e0	add x13,x0,x13, LSL #0x3
+009797e4	lsl x16,x14,#0x3
+009797e8	add x15,x21,#0x10
+009797ec	add x11,x9,x16
+009797f0	add x21,x21,x16
+009797f4	add x13,x13,#0x10
+009797f8	mov x16,x14
+009797fc	ldp q0,q1,[x15, #-0x10]
+00979800	add x15,x15,#0x20
+00979804	subs x16,x16,#0x4
+00979808	stp q0,q1,[x13, #-0x10]
+0097980c	add x13,x13,#0x20
+00979810	b.ne 0x009797fc
+00979814	cmp x12,x14
+00979818	b.eq 0x0097982c
+0097981c	ldr x12,[x21], #0x8
+00979820	cmp x23,x21
+00979824	str x12,[x11], #0x8
+00979828	b.ne 0x0097981c
+0097982c	ldr x22,[x19]
+00979830	add x23,x0,x10, LSL #0x3
+00979834	stp x0,x9,[x19]
+00979838	stp x23,x8,[x19, #0x10]
+0097983c	cbz x22,0x0097984c
+00979840	mov x0,x22
+00979844	bl 0x00c301d0
+00979848	ldr x23,[x19, #0x10]
+0097984c	ldr x8,[x20]
+00979850	str x8,[x23]
+00979854	ldr x8,[x19, #0x10]
+00979858	add x8,x8,#0x8
+0097985c	str x8,[x19, #0x10]
+00979860	ldp x29,x30,[sp, #0x30]
+00979864	ldp x20,x19,[sp, #0x20]
+00979868	ldp x22,x21,[sp, #0x10]
+0097986c	ldp x24,x23,[sp], #0x40
+00979870	ret
+00979874	mov w0,#0x10
+00979878	bl 0x00c30000
+0097987c	mov x19,x0
+00979880	adrp x1,0x2ad000
+00979884	add x1,x1,#0x51
+00979888	bl 0x00c30040
+0097988c	adrp x8,0xcb4000
+00979890	ldr x8,[x8, #0x980]
+00979894	adrp x1,0xcb4000
+00979898	adrp x2,0xcb4000
+0097989c	mov x0,x19
+009798a0	add x8,x8,#0x10
+009798a4	str x8,[x19]
+009798a8	ldr x1,[x1, #0x970]
+009798ac	ldr x2,[x2, #0x978]
+009798b0	bl 0x00c30020

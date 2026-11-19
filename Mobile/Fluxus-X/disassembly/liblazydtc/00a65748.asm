@@ -1,0 +1,41 @@
+; evp_keymgmt_util_make_pkey @ 00a65748
+00a65748	str x21,[sp, #-0x30]!
+00a6574c	stp x20,x19,[sp, #0x10]
+00a65750	mov x19,xzr
+00a65754	stp x29,x30,[sp, #0x20]
+00a65758	add x29,sp,#0x20
+00a6575c	cbz x0,0x00a657c8
+00a65760	mov x20,x1
+00a65764	cbz x1,0x00a657c8
+00a65768	mov x21,x0
+00a6576c	bl 0x00c36450
+00a65770	mov x19,x0
+00a65774	cbz x0,0x00a657c8
+00a65778	mov x0,x19
+00a6577c	mov x1,x21
+00a65780	bl 0x00c3d200
+00a65784	cbz w0,0x00a65798
+00a65788	mov x0,x19
+00a6578c	str x20,[x19, #0x68]
+00a65790	bl 0x00a65640
+00a65794	b 0x00a657d4
+00a65798	bl 0x00c342a0
+00a6579c	adrp x0,0x2cd000
+00a657a0	adrp x2,0x2bd000
+00a657a4	add x0,x0,#0xabe
+00a657a8	add x2,x2,#0xaf1
+00a657ac	mov w1,#0x41
+00a657b0	bl 0x00c342b0
+00a657b4	mov w1,#0x103
+00a657b8	orr w0,wzr,#0x6
+00a657bc	movk w1,#0xc, LSL #16
+00a657c0	mov x2,xzr
+00a657c4	bl 0x00c342c0
+00a657c8	mov x0,x19
+00a657cc	bl 0x00c32450
+00a657d0	mov x19,xzr
+00a657d4	mov x0,x19
+00a657d8	ldp x29,x30,[sp, #0x20]
+00a657dc	ldp x20,x19,[sp, #0x10]
+00a657e0	ldr x21,[sp], #0x30
+00a657e4	ret

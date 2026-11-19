@@ -1,0 +1,14 @@
+; FUN_008e403c @ 008e403c
+008e403c	stp x30,x21,[sp, #-0x20]!
+008e4040	stp x20,x19,[sp, #0x10]
+008e4044	mov x21,x0
+008e4048	mov w0,#0x8
+008e404c	mov w19,w2
+008e4050	mov w20,w1
+008e4054	bl 0x00c2fed0
+008e4058	mov x1,x0
+008e405c	stp w20,w19,[x1]
+008e4060	ldp x20,x19,[sp, #0x10]
+008e4064	add x0,x21,#0x8
+008e4068	ldp x30,x21,[sp], #0x20
+008e406c	b 0x008e51e4

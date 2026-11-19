@@ -1,0 +1,41 @@
+; FUN_00842c2c @ 00842c2c
+00842c2c	stp x29,x30,[sp, #-0x40]!
+00842c30	str x23,[sp, #0x10]
+00842c34	stp x22,x21,[sp, #0x20]
+00842c38	stp x20,x19,[sp, #0x30]
+00842c3c	mov x29,sp
+00842c40	mov x19,x2
+00842c44	mov x20,x1
+00842c48	mov x21,x0
+00842c4c	b 0x00842c7c
+00842c50	ldr w8,[x21, #0x1c]
+00842c54	mov x1,x0
+00842c58	add w4,w23,#0x1
+00842c5c	mov x0,x21
+00842c60	mov x2,x19
+00842c64	mov x3,x22
+00842c68	add w5,w8,#0x1
+00842c6c	bl 0x00843334
+00842c70	cmp x0,x20
+00842c74	mov x20,x0
+00842c78	b.eq 0x00842cb8
+00842c7c	mov x0,x21
+00842c80	mov x1,x20
+00842c84	mov x2,x19
+00842c88	bl 0x00842d60
+00842c8c	cmp x0,x20
+00842c90	b.ne 0x00842c70
+00842c94	ldr x22,[x21, #0x38]
+00842c98	ldr w23,[x21, #0x1c]
+00842c9c	mov x0,x21
+00842ca0	mov x1,x20
+00842ca4	mov x2,x19
+00842ca8	bl 0x008430a0
+00842cac	cmp x0,x20
+00842cb0	b.ne 0x00842c50
+00842cb4	mov x0,x20
+00842cb8	ldp x20,x19,[sp, #0x30]
+00842cbc	ldr x23,[sp, #0x10]
+00842cc0	ldp x22,x21,[sp, #0x20]
+00842cc4	ldp x29,x30,[sp], #0x40
+00842cc8	ret

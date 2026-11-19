@@ -1,0 +1,15 @@
+; ssl_evp_md_free @ 009b676c
+009b676c	str x19,[sp, #-0x20]!
+009b6770	stp x29,x30,[sp, #0x10]
+009b6774	add x29,sp,#0x10
+009b6778	cbz x0,0x009b6798
+009b677c	mov x19,x0
+009b6780	bl 0x00c35810
+009b6784	cbz x0,0x009b6798
+009b6788	ldp x29,x30,[sp, #0x10]
+009b678c	mov x0,x19
+009b6790	ldr x19,[sp], #0x20
+009b6794	b 0x00c35800
+009b6798	ldp x29,x30,[sp, #0x10]
+009b679c	ldr x19,[sp], #0x20
+009b67a0	ret

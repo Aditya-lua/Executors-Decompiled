@@ -1,0 +1,62 @@
+; SSL_set_alpn_protos @ 009b60a8
+009b60a8	str x21,[sp, #-0x30]!
+009b60ac	stp x20,x19,[sp, #0x10]
+009b60b0	mov x19,x0
+009b60b4	stp x29,x30,[sp, #0x20]
+009b60b8	add x29,sp,#0x20
+009b60bc	cbz x1,0x009b6134
+009b60c0	cbz w2,0x009b6134
+009b60c4	cmp w2,#0x2
+009b60c8	b.cc 0x009b6188
+009b60cc	mov w8,wzr
+009b60d0	ldrb w9,[x1, w8, UXTW ]
+009b60d4	cbz w9,0x009b6188
+009b60d8	add w8,w8,w9
+009b60dc	add w8,w8,#0x1
+009b60e0	cmp w8,w2
+009b60e4	b.cc 0x009b60d0
+009b60e8	b.ne 0x009b6188
+009b60ec	mov w20,w2
+009b60f0	adrp x2,0x2c5000
+009b60f4	add x2,x2,#0x652
+009b60f8	mov w3,#0xc26
+009b60fc	mov x0,x1
+009b6100	mov x1,x20
+009b6104	bl 0x00c345f0
+009b6108	cbz x0,0x009b6158
+009b610c	mov x21,x0
+009b6110	ldr x0,[x19, #0xb08]
+009b6114	adrp x1,0x2c5000
+009b6118	add x1,x1,#0x652
+009b611c	mov w2,#0xc2b
+009b6120	bl 0x00c32310
+009b6124	mov w0,wzr
+009b6128	str x21,[x19, #0xb08]
+009b612c	str x20,[x19, #0xb10]
+009b6130	b 0x009b618c
+009b6134	ldr x0,[x19, #0xb08]
+009b6138	adrp x1,0x2c5000
+009b613c	add x1,x1,#0x652
+009b6140	mov w2,#0xc1d
+009b6144	bl 0x00c32310
+009b6148	mov w0,wzr
+009b614c	str xzr,[x19, #0xb10]
+009b6150	str xzr,[x19, #0xb08]
+009b6154	b 0x009b618c
+009b6158	bl 0x00c342a0
+009b615c	adrp x0,0x2c5000
+009b6160	adrp x2,0x2cf000
+009b6164	add x0,x0,#0x652
+009b6168	add x2,x2,#0x741
+009b616c	mov w1,#0xc28
+009b6170	bl 0x00c342b0
+009b6174	mov w1,#0x100
+009b6178	mov w0,#0x14
+009b617c	movk w1,#0xc, LSL #16
+009b6180	mov x2,xzr
+009b6184	bl 0x00c342c0
+009b6188	mov w0,#0x1
+009b618c	ldp x29,x30,[sp, #0x20]
+009b6190	ldp x20,x19,[sp, #0x10]
+009b6194	ldr x21,[sp], #0x30
+009b6198	ret

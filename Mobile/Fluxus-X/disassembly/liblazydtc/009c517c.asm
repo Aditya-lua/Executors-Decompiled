@@ -1,0 +1,87 @@
+; FUN_009c517c @ 009c517c
+009c517c	sub sp,sp,#0x70
+009c5180	stp x20,x19,[sp, #0x50]
+009c5184	mov x19,x0
+009c5188	mov x0,x1
+009c518c	str x21,[sp, #0x40]
+009c5190	stp x29,x30,[sp, #0x60]
+009c5194	add x29,sp,#0x60
+009c5198	mov w20,w2
+009c519c	bl 0x00c32cb0
+009c51a0	cbz x0,0x009c52b8
+009c51a4	adrp x1,0x2cf000
+009c51a8	add x1,x1,#0x33a
+009c51ac	mov x21,x0
+009c51b0	bl 0x00c346e0
+009c51b4	cbz w0,0x009c52b4
+009c51b8	mov x0,x19
+009c51bc	mov x1,x21
+009c51c0	bl 0x009c29d4
+009c51c4	cbz w0,0x009c52b8
+009c51c8	add x1,sp,#0xc
+009c51cc	mov w2,#0x32
+009c51d0	mov x0,x21
+009c51d4	mov x3,xzr
+009c51d8	bl 0x00c324a0
+009c51dc	cmp w0,#0x0
+009c51e0	b.le 0x009c521c
+009c51e4	add x0,sp,#0xc
+009c51e8	bl 0x00c364a0
+009c51ec	cbz w0,0x009c521c
+009c51f0	adrp x9,0x74c000
+009c51f4	add x9,x9,#0xc34
+009c51f8	mov x8,xzr
+009c51fc	add x9,x9,#0x4
+009c5200	ldur w10,[x9, #-0x4]
+009c5204	cmp w10,w0
+009c5208	b.eq 0x009c5274
+009c520c	add x8,x8,#0x1
+009c5210	cmp x8,#0x2a
+009c5214	add x9,x9,#0x8
+009c5218	b.cc 0x009c5200
+009c521c	mov w21,wzr
+009c5220	ldr w8,[x19, #0x38]
+009c5224	mov x0,x19
+009c5228	mov w1,w21
+009c522c	cmp w8,#0x0
+009c5230	cset w2,eq
+009c5234	bl 0x009c195c
+009c5238	cbz w0,0x009c52b8
+009c523c	cbz w20,0x009c52b4
+009c5240	ldr x8,[x19, #0x898]
+009c5244	ldrb w8,[x8, #0x1e]
+009c5248	tst w8,#0x3
+009c524c	b.eq 0x009c52b4
+009c5250	cmp w21,#0x17
+009c5254	b.eq 0x009c527c
+009c5258	cmp w21,#0x18
+009c525c	mov w0,wzr
+009c5260	b.ne 0x009c52b8
+009c5264	mov w8,#0x31b
+009c5268	ldr x9,[x19, #0x1db0]
+009c526c	cbnz x9,0x009c5288
+009c5270	b 0x009c52cc
+009c5274	ldrh w21,[x9]
+009c5278	b 0x009c5220
+009c527c	mov w8,#0x31a
+009c5280	ldr x9,[x19, #0x1db0]
+009c5284	cbz x9,0x009c52cc
+009c5288	ldr x10,[x19, #0x1da8]
+009c528c	mov x11,xzr
+009c5290	ldr x12,[x10, x11, LSL #0x3]
+009c5294	ldr w12,[x12, #0x1c]
+009c5298	cmp w8,w12
+009c529c	b.eq 0x009c52b4
+009c52a0	add x11,x11,#0x1
+009c52a4	cmp x11,x9
+009c52a8	mov w0,wzr
+009c52ac	b.cc 0x009c5290
+009c52b0	b 0x009c52b8
+009c52b4	mov w0,#0x1
+009c52b8	ldp x29,x30,[sp, #0x60]
+009c52bc	ldp x20,x19,[sp, #0x50]
+009c52c0	ldr x21,[sp, #0x40]
+009c52c4	add sp,sp,#0x70
+009c52c8	ret
+009c52cc	mov w0,wzr
+009c52d0	b 0x009c52b8

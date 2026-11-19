@@ -1,0 +1,87 @@
+; FUN_0095e42c @ 0095e42c
+0095e42c	str x23,[sp, #-0x40]!
+0095e430	stp x22,x21,[sp, #0x10]
+0095e434	stp x20,x19,[sp, #0x20]
+0095e438	stp x29,x30,[sp, #0x30]
+0095e43c	add x29,sp,#0x30
+0095e440	cmp w1,#0x1f
+0095e444	mov x19,x0
+0095e448	b.ne 0x0095e548
+0095e44c	ldr x22,[x19, #0x1a0]
+0095e450	mov w10,#0x1cda
+0095e454	mov w9,#0xfaff
+0095e458	orr w12,wzr,#0x1f
+0095e45c	add x2,x22,x10
+0095e460	ldr x23,[x19, #0x20]
+0095e464	strh w9,[x22, #0x1cd8]
+0095e468	strb w12,[x2]
+0095e46c	ldrh w9,[x22, #0x1ca8]
+0095e470	mov w11,#0x1cdb
+0095e474	add x20,x22,x11
+0095e478	ldrh w11,[x22, #0x1caa]
+0095e47c	rev w9,w9
+0095e480	mov w10,#0x1cdc
+0095e484	lsr w12,w9,#0x10
+0095e488	lsr w9,w9,#0x18
+0095e48c	strb w12,[x20]
+0095e490	strb w9,[x22, x10]
+0095e494	rev w10,w11
+0095e498	mov w12,#0x1cdd
+0095e49c	mov w9,#0x1cde
+0095e4a0	lsr w11,w10,#0x10
+0095e4a4	lsr w10,w10,#0x18
+0095e4a8	mov w8,#0x1cd8
+0095e4ac	strb w11,[x22, x12]
+0095e4b0	strb w10,[x22, x9]
+0095e4b4	mov w9,#0x1ce1
+0095e4b8	mov x10,#-0x1cda
+0095e4bc	add x21,x22,x8
+0095e4c0	add x8,x22,x9
+0095e4c4	sub x9,x10,x22
+0095e4c8	mov w11,#0x1cdf
+0095e4cc	mov w12,#0xf0ff
+0095e4d0	add x3,x9,x8
+0095e4d4	orr w1,wzr,#0x3e
+0095e4d8	mov x0,x19
+0095e4dc	strh w12,[x22, x11#0x0]
+0095e4e0	str x8,[x22, #0x1ee0]
+0095e4e4	str x21,[x22, #0x1ed8]
+0095e4e8	bl 0x0095e584
+0095e4ec	ldr w0,[x23, #0x220]
+0095e4f0	orr w2,wzr,#0x3
+0095e4f4	mov w3,#0x4000
+0095e4f8	mov x1,x21
+0095e4fc	bl 0x00c31c50
+0095e500	tbz x0,#0x3f,0x0095e51c
+0095e504	bl 0x00c30710
+0095e508	ldr w2,[x0]
+0095e50c	adrp x1,0x2b3000
+0095e510	add x1,x1,#0x920
+0095e514	mov x0,x19
+0095e518	bl 0x00904b80
+0095e51c	mov w2,#0x4
+0095e520	mov x0,x19
+0095e524	mov x1,x20
+0095e528	bl 0x0095dfd8
+0095e52c	ldr w0,[x23, #0x220]
+0095e530	mov w8,#0x1cdf
+0095e534	add x1,x22,x8
+0095e538	mov w2,#0x2
+0095e53c	mov w3,#0x4000
+0095e540	bl 0x00c31c50
+0095e544	tbnz x0,#0x3f,0x0095e55c
+0095e548	ldp x29,x30,[sp, #0x30]
+0095e54c	ldp x20,x19,[sp, #0x20]
+0095e550	ldp x22,x21,[sp, #0x10]
+0095e554	ldr x23,[sp], #0x40
+0095e558	ret
+0095e55c	bl 0x00c30710
+0095e560	ldr w2,[x0]
+0095e564	mov x0,x19
+0095e568	ldp x29,x30,[sp, #0x30]
+0095e56c	ldp x20,x19,[sp, #0x20]
+0095e570	ldp x22,x21,[sp, #0x10]
+0095e574	adrp x1,0x2b3000
+0095e578	add x1,x1,#0x920
+0095e57c	ldr x23,[sp], #0x40
+0095e580	b 0x00904b80

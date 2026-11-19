@@ -1,0 +1,50 @@
+; o2i_ECPublicKey @ 00a26248
+00a26248	str x21,[sp, #-0x30]!
+00a2624c	stp x20,x19,[sp, #0x10]
+00a26250	stp x29,x30,[sp, #0x20]
+00a26254	add x29,sp,#0x20
+00a26258	cbz x0,0x00a26298
+00a2625c	ldr x19,[x0]
+00a26260	cbz x19,0x00a26298
+00a26264	ldr x8,[x19, #0x18]
+00a26268	cbz x8,0x00a26298
+00a2626c	mov x20,x1
+00a26270	ldr x1,[x1]
+00a26274	mov x0,x19
+00a26278	mov x3,xzr
+00a2627c	mov x21,x2
+00a26280	bl 0x00c3a850
+00a26284	cbz w0,0x00a262e0
+00a26288	ldr x8,[x20]
+00a2628c	add x8,x8,x21
+00a26290	str x8,[x20]
+00a26294	b 0x00a262cc
+00a26298	bl 0x00c342a0
+00a2629c	adrp x0,0x2af000
+00a262a0	adrp x2,0x2d7000
+00a262a4	add x0,x0,#0xe09
+00a262a8	add x2,x2,#0xd3a
+00a262ac	mov w1,#0x47a
+00a262b0	bl 0x00c342b0
+00a262b4	mov w1,#0x102
+00a262b8	mov w0,#0x10
+00a262bc	movk w1,#0xc, LSL #16
+00a262c0	mov x2,xzr
+00a262c4	bl 0x00c342c0
+00a262c8	mov x19,xzr
+00a262cc	mov x0,x19
+00a262d0	ldp x29,x30,[sp, #0x20]
+00a262d4	ldp x20,x19,[sp, #0x10]
+00a262d8	ldr x21,[sp], #0x30
+00a262dc	ret
+00a262e0	bl 0x00c342a0
+00a262e4	adrp x0,0x2af000
+00a262e8	adrp x2,0x2d7000
+00a262ec	add x0,x0,#0xe09
+00a262f0	add x2,x2,#0xd3a
+00a262f4	mov w1,#0x480
+00a262f8	bl 0x00c342b0
+00a262fc	mov w1,#0x10
+00a26300	mov w0,#0x10
+00a26304	movk w1,#0x8, LSL #16
+00a26308	b 0x00a262c0

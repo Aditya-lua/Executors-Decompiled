@@ -1,0 +1,5 @@
+; UTF8_putc @ 00c37830
+00c37830	adrp x16,0xcb9000
+00c37834	ldr x17,[x16, #0xc00]
+00c37838	add x16,x16,#0xc00
+00c3783c	br x17

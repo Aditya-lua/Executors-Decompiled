@@ -1,0 +1,5 @@
+; X509_PUBKEY_set @ 00c39910
+00c39910	adrp x16,0xcba000
+00c39914	ldr x17,[x16, #0xc70]
+00c39918	add x16,x16,#0xc70
+00c3991c	br x17

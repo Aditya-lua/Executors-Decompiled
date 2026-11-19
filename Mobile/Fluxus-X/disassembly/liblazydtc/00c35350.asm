@@ -1,0 +1,5 @@
+; OPENSSL_sk_sort @ 00c35350
+00c35350	adrp x16,0xcb8000
+00c35354	ldr x17,[x16, #0x990]
+00c35358	add x16,x16,#0x990
+00c3535c	br x17

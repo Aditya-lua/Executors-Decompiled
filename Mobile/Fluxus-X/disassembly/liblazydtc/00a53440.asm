@@ -1,0 +1,15 @@
+; ENGINE_set_default_DH @ 00a53440
+00a53440	ldr x8,[x0, #0x20]
+00a53444	cbz x8,0x00a53470
+00a53448	mov x2,x0
+00a5344c	adrp x0,0xd21000
+00a53450	adrp x1,0xa53000
+00a53454	adrp x3,0x766000
+00a53458	add x0,x0,#0x9e0
+00a5345c	add x1,x1,#0x3bc
+00a53460	add x3,x3,#0x0
+00a53464	mov w4,#0x1
+00a53468	mov w5,#0x1
+00a5346c	b 0x00c3bce0
+00a53470	mov w0,#0x1
+00a53474	ret

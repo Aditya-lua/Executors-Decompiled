@@ -1,0 +1,5 @@
+; BIO_ADDRINFO_socktype @ 00c38500
+00c38500	adrp x16,0xcba000
+00c38504	ldr x17,[x16, #0x268]
+00c38508	add x16,x16,#0x268
+00c3850c	br x17

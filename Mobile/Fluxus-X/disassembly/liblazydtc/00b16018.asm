@@ -1,0 +1,12 @@
+; i2d_X509_REQ_bio @ 00b16018
+00b16018	stp x20,x19,[sp, #-0x20]!
+00b1601c	stp x29,x30,[sp, #0x10]
+00b16020	add x29,sp,#0x10
+00b16024	mov x19,x1
+00b16028	mov x20,x0
+00b1602c	bl 0x00c40f00
+00b16030	ldp x29,x30,[sp, #0x10]
+00b16034	mov x1,x20
+00b16038	mov x2,x19
+00b1603c	ldp x20,x19,[sp], #0x20
+00b16040	b 0x00c37510

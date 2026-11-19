@@ -1,0 +1,5 @@
+; ASN1_OBJECT_new @ 00c37670
+00c37670	adrp x16,0xcb9000
+00c37674	ldr x17,[x16, #0xb20]
+00c37678	add x16,x16,#0xb20
+00c3767c	br x17

@@ -1,0 +1,38 @@
+; BN_MONT_CTX_new @ 00a034ec
+00a034ec	str x19,[sp, #-0x20]!
+00a034f0	adrp x1,0x2cb000
+00a034f4	add x1,x1,#0x736
+00a034f8	mov w0,#0x68
+00a034fc	mov w2,#0xe8
+00a03500	stp x29,x30,[sp, #0x10]
+00a03504	add x29,sp,#0x10
+00a03508	bl 0x00c32320
+00a0350c	mov x19,x0
+00a03510	cbz x0,0x00a03540
+00a03514	add x0,x19,#0x8
+00a03518	str wzr,[x19]
+00a0351c	bl 0x00c38e70
+00a03520	add x0,x19,#0x20
+00a03524	bl 0x00c38e70
+00a03528	add x0,x19,#0x38
+00a0352c	bl 0x00c38e70
+00a03530	mov w8,#0x1
+00a03534	stp xzr,xzr,[x19, #0x50]
+00a03538	str w8,[x19, #0x60]
+00a0353c	b 0x00a03570
+00a03540	bl 0x00c342a0
+00a03544	adrp x0,0x2cb000
+00a03548	adrp x2,0x2c5000
+00a0354c	add x0,x0,#0x736
+00a03550	add x2,x2,#0x7ee
+00a03554	mov w1,#0xe9
+00a03558	bl 0x00c342b0
+00a0355c	mov w1,#0x100
+00a03560	orr w0,wzr,#0x3
+00a03564	movk w1,#0xc, LSL #16
+00a03568	mov x2,xzr
+00a0356c	bl 0x00c342c0
+00a03570	ldp x29,x30,[sp, #0x10]
+00a03574	mov x0,x19
+00a03578	ldr x19,[sp], #0x20
+00a0357c	ret

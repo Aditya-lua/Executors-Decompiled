@@ -1,0 +1,164 @@
+[
+  {
+    "path": "lib/arm64-v8a/libbacktrace-native.so",
+    "bytes": 5339704,
+    "sha256": "f59fcb7eb6c77439676c38a43a2c1a09734b5314456c896807d62dc7609577d4",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "liblog.so",
+      "libz.so",
+      "libdl.so",
+      "libm.so",
+      "libc.so"
+    ],
+    "imports": 315,
+    "exports": 10994,
+    "defined_functions": 9399
+  },
+  {
+    "path": "lib/arm64-v8a/libdatastore_shared_counter.so",
+    "bytes": 7112,
+    "sha256": "d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "libm.so",
+      "libdl.so",
+      "libc.so"
+    ],
+    "imports": 10,
+    "exports": 9,
+    "defined_functions": 9
+  },
+  {
+    "path": "lib/arm64-v8a/libimage_processing_util_jni.so",
+    "bytes": 32544,
+    "sha256": "f0e4611db0d6b68942d8ba6977519f3dd1cdbffa87b7fc16d8006696ba954af4",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "liblog.so",
+      "libandroid.so",
+      "libjnigraphics.so",
+      "libm.so",
+      "libdl.so",
+      "libc.so"
+    ],
+    "imports": 18,
+    "exports": 8,
+    "defined_functions": 8
+  },
+  {
+    "path": "lib/arm64-v8a/liblazydtc.so",
+    "bytes": 12333432,
+    "sha256": "5241de4be0daeb2a193604d26b9e6a9b528757ffd74fb61b961e6ed8ae1c88cc",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "liblog.so",
+      "libm.so",
+      "libz.so",
+      "libandroid.so",
+      "libc.so",
+      "libdl.so"
+    ],
+    "imports": 275,
+    "exports": 11675,
+    "defined_functions": 10158
+  },
+  {
+    "path": "lib/arm64-v8a/librenderscript-toolkit.so",
+    "bytes": 394112,
+    "sha256": "84a2c8fc0fcd917cfd8e0b7ad7b6dc8ba60dfa7e398bf1ee924909051200bd27",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "libjnigraphics.so",
+      "liblog.so",
+      "libdl.so",
+      "libm.so",
+      "libc.so"
+    ],
+    "imports": 89,
+    "exports": 730,
+    "defined_functions": 461
+  },
+  {
+    "path": "lib/arm64-v8a/libroblox.so",
+    "bytes": 108360288,
+    "sha256": "2ce7db6dc4bb3d907b0318fc79617fbf63c66298657286b4f6b5821985e40c43",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "libandroid.so",
+      "liblog.so",
+      "libOpenMAXAL.so",
+      "libmediandk.so",
+      "libGLESv2.so",
+      "libEGL.so",
+      "libOpenSLES.so",
+      "libdl.so",
+      "libm.so",
+      "libc.so"
+    ],
+    "imports": 582,
+    "exports": 606,
+    "defined_functions": 588
+  },
+  {
+    "path": "lib/arm64-v8a/libsurface_util_jni.so",
+    "bytes": 4896,
+    "sha256": "6cb2eac3c68e6a82ce2a5ea5aba86749eb8c609914392e125f6cdfbc208992f8",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "libandroid.so",
+      "libm.so",
+      "libdl.so",
+      "libc.so"
+    ],
+    "imports": 9,
+    "exports": 1,
+    "defined_functions": 1
+  },
+  {
+    "path": "lib/arm64-v8a/libtrampoline.so",
+    "bytes": 5104,
+    "sha256": "50506346d08f40a483df80025b62246298816ebf344ec3ccdb854a14582bdd35",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "liblog.so",
+      "libdl.so",
+      "libc.so"
+    ],
+    "imports": 7,
+    "exports": 0,
+    "defined_functions": 0
+  },
+  {
+    "path": "lib/arm64-v8a/libzstd-jni-1.5.7-6.so",
+    "bytes": 603960,
+    "sha256": "e5ebc383da2f10794b1ca23964fb7e202fcb351e83942f0c8fe5d082a119b2c6",
+    "machine": "EM_AARCH64",
+    "class": 64,
+    "little_endian": true,
+    "needed": [
+      "libm.so",
+      "libdl.so",
+      "libc.so"
+    ],
+    "imports": 32,
+    "exports": 728,
+    "defined_functions": 719
+  }
+]

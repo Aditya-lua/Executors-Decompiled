@@ -1,0 +1,46 @@
+; EVP_PKEY_new_mac_key @ 00a748f8
+00a748f8	str x21,[sp, #-0x30]!
+00a748fc	stp x20,x19,[sp, #0x10]
+00a74900	stp x29,x30,[sp, #0x20]
+00a74904	add x29,sp,#0x20
+00a74908	mov w20,w3
+00a7490c	mov x21,x2
+00a74910	str xzr,[sp, #0x8]
+00a74914	bl 0x00c3dbf0
+00a74918	cbz x0,0x00a7499c
+00a7491c	mov w1,#0x4
+00a74920	mov x19,x0
+00a74924	bl 0x00a74374
+00a74928	cmp w0,#0x1
+00a7492c	b.lt 0x00a74990
+00a74930	mov x0,x19
+00a74934	mov x1,x21
+00a74938	mov w2,w20
+00a7493c	bl 0x00c3dc00
+00a74940	cmp w0,#0x1
+00a74944	b.lt 0x00a74990
+00a74948	ldr w8,[x19]
+00a7494c	cmp w8,#0x4
+00a74950	b.ne 0x00a74964
+00a74954	add x1,sp,#0x8
+00a74958	mov x0,x19
+00a7495c	bl 0x00a744d0
+00a74960	b 0x00a74990
+00a74964	bl 0x00c342a0
+00a74968	adrp x0,0x2d9000
+00a7496c	adrp x2,0x2cf000
+00a74970	add x0,x0,#0xd3a
+00a74974	add x2,x2,#0xc41
+00a74978	mov w1,#0x10f
+00a7497c	bl 0x00c342b0
+00a74980	orr w0,wzr,#0x6
+00a74984	mov w1,#0x97
+00a74988	mov x2,xzr
+00a7498c	bl 0x00c342c0
+00a74990	mov x0,x19
+00a74994	bl 0x00c34620
+00a74998	ldr x0,[sp, #0x8]
+00a7499c	ldp x29,x30,[sp, #0x20]
+00a749a0	ldp x20,x19,[sp, #0x10]
+00a749a4	ldr x21,[sp], #0x30
+00a749a8	ret

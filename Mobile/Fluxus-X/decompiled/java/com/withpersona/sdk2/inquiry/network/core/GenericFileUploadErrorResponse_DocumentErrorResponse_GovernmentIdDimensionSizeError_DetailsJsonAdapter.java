@@ -1,0 +1,75 @@
+package com.withpersona.sdk2.inquiry.network.core;
+
+import hn.h;
+import hn.m;
+import hn.t;
+import hn.w;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import p001kotlin.collections.q0;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class GenericFileUploadErrorResponse_DocumentErrorResponse_GovernmentIdDimensionSizeError_DetailsJsonAdapter extends h<GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError.Details> {
+
+    @NotNull
+    private final h<Integer> intAdapter;
+
+    @NotNull
+    private final m.b options = m.b.a("min_dimension_size", "max_dimension_size");
+
+    public GenericFileUploadErrorResponse_DocumentErrorResponse_GovernmentIdDimensionSizeError_DetailsJsonAdapter(@NotNull w wVar) {
+        this.intAdapter = wVar.f(Integer.TYPE, q0.d(), "minDimensionSize");
+    }
+
+    @NotNull
+    public String toString() {
+        StringBuilder sb2 = new StringBuilder(113);
+        sb2.append("GeneratedJsonAdapter(GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError.Details)");
+        return sb2.toString();
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // hn.h
+    @NotNull
+    public GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError.Details fromJson(@NotNull m mVar) {
+        mVar.b();
+        Integer numFromJson = null;
+        Integer numFromJson2 = null;
+        while (mVar.f()) {
+            int I = mVar.I(this.options);
+            if (I == -1) {
+                mVar.O();
+                mVar.Q();
+            } else if (I == 0) {
+                numFromJson = this.intAdapter.fromJson(mVar);
+                if (numFromJson == null) {
+                    throw jn.c.x("minDimensionSize", "min_dimension_size", mVar);
+                }
+            } else if (I == 1 && (numFromJson2 = this.intAdapter.fromJson(mVar)) == null) {
+                throw jn.c.x("maxDimensionSize", "max_dimension_size", mVar);
+            }
+        }
+        mVar.d();
+        if (numFromJson == null) {
+            throw jn.c.o("minDimensionSize", "min_dimension_size", mVar);
+        }
+        int iIntValue = numFromJson.intValue();
+        if (numFromJson2 != null) {
+            return new GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError.Details(iIntValue, numFromJson2.intValue());
+        }
+        throw jn.c.o("maxDimensionSize", "max_dimension_size", mVar);
+    }
+
+    @Override // hn.h
+    public void toJson(@NotNull t tVar, @Nullable GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError.Details details) {
+        if (details == null) {
+            throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");
+        }
+        tVar.c();
+        tVar.o("min_dimension_size");
+        this.intAdapter.toJson(tVar, Integer.valueOf(details.getMinDimensionSize()));
+        tVar.o("max_dimension_size");
+        this.intAdapter.toJson(tVar, Integer.valueOf(details.getMaxDimensionSize()));
+        tVar.g();
+    }
+}

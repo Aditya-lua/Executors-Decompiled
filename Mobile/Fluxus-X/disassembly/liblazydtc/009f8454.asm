@@ -1,0 +1,36 @@
+; X509_ALGOR_copy @ 009f8454
+009f8454	stp x20,x19,[sp, #-0x20]!
+009f8458	mov x20,x0
+009f845c	mov w0,wzr
+009f8460	stp x29,x30,[sp, #0x10]
+009f8464	add x29,sp,#0x10
+009f8468	cbz x20,0x009f84d4
+009f846c	mov x19,x1
+009f8470	cbz x1,0x009f84d4
+009f8474	ldr x0,[x20]
+009f8478	cbz x0,0x009f8480
+009f847c	bl 0x00c37660
+009f8480	ldr x0,[x20, #0x8]
+009f8484	str xzr,[x20]
+009f8488	cbz x0,0x009f8490
+009f848c	bl 0x00c37cc0
+009f8490	str xzr,[x20, #0x8]
+009f8494	ldr x0,[x19]
+009f8498	cbz x0,0x009f84a8
+009f849c	bl 0x00c37730
+009f84a0	str x0,[x20]
+009f84a4	cbz x0,0x009f84d4
+009f84a8	ldr x8,[x19, #0x8]
+009f84ac	cbz x8,0x009f84d0
+009f84b0	bl 0x00c37a40
+009f84b4	str x0,[x20, #0x8]
+009f84b8	cbz x0,0x009f84d4
+009f84bc	ldr x8,[x19, #0x8]
+009f84c0	ldr w1,[x8]
+009f84c4	ldr x2,[x8, #0x8]
+009f84c8	bl 0x00c37a70
+009f84cc	cbz w0,0x009f84d4
+009f84d0	mov w0,#0x1
+009f84d4	ldp x29,x30,[sp, #0x10]
+009f84d8	ldp x20,x19,[sp], #0x20
+009f84dc	ret

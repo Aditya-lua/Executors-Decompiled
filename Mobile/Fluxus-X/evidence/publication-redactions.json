@@ -1,0 +1,20 @@
+[
+  {
+    "path": "decompiled/resources/res/values/strings.xml",
+    "kind": "google-api-key",
+    "line": 335,
+    "value_sha256": "4cead161b49d674f289d685d6dec74049f8f4f0216137bb19f5d05fa2ab2973d"
+  },
+  {
+    "path": "decompiled/resources/res/values/strings.xml",
+    "kind": "google-api-key",
+    "line": 337,
+    "value_sha256": "4cead161b49d674f289d685d6dec74049f8f4f0216137bb19f5d05fa2ab2973d"
+  },
+  {
+    "path": "data/constants/initializer-string-candidates.json",
+    "kind": "github-token",
+    "line": 56,
+    "value_sha256": "c97463df262c8fb3d79448f64595387aed69c0d454982214f6e2f1c6c7d4b59c"
+  }
+]

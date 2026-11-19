@@ -1,0 +1,4 @@
+; ECPARAMETERS_new @ 00a24468
+00a24468	adrp x0,0xc5a000
+00a2446c	add x0,x0,#0xcc0
+00a24470	b 0x00c372e0

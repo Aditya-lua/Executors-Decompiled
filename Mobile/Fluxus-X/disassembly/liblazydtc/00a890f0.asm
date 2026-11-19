@@ -1,0 +1,8 @@
+; AES_cbc_encrypt @ 00a890f0
+00a890f0	cbz w5,0x00a89100
+00a890f4	adrp x5,0xcb5000
+00a890f8	ldr x5,[x5, #0x310]
+00a890fc	b 0x00c3e250
+00a89100	adrp x5,0xcb5000
+00a89104	ldr x5,[x5, #0x308]
+00a89108	b 0x00c3e240

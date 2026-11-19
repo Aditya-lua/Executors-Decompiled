@@ -1,0 +1,4 @@
+; GOST_KX_MESSAGE_it @ 009e630c
+009e630c	adrp x0,0xc58000
+009e6310	add x0,x0,#0x888
+009e6314	ret

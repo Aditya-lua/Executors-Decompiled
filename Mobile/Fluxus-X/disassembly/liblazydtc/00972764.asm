@@ -1,0 +1,66 @@
+; ix::HttpClient::createRequest @ 00972764
+00972764	stp x24,x23,[sp, #-0x40]!
+00972768	stp x22,x21,[sp, #0x10]
+0097276c	stp x20,x19,[sp, #0x20]
+00972770	stp x29,x30,[sp, #0x30]
+00972774	add x29,sp,#0x30
+00972778	mov w0,#0x150
+0097277c	mov x20,x2
+00972780	mov x21,x1
+00972784	mov x23,x8
+00972788	bl 0x00c2fed0
+0097278c	str xzr,[x0, #0x10]
+00972790	adrp x8,0xcb4000
+00972794	ldr x8,[x8, #0xf50]
+00972798	add x22,x0,#0x20
+0097279c	mov x19,x0
+009727a0	add x24,x0,#0x58
+009727a4	add x8,x8,#0x10
+009727a8	stp x8,xzr,[x0]
+009727ac	mov w2,#0x130
+009727b0	mov x0,x22
+009727b4	mov w1,wzr
+009727b8	bl 0x00c301c0
+009727bc	adrp x8,0x29a000
+009727c0	ldr d0,[x8, #0x160]
+009727c4	mov w8,#0x1
+009727c8	strb w8,[x19, #0xa0]
+009727cc	mov w8,#0x5
+009727d0	str w8,[x19, #0xa4]
+009727d4	mov w8,#0x100
+009727d8	cmp x22,x21
+009727dc	str x24,[x19, #0x50]
+009727e0	stp xzr,xzr,[x19, #0x88]
+009727e4	stp xzr,xzr,[x19, #0x78]
+009727e8	stp xzr,xzr,[x19, #0x68]
+009727ec	strb wzr,[x19, #0xaa]
+009727f0	str xzr,[x19, #0xd0]
+009727f4	str xzr,[x19, #0x100]
+009727f8	str xzr,[x19, #0x130]
+009727fc	strh w8,[x19, #0xa8]
+00972800	str d0,[x19, #0x98]
+00972804	stp x22,x19,[x23]
+00972808	b.eq 0x0097282c
+0097280c	ldrb w8,[x21]
+00972810	ldp x10,x9,[x21, #0x8]
+00972814	tst w8,#0x1
+00972818	lsr w11,w8,#0x1
+0097281c	csinc x1,x9,x21,ne
+00972820	csel x2,x11,x10,eq
+00972824	mov x0,x22
+00972828	bl 0x00c31090
+0097282c	add x0,x19,#0x38
+00972830	cmp x0,x20
+00972834	b.eq 0x00972854
+00972838	ldrb w8,[x20]
+0097283c	ldp x10,x9,[x20, #0x8]
+00972840	tst w8,#0x1
+00972844	lsr w11,w8,#0x1
+00972848	csinc x1,x9,x20,ne
+0097284c	csel x2,x11,x10,eq
+00972850	bl 0x00c31090
+00972854	ldp x29,x30,[sp, #0x30]
+00972858	ldp x20,x19,[sp, #0x20]
+0097285c	ldp x22,x21,[sp, #0x10]
+00972860	ldp x24,x23,[sp], #0x40
+00972864	ret

@@ -1,0 +1,51 @@
+; ssl_security_cert_chain @ 009c5750
+009c5750	stp x22,x21,[sp, #-0x30]!
+009c5754	stp x20,x19,[sp, #0x10]
+009c5758	mov w19,w3
+009c575c	mov x20,x1
+009c5760	mov x21,x0
+009c5764	mov w22,wzr
+009c5768	stp x29,x30,[sp, #0x20]
+009c576c	add x29,sp,#0x20
+009c5770	cbnz x2,0x009c578c
+009c5774	mov x0,x20
+009c5778	mov w1,wzr
+009c577c	bl 0x00c32610
+009c5780	cbz x0,0x009c5800
+009c5784	mov x2,x0
+009c5788	mov w22,#0x1
+009c578c	mov w4,#0x1
+009c5790	mov x0,x21
+009c5794	mov x1,xzr
+009c5798	mov w3,w19
+009c579c	bl 0x009c55b0
+009c57a0	cmp w0,#0x1
+009c57a4	b.ne 0x009c5808
+009c57a8	mov x0,x20
+009c57ac	bl 0x00c325e0
+009c57b0	cmp w22,w0
+009c57b4	b.ge 0x009c57f8
+009c57b8	mov x0,x20
+009c57bc	mov w1,w22
+009c57c0	bl 0x00c32610
+009c57c4	mov x2,x0
+009c57c8	mov x0,x21
+009c57cc	mov x1,xzr
+009c57d0	mov w3,w19
+009c57d4	mov w4,wzr
+009c57d8	bl 0x009c55b0
+009c57dc	cmp w0,#0x1
+009c57e0	b.ne 0x009c5808
+009c57e4	mov x0,x20
+009c57e8	add w22,w22,#0x1
+009c57ec	bl 0x00c325e0
+009c57f0	cmp w22,w0
+009c57f4	b.lt 0x009c57b8
+009c57f8	mov w0,#0x1
+009c57fc	b 0x009c5808
+009c5800	mov w0,#0x103
+009c5804	movk w0,#0xc, LSL #16
+009c5808	ldp x29,x30,[sp, #0x20]
+009c580c	ldp x20,x19,[sp, #0x10]
+009c5810	ldp x22,x21,[sp], #0x30
+009c5814	ret

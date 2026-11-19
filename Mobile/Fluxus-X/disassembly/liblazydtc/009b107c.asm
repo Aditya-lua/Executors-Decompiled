@@ -1,0 +1,44 @@
+; SSL_CIPHER_get_kx_nid @ 009b107c
+009b107c	ldr w8,[x0, #0x1c]
+009b1080	mov w0,wzr
+009b1084	cmp w8,#0x7f
+009b1088	b.gt 0x009b10b8
+009b108c	cmp w8,#0x40
+009b1090	b.hi 0x009b1124
+009b1094	adrp x9,0x74b000
+009b1098	mov w8,w8
+009b109c	add x9,x9,#0xbd0
+009b10a0	ldrsw x8,[x9, x8, LSL #0x2]
+009b10a4	add x9,x8,x9
+009b10a8	mov x8,xzr
+009b10ac	br x9
+009b10b0	mov w8,#0xa
+009b10b4	b 0x009b1114
+009b10b8	cmp w8,#0x80
+009b10bc	b.eq 0x009b1108
+009b10c0	cmp w8,#0x100
+009b10c4	b.eq 0x009b1110
+009b10c8	cmp w8,#0x200
+009b10cc	b.ne 0x009b1124
+009b10d0	mov w8,#0x9
+009b10d4	b 0x009b1114
+009b10d8	mov w8,#0x2
+009b10dc	b 0x009b1114
+009b10e0	mov w8,#0x1
+009b10e4	b 0x009b1114
+009b10e8	orr w8,wzr,#0x6
+009b10ec	b 0x009b1114
+009b10f0	mov w8,#0x8
+009b10f4	b 0x009b1114
+009b10f8	orr w8,wzr,#0x7
+009b10fc	b 0x009b1114
+009b1100	mov w8,#0x5
+009b1104	b 0x009b1114
+009b1108	orr w8,wzr,#0x3
+009b110c	b 0x009b1114
+009b1110	mov w8,#0x4
+009b1114	adrp x9,0x74b000
+009b1118	add x9,x9,#0xfc4
+009b111c	add x8,x9,x8, LSL #0x3
+009b1120	ldr w0,[x8, #0x4]
+009b1124	ret

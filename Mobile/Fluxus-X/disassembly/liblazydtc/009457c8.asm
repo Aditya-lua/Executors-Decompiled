@@ -1,0 +1,16 @@
+; FUN_009457c8 @ 009457c8
+009457c8	str x19,[sp, #-0x20]!
+009457cc	stp x29,x30,[sp, #0x10]
+009457d0	add x29,sp,#0x10
+009457d4	ldr x8,[x0, #0x18]
+009457d8	mov x19,x0
+009457dc	mov w0,wzr
+009457e0	cbnz x8,0x009457f8
+009457e4	add x0,x19,#0x60
+009457e8	bl 0x00904984
+009457ec	ldr x8,[x19, #0x88]
+009457f0	cmp x0,x8
+009457f4	cset w0,hi
+009457f8	ldp x29,x30,[sp, #0x10]
+009457fc	ldr x19,[sp], #0x20
+00945800	ret

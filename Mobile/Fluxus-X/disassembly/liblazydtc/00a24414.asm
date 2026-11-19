@@ -1,0 +1,4 @@
+; X9_62_PENTANOMIAL_new @ 00a24414
+00a24414	adrp x0,0xc5a000
+00a24418	add x0,x0,#0xe98
+00a2441c	b 0x00c372e0

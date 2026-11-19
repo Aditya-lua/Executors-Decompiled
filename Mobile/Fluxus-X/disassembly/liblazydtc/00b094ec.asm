@@ -1,0 +1,57 @@
+; ossl_x509_add_certs_new @ 00b094ec
+00b094ec	str x25,[sp, #-0x50]!
+00b094f0	stp x22,x21,[sp, #0x20]
+00b094f4	mov x21,x0
+00b094f8	mov x0,x1
+00b094fc	stp x24,x23,[sp, #0x10]
+00b09500	stp x20,x19,[sp, #0x30]
+00b09504	stp x29,x30,[sp, #0x40]
+00b09508	add x29,sp,#0x40
+00b0950c	mov w19,w2
+00b09510	mov x20,x1
+00b09514	bl 0x00c325e0
+00b09518	subs w24,w0,#0x1
+00b0951c	b.lt 0x00b09578
+00b09520	mov w22,w0
+00b09524	mov w25,wzr
+00b09528	tst w19,#0x2
+00b0952c	csel w1,w25,w24,eq
+00b09530	mov x0,x20
+00b09534	bl 0x00c32610
+00b09538	ldr x8,[x21]
+00b0953c	mov x23,x0
+00b09540	cbnz x8,0x00b09554
+00b09544	bl 0x00c34780
+00b09548	mov x8,x0
+00b0954c	str x0,[x21]
+00b09550	cbz x0,0x00b09594
+00b09554	mov x0,x8
+00b09558	mov x1,x23
+00b0955c	mov w2,w19
+00b09560	bl 0x00b09368
+00b09564	cbz w0,0x00b0957c
+00b09568	add w25,w25,#0x1
+00b0956c	cmp w25,w22
+00b09570	sub w24,w24,#0x1
+00b09574	b.lt 0x00b09528
+00b09578	mov w0,#0x1
+00b0957c	ldp x29,x30,[sp, #0x40]
+00b09580	ldp x20,x19,[sp, #0x30]
+00b09584	ldp x22,x21,[sp, #0x20]
+00b09588	ldp x24,x23,[sp, #0x10]
+00b0958c	ldr x25,[sp], #0x50
+00b09590	ret
+00b09594	bl 0x00c342a0
+00b09598	adrp x0,0x2d4000
+00b0959c	adrp x2,0x2ba000
+00b095a0	add x0,x0,#0x58a
+00b095a4	add x2,x2,#0x8d1
+00b095a8	mov w1,#0xbb
+00b095ac	bl 0x00c342b0
+00b095b0	mov w1,#0x100
+00b095b4	mov w0,#0xb
+00b095b8	movk w1,#0xc, LSL #16
+00b095bc	mov x2,xzr
+00b095c0	bl 0x00c342c0
+00b095c4	mov w0,wzr
+00b095c8	b 0x00b0957c

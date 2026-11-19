@@ -1,0 +1,12 @@
+; _INIT_151 @ 008b34e4
+008b34e4	movi v0.2D,#0x0
+008b34e8	adrp x1,0xd1f000
+008b34ec	add x1,x1,#0x320
+008b34f0	mov w8,#0x3f800000
+008b34f4	nop
+008b34f8	adr x0,0x7fbc70
+008b34fc	adrp x2,0xc48000
+008b3500	add x2,x2,#0x880
+008b3504	str w8,[x1, #0x20]
+008b3508	stp q0,q0,[x1]
+008b350c	b 0x00c2fe70

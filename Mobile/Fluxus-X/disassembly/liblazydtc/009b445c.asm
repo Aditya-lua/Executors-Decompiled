@@ -1,0 +1,58 @@
+; SSL_do_handshake @ 009b445c
+009b445c	sub sp,sp,#0x50
+009b4460	stp x29,x30,[sp, #0x40]
+009b4464	ldr x8,[x0, #0x30]
+009b4468	str x19,[sp, #0x30]
+009b446c	add x29,sp,#0x40
+009b4470	cbz x8,0x009b44d4
+009b4474	mov w1,#0xffffffff
+009b4478	mov x19,x0
+009b447c	bl 0x00c35cc0
+009b4480	ldr x8,[x19, #0x8]
+009b4484	mov x0,x19
+009b4488	mov w1,wzr
+009b448c	ldr x8,[x8, #0x60]
+009b4490	blr x8
+009b4494	mov x0,x19
+009b4498	bl 0x00c344e0
+009b449c	cbnz w0,0x009b44ac
+009b44a0	mov x0,x19
+009b44a4	bl 0x00c347f0
+009b44a8	cbz w0,0x009b452c
+009b44ac	ldrb w8,[x19, #0x9f1]
+009b44b0	tbz w8,#0x0,0x009b44bc
+009b44b4	bl 0x00c355a0
+009b44b8	cbz x0,0x009b4508
+009b44bc	ldr x1,[x19, #0x30]
+009b44c0	mov x0,x19
+009b44c4	ldp x29,x30,[sp, #0x40]
+009b44c8	ldr x19,[sp, #0x30]
+009b44cc	add sp,sp,#0x50
+009b44d0	br x1
+009b44d4	bl 0x00c342a0
+009b44d8	adrp x0,0x2c5000
+009b44dc	adrp x2,0x2bb000
+009b44e0	add x0,x0,#0x652
+009b44e4	add x2,x2,#0x824
+009b44e8	mov w1,#0xf64
+009b44ec	bl 0x00c342b0
+009b44f0	mov w0,#0x14
+009b44f4	mov w1,#0x90
+009b44f8	mov x2,xzr
+009b44fc	bl 0x00c342c0
+009b4500	mov w0,#0xffffffff
+009b4504	b 0x009b4530
+009b4508	adrp x2,0x9b6000
+009b450c	movi v0.2D,#0x0
+009b4510	add x2,x2,#0xe24
+009b4514	add x1,sp,#0x8
+009b4518	mov x0,x19
+009b451c	stp q0,q0,[sp, #0x10]
+009b4520	str x19,[sp, #0x8]
+009b4524	bl 0x009b4724
+009b4528	b 0x009b4530
+009b452c	mov w0,#0x1
+009b4530	ldp x29,x30,[sp, #0x40]
+009b4534	ldr x19,[sp, #0x30]
+009b4538	add sp,sp,#0x50
+009b453c	ret

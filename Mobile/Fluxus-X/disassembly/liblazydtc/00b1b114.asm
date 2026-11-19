@@ -1,0 +1,4 @@
+; X509_REVOKED_new @ 00b1b114
+00b1b114	adrp x0,0xc82000
+00b1b118	add x0,x0,#0x58
+00b1b11c	b 0x00c372e0

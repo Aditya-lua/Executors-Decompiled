@@ -1,0 +1,5 @@
+; PEM_X509_INFO_read_bio @ 00c32630
+00c32630	adrp x16,0xcb7000
+00c32634	ldr x17,[x16, #0x300]
+00c32638	add x16,x16,#0x300
+00c3263c	br x17

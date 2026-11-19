@@ -1,0 +1,23 @@
+; SSL_extension_supported @ 009d67f0
+009d67f0	mov w8,w0
+009d67f4	cmp w0,#0x33
+009d67f8	mov w0,#0x1
+009d67fc	b.hi 0x009d6828
+009d6800	mov w9,w8
+009d6804	mov w10,#0x1
+009d6808	lsl x9,x10,x9
+009d680c	mov x10,#0x7c23
+009d6810	movk x10,#0xe5, LSL #16
+009d6814	movk x10,#0xbe08, LSL #32
+009d6818	movk x10,#0xa, LSL #48
+009d681c	tst x9,x10
+009d6820	b.eq 0x009d6828
+009d6824	ret
+009d6828	mov w9,#0x3374
+009d682c	cmp w8,w9
+009d6830	b.eq 0x009d6824
+009d6834	mov w9,#0xff01
+009d6838	cmp w8,w9
+009d683c	b.eq 0x009d6824
+009d6840	mov w0,wzr
+009d6844	ret

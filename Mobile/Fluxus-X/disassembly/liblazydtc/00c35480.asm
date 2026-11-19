@@ -1,0 +1,5 @@
+; SSL_CONF_CTX_free @ 00c35480
+00c35480	adrp x16,0xcb8000
+00c35484	ldr x17,[x16, #0xa28]
+00c35488	add x16,x16,#0xa28
+00c3548c	br x17

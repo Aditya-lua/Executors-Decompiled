@@ -1,0 +1,4 @@
+; X509_CERT_AUX_free @ 00b1f134
+00b1f134	adrp x1,0xc82000
+00b1f138	add x1,x1,#0xc60
+00b1f13c	b 0x00c36160

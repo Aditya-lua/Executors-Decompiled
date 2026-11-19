@@ -1,0 +1,5 @@
+; SSL_accept @ 00c34050
+00c34050	adrp x16,0xcb8000
+00c34054	ldr x17,[x16, #0x10]
+00c34058	add x16,x16,#0x10
+00c3405c	br x17

@@ -1,0 +1,45 @@
+; FUN_00c2378c @ 00c2378c
+00c2378c	bti c
+00c23790	cmp x0,x1
+00c23794	b.eq 0x00c2381c
+00c23798	ldrb w8,[x0]
+00c2379c	cmp w8,#0x5f
+00c237a0	b.ne 0x00c237f4
+00c237a4	add x8,x0,#0x1
+00c237a8	cmp x8,x1
+00c237ac	b.eq 0x00c2381c
+00c237b0	ldrb w8,[x8]
+00c237b4	sub w9,w8,#0x3a
+00c237b8	cmn w9,#0xa
+00c237bc	b.cs 0x00c23820
+00c237c0	cmp w8,#0x5f
+00c237c4	b.ne 0x00c2381c
+00c237c8	add x8,x0,#0x2
+00c237cc	cmp x8,x1
+00c237d0	b.eq 0x00c2381c
+00c237d4	ldrb w9,[x8]
+00c237d8	sub w10,w9,#0x3a
+00c237dc	cmn w10,#0xa
+00c237e0	b.cc 0x00c23830
+00c237e4	add x8,x8,#0x1
+00c237e8	cmp x8,x1
+00c237ec	b.ne 0x00c237d4
+00c237f0	b 0x00c2381c
+00c237f4	sub w8,w8,#0x3a
+00c237f8	cmn w8,#0xa
+00c237fc	b.cc 0x00c2381c
+00c23800	add x8,x0,#0x1
+00c23804	cmp x8,x1
+00c23808	b.eq 0x00c23828
+00c2380c	ldrb w9,[x8], #0x1
+00c23810	sub w9,w9,#0x3a
+00c23814	cmn w9,#0xb
+00c23818	b.hi 0x00c23804
+00c2381c	ret
+00c23820	add x0,x0,#0x2
+00c23824	ret
+00c23828	mov x0,x1
+00c2382c	ret
+00c23830	cmp w9,#0x5f
+00c23834	csinc x0,x0,x8,ne
+00c23838	ret

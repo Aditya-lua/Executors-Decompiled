@@ -1,0 +1,14 @@
+; FUN_00b3204c @ 00b3204c
+00b3204c	stp x29,x30,[sp, #-0x10]!
+00b32050	mov x29,sp
+00b32054	bl 0x00c41000
+00b32058	cbz w0,0x00b32074
+00b3205c	adrp x1,0x2c8000
+00b32060	add x1,x1,#0x64d
+00b32064	orr w0,wzr,#0x70
+00b32068	mov w2,#0x4a
+00b3206c	ldp x29,x30,[sp], #0x10
+00b32070	b 0x00c34250
+00b32074	mov x0,xzr
+00b32078	ldp x29,x30,[sp], #0x10
+00b3207c	ret

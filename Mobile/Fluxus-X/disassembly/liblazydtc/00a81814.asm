@@ -1,0 +1,67 @@
+; ossl_lib_ctx_get_descriptor @ 00a81814
+00a81814	stp x20,x19,[sp, #-0x20]!
+00a81818	stp x29,x30,[sp, #0x10]
+00a8181c	add x29,sp,#0x10
+00a81820	cbz x0,0x00a81878
+00a81824	adrp x20,0xd21000
+00a81828	add x20,x20,#0xb90
+00a8182c	cmp x0,x20
+00a81830	mov x19,x0
+00a81834	cset w8,eq
+00a81838	cbz x0,0x00a818d0
+00a8183c	b.eq 0x00a818d0
+00a81840	adrp x0,0xd21000
+00a81844	adrp x1,0xa81000
+00a81848	add x0,x0,#0xd5c
+00a8184c	add x1,x1,#0x348
+00a81850	bl 0x00c34d60
+00a81854	cbz w0,0x00a818ec
+00a81858	adrp x8,0xd21000
+00a8185c	ldr w8,[x8, #0xd60]
+00a81860	mov x0,xzr
+00a81864	cbz w8,0x00a818f0
+00a81868	adrp x0,0xd21000
+00a8186c	add x0,x0,#0xd58
+00a81870	bl 0x00c38360
+00a81874	b 0x00a818f0
+00a81878	adrp x0,0xd21000
+00a8187c	adrp x1,0xa81000
+00a81880	add x0,x0,#0xd5c
+00a81884	add x1,x1,#0x348
+00a81888	bl 0x00c34d60
+00a8188c	cbz w0,0x00a818b0
+00a81890	adrp x8,0xd21000
+00a81894	ldr w8,[x8, #0xd60]
+00a81898	mov x0,xzr
+00a8189c	cbz w8,0x00a818b4
+00a818a0	adrp x0,0xd21000
+00a818a4	add x0,x0,#0xd58
+00a818a8	bl 0x00c38360
+00a818ac	b 0x00a818b4
+00a818b0	mov x0,xzr
+00a818b4	adrp x8,0xd21000
+00a818b8	cmp x0,#0x0
+00a818bc	add x8,x8,#0xb90
+00a818c0	cset w9,eq
+00a818c4	cmp x0,x8
+00a818c8	cset w8,eq
+00a818cc	orr w8,w9,w8
+00a818d0	adrp x9,0x2d3000
+00a818d4	adrp x10,0x2a8000
+00a818d8	add x9,x9,#0xbe4
+00a818dc	add x10,x10,#0x3f
+00a818e0	cmp w8,#0x0
+00a818e4	csel x0,x10,x9,ne
+00a818e8	b 0x00a81910
+00a818ec	mov x0,xzr
+00a818f0	cmp x0,#0x0
+00a818f4	adrp x8,0x2d7000
+00a818f8	csel x9,x20,x0,eq
+00a818fc	adrp x10,0x2d3000
+00a81900	add x8,x8,#0xfe3
+00a81904	add x10,x10,#0xbe4
+00a81908	cmp x9,x19
+00a8190c	csel x0,x10,x8,eq
+00a81910	ldp x29,x30,[sp, #0x10]
+00a81914	ldp x20,x19,[sp], #0x20
+00a81918	ret

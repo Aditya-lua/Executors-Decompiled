@@ -1,0 +1,60 @@
+; SSL_shutdown @ 009b50b4
+009b50b4	sub sp,sp,#0x50
+009b50b8	stp x29,x30,[sp, #0x40]
+009b50bc	ldr x8,[x0, #0x30]
+009b50c0	str x19,[sp, #0x30]
+009b50c4	add x29,sp,#0x40
+009b50c8	cbz x8,0x009b5100
+009b50cc	mov x19,x0
+009b50d0	bl 0x00c344e0
+009b50d4	cbz w0,0x009b5140
+009b50d8	bl 0x00c342a0
+009b50dc	adrp x0,0x2c5000
+009b50e0	adrp x2,0x2af000
+009b50e4	add x0,x0,#0x652
+009b50e8	add x2,x2,#0xa87
+009b50ec	mov w1,#0x8e6
+009b50f0	bl 0x00c342b0
+009b50f4	mov w0,#0x14
+009b50f8	mov w1,#0x197
+009b50fc	b 0x009b5124
+009b5100	bl 0x00c342a0
+009b5104	adrp x0,0x2c5000
+009b5108	adrp x2,0x2af000
+009b510c	add x0,x0,#0x652
+009b5110	add x2,x2,#0xa87
+009b5114	mov w1,#0x8d4
+009b5118	bl 0x00c342b0
+009b511c	mov w0,#0x14
+009b5120	mov w1,#0x114
+009b5124	mov x2,xzr
+009b5128	bl 0x00c342c0
+009b512c	mov w0,#0xffffffff
+009b5130	ldp x29,x30,[sp, #0x40]
+009b5134	ldr x19,[sp, #0x30]
+009b5138	add sp,sp,#0x50
+009b513c	ret
+009b5140	ldrb w8,[x19, #0x9f1]
+009b5144	tbz w8,#0x0,0x009b5150
+009b5148	bl 0x00c355a0
+009b514c	cbz x0,0x009b516c
+009b5150	ldr x8,[x19, #0x8]
+009b5154	mov x0,x19
+009b5158	ldp x29,x30,[sp, #0x40]
+009b515c	ldr x19,[sp, #0x30]
+009b5160	ldr x1,[x8, #0x50]
+009b5164	add sp,sp,#0x50
+009b5168	br x1
+009b516c	mov w8,#0x2
+009b5170	stp xzr,xzr,[sp, #0x18]
+009b5174	stp x19,xzr,[sp, #0x8]
+009b5178	str w8,[sp, #0x20]
+009b517c	ldr x8,[x19, #0x8]
+009b5180	adrp x2,0x9b4000
+009b5184	add x2,x2,#0x86c
+009b5188	add x1,sp,#0x8
+009b518c	ldr x8,[x8, #0x50]
+009b5190	mov x0,x19
+009b5194	str x8,[sp, #0x28]
+009b5198	bl 0x009b4724
+009b519c	b 0x009b5130

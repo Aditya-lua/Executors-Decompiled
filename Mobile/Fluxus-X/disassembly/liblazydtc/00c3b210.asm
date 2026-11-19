@@ -1,0 +1,5 @@
+; ossl_ec_GFp_simple_group_set_curve @ 00c3b210
+00c3b210	adrp x16,0xcbb000
+00c3b214	ldr x17,[x16, #0x8f0]
+00c3b218	add x16,x16,#0x8f0
+00c3b21c	br x17

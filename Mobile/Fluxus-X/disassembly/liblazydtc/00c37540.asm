@@ -1,0 +1,5 @@
+; ASN1_ENUMERATED_get @ 00c37540
+00c37540	adrp x16,0xcb9000
+00c37544	ldr x17,[x16, #0xa88]
+00c37548	add x16,x16,#0xa88
+00c3754c	br x17

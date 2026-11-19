@@ -1,0 +1,76 @@
+; FUN_0084e62c @ 0084e62c
+0084e62c	stp x29,x30,[sp, #-0x40]!
+0084e630	str x23,[sp, #0x10]
+0084e634	stp x22,x21,[sp, #0x20]
+0084e638	stp x20,x19,[sp, #0x30]
+0084e63c	mov x29,sp
+0084e640	ldp x8,x9,[x0, #0x8]
+0084e644	mov x19,x0
+0084e648	mov x20,x1
+0084e64c	cmp x8,x9
+0084e650	b.cs 0x0084e674
+0084e654	ldr x9,[x20, #0x10]
+0084e658	ldr q0,[x20]
+0084e65c	add x22,x8,#0x18
+0084e660	str x9,[x8, #0x10]
+0084e664	str q0,[x8]
+0084e668	stp xzr,xzr,[x20, #0x8]
+0084e66c	str xzr,[x20]
+0084e670	b 0x0084e738
+0084e674	ldr x11,[x19]
+0084e678	orr x12,xzr,#-0x5555555555555556
+0084e67c	mov x10,#0x1
+0084e680	movk x12,#0xaaab
+0084e684	sub x22,x8,x11
+0084e688	asr x8,x22,#0x3
+0084e68c	madd x10,x8,x12,x10
+0084e690	orr x8,xzr,#-0x5555555555555556
+0084e694	movk x8,#0xaaa, LSL #48
+0084e698	cmp x10,x8
+0084e69c	b.hi 0x0084e750
+0084e6a0	sub x9,x9,x11
+0084e6a4	asr x9,x9,#0x3
+0084e6a8	mul x9,x9,x12
+0084e6ac	orr x12,xzr,#0x5555555555555555
+0084e6b0	movk x12,#0x555, LSL #48
+0084e6b4	lsl x11,x9,#0x1
+0084e6b8	cmp x11,x10
+0084e6bc	csel x10,x11,x10,hi
+0084e6c0	cmp x9,x12
+0084e6c4	csel x9,x10,x8,cc
+0084e6c8	cmp x9,x8
+0084e6cc	b.hi 0x0084e754
+0084e6d0	add x8,x9,x9, LSL #0x1
+0084e6d4	lsl x21,x8,#0x3
+0084e6d8	mov x0,x21
+0084e6dc	bl 0x00c2fed0
+0084e6e0	ldr q0,[x20]
+0084e6e4	stp xzr,xzr,[x20]
+0084e6e8	add x10,x0,x22
+0084e6ec	ldr x8,[x20, #0x10]
+0084e6f0	str xzr,[x20, #0x10]
+0084e6f4	add x23,x0,x21
+0084e6f8	ldp x20,x9,[x19]
+0084e6fc	add x22,x10,#0x18
+0084e700	str q0,[x10]
+0084e704	str x8,[x10, #0x10]
+0084e708	sub x2,x9,x20
+0084e70c	mov x1,x20
+0084e710	sub x21,x10,x2
+0084e714	mov x0,x21
+0084e718	bl 0x00c2ffd0
+0084e71c	ldr x8,[x19, #0x10]
+0084e720	stp x21,x22,[x19]
+0084e724	str x23,[x19, #0x10]
+0084e728	cbz x20,0x0084e738
+0084e72c	sub x1,x8,x20
+0084e730	mov x0,x20
+0084e734	bl 0x00c2fe80
+0084e738	str x22,[x19, #0x8]
+0084e73c	ldp x20,x19,[sp, #0x30]
+0084e740	ldr x23,[sp, #0x10]
+0084e744	ldp x22,x21,[sp, #0x20]
+0084e748	ldp x29,x30,[sp], #0x40
+0084e74c	ret
+0084e750	bl 0x00849168
+0084e754	bl 0x007fe1b8

@@ -1,0 +1,4 @@
+; NETSCAPE_SPKI_it @ 00b17080
+00b17080	adrp x0,0xc81000
+00b17084	add x0,x0,#0xe70
+00b17088	ret

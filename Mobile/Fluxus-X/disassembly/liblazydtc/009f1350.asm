@@ -1,0 +1,30 @@
+; ASN1_STRING_clear_free @ 009f1350
+009f1350	stp x20,x19,[sp, #-0x20]!
+009f1354	stp x29,x30,[sp, #0x10]
+009f1358	add x29,sp,#0x10
+009f135c	cbz x0,0x009f13b8
+009f1360	mov x19,x0
+009f1364	ldr x0,[x0, #0x8]
+009f1368	cbz x0,0x009f137c
+009f136c	ldrb w8,[x19, #0x10]
+009f1370	tbnz w8,#0x4,0x009f137c
+009f1374	ldrsw x1,[x19]
+009f1378	bl 0x00c34750
+009f137c	ldr x20,[x19, #0x10]
+009f1380	tbnz w20,#0x4,0x009f1398
+009f1384	ldr x0,[x19, #0x8]
+009f1388	adrp x1,0x2c7000
+009f138c	add x1,x1,#0x722
+009f1390	mov w2,#0x16c
+009f1394	bl 0x00c32310
+009f1398	tbnz w20,#0x7,0x009f13b8
+009f139c	ldp x29,x30,[sp, #0x10]
+009f13a0	adrp x1,0x2c7000
+009f13a4	add x1,x1,#0x722
+009f13a8	mov w2,#0x16e
+009f13ac	mov x0,x19
+009f13b0	ldp x20,x19,[sp], #0x20
+009f13b4	b 0x00c32310
+009f13b8	ldp x29,x30,[sp, #0x10]
+009f13bc	ldp x20,x19,[sp], #0x20
+009f13c0	ret

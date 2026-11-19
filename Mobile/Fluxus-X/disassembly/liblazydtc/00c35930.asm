@@ -1,0 +1,5 @@
+; SCT_free @ 00c35930
+00c35930	adrp x16,0xcb8000
+00c35934	ldr x17,[x16, #0xc80]
+00c35938	add x16,x16,#0xc80
+00c3593c	br x17

@@ -1,0 +1,43 @@
+; tls_construct_stoc_session_ticket @ 009d901c
+009d901c	stp x20,x19,[sp, #-0x20]!
+009d9020	stp x29,x30,[sp, #0x10]
+009d9024	ldr w8,[x0, #0xa98]
+009d9028	mov x19,x0
+009d902c	add x29,sp,#0x10
+009d9030	cbz w8,0x009d9074
+009d9034	mov x0,x19
+009d9038	mov x20,x1
+009d903c	bl 0x00c367f0
+009d9040	cbz w0,0x009d9074
+009d9044	mov w1,#0x23
+009d9048	mov w2,#0x2
+009d904c	mov x0,x20
+009d9050	bl 0x00c343a0
+009d9054	cbz w0,0x009d9080
+009d9058	mov w2,#0x2
+009d905c	mov x0,x20
+009d9060	mov x1,xzr
+009d9064	bl 0x00c343a0
+009d9068	cbz w0,0x009d9080
+009d906c	mov w0,#0x1
+009d9070	b 0x009d90b8
+009d9074	str wzr,[x19, #0xa98]
+009d9078	mov w0,#0x2
+009d907c	b 0x009d90b8
+009d9080	bl 0x00c342a0
+009d9084	adrp x0,0x2d7000
+009d9088	adrp x2,0x2d5000
+009d908c	add x0,x0,#0xae0
+009d9090	add x2,x2,#0x9f3
+009d9094	mov w1,#0x57d
+009d9098	bl 0x00c342b0
+009d909c	mov w2,#0x103
+009d90a0	mov w1,#0x50
+009d90a4	movk w2,#0xc, LSL #16
+009d90a8	mov x0,x19
+009d90ac	mov x3,xzr
+009d90b0	bl 0x00c34410
+009d90b4	mov w0,wzr
+009d90b8	ldp x29,x30,[sp, #0x10]
+009d90bc	ldp x20,x19,[sp], #0x20
+009d90c0	ret

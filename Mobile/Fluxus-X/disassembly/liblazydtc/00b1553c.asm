@@ -1,0 +1,53 @@
+; X509_NAME_ENTRY_set_data @ 00b1553c
+00b1553c	stp x22,x21,[sp, #-0x30]!
+00b15540	mov w22,w3
+00b15544	stp x20,x19,[sp, #0x10]
+00b15548	stp x29,x30,[sp, #0x20]
+00b1554c	add x29,sp,#0x20
+00b15550	cbz x0,0x00b155fc
+00b15554	mov x21,x2
+00b15558	mov w20,w1
+00b1555c	mov x19,x0
+00b15560	cbnz x2,0x00b1556c
+00b15564	mov w0,wzr
+00b15568	cbnz w22,0x00b155fc
+00b1556c	cmp w20,#0x1
+00b15570	b.lt 0x00b155a4
+00b15574	tbz w20,#0xc,0x00b155a4
+00b15578	ldr x0,[x19], #0x8
+00b1557c	bl 0x00c37750
+00b15580	mov w4,w0
+00b15584	mov x0,x19
+00b15588	mov x1,x21
+00b1558c	mov w2,w22
+00b15590	mov w3,w20
+00b15594	bl 0x00c378e0
+00b15598	cmp x0,#0x0
+00b1559c	cset w0,ne
+00b155a0	b 0x00b155fc
+00b155a4	tbz w22,#0x1f,0x00b155b4
+00b155a8	mov x0,x21
+00b155ac	bl 0x00c2ff50
+00b155b0	mov x22,x0
+00b155b4	ldr x0,[x19, #0x8]
+00b155b8	mov x1,x21
+00b155bc	mov w2,w22
+00b155c0	bl 0x00c378a0
+00b155c4	cbz w0,0x00b155fc
+00b155c8	cmn w20,#0x1
+00b155cc	b.eq 0x00b155f8
+00b155d0	cmn w20,#0x2
+00b155d4	b.ne 0x00b155f0
+00b155d8	mov x0,x21
+00b155dc	mov w1,w22
+00b155e0	bl 0x00c377b0
+00b155e4	ldr x8,[x19, #0x8]
+00b155e8	str w0,[x8, #0x4]
+00b155ec	b 0x00b155f8
+00b155f0	ldr x8,[x19, #0x8]
+00b155f4	str w20,[x8, #0x4]
+00b155f8	mov w0,#0x1
+00b155fc	ldp x29,x30,[sp, #0x20]
+00b15600	ldp x20,x19,[sp, #0x10]
+00b15604	ldp x22,x21,[sp], #0x30
+00b15608	ret

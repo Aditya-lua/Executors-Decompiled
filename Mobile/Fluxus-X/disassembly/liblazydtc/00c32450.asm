@@ -1,0 +1,5 @@
+; EVP_PKEY_free @ 00c32450
+00c32450	adrp x16,0xcb7000
+00c32454	ldr x17,[x16, #0x210]
+00c32458	add x16,x16,#0x210
+00c3245c	br x17

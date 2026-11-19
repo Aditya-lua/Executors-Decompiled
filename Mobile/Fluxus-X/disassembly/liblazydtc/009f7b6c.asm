@@ -1,0 +1,4 @@
+; i2d_ASN1_VISIBLESTRING @ 009f7b6c
+009f7b6c	adrp x2,0xc58000
+009f7b70	add x2,x2,#0xdb0
+009f7b74	b 0x00c36170

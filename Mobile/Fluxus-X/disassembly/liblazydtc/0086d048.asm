@@ -1,0 +1,93 @@
+; FUN_0086d048 @ 0086d048
+0086d048	sub sp,sp,#0x90
+0086d04c	stp x29,x30,[sp, #0x50]
+0086d050	stp x24,x23,[sp, #0x60]
+0086d054	stp x22,x21,[sp, #0x70]
+0086d058	stp x20,x19,[sp, #0x80]
+0086d05c	add x29,sp,#0x50
+0086d060	mrs x24,tpidr_el0
+0086d064	mov x19,x0
+0086d068	ldr x8,[x24, #0x28]
+0086d06c	stur x8,[x29, #-0x8]
+0086d070	ldr w8,[x0, #0x90]!
+0086d074	ldurb w9,[x0, #-0x28]
+0086d078	ldur q0,[x0, #0x4]
+0086d07c	cmp w8,#0x116
+0086d080	cset w22,eq
+0086d084	cmp w9,#0x1
+0086d088	str q0,[sp, #0x20]
+0086d08c	b.ne 0x0086d0b4
+0086d090	cmp w8,#0x116
+0086d094	b.eq 0x0086d0bc
+0086d098	cmp w8,#0x117
+0086d09c	b.ne 0x0086d0cc
+0086d0a0	bl 0x008533bc
+0086d0a4	cmp w0,#0x1
+0086d0a8	mov w20,wzr
+0086d0ac	cset w21,eq
+0086d0b0	b 0x0086d0d4
+0086d0b4	mov x1,xzr
+0086d0b8	b 0x0086d0e4
+0086d0bc	bl 0x00853390
+0086d0c0	mov w20,w0
+0086d0c4	mov w21,#0x2
+0086d0c8	b 0x0086d0d4
+0086d0cc	mov w20,wzr
+0086d0d0	mov w21,#0x3
+0086d0d4	ldrb w8,[x19, #0x68]
+0086d0d8	tst w8,#0x1
+0086d0dc	add x8,sp,#0x10
+0086d0e0	csel x1,x8,xzr,ne
+0086d0e4	sub x8,x29,#0x20
+0086d0e8	mov x0,x19
+0086d0ec	stp xzr,xzr,[sp, #0x10]
+0086d0f0	bl 0x00865548
+0086d0f4	ldurb w8,[x29, #-0x10]
+0086d0f8	cmp w8,#0x1
+0086d0fc	b.ne 0x0086d168
+0086d100	ldr x0,[x19, #0xe8]
+0086d104	mov w1,#0x38
+0086d108	lsl w23,w22,#0x1
+0086d10c	bl 0x0084e938
+0086d110	add x1,sp,#0x20
+0086d114	sub x2,x29,#0x20
+0086d118	mov w3,w23
+0086d11c	mov x22,x0
+0086d120	bl 0x0084ec94
+0086d124	ldrb w8,[x19, #0x68]
+0086d128	cmp w8,#0x1
+0086d12c	b.ne 0x0086d188
+0086d130	ldr x0,[x19, #0xe8]
+0086d134	mov w1,#0x20
+0086d138	bl 0x0084e938
+0086d13c	ldp x1,x2,[sp, #0x10]
+0086d140	mov w3,w21
+0086d144	mov w4,w20
+0086d148	mov x23,x0
+0086d14c	bl 0x00851dd8
+0086d150	add x0,x19,#0x4b0
+0086d154	mov x1,sp
+0086d158	str x22,[sp]
+0086d15c	bl 0x00860fa0
+0086d160	str x23,[x0]
+0086d164	b 0x0086d188
+0086d168	adrp x3,0x2c8000
+0086d16c	add x3,x3,#0xb7e
+0086d170	add x1,sp,#0x20
+0086d174	mov x2,sp
+0086d178	mov x0,x19
+0086d17c	stp xzr,xzr,[sp]
+0086d180	bl 0x008659e8
+0086d184	mov x22,x0
+0086d188	ldr x8,[x24, #0x28]
+0086d18c	ldur x9,[x29, #-0x8]
+0086d190	cmp x8,x9
+0086d194	b.ne 0x0086d1b4
+0086d198	mov x0,x22
+0086d19c	ldp x20,x19,[sp, #0x80]
+0086d1a0	ldp x22,x21,[sp, #0x70]
+0086d1a4	ldp x24,x23,[sp, #0x60]
+0086d1a8	ldp x29,x30,[sp, #0x50]
+0086d1ac	add sp,sp,#0x90
+0086d1b0	ret
+0086d1b4	bl 0x00c2fec0

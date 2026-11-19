@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/experience_item" android:background="@color/widget_surface_container" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/widget_primary_text" android:ellipsize="end" android:id="@id/header_text" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/Widgets_RecentlyPlayed_Label_WidgetGalleryTitle" android:maxLines="1" android:layout_weight="1.0" android:fontFamily="sans-serif" android:layout_marginEnd="8.0dp" />
+        <ImageView android:id="@id/header_icon" android:layout_width="@dimen/recently_played_widget_roblox_icon_size" android:layout_height="@dimen/recently_played_widget_roblox_icon_size" android:src="@drawable/roblox_logo_widget" android:importantForAccessibility="no" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/experience" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_below="@id/header">
+        <ImageView android:id="@id/experience_img" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@color/black" android:scaleType="fitStart" android:adjustViewBounds="true" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/widget_primary_text" android:ellipsize="end" android:id="@id/experience_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dp" android:maxLines="1" android:fontFamily="sans-serif" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/widget_secondary_text" android:ellipsize="end" android:id="@id/experience_rating" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:maxLines="1" android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</RelativeLayout>

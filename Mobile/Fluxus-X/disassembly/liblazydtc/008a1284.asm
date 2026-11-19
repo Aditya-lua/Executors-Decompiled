@@ -1,0 +1,60 @@
+; FUN_008a1284 @ 008a1284
+008a1284	mov x8,#0xffc000000000
+008a1288	fabs d3,d0
+008a128c	movk x8,#0x40df, LSL #48
+008a1290	fmov d4,x8
+008a1294	fcmp d3,d4
+008a1298	b.ls 0x008a12a4
+008a129c	mov w8,#0x80000000
+008a12a0	b 0x008a12b8
+008a12a4	fcvtzs w8,d0
+008a12a8	mov w9,#0x80000000
+008a12ac	scvtf d3,w8
+008a12b0	fcmp d0,d3
+008a12b4	csel w8,w9,w8,ne
+008a12b8	mov x9,#0xffc000000000
+008a12bc	fabs d0,d1
+008a12c0	movk x9,#0x40df, LSL #48
+008a12c4	fmov d3,x9
+008a12c8	fcmp d0,d3
+008a12cc	b.ls 0x008a12d8
+008a12d0	mov w9,#0x80000000
+008a12d4	b 0x008a12ec
+008a12d8	fcvtzs w9,d1
+008a12dc	mov w10,#0x80000000
+008a12e0	scvtf d0,w9
+008a12e4	fcmp d1,d0
+008a12e8	csel w9,w10,w9,ne
+008a12ec	mov x10,#0xffc000000000
+008a12f0	fabs d0,d2
+008a12f4	movk x10,#0x40df, LSL #48
+008a12f8	fmov d1,x10
+008a12fc	fcmp d0,d1
+008a1300	b.hi 0x008a1358
+008a1304	fcvtzs w10,d2
+008a1308	scvtf d0,w10
+008a130c	fcmp d2,d0
+008a1310	b.ne 0x008a1358
+008a1314	tst w10,#0x7fffffff
+008a1318	mov w0,#0xffffffff
+008a131c	b.eq 0x008a136c
+008a1320	mov w11,#0x80000000
+008a1324	cmp w8,w11
+008a1328	b.eq 0x008a136c
+008a132c	cmp w9,w11
+008a1330	b.eq 0x008a136c
+008a1334	tbz w10,#0x1f,0x008a1340
+008a1338	cmp w9,w8
+008a133c	b.gt 0x008a1350
+008a1340	cmp w10,#0x1
+008a1344	b.lt 0x008a1360
+008a1348	cmp w9,w8
+008a134c	b.ge 0x008a1360
+008a1350	mov w0,wzr
+008a1354	ret
+008a1358	mov w0,#0xffffffff
+008a135c	ret
+008a1360	sub w8,w9,w8
+008a1364	sdiv w8,w8,w10
+008a1368	add w0,w8,#0x1
+008a136c	ret

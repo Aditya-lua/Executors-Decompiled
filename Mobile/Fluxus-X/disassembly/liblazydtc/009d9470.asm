@@ -1,0 +1,57 @@
+; tls_construct_stoc_etm @ 009d9470
+009d9470	stp x20,x19,[sp, #-0x20]!
+009d9474	stp x29,x30,[sp, #0x10]
+009d9478	ldr w8,[x0, #0xb2c]
+009d947c	add x29,sp,#0x10
+009d9480	cbz w8,0x009d949c
+009d9484	ldr x8,[x0, #0x2e0]
+009d9488	mov x19,x0
+009d948c	ldr w9,[x8, #0x28]
+009d9490	cmp w9,#0x40
+009d9494	b.ne 0x009d94ac
+009d9498	str wzr,[x19, #0xb2c]
+009d949c	mov w0,#0x2
+009d94a0	ldp x29,x30,[sp, #0x10]
+009d94a4	ldp x20,x19,[sp], #0x20
+009d94a8	ret
+009d94ac	ldr w8,[x8, #0x24]
+009d94b0	mov x20,x1
+009d94b4	cmp w8,#0x40, LSL #12
+009d94b8	b.lt 0x009d94d4
+009d94bc	b.eq 0x009d9498
+009d94c0	cmp w8,#0x800, LSL #12
+009d94c4	b.eq 0x009d9498
+009d94c8	cmp w8,#0x400, LSL #12
+009d94cc	b.eq 0x009d9498
+009d94d0	b 0x009d94e4
+009d94d4	cmp w8,#0x4
+009d94d8	b.eq 0x009d9498
+009d94dc	cmp w8,#0x400
+009d94e0	b.eq 0x009d9498
+009d94e4	mov w1,#0x16
+009d94e8	mov w2,#0x2
+009d94ec	mov x0,x20
+009d94f0	bl 0x00c343a0
+009d94f4	cbz w0,0x009d9514
+009d94f8	mov w2,#0x2
+009d94fc	mov x0,x20
+009d9500	mov x1,xzr
+009d9504	bl 0x00c343a0
+009d9508	cbz w0,0x009d9514
+009d950c	mov w0,#0x1
+009d9510	b 0x009d94a0
+009d9514	bl 0x00c342a0
+009d9518	adrp x0,0x2d7000
+009d951c	adrp x2,0x2b3000
+009d9520	add x0,x0,#0xae0
+009d9524	add x2,x2,#0xf66
+009d9528	mov w1,#0x609
+009d952c	bl 0x00c342b0
+009d9530	mov w2,#0x103
+009d9534	mov w1,#0x50
+009d9538	movk w2,#0xc, LSL #16
+009d953c	mov x0,x19
+009d9540	mov x3,xzr
+009d9544	bl 0x00c34410
+009d9548	mov w0,wzr
+009d954c	b 0x009d94a0

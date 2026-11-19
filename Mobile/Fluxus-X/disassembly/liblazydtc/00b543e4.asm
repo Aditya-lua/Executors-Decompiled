@@ -1,0 +1,13 @@
+; FUN_00b543e4 @ 00b543e4
+00b543e4	stp x29,x30,[sp, #-0x10]!
+00b543e8	adrp x1,0x2d7000
+00b543ec	add x1,x1,#0xe7d
+00b543f0	mov x29,sp
+00b543f4	bl 0x00c3e8c0
+00b543f8	cbz x0,0x00b54408
+00b543fc	mov w1,#0x10
+00b54400	ldp x29,x30,[sp], #0x10
+00b54404	b 0x00c3e950
+00b54408	mov w0,#0x1
+00b5440c	ldp x29,x30,[sp], #0x10
+00b54410	ret

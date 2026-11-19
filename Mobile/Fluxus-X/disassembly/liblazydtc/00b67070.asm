@@ -1,0 +1,45 @@
+; ossl_ccm_cipher @ 00b67070
+00b67070	stp x24,x23,[sp, #-0x40]!
+00b67074	stp x22,x21,[sp, #0x10]
+00b67078	stp x20,x19,[sp, #0x20]
+00b6707c	stp x29,x30,[sp, #0x30]
+00b67080	add x29,sp,#0x30
+00b67084	mov x19,x5
+00b67088	mov x21,x4
+00b6708c	mov x24,x3
+00b67090	mov x20,x2
+00b67094	mov x22,x1
+00b67098	mov x23,x0
+00b6709c	bl 0x00c41000
+00b670a0	cbz w0,0x00b6710c
+00b670a4	cmp x24,x19
+00b670a8	b.cs 0x00b670dc
+00b670ac	bl 0x00c342a0
+00b670b0	adrp x0,0x2d8000
+00b670b4	adrp x2,0x2d6000
+00b670b8	add x0,x0,#0xcd7
+00b670bc	add x2,x2,#0xce8
+00b670c0	mov w1,#0x139
+00b670c4	bl 0x00c342b0
+00b670c8	mov w0,#0x39
+00b670cc	mov w1,#0x6a
+00b670d0	mov x2,xzr
+00b670d4	bl 0x00c342c0
+00b670d8	b 0x00b67108
+00b670dc	mov x0,x23
+00b670e0	mov x1,x22
+00b670e4	mov x2,x20
+00b670e8	mov x3,x21
+00b670ec	mov x4,x19
+00b670f0	bl 0x00b66d70
+00b670f4	cmp w0,#0x1
+00b670f8	b.lt 0x00b67108
+00b670fc	mov w0,#0x1
+00b67100	str x19,[x20]
+00b67104	b 0x00b6710c
+00b67108	mov w0,wzr
+00b6710c	ldp x29,x30,[sp, #0x30]
+00b67110	ldp x20,x19,[sp, #0x20]
+00b67114	ldp x22,x21,[sp, #0x10]
+00b67118	ldp x24,x23,[sp], #0x40
+00b6711c	ret

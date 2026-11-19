@@ -1,0 +1,4 @@
+; i2d_ASN1_ENUMERATED @ 009f79bc
+009f79bc	adrp x2,0xc58000
+009f79c0	add x2,x2,#0xbb8
+009f79c4	b 0x00c36170

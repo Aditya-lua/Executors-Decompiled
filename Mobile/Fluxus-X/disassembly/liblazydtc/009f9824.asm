@@ -1,0 +1,17 @@
+; ASYNC_get_current_job @ 009f9824
+009f9824	stp x29,x30,[sp, #-0x10]!
+009f9828	mov w0,#0x100
+009f982c	mov x1,xzr
+009f9830	mov x29,sp
+009f9834	bl 0x00c35500
+009f9838	cbz w0,0x009f9858
+009f983c	adrp x0,0xd21000
+009f9840	add x0,x0,#0x8e8
+009f9844	bl 0x00c38360
+009f9848	cbz x0,0x009f9850
+009f984c	ldr x0,[x0, #0x8]
+009f9850	ldp x29,x30,[sp], #0x10
+009f9854	ret
+009f9858	mov x0,xzr
+009f985c	ldp x29,x30,[sp], #0x10
+009f9860	ret

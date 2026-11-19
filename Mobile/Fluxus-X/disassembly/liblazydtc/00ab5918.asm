@@ -1,0 +1,4 @@
+; NETSCAPE_CERT_SEQUENCE_free @ 00ab5918
+00ab5918	adrp x1,0xc7a000
+00ab591c	add x1,x1,#0xec8
+00ab5920	b 0x00c36160

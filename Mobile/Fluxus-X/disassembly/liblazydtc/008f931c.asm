@@ -1,0 +1,85 @@
+; std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::assign @ 008f931c
+008f931c	str x25,[sp, #-0x50]!
+008f9320	stp x24,x23,[sp, #0x10]
+008f9324	stp x22,x21,[sp, #0x20]
+008f9328	stp x20,x19,[sp, #0x30]
+008f932c	stp x29,x30,[sp, #0x40]
+008f9330	add x29,sp,#0x40
+008f9334	ldrb w8,[x0]
+008f9338	mov x20,x2
+008f933c	mov x19,x0
+008f9340	mov x21,x1
+008f9344	tbnz w8,#0x0,0x008f9364
+008f9348	mov w25,#0x16
+008f934c	cmp x25,x20
+008f9350	b.cc 0x008f9378
+008f9354	tbnz w8,#0x0,0x008f9398
+008f9358	add x22,x19,#0x1
+008f935c	cbnz x20,0x008f93a0
+008f9360	b 0x008f93b0
+008f9364	ldr x9,[x19]
+008f9368	and x9,x9,#-0x2
+008f936c	sub x25,x9,#0x1
+008f9370	cmp x25,x20
+008f9374	b.cs 0x008f9354
+008f9378	mov x10,#-0x12
+008f937c	sub x9,x20,x25
+008f9380	sub x10,x10,x25
+008f9384	cmp x10,x9
+008f9388	b.cc 0x008f9464
+008f938c	tbnz w8,#0x0,0x008f93d0
+008f9390	add x22,x19,#0x1
+008f9394	b 0x008f93d4
+008f9398	ldr x22,[x19, #0x10]
+008f939c	cbz x20,0x008f93b0
+008f93a0	mov x0,x22
+008f93a4	mov x1,x21
+008f93a8	mov x2,x20
+008f93ac	bl 0x00c2ff60
+008f93b0	strb wzr,[x22, x20]
+008f93b4	ldrb w8,[x19]
+008f93b8	tbnz w8,#0x0,0x008f93c8
+008f93bc	lsl w8,w20,#0x1
+008f93c0	strb w8,[x19]
+008f93c4	b 0x008f9448
+008f93c8	str x20,[x19, #0x8]
+008f93cc	b 0x008f9448
+008f93d0	ldr x22,[x19, #0x10]
+008f93d4	mov x8,#-0x1a
+008f93d8	movk x8,#0x7fff, LSL #48
+008f93dc	cmp x25,x8
+008f93e0	b.hi 0x008f9400
+008f93e4	lsl x8,x25,#0x1
+008f93e8	cmp x8,x20
+008f93ec	csel x8,x8,x20,hi
+008f93f0	cmp x8,#0x17
+008f93f4	b.cs 0x008f9408
+008f93f8	mov w23,#0x17
+008f93fc	b 0x008f9410
+008f9400	orr x23,xzr,#-0x11
+008f9404	b 0x008f9410
+008f9408	add x8,x8,#0x10
+008f940c	and x23,x8,#-0x10
+008f9410	mov x0,x23
+008f9414	bl 0x00c2fed0
+008f9418	mov x1,x21
+008f941c	mov x2,x20
+008f9420	mov x24,x0
+008f9424	bl 0x00c2ffd0
+008f9428	cmp x25,#0x16
+008f942c	b.eq 0x008f9438
+008f9430	mov x0,x22
+008f9434	bl 0x00c301d0
+008f9438	orr x8,x23,#0x1
+008f943c	stp x20,x24,[x19, #0x8]
+008f9440	str x8,[x19]
+008f9444	strb wzr,[x24, x20]
+008f9448	mov x0,x19
+008f944c	ldp x29,x30,[sp, #0x40]
+008f9450	ldp x20,x19,[sp, #0x30]
+008f9454	ldp x22,x21,[sp, #0x20]
+008f9458	ldp x24,x23,[sp, #0x10]
+008f945c	ldr x25,[sp], #0x50
+008f9460	ret
+008f9464	mov x0,x19
+008f9468	bl 0x00c30ce0

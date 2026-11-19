@@ -1,0 +1,15 @@
+; FUN_0090f270 @ 0090f270
+0090f270	stp x20,x19,[sp, #-0x20]!
+0090f274	stp x29,x30,[sp, #0x10]
+0090f278	add x29,sp,#0x10
+0090f27c	cbz x0,0x0090f29c
+0090f280	adrp x19,0xcc4000
+0090f284	add x19,x19,#0x678
+0090f288	ldr x8,[x19]
+0090f28c	ldr x20,[x0, #0x28]
+0090f290	blr x8
+0090f294	mov x0,x20
+0090f298	cbnz x20,0x0090f288
+0090f29c	ldp x29,x30,[sp, #0x10]
+0090f2a0	ldp x20,x19,[sp], #0x20
+0090f2a4	ret

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/instructionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Configure_Deployment_Instructions" />
+            <Switch android:id="@id/enableSwitch" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Configure_Deployment_Enable" />
+            <TextView android:id="@id/ipAddrLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Configure_Deployment_IP_Address" />
+            <EditText android:id="@id/ipAddrEdit" android:layout_width="match_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="textPersonName" />
+            <TextView android:id="@id/portLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Configure_Deployment_Port" />
+            <EditText android:id="@id/portEdit" android:layout_width="match_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="number" />
+            <Button android:id="@id/testConnButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Configure_Deployment_Test_Connection" />
+            <TextView android:id="@id/statusLabel" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

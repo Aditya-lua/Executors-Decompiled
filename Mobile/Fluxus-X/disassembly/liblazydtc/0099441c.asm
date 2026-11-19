@@ -1,0 +1,50 @@
+; ix::WebSocketServer::makeBroadcastServer @ 0099441c
+0099441c	sub sp,sp,#0x90
+00994420	stp x20,x19,[sp, #0x70]
+00994424	stp x29,x30,[sp, #0x80]
+00994428	add x29,sp,#0x80
+0099442c	mrs x19,tpidr_el0
+00994430	ldr x9,[x19, #0x28]
+00994434	adrp x8,0xc52000
+00994438	add x8,x8,#0x3b8
+0099443c	add x8,x8,#0x10
+00994440	mov x10,sp
+00994444	add x20,sp,#0x30
+00994448	stur x9,[x29, #-0x18]
+0099444c	stp x8,x0,[sp]
+00994450	stp x8,x0,[sp, #0x30]
+00994454	add x1,x0,#0x280
+00994458	add x0,sp,#0x30
+0099445c	str x10,[sp, #0x20]
+00994460	str x20,[sp, #0x50]
+00994464	bl 0x00c33e30
+00994468	ldr x0,[sp, #0x50]
+0099446c	cmp x20,x0
+00994470	b.eq 0x00994484
+00994474	cbz x0,0x00994490
+00994478	ldr x8,[x0]
+0099447c	ldr x8,[x8, #0x28]
+00994480	b 0x0099448c
+00994484	ldr x8,[x0]
+00994488	ldr x8,[x8, #0x20]
+0099448c	blr x8
+00994490	ldr x0,[sp, #0x20]
+00994494	mov x8,sp
+00994498	cmp x8,x0
+0099449c	b.eq 0x009944b0
+009944a0	cbz x0,0x009944bc
+009944a4	ldr x8,[x0]
+009944a8	ldr x8,[x8, #0x28]
+009944ac	b 0x009944b8
+009944b0	ldr x8,[x0]
+009944b4	ldr x8,[x8, #0x20]
+009944b8	blr x8
+009944bc	ldr x8,[x19, #0x28]
+009944c0	ldur x9,[x29, #-0x18]
+009944c4	cmp x8,x9
+009944c8	b.ne 0x009944dc
+009944cc	ldp x29,x30,[sp, #0x80]
+009944d0	ldp x20,x19,[sp, #0x70]
+009944d4	add sp,sp,#0x90
+009944d8	ret
+009944dc	bl 0x00c2fec0

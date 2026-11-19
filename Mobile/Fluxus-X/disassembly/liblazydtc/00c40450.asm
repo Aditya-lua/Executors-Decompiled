@@ -1,0 +1,5 @@
+; X509_STORE_unlock @ 00c40450
+00c40450	adrp x16,0xcbe000
+00c40454	ldr x17,[x16, #0x210]
+00c40458	add x16,x16,#0x210
+00c4045c	br x17

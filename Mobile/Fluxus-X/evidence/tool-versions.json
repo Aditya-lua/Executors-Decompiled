@@ -1,0 +1,42 @@
+{
+  "python": "3.12.14",
+  "jadx": "1.5.7",
+  "apktool": "3.0.3",
+  "ghidra": "12.2",
+  "luau": "0.747",
+  "python_packages": {
+    "gdown": "6.5.2",
+    "androguard": "4.1.4",
+    "pyelftools": "0.33",
+    "capstone": "5.0.9",
+    "unicorn": "2.1.4",
+    "mutf8": "1.1.0"
+  },
+  "downloaded_tools": [
+    {
+      "file": "jadx-1.5.7.zip",
+      "bytes": 74766896,
+      "sha256": "1755e4242ade71a077438723689f404079592ec7764a3a0572f98fef94ebcbf3"
+    },
+    {
+      "file": "apktool_3.0.3.jar",
+      "bytes": 15478013,
+      "sha256": "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423"
+    },
+    {
+      "file": "ghidra_12.2_PUBLIC_20261016.zip",
+      "bytes": 569712708,
+      "sha256": "2c2cd776db3c1f6a097ba418922378ac3649cadd5e844a6f5f088ae628a7be67"
+    },
+    {
+      "file": "luau-ubuntu.zip",
+      "bytes": 7911308,
+      "sha256": "6a740240248e872815865a2cb03b0c327f24939478f1d0081a0540cdfd77fdaa"
+    },
+    {
+      "file": "jdk25.tar.gz",
+      "bytes": 141362230,
+      "sha256": "760f91b22c3efc9bd1b64ff950598231be82928cc807e30691a0e7a2995a62c0"
+    }
+  ]
+}

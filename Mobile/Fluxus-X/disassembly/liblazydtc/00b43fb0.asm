@@ -1,0 +1,38 @@
+; FUN_00b43fb0 @ 00b43fb0
+00b43fb0	stp x20,x19,[sp, #-0x20]!
+00b43fb4	stp x29,x30,[sp, #0x10]
+00b43fb8	add x29,sp,#0x10
+00b43fbc	mov x19,x1
+00b43fc0	mov x20,x0
+00b43fc4	bl 0x00c41000
+00b43fc8	cbz w0,0x00b44038
+00b43fcc	cbz x20,0x00b44004
+00b43fd0	cbz x19,0x00b44004
+00b43fd4	ldr x8,[x19, #0x58]
+00b43fd8	ldr x9,[x20]
+00b43fdc	cmp x8,x9
+00b43fe0	b.ne 0x00b44004
+00b43fe4	mov x0,x19
+00b43fe8	bl 0x00c3b2a0
+00b43fec	cbz w0,0x00b44004
+00b43ff0	ldr x0,[x20, #0x8]
+00b43ff4	bl 0x00c3b270
+00b43ff8	mov w0,#0x1
+00b43ffc	str x19,[x20, #0x8]
+00b44000	b 0x00b44038
+00b44004	bl 0x00c342a0
+00b44008	adrp x0,0x2a6000
+00b4400c	adrp x2,0x2c8000
+00b44010	add x0,x0,#0xc47
+00b44014	add x2,x2,#0x722
+00b44018	mov w1,#0x55
+00b4401c	bl 0x00c342b0
+00b44020	mov w1,#0x103
+00b44024	mov w0,#0x39
+00b44028	movk w1,#0xc, LSL #16
+00b4402c	mov x2,xzr
+00b44030	bl 0x00c342c0
+00b44034	mov w0,wzr
+00b44038	ldp x29,x30,[sp, #0x10]
+00b4403c	ldp x20,x19,[sp], #0x20
+00b44040	ret

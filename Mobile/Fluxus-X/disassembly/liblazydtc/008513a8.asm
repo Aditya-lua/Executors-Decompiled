@@ -1,0 +1,19 @@
+; FUN_008513a8 @ 008513a8
+008513a8	adrp x9,0xd1a000
+008513ac	ldr w8,[x0, #0x8]
+008513b0	adrp x10,0xd1a000
+008513b4	ldr w9,[x9, #0xfd0]
+008513b8	ldr w10,[x10, #0xfe0]
+008513bc	adrp x11,0xd1a000
+008513c0	ldr w11,[x11, #0xff0]
+008513c4	cmp w8,w9
+008513c8	ccmp w8,w10,#0x4,ne
+008513cc	ccmp w8,w11,#0x4,ne
+008513d0	b.ne 0x008513dc
+008513d4	mov w0,#0x1
+008513d8	ret
+008513dc	adrp x9,0xd1b000
+008513e0	ldr w9,[x9]
+008513e4	cmp w8,w9
+008513e8	cset w0,eq
+008513ec	ret

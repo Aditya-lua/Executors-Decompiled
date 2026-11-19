@@ -1,0 +1,75 @@
+; ASN1_INTEGER_get_uint64 @ 009f33f4
+009f33f4	stp x29,x30,[sp, #-0x10]!
+009f33f8	mov x29,sp
+009f33fc	cbz x1,0x009f3448
+009f3400	ldr w8,[x1, #0x4]
+009f3404	and w9,w8,#0xfffffeff
+009f3408	cmp w9,#0x2
+009f340c	b.ne 0x009f3474
+009f3410	tbnz w8,#0x8,0x009f349c
+009f3414	ldrsw x8,[x1]
+009f3418	cmp w8,#0x9
+009f341c	b.cc 0x009f34d4
+009f3420	bl 0x00c342a0
+009f3424	adrp x0,0x2b9000
+009f3428	adrp x2,0x2af000
+009f342c	add x0,x0,#0xb0a
+009f3430	add x2,x2,#0xc95
+009f3434	mov w1,#0xdb
+009f3438	bl 0x00c342b0
+009f343c	mov w0,#0xd
+009f3440	mov w1,#0xdf
+009f3444	b 0x009f34c0
+009f3448	bl 0x00c342a0
+009f344c	adrp x0,0x2b9000
+009f3450	adrp x2,0x2db000
+009f3454	add x0,x0,#0xb0a
+009f3458	add x2,x2,#0xd6d
+009f345c	mov w1,#0x16d
+009f3460	bl 0x00c342b0
+009f3464	mov w1,#0x102
+009f3468	mov w0,#0xd
+009f346c	movk w1,#0xc, LSL #16
+009f3470	b 0x009f34c0
+009f3474	bl 0x00c342a0
+009f3478	adrp x0,0x2b9000
+009f347c	adrp x2,0x2db000
+009f3480	add x0,x0,#0xb0a
+009f3484	add x2,x2,#0xd6d
+009f3488	mov w1,#0x171
+009f348c	bl 0x00c342b0
+009f3490	mov w0,#0xd
+009f3494	mov w1,#0xe1
+009f3498	b 0x009f34c0
+009f349c	bl 0x00c342a0
+009f34a0	adrp x0,0x2b9000
+009f34a4	adrp x2,0x2db000
+009f34a8	add x0,x0,#0xb0a
+009f34ac	add x2,x2,#0xd6d
+009f34b0	mov w1,#0x175
+009f34b4	bl 0x00c342b0
+009f34b8	mov w0,#0xd
+009f34bc	mov w1,#0xe2
+009f34c0	mov x2,xzr
+009f34c4	bl 0x00c342c0
+009f34c8	mov w0,wzr
+009f34cc	ldp x29,x30,[sp], #0x10
+009f34d0	ret
+009f34d4	ldr x9,[x1, #0x8]
+009f34d8	cbz x9,0x009f34fc
+009f34dc	cbz w8,0x009f3508
+009f34e0	mov x11,xzr
+009f34e4	ldrb w10,[x9], #0x1
+009f34e8	subs x8,x8,#0x1
+009f34ec	bfm x10,x11,#0x38,#0x37
+009f34f0	mov x11,x10
+009f34f4	b.ne 0x009f34e4
+009f34f8	b 0x009f350c
+009f34fc	mov w0,wzr
+009f3500	ldp x29,x30,[sp], #0x10
+009f3504	ret
+009f3508	mov x10,xzr
+009f350c	str x10,[x0]
+009f3510	mov w0,#0x1
+009f3514	ldp x29,x30,[sp], #0x10
+009f3518	ret

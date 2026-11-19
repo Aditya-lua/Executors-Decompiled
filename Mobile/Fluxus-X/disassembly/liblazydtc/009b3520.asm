@@ -1,0 +1,100 @@
+; SSL_CTX_dane_mtype_set @ 009b3520
+009b3520	str x25,[sp, #-0x50]!
+009b3524	stp x22,x21,[sp, #0x20]
+009b3528	stp x20,x19,[sp, #0x30]
+009b352c	mov w19,w3
+009b3530	mov w22,w2
+009b3534	mov x20,x1
+009b3538	mov x21,x0
+009b353c	stp x24,x23,[sp, #0x10]
+009b3540	stp x29,x30,[sp, #0x40]
+009b3544	add x29,sp,#0x40
+009b3548	cbz x1,0x009b3588
+009b354c	tst w22,#0xff
+009b3550	b.ne 0x009b3588
+009b3554	bl 0x00c342a0
+009b3558	adrp x0,0x2c5000
+009b355c	adrp x2,0x2a7000
+009b3560	add x0,x0,#0x652
+009b3564	add x2,x2,#0xb0a
+009b3568	mov w1,#0xdf
+009b356c	bl 0x00c342b0
+009b3570	mov w0,#0x14
+009b3574	mov w1,#0xad
+009b3578	mov x2,xzr
+009b357c	bl 0x00c342c0
+009b3580	mov w0,wzr
+009b3584	b 0x009b3694
+009b3588	ldrb w8,[x21, #0x3a8]
+009b358c	cmp w8,w22, UXTB 
+009b3590	b.cs 0x009b3620
+009b3594	ldr x0,[x21, #0x398]
+009b3598	and w25,w22,#0xff
+009b359c	add w24,w25,#0x1
+009b35a0	adrp x2,0x2c5000
+009b35a4	lsl w1,w24,#0x3
+009b35a8	add x2,x2,#0x652
+009b35ac	mov w3,#0xe8
+009b35b0	bl 0x00c356f0
+009b35b4	cbz x0,0x009b3644
+009b35b8	mov x23,x0
+009b35bc	ldr x0,[x21, #0x3a0]
+009b35c0	adrp x2,0x2c5000
+009b35c4	add x2,x2,#0x652
+009b35c8	mov w3,#0xef
+009b35cc	mov x1,x24
+009b35d0	str x23,[x21, #0x398]
+009b35d4	bl 0x00c356f0
+009b35d8	cbz x0,0x009b3660
+009b35dc	ldrb w9,[x21, #0x3a8]
+009b35e0	str x0,[x21, #0x3a0]
+009b35e4	add w8,w9,#0x1
+009b35e8	cmp w8,w25
+009b35ec	b.cs 0x009b361c
+009b35f0	and x8,x22,#0xff
+009b35f4	add x10,x0,x9
+009b35f8	add x11,x23,x9, LSL #0x3
+009b35fc	sub x12,x8,#0x1
+009b3600	add x8,x10,#0x1
+009b3604	sub x9,x12,x9
+009b3608	add x10,x11,#0x8
+009b360c	str xzr,[x10], #0x8
+009b3610	subs x9,x9,#0x1
+009b3614	strb wzr,[x8], #0x1
+009b3618	b.ne 0x009b360c
+009b361c	strb w22,[x21, #0x3a8]
+009b3620	ldr x8,[x21, #0x398]
+009b3624	and x9,x22,#0xff
+009b3628	cmp x20,#0x0
+009b362c	csel w10,wzr,w19,eq
+009b3630	str x20,[x8, x9, LSL #0x3]
+009b3634	ldr x8,[x21, #0x3a0]
+009b3638	mov w0,#0x1
+009b363c	strb w10,[x8, x9]
+009b3640	b 0x009b3694
+009b3644	bl 0x00c342a0
+009b3648	adrp x0,0x2c5000
+009b364c	adrp x2,0x2a7000
+009b3650	add x0,x0,#0x652
+009b3654	add x2,x2,#0xb0a
+009b3658	mov w1,#0xea
+009b365c	b 0x009b3678
+009b3660	bl 0x00c342a0
+009b3664	adrp x0,0x2c5000
+009b3668	adrp x2,0x2a7000
+009b366c	add x0,x0,#0x652
+009b3670	add x2,x2,#0xb0a
+009b3674	mov w1,#0xf1
+009b3678	bl 0x00c342b0
+009b367c	mov w1,#0x100
+009b3680	mov w0,#0x14
+009b3684	movk w1,#0xc, LSL #16
+009b3688	mov x2,xzr
+009b368c	bl 0x00c342c0
+009b3690	mov w0,#0xffffffff
+009b3694	ldp x29,x30,[sp, #0x40]
+009b3698	ldp x20,x19,[sp, #0x30]
+009b369c	ldp x22,x21,[sp, #0x20]
+009b36a0	ldp x24,x23,[sp, #0x10]
+009b36a4	ldr x25,[sp], #0x50
+009b36a8	ret

@@ -1,0 +1,43 @@
+; EC_POINT_set_Jprojective_coordinates_GFp @ 00a31614
+00a31614	stp x29,x30,[sp, #-0x10]!
+00a31618	ldr x8,[x0]
+00a3161c	mov x29,sp
+00a31620	ldr w9,[x8, #0x4]
+00a31624	cmp w9,#0x196
+00a31628	b.ne 0x00a31660
+00a3162c	ldr x9,[x1]
+00a31630	cmp x8,x9
+00a31634	b.eq 0x00a3169c
+00a31638	bl 0x00c342a0
+00a3163c	adrp x0,0x29e000
+00a31640	adrp x2,0x2cd000
+00a31644	add x0,x0,#0xa7
+00a31648	add x2,x2,#0x958
+00a3164c	mov w1,#0x343
+00a31650	bl 0x00c342b0
+00a31654	mov w0,#0x10
+00a31658	mov w1,#0x65
+00a3165c	b 0x00a31688
+00a31660	bl 0x00c342a0
+00a31664	adrp x0,0x29e000
+00a31668	adrp x2,0x2cd000
+00a3166c	add x0,x0,#0xa7
+00a31670	add x2,x2,#0x958
+00a31674	mov w1,#0x33f
+00a31678	bl 0x00c342b0
+00a3167c	mov w1,#0x101
+00a31680	mov w0,#0x10
+00a31684	movk w1,#0xc, LSL #16
+00a31688	mov x2,xzr
+00a3168c	bl 0x00c342c0
+00a31690	mov w0,wzr
+00a31694	ldp x29,x30,[sp], #0x10
+00a31698	ret
+00a3169c	ldr w8,[x0, #0x20]
+00a316a0	cbz w8,0x00a316b4
+00a316a4	ldr w9,[x1, #0x8]
+00a316a8	cbz w9,0x00a316b4
+00a316ac	cmp w8,w9
+00a316b0	b.ne 0x00a31638
+00a316b4	ldp x29,x30,[sp], #0x10
+00a316b8	b 0x00c3b0c0

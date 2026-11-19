@@ -1,0 +1,55 @@
+; EVP_PKEY_asn1_add_alias @ 009f0714
+009f0714	str x21,[sp, #-0x30]!
+009f0718	stp x20,x19,[sp, #0x10]
+009f071c	mov w20,w1
+009f0720	adrp x1,0x2af000
+009f0724	mov w21,w0
+009f0728	add x1,x1,#0xc32
+009f072c	mov w0,#0x140
+009f0730	mov w2,#0xdf
+009f0734	stp x29,x30,[sp, #0x20]
+009f0738	add x29,sp,#0x20
+009f073c	bl 0x00c34250
+009f0740	cbz x0,0x009f0764
+009f0744	orr w8,wzr,#0x3
+009f0748	mov x19,x0
+009f074c	str x8,[x0, #0x8]
+009f0750	stp w20,w21,[x0]
+009f0754	bl 0x009f0600
+009f0758	cbz w0,0x009f0798
+009f075c	mov w0,#0x1
+009f0760	b 0x009f07dc
+009f0764	bl 0x00c342a0
+009f0768	adrp x0,0x2af000
+009f076c	adrp x2,0x2b9000
+009f0770	add x0,x0,#0xc32
+009f0774	add x2,x2,#0xaed
+009f0778	mov w1,#0xe2
+009f077c	bl 0x00c342b0
+009f0780	mov w1,#0x100
+009f0784	mov w0,#0xd
+009f0788	movk w1,#0xc, LSL #16
+009f078c	mov x2,xzr
+009f0790	bl 0x00c342c0
+009f0794	b 0x009f07d8
+009f0798	ldrb w8,[x19, #0x8]
+009f079c	tbz w8,#0x1,0x009f07dc
+009f07a0	ldr x0,[x19, #0x10]
+009f07a4	adrp x20,0x2af000
+009f07a8	add x20,x20,#0xc32
+009f07ac	mov w2,#0x114
+009f07b0	mov x1,x20
+009f07b4	bl 0x00c32310
+009f07b8	ldr x0,[x19, #0x18]
+009f07bc	mov w2,#0x115
+009f07c0	mov x1,x20
+009f07c4	bl 0x00c32310
+009f07c8	mov w2,#0x116
+009f07cc	mov x0,x19
+009f07d0	mov x1,x20
+009f07d4	bl 0x00c32310
+009f07d8	mov w0,wzr
+009f07dc	ldp x29,x30,[sp, #0x20]
+009f07e0	ldp x20,x19,[sp, #0x10]
+009f07e4	ldr x21,[sp], #0x30
+009f07e8	ret

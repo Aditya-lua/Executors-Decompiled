@@ -1,0 +1,14 @@
+; FUN_00a01214 @ 00a01214
+00a01214	stp x20,x19,[sp, #-0x20]!
+00a01218	mov x20,x0
+00a0121c	mov x0,x1
+00a01220	stp x29,x30,[sp, #0x10]
+00a01224	add x29,sp,#0x10
+00a01228	mov x19,x1
+00a0122c	bl 0x00c2ff50
+00a01230	ldp x29,x30,[sp, #0x10]
+00a01234	mov x2,x0
+00a01238	mov x0,x20
+00a0123c	mov x1,x19
+00a01240	ldp x20,x19,[sp], #0x20
+00a01244	b 0x00a0108c

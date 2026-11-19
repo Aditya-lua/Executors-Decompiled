@@ -1,0 +1,4558 @@
+[
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font/BuilderIcons-Filled.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 233540
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font/BuilderIcons-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 258752
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_1.png",
+    "reason": "extension-not-allowed",
+    "bytes": 35555
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_10.png",
+    "reason": "extension-not-allowed",
+    "bytes": 27267
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_2.png",
+    "reason": "extension-not-allowed",
+    "bytes": 31448
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_3.png",
+    "reason": "extension-not-allowed",
+    "bytes": 57426
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_4.png",
+    "reason": "extension-not-allowed",
+    "bytes": 40586
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_5.png",
+    "reason": "extension-not-allowed",
+    "bytes": 25474
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_6.png",
+    "reason": "extension-not-allowed",
+    "bytes": 5023
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_7.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2107
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_8.png",
+    "reason": "extension-not-allowed",
+    "bytes": 52368
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 76414
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_1.png",
+    "reason": "extension-not-allowed",
+    "bytes": 30053
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_10.png",
+    "reason": "extension-not-allowed",
+    "bytes": 6995
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_11.png",
+    "reason": "extension-not-allowed",
+    "bytes": 10511
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_12.png",
+    "reason": "extension-not-allowed",
+    "bytes": 45504
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_13.png",
+    "reason": "extension-not-allowed",
+    "bytes": 47085
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_14.png",
+    "reason": "extension-not-allowed",
+    "bytes": 19559
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_15.png",
+    "reason": "extension-not-allowed",
+    "bytes": 14924
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_16.png",
+    "reason": "extension-not-allowed",
+    "bytes": 10335
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_17.png",
+    "reason": "extension-not-allowed",
+    "bytes": 7930
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 29608
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_19.png",
+    "reason": "extension-not-allowed",
+    "bytes": 29171
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_2.png",
+    "reason": "extension-not-allowed",
+    "bytes": 18707
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_20.png",
+    "reason": "extension-not-allowed",
+    "bytes": 12604
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_21.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3648
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_22.png",
+    "reason": "extension-not-allowed",
+    "bytes": 27656
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_23.png",
+    "reason": "extension-not-allowed",
+    "bytes": 11426
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_24.png",
+    "reason": "extension-not-allowed",
+    "bytes": 8171
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_25.png",
+    "reason": "extension-not-allowed",
+    "bytes": 9984
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_3.png",
+    "reason": "extension-not-allowed",
+    "bytes": 32681
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_4.png",
+    "reason": "extension-not-allowed",
+    "bytes": 12301
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_5.png",
+    "reason": "extension-not-allowed",
+    "bytes": 91575
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_6.png",
+    "reason": "extension-not-allowed",
+    "bytes": 31595
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_7.png",
+    "reason": "extension-not-allowed",
+    "bytes": 53732
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_8.png",
+    "reason": "extension-not-allowed",
+    "bytes": 42391
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 68145
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_1.png",
+    "reason": "extension-not-allowed",
+    "bytes": 63549
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_10.png",
+    "reason": "extension-not-allowed",
+    "bytes": 106403
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_11.png",
+    "reason": "extension-not-allowed",
+    "bytes": 135161
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_12.png",
+    "reason": "extension-not-allowed",
+    "bytes": 71114
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_13.png",
+    "reason": "extension-not-allowed",
+    "bytes": 180558
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_14.png",
+    "reason": "extension-not-allowed",
+    "bytes": 54524
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_15.png",
+    "reason": "extension-not-allowed",
+    "bytes": 50993
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_16.png",
+    "reason": "extension-not-allowed",
+    "bytes": 33214
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_17.png",
+    "reason": "extension-not-allowed",
+    "bytes": 78614
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1369
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_19.png",
+    "reason": "extension-not-allowed",
+    "bytes": 7594
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_2.png",
+    "reason": "extension-not-allowed",
+    "bytes": 186227
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_20.png",
+    "reason": "extension-not-allowed",
+    "bytes": 57946
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_21.png",
+    "reason": "extension-not-allowed",
+    "bytes": 57946
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_22.png",
+    "reason": "extension-not-allowed",
+    "bytes": 14318
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_3.png",
+    "reason": "extension-not-allowed",
+    "bytes": 41336
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_4.png",
+    "reason": "extension-not-allowed",
+    "bytes": 34337
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_5.png",
+    "reason": "extension-not-allowed",
+    "bytes": 97862
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_6.png",
+    "reason": "extension-not-allowed",
+    "bytes": 53810
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_7.png",
+    "reason": "extension-not-allowed",
+    "bytes": 57661
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_8.png",
+    "reason": "extension-not-allowed",
+    "bytes": 42979
+  },
+  {
+    "origin": "apk:assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 140977
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/AccessoryAdjustment/Ring.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 62028
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/AvatarContextMenu/AvatarContextArrow.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 5220
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/CrossExpVoiceDataModelPatch/CrossExpVoiceDataModelPatch.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 360101
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/InExperience/InExperience.rbxm",
+    "reason": "over-8-MiB-text-limit",
+    "bytes": 14824617,
+    "sha256": "b1ae3f60334813b254c73668407828b5e5bc3e7d7994d4d4266922aaea10308f"
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/InExperience/InExperience_checksum",
+    "reason": "extension-not-allowed",
+    "bytes": 128
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/Licenses/Licenses.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 2563
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/UniversalApp/UniversalApp.rbxm",
+    "reason": "over-8-MiB-text-limit",
+    "bytes": 13621225,
+    "sha256": "7cec446ed138f8c47f7130508ef87bcbb78d7c6ce429be24ab973a4bc31ae956"
+  },
+  {
+    "origin": "apk:assets/ExtraContent/models/UniversalApp/UniversalApp_checksum",
+    "reason": "extension-not-allowed",
+    "bytes": 128
+  },
+  {
+    "origin": "apk:assets/ExtraContent/places/AbuseReportingTest.rbxl",
+    "reason": "extension-not-allowed",
+    "bytes": 54159
+  },
+  {
+    "origin": "apk:assets/ExtraContent/places/Maquettes.rbxl",
+    "reason": "extension-not-allowed",
+    "bytes": 129262
+  },
+  {
+    "origin": "apk:assets/ExtraContent/places/Mobile.rbxl",
+    "reason": "extension-not-allowed",
+    "bytes": 147973
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/sky/white.png",
+    "reason": "extension-not-allowed",
+    "bytes": 323
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/AvatarExperience/Avatar1_PPEButton.png",
+    "reason": "extension-not-allowed",
+    "bytes": 325276
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/AvatarExperience/Avatar2_PPEButton.png",
+    "reason": "extension-not-allowed",
+    "bytes": 205660
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/Controls/DesignSystem/ButtonY.png",
+    "reason": "extension-not-allowed",
+    "bytes": 325
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/Controls/DesignSystem/ButtonY@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 513
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/Controls/DesignSystem/ButtonY@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 751
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/Controls/DesignSystem/DpadLeft@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 303
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/Controls/DesignSystem/Thumbstick1Horizontal@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 590
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/Controls/DesignSystem/Thumbstick1Vertical@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 591
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/ExternalIdentity/google.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3520
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/ImageSet/LuaApp/img_set_1x_2.png",
+    "reason": "extension-not-allowed",
+    "bytes": 53179
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/ImageSet/LuaApp/img_set_2x_5.png",
+    "reason": "extension-not-allowed",
+    "bytes": 32120
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/ImageSet/LuaApp/img_set_3x_1.png",
+    "reason": "extension-not-allowed",
+    "bytes": 204855
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/ImageSet/LuaApp/img_set_3x_2.png",
+    "reason": "extension-not-allowed",
+    "bytes": 230232
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/9-slice/gr-loading-indicator.png",
+    "reason": "extension-not-allowed",
+    "bytes": 90
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/9-slice/gr-loading-indicator@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 117
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/9-slice/gr-loading-indicator@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 150
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/ExternalSite/discord@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 768
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/ExternalSite/discord@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1044
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/ExternalSite/guilded@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 678
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/ExternalSite/guilded@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 922
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/ExternalSite/twitter@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1002
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/ExternalSite/youtube@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 580
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/Auth/FPSBackground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 285199
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/Auth/GridBackground_05202026.jpg",
+    "reason": "extension-not-allowed",
+    "bytes": 519949
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/Auth/classind_16.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3522
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/Auth/logo_white_1x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2458
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/Auth/reversevignette.png",
+    "reason": "extension-not-allowed",
+    "bytes": 344965
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/BuildExperience/NativeMonetization/EmptyCatalog.png",
+    "reason": "extension-not-allowed",
+    "bytes": 7873
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/app_icon_Classic.png",
+    "reason": "extension-not-allowed",
+    "bytes": 15933
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/app_icon_Default.png",
+    "reason": "extension-not-allowed",
+    "bytes": 8989
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/app_icon_Halloween2026.png",
+    "reason": "extension-not-allowed",
+    "bytes": 53279
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/gr-avatar mask-90x90.png",
+    "reason": "extension-not-allowed",
+    "bytes": 598
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/home_background_halloween2026.jpg",
+    "reason": "extension-not-allowed",
+    "bytes": 95631
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/noconnection.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1491
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/starburst_center_classic_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 25004
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/starburst_center_classic_kids_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 23313
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/starburst_center_classic_kids_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 27137
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/graphic/starburst_center_classic_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 31943
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/icons/GameDetails/contentRating/igrs-3.png",
+    "reason": "extension-not-allowed",
+    "bytes": 32815
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/icons/GameDetails/contentRating/igrs-7.png",
+    "reason": "extension-not-allowed",
+    "bytes": 28335
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/icons/pc_icon_vng_square_xxxhdpi.png",
+    "reason": "extension-not-allowed",
+    "bytes": 47578
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaApp/icons/pc_window_icon_128.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1584
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self-tip.png",
+    "reason": "extension-not-allowed",
+    "bytes": 107
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self-tip@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 116
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self-tip@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 128
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self.png",
+    "reason": "extension-not-allowed",
+    "bytes": 196
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self2.png",
+    "reason": "extension-not-allowed",
+    "bytes": 194
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self2@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 318
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self2@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 421
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 317
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-self@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 421
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-tip.png",
+    "reason": "extension-not-allowed",
+    "bytes": 109
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-tip@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 153
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble-tip@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 197
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble.png",
+    "reason": "extension-not-allowed",
+    "bytes": 218
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 307
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/chat-bubble@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 472
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/gr-mask-game-icon@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 170
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/system-message@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 156
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/9-slice/system-message@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 195
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/graphic/gr-profile-border-48x48.png",
+    "reason": "extension-not-allowed",
+    "bytes": 526
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/icons/ic-chat-large.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1082
+  },
+  {
+    "origin": "apk:assets/ExtraContent/textures/ui/LuaChat/icons/ic-friends.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1568
+  },
+  {
+    "origin": "apk:assets/PublicSuffixDatabase.list",
+    "reason": "extension-not-allowed",
+    "bytes": 132737
+  },
+  {
+    "origin": "apk:assets/android/shared_compression_dictionaries/c0101e39d0563e9590a0ab27f90e91ea36d6bcfdf99add6915870c306a286479.dict",
+    "reason": "extension-not-allowed",
+    "bytes": 1548125
+  },
+  {
+    "origin": "apk:assets/android/textures/plastic/diffuse.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 349663
+  },
+  {
+    "origin": "apk:assets/android/textures/plastic/normal.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 1398268
+  },
+  {
+    "origin": "apk:assets/android/textures/plastic/normaldetail.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 174880
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/indoor512_bk.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 174880
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/indoor512_dn.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 174880
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/indoor512_ft.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 174880
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/indoor512_lf.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 174880
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/indoor512_rt.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 174880
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/indoor512_up.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 174880
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/sky512_bk.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 699172
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/sky512_dn.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 699172
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/sky512_ft.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 699172
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/sky512_lf.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 699172
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/sky512_rt.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 699172
+  },
+  {
+    "origin": "apk:assets/android/textures/sky/sky512_up.tex",
+    "reason": "extension-not-allowed",
+    "bytes": 699172
+  },
+  {
+    "origin": "apk:assets/android/textures/studs.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 349663
+  },
+  {
+    "origin": "apk:assets/android/textures/wangIndex.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 32896
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_01.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_02.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_03.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_04.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_05.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_06.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_07.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_08.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_09.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_10.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_11.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_12.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_13.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_14.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_15.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_16.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_17.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_18.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_19.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_20.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_21.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_22.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_23.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_24.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/android/textures/water/normal_25.ktx",
+    "reason": "extension-not-allowed",
+    "bytes": 43804
+  },
+  {
+    "origin": "apk:assets/com/appsflyer/internal/5276b86fb7955bac-",
+    "reason": "extension-not-allowed",
+    "bytes": 6768
+  },
+  {
+    "origin": "apk:assets/com/appsflyer/internal/78c4e91f807dd5d4b-",
+    "reason": "extension-not-allowed",
+    "bytes": 13350
+  },
+  {
+    "origin": "apk:assets/com/appsflyer/internal/86679d682b789861d-",
+    "reason": "extension-not-allowed",
+    "bytes": 3972
+  },
+  {
+    "origin": "apk:assets/com/appsflyer/internal/a97d5ead9486e553a-",
+    "reason": "extension-not-allowed",
+    "bytes": 7542
+  },
+  {
+    "origin": "apk:assets/content/avatar/abilities/AbilityManagerActor.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 3981
+  },
+  {
+    "origin": "apk:assets/content/avatar/abilities/AbilityManagerActor_DEPRECATED_2026-08-12.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 3989
+  },
+  {
+    "origin": "apk:assets/content/avatar/abilities/AbilityManagerActor_beta1.0.0.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 3573
+  },
+  {
+    "origin": "apk:assets/content/avatar/abilities/AbilityManagerActor_justCoreAbilities.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 3919
+  },
+  {
+    "origin": "apk:assets/content/avatar/abilities/AbilityManagerActor_noReachAndHold.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 3957
+  },
+  {
+    "origin": "apk:assets/content/avatar/abilities/AbilityManagerActor_oldClientInitialize.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 3022
+  },
+  {
+    "origin": "apk:assets/content/avatar/abilities/AvatarAbilitiesServerScript.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 756
+  },
+  {
+    "origin": "apk:assets/content/avatar/animations/humanoidR15AnimateChildren.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 2228
+  },
+  {
+    "origin": "apk:assets/content/avatar/animations/humanoidR15AnimateChildren_DEPRECATED_20260902.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 2232
+  },
+  {
+    "origin": "apk:assets/content/avatar/animations/humanoidR6AnimateChildren.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 2284
+  },
+  {
+    "origin": "apk:assets/content/avatar/character.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 26887
+  },
+  {
+    "origin": "apk:assets/content/avatar/characterR15DynamicHeadV2.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 15452
+  },
+  {
+    "origin": "apk:assets/content/avatar/characterR6NoFace.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 27014
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositExtraSlot0.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 817
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositExtraSlot1.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 817
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositExtraSlot2.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 817
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositExtraSlot3.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 817
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositExtraSlot4.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 817
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositFullAtlasBaseTexture.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 193
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositFullAtlasOverlayTexture.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 193
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositLeftArmBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28921
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositLeftLegBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28921
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositPantsTemplate.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 43201
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositQuad.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 193
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositRightArmBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28585
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositRightLegBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28585
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositShirtTemplate.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 43201
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositTShirt.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 193
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/CompositTorsoBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28921
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/R15CompositLeftArmBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 18937
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/R15CompositRightArmBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 18937
+  },
+  {
+    "origin": "apk:assets/content/avatar/compositing/R15CompositTorsoBase.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 9049
+  },
+  {
+    "origin": "apk:assets/content/avatar/defaultPants.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 384
+  },
+  {
+    "origin": "apk:assets/content/avatar/defaultShirt.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 384
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/head.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28789
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headA.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 13561
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headB.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 1033
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headC.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 18961
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headD.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 29509
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headE.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 24505
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headF.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 9601
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headG.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 21589
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headH.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28789
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headI.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 2881
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headJ.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 2665
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headK.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 28789
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headL.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 14029
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headM.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 3241
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headN.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 29509
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headO.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 19105
+  },
+  {
+    "origin": "apk:assets/content/avatar/heads/headP.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 29509
+  },
+  {
+    "origin": "apk:assets/content/avatar/meshes/leftarm.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 2065
+  },
+  {
+    "origin": "apk:assets/content/avatar/meshes/leftleg.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 2065
+  },
+  {
+    "origin": "apk:assets/content/avatar/meshes/rightarm.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 2065
+  },
+  {
+    "origin": "apk:assets/content/avatar/meshes/rightleg.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 2065
+  },
+  {
+    "origin": "apk:assets/content/avatar/meshes/torso.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 2065
+  },
+  {
+    "origin": "apk:assets/content/avatar/scripts/R15MoodsV2.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 891
+  },
+  {
+    "origin": "apk:assets/content/avatar/scripts/humanoidAnimatePlayEmote.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 8772
+  },
+  {
+    "origin": "apk:assets/content/avatar/scripts/humanoidAnimateR15_DEPRECATED_20260813.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 13313
+  },
+  {
+    "origin": "apk:assets/content/configs/PerformanceConfigs/rofiler.tools.js",
+    "reason": "non-text",
+    "bytes": 369560,
+    "sha256": "36a8c16e84cbc9a57381154227a74072ba471c752dd62167a3db4df918f85e46"
+  },
+  {
+    "origin": "apk:assets/content/fonts/AccanthisADFStd-Regular.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 51728
+  },
+  {
+    "origin": "apk:assets/content/fonts/AmaticSC-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 146348
+  },
+  {
+    "origin": "apk:assets/content/fonts/AmaticSC-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 142164
+  },
+  {
+    "origin": "apk:assets/content/fonts/Arimo-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 318184
+  },
+  {
+    "origin": "apk:assets/content/fonts/Arimo-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 317652
+  },
+  {
+    "origin": "apk:assets/content/fonts/Balthazar-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 28224
+  },
+  {
+    "origin": "apk:assets/content/fonts/Bangers-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 95664
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderExtended-Bold.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 79504
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderExtended-Regular.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 78708
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderExtended-SemiBold.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 78520
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderMono-Bold.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 62992
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderMono-Light.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 59048
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderMono-Regular.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 58864
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderSans-Bold.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 77840
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderSans-ExtraBold.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 77504
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderSans-Medium.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 77856
+  },
+  {
+    "origin": "apk:assets/content/fonts/BuilderSans-Regular.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 77352
+  },
+  {
+    "origin": "apk:assets/content/fonts/ComicNeue-Angular-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 62916
+  },
+  {
+    "origin": "apk:assets/content/fonts/Creepster-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 61368
+  },
+  {
+    "origin": "apk:assets/content/fonts/DenkOne-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 44016
+  },
+  {
+    "origin": "apk:assets/content/fonts/Fondamento-Italic.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 64716
+  },
+  {
+    "origin": "apk:assets/content/fonts/Fondamento-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 84160
+  },
+  {
+    "origin": "apk:assets/content/fonts/FredokaOne-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 42452
+  },
+  {
+    "origin": "apk:assets/content/fonts/GrenzeGotisch-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 91808
+  },
+  {
+    "origin": "apk:assets/content/fonts/GrenzeGotisch-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 91596
+  },
+  {
+    "origin": "apk:assets/content/fonts/Guru-Regular.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 695888
+  },
+  {
+    "origin": "apk:assets/content/fonts/HWYGOTH.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 53012
+  },
+  {
+    "origin": "apk:assets/content/fonts/Inconsolata-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 80456
+  },
+  {
+    "origin": "apk:assets/content/fonts/IndieFlower-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 55300
+  },
+  {
+    "origin": "apk:assets/content/fonts/JosefinSans-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 58548
+  },
+  {
+    "origin": "apk:assets/content/fonts/Jura-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 101928
+  },
+  {
+    "origin": "apk:assets/content/fonts/Kalam-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 427336
+  },
+  {
+    "origin": "apk:assets/content/fonts/LuckiestGuy-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 58292
+  },
+  {
+    "origin": "apk:assets/content/fonts/Merriweather-Italic.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 142548
+  },
+  {
+    "origin": "apk:assets/content/fonts/Merriweather-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 149092
+  },
+  {
+    "origin": "apk:assets/content/fonts/Michroma-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 62972
+  },
+  {
+    "origin": "apk:assets/content/fonts/Montserrat-Black.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 197888
+  },
+  {
+    "origin": "apk:assets/content/fonts/Montserrat-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 198072
+  },
+  {
+    "origin": "apk:assets/content/fonts/Montserrat-Medium.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 198104
+  },
+  {
+    "origin": "apk:assets/content/fonts/Montserrat-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 197976
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoNaskhArabicUI-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 281232
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoSansBengaliUI-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 190928
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoSansDevanagariUI-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 199888
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoSansGeorgian-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 41656
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoSansKhmerUI-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 75108
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoSansMyanmarUI-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 191096
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoSansSinhalaUI-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 309464
+  },
+  {
+    "origin": "apk:assets/content/fonts/NotoSansThaiUI-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 39288
+  },
+  {
+    "origin": "apk:assets/content/fonts/Nunito-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 166700
+  },
+  {
+    "origin": "apk:assets/content/fonts/Oswald-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 91676
+  },
+  {
+    "origin": "apk:assets/content/fonts/Oswald-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 91400
+  },
+  {
+    "origin": "apk:assets/content/fonts/PatrickHand-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 212112
+  },
+  {
+    "origin": "apk:assets/content/fonts/PermanentMarker-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 73620
+  },
+  {
+    "origin": "apk:assets/content/fonts/PressStart2P-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 66432
+  },
+  {
+    "origin": "apk:assets/content/fonts/RobloxEmoji.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 1860
+  },
+  {
+    "origin": "apk:assets/content/fonts/Roboto-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 170348
+  },
+  {
+    "origin": "apk:assets/content/fonts/Roboto-Italic.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 173516
+  },
+  {
+    "origin": "apk:assets/content/fonts/Roboto-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 171272
+  },
+  {
+    "origin": "apk:assets/content/fonts/RobotoCondensed-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 169848
+  },
+  {
+    "origin": "apk:assets/content/fonts/RobotoMono-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 86908
+  },
+  {
+    "origin": "apk:assets/content/fonts/RomanAntique.otf",
+    "reason": "extension-not-allowed",
+    "bytes": 268000
+  },
+  {
+    "origin": "apk:assets/content/fonts/Sarpanch-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 278336
+  },
+  {
+    "origin": "apk:assets/content/fonts/Sarpanch-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 276380
+  },
+  {
+    "origin": "apk:assets/content/fonts/SourceSansPro-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 267388
+  },
+  {
+    "origin": "apk:assets/content/fonts/SourceSansPro-It.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 94816
+  },
+  {
+    "origin": "apk:assets/content/fonts/SourceSansPro-Light.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 268588
+  },
+  {
+    "origin": "apk:assets/content/fonts/SourceSansPro-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 269108
+  },
+  {
+    "origin": "apk:assets/content/fonts/SourceSansPro-Semibold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 268280
+  },
+  {
+    "origin": "apk:assets/content/fonts/SpecialElite-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 151080
+  },
+  {
+    "origin": "apk:assets/content/fonts/TitilliumWeb-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 53896
+  },
+  {
+    "origin": "apk:assets/content/fonts/TitilliumWeb-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 57392
+  },
+  {
+    "origin": "apk:assets/content/fonts/TwemojiMozilla.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 1324332
+  },
+  {
+    "origin": "apk:assets/content/fonts/Ubuntu-Italic.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 326292
+  },
+  {
+    "origin": "apk:assets/content/fonts/Ubuntu-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 298928
+  },
+  {
+    "origin": "apk:assets/content/fonts/zekton_rg.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 86964
+  },
+  {
+    "origin": "apk:assets/content/models/MaterialManager/smooth_sphere.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 102969
+  },
+  {
+    "origin": "apk:assets/content/models/MaterialManager/sphere.mesh",
+    "reason": "extension-not-allowed",
+    "bytes": 312205
+  },
+  {
+    "origin": "apk:assets/content/models/Thumbnails/Mannequins/R15.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 13086
+  },
+  {
+    "origin": "apk:assets/content/models/Thumbnails/Mannequins/Rthro.rbxm",
+    "reason": "extension-not-allowed",
+    "bytes": 11837
+  },
+  {
+    "origin": "apk:assets/content/sky/bn.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 65664
+  },
+  {
+    "origin": "apk:assets/content/sky/cloudAdvection.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 43832
+  },
+  {
+    "origin": "apk:assets/content/sky/cloudDetail.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 43832
+  },
+  {
+    "origin": "apk:assets/content/sky/cloudDetail3D.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 299741
+  },
+  {
+    "origin": "apk:assets/content/sky/clouds.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 2396905
+  },
+  {
+    "origin": "apk:assets/content/sky/cloudsfb.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 87529
+  },
+  {
+    "origin": "apk:assets/content/sky/moon.jpg",
+    "reason": "extension-not-allowed",
+    "bytes": 7394
+  },
+  {
+    "origin": "apk:assets/content/sky/noise.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 4244
+  },
+  {
+    "origin": "apk:assets/content/sky/noisefb.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 384
+  },
+  {
+    "origin": "apk:assets/content/sky/sun.jpg",
+    "reason": "extension-not-allowed",
+    "bytes": 6336
+  },
+  {
+    "origin": "apk:assets/content/textures/ArrowCursor.png",
+    "reason": "extension-not-allowed",
+    "bytes": 191
+  },
+  {
+    "origin": "apk:assets/content/textures/AvatarEditorImages/Sliders/body-type-slider-background.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2279
+  },
+  {
+    "origin": "apk:assets/content/textures/AvatarEditorImages/Sliders/gr-slide-bar-empty.png",
+    "reason": "extension-not-allowed",
+    "bytes": 100
+  },
+  {
+    "origin": "apk:assets/content/textures/AvatarEditorImages/Sliders/gr-slide-bar-empty@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 139
+  },
+  {
+    "origin": "apk:assets/content/textures/AvatarEditorImages/Sliders/gr-slide-bar-empty@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 174
+  },
+  {
+    "origin": "apk:assets/content/textures/AvatarEditorImages/Sliders/gr-slider@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 922
+  },
+  {
+    "origin": "apk:assets/content/textures/AvatarEditorImages/gr-selection-border@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 101
+  },
+  {
+    "origin": "apk:assets/content/textures/AvatarImporter/img_dark_Rthro.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3113
+  },
+  {
+    "origin": "apk:assets/content/textures/Cursors/FocusLocation.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1419
+  },
+  {
+    "origin": "apk:assets/content/textures/Cursors/Gamepad/Pointer.png",
+    "reason": "extension-not-allowed",
+    "bytes": 227
+  },
+  {
+    "origin": "apk:assets/content/textures/Cursors/Gamepad/Pointer@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 313
+  },
+  {
+    "origin": "apk:assets/content/textures/Cursors/KeyboardMouse/ArrowCursor.png",
+    "reason": "extension-not-allowed",
+    "bytes": 716
+  },
+  {
+    "origin": "apk:assets/content/textures/Cursors/KeyboardMouse/ArrowFarCursor.png",
+    "reason": "extension-not-allowed",
+    "bytes": 647
+  },
+  {
+    "origin": "apk:assets/content/textures/Cursors/mouseIconCameraOrbit.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1414
+  },
+  {
+    "origin": "apk:assets/content/textures/Cursors/mouseIconCameraZoom.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1182
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 402
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_back@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 815
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_console.png",
+    "reason": "extension-not-allowed",
+    "bytes": 297
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_console@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 500
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_headset.png",
+    "reason": "extension-not-allowed",
+    "bytes": 335
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_headset@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 611
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_laptop.png",
+    "reason": "extension-not-allowed",
+    "bytes": 207
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_laptop@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 293
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_network_cellular_high@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 411
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_network_cellular_low@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 287
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_network_cellular_medium@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 343
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_orientation.png",
+    "reason": "extension-not-allowed",
+    "bytes": 423
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_orientation@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 781
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 195
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_phone@12.png",
+    "reason": "extension-not-allowed",
+    "bytes": 205
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_phone@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 301
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_rotate.png",
+    "reason": "extension-not-allowed",
+    "bytes": 405
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_rotate@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 790
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_server.png",
+    "reason": "extension-not-allowed",
+    "bytes": 211
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_server@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 283
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_virtual_controller.png",
+    "reason": "extension-not-allowed",
+    "bytes": 537
+  },
+  {
+    "origin": "apk:assets/content/textures/DeviceEmulator/sim_virtual_controller@32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 930
+  },
+  {
+    "origin": "apk:assets/content/textures/StudioCameraUI/iconFPS.png",
+    "reason": "extension-not-allowed",
+    "bytes": 707
+  },
+  {
+    "origin": "apk:assets/content/textures/StudioCameraUI/iconFocus.png",
+    "reason": "extension-not-allowed",
+    "bytes": 710
+  },
+  {
+    "origin": "apk:assets/content/textures/StudioPlayerEmulator/player_emulator_32.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1151
+  },
+  {
+    "origin": "apk:assets/content/textures/StudioSharedUI/alert_error@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 344
+  },
+  {
+    "origin": "apk:assets/content/textures/StudioSharedUI/arrowSpritesheet.png",
+    "reason": "extension-not-allowed",
+    "bytes": 394
+  },
+  {
+    "origin": "apk:assets/content/textures/explosion.png",
+    "reason": "extension-not-allowed",
+    "bytes": 11967
+  },
+  {
+    "origin": "apk:assets/content/textures/icon_ROBUX@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 533
+  },
+  {
+    "origin": "apk:assets/content/textures/noise.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 4224
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/common_alpha.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 4224
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/explosion01_core_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 87536
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/explosion01_implosion_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 87536
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/explosion01_shockwave_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 87536
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/explosion01_smoke_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 87536
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/explosion_color.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 5648
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/fire_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 87536
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/fire_sparks_color.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 5648
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/fire_sparks_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 5616
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/forcefield_glow_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 87536
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/forcefield_vortex_color.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 5648
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/forcefield_vortex_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 22000
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/smoke_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 22000
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/sparkles_color.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 5648
+  },
+  {
+    "origin": "apk:assets/content/textures/particles/sparkles_main.dds",
+    "reason": "extension-not-allowed",
+    "bytes": 22000
+  },
+  {
+    "origin": "apk:assets/content/textures/shadowblurmask.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2881
+  },
+  {
+    "origin": "apk:assets/content/textures/smallWhiteCircle.png",
+    "reason": "extension-not-allowed",
+    "bytes": 561
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonA.png",
+    "reason": "extension-not-allowed",
+    "bytes": 338
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonB.png",
+    "reason": "extension-not-allowed",
+    "bytes": 306
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonB@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 525
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonR1.png",
+    "reason": "extension-not-allowed",
+    "bytes": 331
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonR1@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 529
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonX.png",
+    "reason": "extension-not-allowed",
+    "bytes": 335
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonX@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 542
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonY.png",
+    "reason": "extension-not-allowed",
+    "bytes": 325
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/DesignSystem/ButtonY@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 513
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/InputActionLabelPlaceholder.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3012
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/command@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 292
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/xboxA.png",
+    "reason": "extension-not-allowed",
+    "bytes": 331
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/xboxA@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 609
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/xboxA@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 895
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Controls/xboxLSDirectional.png",
+    "reason": "extension-not-allowed",
+    "bytes": 273
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/CircleBackground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 6139
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/CircleBackground@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 12963
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/CircleBackground@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 20529
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/SegmentedCircle.png",
+    "reason": "extension-not-allowed",
+    "bytes": 26733
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/SegmentedCircle@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 63591
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/SegmentedCircle@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 106131
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/SelectedGradient.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4515
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Emotes/TenFoot/SelectedLine.png",
+    "reason": "extension-not-allowed",
+    "bytes": 646
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/InGameMenu/BackgroundGlow.png",
+    "reason": "extension-not-allowed",
+    "bytes": 8247
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/InGameMenu/BackgroundGlow@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 23580
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/AimStrafeButtonPressed.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2289
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/AimStrafeButtonPressed@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4015
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/AimStrafeButtonRegular.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2729
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/AimStrafeButtonRegular@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4930
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/CrouchButtonPressed.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2040
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/CrouchButtonPressed@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3606
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/CrouchButtonRegular.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2632
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/CrouchButtonRegular@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4724
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/IntroMove@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 6791
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/JumpButtonPressed.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4279
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/JumpButtonPressed@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 8163
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/JumpButtonRegular.png",
+    "reason": "extension-not-allowed",
+    "bytes": 5502
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/JumpButtonRegular@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 10580
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/SprintButtonPressed.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2167
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/SprintButtonPressed@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3799
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/SprintButtonRegular.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2847
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/SprintButtonRegular@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 5265
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/StrafeButtonPressed.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2179
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/StrafeButtonPressed@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3788
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/StrafeButtonRegular.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2792
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Input/StrafeButtonRegular@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 5017
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/InspectMenu/ico_robux@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 936
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/LegacyRbxGui/GravelSide.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2453
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/LoadingScreen/LoadingSpinner.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2760
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/AddFriend.png",
+    "reason": "extension-not-allowed",
+    "bytes": 300
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/AddFriend@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 531
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/AddFriend@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 760
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/AdminIcon@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 327
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/AdminIcon@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 414
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/Block.png",
+    "reason": "extension-not-allowed",
+    "bytes": 365
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/Block@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 705
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/Block@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1043
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/Clear@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 511
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/Clear@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 778
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/NewFollowing@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 581
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/NotificationOff@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1169
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/Report@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 621
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/Report@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 890
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/SelectOn@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 375
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/SelectOn@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 525
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/StarIcon.png",
+    "reason": "extension-not-allowed",
+    "bytes": 211
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/StarIcon@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 331
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/PlayerList/StarIcon@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 456
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Help/AButtonDark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3637
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Help/AButtonDark@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 8524
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Help/BButtonLight@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 6805
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/LeaveGame/artAssets_DownArrow@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 249
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/LeaveGame/thumb_strokeStyle@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 547
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/MenuBarIcons/CaptureTab@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 372
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Players/AddFriendIcon@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 597
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Radial/RadialLabel.png",
+    "reason": "extension-not-allowed",
+    "bytes": 471
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Radial/RadialLabel@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1095
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Slider/BarLeft@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 193
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Slider/BarRight.png",
+    "reason": "extension-not-allowed",
+    "bytes": 144
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/Settings/Slider/BarRight@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 190
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/TopBar/moreOn@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 373
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/TopBar/moreOn@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 503
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VideoServerScreen/bug.png",
+    "reason": "extension-not-allowed",
+    "bytes": 516
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Blank.png",
+    "reason": "extension-not-allowed",
+    "bytes": 271
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Blank@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 463
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Blank@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 612
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/MicLight/Connecting.png",
+    "reason": "extension-not-allowed",
+    "bytes": 713
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/MicLight/Connecting@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1570
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/MicLight/Connecting@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2753
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/MicLight/Muted.png",
+    "reason": "extension-not-allowed",
+    "bytes": 457
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/MicLight/Muted@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 682
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/MicLight/Muted@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 919
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Misc/Mute.png",
+    "reason": "extension-not-allowed",
+    "bytes": 293
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Misc/Mute@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 495
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Misc/Unmute.png",
+    "reason": "extension-not-allowed",
+    "bytes": 255
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Misc/Unmute@2x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 431
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/Muted@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1683
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Connecting.png",
+    "reason": "extension-not-allowed",
+    "bytes": 428
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Error.png",
+    "reason": "extension-not-allowed",
+    "bytes": 423
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Unmuted0.png",
+    "reason": "extension-not-allowed",
+    "bytes": 347
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Unmuted100.png",
+    "reason": "extension-not-allowed",
+    "bytes": 365
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Unmuted20.png",
+    "reason": "extension-not-allowed",
+    "bytes": 369
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Unmuted40.png",
+    "reason": "extension-not-allowed",
+    "bytes": 376
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Unmuted60.png",
+    "reason": "extension-not-allowed",
+    "bytes": 364
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/New/Unmuted80.png",
+    "reason": "extension-not-allowed",
+    "bytes": 370
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/SpeakerDark/Unmuted0@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 513
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/SpeakerDark/Unmuted100@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 491
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/SpeakerDark/Unmuted20@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1548
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/SpeakerDark/Unmuted40@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1533
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/SpeakerDark/Unmuted60@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1486
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/VoiceChat/SpeakerDark/Unmuted80@3x.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1446
+  },
+  {
+    "origin": "apk:assets/content/textures/ui/icon_admin-16.png",
+    "reason": "extension-not-allowed",
+    "bytes": 200
+  },
+  {
+    "origin": "apk:assets/dexopt/baseline.prof",
+    "reason": "extension-not-allowed",
+    "bytes": 16608
+  },
+  {
+    "origin": "apk:assets/dexopt/baseline.profm",
+    "reason": "extension-not-allowed",
+    "bytes": 2396
+  },
+  {
+    "origin": "apk:assets/fonts/SourceSansPro-Black.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 148368
+  },
+  {
+    "origin": "apk:assets/fonts/SourceSansPro-Bold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 148932
+  },
+  {
+    "origin": "apk:assets/fonts/SourceSansPro-Light.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 150244
+  },
+  {
+    "origin": "apk:assets/fonts/SourceSansPro-Regular.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 149508
+  },
+  {
+    "origin": "apk:assets/fonts/SourceSansPro-Semibold.ttf",
+    "reason": "extension-not-allowed",
+    "bytes": 149636
+  },
+  {
+    "origin": "apk:assets/shaders/shaders_glsles3.pack",
+    "reason": "extension-not-allowed",
+    "bytes": 4305960
+  },
+  {
+    "origin": "apk:assets/shaders/shaders_vulkan_mobile.pack",
+    "reason": "over-8-MiB-text-limit",
+    "bytes": 19033839,
+    "sha256": "e803a7ad6a6f4122625be364830f68cdf53d266b85fc40e1982051b6cf426b89"
+  },
+  {
+    "origin": "apk:assets/ssl/cacert.pem",
+    "reason": "extension-not-allowed",
+    "bytes": 228725
+  },
+  {
+    "origin": "apktool:res/drawable/accept_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 333
+  },
+  {
+    "origin": "apktool:res/drawable/back_icon.png",
+    "reason": "extension-not-allowed",
+    "bytes": 223
+  },
+  {
+    "origin": "apktool:res/drawable/icon_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 117
+  },
+  {
+    "origin": "apktool:res/drawable/icon_close.png",
+    "reason": "extension-not-allowed",
+    "bytes": 141
+  },
+  {
+    "origin": "apktool:res/drawable/icon_decline.png",
+    "reason": "extension-not-allowed",
+    "bytes": 221
+  },
+  {
+    "origin": "apktool:res/drawable/icon_incoming_call.png",
+    "reason": "extension-not-allowed",
+    "bytes": 215
+  },
+  {
+    "origin": "apktool:res/drawable/icon_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 276
+  },
+  {
+    "origin": "apktool:res/drawable/ignore_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 318
+  },
+  {
+    "origin": "apktool:res/drawable/notification_icon.png",
+    "reason": "extension-not-allowed",
+    "bytes": 938
+  },
+  {
+    "origin": "apktool:res/drawable/recently_played_widget_preview_background.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 77268
+  },
+  {
+    "origin": "apktool:res/drawable/recently_played_widget_preview_screenshot_v1.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 10512
+  },
+  {
+    "origin": "apktool:res/drawable/roblox_logo_icon_with_shadow.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 1720
+  },
+  {
+    "origin": "apktool:res/drawable/white_button.png",
+    "reason": "extension-not-allowed",
+    "bytes": 512
+  },
+  {
+    "origin": "apktool:res/drawable/white_button_down.png",
+    "reason": "extension-not-allowed",
+    "bytes": 598
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_ab_share_pack_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 156
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_btn_check_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 227
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_btn_check_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 404
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 464
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_btn_radio_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 563
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_btn_switch_to_on_mtrl_00001.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1200
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_btn_switch_to_on_mtrl_00012.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1380
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_cab_background_top_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 148
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_ic_commit_search_api_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 171
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_list_divider_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 78
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_list_focused_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 120
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_list_longpressed_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 104
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_list_pressed_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 107
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_list_pressed_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 105
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_list_selector_disabled_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 154
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_list_selector_disabled_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 155
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_menu_hardkey_panel_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1122
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_popup_background_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1711
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_scrubber_control_off_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 201
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_scrubber_control_to_pressed_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 196
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_scrubber_control_to_pressed_mtrl_005.png",
+    "reason": "extension-not-allowed",
+    "bytes": 272
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_scrubber_primary_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 120
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_scrubber_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 114
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 304
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_switch_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 448
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_tab_indicator_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 120
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_text_select_handle_left_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 278
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_text_select_handle_middle_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 396
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_text_select_handle_right_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 262
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_textfield_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 111
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_textfield_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 107
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_textfield_search_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 91
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/abc_textfield_search_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 94
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/accept_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 515
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/chat_notification_reply.png",
+    "reason": "extension-not-allowed",
+    "bytes": 344
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/common_full_open_on_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 681
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/common_google_signin_btn_icon_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 756
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/common_google_signin_btn_icon_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 769
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/common_google_signin_btn_text_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1107
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/common_google_signin_btn_text_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 864
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/dialog_full_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2314
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/fingerprint_dialog_error.png",
+    "reason": "extension-not-allowed",
+    "bytes": 900
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/googleg_disabled_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 410
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/googleg_standard_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 808
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/ic_action_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 527
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/ic_launcher_transparent.png",
+    "reason": "extension-not-allowed",
+    "bytes": 880
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/icon_decline.png",
+    "reason": "extension-not-allowed",
+    "bytes": 343
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/icon_incoming_call.png",
+    "reason": "extension-not-allowed",
+    "bytes": 297
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/icon_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 375
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/icon_robux.png",
+    "reason": "extension-not-allowed",
+    "bytes": 592
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/icon_search_white.png",
+    "reason": "extension-not-allowed",
+    "bytes": 435
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/ignore_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 427
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/notification_bg_low_normal.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 112
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/notification_bg_low_pressed.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 112
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/notification_bg_normal.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 112
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/notification_bg_normal_pressed.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 112
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/notification_icon.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2268
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/notification_oversize_large_icon_bg.png",
+    "reason": "extension-not-allowed",
+    "bytes": 909
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/notify_panel_notification_icon_bg.png",
+    "reason": "extension-not-allowed",
+    "bytes": 107
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/roblox_logo.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1809
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 140
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_back_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 296
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_back_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 320
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_close.png",
+    "reason": "extension-not-allowed",
+    "bytes": 191
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_close_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 358
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_close_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 387
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_gear.png",
+    "reason": "extension-not-allowed",
+    "bytes": 591
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_gear_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1459
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_gear_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1638
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_notification_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 656
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_notification_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1021
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_robux_gold.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3091
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 508
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_search_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 977
+  },
+  {
+    "origin": "apktool:res/drawable-hdpi/topbar_ic_search_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1076
+  },
+  {
+    "origin": "apktool:res/drawable-ldpi/fingerprint_dialog_error.png",
+    "reason": "extension-not-allowed",
+    "bytes": 431
+  },
+  {
+    "origin": "apktool:res/drawable-ldpi/icon_robux.png",
+    "reason": "extension-not-allowed",
+    "bytes": 310
+  },
+  {
+    "origin": "apktool:res/drawable-ldpi/icon_search_white.png",
+    "reason": "extension-not-allowed",
+    "bytes": 264
+  },
+  {
+    "origin": "apktool:res/drawable-ldrtl-hdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 304
+  },
+  {
+    "origin": "apktool:res/drawable-ldrtl-mdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 251
+  },
+  {
+    "origin": "apktool:res/drawable-ldrtl-xhdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 424
+  },
+  {
+    "origin": "apktool:res/drawable-ldrtl-xxhdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 599
+  },
+  {
+    "origin": "apktool:res/drawable-ldrtl-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 608
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_ab_share_pack_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 131
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_btn_check_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 214
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_btn_check_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 321
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_btn_radio_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 324
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_btn_radio_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 356
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00001.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 750
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_btn_switch_to_on_mtrl_00012.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 832
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_cab_background_top_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 124
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_ic_commit_search_api_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 173
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_list_divider_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 78
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_list_focused_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 104
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_list_longpressed_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 99
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_list_pressed_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 100
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_list_pressed_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 99
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_list_selector_disabled_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 127
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_list_selector_disabled_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 128
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_menu_hardkey_panel_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 650
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_popup_background_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1083
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_scrubber_control_off_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 159
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_scrubber_control_to_pressed_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 145
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_scrubber_control_to_pressed_mtrl_005.png",
+    "reason": "extension-not-allowed",
+    "bytes": 197
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_scrubber_primary_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 114
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_scrubber_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 106
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 254
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_switch_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 315
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_tab_indicator_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 107
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_text_select_handle_left_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 203
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_text_select_handle_middle_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 310
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_text_select_handle_right_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 186
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_textfield_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 103
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_textfield_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 97
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_textfield_search_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 90
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/abc_textfield_search_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 93
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/accept_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 350
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/chat_notification_reply.png",
+    "reason": "extension-not-allowed",
+    "bytes": 249
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/common_google_signin_btn_icon_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 407
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/common_google_signin_btn_icon_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 438
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/common_google_signin_btn_text_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 603
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/common_google_signin_btn_text_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 542
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/dialog_full_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1496
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/fingerprint_dialog_error.png",
+    "reason": "extension-not-allowed",
+    "bytes": 565
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/googleg_disabled_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 281
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/googleg_standard_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 562
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/ic_action_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 352
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/ic_launcher_transparent.png",
+    "reason": "extension-not-allowed",
+    "bytes": 553
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/icon_robux.png",
+    "reason": "extension-not-allowed",
+    "bytes": 343
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/icon_search_white.png",
+    "reason": "extension-not-allowed",
+    "bytes": 307
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/ignore_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 351
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/notification_bg_low_normal.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 109
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/notification_bg_low_pressed.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 109
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/notification_bg_normal.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 109
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/notification_bg_normal_pressed.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 109
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/notification_icon.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1447
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/notify_panel_notification_icon_bg.png",
+    "reason": "extension-not-allowed",
+    "bytes": 98
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/textfield_search_selected_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 102
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 115
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_back_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 234
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_back_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 236
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_close.png",
+    "reason": "extension-not-allowed",
+    "bytes": 162
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_close_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 302
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_close_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 328
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_gear.png",
+    "reason": "extension-not-allowed",
+    "bytes": 350
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_gear_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 996
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_gear_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1043
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_notification_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 371
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_notification_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 548
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_robux_gold.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1134
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 312
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_search_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 620
+  },
+  {
+    "origin": "apktool:res/drawable-mdpi/topbar_ic_search_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 676
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_ab_share_pack_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 161
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_btn_check_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 281
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_btn_check_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 432
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_btn_radio_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 651
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_btn_radio_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 785
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_btn_switch_to_on_mtrl_00001.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1772
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_btn_switch_to_on_mtrl_00012.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2064
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_cab_background_top_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 168
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_ic_commit_search_api_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 228
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_list_divider_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 78
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_list_focused_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 127
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_list_longpressed_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 104
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_list_pressed_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 108
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_list_pressed_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 106
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_list_selector_disabled_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 207
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_list_selector_disabled_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 172
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_menu_hardkey_panel_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1642
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_popup_background_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2813
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_scrubber_control_off_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 267
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_scrubber_control_to_pressed_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 267
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_scrubber_control_to_pressed_mtrl_005.png",
+    "reason": "extension-not-allowed",
+    "bytes": 391
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_scrubber_primary_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 133
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_scrubber_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 120
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 457
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_switch_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 594
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_tab_indicator_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 130
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_text_select_handle_left_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 335
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_text_select_handle_middle_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 585
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_text_select_handle_right_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 318
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_textfield_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 126
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_textfield_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 120
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_textfield_search_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 103
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/abc_textfield_search_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 106
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/accept_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 602
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/chat_notification_reply.png",
+    "reason": "extension-not-allowed",
+    "bytes": 486
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/common_full_open_on_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 489
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/common_google_signin_btn_icon_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1013
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/common_google_signin_btn_icon_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1129
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/common_google_signin_btn_text_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1553
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/common_google_signin_btn_text_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1223
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/dialog_full_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3596
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/fingerprint_dialog_error.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1172
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/googleg_disabled_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 516
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/googleg_standard_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 982
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/ic_action_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 664
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/ic_launcher_transparent.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1151
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/icon_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 154
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/icon_close.png",
+    "reason": "extension-not-allowed",
+    "bytes": 209
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/icon_decline.png",
+    "reason": "extension-not-allowed",
+    "bytes": 413
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/icon_incoming_call.png",
+    "reason": "extension-not-allowed",
+    "bytes": 361
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/icon_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 455
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/icon_robux.png",
+    "reason": "extension-not-allowed",
+    "bytes": 626
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/icon_search_white.png",
+    "reason": "extension-not-allowed",
+    "bytes": 553
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/ignore_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 499
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/notification_bg_low_normal.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 130
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/notification_bg_low_pressed.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 141
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/notification_bg_normal.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 130
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/notification_bg_normal_pressed.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 136
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/notification_icon.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3387
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/notify_panel_notification_icon_bg.png",
+    "reason": "extension-not-allowed",
+    "bytes": 138
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/roblox_logo.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2440
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/tab_icon_catalog.png",
+    "reason": "extension-not-allowed",
+    "bytes": 670
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/tab_icon_games.png",
+    "reason": "extension-not-allowed",
+    "bytes": 722
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/tab_icon_groups.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1411
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/tab_icon_home.png",
+    "reason": "extension-not-allowed",
+    "bytes": 843
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/tab_icon_inventory.png",
+    "reason": "extension-not-allowed",
+    "bytes": 683
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/tab_icon_messages.png",
+    "reason": "extension-not-allowed",
+    "bytes": 664
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/tab_icon_profile.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1083
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/textfield_search_default_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 128
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 157
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_back_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 351
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_back_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 425
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_close.png",
+    "reason": "extension-not-allowed",
+    "bytes": 235
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_close_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 424
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_close_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 521
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_gear.png",
+    "reason": "extension-not-allowed",
+    "bytes": 694
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_gear_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1859
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_gear_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2018
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_notification_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 644
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_notification_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1022
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_robux_gold.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4668
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 625
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_search_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1205
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/topbar_ic_search_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1298
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/white_button.png",
+    "reason": "extension-not-allowed",
+    "bytes": 944
+  },
+  {
+    "origin": "apktool:res/drawable-xhdpi/white_button_down.png",
+    "reason": "extension-not-allowed",
+    "bytes": 944
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_ab_share_pack_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 204
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_btn_check_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 307
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_btn_check_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 593
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_btn_radio_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 984
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_btn_radio_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1208
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_btn_switch_to_on_mtrl_00001.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2983
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_btn_switch_to_on_mtrl_00012.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3595
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_cab_background_top_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 259
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_ic_commit_search_api_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 224
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_list_divider_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 82
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_list_focused_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 138
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_list_longpressed_holo.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 117
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_list_pressed_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 121
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_list_pressed_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 119
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_list_selector_disabled_holo_dark.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 251
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_list_selector_disabled_holo_light.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 247
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_menu_hardkey_panel_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2958
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_popup_background_mtrl_mult.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4400
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_scrubber_control_off_mtrl_alpha.png",
+    "reason": "extension-not-allowed",
+    "bytes": 322
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_scrubber_control_to_pressed_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 403
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_scrubber_control_to_pressed_mtrl_005.png",
+    "reason": "extension-not-allowed",
+    "bytes": 595
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_scrubber_primary_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 125
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_scrubber_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 125
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 595
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_switch_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 912
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_tab_indicator_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 157
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_text_select_handle_left_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 420
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_text_select_handle_middle_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 753
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_text_select_handle_right_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 422
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_textfield_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 147
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_textfield_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 140
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_textfield_search_activated_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 111
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/abc_textfield_search_default_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 115
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/accept_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 858
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/chat_notification_reply.png",
+    "reason": "extension-not-allowed",
+    "bytes": 672
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/common_google_signin_btn_icon_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1657
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/common_google_signin_btn_icon_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1864
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/common_google_signin_btn_text_dark_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2618
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/common_google_signin_btn_text_light_normal_background.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2128
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/fingerprint_dialog_error.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1484
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/googleg_disabled_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 727
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/googleg_standard_color_18.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1441
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/ic_launcher_transparent.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1591
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/icon_decline.png",
+    "reason": "extension-not-allowed",
+    "bytes": 644
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/icon_incoming_call.png",
+    "reason": "extension-not-allowed",
+    "bytes": 513
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/icon_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 677
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/icon_robux.png",
+    "reason": "extension-not-allowed",
+    "bytes": 964
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/icon_search_white.png",
+    "reason": "extension-not-allowed",
+    "bytes": 800
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/ignore_friend_request.png",
+    "reason": "extension-not-allowed",
+    "bytes": 618
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/notification_icon.png",
+    "reason": "extension-not-allowed",
+    "bytes": 5101
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/roblox_logo.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3784
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 202
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_back_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 323
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_back_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 323
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_close.png",
+    "reason": "extension-not-allowed",
+    "bytes": 314
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_close_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 368
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_close_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 364
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_gear.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1095
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_gear_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1186
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_gear_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1186
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_notification_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1191
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_notification_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1876
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_robux_gold.png",
+    "reason": "extension-not-allowed",
+    "bytes": 7793
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 940
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_search_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1056
+  },
+  {
+    "origin": "apktool:res/drawable-xxhdpi/topbar_ic_search_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1057
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_btn_check_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 275
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_btn_check_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 476
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_btn_radio_to_on_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 785
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_btn_radio_to_on_mtrl_015.png",
+    "reason": "extension-not-allowed",
+    "bytes": 946
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_btn_switch_to_on_mtrl_00001.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3354
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_btn_switch_to_on_mtrl_00012.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4010
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_scrubber_control_to_pressed_mtrl_000.png",
+    "reason": "extension-not-allowed",
+    "bytes": 415
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_scrubber_control_to_pressed_mtrl_005.png",
+    "reason": "extension-not-allowed",
+    "bytes": 631
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 611
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_switch_track_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 920
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_tab_indicator_mtrl_alpha.9.png",
+    "reason": "extension-not-allowed",
+    "bytes": 171
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_text_select_handle_left_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 513
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/abc_text_select_handle_right_mtrl.png",
+    "reason": "extension-not-allowed",
+    "bytes": 513
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/chat_notification_reply.png",
+    "reason": "extension-not-allowed",
+    "bytes": 924
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/fingerprint_dialog_error.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1924
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/ic_action_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 949
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/ic_launcher_transparent.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2258
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/icon_decline.png",
+    "reason": "extension-not-allowed",
+    "bytes": 929
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/icon_incoming_call.png",
+    "reason": "extension-not-allowed",
+    "bytes": 668
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/icon_phone.png",
+    "reason": "extension-not-allowed",
+    "bytes": 901
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/icon_robux.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1060
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/icon_search_white.png",
+    "reason": "extension-not-allowed",
+    "bytes": 897
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_back.png",
+    "reason": "extension-not-allowed",
+    "bytes": 282
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_back_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 483
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_back_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 483
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_close.png",
+    "reason": "extension-not-allowed",
+    "bytes": 510
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_close_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 592
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_close_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 591
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_gear.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1573
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_gear_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1524
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_gear_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1523
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_notification_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1856
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_notification_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2494
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_robux_gold.png",
+    "reason": "extension-not-allowed",
+    "bytes": 13839
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_search.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1298
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_search_dark.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1460
+  },
+  {
+    "origin": "apktool:res/drawable-xxxhdpi/topbar_ic_search_light.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1460
+  },
+  {
+    "origin": "apktool:res/mipmap-hdpi/ic_launcher.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1291
+  },
+  {
+    "origin": "apktool:res/mipmap-hdpi/ic_launcher_background.png",
+    "reason": "extension-not-allowed",
+    "bytes": 120
+  },
+  {
+    "origin": "apktool:res/mipmap-hdpi/ic_launcher_classic_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2934
+  },
+  {
+    "origin": "apktool:res/mipmap-hdpi/ic_launcher_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1300
+  },
+  {
+    "origin": "apktool:res/mipmap-hdpi/ic_launcher_halloween_2026_background.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 7598
+  },
+  {
+    "origin": "apktool:res/mipmap-hdpi/ic_launcher_halloween_2026_foreground.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 2016
+  },
+  {
+    "origin": "apktool:res/mipmap-hdpi/ic_launcher_round.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3596
+  },
+  {
+    "origin": "apktool:res/mipmap-mdpi/ic_launcher.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1093
+  },
+  {
+    "origin": "apktool:res/mipmap-mdpi/ic_launcher_background.png",
+    "reason": "extension-not-allowed",
+    "bytes": 106
+  },
+  {
+    "origin": "apktool:res/mipmap-mdpi/ic_launcher_classic_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2037
+  },
+  {
+    "origin": "apktool:res/mipmap-mdpi/ic_launcher_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 843
+  },
+  {
+    "origin": "apktool:res/mipmap-mdpi/ic_launcher_halloween_2026_background.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 4308
+  },
+  {
+    "origin": "apktool:res/mipmap-mdpi/ic_launcher_halloween_2026_foreground.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 1288
+  },
+  {
+    "origin": "apktool:res/mipmap-mdpi/ic_launcher_round.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2257
+  },
+  {
+    "origin": "apktool:res/mipmap-xhdpi/ic_launcher.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2339
+  },
+  {
+    "origin": "apktool:res/mipmap-xhdpi/ic_launcher_background.png",
+    "reason": "extension-not-allowed",
+    "bytes": 140
+  },
+  {
+    "origin": "apktool:res/mipmap-xhdpi/ic_launcher_classic_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4064
+  },
+  {
+    "origin": "apktool:res/mipmap-xhdpi/ic_launcher_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 1670
+  },
+  {
+    "origin": "apktool:res/mipmap-xhdpi/ic_launcher_halloween_2026_background.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 11530
+  },
+  {
+    "origin": "apktool:res/mipmap-xhdpi/ic_launcher_halloween_2026_foreground.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 2886
+  },
+  {
+    "origin": "apktool:res/mipmap-xhdpi/ic_launcher_round.png",
+    "reason": "extension-not-allowed",
+    "bytes": 5244
+  },
+  {
+    "origin": "apktool:res/mipmap-xxhdpi/ic_launcher.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3529
+  },
+  {
+    "origin": "apktool:res/mipmap-xxhdpi/ic_launcher_background.png",
+    "reason": "extension-not-allowed",
+    "bytes": 197
+  },
+  {
+    "origin": "apktool:res/mipmap-xxhdpi/ic_launcher_classic_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 5878
+  },
+  {
+    "origin": "apktool:res/mipmap-xxhdpi/ic_launcher_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 2700
+  },
+  {
+    "origin": "apktool:res/mipmap-xxhdpi/ic_launcher_halloween_2026_background.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 21320
+  },
+  {
+    "origin": "apktool:res/mipmap-xxhdpi/ic_launcher_halloween_2026_foreground.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 5166
+  },
+  {
+    "origin": "apktool:res/mipmap-xxhdpi/ic_launcher_round.png",
+    "reason": "extension-not-allowed",
+    "bytes": 8215
+  },
+  {
+    "origin": "apktool:res/mipmap-xxxhdpi/ic_launcher.png",
+    "reason": "extension-not-allowed",
+    "bytes": 4822
+  },
+  {
+    "origin": "apktool:res/mipmap-xxxhdpi/ic_launcher_background.png",
+    "reason": "extension-not-allowed",
+    "bytes": 275
+  },
+  {
+    "origin": "apktool:res/mipmap-xxxhdpi/ic_launcher_classic_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 7674
+  },
+  {
+    "origin": "apktool:res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+    "reason": "extension-not-allowed",
+    "bytes": 3414
+  },
+  {
+    "origin": "apktool:res/mipmap-xxxhdpi/ic_launcher_halloween_2026_background.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 35198
+  },
+  {
+    "origin": "apktool:res/mipmap-xxxhdpi/ic_launcher_halloween_2026_foreground.webp",
+    "reason": "extension-not-allowed",
+    "bytes": 6592
+  },
+  {
+    "origin": "apktool:res/mipmap-xxxhdpi/ic_launcher_round.png",
+    "reason": "extension-not-allowed",
+    "bytes": 11741
+  },
+  {
+    "origin": "apktool:res/raw/com_android_billingclient_heterodyne_info",
+    "reason": "extension-not-allowed",
+    "bytes": 55
+  },
+  {
+    "origin": "apktool:res/raw/com_android_billingclient_registration_info.binarypb",
+    "reason": "extension-not-allowed",
+    "bytes": 56
+  },
+  {
+    "origin": "ghidra:liblazydtc/disassembly/007fc578.asm",
+    "reason": "credential-bearing-initializer",
+    "bytes": 2935,
+    "sha256": "665f107e837cf4ccee9184e373cd5afad68e8a4598932553d3ac43d88ba4bbde"
+  },
+  {
+    "origin": "ghidra:liblazydtc/pseudocode/007fc578.c",
+    "reason": "credential-bearing-initializer",
+    "bytes": 2498,
+    "sha256": "2e8a67e0754cb686f3e77f80fea8ff01469f294ec413cfa071e0ef5d90f5469b"
+  }
+]

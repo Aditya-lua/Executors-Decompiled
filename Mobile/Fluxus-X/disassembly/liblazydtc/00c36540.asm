@@ -1,0 +1,5 @@
+; OSSL_PROVIDER_do_all @ 00c36540
+00c36540	adrp x16,0xcb9000
+00c36544	ldr x17,[x16, #0x288]
+00c36548	add x16,x16,#0x288
+00c3654c	br x17

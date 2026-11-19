@@ -1,0 +1,12 @@
+; FUN_00a6701c @ 00a6701c
+00a6701c	stp x20,x19,[sp, #-0x20]!
+00a67020	stp x29,x30,[sp, #0x10]
+00a67024	add x29,sp,#0x10
+00a67028	mov x19,x2
+00a6702c	mov x20,x1
+00a67030	bl 0x00c3cf30
+00a67034	ldp x29,x30,[sp, #0x10]
+00a67038	mov x1,x20
+00a6703c	mov x2,x19
+00a67040	ldp x20,x19,[sp], #0x20
+00a67044	b 0x00c3d620

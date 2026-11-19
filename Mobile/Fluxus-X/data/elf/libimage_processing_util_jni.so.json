@@ -1,0 +1,407 @@
+{
+  "path": "lib/arm64-v8a/libimage_processing_util_jni.so",
+  "bytes": 32544,
+  "sha256": "f0e4611db0d6b68942d8ba6977519f3dd1cdbffa87b7fc16d8006696ba954af4",
+  "machine": "EM_AARCH64",
+  "class": 64,
+  "little_endian": true,
+  "needed": [
+    "liblog.so",
+    "libandroid.so",
+    "libjnigraphics.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+  ],
+  "imports": 18,
+  "exports": 8,
+  "defined_functions": 8,
+  "sections": [
+    {
+      "name": "",
+      "address": "0x0",
+      "file_offset": "0x0",
+      "bytes": 0,
+      "type": "SHT_NULL",
+      "flags": 0
+    },
+    {
+      "name": ".note.android.ident",
+      "address": "0x238",
+      "file_offset": "0x238",
+      "bytes": 152,
+      "type": "SHT_NOTE",
+      "flags": 2
+    },
+    {
+      "name": ".note.gnu.build-id",
+      "address": "0x2d0",
+      "file_offset": "0x2d0",
+      "bytes": 36,
+      "type": "SHT_NOTE",
+      "flags": 2
+    },
+    {
+      "name": ".dynsym",
+      "address": "0x2f8",
+      "file_offset": "0x2f8",
+      "bytes": 648,
+      "type": "SHT_DYNSYM",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version",
+      "address": "0x580",
+      "file_offset": "0x580",
+      "bytes": 54,
+      "type": "SHT_GNU_versym",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version_d",
+      "address": "0x5b8",
+      "file_offset": "0x5b8",
+      "bytes": 56,
+      "type": "SHT_GNU_verdef",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version_r",
+      "address": "0x5f0",
+      "file_offset": "0x5f0",
+      "bytes": 32,
+      "type": "SHT_GNU_verneed",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.hash",
+      "address": "0x610",
+      "file_offset": "0x610",
+      "bytes": 72,
+      "type": "SHT_GNU_HASH",
+      "flags": 2
+    },
+    {
+      "name": ".dynstr",
+      "address": "0x658",
+      "file_offset": "0x658",
+      "bytes": 1001,
+      "type": "SHT_STRTAB",
+      "flags": 2
+    },
+    {
+      "name": ".rela.dyn",
+      "address": "0xa48",
+      "file_offset": "0xa48",
+      "bytes": 1032,
+      "type": "SHT_RELA",
+      "flags": 2
+    },
+    {
+      "name": ".rela.plt",
+      "address": "0xe50",
+      "file_offset": "0xe50",
+      "bytes": 432,
+      "type": "SHT_RELA",
+      "flags": 66
+    },
+    {
+      "name": ".rodata",
+      "address": "0x1000",
+      "file_offset": "0x1000",
+      "bytes": 215,
+      "type": "SHT_PROGBITS",
+      "flags": 50
+    },
+    {
+      "name": ".eh_frame_hdr",
+      "address": "0x10d8",
+      "file_offset": "0x10d8",
+      "bytes": 572,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".eh_frame",
+      "address": "0x1318",
+      "file_offset": "0x1318",
+      "bytes": 3296,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".text",
+      "address": "0x1ff8",
+      "file_offset": "0x1ff8",
+      "bytes": 20980,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".plt",
+      "address": "0x71f0",
+      "file_offset": "0x71f0",
+      "bytes": 320,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".data.rel.ro",
+      "address": "0xb330",
+      "file_offset": "0x7330",
+      "bytes": 8,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".fini_array",
+      "address": "0xb338",
+      "file_offset": "0x7338",
+      "bytes": 16,
+      "type": "SHT_FINI_ARRAY",
+      "flags": 3
+    },
+    {
+      "name": ".dynamic",
+      "address": "0xb348",
+      "file_offset": "0x7348",
+      "bytes": 480,
+      "type": "SHT_DYNAMIC",
+      "flags": 3
+    },
+    {
+      "name": ".got",
+      "address": "0xb528",
+      "file_offset": "0x7528",
+      "bytes": 320,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".got.plt",
+      "address": "0xb668",
+      "file_offset": "0x7668",
+      "bytes": 168,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".relro_padding",
+      "address": "0xb710",
+      "file_offset": "0x7710",
+      "bytes": 2288,
+      "type": "SHT_NOBITS",
+      "flags": 3
+    },
+    {
+      "name": ".bss",
+      "address": "0xf710",
+      "file_offset": "0x7710",
+      "bytes": 4,
+      "type": "SHT_NOBITS",
+      "flags": 3
+    },
+    {
+      "name": ".comment",
+      "address": "0x0",
+      "file_offset": "0x7710",
+      "bytes": 203,
+      "type": "SHT_PROGBITS",
+      "flags": 48
+    },
+    {
+      "name": ".shstrtab",
+      "address": "0x0",
+      "file_offset": "0x77db",
+      "bytes": 254,
+      "type": "SHT_STRTAB",
+      "flags": 0
+    }
+  ],
+  "imported_symbols": [
+    {
+      "name": "__cxa_finalize",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__cxa_atexit",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__register_atfork",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "AndroidBitmap_lockPixels",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "AndroidBitmap_unlockPixels",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_fromSurface",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__android_log_print",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_setBuffersGeometry",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_lock",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_release",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_unlockAndPost",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "malloc",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "free",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__stack_chk_fail",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "getauxval",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "memcpy",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__memcpy_chk",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "memmove",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    }
+  ],
+  "exported_symbols": [
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeShiftPixel",
+      "address": "0x61c8",
+      "bytes": 540,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeConvertAndroid420ToBitmap",
+      "address": "0x6900",
+      "bytes": 328,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeCopyBetweenByteBufferAndBitmap",
+      "address": "0x60d8",
+      "bytes": 240,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeWriteJpegToSurface",
+      "address": "0x63e4",
+      "bytes": 360,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeConvertAndroid420ToABGR",
+      "address": "0x654c",
+      "bytes": 948,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeRotateYUV",
+      "address": "0x6a48",
+      "bytes": 1816,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeGetYUVImageVUOff",
+      "address": "0x7160",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_androidx_camera_core_ImageProcessingUtil_nativeNewDirectByteBuffer",
+      "address": "0x71a8",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    }
+  ]
+}

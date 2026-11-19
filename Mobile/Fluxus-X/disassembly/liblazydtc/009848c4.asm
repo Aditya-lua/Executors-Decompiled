@@ -1,0 +1,18 @@
+; ix::Socket::accept @ 009848c4
+009848c4	add x8,x0,#0x8
+009848c8	ldar w8,[x8]
+009848cc	cmn w8,#0x1
+009848d0	b.eq 0x009848dc
+009848d4	mov w0,#0x1
+009848d8	ret
+009848dc	stp x29,x30,[sp, #-0x10]!
+009848e0	mov x29,sp
+009848e4	adrp x8,0x2bb000
+009848e8	add x8,x8,#0x535
+009848ec	mov w2,#0x17
+009848f0	mov x0,x1
+009848f4	mov x1,x8
+009848f8	bl 0x00c31090
+009848fc	mov w0,wzr
+00984900	ldp x29,x30,[sp], #0x10
+00984904	ret

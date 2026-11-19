@@ -1,0 +1,9 @@
+; FUN_009685e4 @ 009685e4
+009685e4	ldr x8,[x0]
+009685e8	mov w11,#0xa
+009685ec	add x9,x1,#0x5f8
+009685f0	add x10,x1,#0x530
+009685f4	ldr w8,[x8, #0x8]
+009685f8	bics wzr,w11,w8
+009685fc	csel x0,x9,x10,eq
+00968600	ret

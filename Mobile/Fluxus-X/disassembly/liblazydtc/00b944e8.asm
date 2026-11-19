@@ -1,0 +1,32 @@
+; mbedtls_ecp_set_public_key @ 00b944e8
+00b944e8	stp x20,x19,[sp, #-0x20]!
+00b944ec	stp x29,x30,[sp, #0x10]
+00b944f0	add x29,sp,#0x10
+00b944f4	ldr w8,[x1]
+00b944f8	mov x19,x2
+00b944fc	mov x20,x1
+00b94500	mov w1,w0
+00b94504	cbz w8,0x00b94518
+00b94508	cmp w8,w1
+00b9450c	b.eq 0x00b94524
+00b94510	mov w0,#0xffffb080
+00b94514	b 0x00b94544
+00b94518	mov x0,x20
+00b9451c	bl 0x00c42800
+00b94520	cbnz w0,0x00b94544
+00b94524	add x0,x20,#0xd0
+00b94528	mov x1,x19
+00b9452c	bl 0x00c41b60
+00b94530	cbnz w0,0x00b94544
+00b94534	add x0,x20,#0xe0
+00b94538	add x1,x19,#0x10
+00b9453c	bl 0x00c41b60
+00b94540	cbz w0,0x00b94550
+00b94544	ldp x29,x30,[sp, #0x10]
+00b94548	ldp x20,x19,[sp], #0x20
+00b9454c	ret
+00b94550	ldp x29,x30,[sp, #0x10]
+00b94554	add x0,x20,#0xf0
+00b94558	add x1,x19,#0x20
+00b9455c	ldp x20,x19,[sp], #0x20
+00b94560	b 0x00c41b60

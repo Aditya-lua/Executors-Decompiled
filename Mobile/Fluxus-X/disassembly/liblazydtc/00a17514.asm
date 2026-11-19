@@ -1,0 +1,28 @@
+; DES_set_odd_parity @ 00a17514
+00a17514	ldrb w8,[x0]
+00a17518	ldrb w10,[x0, #0x1]
+00a1751c	ldrb w11,[x0, #0x2]
+00a17520	ldrb w12,[x0, #0x3]
+00a17524	ldrb w13,[x0, #0x4]
+00a17528	ldrb w14,[x0, #0x5]
+00a1752c	ldrb w15,[x0, #0x6]
+00a17530	ldrb w16,[x0, #0x7]
+00a17534	adrp x9,0x752000
+00a17538	add x9,x9,#0xf40
+00a1753c	ldrb w8,[x9, x8]
+00a17540	ldrb w10,[x9, x10]
+00a17544	ldrb w11,[x9, x11]
+00a17548	ldrb w12,[x9, x12]
+00a1754c	ldrb w13,[x9, x13]
+00a17550	ldrb w14,[x9, x14]
+00a17554	ldrb w15,[x9, x15]
+00a17558	ldrb w9,[x9, x16]
+00a1755c	strb w8,[x0]
+00a17560	strb w10,[x0, #0x1]
+00a17564	strb w11,[x0, #0x2]
+00a17568	strb w12,[x0, #0x3]
+00a1756c	strb w13,[x0, #0x4]
+00a17570	strb w14,[x0, #0x5]
+00a17574	strb w15,[x0, #0x6]
+00a17578	strb w9,[x0, #0x7]
+00a1757c	ret

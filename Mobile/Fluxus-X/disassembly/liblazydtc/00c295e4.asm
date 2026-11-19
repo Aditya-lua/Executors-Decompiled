@@ -1,0 +1,58 @@
+; __cxa_end_catch @ 00c295e4
+00c295e4	paciasp
+00c295e8	stp x29,x30,[sp, #-0x20]!
+00c295ec	stp x20,x19,[sp, #0x10]
+00c295f0	mov x29,sp
+00c295f4	bl 0x00c44730
+00c295f8	ldr x19,[x0]
+00c295fc	cbz x19,0x00c296a4
+00c29600	mov x10,#0x2b2b
+00c29604	mov x8,x19
+00c29608	movk x10,#0x4743, LSL #16
+00c2960c	ldr x9,[x8, #0x60]!
+00c29610	movk x10,#0x4c4e, LSL #32
+00c29614	movk x10,#0x43, LSL #48
+00c29618	cmp x10,x9, LSR #0x8
+00c2961c	b.ne 0x00c2968c
+00c29620	ldr w8,[x19, #0x38]
+00c29624	tbnz w8,#0x1f,0x00c296b4
+00c29628	subs w8,w8,#0x1
+00c2962c	str w8,[x19, #0x38]
+00c29630	b.ne 0x00c296a4
+00c29634	ldr x8,[x19, #0x30]
+00c29638	str x8,[x0]
+00c2963c	ldrb w8,[x19, #0x60]
+00c29640	cmp x8,#0x1
+00c29644	b.ne 0x00c2965c
+00c29648	ldr x8,[x19, #0x8]
+00c2964c	mov x0,x19
+00c29650	sub x20,x8,#0x80
+00c29654	bl 0x00c29ce0
+00c29658	mov x19,x20
+00c2965c	add x1,x19,#0x8
+00c29660	mov x0,#-0x1
+00c29664	bl 0x00c2bd10
+00c29668	cmp x0,#0x1
+00c2966c	b.ne 0x00c296a4
+00c29670	ldr x8,[x19, #0x18]
+00c29674	cbz x8,0x00c29680
+00c29678	add x0,x19,#0x80
+00c2967c	blr x8
+00c29680	mov x0,x19
+00c29684	bl 0x00c29ce0
+00c29688	b 0x00c296a4
+00c2968c	mov x19,x0
+00c29690	mov x0,x8
+00c29694	bl 0x00c2c2d0
+00c29698	mov x0,x19
+00c2969c	mov x8,xzr
+00c296a0	str x8,[x0]
+00c296a4	ldp x20,x19,[sp, #0x10]
+00c296a8	ldp x29,x30,[sp], #0x20
+00c296ac	autiasp
+00c296b0	ret
+00c296b4	adds w8,w8,#0x1
+00c296b8	str w8,[x19, #0x38]
+00c296bc	b.cc 0x00c296a4
+00c296c0	ldr x8,[x19, #0x30]
+00c296c4	b 0x00c296a0

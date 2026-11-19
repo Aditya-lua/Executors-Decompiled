@@ -1,0 +1,51 @@
+; tls_parse_ctos_psk_kex_modes @ 009d7714
+009d7714	str x19,[sp, #-0x20]!
+009d7718	stp x29,x30,[sp, #0x10]
+009d771c	ldr x9,[x1, #0x8]
+009d7720	mov x19,x0
+009d7724	add x29,sp,#0x10
+009d7728	cbz x9,0x009d779c
+009d772c	ldr x8,[x1]
+009d7730	sub x11,x9,#0x1
+009d7734	ldrb w10,[x8]
+009d7738	cmp x11,x10
+009d773c	b.ne 0x009d779c
+009d7740	add x11,x8,x9
+009d7744	stp x11,xzr,[x1]
+009d7748	cbz w10,0x009d779c
+009d774c	mov w10,#0x1
+009d7750	add x8,x8,#0x1
+009d7754	sub x9,x10,x9
+009d7758	ldrb w10,[x8]
+009d775c	cbz w10,0x009d7774
+009d7760	cmp w10,#0x1
+009d7764	b.ne 0x009d7788
+009d7768	ldr w10,[x19, #0xb28]
+009d776c	orr w10,w10,#0x2
+009d7770	b 0x009d7784
+009d7774	ldrb w10,[x19, #0x9e9]
+009d7778	tbz w10,#0x2,0x009d7788
+009d777c	ldr w10,[x19, #0xb28]
+009d7780	orr w10,w10,#0x1
+009d7784	str w10,[x19, #0xb28]
+009d7788	adds x9,x9,#0x1
+009d778c	add x8,x8,#0x1
+009d7790	b.ne 0x009d7758
+009d7794	mov w0,#0x1
+009d7798	b 0x009d77d0
+009d779c	bl 0x00c342a0
+009d77a0	adrp x0,0x2d7000
+009d77a4	adrp x2,0x2c5000
+009d77a8	add x0,x0,#0xae0
+009d77ac	add x2,x2,#0x746
+009d77b0	mov w1,#0x225
+009d77b4	bl 0x00c342b0
+009d77b8	mov w1,#0x32
+009d77bc	mov w2,#0x6e
+009d77c0	mov x0,x19
+009d77c4	mov x3,xzr
+009d77c8	bl 0x00c34410
+009d77cc	mov w0,wzr
+009d77d0	ldp x29,x30,[sp, #0x10]
+009d77d4	ldr x19,[sp], #0x20
+009d77d8	ret

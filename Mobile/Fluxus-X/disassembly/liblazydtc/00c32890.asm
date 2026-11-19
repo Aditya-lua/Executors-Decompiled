@@ -1,0 +1,5 @@
+; SSL_connect @ 00c32890
+00c32890	adrp x16,0xcb7000
+00c32894	ldr x17,[x16, #0x430]
+00c32898	add x16,x16,#0x430
+00c3289c	br x17

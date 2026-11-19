@@ -1,0 +1,46 @@
+; X509_NAME_ENTRY_create_by_txt @ 00b1540c
+00b1540c	stp x24,x23,[sp, #-0x40]!
+00b15410	stp x20,x19,[sp, #0x20]
+00b15414	mov x19,x1
+00b15418	mov x24,x0
+00b1541c	mov x0,x1
+00b15420	mov w1,wzr
+00b15424	stp x22,x21,[sp, #0x10]
+00b15428	stp x29,x30,[sp, #0x30]
+00b1542c	add x29,sp,#0x30
+00b15430	mov w20,w4
+00b15434	mov x21,x3
+00b15438	mov w22,w2
+00b1543c	bl 0x00c39690
+00b15440	cbz x0,0x00b15474
+00b15444	mov x23,x0
+00b15448	mov x0,x24
+00b1544c	mov x1,x23
+00b15450	mov w2,w22
+00b15454	mov x3,x21
+00b15458	mov w4,w20
+00b1545c	bl 0x00b14f48
+00b15460	mov x19,x0
+00b15464	mov x0,x23
+00b15468	bl 0x00c37660
+00b1546c	mov x0,x19
+00b15470	b 0x00b154ac
+00b15474	bl 0x00c342a0
+00b15478	adrp x0,0x2a0000
+00b1547c	adrp x2,0x2d6000
+00b15480	add x0,x0,#0xe2d
+00b15484	add x2,x2,#0x80b
+00b15488	orr w1,wzr,#0xfc
+00b1548c	bl 0x00c342b0
+00b15490	adrp x2,0x2ad000
+00b15494	add x2,x2,#0x7ba
+00b15498	mov w0,#0xb
+00b1549c	mov w1,#0x77
+00b154a0	mov x3,x19
+00b154a4	bl 0x00c342c0
+00b154a8	mov x0,xzr
+00b154ac	ldp x29,x30,[sp, #0x30]
+00b154b0	ldp x20,x19,[sp, #0x20]
+00b154b4	ldp x22,x21,[sp, #0x10]
+00b154b8	ldp x24,x23,[sp], #0x40
+00b154bc	ret

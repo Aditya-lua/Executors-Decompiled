@@ -1,0 +1,14 @@
+; _INIT_29 @ 00805e24
+00805e24	adrp x8,0xd1b000
+00805e28	ldrb w9,[x8, #0x8]
+00805e2c	tbnz w9,#0x0,0x00805e54
+00805e30	adrp x9,0xcb4000
+00805e34	mov w11,#0x1
+00805e38	ldr x9,[x9, #0x9b0]
+00805e3c	strb w11,[x8, #0x8]
+00805e40	ldr w10,[x9]
+00805e44	add w8,w10,#0x1
+00805e48	adrp x10,0xd1b000
+00805e4c	str w8,[x9]
+00805e50	str w8,[x10]
+00805e54	ret

@@ -1,0 +1,4 @@
+; EVP_sm4_ecb @ 00a98258
+00a98258	adrp x0,0xc69000
+00a9825c	add x0,x0,#0x978
+00a98260	ret

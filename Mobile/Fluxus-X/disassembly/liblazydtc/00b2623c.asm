@@ -1,0 +1,30 @@
+; ossl_siv128_copy_ctx @ 00b2623c
+00b2623c	stp x20,x19,[sp, #-0x20]!
+00b26240	stp x29,x30,[sp, #0x10]
+00b26244	mov x19,x0
+00b26248	ldr q0,[x1]
+00b2624c	ldr x0,[x0, #0x20]
+00b26250	mov x20,x1
+00b26254	add x29,sp,#0x10
+00b26258	str q0,[x19]
+00b2625c	cbnz x0,0x00b2626c
+00b26260	bl 0x00c34b90
+00b26264	str x0,[x19, #0x20]
+00b26268	cbz x0,0x00b262a4
+00b2626c	ldr x1,[x20, #0x20]
+00b26270	bl 0x00c3cc90
+00b26274	cbz w0,0x00b262a4
+00b26278	ldr x0,[x19, #0x30]
+00b2627c	bl 0x00c36370
+00b26280	ldr x0,[x20, #0x30]
+00b26284	bl 0x00c3d780
+00b26288	str x0,[x19, #0x30]
+00b2628c	cbz x0,0x00b262a4
+00b26290	ldr x0,[x20, #0x28]
+00b26294	str x0,[x19, #0x28]
+00b26298	cbz x0,0x00b262a0
+00b2629c	bl 0x00c3d7e0
+00b262a0	mov w0,#0x1
+00b262a4	ldp x29,x30,[sp, #0x10]
+00b262a8	ldp x20,x19,[sp], #0x20
+00b262ac	ret

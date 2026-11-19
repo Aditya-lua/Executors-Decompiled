@@ -1,0 +1,34 @@
+; ossl_namemap_add_name_n @ 00a82764
+00a82764	stp x22,x21,[sp, #-0x30]!
+00a82768	stp x20,x19,[sp, #0x10]
+00a8276c	mov x19,x3
+00a82770	mov x20,x2
+00a82774	mov w21,w1
+00a82778	mov x22,x0
+00a8277c	stp x29,x30,[sp, #0x20]
+00a82780	add x29,sp,#0x20
+00a82784	cbnz x0,0x00a82790
+00a82788	bl 0x00a82598
+00a8278c	mov x22,x0
+00a82790	cbz x20,0x00a827d4
+00a82794	cbz x19,0x00a827d4
+00a82798	cbz x22,0x00a827d4
+00a8279c	ldr x0,[x22, #0x8]
+00a827a0	bl 0x00c356a0
+00a827a4	cbz w0,0x00a827d4
+00a827a8	mov x0,x22
+00a827ac	mov w1,w21
+00a827b0	mov x2,x20
+00a827b4	mov x3,x19
+00a827b8	bl 0x00a827e8
+00a827bc	ldr x8,[x22, #0x8]
+00a827c0	mov w19,w0
+00a827c4	mov x0,x8
+00a827c8	bl 0x00c35690
+00a827cc	mov w0,w19
+00a827d0	b 0x00a827d8
+00a827d4	mov w0,wzr
+00a827d8	ldp x29,x30,[sp, #0x20]
+00a827dc	ldp x20,x19,[sp, #0x10]
+00a827e0	ldp x22,x21,[sp], #0x30
+00a827e4	ret

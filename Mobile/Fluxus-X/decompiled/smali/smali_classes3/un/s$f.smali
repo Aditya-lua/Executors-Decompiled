@@ -1,0 +1,335 @@
+.class public final Lun/s$f;
+.super Lgu/m;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lun/s;->X(Leu/b;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lgu/m;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Lav/p0;",
+        "Leu/b<",
+        "-",
+        "Lkotlin/Unit;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lgu/f;
+    c = "com.withpersona.sdk2.camera.camera2.Camera2Manager$destroy$2"
+    f = "Camera2Manager.kt"
+    l = {
+        0x1f3
+    }
+    m = "invokeSuspend"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
+    }
+    d2 = {
+        "Lav/p0;",
+        "",
+        "<anonymous>",
+        "(Lav/p0;)V"
+    }
+    k = 0x3
+    mv = {
+        0x2,
+        0x2,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field public t:I
+
+.field public final synthetic u:Lun/s;
+
+
+# direct methods
+.method public constructor <init>(Lun/s;Leu/b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lun/s;",
+            "Leu/b<",
+            "-",
+            "Lun/s$f;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lgu/m;-><init>(ILeu/b;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Leu/b;)Leu/b;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Leu/b<",
+            "*>;)",
+            "Leu/b<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance p1, Lun/s$f;
+
+    iget-object v0, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-direct {p1, v0, p2}, Lun/s$f;-><init>(Lun/s;Leu/b;)V
+
+    return-object p1
+.end method
+
+.method public final invoke(Lav/p0;Leu/b;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lav/p0;",
+            "Leu/b<",
+            "-",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lun/s$f;->create(Ljava/lang/Object;Leu/b;)Leu/b;
+
+    move-result-object p1
+
+    check-cast p1, Lun/s$f;
+
+    sget-object p2, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    invoke-virtual {p1, p2}, Lun/s$f;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 2
+    check-cast p1, Lav/p0;
+
+    check-cast p2, Leu/b;
+
+    invoke-virtual {p0, p1, p2}, Lun/s$f;->invoke(Lav/p0;Leu/b;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {}, Lfu/c;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, p0, Lun/s$f;->t:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lzt/o;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lzt/o;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->G(Lun/s;)Ldv/c0;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ldv/c0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lun/s$d$b;->a:Lun/s$d$b;
+
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+
+    :cond_2
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->G(Lun/s;)Ldv/c0;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1}, Ldv/c0;->setValue(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-virtual {p1}, Lun/s;->d0()Lcom/withpersona/sdk2/camera/camera2/Camera2PreviewView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/withpersona/sdk2/camera/camera2/Camera2PreviewView;->getHolder()Landroid/view/SurfaceHolder;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {v1}, Lun/s;->C(Lun/s;)Landroid/view/SurfaceHolder$Callback;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Landroid/view/SurfaceHolder;->removeCallback(Landroid/view/SurfaceHolder$Callback;)V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->A(Lun/s;)Landroid/os/ConditionVariable;
+
+    move-result-object p1
+
+    const-wide/16 v3, 0x7d0
+
+    invoke-virtual {p1, v3, v4}, Landroid/os/ConditionVariable;->block(J)Z
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->y(Lun/s;)Lun/r0;
+
+    move-result-object p1
+
+    iput v2, p0, Lun/s$f;->t:I
+
+    invoke-virtual {p1, p0}, Lun/r0;->h(Leu/b;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_0
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->x(Lun/s;)Lvn/f;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lvn/f;->i()V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->w(Lun/s;)Landroid/media/ImageReader;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/media/ImageReader;->close()V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->B(Lun/s;)Lun/g0;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lun/g0;->f()V
+
+    :cond_4
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lun/s;->S(Lun/s;Lun/g0;)V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->n(Lun/s;)Landroid/hardware/camera2/CameraDevice;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->close()V
+
+    :cond_5
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1, v0}, Lun/s;->O(Lun/s;Landroid/hardware/camera2/CameraDevice;)V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->q(Lun/s;)Lyn/a;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lyn/a;->c()V
+
+    iget-object p1, p0, Lun/s$f;->u:Lun/s;
+
+    invoke-static {p1}, Lun/s;->s(Lun/s;)Lav/p0;
+
+    move-result-object p1
+
+    invoke-static {p1, v0, v2, v0}, Lav/q0;->f(Lav/p0;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
+
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p1
+.end method

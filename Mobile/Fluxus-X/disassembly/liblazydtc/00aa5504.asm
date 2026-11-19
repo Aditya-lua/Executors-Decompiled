@@ -1,0 +1,2 @@
+; CRYPTO_THREAD_compare_id @ 00aa5504
+00aa5504	b 0x00c31930

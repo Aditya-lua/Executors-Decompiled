@@ -1,0 +1,49 @@
+; cpr::HeaderCallback::operator() @ 009006ec
+009006ec	sub sp,sp,#0x50
+009006f0	stp x20,x19,[sp, #0x30]
+009006f4	stp x29,x30,[sp, #0x40]
+009006f8	add x29,sp,#0x40
+009006fc	mrs x20,tpidr_el0
+00900700	ldr x8,[x20, #0x28]
+00900704	stur x8,[x29, #-0x18]
+00900708	ldr x8,[x1, #0x10]
+0090070c	str x8,[sp, #0x10]
+00900710	ldr q0,[x1]
+00900714	str q0,[sp]
+00900718	stp xzr,xzr,[x1, #0x8]
+0090071c	str xzr,[x1]
+00900720	ldr x8,[x0]
+00900724	str x8,[sp, #0x20]
+00900728	ldr x0,[x0, #0x30]
+0090072c	cbz x0,0x0090077c
+00900730	ldr x8,[x0]
+00900734	ldr x8,[x8, #0x30]
+00900738	mov x1,sp
+0090073c	add x2,sp,#0x20
+00900740	blr x8
+00900744	ldrb w8,[sp]
+00900748	mov w19,w0
+0090074c	tbz w8,#0x0,0x00900758
+00900750	ldr x0,[sp, #0x10]
+00900754	bl 0x00c301d0
+00900758	ldr x8,[x20, #0x28]
+0090075c	ldur x9,[x29, #-0x18]
+00900760	cmp x8,x9
+00900764	b.ne 0x009007a8
+00900768	and w0,w19,#0x1
+0090076c	ldp x29,x30,[sp, #0x40]
+00900770	ldp x20,x19,[sp, #0x30]
+00900774	add sp,sp,#0x50
+00900778	ret
+0090077c	mov w0,#0x8
+00900780	bl 0x00c30000
+00900784	adrp x8,0xcb4000
+00900788	ldr x8,[x8, #0xb50]
+0090078c	add x8,x8,#0x10
+00900790	str x8,[x0]
+00900794	adrp x1,0xcb4000
+00900798	adrp x2,0xcb4000
+0090079c	ldr x1,[x1, #0xb58]
+009007a0	ldr x2,[x2, #0xb38]
+009007a4	bl 0x00c30020
+009007a8	bl 0x00c2fec0

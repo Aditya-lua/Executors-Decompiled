@@ -1,0 +1,5 @@
+; v2i_GENERAL_NAME_ex @ 00c40860
+00c40860	adrp x16,0xcbe000
+00c40864	ldr x17,[x16, #0x418]
+00c40868	add x16,x16,#0x418
+00c4086c	br x17

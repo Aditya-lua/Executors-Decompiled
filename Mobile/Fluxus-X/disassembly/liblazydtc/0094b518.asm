@@ -1,0 +1,86 @@
+; FUN_0094b518 @ 0094b518
+0094b518	sub sp,sp,#0x150
+0094b51c	str x28,[sp, #0x100]
+0094b520	stp x24,x23,[sp, #0x110]
+0094b524	stp x22,x21,[sp, #0x120]
+0094b528	stp x20,x19,[sp, #0x130]
+0094b52c	stp x29,x30,[sp, #0x140]
+0094b530	add x29,sp,#0x140
+0094b534	stp q6,q7,[sp, #0x60]
+0094b538	stp q4,q5,[sp, #0x40]
+0094b53c	stp q2,q3,[sp, #0x20]
+0094b540	stp q0,q1,[sp]
+0094b544	stp x6,x7,[sp, #0xa0]
+0094b548	stp x4,x5,[sp, #0x90]
+0094b54c	stp x2,x3,[sp, #0x80]
+0094b550	mrs x24,tpidr_el0
+0094b554	ldr x12,[x24, #0x28]
+0094b558	orr x9,xzr,#-0x7f00000080
+0094b55c	mov x10,sp
+0094b560	add x11,sp,#0x80
+0094b564	movk x9,#0xffd0
+0094b568	add x13,x29,#0x10
+0094b56c	add x10,x10,#0x80
+0094b570	add x11,x11,#0x30
+0094b574	stur x12,[x29, #-0x48]
+0094b578	stp x10,x9,[x29, #-0x60]
+0094b57c	stp x13,x11,[x29, #-0x70]
+0094b580	ldp q1,q0,[x29, #-0x70]
+0094b584	mov x8,x1
+0094b588	mov x19,x0
+0094b58c	sub x1,x29,#0x90
+0094b590	mov x0,x8
+0094b594	stp q1,q0,[x29, #-0x90]
+0094b598	bl 0x00c31eb0
+0094b59c	mov x20,x0
+0094b5a0	cbz x0,0x0094b618
+0094b5a4	mov x0,x20
+0094b5a8	stur xzr,[x29, #-0x50]
+0094b5ac	bl 0x00c2ff50
+0094b5b0	mov x21,x0
+0094b5b4	sub x3,x29,#0x50
+0094b5b8	mov x0,x19
+0094b5bc	mov x1,x20
+0094b5c0	mov x2,x21
+0094b5c4	bl 0x009434ec
+0094b5c8	mov w22,w0
+0094b5cc	cbnz w0,0x0094b624
+0094b5d0	mov x23,x20
+0094b5d4	ldur x3,[x29, #-0x50]
+0094b5d8	mov w1,#0x4
+0094b5dc	mov x0,x19
+0094b5e0	mov x2,x23
+0094b5e4	bl 0x00904a98
+0094b5e8	ldur x8,[x29, #-0x50]
+0094b5ec	subs x21,x21,x8
+0094b5f0	b.eq 0x0094b620
+0094b5f4	add x23,x23,x8
+0094b5f8	sub x3,x29,#0x50
+0094b5fc	mov x0,x19
+0094b600	mov x1,x23
+0094b604	mov x2,x21
+0094b608	bl 0x009434ec
+0094b60c	mov w22,w0
+0094b610	cbz w0,0x0094b5d4
+0094b614	b 0x0094b624
+0094b618	mov w22,#0x1b
+0094b61c	b 0x0094b638
+0094b620	mov w22,wzr
+0094b624	adrp x8,0xcc4000
+0094b628	add x8,x8,#0x678
+0094b62c	mov x0,x20
+0094b630	ldr x8,[x8]
+0094b634	blr x8
+0094b638	ldr x8,[x24, #0x28]
+0094b63c	ldur x9,[x29, #-0x48]
+0094b640	cmp x8,x9
+0094b644	b.ne 0x0094b668
+0094b648	mov w0,w22
+0094b64c	ldp x29,x30,[sp, #0x140]
+0094b650	ldp x20,x19,[sp, #0x130]
+0094b654	ldp x22,x21,[sp, #0x120]
+0094b658	ldp x24,x23,[sp, #0x110]
+0094b65c	ldr x28,[sp, #0x100]
+0094b660	add sp,sp,#0x150
+0094b664	ret
+0094b668	bl 0x00c2fec0

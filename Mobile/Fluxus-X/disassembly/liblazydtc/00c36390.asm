@@ -1,0 +1,5 @@
+; EVP_MAC_CTX_new @ 00c36390
+00c36390	adrp x16,0xcb9000
+00c36394	ldr x17,[x16, #0x1b0]
+00c36398	add x16,x16,#0x1b0
+00c3639c	br x17

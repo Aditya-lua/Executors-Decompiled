@@ -1,0 +1,5 @@
+; <EXTERNAL>::fputc @ 00c30900
+00c30900	adrp x16,0xcb6000
+00c30904	ldr x17,[x16, #0x468]
+00c30908	add x16,x16,#0x468
+00c3090c	br x17

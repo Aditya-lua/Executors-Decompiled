@@ -1,0 +1,23 @@
+package re;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class n {
+    public static final n b = new n("ENABLED");
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final n f30680c = new n("DISABLED");
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final n f30681d = new n("DESTROYED");
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final String f30682a;
+
+    public n(String str) {
+        this.f30682a = str;
+    }
+
+    public String toString() {
+        return this.f30682a;
+    }
+}

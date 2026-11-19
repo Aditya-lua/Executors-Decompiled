@@ -1,0 +1,1 @@
+; <EXTERNAL>::log10 @ 00d290f0

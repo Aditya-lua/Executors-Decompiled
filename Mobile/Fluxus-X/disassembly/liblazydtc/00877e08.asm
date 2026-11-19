@@ -1,0 +1,14 @@
+; FUN_00877e08 @ 00877e08
+00877e08	cbz x1,0x00877e34
+00877e0c	sub x8,x0,#0x1
+00877e10	mov w0,w1
+00877e14	lsl w9,w0,#0x5
+00877e18	ldrb w10,[x8, x1]
+00877e1c	subs x1,x1,#0x1
+00877e20	add w9,w9,w0, LSR #0x2
+00877e24	add w9,w9,w10
+00877e28	eor w0,w9,w0
+00877e2c	b.ne 0x00877e14
+00877e30	ret
+00877e34	mov w0,wzr
+00877e38	ret

@@ -1,0 +1,55 @@
+; tls_construct_stoc_next_proto_neg @ 009d91e4
+009d91e4	sub sp,sp,#0x30
+009d91e8	stp x20,x19,[sp, #0x10]
+009d91ec	stp x29,x30,[sp, #0x20]
+009d91f0	ldr w8,[x0, #0x484]
+009d91f4	add x29,sp,#0x20
+009d91f8	str wzr,[x0, #0x484]
+009d91fc	cbz w8,0x009d9234
+009d9200	ldr x9,[x0, #0x9a8]
+009d9204	mov x19,x0
+009d9208	ldr x8,[x9, #0x2b8]
+009d920c	cbz x8,0x009d9234
+009d9210	ldr x3,[x9, #0x2c0]
+009d9214	mov x20,x1
+009d9218	add x1,sp,#0x8
+009d921c	add x2,sp,#0x4
+009d9220	mov x0,x19
+009d9224	blr x8
+009d9228	cbz w0,0x009d9248
+009d922c	mov w0,#0x1
+009d9230	b 0x009d9238
+009d9234	mov w0,#0x2
+009d9238	ldp x29,x30,[sp, #0x20]
+009d923c	ldp x20,x19,[sp, #0x10]
+009d9240	add sp,sp,#0x30
+009d9244	ret
+009d9248	mov w1,#0x3374
+009d924c	mov w2,#0x2
+009d9250	mov x0,x20
+009d9254	bl 0x00c343a0
+009d9258	cbz w0,0x009d9280
+009d925c	ldr x1,[sp, #0x8]
+009d9260	ldr w2,[sp, #0x4]
+009d9264	mov w3,#0x2
+009d9268	mov x0,x20
+009d926c	bl 0x00c36f70
+009d9270	cbz w0,0x009d9280
+009d9274	mov w0,#0x1
+009d9278	str w0,[x19, #0x484]
+009d927c	b 0x009d9238
+009d9280	bl 0x00c342a0
+009d9284	adrp x0,0x2d7000
+009d9288	adrp x2,0x2a5000
+009d928c	add x0,x0,#0xae0
+009d9290	add x2,x2,#0xb48
+009d9294	mov w1,#0x5be
+009d9298	bl 0x00c342b0
+009d929c	mov w2,#0x103
+009d92a0	mov w1,#0x50
+009d92a4	movk w2,#0xc, LSL #16
+009d92a8	mov x0,x19
+009d92ac	mov x3,xzr
+009d92b0	bl 0x00c34410
+009d92b4	mov w0,wzr
+009d92b8	b 0x009d9238

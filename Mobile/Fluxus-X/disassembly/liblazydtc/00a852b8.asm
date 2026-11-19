@@ -1,0 +1,31 @@
+; ossl_cmp_sk_ASN1_UTF8STRING_push_str @ 00a852b8
+00a852b8	stp x22,x21,[sp, #-0x30]!
+00a852bc	stp x20,x19,[sp, #0x10]
+00a852c0	mov x19,x0
+00a852c4	mov w0,wzr
+00a852c8	stp x29,x30,[sp, #0x20]
+00a852cc	add x29,sp,#0x20
+00a852d0	cbz x19,0x00a85320
+00a852d4	mov x22,x1
+00a852d8	cbz x1,0x00a85320
+00a852dc	mov w21,w2
+00a852e0	bl 0x00c381a0
+00a852e4	cbz x0,0x00a85320
+00a852e8	mov x1,x22
+00a852ec	mov w2,w21
+00a852f0	mov x20,x0
+00a852f4	bl 0x00c378a0
+00a852f8	cbz w0,0x00a85314
+00a852fc	mov x0,x19
+00a85300	mov x1,x20
+00a85304	bl 0x00c347a0
+00a85308	cbz w0,0x00a85314
+00a8530c	mov w0,#0x1
+00a85310	b 0x00a85320
+00a85314	mov x0,x20
+00a85318	bl 0x00c38190
+00a8531c	mov w0,wzr
+00a85320	ldp x29,x30,[sp, #0x20]
+00a85324	ldp x20,x19,[sp, #0x10]
+00a85328	ldp x22,x21,[sp], #0x30
+00a8532c	ret

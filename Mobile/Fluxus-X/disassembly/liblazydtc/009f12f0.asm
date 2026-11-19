@@ -1,0 +1,25 @@
+; ossl_asn1_string_embed_free @ 009f12f0
+009f12f0	stp x20,x19,[sp, #-0x20]!
+009f12f4	stp x29,x30,[sp, #0x10]
+009f12f8	add x29,sp,#0x10
+009f12fc	cbz x0,0x009f1328
+009f1300	ldrb w8,[x0, #0x10]
+009f1304	mov w20,w1
+009f1308	mov x19,x0
+009f130c	tbnz w8,#0x4,0x009f1324
+009f1310	ldr x0,[x19, #0x8]
+009f1314	adrp x1,0x2c7000
+009f1318	add x1,x1,#0x722
+009f131c	mov w2,#0x16c
+009f1320	bl 0x00c32310
+009f1324	cbz w20,0x009f1334
+009f1328	ldp x29,x30,[sp, #0x10]
+009f132c	ldp x20,x19,[sp], #0x20
+009f1330	ret
+009f1334	ldp x29,x30,[sp, #0x10]
+009f1338	adrp x1,0x2c7000
+009f133c	add x1,x1,#0x722
+009f1340	mov w2,#0x16e
+009f1344	mov x0,x19
+009f1348	ldp x20,x19,[sp], #0x20
+009f134c	b 0x00c32310

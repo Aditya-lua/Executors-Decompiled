@@ -1,0 +1,5 @@
+; BF_ofb64_encrypt @ 00c38430
+00c38430	adrp x16,0xcba000
+00c38434	ldr x17,[x16, #0x200]
+00c38438	add x16,x16,#0x200
+00c3843c	br x17

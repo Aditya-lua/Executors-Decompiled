@@ -1,0 +1,4 @@
+; d2i_PROXY_POLICY @ 00b00f60
+00b00f60	adrp x3,0xc80000
+00b00f64	add x3,x3,#0x948
+00b00f68	b 0x00c36150

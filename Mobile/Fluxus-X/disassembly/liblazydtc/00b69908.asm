@@ -1,0 +1,65 @@
+; mbedtls_base64_self_test @ 00b69908
+00b69908	sub sp,sp,#0xb0
+00b6990c	stp x20,x19,[sp, #0x90]
+00b69910	stp x29,x30,[sp, #0xa0]
+00b69914	add x29,sp,#0xa0
+00b69918	mrs x20,tpidr_el0
+00b6991c	ldr x8,[x20, #0x28]
+00b69920	mov w19,w0
+00b69924	stur x8,[x29, #-0x18]
+00b69928	cbz w0,0x00b69938
+00b6992c	adrp x0,0x2a8000
+00b69930	add x0,x0,#0xea8
+00b69934	bl 0x00c41af0
+00b69938	adrp x3,0x77c000
+00b6993c	add x3,x3,#0x7bb
+00b69940	add x0,sp,#0x8
+00b69944	mov w1,#0x80
+00b69948	mov x2,sp
+00b6994c	mov w4,#0x40
+00b69950	bl 0x00c30330
+00b69954	cbnz w0,0x00b699b8
+00b69958	adrp x0,0x77c000
+00b6995c	add x0,x0,#0x7fb
+00b69960	add x1,sp,#0x8
+00b69964	mov w2,#0x58
+00b69968	bl 0x00c300b0
+00b6996c	cbnz w0,0x00b699b8
+00b69970	cbz w19,0x00b69980
+00b69974	adrp x0,0x2ae000
+00b69978	add x0,x0,#0xc3b
+00b6997c	bl 0x00c41af0
+00b69980	adrp x3,0x77c000
+00b69984	add x3,x3,#0x7fb
+00b69988	add x0,sp,#0x8
+00b6998c	mov w1,#0x80
+00b69990	mov x2,sp
+00b69994	mov w4,#0x58
+00b69998	bl 0x00c30340
+00b6999c	cbnz w0,0x00b699b8
+00b699a0	adrp x0,0x77c000
+00b699a4	add x0,x0,#0x7bb
+00b699a8	add x1,sp,#0x8
+00b699ac	mov w2,#0x40
+00b699b0	bl 0x00c300b0
+00b699b4	cbz w0,0x00b699ec
+00b699b8	cbz w19,0x00b699c8
+00b699bc	adrp x0,0x77c000
+00b699c0	add x0,x0,#0x854
+00b699c4	bl 0x00c30760
+00b699c8	mov w0,#0x1
+00b699cc	ldr x8,[x20, #0x28]
+00b699d0	ldur x9,[x29, #-0x18]
+00b699d4	cmp x8,x9
+00b699d8	b.ne 0x00b69a04
+00b699dc	ldp x29,x30,[sp, #0xa0]
+00b699e0	ldp x20,x19,[sp, #0x90]
+00b699e4	add sp,sp,#0xb0
+00b699e8	ret
+00b699ec	cbz w19,0x00b699fc
+00b699f0	adrp x0,0x77c000
+00b699f4	add x0,x0,#0x894
+00b699f8	bl 0x00c30760
+00b699fc	mov w0,wzr
+00b69a00	b 0x00b699cc
+00b69a04	bl 0x00c2fec0

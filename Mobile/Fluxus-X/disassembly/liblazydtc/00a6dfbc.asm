@@ -1,0 +1,55 @@
+; evp_pkey_type2name @ 00a6dfbc
+00a6dfbc	cmp w0,#0x397
+00a6dfc0	b.le 0x00a6dfec
+00a6dfc4	cmp w0,#0x43e
+00a6dfc8	b.gt 0x00a6e014
+00a6dfcc	cmp w0,#0x398
+00a6dfd0	b.eq 0x00a6e050
+00a6dfd4	cmp w0,#0x40a
+00a6dfd8	b.eq 0x00a6e058
+00a6dfdc	cmp w0,#0x40b
+00a6dfe0	b.ne 0x00a6e090
+00a6dfe4	orr w8,wzr,#0x6
+00a6dfe8	b 0x00a6e07c
+00a6dfec	cmp w0,#0x73
+00a6dff0	b.le 0x00a6e034
+00a6dff4	cmp w0,#0x74
+00a6dff8	b.eq 0x00a6e060
+00a6dffc	cmp w0,#0x198
+00a6e000	b.eq 0x00a6e068
+00a6e004	cmp w0,#0x390
+00a6e008	b.ne 0x00a6e090
+00a6e00c	mov w8,#0x1
+00a6e010	b 0x00a6e07c
+00a6e014	cmp w0,#0x43f
+00a6e018	b.eq 0x00a6e070
+00a6e01c	cmp w0,#0x440
+00a6e020	b.eq 0x00a6e078
+00a6e024	cmp w0,#0x494
+00a6e028	b.ne 0x00a6e090
+00a6e02c	orr w8,wzr,#0x7
+00a6e030	b 0x00a6e07c
+00a6e034	cmp w0,#0x6
+00a6e038	mov x8,xzr
+00a6e03c	b.eq 0x00a6e07c
+00a6e040	cmp w0,#0x1c
+00a6e044	b.ne 0x00a6e090
+00a6e048	mov w8,#0x8
+00a6e04c	b 0x00a6e07c
+00a6e050	mov w8,#0x9
+00a6e054	b 0x00a6e07c
+00a6e058	mov w8,#0x5
+00a6e05c	b 0x00a6e07c
+00a6e060	mov w8,#0xb
+00a6e064	b 0x00a6e07c
+00a6e068	mov w8,#0x2
+00a6e06c	b 0x00a6e07c
+00a6e070	orr w8,wzr,#0x3
+00a6e074	b 0x00a6e07c
+00a6e078	mov w8,#0x4
+00a6e07c	adrp x9,0xc5e000
+00a6e080	add x9,x9,#0xbd8
+00a6e084	add x8,x9,x8, LSL #0x4
+00a6e088	ldr x0,[x8, #0x8]
+00a6e08c	ret
+00a6e090	b 0x00c324f0

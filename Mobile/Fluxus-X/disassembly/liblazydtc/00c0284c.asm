@@ -1,0 +1,47 @@
+; std::__ndk1::__num_put_base::__format_float @ 00c0284c
+00c0284c	bti c
+00c02850	mov x8,x0
+00c02854	tbz w2,#0xb,0x00c02860
+00c02858	mov w9,#0x2b
+00c0285c	strb w9,[x8], #0x1
+00c02860	tbz w2,#0xa,0x00c0286c
+00c02864	mov w9,#0x23
+00c02868	strb w9,[x8], #0x1
+00c0286c	mov w9,#0x104
+00c02870	and w9,w2,w9
+00c02874	cmp w9,#0x104
+00c02878	b.eq 0x00c02884
+00c0287c	mov w10,#0x2a2e
+00c02880	strh w10,[x8], #0x2
+00c02884	ldrb w10,[x1]
+00c02888	cbz w10,0x00c0289c
+00c0288c	add x11,x1,#0x1
+00c02890	strb w10,[x8], #0x1
+00c02894	ldrb w10,[x11], #0x1
+00c02898	cbnz w10,0x00c02890
+00c0289c	cmp w9,#0x100
+00c028a0	b.eq 0x00c028bc
+00c028a4	cmp w9,#0x4
+00c028a8	b.ne 0x00c028cc
+00c028ac	tst w2,#0x4000
+00c028b0	mov w10,#0x46
+00c028b4	mov w11,#0x66
+00c028b8	b 0x00c028f0
+00c028bc	tst w2,#0x4000
+00c028c0	mov w10,#0x45
+00c028c4	mov w11,#0x65
+00c028c8	b 0x00c028f0
+00c028cc	cmp w9,#0x104
+00c028d0	b.eq 0x00c028e4
+00c028d4	tst w2,#0x4000
+00c028d8	mov w10,#0x47
+00c028dc	mov w11,#0x67
+00c028e0	b 0x00c028f0
+00c028e4	tst w2,#0x4000
+00c028e8	mov w10,#0x41
+00c028ec	mov w11,#0x61
+00c028f0	csel w10,w11,w10,eq
+00c028f4	cmp w9,#0x104
+00c028f8	cset w0,ne
+00c028fc	strb w10,[x8]
+00c02900	ret

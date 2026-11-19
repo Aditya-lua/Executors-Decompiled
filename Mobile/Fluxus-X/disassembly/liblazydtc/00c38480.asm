@@ -1,0 +1,5 @@
+; BIO_read_ex @ 00c38480
+00c38480	adrp x16,0xcba000
+00c38484	ldr x17,[x16, #0x228]
+00c38488	add x16,x16,#0x228
+00c3848c	br x17

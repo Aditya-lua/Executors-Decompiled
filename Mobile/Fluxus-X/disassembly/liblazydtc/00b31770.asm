@@ -1,0 +1,26 @@
+; FUN_00b31770 @ 00b31770
+00b31770	stp x22,x21,[sp, #-0x30]!
+00b31774	stp x20,x19,[sp, #0x10]
+00b31778	stp x29,x30,[sp, #0x20]
+00b3177c	add x29,sp,#0x20
+00b31780	mov x22,x3
+00b31784	mov x19,x2
+00b31788	mov x21,x1
+00b3178c	mov x20,x0
+00b31790	bl 0x00c41000
+00b31794	mov w8,w0
+00b31798	cmp x22,#0x10
+00b3179c	mov w0,wzr
+00b317a0	b.cc 0x00b317c4
+00b317a4	cbz w8,0x00b317c4
+00b317a8	mov x0,x21
+00b317ac	mov x1,x20
+00b317b0	bl 0x00c32000
+00b317b4	cbz w0,0x00b317c4
+00b317b8	mov w8,#0x10
+00b317bc	mov w0,#0x1
+00b317c0	str x8,[x19]
+00b317c4	ldp x29,x30,[sp, #0x20]
+00b317c8	ldp x20,x19,[sp, #0x10]
+00b317cc	ldp x22,x21,[sp], #0x30
+00b317d0	ret

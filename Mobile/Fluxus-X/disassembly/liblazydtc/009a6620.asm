@@ -1,0 +1,4 @@
+; DTLSv1_method @ 009a6620
+009a6620	adrp x0,0xc53000
+009a6624	add x0,x0,#0x228
+009a6628	ret

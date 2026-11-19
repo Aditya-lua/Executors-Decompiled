@@ -1,0 +1,5 @@
+; AUTHORITY_KEYID_new @ 00c40750
+00c40750	adrp x16,0xcbe000
+00c40754	ldr x17,[x16, #0x390]
+00c40758	add x16,x16,#0x390
+00c4075c	br x17

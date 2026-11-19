@@ -1,0 +1,47 @@
+; SSL_check_private_key @ 009b4278
+009b4278	stp x29,x30,[sp, #-0x10]!
+009b427c	mov x29,sp
+009b4280	cbz x0,0x009b42a4
+009b4284	ldr x8,[x0, #0x898]
+009b4288	ldr x8,[x8]
+009b428c	ldr x0,[x8]
+009b4290	cbz x0,0x009b42d0
+009b4294	ldr x1,[x8, #0x8]
+009b4298	cbz x1,0x009b42f8
+009b429c	ldp x29,x30,[sp], #0x10
+009b42a0	b 0x00c35c40
+009b42a4	bl 0x00c342a0
+009b42a8	adrp x0,0x2c5000
+009b42ac	adrp x2,0x2d3000
+009b42b0	add x0,x0,#0x652
+009b42b4	add x2,x2,#0x6e3
+009b42b8	mov w1,#0x694
+009b42bc	bl 0x00c342b0
+009b42c0	mov w1,#0x102
+009b42c4	mov w0,#0x14
+009b42c8	movk w1,#0xc, LSL #16
+009b42cc	b 0x009b431c
+009b42d0	bl 0x00c342a0
+009b42d4	adrp x0,0x2c5000
+009b42d8	adrp x2,0x2d3000
+009b42dc	add x0,x0,#0x652
+009b42e0	add x2,x2,#0x6e3
+009b42e4	mov w1,#0x698
+009b42e8	bl 0x00c342b0
+009b42ec	mov w0,#0x14
+009b42f0	mov w1,#0xb1
+009b42f4	b 0x009b431c
+009b42f8	bl 0x00c342a0
+009b42fc	adrp x0,0x2c5000
+009b4300	adrp x2,0x2d3000
+009b4304	add x0,x0,#0x652
+009b4308	add x2,x2,#0x6e3
+009b430c	mov w1,#0x69c
+009b4310	bl 0x00c342b0
+009b4314	mov w0,#0x14
+009b4318	mov w1,#0xbe
+009b431c	mov x2,xzr
+009b4320	bl 0x00c342c0
+009b4324	mov w0,wzr
+009b4328	ldp x29,x30,[sp], #0x10
+009b432c	ret

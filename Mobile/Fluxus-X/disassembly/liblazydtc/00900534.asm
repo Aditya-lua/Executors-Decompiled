@@ -1,0 +1,44 @@
+; cpr::util::readUserFunction @ 00900534
+00900534	sub sp,sp,#0x40
+00900538	str x19,[sp, #0x20]
+0090053c	stp x29,x30,[sp, #0x30]
+00900540	add x29,sp,#0x30
+00900544	mrs x19,tpidr_el0
+00900548	ldr x8,[x19, #0x28]
+0090054c	mul x9,x2,x1
+00900550	str x8,[sp, #0x18]
+00900554	ldr x8,[x3]
+00900558	str x0,[sp, #0x10]
+0090055c	stp x9,x8,[sp]
+00900560	ldr x0,[x3, #0x30]
+00900564	cbz x0,0x009005b0
+00900568	ldr x8,[x0]
+0090056c	add x1,sp,#0x10
+00900570	mov x2,sp
+00900574	add x3,sp,#0x8
+00900578	ldr x8,[x8, #0x30]
+0090057c	blr x8
+00900580	ldr x8,[sp]
+00900584	ldr x9,[x19, #0x28]
+00900588	ldr x10,[sp, #0x18]
+0090058c	tst w0,#0x1
+00900590	mov w11,#0x10000000
+00900594	csel x0,x8,x11,ne
+00900598	cmp x9,x10
+0090059c	b.ne 0x009005dc
+009005a0	ldp x29,x30,[sp, #0x30]
+009005a4	ldr x19,[sp, #0x20]
+009005a8	add sp,sp,#0x40
+009005ac	ret
+009005b0	mov w0,#0x8
+009005b4	bl 0x00c30000
+009005b8	adrp x8,0xcb4000
+009005bc	ldr x8,[x8, #0xb50]
+009005c0	adrp x1,0xcb4000
+009005c4	adrp x2,0xcb4000
+009005c8	add x8,x8,#0x10
+009005cc	str x8,[x0]
+009005d0	ldr x1,[x1, #0xb58]
+009005d4	ldr x2,[x2, #0xb38]
+009005d8	bl 0x00c30020
+009005dc	bl 0x00c2fec0

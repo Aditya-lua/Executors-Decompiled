@@ -1,0 +1,42 @@
+; X509_PURPOSE_get_by_sname @ 00b027ec
+00b027ec	stp x22,x21,[sp, #-0x30]!
+00b027f0	adrp x21,0xcc9000
+00b027f4	stp x20,x19,[sp, #0x10]
+00b027f8	mov x20,x0
+00b027fc	mov x19,xzr
+00b02800	add x21,x21,#0xa28
+00b02804	adrp x22,0xd22000
+00b02808	stp x29,x30,[sp, #0x20]
+00b0280c	add x29,sp,#0x20
+00b02810	ldr x0,[x22, #0x7e0]
+00b02814	cbnz x0,0x00b0282c
+00b02818	b 0x00b02840
+00b0281c	add x19,x19,#0x1
+00b02820	add x21,x21,#0x30
+00b02824	ldr x0,[x22, #0x7e0]
+00b02828	cbz x0,0x00b02840
+00b0282c	bl 0x00c325e0
+00b02830	add w8,w0,#0x9
+00b02834	cmp x19,w8, SXTW 
+00b02838	b.lt 0x00b0284c
+00b0283c	b 0x00b02878
+00b02840	mov w8,#0x9
+00b02844	cmp x19,w8, SXTW 
+00b02848	b.ge 0x00b02878
+00b0284c	cmp x19,#0x9
+00b02850	mov x0,x21
+00b02854	b.cc 0x00b02864
+00b02858	ldr x0,[x22, #0x7e0]
+00b0285c	sub w1,w19,#0x9
+00b02860	bl 0x00c32610
+00b02864	ldr x0,[x0, #0x20]
+00b02868	mov x1,x20
+00b0286c	bl 0x00c301f0
+00b02870	cbnz w0,0x00b0281c
+00b02874	b 0x00b0287c
+00b02878	mov w19,#0xffffffff
+00b0287c	mov w0,w19
+00b02880	ldp x29,x30,[sp, #0x20]
+00b02884	ldp x20,x19,[sp, #0x10]
+00b02888	ldp x22,x21,[sp], #0x30
+00b0288c	ret

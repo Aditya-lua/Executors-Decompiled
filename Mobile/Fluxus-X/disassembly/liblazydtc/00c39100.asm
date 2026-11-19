@@ -1,0 +1,5 @@
+; BN_GENCB_call @ 00c39100
+00c39100	adrp x16,0xcba000
+00c39104	ldr x17,[x16, #0x868]
+00c39108	add x16,x16,#0x868
+00c3910c	br x17

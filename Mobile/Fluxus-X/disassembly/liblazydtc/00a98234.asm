@@ -1,0 +1,4 @@
+; EVP_sm4_cbc @ 00a98234
+00a98234	adrp x0,0xc69000
+00a98238	add x0,x0,#0x678
+00a9823c	ret

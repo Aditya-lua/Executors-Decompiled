@@ -1,0 +1,3 @@
+; X509_VERIFY_PARAM_get0_host @ 00b144d4
+00b144d4	ldr x0,[x0, #0x38]
+00b144d8	b 0x00c32610

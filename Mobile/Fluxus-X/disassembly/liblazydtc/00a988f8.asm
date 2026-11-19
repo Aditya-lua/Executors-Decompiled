@@ -1,0 +1,12 @@
+; FUN_00a988f8 @ 00a988f8
+00a988f8	stp x20,x19,[sp, #-0x20]!
+00a988fc	stp x29,x30,[sp, #0x10]
+00a98900	add x29,sp,#0x10
+00a98904	mov x19,x2
+00a98908	mov x20,x1
+00a9890c	bl 0x00c3cf30
+00a98910	ldp x29,x30,[sp, #0x10]
+00a98914	mov x1,x20
+00a98918	mov x2,x19
+00a9891c	ldp x20,x19,[sp], #0x20
+00a98920	b 0x00c3e5d0

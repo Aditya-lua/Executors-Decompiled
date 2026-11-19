@@ -1,0 +1,65 @@
+; EVP_PKEY_CTX_ctrl @ 00a763fc
+00a763fc	str x25,[sp, #-0x50]!
+00a76400	stp x20,x19,[sp, #0x30]
+00a76404	mov w20,w4
+00a76408	stp x24,x23,[sp, #0x10]
+00a7640c	stp x22,x21,[sp, #0x20]
+00a76410	stp x29,x30,[sp, #0x40]
+00a76414	add x29,sp,#0x40
+00a76418	cbz x0,0x00a76464
+00a7641c	mov x19,x5
+00a76420	mov w21,w3
+00a76424	mov w22,w2
+00a76428	mov w23,w1
+00a7642c	mov x24,x0
+00a76430	bl 0x00c35250
+00a76434	sxtw x6,w20
+00a76438	mov x0,x24
+00a7643c	mov w1,w23
+00a76440	mov w2,w22
+00a76444	mov w3,w21
+00a76448	mov x4,xzr
+00a7644c	mov x5,x19
+00a76450	bl 0x00a772a4
+00a76454	cmn w0,#0x2
+00a76458	b.ne 0x00a76498
+00a7645c	bl 0x00c35240
+00a76460	b 0x00a764b0
+00a76464	bl 0x00c342a0
+00a76468	adrp x0,0x2c3000
+00a7646c	adrp x2,0x2ad000
+00a76470	add x0,x0,#0xa9f
+00a76474	add x2,x2,#0xcec
+00a76478	mov w1,#0x583
+00a7647c	bl 0x00c342b0
+00a76480	orr w0,wzr,#0x6
+00a76484	mov w1,#0x93
+00a76488	mov x2,xzr
+00a7648c	bl 0x00c342c0
+00a76490	orr w25,wzr,#0xfffffffe
+00a76494	b 0x00a764e0
+00a76498	mov w25,w0
+00a7649c	bl 0x00c35ed0
+00a764a0	cmp w25,#0x1
+00a764a4	b.lt 0x00a764e0
+00a764a8	ldr w8,[x24]
+00a764ac	cbz w8,0x00a764e0
+00a764b0	mov x0,x24
+00a764b4	mov w1,w23
+00a764b8	mov w2,w22
+00a764bc	mov w3,w21
+00a764c0	mov w4,w20
+00a764c4	mov x5,x19
+00a764c8	ldp x29,x30,[sp, #0x40]
+00a764cc	ldp x20,x19,[sp, #0x30]
+00a764d0	ldp x22,x21,[sp, #0x20]
+00a764d4	ldp x24,x23,[sp, #0x10]
+00a764d8	ldr x25,[sp], #0x50
+00a764dc	b 0x00a77554
+00a764e0	ldp x29,x30,[sp, #0x40]
+00a764e4	ldp x20,x19,[sp, #0x30]
+00a764e8	ldp x22,x21,[sp, #0x20]
+00a764ec	ldp x24,x23,[sp, #0x10]
+00a764f0	mov w0,w25
+00a764f4	ldr x25,[sp], #0x50
+00a764f8	ret

@@ -1,0 +1,28 @@
+; ix::WebSocketTransport::pingIntervalExceeded @ 00997680
+00997680	stp x20,x19,[sp, #-0x20]!
+00997684	stp x29,x30,[sp, #0x10]
+00997688	add x29,sp,#0x10
+0099768c	ldr w8,[x0, #0x27c]
+00997690	mov x19,x0
+00997694	cmp w8,#0x1
+00997698	b.lt 0x009976d8
+0099769c	add x20,x19,#0x2b0
+009976a0	mov x0,x20
+009976a4	bl 0x00c2ff10
+009976a8	bl 0x00c31900
+009976ac	ldr x8,[x19, #0x2d8]
+009976b0	ldrsw x9,[x19, #0x27c]
+009976b4	mov w10,#0xca00
+009976b8	movk w10,#0x3b9a, LSL #16
+009976bc	sub x8,x0,x8
+009976c0	mul x9,x9,x10
+009976c4	cmp x9,x8
+009976c8	mov x0,x20
+009976cc	cset w19,lt
+009976d0	bl 0x00c2ff20
+009976d4	b 0x009976dc
+009976d8	mov w19,wzr
+009976dc	ldp x29,x30,[sp, #0x10]
+009976e0	mov w0,w19
+009976e4	ldp x20,x19,[sp], #0x20
+009976e8	ret

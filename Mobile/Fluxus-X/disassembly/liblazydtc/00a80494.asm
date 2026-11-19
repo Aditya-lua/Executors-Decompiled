@@ -1,0 +1,34 @@
+; ossl_encode_der_length @ 00a80494
+00a80494	stp x20,x19,[sp, #-0x20]!
+00a80498	mov x20,x0
+00a8049c	lsr x8,x1,#0x10
+00a804a0	mov w0,wzr
+00a804a4	stp x29,x30,[sp, #0x10]
+00a804a8	add x29,sp,#0x10
+00a804ac	cbnz x8,0x00a8050c
+00a804b0	mov x19,x1
+00a804b4	cmp x1,#0x100
+00a804b8	b.cc 0x00a804d8
+00a804bc	mov w1,#0x82
+00a804c0	mov w2,#0x1
+00a804c4	mov x0,x20
+00a804c8	bl 0x00c343a0
+00a804cc	cbz w0,0x00a8050c
+00a804d0	mov w2,#0x2
+00a804d4	b 0x00a804f8
+00a804d8	cmp x19,#0x80
+00a804dc	b.cc 0x00a804f4
+00a804e0	mov w1,#0x81
+00a804e4	mov w2,#0x1
+00a804e8	mov x0,x20
+00a804ec	bl 0x00c343a0
+00a804f0	cbz w0,0x00a8050c
+00a804f4	mov w2,#0x1
+00a804f8	mov x0,x20
+00a804fc	mov x1,x19
+00a80500	bl 0x00c343a0
+00a80504	cbz w0,0x00a8050c
+00a80508	mov w0,#0x1
+00a8050c	ldp x29,x30,[sp, #0x10]
+00a80510	ldp x20,x19,[sp], #0x20
+00a80514	ret

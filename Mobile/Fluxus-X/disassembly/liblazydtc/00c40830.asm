@@ -1,0 +1,5 @@
+; OTHERNAME_new @ 00c40830
+00c40830	adrp x16,0xcbe000
+00c40834	ldr x17,[x16, #0x400]
+00c40838	add x16,x16,#0x400
+00c4083c	br x17

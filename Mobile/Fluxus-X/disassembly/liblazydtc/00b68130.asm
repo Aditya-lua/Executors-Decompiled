@@ -1,0 +1,22 @@
+; ossl_gcm_cipher_final @ 00b68130
+00b68130	stp x20,x19,[sp, #-0x20]!
+00b68134	stp x29,x30,[sp, #0x10]
+00b68138	ldrb w8,[x0, #0x54]
+00b6813c	mov x19,x0
+00b68140	add x0,x0,#0xf8
+00b68144	add x29,sp,#0x10
+00b68148	tbnz w8,#0x0,0x00b68164
+00b6814c	ldr x2,[x19, #0x18]
+00b68150	bl 0x00c3e380
+00b68154	mov w8,w0
+00b68158	mov w0,wzr
+00b6815c	cbnz w8,0x00b68178
+00b68160	b 0x00b68174
+00b68164	mov w2,#0x10
+00b68168	mov w20,#0x10
+00b6816c	bl 0x00c3e3b0
+00b68170	str x20,[x19, #0x18]
+00b68174	mov w0,#0x1
+00b68178	ldp x29,x30,[sp, #0x10]
+00b6817c	ldp x20,x19,[sp], #0x20
+00b68180	ret

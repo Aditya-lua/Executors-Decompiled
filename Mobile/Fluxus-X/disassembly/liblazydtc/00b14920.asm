@@ -1,0 +1,20 @@
+; X509_CRL_set_version @ 00b14920
+00b14920	stp x20,x19,[sp, #-0x20]!
+00b14924	stp x29,x30,[sp, #0x10]
+00b14928	add x29,sp,#0x10
+00b1492c	cbz x0,0x00b1495c
+00b14930	mov x20,x0
+00b14934	ldr x0,[x0]
+00b14938	mov x19,x1
+00b1493c	cbnz x0,0x00b1494c
+00b14940	bl 0x00c37f30
+00b14944	str x0,[x20]
+00b14948	cbz x0,0x00b1495c
+00b1494c	ldp x29,x30,[sp, #0x10]
+00b14950	mov x1,x19
+00b14954	ldp x20,x19,[sp], #0x20
+00b14958	b 0x00c375b0
+00b1495c	ldp x29,x30,[sp, #0x10]
+00b14960	mov w0,wzr
+00b14964	ldp x20,x19,[sp], #0x20
+00b14968	ret

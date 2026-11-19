@@ -1,0 +1,5 @@
+; X509_NAME_ENTRY_set @ 00c37850
+00c37850	adrp x16,0xcb9000
+00c37854	ldr x17,[x16, #0xc10]
+00c37858	add x16,x16,#0xc10
+00c3785c	br x17

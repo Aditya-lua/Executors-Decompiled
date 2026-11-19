@@ -1,0 +1,46 @@
+; engine_free_util @ 00a51328
+00a51328	stp x20,x19,[sp, #-0x20]!
+00a5132c	stp x29,x30,[sp, #0x10]
+00a51330	add x29,sp,#0x10
+00a51334	cbz x0,0x00a513cc
+00a51338	mov w20,w1
+00a5133c	mov x19,x0
+00a51340	add x8,x0,#0x9c
+00a51344	cbz w1,0x00a51364
+00a51348	ldxr w9,[x8]
+00a5134c	subs w9,w9,#0x1
+00a51350	stxr w10,w9,[x8]
+00a51354	cbnz w10,0x00a51348
+00a51358	b.ne 0x00a51374
+00a5135c	dmb ISHLD
+00a51360	b 0x00a5137c
+00a51364	ldaxr w9,[x8]
+00a51368	sub w9,w9,#0x1
+00a5136c	stlxr w10,w9,[x8]
+00a51370	cbnz w10,0x00a51364
+00a51374	cmp w9,#0x0
+00a51378	b.gt 0x00a513cc
+00a5137c	mov x0,x19
+00a51380	bl 0x00c3bc40
+00a51384	mov x0,x19
+00a51388	bl 0x00c3bc30
+00a5138c	ldr x8,[x19, #0x58]
+00a51390	cbz x8,0x00a5139c
+00a51394	mov x0,x19
+00a51398	blr x8
+00a5139c	mov x0,x19
+00a513a0	mov w1,w20
+00a513a4	bl 0x00c3bc50
+00a513a8	add x2,x19,#0xa8
+00a513ac	mov w0,#0xa
+00a513b0	mov x1,x19
+00a513b4	bl 0x00c356c0
+00a513b8	adrp x1,0x2a2000
+00a513bc	add x1,x1,#0x2ee
+00a513c0	orr w2,wzr,#0x60
+00a513c4	mov x0,x19
+00a513c8	bl 0x00c32310
+00a513cc	ldp x29,x30,[sp, #0x10]
+00a513d0	mov w0,#0x1
+00a513d4	ldp x20,x19,[sp], #0x20
+00a513d8	ret

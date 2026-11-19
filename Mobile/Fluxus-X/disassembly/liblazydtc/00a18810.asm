@@ -1,0 +1,72 @@
+; ASN1_buf_print @ 00a18810
+00a18810	sub sp,sp,#0x70
+00a18814	stp x20,x19,[sp, #0x50]
+00a18818	mov x19,x0
+00a1881c	stp x28,x27,[sp, #0x10]
+00a18820	stp x26,x25,[sp, #0x20]
+00a18824	stp x24,x23,[sp, #0x30]
+00a18828	stp x22,x21,[sp, #0x40]
+00a1882c	stp x29,x30,[sp, #0x60]
+00a18830	add x29,sp,#0x60
+00a18834	str w3,[sp, #0xc]
+00a18838	cbz x2,0x00a188e8
+00a1883c	orr x28,xzr,#-0x7777777777777778
+00a18840	adrp x23,0x2bc000
+00a18844	adrp x20,0x2ab000
+00a18848	adrp x24,0x2a3000
+00a1884c	mov x21,x2
+00a18850	mov x22,x1
+00a18854	mov x25,xzr
+00a18858	mov x26,xzr
+00a1885c	sub x27,x2,#0x1
+00a18860	movk x28,#0x8889
+00a18864	add x23,x23,#0xda4
+00a18868	add x20,x20,#0x32c
+00a1886c	add x24,x24,#0xe88
+00a18870	umulh x8,x26,x28
+00a18874	lsr x8,x8,#0x3
+00a18878	lsl x9,x8,#0x4
+00a1887c	sub x8,x9,x8
+00a18880	cmn x25,x8
+00a18884	b.ne 0x00a188b8
+00a18888	cbz x26,0x00a188a4
+00a1888c	adrp x1,0x2c4000
+00a18890	mov x0,x19
+00a18894	add x1,x1,#0xdae
+00a18898	bl 0x00c32260
+00a1889c	cmp w0,#0x1
+00a188a0	b.lt 0x00a18908
+00a188a4	ldr w1,[sp, #0xc]
+00a188a8	mov w2,#0x80
+00a188ac	mov x0,x19
+00a188b0	bl 0x00c38640
+00a188b4	cbz w0,0x00a1890c
+00a188b8	ldrb w2,[x22, x26]
+00a188bc	cmp x27,x26
+00a188c0	csel x3,x20,x23,eq
+00a188c4	mov x0,x19
+00a188c8	mov x1,x24
+00a188cc	bl 0x00c32250
+00a188d0	cmp w0,#0x1
+00a188d4	b.lt 0x00a18908
+00a188d8	add x26,x26,#0x1
+00a188dc	cmp x26,x21
+00a188e0	sub x25,x25,#0x1
+00a188e4	b.cc 0x00a18870
+00a188e8	adrp x1,0x2c4000
+00a188ec	add x1,x1,#0xdae
+00a188f0	mov w2,#0x1
+00a188f4	mov x0,x19
+00a188f8	bl 0x00c34240
+00a188fc	cmp w0,#0x0
+00a18900	cset w0,gt
+00a18904	b 0x00a1890c
+00a18908	mov w0,wzr
+00a1890c	ldp x29,x30,[sp, #0x60]
+00a18910	ldp x20,x19,[sp, #0x50]
+00a18914	ldp x22,x21,[sp, #0x40]
+00a18918	ldp x24,x23,[sp, #0x30]
+00a1891c	ldp x26,x25,[sp, #0x20]
+00a18920	ldp x28,x27,[sp, #0x10]
+00a18924	add sp,sp,#0x70
+00a18928	ret

@@ -1,0 +1,4 @@
+; d2i_ASN1_T61STRING @ 009f7a70
+009f7a70	adrp x3,0xc58000
+009f7a74	add x3,x3,#0xc98
+009f7a78	b 0x00c36150

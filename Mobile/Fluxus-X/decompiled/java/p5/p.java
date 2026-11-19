@@ -1,0 +1,197 @@
+package p5;
+
+import android.animation.Animator;
+import android.animation.TimeInterpolator;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import androidx.annotation.NonNull;
+
+/* JADX INFO: loaded from: classes.dex */
+public class p extends o0 {
+    public static final TimeInterpolator U = new DecelerateInterpolator();
+    public static final TimeInterpolator V = new AccelerateInterpolator();
+    public static final g W = new a();
+    public static final g X = new b();
+    public static final g Y = new c();
+    public static final g Z = new d();
+
+    /* JADX INFO: renamed from: a0, reason: collision with root package name */
+    public static final g f28890a0 = new e();
+
+    /* JADX INFO: renamed from: b0, reason: collision with root package name */
+    public static final g f28891b0 = new f();
+    public g S = f28891b0;
+    public int T = 80;
+
+    public class a extends h {
+        public a() {
+            super(null);
+        }
+
+        @Override // p5.p.g
+        public float b(ViewGroup viewGroup, View view) {
+            return view.getTranslationX() - viewGroup.getWidth();
+        }
+    }
+
+    public class b extends h {
+        public b() {
+            super(null);
+        }
+
+        @Override // p5.p.g
+        public float b(ViewGroup viewGroup, View view) {
+            return viewGroup.getLayoutDirection() == 1 ? view.getTranslationX() + viewGroup.getWidth() : view.getTranslationX() - viewGroup.getWidth();
+        }
+    }
+
+    public class c extends i {
+        public c() {
+            super(null);
+        }
+
+        @Override // p5.p.g
+        public float a(ViewGroup viewGroup, View view) {
+            return view.getTranslationY() - viewGroup.getHeight();
+        }
+    }
+
+    public class d extends h {
+        public d() {
+            super(null);
+        }
+
+        @Override // p5.p.g
+        public float b(ViewGroup viewGroup, View view) {
+            return view.getTranslationX() + viewGroup.getWidth();
+        }
+    }
+
+    public class e extends h {
+        public e() {
+            super(null);
+        }
+
+        @Override // p5.p.g
+        public float b(ViewGroup viewGroup, View view) {
+            return viewGroup.getLayoutDirection() == 1 ? view.getTranslationX() - viewGroup.getWidth() : view.getTranslationX() + viewGroup.getWidth();
+        }
+    }
+
+    public class f extends i {
+        public f() {
+            super(null);
+        }
+
+        @Override // p5.p.g
+        public float a(ViewGroup viewGroup, View view) {
+            return view.getTranslationY() + viewGroup.getHeight();
+        }
+    }
+
+    public interface g {
+        float a(ViewGroup viewGroup, View view);
+
+        float b(ViewGroup viewGroup, View view);
+    }
+
+    public static abstract class h implements g {
+        public h() {
+        }
+
+        @Override // p5.p.g
+        public float a(ViewGroup viewGroup, View view) {
+            return view.getTranslationY();
+        }
+
+        public /* synthetic */ h(a aVar) {
+            this();
+        }
+    }
+
+    public static abstract class i implements g {
+        public i() {
+        }
+
+        @Override // p5.p.g
+        public float b(ViewGroup viewGroup, View view) {
+            return view.getTranslationX();
+        }
+
+        public /* synthetic */ i(a aVar) {
+            this();
+        }
+    }
+
+    public p(int i10) {
+        M0(i10);
+    }
+
+    private void F0(d0 d0Var) {
+        int[] iArr = new int[2];
+        d0Var.b.getLocationOnScreen(iArr);
+        d0Var.f28825a.put("android:slide:screenPosition", iArr);
+    }
+
+    @Override // p5.o0
+    public Animator H0(@NonNull ViewGroup viewGroup, @NonNull View view, d0 d0Var, d0 d0Var2) {
+        if (d0Var2 == null) {
+            return null;
+        }
+        int[] iArr = (int[]) d0Var2.f28825a.get("android:slide:screenPosition");
+        float translationX = view.getTranslationX();
+        float translationY = view.getTranslationY();
+        return f0.a(view, d0Var2, iArr[0], iArr[1], this.S.b(viewGroup, view), this.S.a(viewGroup, view), translationX, translationY, U, this);
+    }
+
+    @Override // p5.o0
+    public Animator J0(@NonNull ViewGroup viewGroup, @NonNull View view, d0 d0Var, d0 d0Var2) {
+        if (d0Var == null) {
+            return null;
+        }
+        int[] iArr = (int[]) d0Var.f28825a.get("android:slide:screenPosition");
+        return f0.a(view, d0Var, iArr[0], iArr[1], view.getTranslationX(), view.getTranslationY(), this.S.b(viewGroup, view), this.S.a(viewGroup, view), V, this);
+    }
+
+    public void M0(int i10) {
+        if (i10 == 3) {
+            this.S = W;
+        } else if (i10 == 5) {
+            this.S = Z;
+        } else if (i10 == 48) {
+            this.S = Y;
+        } else if (i10 == 80) {
+            this.S = f28891b0;
+        } else if (i10 == 8388611) {
+            this.S = X;
+        } else {
+            if (i10 != 8388613) {
+                throw new IllegalArgumentException("Invalid slide direction");
+            }
+            this.S = f28890a0;
+        }
+        this.T = i10;
+        o oVar = new o();
+        oVar.j(i10);
+        B0(oVar);
+    }
+
+    @Override // p5.q
+    public boolean c0() {
+        return true;
+    }
+
+    @Override // p5.o0, p5.q
+    public void l(@NonNull d0 d0Var) {
+        super.l(d0Var);
+        F0(d0Var);
+    }
+
+    @Override // p5.o0, p5.q
+    public void q(@NonNull d0 d0Var) {
+        super.q(d0Var);
+        F0(d0Var);
+    }
+}

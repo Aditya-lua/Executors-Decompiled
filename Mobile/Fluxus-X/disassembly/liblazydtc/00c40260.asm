@@ -1,0 +1,5 @@
+; OSSL_STORE_INFO_get0_CRL @ 00c40260
+00c40260	adrp x16,0xcbe000
+00c40264	ldr x17,[x16, #0x118]
+00c40268	add x16,x16,#0x118
+00c4026c	br x17

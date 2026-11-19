@@ -1,0 +1,5 @@
+; SSL_SESSION_free @ 00c32870
+00c32870	adrp x16,0xcb7000
+00c32874	ldr x17,[x16, #0x420]
+00c32878	add x16,x16,#0x420
+00c3287c	br x17

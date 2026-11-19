@@ -1,0 +1,46 @@
+; EVP_PKEY_CTX_free @ 00a75578
+00a75578	cbz x0,0x00a75628
+00a7557c	stp x20,x19,[sp, #-0x20]!
+00a75580	stp x29,x30,[sp, #0x10]
+00a75584	ldr x8,[x0, #0x78]
+00a75588	mov x19,x0
+00a7558c	add x29,sp,#0x10
+00a75590	cbz x8,0x00a755a4
+00a75594	ldr x8,[x8, #0x18]
+00a75598	cbz x8,0x00a755a4
+00a7559c	mov x0,x19
+00a755a0	blr x8
+00a755a4	mov x0,x19
+00a755a8	bl 0x00a7543c
+00a755ac	ldr x0,[x19, #0x40]
+00a755b0	adrp x20,0x2c3000
+00a755b4	add x20,x20,#0xa9f
+00a755b8	mov w2,#0x637
+00a755bc	mov x1,x20
+00a755c0	bl 0x00c32310
+00a755c4	ldr x0,[x19, #0x38]
+00a755c8	mov w2,#0x638
+00a755cc	mov x1,x20
+00a755d0	bl 0x00c32310
+00a755d4	ldr x0,[x19, #0x20]
+00a755d8	stp xzr,xzr,[x19, #0x38]
+00a755dc	bl 0x00c36350
+00a755e0	ldr x0,[x19, #0x10]
+00a755e4	mov w2,#0x1a8
+00a755e8	mov x1,x20
+00a755ec	bl 0x00c32310
+00a755f0	ldr x0,[x19, #0x88]
+00a755f4	bl 0x00c32450
+00a755f8	ldr x0,[x19, #0x90]
+00a755fc	bl 0x00c32450
+00a75600	ldr x0,[x19, #0x80]
+00a75604	bl 0x00c32360
+00a75608	ldr x0,[x19, #0xa8]
+00a7560c	bl 0x00c36290
+00a75610	ldp x29,x30,[sp, #0x10]
+00a75614	mov w2,#0x1af
+00a75618	mov x0,x19
+00a7561c	mov x1,x20
+00a75620	ldp x20,x19,[sp], #0x20
+00a75624	b 0x00c32310
+00a75628	ret

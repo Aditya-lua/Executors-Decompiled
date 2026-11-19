@@ -1,0 +1,18 @@
+; OSSL_EC_curve_nid2name @ 00a5965c
+00a5965c	cmp w0,#0x1
+00a59660	b.lt 0x00a59690
+00a59664	adrp x9,0xc5d000
+00a59668	add x9,x9,#0x70
+00a5966c	mov x8,xzr
+00a59670	add x9,x9,#0x8
+00a59674	ldr w10,[x9]
+00a59678	cmp w10,w0
+00a5967c	b.eq 0x00a59698
+00a59680	add x8,x8,#0x1
+00a59684	cmp x8,#0x52
+00a59688	add x9,x9,#0x10
+00a5968c	b.cc 0x00a59674
+00a59690	mov x0,xzr
+00a59694	ret
+00a59698	ldur x0,[x9, #-0x8]
+00a5969c	ret

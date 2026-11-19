@@ -1,0 +1,203 @@
+.class public final Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lnn/b0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/squareup/workflow1/ui/backstack/BackStackContainer;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lnn/b0<",
+        "Lpn/c<",
+        "*>;>;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0086\u0003\u0018\u00002\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J8\u0010\r\u001a\u00020\u000c2\n\u0010\u0005\u001a\u0006\u0012\u0002\u0008\u00030\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00082\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096\u0001\u00a2\u0006\u0004\u0008\r\u0010\u000eR \u0010\u0012\u001a\u000e\u0012\n\u0008\u0000\u0012\u0006\u0012\u0002\u0008\u00030\u00020\u000f8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008\u0010\u0010\u0011\u00a8\u0006\u0013"
+    }
+    d2 = {
+        "Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;",
+        "Lnn/b0;",
+        "Lpn/c;",
+        "<init>",
+        "()V",
+        "initialRendering",
+        "Lnn/z;",
+        "initialViewEnvironment",
+        "Landroid/content/Context;",
+        "contextForNewView",
+        "Landroid/view/ViewGroup;",
+        "container",
+        "Landroid/view/View;",
+        "b",
+        "(Lpn/c;Lnn/z;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;",
+        "Lxu/c;",
+        "getType",
+        "()Lxu/c;",
+        "type",
+        "wf1-container-android"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lnn/f;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lnn/f<",
+            "Lpn/c<",
+            "*>;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-instance v0, Lnn/f;
+
+    const-class v1, Lpn/c;
+
+    invoke-static {v1}, Lkotlin/jvm/internal/d0;->b(Ljava/lang/Class;)Lxu/c;
+
+    move-result-object v1
+
+    .line 4
+    sget-object v2, Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a$a;->i:Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a$a;
+
+    .line 5
+    invoke-direct {v0, v1, v2}, Lnn/f;-><init>(Lxu/c;Lpu/o;)V
+
+    iput-object v0, p0, Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;->a:Lnn/f;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic a(Ljava/lang/Object;Lnn/z;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 0
+
+    check-cast p1, Lpn/c;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;->b(Lpn/c;Lnn/z;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b(Lpn/c;Lnn/z;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 1
+    .param p1    # Lpn/c;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lnn/z;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Context;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/view/ViewGroup;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lpn/c<",
+            "*>;",
+            "Lnn/z;",
+            "Landroid/content/Context;",
+            "Landroid/view/ViewGroup;",
+            ")",
+            "Landroid/view/View;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "initialRendering"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "initialViewEnvironment"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "contextForNewView"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;->a:Lnn/f;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lnn/f;->a(Ljava/lang/Object;Lnn/z;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getType()Lxu/c;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lxu/c<",
+            "-",
+            "Lpn/c<",
+            "*>;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;->a:Lnn/f;
+
+    invoke-virtual {v0}, Lnn/f;->getType()Lxu/c;
+
+    move-result-object v0
+
+    return-object v0
+.end method

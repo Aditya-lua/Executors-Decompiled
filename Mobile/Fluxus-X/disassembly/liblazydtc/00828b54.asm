@@ -1,0 +1,19 @@
+; FUN_00828b54 @ 00828b54
+00828b54	ldrb w8,[x0, #0x12]
+00828b58	cmp w8,#0x1
+00828b5c	b.ne 0x00828b98
+00828b60	adrp x8,0x29c000
+00828b64	ldr q0,[x0]
+00828b68	ldrb w9,[x0, #0x10]
+00828b6c	ldr q1,[x8, #0x770]
+00828b70	ldrb w10,[x0, #0x11]
+00828b74	mov w8,#0xe9
+00828b78	mov w11,#0x19
+00828b7c	eor w8,w9,w8
+00828b80	strb wzr,[x0, #0x12]
+00828b84	eor v0.16B,v0.16B,v1.16B
+00828b88	eor w9,w10,w11
+00828b8c	strb w8,[x0, #0x10]
+00828b90	strb w9,[x0, #0x11]
+00828b94	str q0,[x0]
+00828b98	ret

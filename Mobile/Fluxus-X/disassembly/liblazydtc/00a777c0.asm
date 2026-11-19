@@ -1,0 +1,89 @@
+; FUN_00a777c0 @ 00a777c0
+00a777c0	str x21,[sp, #-0x30]!
+00a777c4	stp x20,x19,[sp, #0x10]
+00a777c8	stp x29,x30,[sp, #0x20]
+00a777cc	add x29,sp,#0x20
+00a777d0	cbz x0,0x00a77834
+00a777d4	mov x20,x2
+00a777d8	mov x21,x1
+00a777dc	mov x19,x0
+00a777e0	bl 0x00a74e5c
+00a777e4	cmp w0,#0x2
+00a777e8	b.cs 0x00a77850
+00a777ec	ldr x8,[x19, #0x78]
+00a777f0	cbz x8,0x00a77874
+00a777f4	ldr x0,[x8, #0xc8]
+00a777f8	cbz x0,0x00a77874
+00a777fc	adrp x1,0x29d000
+00a77800	str x0,[sp, #0x8]
+00a77804	add x1,x1,#0xe2e
+00a77808	mov x0,x21
+00a7780c	bl 0x00c301f0
+00a77810	cbz w0,0x00a778b4
+00a77814	mov x0,x19
+00a77818	mov x2,x20
+00a7781c	ldr x3,[sp, #0x8]
+00a77820	ldp x29,x30,[sp, #0x20]
+00a77824	ldp x20,x19,[sp, #0x10]
+00a77828	mov x1,x21
+00a7782c	ldr x21,[sp], #0x30
+00a77830	br x3
+00a77834	bl 0x00c342a0
+00a77838	adrp x0,0x2c3000
+00a7783c	adrp x2,0x2a6000
+00a77840	add x0,x0,#0xa9f
+00a77844	add x2,x2,#0x68
+00a77848	mov w1,#0x5a6
+00a7784c	b 0x00a7788c
+00a77850	mov w0,wzr
+00a77854	b.ne 0x00a778a4
+00a77858	mov x0,x19
+00a7785c	mov x2,x20
+00a77860	ldp x29,x30,[sp, #0x20]
+00a77864	ldp x20,x19,[sp, #0x10]
+00a77868	mov x1,x21
+00a7786c	ldr x21,[sp], #0x30
+00a77870	b 0x00c3c080
+00a77874	bl 0x00c342a0
+00a77878	adrp x0,0x2c3000
+00a7787c	adrp x2,0x2a6000
+00a77880	add x0,x0,#0xa9f
+00a77884	add x2,x2,#0x68
+00a77888	mov w1,#0x5b0
+00a7788c	bl 0x00c342b0
+00a77890	orr w0,wzr,#0x6
+00a77894	mov w1,#0x93
+00a77898	mov x2,xzr
+00a7789c	bl 0x00c342c0
+00a778a0	orr w0,wzr,#0xfffffffe
+00a778a4	ldp x29,x30,[sp, #0x20]
+00a778a8	ldp x20,x19,[sp, #0x10]
+00a778ac	ldr x21,[sp], #0x30
+00a778b0	ret
+00a778b4	cbz x20,0x00a778ec
+00a778b8	mov x0,x20
+00a778bc	bl 0x00c35310
+00a778c0	cbz x0,0x00a778ec
+00a778c4	mov x5,x0
+00a778c8	mov x0,x19
+00a778cc	ldp x29,x30,[sp, #0x20]
+00a778d0	ldp x20,x19,[sp, #0x10]
+00a778d4	mov w1,#0xffffffff
+00a778d8	orr w2,wzr,#0x7f0
+00a778dc	mov w3,#0x1
+00a778e0	mov w4,wzr
+00a778e4	ldr x21,[sp], #0x30
+00a778e8	b 0x00a763fc
+00a778ec	bl 0x00c342a0
+00a778f0	adrp x0,0x2c3000
+00a778f4	adrp x2,0x2cb000
+00a778f8	add x0,x0,#0xa9f
+00a778fc	add x2,x2,#0x9e1
+00a77900	mov w1,#0x699
+00a77904	bl 0x00c342b0
+00a77908	orr w0,wzr,#0x6
+00a7790c	mov w1,#0x98
+00a77910	mov x2,xzr
+00a77914	bl 0x00c342c0
+00a77918	mov w0,wzr
+00a7791c	b 0x00a778a4

@@ -1,0 +1,24 @@
+; CMAC_CTX_cleanup @ 00b5392c
+00b5392c	str x19,[sp, #-0x20]!
+00b53930	stp x29,x30,[sp, #0x10]
+00b53934	mov x19,x0
+00b53938	ldr x0,[x0]
+00b5393c	add x29,sp,#0x10
+00b53940	bl 0x00c34ba0
+00b53944	add x0,x19,#0x48
+00b53948	mov w1,#0x20
+00b5394c	bl 0x00c34750
+00b53950	add x0,x19,#0x8
+00b53954	mov w1,#0x20
+00b53958	bl 0x00c34750
+00b5395c	add x0,x19,#0x28
+00b53960	mov w1,#0x20
+00b53964	bl 0x00c34750
+00b53968	add x0,x19,#0x68
+00b5396c	mov w1,#0x20
+00b53970	bl 0x00c34750
+00b53974	mov w8,#0xffffffff
+00b53978	str w8,[x19, #0x88]
+00b5397c	ldp x29,x30,[sp, #0x10]
+00b53980	ldr x19,[sp], #0x20
+00b53984	ret

@@ -1,0 +1,20 @@
+address	elf_vaddr	name	body_bytes	status	pseudocode	disassembly	diagnostic
+001047a8	0x47a8	entry	128	decompiled	pseudocode/libtrampoline/001047a8.c	disassembly/libtrampoline/001047a8.asm	
+00104828	0x4828	FUN_00104828	28	decompiled	pseudocode/libtrampoline/00104828.c	disassembly/libtrampoline/00104828.asm	
+00104844	0x4844	FUN_00104844	84	decompiled	pseudocode/libtrampoline/00104844.c	disassembly/libtrampoline/00104844.asm	
+00104898	0x4898	FUN_00104898	296	decompiled	pseudocode/libtrampoline/00104898.c	disassembly/libtrampoline/00104898.asm	
+001049c0	0x49c0	FUN_001049c0	20	decompiled	pseudocode/libtrampoline/001049c0.c	disassembly/libtrampoline/001049c0.asm	
+001049e0	0x49e0	<EXTERNAL>::__libc_init	16	decompiled	pseudocode/libtrampoline/001049e0.c	disassembly/libtrampoline/001049e0.asm	
+001049f0	0x49f0	<EXTERNAL>::__cxa_atexit	16	decompiled	pseudocode/libtrampoline/001049f0.c	disassembly/libtrampoline/001049f0.asm	
+00104a00	0x4a00	<EXTERNAL>::__android_log_print	16	decompiled	pseudocode/libtrampoline/00104a00.c	disassembly/libtrampoline/00104a00.asm	
+00104a10	0x4a10	<EXTERNAL>::dlopen	16	decompiled	pseudocode/libtrampoline/00104a10.c	disassembly/libtrampoline/00104a10.asm	
+00104a20	0x4a20	<EXTERNAL>::dlsym	16	decompiled	pseudocode/libtrampoline/00104a20.c	disassembly/libtrampoline/00104a20.asm	
+00104a30	0x4a30	<EXTERNAL>::dlerror	16	decompiled	pseudocode/libtrampoline/00104a30.c	disassembly/libtrampoline/00104a30.asm	
+00104a40	0x4a40	<EXTERNAL>::__stack_chk_fail	16	decompiled	pseudocode/libtrampoline/00104a40.c	disassembly/libtrampoline/00104a40.asm	
+0010d000	0xd000	<EXTERNAL>::__libc_init	1	decompiled	pseudocode/libtrampoline/0010d000.c	disassembly/libtrampoline/0010d000.asm	
+0010d008	0xd008	<EXTERNAL>::__cxa_atexit	1	decompiled	pseudocode/libtrampoline/0010d008.c	disassembly/libtrampoline/0010d008.asm	
+0010d010	0xd010	<EXTERNAL>::__android_log_print	1	decompiled	pseudocode/libtrampoline/0010d010.c	disassembly/libtrampoline/0010d010.asm	
+0010d018	0xd018	<EXTERNAL>::dlopen	1	decompiled	pseudocode/libtrampoline/0010d018.c	disassembly/libtrampoline/0010d018.asm	
+0010d020	0xd020	<EXTERNAL>::dlsym	1	decompiled	pseudocode/libtrampoline/0010d020.c	disassembly/libtrampoline/0010d020.asm	
+0010d028	0xd028	<EXTERNAL>::dlerror	1	decompiled	pseudocode/libtrampoline/0010d028.c	disassembly/libtrampoline/0010d028.asm	
+0010d030	0xd030	<EXTERNAL>::__stack_chk_fail	1	decompiled	pseudocode/libtrampoline/0010d030.c	disassembly/libtrampoline/0010d030.asm	

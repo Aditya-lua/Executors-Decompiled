@@ -1,0 +1,29 @@
+; SSL_CTX_set_default_verify_file @ 009b782c
+009b782c	stp x20,x19,[sp, #-0x20]!
+009b7830	stp x29,x30,[sp, #0x10]
+009b7834	ldr x20,[x0, #0x28]
+009b7838	add x29,sp,#0x10
+009b783c	mov x19,x0
+009b7840	bl 0x00c32b90
+009b7844	mov x1,x0
+009b7848	mov x0,x20
+009b784c	bl 0x00c32c00
+009b7850	cbz x0,0x009b7888
+009b7854	mov x20,x0
+009b7858	bl 0x00c35250
+009b785c	ldr x5,[x19]
+009b7860	ldr x6,[x19, #0x440]
+009b7864	mov w1,#0x1
+009b7868	orr w3,wzr,#0x3
+009b786c	mov x0,x20
+009b7870	mov x2,xzr
+009b7874	mov x4,xzr
+009b7878	mov w19,#0x1
+009b787c	bl 0x00c35b20
+009b7880	bl 0x00c35240
+009b7884	b 0x009b788c
+009b7888	mov w19,wzr
+009b788c	ldp x29,x30,[sp, #0x10]
+009b7890	mov w0,w19
+009b7894	ldp x20,x19,[sp], #0x20
+009b7898	ret

@@ -1,0 +1,104 @@
+; FUN_0086f5d8 @ 0086f5d8
+0086f5d8	stp x29,x30,[sp, #-0x40]!
+0086f5dc	stp x24,x23,[sp, #0x10]
+0086f5e0	stp x22,x21,[sp, #0x20]
+0086f5e4	stp x20,x19,[sp, #0x30]
+0086f5e8	mov x29,sp
+0086f5ec	movi v0.2D,#0x0
+0086f5f0	str xzr,[x0, #0x20]
+0086f5f4	stp q0,q0,[x0]
+0086f5f8	ldp x8,x9,[x1, #0x20]
+0086f5fc	ldrb w10,[x1, #0x30]
+0086f600	strb w10,[x0, #0x30]
+0086f604	str x9,[x0, #0x28]
+0086f608	cbz x8,0x0086f760
+0086f60c	mov x19,x0
+0086f610	lsl x0,x8,#0x4
+0086f614	mov x20,x1
+0086f618	bl 0x00c2fed0
+0086f61c	ldr x23,[x20, #0x20]
+0086f620	str x0,[x19]
+0086f624	cbz x23,0x0086f658
+0086f628	cmp x23,#0x40
+0086f62c	mov w8,#0x40
+0086f630	csel x8,x23,x8,hi
+0086f634	lsr x24,x8,#0x6
+0086f638	lsl x22,x24,#0x3
+0086f63c	mov x0,x22
+0086f640	bl 0x00c2fed0
+0086f644	mov w1,wzr
+0086f648	mov x2,x22
+0086f64c	mov x21,x0
+0086f650	bl 0x00c301c0
+0086f654	b 0x0086f660
+0086f658	mov x24,xzr
+0086f65c	mov x21,xzr
+0086f660	ldr x0,[x19, #0x18]
+0086f664	bl 0x00c301d0
+0086f668	mov x0,xzr
+0086f66c	stp x24,x21,[x19, #0x10]
+0086f670	str x23,[x19, #0x8]
+0086f674	bl 0x00c301d0
+0086f678	ldr x8,[x20, #0x10]
+0086f67c	cbz x8,0x0086f758
+0086f680	ldr x11,[x20, #0x18]
+0086f684	ldr x10,[x11]
+0086f688	cbz x10,0x0086f694
+0086f68c	mov x9,xzr
+0086f690	b 0x0086f6b4
+0086f694	mov x9,xzr
+0086f698	add x12,x11,#0x8
+0086f69c	sub x13,x8,#0x1
+0086f6a0	cmp x13,x9
+0086f6a4	b.eq 0x0086f758
+0086f6a8	ldr x10,[x12, x9, LSL #0x3]
+0086f6ac	add x9,x9,#0x1
+0086f6b0	cbz x10,0x0086f6a0
+0086f6b4	rbit x12,x10
+0086f6b8	add x11,x11,#0x8
+0086f6bc	clz x12,x12
+0086f6c0	orr x13,x12,x9, LSL #0x6
+0086f6c4	mov w12,#0x1
+0086f6c8	lsl x14,x13,#0x4
+0086f6cc	ldr x15,[x20]
+0086f6d0	ldr x16,[x19]
+0086f6d4	sub x0,x10,#0x1
+0086f6d8	ldr q0,[x15,x14]
+0086f6dc	ands x10,x0,x10
+0086f6e0	str q0,[x16,x14]
+0086f6e4	lsr x14,x13,#0x3
+0086f6e8	lsl x16,x12,x13
+0086f6ec	ldr x15,[x19, #0x18]
+0086f6f0	and x14,x14,#0x1ffffffffffffff8
+0086f6f4	ldr x17,[x15, x14#0x0]
+0086f6f8	orr x16,x17,x16
+0086f6fc	str x16,[x15, x14#0x0]
+0086f700	b.ne 0x0086f72c
+0086f704	add x10,x9,#0x1
+0086f708	cmp x8,x10
+0086f70c	csinc x14,x8,x9,hi
+0086f710	add x15,x9,#0x1
+0086f714	cmp x15,x8
+0086f718	b.cs 0x0086f748
+0086f71c	ldr x10,[x11, x9, LSL #0x3]
+0086f720	mov x9,x15
+0086f724	cbz x10,0x0086f710
+0086f728	mov x9,x15
+0086f72c	rbit x13,x10
+0086f730	clz x13,x13
+0086f734	orr x13,x13,x9, LSL #0x6
+0086f738	cbnz x10,0x0086f6c8
+0086f73c	cmp x9,x8
+0086f740	b.ne 0x0086f6c8
+0086f744	b 0x0086f758
+0086f748	mov x10,xzr
+0086f74c	mov x9,x14
+0086f750	cbz x10,0x0086f73c
+0086f754	b 0x0086f6c8
+0086f758	ldr x8,[x20, #0x20]
+0086f75c	str x8,[x19, #0x20]
+0086f760	ldp x20,x19,[sp, #0x30]
+0086f764	ldp x22,x21,[sp, #0x20]
+0086f768	ldp x24,x23,[sp, #0x10]
+0086f76c	ldp x29,x30,[sp], #0x40
+0086f770	ret

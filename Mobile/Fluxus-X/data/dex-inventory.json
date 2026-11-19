@@ -1,0 +1,42 @@
+[
+  {
+    "path": "classes.dex",
+    "bytes": 9044596,
+    "sha256": "37ec9e64c7c0e878aa85de4f19b2ce619a061c279f0b351a89923a8f0d528084",
+    "magic": "dex\n038\u0000",
+    "string_ids": 52491,
+    "type_ids": 14178,
+    "method_ids": 65081,
+    "class_defs": 12222
+  },
+  {
+    "path": "classes2.dex",
+    "bytes": 6145320,
+    "sha256": "ecef9b783d677eb01bc912c6e51619e6a62159df3de91d67fcf06ffa360a47b4",
+    "magic": "dex\n038\u0000",
+    "string_ids": 37634,
+    "type_ids": 9224,
+    "method_ids": 46765,
+    "class_defs": 7195
+  },
+  {
+    "path": "classes3.dex",
+    "bytes": 6779328,
+    "sha256": "58932fcb84aaf11a3b74ee6603ba2b18f4dfda411a52be34818d21700c569f2d",
+    "magic": "dex\n038\u0000",
+    "string_ids": 30177,
+    "type_ids": 9276,
+    "method_ids": 41837,
+    "class_defs": 7245
+  },
+  {
+    "path": "classes4.dex",
+    "bytes": 3224,
+    "sha256": "4d8db3fb60ad861549689e0667013e6cebb0d28cfcfc31a6e36d5680414ba756",
+    "magic": "dex\n035\u0000",
+    "string_ids": 68,
+    "type_ids": 20,
+    "method_ids": 32,
+    "class_defs": 2
+  }
+]

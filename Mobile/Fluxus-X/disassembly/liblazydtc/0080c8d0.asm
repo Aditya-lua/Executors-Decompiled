@@ -1,0 +1,16 @@
+; FUN_0080c8d0 @ 0080c8d0
+0080c8d0	stp x29,x30,[sp, #-0x20]!
+0080c8d4	stp x20,x19,[sp, #0x10]
+0080c8d8	mov x29,sp
+0080c8dc	mov x20,x0
+0080c8e0	mov w0,#0x10
+0080c8e4	bl 0x00c30000
+0080c8e8	mov x19,x0
+0080c8ec	mov x1,x20
+0080c8f0	bl 0x0080c920
+0080c8f4	adrp x1,0xcb4000
+0080c8f8	adrp x2,0xcb4000
+0080c8fc	mov x0,x19
+0080c900	ldr x1,[x1, #0x9d0]
+0080c904	ldr x2,[x2, #0x9d8]
+0080c908	bl 0x00c30020

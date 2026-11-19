@@ -1,0 +1,94 @@
+/* Ghidra 12.2 pseudocode; native types and names may be inferred.
+ * Binary: liblazydtc.so; entry: 00a45d34
+ */
+
+void FUN_00a45d34(int *param_1,int *param_2,long param_3)
+
+{
+  int iVar1;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  int iVar5;
+  int iVar6;
+  int iVar7;
+  int iVar8;
+  int iVar9;
+  int iVar10;
+  
+  *param_1 = *param_2 + param_2[10];
+  param_1[1] = param_2[1] + param_2[0xb];
+  param_1[2] = param_2[2] + param_2[0xc];
+  param_1[3] = param_2[3] + param_2[0xd];
+  param_1[4] = param_2[4] + param_2[0xe];
+  param_1[5] = param_2[5] + param_2[0xf];
+  param_1[6] = param_2[6] + param_2[0x10];
+  param_1[7] = param_2[7] + param_2[0x11];
+  param_1[8] = param_2[8] + param_2[0x12];
+  param_1[9] = param_2[9] + param_2[0x13];
+  param_1[10] = param_2[10] - *param_2;
+  param_1[0xb] = param_2[0xb] - param_2[1];
+  param_1[0xc] = param_2[0xc] - param_2[2];
+  param_1[0xd] = param_2[0xd] - param_2[3];
+  param_1[0xe] = param_2[0xe] - param_2[4];
+  param_1[0xf] = param_2[0xf] - param_2[5];
+  param_1[0x10] = param_2[0x10] - param_2[6];
+  param_1[0x11] = param_2[0x11] - param_2[7];
+  param_1[0x12] = param_2[0x12] - param_2[8];
+  param_1[0x13] = param_2[0x13] - param_2[9];
+  FUN_00a44e38(param_1 + 0x14,param_1);
+  FUN_00a44e38(param_1 + 10,param_1 + 10,param_3 + 0x28);
+  FUN_00a44e38(param_1 + 0x1e,param_3 + 0x50,param_2 + 0x1e);
+  iVar1 = param_2[0x14];
+  iVar6 = param_2[0x15];
+  iVar2 = param_2[0x16];
+  iVar7 = param_2[0x17];
+  iVar3 = param_2[0x18];
+  iVar8 = param_2[0x19];
+  iVar4 = param_2[0x1a];
+  iVar9 = param_2[0x1b];
+  iVar5 = param_2[0x1c];
+  iVar10 = param_2[0x1d];
+  *param_1 = param_1[0x14] - param_1[10];
+  param_1[1] = param_1[0x15] - param_1[0xb];
+  param_1[2] = param_1[0x16] - param_1[0xc];
+  param_1[3] = param_1[0x17] - param_1[0xd];
+  param_1[4] = param_1[0x18] - param_1[0xe];
+  param_1[5] = param_1[0x19] - param_1[0xf];
+  param_1[6] = param_1[0x1a] - param_1[0x10];
+  param_1[7] = param_1[0x1b] - param_1[0x11];
+  param_1[8] = param_1[0x1c] - param_1[0x12];
+  param_1[9] = param_1[0x1d] - param_1[0x13];
+  param_1[10] = param_1[10] + param_1[0x14];
+  param_1[0xb] = param_1[0xb] + param_1[0x15];
+  param_1[0xc] = param_1[0xc] + param_1[0x16];
+  param_1[0xd] = param_1[0xd] + param_1[0x17];
+  param_1[0xe] = param_1[0xe] + param_1[0x18];
+  param_1[0xf] = param_1[0xf] + param_1[0x19];
+  param_1[0x10] = param_1[0x10] + param_1[0x1a];
+  param_1[0x11] = param_1[0x11] + param_1[0x1b];
+  param_1[0x12] = param_1[0x12] + param_1[0x1c];
+  param_1[0x13] = param_1[0x13] + param_1[0x1d];
+  param_1[0x14] = param_1[0x1e] + iVar1 * 2;
+  param_1[0x15] = param_1[0x1f] + iVar6 * 2;
+  param_1[0x16] = param_1[0x20] + iVar2 * 2;
+  param_1[0x17] = param_1[0x21] + iVar7 * 2;
+  param_1[0x18] = param_1[0x22] + iVar3 * 2;
+  param_1[0x19] = param_1[0x23] + iVar8 * 2;
+  param_1[0x1a] = param_1[0x24] + iVar4 * 2;
+  param_1[0x1b] = param_1[0x25] + iVar9 * 2;
+  param_1[0x1c] = param_1[0x26] + iVar5 * 2;
+  param_1[0x1d] = param_1[0x27] + iVar10 * 2;
+  param_1[0x1e] = iVar1 * 2 - param_1[0x1e];
+  param_1[0x1f] = iVar6 * 2 - param_1[0x1f];
+  param_1[0x20] = iVar2 * 2 - param_1[0x20];
+  param_1[0x21] = iVar7 * 2 - param_1[0x21];
+  param_1[0x22] = iVar3 * 2 - param_1[0x22];
+  param_1[0x23] = iVar8 * 2 - param_1[0x23];
+  param_1[0x24] = iVar4 * 2 - param_1[0x24];
+  param_1[0x25] = iVar9 * 2 - param_1[0x25];
+  param_1[0x26] = iVar5 * 2 - param_1[0x26];
+  param_1[0x27] = iVar10 * 2 - param_1[0x27];
+  return;
+}
+

@@ -1,0 +1,11 @@
+; FUN_00924ee4 @ 00924ee4
+00924ee4	str x19,[sp, #-0x20]!
+00924ee8	stp x29,x30,[sp, #0x10]
+00924eec	add x29,sp,#0x10
+00924ef0	mov x19,x0
+00924ef4	add x0,x0,#0x3f8
+00924ef8	bl 0x00967198
+00924efc	ldp x29,x30,[sp, #0x10]
+00924f00	add x0,x19,#0x410
+00924f04	ldr x19,[sp], #0x20
+00924f08	b 0x00967198

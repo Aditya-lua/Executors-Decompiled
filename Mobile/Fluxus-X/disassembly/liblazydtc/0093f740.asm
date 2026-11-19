@@ -1,0 +1,39 @@
+; curl_slist_append @ 0093f740
+0093f740	stp x20,x19,[sp, #-0x20]!
+0093f744	stp x29,x30,[sp, #0x10]
+0093f748	add x29,sp,#0x10
+0093f74c	adrp x8,0xcc4000
+0093f750	add x8,x8,#0x688
+0093f754	mov x19,x0
+0093f758	mov x0,x1
+0093f75c	ldr x8,[x8]
+0093f760	blr x8
+0093f764	mov x20,x0
+0093f768	cbz x0,0x0093f7c4
+0093f76c	adrp x8,0xcc4000
+0093f770	add x8,x8,#0x670
+0093f774	mov w0,#0x10
+0093f778	ldr x8,[x8]
+0093f77c	blr x8
+0093f780	cbz x0,0x0093f7b0
+0093f784	stp x20,xzr,[x0]
+0093f788	cbz x19,0x0093f7a8
+0093f78c	mov x9,x19
+0093f790	mov x8,x9
+0093f794	ldr x9,[x9, #0x8]
+0093f798	cbnz x9,0x0093f790
+0093f79c	str x0,[x8, #0x8]
+0093f7a0	cbnz x19,0x0093f7c8
+0093f7a4	b 0x0093f7b0
+0093f7a8	mov x19,x0
+0093f7ac	cbnz x19,0x0093f7c8
+0093f7b0	adrp x8,0xcc4000
+0093f7b4	add x8,x8,#0x678
+0093f7b8	mov x0,x20
+0093f7bc	ldr x8,[x8]
+0093f7c0	blr x8
+0093f7c4	mov x19,xzr
+0093f7c8	ldp x29,x30,[sp, #0x10]
+0093f7cc	mov x0,x19
+0093f7d0	ldp x20,x19,[sp], #0x20
+0093f7d4	ret

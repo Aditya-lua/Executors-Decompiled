@@ -1,0 +1,46 @@
+; mbedtls_md_free @ 00b788ac
+00b788ac	str x19,[sp, #-0x20]!
+00b788b0	stp x29,x30,[sp, #0x10]
+00b788b4	add x29,sp,#0x10
+00b788b8	mov x19,x0
+00b788bc	cbz x0,0x00b788fc
+00b788c0	ldr x8,[x19]
+00b788c4	cbz x8,0x00b788fc
+00b788c8	ldr x0,[x19, #0x8]
+00b788cc	cbz x0,0x00b78934
+00b788d0	ldr w8,[x8]
+00b788d4	sub w8,w8,#0x3
+00b788d8	cmp w8,#0x10
+00b788dc	b.hi 0x00b7892c
+00b788e0	adrp x9,0x77f000
+00b788e4	add x9,x9,#0xa30
+00b788e8	ldrsw x8,[x9, x8, LSL #0x2]
+00b788ec	add x8,x8,x9
+00b788f0	br x8
+00b788f4	bl 0x00c42b00
+00b788f8	b 0x00b7892c
+00b788fc	ldp x29,x30,[sp, #0x10]
+00b78900	ldr x19,[sp], #0x20
+00b78904	ret
+00b78908	bl 0x00c42aa0
+00b7890c	b 0x00b7892c
+00b78910	bl 0x00c42b70
+00b78914	b 0x00b7892c
+00b78918	bl 0x00c42910
+00b7891c	b 0x00b7892c
+00b78920	bl 0x00c429c0
+00b78924	b 0x00b7892c
+00b78928	bl 0x00c42a30
+00b7892c	ldr x0,[x19, #0x8]
+00b78930	bl 0x00c30960
+00b78934	ldr x0,[x19, #0x10]
+00b78938	cbz x0,0x00b7894c
+00b7893c	ldr x8,[x19]
+00b78940	ldrb w8,[x8, #0x5]
+00b78944	lsl x1,x8,#0x1
+00b78948	bl 0x00c42230
+00b7894c	ldp x29,x30,[sp, #0x10]
+00b78950	orr w1,wzr,#0x18
+00b78954	mov x0,x19
+00b78958	ldr x19,[sp], #0x20
+00b7895c	b 0x00c42220

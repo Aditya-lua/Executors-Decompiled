@@ -1,0 +1,15 @@
+; evp_cleanup_int @ 00a6960c
+00a6960c	stp x29,x30,[sp, #-0x10]!
+00a69610	orr w0,wzr,#0x6
+00a69614	mov x29,sp
+00a69618	bl 0x00c3d820
+00a6961c	mov w0,#0x2
+00a69620	bl 0x00c3d820
+00a69624	mov w0,#0x1
+00a69628	bl 0x00c3d820
+00a6962c	mov w0,#0xffffffff
+00a69630	bl 0x00c3d820
+00a69634	bl 0x00c3d070
+00a69638	bl 0x00c3d850
+00a6963c	ldp x29,x30,[sp], #0x10
+00a69640	b 0x00c3d860

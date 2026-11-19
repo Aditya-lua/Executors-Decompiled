@@ -1,0 +1,77 @@
+; std::__ndk1::basic_stringbuf<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::seekoff @ 008e9210
+008e9210	ldr x8,[x0, #0x58]
+008e9214	ldr x9,[x0, #0x30]
+008e9218	cmp x8,x9
+008e921c	b.cs 0x008e9228
+008e9220	mov x8,x9
+008e9224	str x9,[x0, #0x58]
+008e9228	ands w10,w3,#0x18
+008e922c	b.eq 0x008e924c
+008e9230	cmp w2,#0x1
+008e9234	b.ne 0x008e9258
+008e9238	cmp w10,#0x18
+008e923c	b.ne 0x008e9258
+008e9240	mov x1,#-0x1
+008e9244	mov x0,xzr
+008e9248	ret
+008e924c	mov x1,#-0x1
+008e9250	mov x0,xzr
+008e9254	ret
+008e9258	cbz x8,0x008e9278
+008e925c	mov x10,x0
+008e9260	ldrb w11,[x10, #0x40]!
+008e9264	tbnz w11,#0x0,0x008e9288
+008e9268	add x10,x10,#0x1
+008e926c	sub x10,x8,x10
+008e9270	cbnz w2,0x008e9294
+008e9274	b 0x008e9280
+008e9278	mov x10,xzr
+008e927c	cbnz w2,0x008e9294
+008e9280	mov x11,xzr
+008e9284	b 0x008e92d0
+008e9288	ldr x10,[x0, #0x50]
+008e928c	sub x10,x8,x10
+008e9290	cbz w2,0x008e9280
+008e9294	cmp w2,#0x2
+008e9298	b.eq 0x008e92b4
+008e929c	cmp w2,#0x1
+008e92a0	b.ne 0x008e92bc
+008e92a4	tbnz w3,#0x3,0x008e92c8
+008e92a8	ldr x11,[x0, #0x28]
+008e92ac	sub x11,x9,x11
+008e92b0	b 0x008e92d0
+008e92b4	mov x11,x10
+008e92b8	b 0x008e92d0
+008e92bc	mov x1,#-0x1
+008e92c0	mov x0,xzr
+008e92c4	ret
+008e92c8	ldp x11,x12,[x0, #0x10]
+008e92cc	sub x11,x12,x11
+008e92d0	adds x11,x11,x1
+008e92d4	mov x1,#-0x1
+008e92d8	b.mi 0x008e932c
+008e92dc	cmp x10,x11
+008e92e0	b.lt 0x008e932c
+008e92e4	cbz x11,0x008e9308
+008e92e8	tbz w3,#0x3,0x008e92f4
+008e92ec	ldr x10,[x0, #0x18]
+008e92f0	cbz x10,0x008e9334
+008e92f4	tbz w3,#0x4,0x008e9308
+008e92f8	cbnz x9,0x008e9308
+008e92fc	mov x1,#-0x1
+008e9300	mov x0,xzr
+008e9304	ret
+008e9308	tbz w3,#0x3,0x008e9318
+008e930c	ldr x9,[x0, #0x10]
+008e9310	add x9,x9,x11
+008e9314	stp x9,x8,[x0, #0x18]
+008e9318	tbz w3,#0x4,0x008e9328
+008e931c	ldr x8,[x0, #0x28]
+008e9320	add x8,x8,w11, SXTW 
+008e9324	str x8,[x0, #0x30]
+008e9328	mov x1,x11
+008e932c	mov x0,xzr
+008e9330	ret
+008e9334	mov x1,#-0x1
+008e9338	mov x0,xzr
+008e933c	ret

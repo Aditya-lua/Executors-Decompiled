@@ -1,0 +1,4 @@
+; BIGNUM_it @ 00a19294
+00a19294	adrp x0,0xc5a000
+00a19298	add x0,x0,#0x178
+00a1929c	ret

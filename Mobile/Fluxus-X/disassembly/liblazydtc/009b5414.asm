@@ -1,0 +1,47 @@
+; SSL_new_session_ticket @ 009b5414
+009b5414	stp x20,x19,[sp, #-0x20]!
+009b5418	stp x29,x30,[sp, #0x10]
+009b541c	add x29,sp,#0x10
+009b5420	mov x19,x0
+009b5424	bl 0x00c344e0
+009b5428	cbz w0,0x009b5434
+009b542c	ldr w8,[x19, #0xa9c]
+009b5430	cbz w8,0x009b54a4
+009b5434	ldr x8,[x19, #0x240]
+009b5438	cbz x8,0x009b54a4
+009b543c	ldr x8,[x19, #0x2c8]
+009b5440	cbz x8,0x009b54a4
+009b5444	ldr w8,[x19, #0x38]
+009b5448	cbz w8,0x009b54a4
+009b544c	ldr x8,[x19, #0x8]
+009b5450	mov w20,wzr
+009b5454	ldr x9,[x8, #0xc0]
+009b5458	ldrb w9,[x9, #0x60]
+009b545c	tbnz w9,#0x3,0x009b54a8
+009b5460	ldr w8,[x8]
+009b5464	cmp w8,#0x304
+009b5468	b.lt 0x009b54a4
+009b546c	cmp w8,#0x10, LSL #12
+009b5470	mov w20,wzr
+009b5474	b.eq 0x009b54a8
+009b5478	ldr w8,[x19, #0xa9c]
+009b547c	add x0,x19,#0xc58
+009b5480	add w8,w8,#0x1
+009b5484	str w8,[x19, #0xa9c]
+009b5488	bl 0x00c347d0
+009b548c	cbnz w0,0x009b549c
+009b5490	mov x0,x19
+009b5494	bl 0x00c344e0
+009b5498	cbz w0,0x009b54b8
+009b549c	mov w20,#0x1
+009b54a0	b 0x009b54a8
+009b54a4	mov w20,wzr
+009b54a8	ldp x29,x30,[sp, #0x10]
+009b54ac	mov w0,w20
+009b54b0	ldp x20,x19,[sp], #0x20
+009b54b4	ret
+009b54b8	mov w1,#0x1
+009b54bc	mov x0,x19
+009b54c0	mov w20,#0x1
+009b54c4	bl 0x00c35cf0
+009b54c8	b 0x009b54a8

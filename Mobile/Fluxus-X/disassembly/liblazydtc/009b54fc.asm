@@ -1,0 +1,243 @@
+; SSL_CTX_ctrl @ 009b54fc
+009b54fc	stp x29,x30,[sp, #-0x10]!
+009b5500	mov x29,sp
+009b5504	cbz x0,0x009b5534
+009b5508	sub w8,w1,#0x10
+009b550c	cmp w8,#0x73
+009b5510	b.hi 0x009b5584
+009b5514	adrp x9,0x74c000
+009b5518	add x9,x9,#0x298
+009b551c	ldrsw x8,[x9, x8, LSL #0x2]
+009b5520	add x8,x8,x9
+009b5524	br x8
+009b5528	str x3,[x0, #0x170]
+009b552c	mov w8,#0x1
+009b5530	b 0x009b5578
+009b5534	cmp w1,#0x66
+009b5538	b.eq 0x009b5564
+009b553c	cmp w1,#0x62
+009b5540	b.eq 0x009b5564
+009b5544	cmp w1,#0x5c
+009b5548	mov x8,xzr
+009b554c	b.ne 0x009b5578
+009b5550	mov x0,xzr
+009b5554	mov x1,xzr
+009b5558	mov x2,xzr
+009b555c	bl 0x00c34b20
+009b5560	b 0x009b5574
+009b5564	mov x0,xzr
+009b5568	mov x1,x3
+009b556c	mov w2,wzr
+009b5570	bl 0x00c34b40
+009b5574	sxtw x8,w0
+009b5578	mov x0,x8
+009b557c	ldp x29,x30,[sp], #0x10
+009b5580	ret
+009b5584	ldr x8,[x0, #0x8]
+009b5588	ldr x4,[x8, #0x88]
+009b558c	ldp x29,x30,[sp], #0x10
+009b5590	br x4
+009b5594	ldr x0,[x0, #0x30]
+009b5598	ldp x29,x30,[sp], #0x10
+009b559c	b 0x00c35880
+009b55a0	ldr w8,[x0, #0x78]
+009b55a4	sxtw x8,w8
+009b55a8	b 0x009b5578
+009b55ac	ldr w8,[x0, #0x80]
+009b55b0	sxtw x8,w8
+009b55b4	b 0x009b5578
+009b55b8	ldr w8,[x0, #0x7c]
+009b55bc	sxtw x8,w8
+009b55c0	b 0x009b5578
+009b55c4	ldr w8,[x0, #0x84]
+009b55c8	sxtw x8,w8
+009b55cc	b 0x009b5578
+009b55d0	ldr w8,[x0, #0x8c]
+009b55d4	sxtw x8,w8
+009b55d8	b 0x009b5578
+009b55dc	ldr w8,[x0, #0x88]
+009b55e0	sxtw x8,w8
+009b55e4	b 0x009b5578
+009b55e8	ldr w8,[x0, #0x9c]
+009b55ec	sxtw x8,w8
+009b55f0	b 0x009b5578
+009b55f4	ldr w8,[x0, #0xa0]
+009b55f8	sxtw x8,w8
+009b55fc	b 0x009b5578
+009b5600	ldr w8,[x0, #0x90]
+009b5604	sxtw x8,w8
+009b5608	b 0x009b5578
+009b560c	ldr w8,[x0, #0x94]
+009b5610	sxtw x8,w8
+009b5614	b 0x009b5578
+009b5618	ldr w8,[x0, #0x98]
+009b561c	sxtw x8,w8
+009b5620	b 0x009b5578
+009b5624	ldr w8,[x0, #0x140]
+009b5628	orr w8,w8,w2
+009b562c	str w8,[x0, #0x140]
+009b5630	b 0x009b5578
+009b5634	ldrsw x8,[x0, #0x160]
+009b5638	b 0x009b5578
+009b563c	ldrsw x8,[x0, #0x160]
+009b5640	str w2,[x0, #0x160]
+009b5644	b 0x009b5578
+009b5648	tbnz x2,#0x3f,0x009b58bc
+009b564c	ldr x8,[x0, #0x38]
+009b5650	str x2,[x0, #0x38]
+009b5654	b 0x009b5578
+009b5658	ldr x8,[x0, #0x38]
+009b565c	b 0x009b5578
+009b5660	ldr w8,[x0, #0x50]
+009b5664	str w2,[x0, #0x50]
+009b5668	b 0x009b5578
+009b566c	ldr w8,[x0, #0x50]
+009b5670	b 0x009b5578
+009b5674	ldr x8,[x0, #0x150]
+009b5678	b 0x009b5578
+009b567c	tbnz x2,#0x3f,0x009b58bc
+009b5680	ldr x8,[x0, #0x150]
+009b5684	str x2,[x0, #0x150]
+009b5688	b 0x009b5578
+009b568c	sub x8,x2,#0x200
+009b5690	orr w9,wzr,#0x3e00
+009b5694	cmp x8,x9
+009b5698	mov x8,xzr
+009b569c	b.hi 0x009b5578
+009b56a0	ldr x8,[x0, #0x1e0]
+009b56a4	str x2,[x0, #0x1e8]
+009b56a8	cmp x8,x2
+009b56ac	b.hi 0x009b5884
+009b56b0	mov w8,#0x1
+009b56b4	b 0x009b5578
+009b56b8	ldr w8,[x0, #0x140]
+009b56bc	bic w8,w8,w2
+009b56c0	str w8,[x0, #0x140]
+009b56c4	b 0x009b5578
+009b56c8	ldr x9,[x0, #0x158]
+009b56cc	ldr w8,[x9, #0x1c]
+009b56d0	orr w8,w8,w2
+009b56d4	str w8,[x9, #0x1c]
+009b56d8	b 0x009b5578
+009b56dc	ldr x9,[x0, #0x158]
+009b56e0	ldr w8,[x9, #0x1c]
+009b56e4	bic w8,w8,w2
+009b56e8	str w8,[x9, #0x1c]
+009b56ec	b 0x009b5578
+009b56f0	ldr w9,[x0, #0x148]
+009b56f4	cmp w2,#0x100
+009b56f8	and w11,w2,#0xffffff00
+009b56fc	orr w12,wzr,#0xfe00
+009b5700	cset w8,eq
+009b5704	cmp w11,w12
+009b5708	cset w10,eq
+009b570c	orr w10,w8,w10
+009b5710	cmp w9,#0x100
+009b5714	and w8,w9,#0xffffff00
+009b5718	cset w13,eq
+009b571c	cmp w8,w12
+009b5720	cset w14,eq
+009b5724	cbz w9,0x009b5744
+009b5728	cbz w10,0x009b5744
+009b572c	cmp w9,#0x100
+009b5730	b.eq 0x009b5744
+009b5734	orr w15,wzr,#0xfe00
+009b5738	cmp w8,w15
+009b573c	mov x8,xzr
+009b5740	b.ne 0x009b5578
+009b5744	cmp w11,w12
+009b5748	cset w8,ne
+009b574c	cmp w2,#0x100
+009b5750	orr w13,w13,w14
+009b5754	cset w11,ne
+009b5758	cbz w2,0x009b576c
+009b575c	and w8,w11,w8
+009b5760	and w11,w13,w8
+009b5764	mov x8,xzr
+009b5768	tbnz w11,#0x0,0x009b5578
+009b576c	orr w8,w10,w13
+009b5770	tbnz w8,#0x0,0x009b579c
+009b5774	cmp w9,#0x0
+009b5778	cset w8,eq
+009b577c	cmp w9,#0x2ff
+009b5780	cset w9,gt
+009b5784	cbz w2,0x009b579c
+009b5788	cmp w2,#0x2ff
+009b578c	b.gt 0x009b579c
+009b5790	orr w9,w8,w9
+009b5794	mov x8,xzr
+009b5798	tbnz w9,#0x0,0x009b5578
+009b579c	ldr x8,[x0, #0x8]
+009b57a0	add x9,x0,#0x144
+009b57a4	b 0x009b5850
+009b57a8	ldr w9,[x0, #0x144]
+009b57ac	orr w11,wzr,#0xfe00
+009b57b0	and w8,w2,#0xffffff00
+009b57b4	cmp w9,#0x100
+009b57b8	and w12,w9,#0xffffff00
+009b57bc	cset w10,eq
+009b57c0	cmp w12,w11
+009b57c4	cset w13,eq
+009b57c8	cmp w2,#0x100
+009b57cc	orr w10,w10,w13
+009b57d0	cset w13,eq
+009b57d4	cmp w8,w11
+009b57d8	cset w14,eq
+009b57dc	cbz w2,0x009b57fc
+009b57e0	cbz w10,0x009b57fc
+009b57e4	cmp w2,#0x100
+009b57e8	b.eq 0x009b57fc
+009b57ec	orr w15,wzr,#0xfe00
+009b57f0	cmp w8,w15
+009b57f4	mov x8,xzr
+009b57f8	b.ne 0x009b5578
+009b57fc	cmp w12,w11
+009b5800	cset w8,ne
+009b5804	cmp w9,#0x100
+009b5808	orr w13,w13,w14
+009b580c	cset w11,ne
+009b5810	cbz w9,0x009b5824
+009b5814	and w8,w11,w8
+009b5818	and w11,w13,w8
+009b581c	mov x8,xzr
+009b5820	tbnz w11,#0x0,0x009b5578
+009b5824	orr w8,w13,w10
+009b5828	tbnz w8,#0x0,0x009b5848
+009b582c	cmp w2,#0x2ff
+009b5830	ccmp w2,#0x0,#0x4,le
+009b5834	b.ne 0x009b5848
+009b5838	cbz w9,0x009b5848
+009b583c	cmp w9,#0x300
+009b5840	mov x8,xzr
+009b5844	b.lt 0x009b5578
+009b5848	ldr x8,[x0, #0x8]
+009b584c	add x9,x0,#0x148
+009b5850	ldr w8,[x8]
+009b5854	mov w0,w8
+009b5858	mov w1,w2
+009b585c	mov x2,x9
+009b5860	bl 0x00c35e20
+009b5864	cmp w0,#0x0
+009b5868	cset w8,ne
+009b586c	b 0x009b5578
+009b5870	ldr x8,[x0, #0x1e8]
+009b5874	sub x9,x2,#0x1
+009b5878	cmp x9,x8
+009b587c	mov x8,xzr
+009b5880	b.cs 0x009b5578
+009b5884	str x2,[x0, #0x1e0]
+009b5888	mov w8,#0x1
+009b588c	b 0x009b5578
+009b5890	sub x8,x2,#0x1
+009b5894	cmp x8,#0x1f
+009b5898	mov x8,xzr
+009b589c	b.hi 0x009b5578
+009b58a0	str x2,[x0, #0x1f0]
+009b58a4	mov w8,#0x1
+009b58a8	b 0x009b5578
+009b58ac	ldrsw x8,[x0, #0x144]
+009b58b0	b 0x009b5578
+009b58b4	ldrsw x8,[x0, #0x148]
+009b58b8	b 0x009b5578
+009b58bc	mov x8,xzr
+009b58c0	b 0x009b5578

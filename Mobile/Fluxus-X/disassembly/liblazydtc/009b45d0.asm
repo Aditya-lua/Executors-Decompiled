@@ -1,0 +1,86 @@
+; ssl_read_internal @ 009b45d0
+009b45d0	sub sp,sp,#0x60
+009b45d4	stp x22,x21,[sp, #0x30]
+009b45d8	stp x20,x19,[sp, #0x40]
+009b45dc	stp x29,x30,[sp, #0x50]
+009b45e0	ldr x8,[x0, #0x30]
+009b45e4	add x29,sp,#0x50
+009b45e8	cbz x8,0x009b4644
+009b45ec	ldrb w8,[x0, #0x44]
+009b45f0	mov x20,x0
+009b45f4	tbnz w8,#0x1,0x009b4678
+009b45f8	ldr w8,[x20, #0x84]
+009b45fc	cmp w8,#0x8
+009b4600	b.eq 0x009b460c
+009b4604	cmp w8,#0x1
+009b4608	b.ne 0x009b4698
+009b460c	bl 0x00c342a0
+009b4610	adrp x0,0x2c5000
+009b4614	adrp x2,0x2cf000
+009b4618	add x0,x0,#0x652
+009b461c	add x2,x2,#0x72f
+009b4620	mov w1,#0x74b
+009b4624	bl 0x00c342b0
+009b4628	mov w1,#0x101
+009b462c	mov w0,#0x14
+009b4630	movk w1,#0xc, LSL #16
+009b4634	mov x2,xzr
+009b4638	bl 0x00c342c0
+009b463c	mov w0,wzr
+009b4640	b 0x009b4684
+009b4644	bl 0x00c342a0
+009b4648	adrp x0,0x2c5000
+009b464c	adrp x2,0x2cf000
+009b4650	add x0,x0,#0x652
+009b4654	add x2,x2,#0x72f
+009b4658	mov w1,#0x740
+009b465c	bl 0x00c342b0
+009b4660	mov w0,#0x14
+009b4664	mov w1,#0x114
+009b4668	mov x2,xzr
+009b466c	bl 0x00c342c0
+009b4670	mov w0,#0xffffffff
+009b4674	b 0x009b4684
+009b4678	mov w8,#0x1
+009b467c	mov w0,wzr
+009b4680	str w8,[x20, #0x28]
+009b4684	ldp x29,x30,[sp, #0x50]
+009b4688	ldp x20,x19,[sp, #0x40]
+009b468c	ldp x22,x21,[sp, #0x30]
+009b4690	add sp,sp,#0x60
+009b4694	ret
+009b4698	mov x22,x1
+009b469c	mov x0,x20
+009b46a0	mov w1,wzr
+009b46a4	mov x19,x3
+009b46a8	mov x21,x2
+009b46ac	bl 0x00c35cc0
+009b46b0	ldrb w8,[x20, #0x9f1]
+009b46b4	tbz w8,#0x0,0x009b46c0
+009b46b8	bl 0x00c355a0
+009b46bc	cbz x0,0x009b46ec
+009b46c0	ldr x8,[x20, #0x8]
+009b46c4	mov x0,x20
+009b46c8	mov x1,x22
+009b46cc	mov x2,x21
+009b46d0	ldr x4,[x8, #0x38]
+009b46d4	mov x3,x19
+009b46d8	ldp x29,x30,[sp, #0x50]
+009b46dc	ldp x20,x19,[sp, #0x40]
+009b46e0	ldp x22,x21,[sp, #0x30]
+009b46e4	add sp,sp,#0x60
+009b46e8	br x4
+009b46ec	stp x20,x22,[sp, #0x8]
+009b46f0	str x21,[sp, #0x18]
+009b46f4	str wzr,[sp, #0x20]
+009b46f8	ldr x8,[x20, #0x8]
+009b46fc	adrp x2,0x9b4000
+009b4700	add x2,x2,#0x86c
+009b4704	add x1,sp,#0x8
+009b4708	ldr x8,[x8, #0x38]
+009b470c	mov x0,x20
+009b4710	str x8,[sp, #0x28]
+009b4714	bl 0x009b4724
+009b4718	ldr x8,[x20, #0x1d38]
+009b471c	str x8,[x19]
+009b4720	b 0x009b4684

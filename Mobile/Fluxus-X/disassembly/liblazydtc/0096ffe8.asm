@@ -1,0 +1,14 @@
+; FUN_0096ffe8 @ 0096ffe8
+0096ffe8	ldr x8,[x0, #0x10]
+0096ffec	ldr x8,[x8, #0x30]
+0096fff0	ldr x0,[x8, #0x8]
+0096fff4	cbz x0,0x00970014
+0096fff8	stp x29,x30,[sp, #-0x10]!
+0096fffc	mov x29,sp
+00970000	bl 0x00c329a0
+00970004	ldp x29,x30,[sp], #0x10
+00970008	cbz w0,0x00970014
+0097000c	mov w0,#0x1
+00970010	ret
+00970014	mov w0,wzr
+00970018	ret

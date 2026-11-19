@@ -1,0 +1,15 @@
+; FUN_008873b4 @ 008873b4
+008873b4	ldp x9,x8,[x0, #0x8]
+008873b8	subs x9,x9,x8
+008873bc	b.eq 0x008873d0
+008873c0	add x9,x9,#0x1f
+008873c4	and x9,x9,#-0x20
+008873c8	add x8,x8,x9
+008873cc	str x8,[x0, #0x10]
+008873d0	ldr x8,[x0]
+008873d4	cbz x8,0x008873e8
+008873d8	ldr x9,[x0, #0x18]
+008873dc	mov x0,x8
+008873e0	sub x1,x9,x8
+008873e4	b 0x00c2fe80
+008873e8	ret

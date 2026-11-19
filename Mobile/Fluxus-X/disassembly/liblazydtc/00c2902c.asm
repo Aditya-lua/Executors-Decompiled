@@ -1,0 +1,99 @@
+; FUN_00c2902c @ 00c2902c
+00c2902c	paciasp
+00c29030	sub sp,sp,#0xb0
+00c29034	stp x29,x30,[sp, #0x60]
+00c29038	str x25,[sp, #0x70]
+00c2903c	stp x24,x23,[sp, #0x80]
+00c29040	stp x22,x21,[sp, #0x90]
+00c29044	stp x20,x19,[sp, #0xa0]
+00c29048	add x29,sp,#0x60
+00c2904c	movi v0.2D,#0x0
+00c29050	add x8,sp,#0x8
+00c29054	ldr w25,[x0, #0x18]
+00c29058	ldr x20,[x0, #0x10]
+00c2905c	mov x19,x1
+00c29060	add x24,x8,#0x18
+00c29064	add x8,x8,#0x58
+00c29068	stp x24,x24,[sp, #0x8]
+00c2906c	str x8,[sp, #0x18]
+00c29070	stp q0,q0,[sp, #0x20]
+00c29074	stp q0,q0,[sp, #0x40]
+00c29078	ldr x8,[x20]
+00c2907c	ldr x8,[x8, #0x18]
+00c29080	mov x0,x20
+00c29084	mov x1,x19
+00c29088	blr x8
+00c2908c	ldrb w8,[x0, #0x8]
+00c29090	ldr x21,[sp, #0x8]
+00c29094	cmp w8,#0xd
+00c29098	b.ne 0x00c29154
+00c2909c	ldr w8,[x0, #0x18]
+00c290a0	ldp x23,x9,[sp, #0x10]
+00c290a4	ldr x20,[x0, #0x10]
+00c290a8	cmp w8,w25
+00c290ac	csel w25,w8,w25,lt
+00c290b0	cmp x23,x9
+00c290b4	b.ne 0x00c2911c
+00c290b8	sub x22,x23,x21
+00c290bc	cmp x21,x24
+00c290c0	lsl x1,x22,#0x1
+00c290c4	b.eq 0x00c290dc
+00c290c8	mov x0,x21
+00c290cc	bl 0x00c30950
+00c290d0	str x0,[sp, #0x8]
+00c290d4	cbnz x0,0x00c29108
+00c290d8	b 0x00c291ac
+00c290dc	mov x0,x1
+00c290e0	bl 0x00c308d0
+00c290e4	cbz x0,0x00c291b0
+00c290e8	cmp x23,x24
+00c290ec	b.eq 0x00c29104
+00c290f0	mov x1,x21
+00c290f4	mov x2,x22
+00c290f8	mov x23,x0
+00c290fc	bl 0x00c2ff60
+00c29100	mov x0,x23
+00c29104	str x0,[sp, #0x8]
+00c29108	asr x8,x22,#0x2
+00c2910c	add x23,x0,x22
+00c29110	mov x21,x0
+00c29114	add x8,x0,x8, LSL #0x3
+00c29118	str x8,[sp, #0x18]
+00c2911c	str x20,[x23], #0x8
+00c29120	sub x8,x23,x21
+00c29124	asr x8,x8,#0x3
+00c29128	str x23,[sp, #0x10]
+00c2912c	cmp x8,#0x2
+00c29130	b.cc 0x00c29078
+00c29134	sub x9,x8,#0x1
+00c29138	lsr x9,x9,#0x1
+00c2913c	cmp x9,x8
+00c29140	b.cs 0x00c2918c
+00c29144	ldr x8,[x21, x9, LSL #0x3]
+00c29148	cmp x20,x8
+00c2914c	b.ne 0x00c29078
+00c29150	mov x20,xzr
+00c29154	cmp x21,x24
+00c29158	b.eq 0x00c29164
+00c2915c	mov x0,x21
+00c29160	bl 0x00c30960
+00c29164	mov w0,w25
+00c29168	mov x1,x20
+00c2916c	ldp x20,x19,[sp, #0xa0]
+00c29170	ldr x25,[sp, #0x70]
+00c29174	ldp x22,x21,[sp, #0x90]
+00c29178	ldp x24,x23,[sp, #0x80]
+00c2917c	ldp x29,x30,[sp, #0x60]
+00c29180	add sp,sp,#0xb0
+00c29184	autiasp
+00c29188	ret
+00c2918c	adrp x0,0x29f000
+00c29190	add x0,x0,#0x357
+00c29194	adrp x1,0x2c0000
+00c29198	add x1,x1,#0xcf7
+00c2919c	adrp x3,0x2ae000
+00c291a0	add x3,x3,#0xe96
+00c291a4	mov w2,#0x94
+00c291a8	bl 0x00c0de94
+00c291ac	bl 0x00c30b40
+00c291b0	bl 0x00c30b40

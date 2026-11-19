@@ -1,0 +1,33 @@
+; FUN_0087b838 @ 0087b838
+0087b838	ldr x8,[x0, #0x28]
+0087b83c	cbz x8,0x0087b8b4
+0087b840	stp x29,x30,[sp, #-0x20]!
+0087b844	str x19,[sp, #0x10]
+0087b848	mov x29,sp
+0087b84c	ldr x8,[x0, #0x20]
+0087b850	mov x19,x0
+0087b854	cmp x8,x1
+0087b858	b.ls 0x0087b890
+0087b85c	ldr x0,[x19]
+0087b860	bl 0x00c301d0
+0087b864	ldr x0,[x19, #0x18]
+0087b868	str xzr,[x19]
+0087b86c	bl 0x00c301d0
+0087b870	mov x0,xzr
+0087b874	stp xzr,xzr,[x19, #0x8]
+0087b878	str xzr,[x19, #0x18]
+0087b87c	bl 0x00c301d0
+0087b880	mov w8,#0x40
+0087b884	str xzr,[x19, #0x20]
+0087b888	strb w8,[x19, #0x30]
+0087b88c	b 0x0087b8a8
+0087b890	ldr x8,[x19, #0x10]
+0087b894	cbz x8,0x0087b8a8
+0087b898	ldr x0,[x19, #0x18]
+0087b89c	lsl x2,x8,#0x3
+0087b8a0	mov w1,wzr
+0087b8a4	bl 0x00c301c0
+0087b8a8	str xzr,[x19, #0x28]
+0087b8ac	ldr x19,[sp, #0x10]
+0087b8b0	ldp x29,x30,[sp], #0x20
+0087b8b4	ret

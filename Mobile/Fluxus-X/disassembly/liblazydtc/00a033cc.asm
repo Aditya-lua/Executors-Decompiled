@@ -1,0 +1,36 @@
+; BN_from_montgomery @ 00a033cc
+00a033cc	str x23,[sp, #-0x40]!
+00a033d0	stp x20,x19,[sp, #0x20]
+00a033d4	mov x19,x0
+00a033d8	mov x0,x3
+00a033dc	stp x22,x21,[sp, #0x10]
+00a033e0	stp x29,x30,[sp, #0x30]
+00a033e4	add x29,sp,#0x30
+00a033e8	mov x20,x3
+00a033ec	mov x21,x2
+00a033f0	mov x22,x1
+00a033f4	bl 0x00c38a90
+00a033f8	mov x0,x20
+00a033fc	bl 0x00c38a40
+00a03400	cbz x0,0x00a0342c
+00a03404	mov x1,x22
+00a03408	mov x23,x0
+00a0340c	bl 0x00c36990
+00a03410	cbz x0,0x00a0342c
+00a03414	mov x0,x19
+00a03418	mov x1,x23
+00a0341c	mov x2,x21
+00a03420	bl 0x00a03110
+00a03424	mov w21,w0
+00a03428	b 0x00a03430
+00a0342c	mov w21,wzr
+00a03430	mov x0,x20
+00a03434	bl 0x00c38a20
+00a03438	mov x0,x19
+00a0343c	bl 0x00c38e40
+00a03440	mov w0,w21
+00a03444	ldp x29,x30,[sp, #0x30]
+00a03448	ldp x20,x19,[sp, #0x20]
+00a0344c	ldp x22,x21,[sp, #0x10]
+00a03450	ldr x23,[sp], #0x40
+00a03454	ret

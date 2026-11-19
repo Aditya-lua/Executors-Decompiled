@@ -1,0 +1,46 @@
+; X509_ATTRIBUTE_create_by_txt @ 00b08710
+00b08710	stp x24,x23,[sp, #-0x40]!
+00b08714	stp x20,x19,[sp, #0x20]
+00b08718	mov x19,x1
+00b0871c	mov x24,x0
+00b08720	mov x0,x1
+00b08724	mov w1,wzr
+00b08728	stp x22,x21,[sp, #0x10]
+00b0872c	stp x29,x30,[sp, #0x30]
+00b08730	add x29,sp,#0x30
+00b08734	mov w20,w4
+00b08738	mov x21,x3
+00b0873c	mov w22,w2
+00b08740	bl 0x00c39690
+00b08744	cbz x0,0x00b08778
+00b08748	mov x23,x0
+00b0874c	mov x0,x24
+00b08750	mov x1,x23
+00b08754	mov w2,w22
+00b08758	mov x3,x21
+00b0875c	mov w4,w20
+00b08760	bl 0x00b08184
+00b08764	mov x19,x0
+00b08768	mov x0,x23
+00b0876c	bl 0x00c37660
+00b08770	mov x0,x19
+00b08774	b 0x00b087b0
+00b08778	bl 0x00c342a0
+00b0877c	adrp x0,0x2ba000
+00b08780	adrp x2,0x2bc000
+00b08784	add x0,x0,#0x8ba
+00b08788	add x2,x2,#0x6aa
+00b0878c	mov w1,#0x13a
+00b08790	bl 0x00c342b0
+00b08794	adrp x2,0x2ad000
+00b08798	add x2,x2,#0x7ba
+00b0879c	mov w0,#0xb
+00b087a0	mov w1,#0x77
+00b087a4	mov x3,x19
+00b087a8	bl 0x00c342c0
+00b087ac	mov x0,xzr
+00b087b0	ldp x29,x30,[sp, #0x30]
+00b087b4	ldp x20,x19,[sp, #0x20]
+00b087b8	ldp x22,x21,[sp, #0x10]
+00b087bc	ldp x24,x23,[sp], #0x40
+00b087c0	ret

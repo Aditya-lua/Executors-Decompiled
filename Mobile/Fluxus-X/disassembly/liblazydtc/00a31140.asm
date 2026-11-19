@@ -1,0 +1,22 @@
+; EC_GROUP_get_curve_GF2m @ 00a31140
+00a31140	ldr x8,[x0]
+00a31144	ldr x5,[x8, #0x30]
+00a31148	cbz x5,0x00a31150
+00a3114c	br x5
+00a31150	stp x29,x30,[sp, #-0x10]!
+00a31154	mov x29,sp
+00a31158	bl 0x00c342a0
+00a3115c	adrp x0,0x29e000
+00a31160	adrp x2,0x2c9000
+00a31164	add x0,x0,#0xa7
+00a31168	add x2,x2,#0x749
+00a3116c	mov w1,#0x239
+00a31170	bl 0x00c342b0
+00a31174	mov w1,#0x101
+00a31178	mov w0,#0x10
+00a3117c	movk w1,#0xc, LSL #16
+00a31180	mov x2,xzr
+00a31184	bl 0x00c342c0
+00a31188	mov w0,wzr
+00a3118c	ldp x29,x30,[sp], #0x10
+00a31190	ret

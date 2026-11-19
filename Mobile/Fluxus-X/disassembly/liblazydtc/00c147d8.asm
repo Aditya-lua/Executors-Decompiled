@@ -1,0 +1,93 @@
+; FUN_00c147d8 @ 00c147d8
+00c147d8	paciasp
+00c147dc	stp x29,x30,[sp, #-0x30]!
+00c147e0	stp x22,x21,[sp, #0x10]
+00c147e4	stp x20,x19,[sp, #0x20]
+00c147e8	mov x29,sp
+00c147ec	ldp x8,x9,[x0]
+00c147f0	sub x10,x9,x8
+00c147f4	cmp x10,#0x2
+00c147f8	b.cc 0x00c1480c
+00c147fc	ldrh w10,[x8]
+00c14800	mov w11,#0x7453
+00c14804	cmp w10,w11
+00c14808	b.eq 0x00c14854
+00c1480c	mov x19,xzr
+00c14810	cmp x9,x8
+00c14814	b.eq 0x00c148fc
+00c14818	ldrb w8,[x8]
+00c1481c	cmp w8,#0x53
+00c14820	b.ne 0x00c148fc
+00c14824	mov x20,x2
+00c14828	mov x22,x1
+00c1482c	mov x21,x0
+00c14830	bl 0x00c153b4
+00c14834	mov x3,x0
+00c14838	cbz x0,0x00c1492c
+00c1483c	ldrb w8,[x3, #0x8]
+00c14840	cmp w8,#0x1b
+00c14844	b.ne 0x00c14918
+00c14848	mov x1,x22
+00c1484c	mov x0,x21
+00c14850	b 0x00c14900
+00c14854	ldr x20,[x0, #0x1330]
+00c14858	add x8,x8,#0x2
+00c1485c	str x8,[x0]
+00c14860	ldr x9,[x20, #0x8]
+00c14864	sub x10,x9,#0xfd0
+00c14868	cmn x10,#0xff1
+00c1486c	b.hi 0x00c148a8
+00c14870	mov x22,x0
+00c14874	mov w0,#0x1000
+00c14878	mov x21,x2
+00c1487c	mov x19,x1
+00c14880	bl 0x00c308d0
+00c14884	cbz x0,0x00c14944
+00c14888	mov x8,x0
+00c1488c	mov x9,xzr
+00c14890	stp x20,xzr,[x0]
+00c14894	mov x20,x0
+00c14898	mov x0,x22
+00c1489c	mov x1,x19
+00c148a0	mov x2,x21
+00c148a4	str x8,[x22, #0x1330]
+00c148a8	add x8,x9,#0x20
+00c148ac	add x19,x20,x9
+00c148b0	adrp x9,0xcb1000
+00c148b4	add x9,x9,#0x4c0
+00c148b8	str x8,[x20, #0x8]
+00c148bc	mov w10,#0x3
+00c148c0	str x9,[x19, #0x10]!
+00c148c4	ldurh w8,[x19, #0x9]
+00c148c8	mov w9,#0x540
+00c148cc	str x10,[x19, #0x18]
+00c148d0	and w8,w8,#0xf000
+00c148d4	orr w8,w8,w9
+00c148d8	adrp x9,0x2cc000
+00c148dc	add x9,x9,#0xa61
+00c148e0	sturh w8,[x19, #0x9]
+00c148e4	mov w8,#0x8
+00c148e8	str x9,[x19, #0x10]
+00c148ec	strb w8,[x19, #0x8]
+00c148f0	ldp x8,x9,[x0]
+00c148f4	cmp x9,x8
+00c148f8	b.ne 0x00c14818
+00c148fc	mov x3,xzr
+00c14900	mov x2,x19
+00c14904	ldp x20,x19,[sp, #0x20]
+00c14908	ldp x22,x21,[sp, #0x10]
+00c1490c	ldp x29,x30,[sp], #0x30
+00c14910	autiasp
+00c14914	b 0x00c15688
+00c14918	cbz x19,0x00c14924
+00c1491c	mov x3,xzr
+00c14920	b 0x00c1492c
+00c14924	mov w8,#0x1
+00c14928	strb w8,[x20]
+00c1492c	mov x0,x3
+00c14930	ldp x20,x19,[sp, #0x20]
+00c14934	ldp x22,x21,[sp, #0x10]
+00c14938	ldp x29,x30,[sp], #0x30
+00c1493c	autiasp
+00c14940	ret
+00c14944	bl 0x00c2fff0

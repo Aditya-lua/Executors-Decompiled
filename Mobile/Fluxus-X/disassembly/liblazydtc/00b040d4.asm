@@ -1,0 +1,63 @@
+; v2i_GENERAL_NAMES @ 00b040d4
+00b040d4	stp x24,x23,[sp, #-0x40]!
+00b040d8	stp x22,x21,[sp, #0x10]
+00b040dc	mov x22,x0
+00b040e0	mov x0,x2
+00b040e4	stp x20,x19,[sp, #0x20]
+00b040e8	stp x29,x30,[sp, #0x30]
+00b040ec	add x29,sp,#0x30
+00b040f0	mov x20,x2
+00b040f4	mov x21,x1
+00b040f8	bl 0x00c325e0
+00b040fc	mov w23,w0
+00b04100	mov x0,xzr
+00b04104	mov w1,w23
+00b04108	bl 0x00c34790
+00b0410c	mov x19,x0
+00b04110	cbz x0,0x00b04164
+00b04114	cmp w23,#0x1
+00b04118	b.lt 0x00b041b4
+00b0411c	mov w24,wzr
+00b04120	mov x0,x20
+00b04124	mov w1,w24
+00b04128	bl 0x00c32610
+00b0412c	mov x3,x0
+00b04130	mov x0,xzr
+00b04134	mov x1,x22
+00b04138	mov x2,x21
+00b0413c	mov w4,wzr
+00b04140	bl 0x00b041e4
+00b04144	cbz x0,0x00b041a0
+00b04148	mov x1,x0
+00b0414c	mov x0,x19
+00b04150	bl 0x00c347a0
+00b04154	add w24,w24,#0x1
+00b04158	cmp w24,w23
+00b0415c	b.lt 0x00b04120
+00b04160	b 0x00b041b4
+00b04164	bl 0x00c342a0
+00b04168	adrp x0,0x2bc000
+00b0416c	adrp x2,0x2a2000
+00b04170	add x0,x0,#0x63d
+00b04174	add x2,x2,#0xe4f
+00b04178	mov w1,#0x1e5
+00b0417c	bl 0x00c342b0
+00b04180	mov w1,#0x100
+00b04184	mov w0,#0x22
+00b04188	movk w1,#0xc, LSL #16
+00b0418c	mov x2,xzr
+00b04190	bl 0x00c342c0
+00b04194	mov x0,xzr
+00b04198	bl 0x00c34770
+00b0419c	b 0x00b041b4
+00b041a0	adrp x1,0xcb5000
+00b041a4	ldr x1,[x1, #0x6b8]
+00b041a8	mov x0,x19
+00b041ac	bl 0x00c32600
+00b041b0	mov x19,xzr
+00b041b4	mov x0,x19
+00b041b8	ldp x29,x30,[sp, #0x30]
+00b041bc	ldp x20,x19,[sp, #0x20]
+00b041c0	ldp x22,x21,[sp, #0x10]
+00b041c4	ldp x24,x23,[sp], #0x40
+00b041c8	ret

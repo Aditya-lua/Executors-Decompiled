@@ -1,0 +1,5 @@
+; AUTHORITY_KEYID_free @ 00c40740
+00c40740	adrp x16,0xcbe000
+00c40744	ldr x17,[x16, #0x388]
+00c40748	add x16,x16,#0x388
+00c4074c	br x17

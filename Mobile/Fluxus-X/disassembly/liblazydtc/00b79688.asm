@@ -1,0 +1,5 @@
+; mbedtls_md5_free @ 00b79688
+00b79688	cbz x0,0x00b79694
+00b7968c	mov w1,#0x58
+00b79690	b 0x00c42220
+00b79694	ret

@@ -1,0 +1,39 @@
+package k9;
+
+import android.os.IBinder;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class k0 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
+        int iD = p9.b.D(parcel);
+        boolean zO = false;
+        String strH = null;
+        IBinder iBinderV = null;
+        boolean zO2 = false;
+        while (parcel.dataPosition() < iD) {
+            int iU = p9.b.u(parcel);
+            int iN = p9.b.n(iU);
+            if (iN == 1) {
+                strH = p9.b.h(parcel, iU);
+            } else if (iN == 2) {
+                iBinderV = p9.b.v(parcel, iU);
+            } else if (iN == 3) {
+                zO = p9.b.o(parcel, iU);
+            } else if (iN != 4) {
+                p9.b.C(parcel, iU);
+            } else {
+                zO2 = p9.b.o(parcel, iU);
+            }
+        }
+        p9.b.m(parcel, iD);
+        return new j0(strH, iBinderV, zO, zO2);
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final /* synthetic */ Object[] newArray(int i10) {
+        return new j0[i10];
+    }
+}

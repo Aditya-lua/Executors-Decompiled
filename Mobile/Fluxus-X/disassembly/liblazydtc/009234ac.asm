@@ -1,0 +1,6 @@
+; FUN_009234ac @ 009234ac
+009234ac	mov x5,x4
+009234b0	mov x4,x3
+009234b4	mov x3,x2
+009234b8	mov x2,xzr
+009234bc	b 0x009234c0

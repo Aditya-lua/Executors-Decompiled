@@ -1,0 +1,166 @@
+; mbedtls_gcm_update_ad @ 00b77480
+00b77480	stp x26,x25,[sp, #-0x50]!
+00b77484	stp x24,x23,[sp, #0x10]
+00b77488	stp x22,x21,[sp, #0x20]
+00b7748c	stp x20,x19,[sp, #0x30]
+00b77490	stp x29,x30,[sp, #0x40]
+00b77494	add x29,sp,#0x40
+00b77498	ldr x8,[x0, #0x168]
+00b7749c	mov x20,x2
+00b774a0	mov x19,x1
+00b774a4	mov x21,x0
+00b774a8	adds x9,x8,x2
+00b774ac	mov w0,#0xffffffec
+00b774b0	b.cs 0x00b776b8
+00b774b4	lsr x10,x9,#0x3d
+00b774b8	cbnz x10,0x00b776b8
+00b774bc	ands x8,x8,#0xf
+00b774c0	b.eq 0x00b775c8
+00b774c4	mov w10,#0x10
+00b774c8	sub x10,x10,x8
+00b774cc	cmp x10,x20
+00b774d0	csel x22,x20,x10,hi
+00b774d4	add x1,x21,#0x190
+00b774d8	mov x9,xzr
+00b774dc	cmp x22,#0x10
+00b774e0	add x11,x1,x8
+00b774e4	b.cc 0x00b774fc
+00b774e8	ldr q0,[x11]
+00b774ec	ldr q1,[x19]
+00b774f0	mov w9,#0x10
+00b774f4	eor v0.16B,v1.16B,v0.16B
+00b774f8	str q0,[x11]
+00b774fc	cmp x9,x22
+00b77500	b.cs 0x00b77598
+00b77504	mvn x12,x20
+00b77508	sub x10,x8,#0x11
+00b7750c	cmp x10,x12
+00b77510	mvn x13,x9
+00b77514	csinv x14,x10,x20,cs
+00b77518	sub x13,x13,x14
+00b7751c	cmp x13,#0x20
+00b77520	b.cc 0x00b7755c
+00b77524	orr x14,x9,x8
+00b77528	add x15,x21,x14
+00b7752c	cmp x10,x12
+00b77530	add x15,x15,#0x190
+00b77534	add x16,x19,x22
+00b77538	csinv x14,x10,x20,cs
+00b7753c	cmp x15,x16
+00b77540	b.cs 0x00b776d0
+00b77544	add x15,x8,#0x18f
+00b77548	sub x14,x15,x14
+00b7754c	add x14,x21,x14
+00b77550	add x15,x19,x9
+00b77554	cmp x15,x14
+00b77558	b.cs 0x00b776d0
+00b7755c	mov x14,x9
+00b77560	cmp x12,x10
+00b77564	add x11,x14,x8
+00b77568	csinv x10,x10,x20,ls
+00b7756c	add x11,x21,x11
+00b77570	mvn x10,x10
+00b77574	add x9,x19,x14
+00b77578	sub x10,x10,x14
+00b7757c	add x11,x11,#0x190
+00b77580	ldrb w12,[x11]
+00b77584	ldrb w13,[x9], #0x1
+00b77588	subs x10,x10,#0x1
+00b7758c	eor w12,w13,w12
+00b77590	strb w12,[x11], #0x1
+00b77594	b.ne 0x00b77580
+00b77598	add x8,x22,x8
+00b7759c	cmp x8,#0x10
+00b775a0	b.ne 0x00b775b0
+00b775a4	mov x0,x21
+00b775a8	mov x2,x1
+00b775ac	bl 0x00b773c8
+00b775b0	ldr x8,[x21, #0x168]
+00b775b4	add x19,x19,x22
+00b775b8	add x10,x8,x22
+00b775bc	add x9,x8,x20
+00b775c0	sub x20,x20,x22
+00b775c4	str x10,[x21, #0x168]
+00b775c8	subs x23,x20,#0x10
+00b775cc	str x9,[x21, #0x168]
+00b775d0	b.cc 0x00b77618
+00b775d4	and x25,x23,#-0x10
+00b775d8	add x22,x21,#0x190
+00b775dc	add x24,x25,#0x10
+00b775e0	mov x26,x19
+00b775e4	ldr q0,[x21, #0x190]
+00b775e8	ldr q1,[x26], #0x10
+00b775ec	mov x0,x21
+00b775f0	mov x1,x22
+00b775f4	mov x2,x22
+00b775f8	eor v0.16B,v1.16B,v0.16B
+00b775fc	str q0,[x21, #0x190]
+00b77600	bl 0x00b773c8
+00b77604	sub x20,x20,#0x10
+00b77608	cmp x20,#0xf
+00b7760c	b.hi 0x00b775e4
+00b77610	sub x20,x23,x25
+00b77614	add x19,x19,x24
+00b77618	cbz x20,0x00b776b4
+00b7761c	cmp x20,#0x20
+00b77620	mov x8,xzr
+00b77624	b.cc 0x00b7768c
+00b77628	add x8,x21,#0x190
+00b7762c	add x9,x19,x20
+00b77630	cmp x8,x9
+00b77634	b.cs 0x00b7764c
+00b77638	add x8,x21,x20
+00b7763c	add x8,x8,#0x190
+00b77640	cmp x19,x8
+00b77644	mov x8,xzr
+00b77648	b.cc 0x00b7768c
+00b7764c	and x8,x20,#-0x20
+00b77650	add x9,x21,#0x1a0
+00b77654	add x10,x19,#0x10
+00b77658	mov x11,x8
+00b7765c	ldp q0,q1,[x9, #-0x10]
+00b77660	ldp q2,q3,[x10, #-0x10]
+00b77664	subs x11,x11,#0x20
+00b77668	add x10,x10,#0x20
+00b7766c	eor v0.16B,v2.16B,v0.16B
+00b77670	eor v1.16B,v3.16B,v1.16B
+00b77674	stp q0,q1,[x9, #-0x10]
+00b77678	add x9,x9,#0x20
+00b7767c	b.ne 0x00b7765c
+00b77680	cmp x20,x8
+00b77684	mov w0,wzr
+00b77688	b.eq 0x00b776b8
+00b7768c	add x10,x21,x8
+00b77690	sub x9,x20,x8
+00b77694	add x10,x10,#0x190
+00b77698	add x8,x19,x8
+00b7769c	ldrb w11,[x10]
+00b776a0	ldrb w12,[x8], #0x1
+00b776a4	subs x9,x9,#0x1
+00b776a8	eor w11,w12,w11
+00b776ac	strb w11,[x10], #0x1
+00b776b0	b.ne 0x00b7769c
+00b776b4	mov w0,wzr
+00b776b8	ldp x29,x30,[sp, #0x40]
+00b776bc	ldp x20,x19,[sp, #0x30]
+00b776c0	ldp x22,x21,[sp, #0x20]
+00b776c4	ldp x24,x23,[sp, #0x10]
+00b776c8	ldp x26,x25,[sp], #0x50
+00b776cc	ret
+00b776d0	and x15,x13,#-0x20
+00b776d4	mov x16,xzr
+00b776d8	orr x14,x9,x15
+00b776dc	orr x17,x9,x16
+00b776e0	add x18,x11,x17
+00b776e4	add x17,x19,x17
+00b776e8	ldp q0,q1,[x18]
+00b776ec	ldp q2,q3,[x17]
+00b776f0	add x16,x16,#0x20
+00b776f4	cmp x15,x16
+00b776f8	eor v0.16B,v2.16B,v0.16B
+00b776fc	eor v1.16B,v3.16B,v1.16B
+00b77700	stp q0,q1,[x18]
+00b77704	b.ne 0x00b776dc
+00b77708	cmp x13,x15
+00b7770c	b.eq 0x00b77598
+00b77710	b 0x00b77560

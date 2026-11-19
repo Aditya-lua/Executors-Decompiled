@@ -1,0 +1,2 @@
+; OSSL_PROVIDER_self_test @ 00aa1904
+00aa1904	b 0x00c3eb40

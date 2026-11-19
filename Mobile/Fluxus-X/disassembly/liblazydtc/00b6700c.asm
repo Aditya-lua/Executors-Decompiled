@@ -1,0 +1,26 @@
+; ossl_ccm_stream_final @ 00b6700c
+00b6700c	str x21,[sp, #-0x30]!
+00b67010	stp x20,x19,[sp, #0x10]
+00b67014	stp x29,x30,[sp, #0x20]
+00b67018	add x29,sp,#0x20
+00b6701c	mov x19,x2
+00b67020	mov x20,x1
+00b67024	mov x21,x0
+00b67028	bl 0x00c41000
+00b6702c	cbz w0,0x00b67060
+00b67030	mov x0,x21
+00b67034	mov x1,x20
+00b67038	mov x2,x19
+00b6703c	mov x3,xzr
+00b67040	mov x4,xzr
+00b67044	bl 0x00b66d70
+00b67048	cmp w0,#0x1
+00b6704c	b.lt 0x00b6705c
+00b67050	mov w0,#0x1
+00b67054	str xzr,[x19]
+00b67058	b 0x00b67060
+00b6705c	mov w0,wzr
+00b67060	ldp x29,x30,[sp, #0x20]
+00b67064	ldp x20,x19,[sp, #0x10]
+00b67068	ldr x21,[sp], #0x30
+00b6706c	ret

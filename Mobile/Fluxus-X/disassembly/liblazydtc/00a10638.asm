@@ -1,0 +1,32 @@
+; ASN1_STRING_TABLE_get @ 00a10638
+00a10638	sub sp,sp,#0x50
+00a1063c	stp x20,x19,[sp, #0x30]
+00a10640	mov w19,w0
+00a10644	mov w0,#0x40
+00a10648	mov x1,xzr
+00a1064c	stp x29,x30,[sp, #0x40]
+00a10650	add x29,sp,#0x40
+00a10654	bl 0x00c35500
+00a10658	adrp x20,0xd21000
+00a1065c	ldr x0,[x20, #0x958]
+00a10660	str w19,[sp, #0x8]
+00a10664	cbz x0,0x00a10684
+00a10668	add x1,sp,#0x8
+00a1066c	bl 0x00c34760
+00a10670	tbnz w0,#0x1f,0x00a10684
+00a10674	mov w1,w0
+00a10678	ldr x0,[x20, #0x958]
+00a1067c	bl 0x00c32610
+00a10680	b 0x00a106a4
+00a10684	adrp x1,0x752000
+00a10688	adrp x4,0xa10000
+00a1068c	add x1,x1,#0x178
+00a10690	add x4,x4,#0x8e8
+00a10694	add x0,sp,#0x8
+00a10698	orr w2,wzr,#0x1c
+00a1069c	mov w3,#0x28
+00a106a0	bl 0x00c35830
+00a106a4	ldp x29,x30,[sp, #0x40]
+00a106a8	ldp x20,x19,[sp, #0x30]
+00a106ac	add sp,sp,#0x50
+00a106b0	ret

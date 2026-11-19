@@ -1,0 +1,154 @@
+package se;
+
+import java.security.GeneralSecurityException;
+import java.security.InvalidAlgorithmParameterException;
+import java.util.Objects;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class u extends se.c {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final int f31422a;
+    public final int b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final int f31423c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public final c f31424d;
+
+    public static final class b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public Integer f31425a;
+        public Integer b;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public Integer f31426c;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        public c f31427d;
+
+        public u a() throws GeneralSecurityException {
+            Integer num = this.f31425a;
+            if (num == null) {
+                throw new GeneralSecurityException("Key size is not set");
+            }
+            if (this.f31427d == null) {
+                throw new GeneralSecurityException("Variant is not set");
+            }
+            if (this.b == null) {
+                throw new GeneralSecurityException("IV size is not set");
+            }
+            if (this.f31426c != null) {
+                return new u(num.intValue(), this.b.intValue(), this.f31426c.intValue(), this.f31427d);
+            }
+            throw new GeneralSecurityException("Tag size is not set");
+        }
+
+        public b b(int i10) throws GeneralSecurityException {
+            if (i10 <= 0) {
+                throw new GeneralSecurityException(String.format("Invalid IV size in bytes %d; IV size must be positive", Integer.valueOf(i10)));
+            }
+            this.b = Integer.valueOf(i10);
+            return this;
+        }
+
+        public b c(int i10) throws InvalidAlgorithmParameterException {
+            if (i10 != 16 && i10 != 24 && i10 != 32) {
+                throw new InvalidAlgorithmParameterException(String.format("Invalid key size %d; only 16-byte, 24-byte and 32-byte AES keys are supported", Integer.valueOf(i10)));
+            }
+            this.f31425a = Integer.valueOf(i10);
+            return this;
+        }
+
+        public b d(int i10) throws GeneralSecurityException {
+            if (i10 < 12 || i10 > 16) {
+                throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; value must be between 12 and 16 bytes", Integer.valueOf(i10)));
+            }
+            this.f31426c = Integer.valueOf(i10);
+            return this;
+        }
+
+        public b e(c cVar) {
+            this.f31427d = cVar;
+            return this;
+        }
+
+        public b() {
+            this.f31425a = null;
+            this.b = null;
+            this.f31426c = null;
+            this.f31427d = c.f31429d;
+        }
+    }
+
+    public static final class c {
+        public static final c b = new c("TINK");
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public static final c f31428c = new c("CRUNCHY");
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        public static final c f31429d = new c("NO_PREFIX");
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final String f31430a;
+
+        public c(String str) {
+            this.f31430a = str;
+        }
+
+        public String toString() {
+            return this.f31430a;
+        }
+    }
+
+    public static b b() {
+        return new b();
+    }
+
+    @Override // re.x
+    public boolean a() {
+        return this.f31424d != c.f31429d;
+    }
+
+    public int c() {
+        return this.b;
+    }
+
+    public int d() {
+        return this.f31422a;
+    }
+
+    public int e() {
+        return this.f31423c;
+    }
+
+    public boolean equals(Object obj) {
+        if (!(obj instanceof u)) {
+            return false;
+        }
+        u uVar = (u) obj;
+        return uVar.d() == d() && uVar.c() == c() && uVar.e() == e() && uVar.f() == f();
+    }
+
+    public c f() {
+        return this.f31424d;
+    }
+
+    public int hashCode() {
+        return Objects.hash(u.class, Integer.valueOf(this.f31422a), Integer.valueOf(this.b), Integer.valueOf(this.f31423c), this.f31424d);
+    }
+
+    public String toString() {
+        return "AesGcm Parameters (variant: " + this.f31424d + ", " + this.b + "-byte IV, " + this.f31423c + "-byte tag, and " + this.f31422a + "-byte key)";
+    }
+
+    public u(int i10, int i11, int i12, c cVar) {
+        this.f31422a = i10;
+        this.b = i11;
+        this.f31423c = i12;
+        this.f31424d = cVar;
+    }
+}

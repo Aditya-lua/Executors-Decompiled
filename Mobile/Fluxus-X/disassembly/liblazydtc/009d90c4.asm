@@ -1,0 +1,73 @@
+; tls_construct_stoc_status_request @ 009d90c4
+009d90c4	stp x20,x19,[sp, #-0x20]!
+009d90c8	cmp w2,#0x4, LSL #12
+009d90cc	stp x29,x30,[sp, #0x10]
+009d90d0	add x29,sp,#0x10
+009d90d4	b.eq 0x009d9110
+009d90d8	ldr w8,[x0, #0xa74]
+009d90dc	mov x19,x0
+009d90e0	cbz w8,0x009d9110
+009d90e4	ldr x8,[x19, #0x8]
+009d90e8	mov x20,x1
+009d90ec	ldr x9,[x8, #0xc0]
+009d90f0	ldrb w9,[x9, #0x60]
+009d90f4	tbnz w9,#0x3,0x009d9118
+009d90f8	ldr w8,[x8]
+009d90fc	cmp w8,#0x304
+009d9100	b.lt 0x009d9118
+009d9104	cbz x4,0x009d9118
+009d9108	cmp w8,#0x10, LSL #12
+009d910c	b.eq 0x009d9118
+009d9110	mov w0,#0x2
+009d9114	b 0x009d91bc
+009d9118	mov w1,#0x5
+009d911c	mov w2,#0x2
+009d9120	mov x0,x20
+009d9124	bl 0x00c343a0
+009d9128	cbz w0,0x009d9184
+009d912c	mov w1,#0x2
+009d9130	mov x0,x20
+009d9134	bl 0x00c343b0
+009d9138	cbz w0,0x009d9184
+009d913c	ldr x8,[x19, #0x8]
+009d9140	ldr x9,[x8, #0xc0]
+009d9144	ldrb w9,[x9, #0x60]
+009d9148	tbnz w9,#0x3,0x009d9170
+009d914c	ldr w8,[x8]
+009d9150	cmp w8,#0x304
+009d9154	b.lt 0x009d9170
+009d9158	cmp w8,#0x10, LSL #12
+009d915c	b.eq 0x009d9170
+009d9160	mov x0,x19
+009d9164	mov x1,x20
+009d9168	bl 0x00c36ff0
+009d916c	cbz w0,0x009d91bc
+009d9170	mov x0,x20
+009d9174	bl 0x00c34350
+009d9178	cbz w0,0x009d91c8
+009d917c	mov w0,#0x1
+009d9180	b 0x009d91bc
+009d9184	bl 0x00c342a0
+009d9188	adrp x0,0x2d7000
+009d918c	adrp x2,0x2a7000
+009d9190	add x0,x0,#0xae0
+009d9194	add x2,x2,#0xc06
+009d9198	mov w1,#0x595
+009d919c	bl 0x00c342b0
+009d91a0	mov w2,#0x103
+009d91a4	mov w1,#0x50
+009d91a8	movk w2,#0xc, LSL #16
+009d91ac	mov x0,x19
+009d91b0	mov x3,xzr
+009d91b4	bl 0x00c34410
+009d91b8	mov w0,wzr
+009d91bc	ldp x29,x30,[sp, #0x10]
+009d91c0	ldp x20,x19,[sp], #0x20
+009d91c4	ret
+009d91c8	bl 0x00c342a0
+009d91cc	adrp x0,0x2d7000
+009d91d0	adrp x2,0x2a7000
+009d91d4	add x0,x0,#0xae0
+009d91d8	add x2,x2,#0xc06
+009d91dc	mov w1,#0x5a3
+009d91e0	b 0x009d919c

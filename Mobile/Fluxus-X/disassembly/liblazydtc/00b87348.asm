@@ -1,0 +1,75 @@
+; psa_export_public_key_internal @ 00b87348
+00b87348	stp x22,x21,[sp, #-0x30]!
+00b8734c	stp x20,x19,[sp, #0x10]
+00b87350	stp x29,x30,[sp, #0x20]
+00b87354	add x29,sp,#0x20
+00b87358	ldrh w8,[x0]
+00b8735c	mov x19,x5
+00b87360	mov x21,x3
+00b87364	mov x20,x2
+00b87368	and w9,w8,#0x7000
+00b8736c	cmp w9,#0x4, LSL #12
+00b87370	and w9,w8,#0xffffcfff
+00b87374	b.ne 0x00b873b4
+00b87378	mov w10,#0x4001
+00b8737c	cmp w9,w10
+00b87380	b.eq 0x00b873a4
+00b87384	mov w10,#0xcf00
+00b87388	and w10,w8,w10
+00b8738c	mov w11,#0x4200
+00b87390	cmp w10,w11
+00b87394	b.eq 0x00b873a4
+00b87398	mov w11,#0x4100
+00b8739c	cmp w10,w11
+00b873a0	b.ne 0x00b873b4
+00b873a4	subs x22,x4,x20
+00b873a8	b.cs 0x00b87418
+00b873ac	mov w0,#0xffffff76
+00b873b0	b 0x00b87460
+00b873b4	mov w10,#0x4001
+00b873b8	cmp w9,w10
+00b873bc	b.ne 0x00b873dc
+00b873c0	mov x2,x20
+00b873c4	mov x5,x19
+00b873c8	ldp x29,x30,[sp, #0x20]
+00b873cc	ldp x20,x19,[sp, #0x10]
+00b873d0	mov x3,x21
+00b873d4	ldp x22,x21,[sp], #0x30
+00b873d8	b 0x00c43120
+00b873dc	mov w9,#0xcf00
+00b873e0	and w8,w8,w9
+00b873e4	mov w9,#0x4200
+00b873e8	cmp w8,w9
+00b873ec	b.eq 0x00b87440
+00b873f0	mov w9,#0x4100
+00b873f4	cmp w8,w9
+00b873f8	b.ne 0x00b8745c
+00b873fc	mov x2,x20
+00b87400	mov x5,x19
+00b87404	ldp x29,x30,[sp, #0x20]
+00b87408	ldp x20,x19,[sp, #0x10]
+00b8740c	mov x3,x21
+00b87410	ldp x22,x21,[sp], #0x30
+00b87414	b 0x00c42f50
+00b87418	mov x0,x21
+00b8741c	mov x2,x20
+00b87420	bl 0x00c2ffd0
+00b87424	add x0,x21,x20
+00b87428	mov w1,wzr
+00b8742c	mov x2,x22
+00b87430	bl 0x00c301c0
+00b87434	mov w0,wzr
+00b87438	str x20,[x19]
+00b8743c	b 0x00b87460
+00b87440	mov x2,x20
+00b87444	mov x5,x19
+00b87448	ldp x29,x30,[sp, #0x20]
+00b8744c	ldp x20,x19,[sp, #0x10]
+00b87450	mov x3,x21
+00b87454	ldp x22,x21,[sp], #0x30
+00b87458	b 0x00c42fa0
+00b8745c	mov w0,#0xffffff7a
+00b87460	ldp x29,x30,[sp, #0x20]
+00b87464	ldp x20,x19,[sp, #0x10]
+00b87468	ldp x22,x21,[sp], #0x30
+00b8746c	ret

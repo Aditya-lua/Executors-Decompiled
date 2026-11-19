@@ -1,0 +1,35 @@
+; X509_ALGOR_set0 @ 009f82a8
+009f82a8	stp x22,x21,[sp, #-0x30]!
+009f82ac	stp x20,x19,[sp, #0x10]
+009f82b0	stp x29,x30,[sp, #0x20]
+009f82b4	add x29,sp,#0x20
+009f82b8	cbz x0,0x009f8320
+009f82bc	mov x19,x3
+009f82c0	mov w21,w2
+009f82c4	mov x22,x1
+009f82c8	mov x20,x0
+009f82cc	cmn w2,#0x1
+009f82d0	b.eq 0x009f82e8
+009f82d4	ldr x8,[x20, #0x8]
+009f82d8	cbnz x8,0x009f82e8
+009f82dc	bl 0x00c37a40
+009f82e0	str x0,[x20, #0x8]
+009f82e4	cbz x0,0x009f8320
+009f82e8	ldr x0,[x20]
+009f82ec	bl 0x00c37660
+009f82f0	str x22,[x20]
+009f82f4	cbz w21,0x009f831c
+009f82f8	ldr x0,[x20, #0x8]
+009f82fc	cmn w21,#0x1
+009f8300	b.eq 0x009f8314
+009f8304	mov w1,w21
+009f8308	mov x2,x19
+009f830c	bl 0x00c37a60
+009f8310	b 0x009f831c
+009f8314	bl 0x00c37cc0
+009f8318	str xzr,[x20, #0x8]
+009f831c	mov w0,#0x1
+009f8320	ldp x29,x30,[sp, #0x20]
+009f8324	ldp x20,x19,[sp, #0x10]
+009f8328	ldp x22,x21,[sp], #0x30
+009f832c	ret

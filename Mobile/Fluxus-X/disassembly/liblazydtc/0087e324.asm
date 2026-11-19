@@ -1,0 +1,31 @@
+; FUN_0087e324 @ 0087e324
+0087e324	sub sp,sp,#0x170
+0087e328	stp x29,x30,[sp, #0x140]
+0087e32c	str x28,[sp, #0x150]
+0087e330	stp x20,x19,[sp, #0x160]
+0087e334	add x29,sp,#0x140
+0087e338	mrs x20,tpidr_el0
+0087e33c	mov x19,x4
+0087e340	mov x4,x3
+0087e344	ldr x8,[x20, #0x28]
+0087e348	mov x3,x2
+0087e34c	mov x2,x1
+0087e350	mov x1,x0
+0087e354	add x0,sp,#0x8
+0087e358	stur x8,[x29, #-0x8]
+0087e35c	bl 0x0087e39c
+0087e360	ldr x8,[x19]
+0087e364	add x1,sp,#0x8
+0087e368	mov x0,x19
+0087e36c	ldr x8,[x8]
+0087e370	blr x8
+0087e374	ldr x8,[x20, #0x28]
+0087e378	ldur x9,[x29, #-0x8]
+0087e37c	cmp x8,x9
+0087e380	b.ne 0x0087e398
+0087e384	ldp x20,x19,[sp, #0x160]
+0087e388	ldr x28,[sp, #0x150]
+0087e38c	ldp x29,x30,[sp, #0x140]
+0087e390	add sp,sp,#0x170
+0087e394	ret
+0087e398	bl 0x00c2fec0

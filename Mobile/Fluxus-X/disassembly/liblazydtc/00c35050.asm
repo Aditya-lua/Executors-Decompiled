@@ -1,0 +1,5 @@
+; X509_VERIFY_PARAM_set1 @ 00c35050
+00c35050	adrp x16,0xcb8000
+00c35054	ldr x17,[x16, #0x810]
+00c35058	add x16,x16,#0x810
+00c3505c	br x17

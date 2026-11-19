@@ -1,0 +1,34 @@
+; FUN_00b634a8 @ 00b634a8
+00b634a8	cbz x0,0x00b63528
+00b634ac	stp x20,x19,[sp, #-0x20]!
+00b634b0	stp x29,x30,[sp, #0x10]
+00b634b4	mov x19,x0
+00b634b8	ldr x0,[x0, #0x8]
+00b634bc	adrp x1,0x29e000
+00b634c0	add x1,x1,#0xfb2
+00b634c4	mov w2,#0x73
+00b634c8	add x29,sp,#0x10
+00b634cc	bl 0x00c32310
+00b634d0	ldr w8,[x19, #0x10]
+00b634d4	cmp w8,#0x1
+00b634d8	b.eq 0x00b6350c
+00b634dc	ldr x0,[x19, #0x20]
+00b634e0	bl 0x00c35f00
+00b634e4	ldr x0,[x19, #0x30]
+00b634e8	adrp x20,0x29e000
+00b634ec	add x20,x20,#0xfb2
+00b634f0	mov w2,#0x76
+00b634f4	mov x1,x20
+00b634f8	bl 0x00c32310
+00b634fc	ldr x0,[x19, #0x28]
+00b63500	mov w2,#0x77
+00b63504	mov x1,x20
+00b63508	bl 0x00c32310
+00b6350c	ldp x29,x30,[sp, #0x10]
+00b63510	adrp x1,0x29e000
+00b63514	add x1,x1,#0xfb2
+00b63518	mov w2,#0x79
+00b6351c	mov x0,x19
+00b63520	ldp x20,x19,[sp], #0x20
+00b63524	b 0x00c32310
+00b63528	ret

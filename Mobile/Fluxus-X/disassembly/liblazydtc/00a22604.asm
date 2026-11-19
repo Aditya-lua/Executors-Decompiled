@@ -1,0 +1,27 @@
+; DSO_up_ref @ 00a22604
+00a22604	cbz x0,0x00a22628
+00a22608	add x8,x0,#0x10
+00a2260c	ldxr w9,[x8]
+00a22610	add w10,w9,#0x1
+00a22614	stxr w11,w10,[x8]
+00a22618	cbnz w11,0x00a2260c
+00a2261c	cmp w9,#0x0
+00a22620	cset w0,gt
+00a22624	ret
+00a22628	stp x29,x30,[sp, #-0x10]!
+00a2262c	mov x29,sp
+00a22630	bl 0x00c342a0
+00a22634	adrp x0,0x2a7000
+00a22638	adrp x2,0x2cf000
+00a2263c	add x0,x0,#0xdd6
+00a22640	add x2,x2,#0x9e9
+00a22644	mov w1,#0x61
+00a22648	bl 0x00c342b0
+00a2264c	mov w1,#0x102
+00a22650	mov w0,#0x25
+00a22654	movk w1,#0xc, LSL #16
+00a22658	mov x2,xzr
+00a2265c	bl 0x00c342c0
+00a22660	mov w0,wzr
+00a22664	ldp x29,x30,[sp], #0x10
+00a22668	ret

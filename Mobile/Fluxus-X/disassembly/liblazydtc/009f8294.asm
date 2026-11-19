@@ -1,0 +1,6 @@
+; X509_ALGOR_dup @ 009f8294
+009f8294	adrp x8,0xc59000
+009f8298	add x8,x8,#0x180
+009f829c	mov x1,x0
+009f82a0	mov x0,x8
+009f82a4	b 0x00c374a0

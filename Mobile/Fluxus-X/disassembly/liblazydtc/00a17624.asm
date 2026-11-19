@@ -1,0 +1,25 @@
+; DES_is_weak_key @ 00a17624
+00a17624	stp x22,x21,[sp, #-0x30]!
+00a17628	adrp x22,0x753000
+00a1762c	stp x20,x19,[sp, #0x10]
+00a17630	mov x19,x0
+00a17634	mov x21,xzr
+00a17638	mov w20,wzr
+00a1763c	add x22,x22,#0x40
+00a17640	stp x29,x30,[sp, #0x20]
+00a17644	add x29,sp,#0x20
+00a17648	add x0,x22,x21
+00a1764c	mov w2,#0x8
+00a17650	mov x1,x19
+00a17654	bl 0x00c362f0
+00a17658	sub w8,w0,#0x1
+00a1765c	add x21,x21,#0x8
+00a17660	bic w8,w8,w0
+00a17664	cmp x21,#0x80
+00a17668	orr w20,w20,w8, ASR #0x1f
+00a1766c	b.ne 0x00a17648
+00a17670	and w0,w20,#0x1
+00a17674	ldp x29,x30,[sp, #0x20]
+00a17678	ldp x20,x19,[sp, #0x10]
+00a1767c	ldp x22,x21,[sp], #0x30
+00a17680	ret

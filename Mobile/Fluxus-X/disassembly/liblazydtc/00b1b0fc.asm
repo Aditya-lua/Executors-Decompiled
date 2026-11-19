@@ -1,0 +1,4 @@
+; d2i_X509_REVOKED @ 00b1b0fc
+00b1b0fc	adrp x3,0xc82000
+00b1b100	add x3,x3,#0x58
+00b1b104	b 0x00c36150

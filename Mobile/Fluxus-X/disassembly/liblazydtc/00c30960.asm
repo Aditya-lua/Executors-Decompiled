@@ -1,0 +1,5 @@
+; <EXTERNAL>::free @ 00c30960
+00c30960	adrp x16,0xcb6000
+00c30964	ldr x17,[x16, #0x498]
+00c30968	add x16,x16,#0x498
+00c3096c	br x17

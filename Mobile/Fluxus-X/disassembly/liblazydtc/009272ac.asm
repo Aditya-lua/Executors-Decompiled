@@ -1,0 +1,30 @@
+; FUN_009272ac @ 009272ac
+009272ac	sub sp,sp,#0x40
+009272b0	stp x22,x21,[sp, #0x10]
+009272b4	stp x20,x19,[sp, #0x20]
+009272b8	stp x29,x30,[sp, #0x30]
+009272bc	add x29,sp,#0x30
+009272c0	mrs x22,tpidr_el0
+009272c4	ldr x8,[x22, #0x28]
+009272c8	mov x19,x3
+009272cc	mov x20,x2
+009272d0	mov x21,x0
+009272d4	str x8,[sp, #0x8]
+009272d8	add x3,sp,#0x4
+009272dc	mov x0,x19
+009272e0	mov x1,x21
+009272e4	mov x2,x20
+009272e8	strb wzr,[sp, #0x4]
+009272ec	bl 0x00927320
+009272f0	cmn x0,#0x2
+009272f4	b.eq 0x009272d8
+009272f8	ldr x8,[x22, #0x28]
+009272fc	ldr x9,[sp, #0x8]
+00927300	cmp x8,x9
+00927304	b.ne 0x0092731c
+00927308	ldp x29,x30,[sp, #0x30]
+0092730c	ldp x20,x19,[sp, #0x20]
+00927310	ldp x22,x21,[sp, #0x10]
+00927314	add sp,sp,#0x40
+00927318	ret
+0092731c	bl 0x00c2fec0

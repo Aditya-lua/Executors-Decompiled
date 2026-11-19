@@ -1,0 +1,22 @@
+; ENGINE_set_id @ 00a5160c
+00a5160c	cbz x1,0x00a5161c
+00a51610	str x1,[x0]
+00a51614	mov w0,#0x1
+00a51618	ret
+00a5161c	stp x29,x30,[sp, #-0x10]!
+00a51620	mov x29,sp
+00a51624	bl 0x00c342a0
+00a51628	adrp x0,0x2a2000
+00a5162c	adrp x2,0x2a5000
+00a51630	add x0,x0,#0x2ee
+00a51634	add x2,x2,#0xf2c
+00a51638	mov w1,#0xcc
+00a5163c	bl 0x00c342b0
+00a51640	mov w1,#0x102
+00a51644	mov w0,#0x26
+00a51648	movk w1,#0xc, LSL #16
+00a5164c	mov x2,xzr
+00a51650	bl 0x00c342c0
+00a51654	mov w0,wzr
+00a51658	ldp x29,x30,[sp], #0x10
+00a5165c	ret

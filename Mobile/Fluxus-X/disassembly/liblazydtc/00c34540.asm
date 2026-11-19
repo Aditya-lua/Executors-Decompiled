@@ -1,0 +1,5 @@
+; pqueue_insert @ 00c34540
+00c34540	adrp x16,0xcb8000
+00c34544	ldr x17,[x16, #0x288]
+00c34548	add x16,x16,#0x288
+00c3454c	br x17

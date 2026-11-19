@@ -1,0 +1,74 @@
+; mbedtls_entropy_update_seed_file @ 00b767f8
+00b767f8	stp x28,x23,[sp, #-0x40]!
+00b767fc	stp x22,x21,[sp, #0x10]
+00b76800	stp x20,x19,[sp, #0x20]
+00b76804	stp x29,x30,[sp, #0x30]
+00b76808	add x29,sp,#0x30
+00b7680c	sub sp,sp,#0x410
+00b76810	mrs x23,tpidr_el0
+00b76814	ldr x8,[x23, #0x28]
+00b76818	mov x19,x1
+00b7681c	adrp x1,0x2bb000
+00b76820	mov x20,x0
+00b76824	add x1,x1,#0x65
+00b76828	mov x0,x19
+00b7682c	stur x8,[x29, #-0x38]
+00b76830	bl 0x00c30c10
+00b76834	mov x21,x0
+00b76838	cbz x0,0x00b768b8
+00b7683c	mov x0,x21
+00b76840	mov x1,xzr
+00b76844	bl 0x00c42490
+00b76848	mov w2,#0x2
+00b7684c	mov x0,x21
+00b76850	mov x1,xzr
+00b76854	bl 0x00c31ec0
+00b76858	mov x0,x21
+00b7685c	bl 0x00c32120
+00b76860	mov x22,x0
+00b76864	mov x0,x21
+00b76868	mov x1,xzr
+00b7686c	mov w2,wzr
+00b76870	bl 0x00c31ec0
+00b76874	cmp x22,#0x400
+00b76878	mov w8,#0x400
+00b7687c	csel x22,x22,x8,cc
+00b76880	add x0,sp,#0x8
+00b76884	mov w1,#0x1
+00b76888	mov x2,x22
+00b7688c	mov x3,x21
+00b76890	bl 0x00c31e60
+00b76894	cmp x0,x22
+00b76898	b.ne 0x00b768c0
+00b7689c	mov w1,#0x14
+00b768a0	add x2,sp,#0x8
+00b768a4	mov x0,x20
+00b768a8	mov x3,x22
+00b768ac	bl 0x00b762e0
+00b768b0	mov w22,w0
+00b768b4	b 0x00b768c4
+00b768b8	orr w22,wzr,#0xffffffc1
+00b768bc	b 0x00b768ec
+00b768c0	orr w22,wzr,#0xffffffc1
+00b768c4	mov x0,x21
+00b768c8	bl 0x00c30be0
+00b768cc	add x0,sp,#0x8
+00b768d0	mov w1,#0x400
+00b768d4	bl 0x00c42220
+00b768d8	cbnz w22,0x00b768ec
+00b768dc	mov x0,x20
+00b768e0	mov x1,x19
+00b768e4	bl 0x00c42810
+00b768e8	mov w22,w0
+00b768ec	ldr x8,[x23, #0x28]
+00b768f0	ldur x9,[x29, #-0x38]
+00b768f4	cmp x8,x9
+00b768f8	b.ne 0x00b76918
+00b768fc	mov w0,w22
+00b76900	add sp,sp,#0x410
+00b76904	ldp x29,x30,[sp, #0x30]
+00b76908	ldp x20,x19,[sp, #0x20]
+00b7690c	ldp x22,x21,[sp, #0x10]
+00b76910	ldp x28,x23,[sp], #0x40
+00b76914	ret
+00b76918	bl 0x00c2fec0

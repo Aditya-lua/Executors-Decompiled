@@ -1,0 +1,4 @@
+; i2d_PKCS8_PRIV_KEY_INFO @ 009f2a50
+009f2a50	adrp x2,0xc58000
+009f2a54	add x2,x2,#0xa40
+009f2a58	b 0x00c36170

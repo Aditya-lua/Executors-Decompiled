@@ -1,0 +1,76 @@
+; FUN_0087a674 @ 0087a674
+0087a674	stp x29,x30,[sp, #-0x50]!
+0087a678	stp x26,x25,[sp, #0x10]
+0087a67c	stp x24,x23,[sp, #0x20]
+0087a680	stp x22,x21,[sp, #0x30]
+0087a684	stp x20,x19,[sp, #0x40]
+0087a688	mov x29,sp
+0087a68c	ldp x21,x8,[x0, #0x8]
+0087a690	mov x19,x0
+0087a694	sub x9,x8,x21
+0087a698	cmp x1,x9, ASR #0x2
+0087a69c	b.ls 0x0087a6f8
+0087a6a0	ldr x20,[x19]
+0087a6a4	sub x22,x21,x20
+0087a6a8	asr x25,x22,#0x2
+0087a6ac	add x9,x25,x1
+0087a6b0	lsr x10,x9,#0x3e
+0087a6b4	cbnz x10,0x0087a798
+0087a6b8	sub x21,x8,x20
+0087a6bc	orr x10,xzr,#0x7ffffffffffffffc
+0087a6c0	asr x8,x21,#0x1
+0087a6c4	cmp x8,x9
+0087a6c8	csel x8,x8,x9,hi
+0087a6cc	cmp x21,x10
+0087a6d0	mov x9,#0x3fffffffffffffff
+0087a6d4	csel x23,x8,x9,cc
+0087a6d8	cbz x23,0x0087a71c
+0087a6dc	lsr x8,x23,#0x3e
+0087a6e0	cbnz x8,0x0087a79c
+0087a6e4	lsl x0,x23,#0x2
+0087a6e8	mov x24,x1
+0087a6ec	bl 0x00c2fed0
+0087a6f0	mov x1,x24
+0087a6f4	b 0x0087a720
+0087a6f8	cbz x1,0x0087a714
+0087a6fc	lsl x20,x1,#0x2
+0087a700	mov x0,x21
+0087a704	mov w1,wzr
+0087a708	mov x2,x20
+0087a70c	bl 0x00c301c0
+0087a710	add x21,x21,x20
+0087a714	str x21,[x19, #0x8]
+0087a718	b 0x0087a780
+0087a71c	mov x0,xzr
+0087a720	add x26,x0,x23, LSL #0x2
+0087a724	lsl x23,x1,#0x2
+0087a728	add x24,x0,x22
+0087a72c	mov x0,x24
+0087a730	mov w1,wzr
+0087a734	mov x2,x23
+0087a738	bl 0x00c301c0
+0087a73c	sub x25,x24,x25, LSL #0x2
+0087a740	mov x1,x20
+0087a744	mov x2,x22
+0087a748	add x23,x24,x23
+0087a74c	mov x0,x25
+0087a750	bl 0x00c2ffd0
+0087a754	stp x25,x23,[x19]
+0087a758	str x26,[x19, #0x10]
+0087a75c	cbz x20,0x0087a780
+0087a760	mov x0,x20
+0087a764	mov x1,x21
+0087a768	ldp x20,x19,[sp, #0x40]
+0087a76c	ldp x22,x21,[sp, #0x30]
+0087a770	ldp x24,x23,[sp, #0x20]
+0087a774	ldp x26,x25,[sp, #0x10]
+0087a778	ldp x29,x30,[sp], #0x50
+0087a77c	b 0x00c2fe80
+0087a780	ldp x20,x19,[sp, #0x40]
+0087a784	ldp x22,x21,[sp, #0x30]
+0087a788	ldp x24,x23,[sp, #0x20]
+0087a78c	ldp x26,x25,[sp, #0x10]
+0087a790	ldp x29,x30,[sp], #0x50
+0087a794	ret
+0087a798	bl 0x00879790
+0087a79c	bl 0x007fe1b8

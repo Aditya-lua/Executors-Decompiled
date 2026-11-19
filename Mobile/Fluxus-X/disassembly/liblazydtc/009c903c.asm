@@ -1,0 +1,56 @@
+; DTLS_RECORD_LAYER_new @ 009c903c
+009c903c	stp x20,x19,[sp, #-0x20]!
+009c9040	adrp x1,0x2a3000
+009c9044	mov x19,x0
+009c9048	add x1,x1,#0xcf1
+009c904c	mov w0,#0x68
+009c9050	mov w2,#0x17
+009c9054	stp x29,x30,[sp, #0x10]
+009c9058	add x29,sp,#0x10
+009c905c	bl 0x00c32320
+009c9060	cbz x0,0x009c90d8
+009c9064	mov x20,x0
+009c9068	str x0,[x19, #0x10b8]
+009c906c	bl 0x00c34450
+009c9070	str x0,[x20, #0x30]
+009c9074	bl 0x00c34450
+009c9078	str x0,[x20, #0x40]
+009c907c	bl 0x00c34450
+009c9080	ldr x8,[x20, #0x30]
+009c9084	str x0,[x20, #0x50]
+009c9088	cbz x8,0x009c90a0
+009c908c	cbz x0,0x009c90a0
+009c9090	ldr x9,[x20, #0x40]
+009c9094	cbz x9,0x009c90a0
+009c9098	mov w0,#0x1
+009c909c	b 0x009c910c
+009c90a0	mov x0,x8
+009c90a4	bl 0x00c34440
+009c90a8	ldr x0,[x20, #0x40]
+009c90ac	bl 0x00c34440
+009c90b0	ldr x0,[x20, #0x50]
+009c90b4	bl 0x00c34440
+009c90b8	adrp x1,0x2a3000
+009c90bc	add x1,x1,#0xcf1
+009c90c0	mov w2,#0x27
+009c90c4	mov x0,x20
+009c90c8	bl 0x00c32310
+009c90cc	mov w0,wzr
+009c90d0	str xzr,[x19, #0x10b8]
+009c90d4	b 0x009c910c
+009c90d8	bl 0x00c342a0
+009c90dc	adrp x0,0x2a3000
+009c90e0	adrp x2,0x2cd000
+009c90e4	add x0,x0,#0xcf1
+009c90e8	add x2,x2,#0x71c
+009c90ec	orr w1,wzr,#0x18
+009c90f0	bl 0x00c342b0
+009c90f4	mov w1,#0x100
+009c90f8	mov w0,#0x14
+009c90fc	movk w1,#0xc, LSL #16
+009c9100	mov x2,xzr
+009c9104	bl 0x00c342c0
+009c9108	mov w0,wzr
+009c910c	ldp x29,x30,[sp, #0x10]
+009c9110	ldp x20,x19,[sp], #0x20
+009c9114	ret

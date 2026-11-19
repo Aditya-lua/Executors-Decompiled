@@ -1,0 +1,4 @@
+; NETSCAPE_SPKAC_new @ 00b17068
+00b17068	adrp x0,0xc81000
+00b1706c	add x0,x0,#0xe38
+00b17070	b 0x00c372e0

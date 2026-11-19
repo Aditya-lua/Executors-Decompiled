@@ -1,0 +1,20 @@
+; FUN_00867c60 @ 00867c60
+00867c60	stp x29,x30,[sp, #-0x30]!
+00867c64	str x21,[sp, #0x10]
+00867c68	stp x20,x19,[sp, #0x20]
+00867c6c	mov x29,sp
+00867c70	mov x21,x1
+00867c74	mov w1,#0x28
+00867c78	mov x19,x3
+00867c7c	mov x20,x2
+00867c80	bl 0x0084e938
+00867c84	ldp x3,x4,[x19]
+00867c88	mov x19,x0
+00867c8c	ldr x1,[x21]
+00867c90	ldr x2,[x20]
+00867c94	bl 0x008521ac
+00867c98	mov x0,x19
+00867c9c	ldp x20,x19,[sp, #0x20]
+00867ca0	ldr x21,[sp, #0x10]
+00867ca4	ldp x29,x30,[sp], #0x30
+00867ca8	ret

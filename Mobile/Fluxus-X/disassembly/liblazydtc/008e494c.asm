@@ -1,0 +1,17 @@
+; FUN_008e494c @ 008e494c
+008e494c	stp x30,x21,[sp, #-0x20]!
+008e4950	stp x20,x19,[sp, #0x10]
+008e4954	and x8,x2,#-0x1000
+008e4958	and x9,x3,#-0x1000
+008e495c	sub x2,x9,x8
+008e4960	mov x19,x1
+008e4964	mov x20,x0
+008e4968	and x21,x3,#0xfff
+008e496c	bl 0x008e498c
+008e4970	mov x0,x20
+008e4974	mov x1,x19
+008e4978	mov x2,x19
+008e497c	ldp x20,x19,[sp, #0x10]
+008e4980	mov x3,x21
+008e4984	ldp x30,x21,[sp], #0x20
+008e4988	b 0x008e49b0

@@ -1,0 +1,70 @@
+; tls_parse_stoc_early_data @ 009d57e0
+009d57e0	str x19,[sp, #-0x20]!
+009d57e4	stp x29,x30,[sp, #0x10]
+009d57e8	ldr x8,[x1, #0x8]
+009d57ec	cmp w2,#0x2, LSL #12
+009d57f0	mov x19,x0
+009d57f4	add x29,sp,#0x10
+009d57f8	b.ne 0x009d5850
+009d57fc	cmp x8,#0x4
+009d5800	b.cc 0x009d5828
+009d5804	ldr x13,[x1]
+009d5808	subs x8,x8,#0x4
+009d580c	ldrb w12,[x13]
+009d5810	ldrb w9,[x13, #0x1]
+009d5814	ldrb w10,[x13, #0x2]
+009d5818	ldrb w11,[x13, #0x3]
+009d581c	add x13,x13,#0x4
+009d5820	stp x13,x8,[x1]
+009d5824	b.eq 0x009d58d4
+009d5828	bl 0x00c342a0
+009d582c	adrp x0,0x2bf000
+009d5830	adrp x2,0x2c1000
+009d5834	add x0,x0,#0x967
+009d5838	add x2,x2,#0x856
+009d583c	mov w1,#0x76a
+009d5840	bl 0x00c342b0
+009d5844	mov w1,#0x32
+009d5848	mov w2,#0xae
+009d584c	b 0x009d58b8
+009d5850	cbz x8,0x009d5878
+009d5854	bl 0x00c342a0
+009d5858	adrp x0,0x2bf000
+009d585c	adrp x2,0x2c1000
+009d5860	add x0,x0,#0x967
+009d5864	add x2,x2,#0x856
+009d5868	mov w1,#0x774
+009d586c	bl 0x00c342b0
+009d5870	mov w1,#0x32
+009d5874	b 0x009d58b4
+009d5878	ldr w8,[x19, #0xb34]
+009d587c	cbz w8,0x009d5894
+009d5880	ldr w8,[x19, #0x4d0]
+009d5884	cbz w8,0x009d5894
+009d5888	mov w8,#0x2
+009d588c	str w8,[x19, #0xb30]
+009d5890	b 0x009d58ec
+009d5894	bl 0x00c342a0
+009d5898	adrp x0,0x2bf000
+009d589c	adrp x2,0x2c1000
+009d58a0	add x0,x0,#0x967
+009d58a4	add x2,x2,#0x856
+009d58a8	mov w1,#0x77f
+009d58ac	bl 0x00c342b0
+009d58b0	mov w1,#0x2f
+009d58b4	mov w2,#0x6e
+009d58b8	mov x0,x19
+009d58bc	mov x3,xzr
+009d58c0	bl 0x00c34410
+009d58c4	mov w0,wzr
+009d58c8	ldp x29,x30,[sp, #0x10]
+009d58cc	ldr x19,[sp], #0x20
+009d58d0	ret
+009d58d4	lsl w8,w12,#0x18
+009d58d8	ldr x12,[x19, #0x918]
+009d58dc	bfm w8,w9,#0x10,#0x7
+009d58e0	bfm w8,w10,#0x18,#0x7
+009d58e4	orr w8,w8,w11
+009d58e8	str w8,[x12, #0x354]
+009d58ec	mov w0,#0x1
+009d58f0	b 0x009d58c8

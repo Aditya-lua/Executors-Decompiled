@@ -1,0 +1,4 @@
+; d2i_DSAparams @ 00a20094
+00a20094	adrp x3,0xc5a000
+00a20098	add x3,x3,#0x998
+00a2009c	b 0x00c36150

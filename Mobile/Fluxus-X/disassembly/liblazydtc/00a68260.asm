@@ -1,0 +1,17 @@
+; FUN_00a68260 @ 00a68260
+00a68260	stp x29,x30,[sp, #-0x10]!
+00a68264	mov x29,sp
+00a68268	bl 0x00c342a0
+00a6826c	adrp x0,0x2c3000
+00a68270	adrp x2,0x2c3000
+00a68274	add x0,x0,#0xa2d
+00a68278	add x2,x2,#0xa43
+00a6827c	mov w1,#0x17
+00a68280	bl 0x00c342b0
+00a68284	orr w0,wzr,#0x6
+00a68288	mov w1,#0xb1
+00a6828c	mov x2,xzr
+00a68290	bl 0x00c342c0
+00a68294	mov w0,wzr
+00a68298	ldp x29,x30,[sp], #0x10
+00a6829c	ret

@@ -1,0 +1,83 @@
+; ossl_policy_cache_set_mapping @ 00b1365c
+00b1365c	str x23,[sp, #-0x40]!
+00b13660	stp x22,x21,[sp, #0x10]
+00b13664	stp x20,x19,[sp, #0x20]
+00b13668	stp x29,x30,[sp, #0x30]
+00b1366c	ldr x20,[x0, #0x108]
+00b13670	mov x0,x1
+00b13674	add x29,sp,#0x30
+00b13678	mov x19,x1
+00b1367c	bl 0x00c325e0
+00b13680	cbz w0,0x00b13768
+00b13684	mov x0,x19
+00b13688	bl 0x00c325e0
+00b1368c	cmp w0,#0x1
+00b13690	b.lt 0x00b13760
+00b13694	mov w21,wzr
+00b13698	mov x0,x19
+00b1369c	mov w1,w21
+00b136a0	bl 0x00c32610
+00b136a4	mov x22,x0
+00b136a8	ldr x0,[x0, #0x8]
+00b136ac	bl 0x00c37750
+00b136b0	cmp w0,#0x2ea
+00b136b4	b.eq 0x00b13768
+00b136b8	ldr x0,[x22]
+00b136bc	bl 0x00c37750
+00b136c0	cmp w0,#0x2ea
+00b136c4	b.eq 0x00b13768
+00b136c8	ldr x1,[x22]
+00b136cc	mov x0,x20
+00b136d0	bl 0x00c40530
+00b136d4	cbz x0,0x00b136ec
+00b136d8	ldr w8,[x0]
+00b136dc	mov x23,x0
+00b136e0	orr w8,w8,#0x1
+00b136e4	str w8,[x0]
+00b136e8	b 0x00b13738
+00b136ec	ldr x8,[x20]
+00b136f0	cbz x8,0x00b1374c
+00b136f4	ldr w8,[x8]
+00b136f8	ldr x1,[x22]
+00b136fc	mov x0,xzr
+00b13700	and w2,w8,#0x10
+00b13704	bl 0x00c40570
+00b13708	cbz x0,0x00b1379c
+00b1370c	ldr x8,[x20]
+00b13710	ldr w9,[x0]
+00b13714	mov x23,x0
+00b13718	mov x1,x23
+00b1371c	ldr x8,[x8, #0x10]
+00b13720	orr w9,w9,#0x6
+00b13724	str w9,[x0]
+00b13728	str x8,[x0, #0x10]
+00b1372c	ldr x0,[x20, #0x8]
+00b13730	bl 0x00c347a0
+00b13734	cbz w0,0x00b13794
+00b13738	ldr x0,[x23, #0x18]
+00b1373c	ldr x1,[x22, #0x8]
+00b13740	bl 0x00c347a0
+00b13744	cbz w0,0x00b1379c
+00b13748	str xzr,[x22, #0x8]
+00b1374c	mov x0,x19
+00b13750	add w21,w21,#0x1
+00b13754	bl 0x00c325e0
+00b13758	cmp w21,w0
+00b1375c	b.lt 0x00b13698
+00b13760	mov w20,#0x1
+00b13764	b 0x00b1376c
+00b13768	mov w20,#0xffffffff
+00b1376c	adrp x1,0xcb5000
+00b13770	ldr x1,[x1, #0x858]
+00b13774	mov x0,x19
+00b13778	bl 0x00c32600
+00b1377c	mov w0,w20
+00b13780	ldp x29,x30,[sp, #0x30]
+00b13784	ldp x20,x19,[sp, #0x20]
+00b13788	ldp x22,x21,[sp, #0x10]
+00b1378c	ldr x23,[sp], #0x40
+00b13790	ret
+00b13794	mov x0,x23
+00b13798	bl 0x00c40560
+00b1379c	mov w20,wzr
+00b137a0	b 0x00b1376c

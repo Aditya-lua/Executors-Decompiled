@@ -1,0 +1,22 @@
+; FUN_00944fe4 @ 00944fe4
+00944fe4	stp x20,x19,[sp, #-0x20]!
+00944fe8	stp x29,x30,[sp, #0x10]
+00944fec	add x29,sp,#0x10
+00944ff0	ldp x9,x8,[x0]
+00944ff4	mov x19,x0
+00944ff8	mov x0,x1
+00944ffc	ldr x9,[x9, #0x10]
+00945000	mov x1,x8
+00945004	blr x9
+00945008	adrp x20,0xcc4000
+0094500c	add x20,x20,#0x678
+00945010	ldr x0,[x19, #0x8]
+00945014	ldr x8,[x20]
+00945018	blr x8
+0094501c	ldr x8,[x20]
+00945020	mov x0,x19
+00945024	blr x8
+00945028	ldp x29,x30,[sp, #0x10]
+0094502c	mov w0,wzr
+00945030	ldp x20,x19,[sp], #0x20
+00945034	ret

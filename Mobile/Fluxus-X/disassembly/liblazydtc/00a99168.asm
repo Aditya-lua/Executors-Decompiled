@@ -1,0 +1,13 @@
+; ossl_err_load_EC_strings @ 00a99168
+00a99168	stp x29,x30,[sp, #-0x10]!
+00a9916c	mov w0,#0x73
+00a99170	movk w0,#0x800, LSL #16
+00a99174	mov x29,sp
+00a99178	bl 0x00c35520
+00a9917c	cbnz x0,0x00a9918c
+00a99180	adrp x0,0xc6c000
+00a99184	add x0,x0,#0x418
+00a99188	bl 0x00c35510
+00a9918c	mov w0,#0x1
+00a99190	ldp x29,x30,[sp], #0x10
+00a99194	ret

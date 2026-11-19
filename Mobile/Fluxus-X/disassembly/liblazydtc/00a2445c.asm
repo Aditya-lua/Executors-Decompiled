@@ -1,0 +1,4 @@
+; ECPARAMETERS_it @ 00a2445c
+00a2445c	adrp x0,0xc5a000
+00a24460	add x0,x0,#0xcc0
+00a24464	ret

@@ -1,0 +1,5 @@
+; SSL_CONF_CTX_new @ 00c35490
+00c35490	adrp x16,0xcb8000
+00c35494	ldr x17,[x16, #0xa30]
+00c35498	add x16,x16,#0xa30
+00c3549c	br x17

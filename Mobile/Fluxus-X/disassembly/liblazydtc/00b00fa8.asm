@@ -1,0 +1,4 @@
+; i2d_PROXY_CERT_INFO_EXTENSION @ 00b00fa8
+00b00fa8	adrp x2,0xc80000
+00b00fac	add x2,x2,#0x980
+00b00fb0	b 0x00c36170

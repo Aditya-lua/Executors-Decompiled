@@ -1,0 +1,6 @@
+; ASYNC_WAIT_CTX_new @ 009f9904
+009f9904	adrp x1,0x2bb000
+009f9908	add x1,x1,#0x9b2
+009f990c	orr w0,wzr,#0x30
+009f9910	mov w2,#0x11
+009f9914	b 0x00c34250

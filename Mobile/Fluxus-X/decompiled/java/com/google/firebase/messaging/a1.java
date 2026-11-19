@@ -1,0 +1,210 @@
+package com.google.firebase.messaging;
+
+import android.content.Context;
+import android.util.Log;
+import androidx.annotation.NonNull;
+import com.google.android.gms.tasks.Task;
+import java.io.IOException;
+import java.util.ArrayDeque;
+import java.util.Map;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class a1 {
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public static final long f8640i = TimeUnit.HOURS.toSeconds(8);
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final Context f8641a;
+    public final g0 b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final b0 f8642c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public final FirebaseMessaging f8643d;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public final ScheduledExecutorService f8645f;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public final y0 f8647h;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public final Map<String, ArrayDeque<tb.k<Void>>> f8644e = new w1.a();
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public boolean f8646g = false;
+
+    public a1(FirebaseMessaging firebaseMessaging, g0 g0Var, y0 y0Var, b0 b0Var, Context context, @NonNull ScheduledExecutorService scheduledExecutorService) {
+        this.f8643d = firebaseMessaging;
+        this.b = g0Var;
+        this.f8647h = y0Var;
+        this.f8642c = b0Var;
+        this.f8641a = context;
+        this.f8645f = scheduledExecutorService;
+    }
+
+    public static /* synthetic */ a1 a(Context context, ScheduledExecutorService scheduledExecutorService, FirebaseMessaging firebaseMessaging, g0 g0Var, b0 b0Var) {
+        return new a1(firebaseMessaging, g0Var, y0.a(context, scheduledExecutorService), b0Var, context, scheduledExecutorService);
+    }
+
+    public static <T> void b(Task<T> task) throws IOException {
+        try {
+            tb.m.b(task, 30L, TimeUnit.SECONDS);
+        } catch (InterruptedException | TimeoutException e10) {
+            throw new IOException("SERVICE_NOT_AVAILABLE", e10);
+        } catch (ExecutionException e11) {
+            Throwable cause = e11.getCause();
+            if (cause instanceof IOException) {
+                throw ((IOException) cause);
+            }
+            if (!(cause instanceof RuntimeException)) {
+                throw new IOException(e11);
+            }
+            throw ((RuntimeException) cause);
+        }
+    }
+
+    public static Task<a1> e(final FirebaseMessaging firebaseMessaging, final g0 g0Var, final b0 b0Var, final Context context, @NonNull final ScheduledExecutorService scheduledExecutorService) {
+        return tb.m.c(scheduledExecutorService, new Callable() { // from class: com.google.firebase.messaging.z0
+            @Override // java.util.concurrent.Callable
+            public final Object call() {
+                return a1.a(context, scheduledExecutorService, firebaseMessaging, g0Var, b0Var);
+            }
+        });
+    }
+
+    public static boolean g() {
+        return Log.isLoggable("FirebaseMessaging", 3);
+    }
+
+    public final void c(String str) throws IOException {
+        b(this.f8642c.l(this.f8643d.k(), str));
+    }
+
+    public final void d(String str) throws IOException {
+        b(this.f8642c.m(this.f8643d.k(), str));
+    }
+
+    public boolean f() {
+        return this.f8647h.b() != null;
+    }
+
+    public synchronized boolean h() {
+        return this.f8646g;
+    }
+
+    public final void i(x0 x0Var) {
+        synchronized (this.f8644e) {
+            try {
+                String strE = x0Var.e();
+                if (this.f8644e.containsKey(strE)) {
+                    ArrayDeque<tb.k<Void>> arrayDeque = this.f8644e.get(strE);
+                    tb.k<Void> kVarPoll = arrayDeque.poll();
+                    if (kVarPoll != null) {
+                        kVarPoll.c(null);
+                    }
+                    if (arrayDeque.isEmpty()) {
+                        this.f8644e.remove(strE);
+                    }
+                }
+            } catch (Throwable th2) {
+                throw th2;
+            }
+        }
+    }
+
+    public boolean j(x0 x0Var) throws IOException {
+        try {
+            String strB = x0Var.b();
+            int iHashCode = strB.hashCode();
+            if (iHashCode != 83) {
+                if (iHashCode == 85 && strB.equals("U")) {
+                    d(x0Var.c());
+                    if (!g()) {
+                        return true;
+                    }
+                    Log.d("FirebaseMessaging", "Unsubscribe from topic: " + x0Var.c() + " succeeded.");
+                    return true;
+                }
+            } else if (strB.equals("S")) {
+                c(x0Var.c());
+                if (!g()) {
+                    return true;
+                }
+                Log.d("FirebaseMessaging", "Subscribe to topic: " + x0Var.c() + " succeeded.");
+                return true;
+            }
+            if (!g()) {
+                return true;
+            }
+            Log.d("FirebaseMessaging", "Unknown topic operation" + x0Var + ".");
+            return true;
+        } catch (IOException e10) {
+            if (!"SERVICE_NOT_AVAILABLE".equals(e10.getMessage()) && !"INTERNAL_SERVER_ERROR".equals(e10.getMessage()) && !"TOO_MANY_SUBSCRIBERS".equals(e10.getMessage())) {
+                if (e10.getMessage() != null) {
+                    throw e10;
+                }
+                Log.e("FirebaseMessaging", "Topic operation failed without exception message. Will retry Topic operation.");
+                return false;
+            }
+            Log.e("FirebaseMessaging", "Topic operation failed: " + e10.getMessage() + ". Will retry Topic operation.");
+            return false;
+        }
+    }
+
+    public void k(Runnable runnable, long j10) {
+        this.f8645f.schedule(runnable, j10, TimeUnit.SECONDS);
+    }
+
+    public synchronized void l(boolean z10) {
+        this.f8646g = z10;
+    }
+
+    public final void m() {
+        if (h()) {
+            return;
+        }
+        p(0L);
+    }
+
+    public void n() {
+        if (f()) {
+            m();
+        }
+    }
+
+    public boolean o() {
+        while (true) {
+            synchronized (this) {
+                try {
+                    x0 x0VarB = this.f8647h.b();
+                    if (x0VarB == null) {
+                        if (g()) {
+                            Log.d("FirebaseMessaging", "topic sync succeeded");
+                        }
+                        return true;
+                    }
+                    if (!j(x0VarB)) {
+                        return false;
+                    }
+                    this.f8647h.d(x0VarB);
+                    i(x0VarB);
+                } catch (Throwable th2) {
+                    throw th2;
+                }
+            }
+        }
+    }
+
+    public void p(long j10) {
+        k(new b1(this, this.f8641a, this.b, Math.min(Math.max(30L, 2 * j10), f8640i)), j10);
+        l(true);
+    }
+}

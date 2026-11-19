@@ -1,0 +1,4 @@
+; d2i_EXTENDED_KEY_USAGE @ 00afe48c
+00afe48c	adrp x3,0xc80000
+00afe490	add x3,x3,#0x190
+00afe494	b 0x00c36150

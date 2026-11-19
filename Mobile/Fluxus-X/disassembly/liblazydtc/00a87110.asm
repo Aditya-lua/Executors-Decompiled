@@ -1,0 +1,4 @@
+; EVP_aes_128_xts @ 00a87110
+00a87110	adrp x0,0xc62000
+00a87114	add x0,x0,#0xd78
+00a87118	ret

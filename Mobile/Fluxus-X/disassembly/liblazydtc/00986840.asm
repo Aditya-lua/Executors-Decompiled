@@ -1,0 +1,77 @@
+; ix::DNSLookup::getAddrInfo @ 00986840
+00986840	sub sp,sp,#0xa0
+00986844	str x23,[sp, #0x60]
+00986848	stp x22,x21,[sp, #0x70]
+0098684c	stp x20,x19,[sp, #0x80]
+00986850	stp x29,x30,[sp, #0x90]
+00986854	add x29,sp,#0x90
+00986858	mrs x22,tpidr_el0
+0098685c	mov x19,x8
+00986860	ldr x8,[x22, #0x28]
+00986864	adrp x9,0x29b000
+00986868	ldr d0,[x9, #0x8b8]
+0098686c	movi v1.2D,#0x0
+00986870	stur x8,[x29, #-0x38]
+00986874	mov w8,#0x1
+00986878	mov w0,w2
+0098687c	stur q1,[sp, #0x28]
+00986880	str w8,[sp, #0x30]
+00986884	add x8,sp,#0x10
+00986888	mov x20,x3
+0098688c	mov x21,x1
+00986890	stur q1,[sp, #0x48]
+00986894	stur q1,[sp, #0x38]
+00986898	str d0,[sp, #0x28]
+0098689c	add x23,sp,#0x10
+009868a0	bl 0x00c305a0
+009868a4	ldrb w8,[x21]
+009868a8	ldr x9,[x21, #0x10]
+009868ac	ldrb w10,[sp, #0x10]
+009868b0	ldr x11,[sp, #0x20]
+009868b4	tst w8,#0x1
+009868b8	orr x12,x23,#0x1
+009868bc	csinc x0,x9,x21,ne
+009868c0	tst w10,#0x1
+009868c4	csel x1,x12,x11,eq
+009868c8	add x2,sp,#0x28
+009868cc	add x3,sp,#0x8
+009868d0	bl 0x00c31ce0
+009868d4	cbz w0,0x00986900
+009868d8	bl 0x00c33610
+009868dc	mov x21,x0
+009868e0	bl 0x00c2ff50
+009868e4	mov x2,x0
+009868e8	mov x0,x20
+009868ec	mov x1,x21
+009868f0	bl 0x00c31090
+009868f4	mov x20,xzr
+009868f8	str xzr,[sp, #0x8]
+009868fc	b 0x00986904
+00986900	ldr x20,[sp, #0x8]
+00986904	str x20,[x19]
+00986908	mov w0,#0x28
+0098690c	bl 0x00c2fed0
+00986910	adrp x8,0xcb4000
+00986914	ldr x8,[x8, #0xed8]
+00986918	stp xzr,x20,[x0, #0x10]
+0098691c	ldrb w9,[sp, #0x10]
+00986920	add x8,x8,#0x10
+00986924	stp x8,xzr,[x0]
+00986928	adrp x8,0xcb4000
+0098692c	ldr x8,[x8, #0xdf8]
+00986930	str x0,[x19, #0x8]
+00986934	str x8,[x0, #0x20]
+00986938	tbz w9,#0x0,0x00986944
+0098693c	ldr x0,[sp, #0x20]
+00986940	bl 0x00c301d0
+00986944	ldr x8,[x22, #0x28]
+00986948	ldur x9,[x29, #-0x38]
+0098694c	cmp x8,x9
+00986950	b.ne 0x0098696c
+00986954	ldp x29,x30,[sp, #0x90]
+00986958	ldp x20,x19,[sp, #0x80]
+0098695c	ldp x22,x21,[sp, #0x70]
+00986960	ldr x23,[sp, #0x60]
+00986964	add sp,sp,#0xa0
+00986968	ret
+0098696c	bl 0x00c2fec0

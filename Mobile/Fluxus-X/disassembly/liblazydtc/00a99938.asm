@@ -1,0 +1,17 @@
+; CRYPTO_set_mem_functions @ 00a99938
+00a99938	adrp x8,0xd22000
+00a9993c	ldrb w9,[x8, #0xe8]
+00a99940	mov w8,wzr
+00a99944	tbnz w9,#0x0,0x00a99970
+00a99948	cbz x0,0x00a99954
+00a9994c	adrp x8,0xcc9000
+00a99950	str x0,[x8, #0x138]
+00a99954	cbz x1,0x00a99960
+00a99958	adrp x8,0xcc9000
+00a9995c	str x1,[x8, #0x140]
+00a99960	cbz x2,0x00a9996c
+00a99964	adrp x8,0xcc9000
+00a99968	str x2,[x8, #0x148]
+00a9996c	mov w8,#0x1
+00a99970	mov w0,w8
+00a99974	ret

@@ -1,0 +1,5 @@
+; COMP_zlib @ 00c35220
+00c35220	adrp x16,0xcb8000
+00c35224	ldr x17,[x16, #0x8f8]
+00c35228	add x16,x16,#0x8f8
+00c3522c	br x17

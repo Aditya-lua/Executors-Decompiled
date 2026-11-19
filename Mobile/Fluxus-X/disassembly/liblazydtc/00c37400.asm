@@ -1,0 +1,5 @@
+; ASN1_d2i_bio @ 00c37400
+00c37400	adrp x16,0xcb9000
+00c37404	ldr x17,[x16, #0x9e8]
+00c37408	add x16,x16,#0x9e8
+00c3740c	br x17

@@ -1,0 +1,5 @@
+; ASN1_STRING_to_UTF8 @ 00c32160
+00c32160	adrp x16,0xcb7000
+00c32164	ldr x17,[x16, #0x98]
+00c32168	add x16,x16,#0x98
+00c3216c	br x17

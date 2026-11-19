@@ -1,0 +1,38 @@
+; ossl_ec_GFp_mont_group_copy @ 00a37838
+00a37838	stp x20,x19,[sp, #-0x20]!
+00a3783c	stp x29,x30,[sp, #0x10]
+00a37840	mov x19,x0
+00a37844	ldr x0,[x0, #0x78]
+00a37848	add x29,sp,#0x10
+00a3784c	mov x20,x1
+00a37850	bl 0x00c38f70
+00a37854	ldr x0,[x19, #0x80]
+00a37858	str xzr,[x19, #0x78]
+00a3785c	bl 0x00c322e0
+00a37860	mov x0,x19
+00a37864	mov x1,x20
+00a37868	str xzr,[x19, #0x80]
+00a3786c	bl 0x00c3b1e0
+00a37870	cbz w0,0x00a378c0
+00a37874	ldr x8,[x20, #0x78]
+00a37878	cbz x8,0x00a37894
+00a3787c	bl 0x00c38f80
+00a37880	str x0,[x19, #0x78]
+00a37884	cbz x0,0x00a378c0
+00a37888	ldr x1,[x20, #0x78]
+00a3788c	bl 0x00c38f60
+00a37890	cbz x0,0x00a378b0
+00a37894	ldr x0,[x20, #0x80]
+00a37898	cbz x0,0x00a378a8
+00a3789c	bl 0x00c369a0
+00a378a0	str x0,[x19, #0x80]
+00a378a4	cbz x0,0x00a378b0
+00a378a8	mov w0,#0x1
+00a378ac	b 0x00a378c0
+00a378b0	ldr x0,[x19, #0x78]
+00a378b4	bl 0x00c38f70
+00a378b8	mov w0,wzr
+00a378bc	str xzr,[x19, #0x78]
+00a378c0	ldp x29,x30,[sp, #0x10]
+00a378c4	ldp x20,x19,[sp], #0x20
+00a378c8	ret

@@ -1,0 +1,3 @@
+; X509_VERIFY_PARAM_set_trust @ 00b1445c
+00b1445c	add x0,x0,#0x24
+00b14460	b 0x00c40d00

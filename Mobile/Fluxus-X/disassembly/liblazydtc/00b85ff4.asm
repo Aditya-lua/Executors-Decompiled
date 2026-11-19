@@ -1,0 +1,24 @@
+; mbedtls_asn1_write_named_bitstring @ 00b85ff4
+00b85ff4	cbz x3,0x00b86044
+00b85ff8	add x9,x3,#0x7
+00b85ffc	add x8,x2,x9, LSR #0x3
+00b86000	ldrb w10,[x8, #-0x1]!
+00b86004	and w9,w9,#0xfffffff8
+00b86008	sub w9,w9,w3
+00b8600c	lsr w9,w10,w9
+00b86010	tbnz w9,#0x0,0x00b86044
+00b86014	sub x10,x3,#0x1
+00b86018	cbz x10,0x00b86048
+00b8601c	tst x10,#0x7
+00b86020	b.eq 0x00b86034
+00b86024	ubfx w9,w9,#0x1,#0x7
+00b86028	sub x10,x10,#0x1
+00b8602c	tbz w9,#0x0,0x00b86018
+00b86030	b 0x00b86040
+00b86034	ldrb w9,[x8, #-0x1]!
+00b86038	sub x10,x10,#0x1
+00b8603c	tbz w9,#0x0,0x00b86018
+00b86040	add x3,x10,#0x1
+00b86044	b 0x00c41aa0
+00b86048	mov x3,xzr
+00b8604c	b 0x00c41aa0

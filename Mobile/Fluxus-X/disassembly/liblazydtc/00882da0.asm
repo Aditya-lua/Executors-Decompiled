@@ -1,0 +1,75 @@
+; FUN_00882da0 @ 00882da0
+00882da0	stp x29,x30,[sp, #-0x40]!
+00882da4	stp x24,x23,[sp, #0x10]
+00882da8	stp x22,x21,[sp, #0x20]
+00882dac	stp x20,x19,[sp, #0x30]
+00882db0	mov x29,sp
+00882db4	ldr x20,[x0, #0x10]
+00882db8	mov x19,x0
+00882dbc	cbz x20,0x00882e84
+00882dc0	ldr x8,[x19, #0x18]
+00882dc4	ldr x22,[x8]
+00882dc8	cbz x22,0x00882dd4
+00882dcc	mov x21,xzr
+00882dd0	b 0x00882df4
+00882dd4	mov x21,xzr
+00882dd8	add x9,x8,#0x8
+00882ddc	sub x10,x20,#0x1
+00882de0	cmp x10,x21
+00882de4	b.eq 0x00882e84
+00882de8	ldr x22,[x9, x21, LSL #0x3]
+00882dec	add x21,x21,#0x1
+00882df0	cbz x22,0x00882de0
+00882df4	rbit x9,x22
+00882df8	add x23,x8,#0x8
+00882dfc	clz x9,x9
+00882e00	orr x24,x9,x21, LSL #0x6
+00882e04	ldr x8,[x19]
+00882e08	add x8,x8,x24, LSL #0x5
+00882e0c	ldr x0,[x8, #0x8]
+00882e10	cbz x0,0x00882e24
+00882e14	ldr x9,[x8, #0x18]
+00882e18	str x0,[x8, #0x10]
+00882e1c	sub x1,x9,x0
+00882e20	bl 0x00c2fe80
+00882e24	sub x8,x22,#0x1
+00882e28	ands x22,x8,x22
+00882e2c	b.ne 0x00882e58
+00882e30	add x8,x21,#0x1
+00882e34	cmp x20,x8
+00882e38	csinc x8,x20,x21,hi
+00882e3c	add x9,x21,#0x1
+00882e40	cmp x9,x20
+00882e44	b.cs 0x00882e74
+00882e48	ldr x22,[x23, x21, LSL #0x3]
+00882e4c	mov x21,x9
+00882e50	cbz x22,0x00882e3c
+00882e54	mov x21,x9
+00882e58	rbit x8,x22
+00882e5c	clz x8,x8
+00882e60	orr x24,x8,x21, LSL #0x6
+00882e64	cbnz x22,0x00882e04
+00882e68	cmp x21,x20
+00882e6c	b.ne 0x00882e04
+00882e70	b 0x00882e84
+00882e74	mov x22,xzr
+00882e78	mov x21,x8
+00882e7c	cbz x22,0x00882e68
+00882e80	b 0x00882e04
+00882e84	ldr x0,[x19]
+00882e88	bl 0x00c301d0
+00882e8c	ldr x0,[x19, #0x18]
+00882e90	str xzr,[x19]
+00882e94	bl 0x00c301d0
+00882e98	mov x0,xzr
+00882e9c	stp xzr,xzr,[x19, #0x8]
+00882ea0	str xzr,[x19, #0x18]
+00882ea4	bl 0x00c301d0
+00882ea8	mov w8,#0x40
+00882eac	str xzr,[x19, #0x20]
+00882eb0	strb w8,[x19, #0x30]
+00882eb4	ldp x20,x19,[sp, #0x30]
+00882eb8	ldp x22,x21,[sp, #0x20]
+00882ebc	ldp x24,x23,[sp, #0x10]
+00882ec0	ldp x29,x30,[sp], #0x40
+00882ec4	ret

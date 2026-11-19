@@ -1,0 +1,6 @@
+; EVP_MD_CTX_new @ 00a5773c
+00a5773c	adrp x1,0x2b7000
+00a57740	add x1,x1,#0xc61
+00a57744	mov w0,#0x48
+00a57748	mov w2,#0x84
+00a5774c	b 0x00c34250

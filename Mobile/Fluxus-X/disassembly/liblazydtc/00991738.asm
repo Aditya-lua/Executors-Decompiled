@@ -1,0 +1,26 @@
+; ix::calculateRetryWaitMilliseconds @ 00991738
+00991738	str x21,[sp, #-0x30]!
+0099173c	stp x20,x19,[sp, #0x10]
+00991740	stp x29,x30,[sp, #0x20]
+00991744	add x29,sp,#0x20
+00991748	mov w21,w2
+0099174c	mov w19,w1
+00991750	mov w20,w0
+00991754	cmp w0,#0x19
+00991758	mov w8,wzr
+0099175c	b.hi 0x00991778
+00991760	ucvtf d0,w20
+00991764	bl 0x00c33a20
+00991768	adrp x8,0x29b000
+0099176c	ldr d1,[x8, #0x50]
+00991770	fmul d0,d0,d1
+00991774	fcvtzu w8,d0
+00991778	cmp w8,w21
+0099177c	csel w8,w21,w8,cc
+00991780	cmp w8,w19
+00991784	ccmp w20,#0x19,#0x2,ls
+00991788	csel w0,w19,w8,hi
+0099178c	ldp x29,x30,[sp, #0x20]
+00991790	ldp x20,x19,[sp, #0x10]
+00991794	ldr x21,[sp], #0x30
+00991798	ret

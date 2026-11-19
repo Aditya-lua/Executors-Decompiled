@@ -1,0 +1,4 @@
+; d2i_ASN1_BIT_STRING @ 009f79e0
+009f79e0	adrp x3,0xc58000
+009f79e4	add x3,x3,#0xbf0
+009f79e8	b 0x00c36150

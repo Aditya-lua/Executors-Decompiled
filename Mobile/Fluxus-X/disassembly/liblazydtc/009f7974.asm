@@ -1,0 +1,4 @@
+; ASN1_INTEGER_it @ 009f7974
+009f7974	adrp x0,0xc58000
+009f7978	add x0,x0,#0xb80
+009f797c	ret

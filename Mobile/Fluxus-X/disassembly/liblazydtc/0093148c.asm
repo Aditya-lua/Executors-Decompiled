@@ -1,0 +1,21 @@
+; FUN_0093148c @ 0093148c
+0093148c	str x19,[sp, #-0x20]!
+00931490	stp x29,x30,[sp, #0x10]
+00931494	add x29,sp,#0x10
+00931498	mov x19,x0
+0093149c	str xzr,[x0, #0xaa8]
+009314a0	bl 0x009314dc
+009314a4	cbnz w0,0x009314d0
+009314a8	ldrb w8,[x19, #0xadc]
+009314ac	tbnz w8,#0x4,0x009314c8
+009314b0	ldrb w8,[x19, #0xc34]
+009314b4	tbnz w8,#0x0,0x009314c8
+009314b8	ldr x0,[x19, #0x1b8]
+009314bc	adrp x1,0x2c4000
+009314c0	add x1,x1,#0xdae
+009314c4	bl 0x00c31b30
+009314c8	mov w0,wzr
+009314cc	str wzr,[x19, #0xc30]
+009314d0	ldp x29,x30,[sp, #0x10]
+009314d4	ldr x19,[sp], #0x20
+009314d8	ret

@@ -1,0 +1,80 @@
+; FUN_0096a268 @ 0096a268
+0096a268	sub sp,sp,#0x60
+0096a26c	str x25,[sp, #0x10]
+0096a270	stp x24,x23,[sp, #0x20]
+0096a274	stp x22,x21,[sp, #0x30]
+0096a278	stp x20,x19,[sp, #0x40]
+0096a27c	stp x29,x30,[sp, #0x50]
+0096a280	add x29,sp,#0x50
+0096a284	mrs x24,tpidr_el0
+0096a288	ldr x8,[x24, #0x28]
+0096a28c	adrp x23,0xcc4000
+0096a290	add x23,x23,#0x690
+0096a294	mov x20,x1
+0096a298	str x8,[sp, #0x8]
+0096a29c	str xzr,[sp]
+0096a2a0	ldr x8,[x23]
+0096a2a4	ldr x25,[x1, #0x3a0]
+0096a2a8	mov x22,x0
+0096a2ac	mov w0,#0x1
+0096a2b0	orr w1,wzr,#0x60
+0096a2b4	mov w19,w2
+0096a2b8	blr x8
+0096a2bc	mov x21,x0
+0096a2c0	cbz x0,0x0096a338
+0096a2c4	adrp x9,0x749000
+0096a2c8	lsl x8,x25,#0x27
+0096a2cc	add x9,x9,#0x238
+0096a2d0	and x8,x9,x8, ASR #0x3f
+0096a2d4	str x8,[x21, #0x28]
+0096a2d8	adrp x8,0xcc4000
+0096a2dc	ldr x8,[x8, #0xd08]
+0096a2e0	ldr x9,[x23]
+0096a2e4	mov w0,#0x1
+0096a2e8	ldr x1,[x8, #0x18]
+0096a2ec	blr x9
+0096a2f0	str x0,[x21, #0x30]
+0096a2f4	cbz x0,0x0096a340
+0096a2f8	adrp x1,0xcc4000
+0096a2fc	add x1,x1,#0xd20
+0096a300	mov x0,sp
+0096a304	mov x2,x21
+0096a308	bl 0x00907328
+0096a30c	mov w23,w0
+0096a310	cbz w0,0x0096a35c
+0096a314	adrp x19,0xcc4000
+0096a318	add x19,x19,#0x678
+0096a31c	ldr x0,[x21, #0x30]
+0096a320	ldr x8,[x19]
+0096a324	blr x8
+0096a328	ldr x8,[x19]
+0096a32c	mov x0,x21
+0096a330	blr x8
+0096a334	b 0x0096a370
+0096a338	mov w23,#0x1b
+0096a33c	b 0x0096a370
+0096a340	adrp x8,0xcc4000
+0096a344	add x8,x8,#0x678
+0096a348	mov x0,x21
+0096a34c	ldr x8,[x8]
+0096a350	blr x8
+0096a354	mov w23,#0x1b
+0096a358	b 0x0096a370
+0096a35c	ldr x3,[sp]
+0096a360	mov x0,x22
+0096a364	mov x1,x20
+0096a368	mov w2,w19
+0096a36c	bl 0x0090738c
+0096a370	ldr x8,[x24, #0x28]
+0096a374	ldr x9,[sp, #0x8]
+0096a378	cmp x8,x9
+0096a37c	b.ne 0x0096a3a0
+0096a380	mov w0,w23
+0096a384	ldp x29,x30,[sp, #0x50]
+0096a388	ldp x20,x19,[sp, #0x40]
+0096a38c	ldp x22,x21,[sp, #0x30]
+0096a390	ldp x24,x23,[sp, #0x20]
+0096a394	ldr x25,[sp, #0x10]
+0096a398	add sp,sp,#0x60
+0096a39c	ret
+0096a3a0	bl 0x00c2fec0

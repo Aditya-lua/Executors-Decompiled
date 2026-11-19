@@ -1,0 +1,87 @@
+; FUN_00902f04 @ 00902f04
+00902f04	sub sp,sp,#0xa0
+00902f08	str x23,[sp, #0x60]
+00902f0c	stp x22,x21,[sp, #0x70]
+00902f10	stp x20,x19,[sp, #0x80]
+00902f14	stp x29,x30,[sp, #0x90]
+00902f18	add x29,sp,#0x90
+00902f1c	mrs x23,tpidr_el0
+00902f20	ldr x8,[x23, #0x28]
+00902f24	mov x19,x3
+00902f28	mov x21,x2
+00902f2c	mov x22,x1
+00902f30	mov x20,x0
+00902f34	stur x8,[x29, #-0x38]
+00902f38	str xzr,[sp]
+00902f3c	str xzr,[x3]
+00902f40	cbz x0,0x00903008
+00902f44	ldrb w8,[x20, #0xa81]
+00902f48	cbz w8,0x00903010
+00902f4c	mov x1,sp
+00902f50	mov x0,x20
+00902f54	bl 0x00908b60
+00902f58	cmn w0,#0x1
+00902f5c	b.eq 0x0090301c
+00902f60	ldr x8,[x20, #0x20]
+00902f64	cbnz x8,0x00902f74
+00902f68	ldr x1,[sp]
+00902f6c	mov x0,x20
+00902f70	bl 0x0092bb60
+00902f74	add x8,x20,#0xa82
+00902f78	ldr w8,[x8]
+00902f7c	lsr w9,w8,#0x1f
+00902f80	strb w9,[sp, #0x28]
+00902f84	tbnz w8,#0x1f,0x00902fbc
+00902f88	mov w0,#0xd
+00902f8c	add x2,sp,#0x8
+00902f90	mov x1,xzr
+00902f94	bl 0x00c31b20
+00902f98	ldur q0,[sp, #0x8]
+00902f9c	ldur q1,[sp, #0x18]
+00902fa0	mov w8,#0x1
+00902fa4	mov w0,#0xd
+00902fa8	add x1,sp,#0x30
+00902fac	mov x2,xzr
+00902fb0	stp q0,q1,[sp, #0x30]
+00902fb4	str x8,[sp, #0x38]
+00902fb8	bl 0x00c31b20
+00902fbc	mov x0,x20
+00902fc0	mov w1,wzr
+00902fc4	mov x2,x22
+00902fc8	mov x3,x21
+00902fcc	mov x4,x19
+00902fd0	bl 0x009083b8
+00902fd4	ldrb w8,[sp, #0x28]
+00902fd8	mov w19,w0
+00902fdc	cbnz w8,0x00902ff0
+00902fe0	mov w0,#0xd
+00902fe4	add x1,sp,#0x8
+00902fe8	mov x2,xzr
+00902fec	bl 0x00c31b20
+00902ff0	cmp w19,#0x0
+00902ff4	mov w8,#0x37
+00902ff8	csel w8,wzr,w8,eq
+00902ffc	cmp w19,#0x51
+00903000	csel w0,w19,w8,eq
+00903004	b 0x00903030
+00903008	mov w0,#0x2b
+0090300c	b 0x00903030
+00903010	adrp x1,0x2d0000
+00903014	add x1,x1,#0xd47
+00903018	b 0x00903024
+0090301c	adrp x1,0x2c0000
+00903020	add x1,x1,#0xea1
+00903024	mov x0,x20
+00903028	bl 0x00904b80
+0090302c	mov w0,#0x1
+00903030	ldr x8,[x23, #0x28]
+00903034	ldur x9,[x29, #-0x38]
+00903038	cmp x8,x9
+0090303c	b.ne 0x00903058
+00903040	ldp x29,x30,[sp, #0x90]
+00903044	ldp x20,x19,[sp, #0x80]
+00903048	ldp x22,x21,[sp, #0x70]
+0090304c	ldr x23,[sp, #0x60]
+00903050	add sp,sp,#0xa0
+00903054	ret
+00903058	bl 0x00c2fec0

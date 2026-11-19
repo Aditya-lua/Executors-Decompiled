@@ -1,0 +1,4 @@
+; GOST_KX_MESSAGE_free @ 009e633c
+009e633c	adrp x1,0xc58000
+009e6340	add x1,x1,#0x888
+009e6344	b 0x00c36160

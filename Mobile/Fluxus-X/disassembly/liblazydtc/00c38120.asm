@@ -1,0 +1,5 @@
+; ASN1_GENERALIZEDTIME_free @ 00c38120
+00c38120	adrp x16,0xcba000
+00c38124	ldr x17,[x16, #0x78]
+00c38128	add x16,x16,#0x78
+00c3812c	br x17

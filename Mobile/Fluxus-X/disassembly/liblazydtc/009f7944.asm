@@ -1,0 +1,4 @@
+; ASN1_OCTET_STRING_it @ 009f7944
+009f7944	adrp x0,0xc58000
+009f7948	add x0,x0,#0xb48
+009f794c	ret

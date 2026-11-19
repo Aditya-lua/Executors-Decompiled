@@ -1,0 +1,15 @@
+; FUN_00849af4 @ 00849af4
+00849af4	stp x29,x30,[sp, #-0x20]!
+00849af8	stp x20,x19,[sp, #0x10]
+00849afc	mov x29,sp
+00849b00	mov w0,#0x18
+00849b04	bl 0x00c30000
+00849b08	mov x19,x0
+00849b0c	mov w1,#0x8
+00849b10	bl 0x00c30640
+00849b14	adrp x1,0xcb4000
+00849b18	adrp x2,0xcb4000
+00849b1c	mov x0,x19
+00849b20	ldr x1,[x1, #0xa78]
+00849b24	ldr x2,[x2, #0xa80]
+00849b28	bl 0x00c30020

@@ -1,0 +1,30 @@
+; FUN_0080e360 @ 0080e360
+0080e360	stp x29,x30,[sp, #-0x20]!
+0080e364	stp x20,x19,[sp, #0x10]
+0080e368	mov x29,sp
+0080e36c	ldr x20,[x0, #0x58]
+0080e370	mov x19,x0
+0080e374	cbz x20,0x0080e388
+0080e378	add x1,x20,#0x8
+0080e37c	mov x0,#-0x1
+0080e380	bl 0x00c2bd10
+0080e384	cbz x0,0x0080e3a8
+0080e388	ldr x0,[x19, #0x38]
+0080e38c	cbz x0,0x0080e3c8
+0080e390	ldr x8,[x19, #0x48]
+0080e394	str x0,[x19, #0x40]
+0080e398	sub x1,x8,x0
+0080e39c	ldp x20,x19,[sp, #0x10]
+0080e3a0	ldp x29,x30,[sp], #0x20
+0080e3a4	b 0x00c2fe80
+0080e3a8	ldr x8,[x20]
+0080e3ac	mov x0,x20
+0080e3b0	ldr x8,[x8, #0x10]
+0080e3b4	blr x8
+0080e3b8	mov x0,x20
+0080e3bc	bl 0x00c2ff00
+0080e3c0	ldr x0,[x19, #0x38]
+0080e3c4	cbnz x0,0x0080e390
+0080e3c8	ldp x20,x19,[sp, #0x10]
+0080e3cc	ldp x29,x30,[sp], #0x20
+0080e3d0	ret

@@ -1,0 +1,63 @@
+; EVP_MAC_CTX_new @ 00a682a0
+00a682a0	str x21,[sp, #-0x30]!
+00a682a4	adrp x1,0x2a6000
+00a682a8	stp x20,x19,[sp, #0x10]
+00a682ac	mov x20,x0
+00a682b0	add x1,x1,#0x18
+00a682b4	mov w0,#0x10
+00a682b8	orr w2,wzr,#0x18
+00a682bc	stp x29,x30,[sp, #0x20]
+00a682c0	add x29,sp,#0x20
+00a682c4	bl 0x00c34250
+00a682c8	mov x19,x0
+00a682cc	cbz x0,0x00a682fc
+00a682d0	ldr x0,[x20]
+00a682d4	ldr x21,[x20, #0x30]
+00a682d8	bl 0x00c3b680
+00a682dc	blr x21
+00a682e0	str x0,[x19, #0x8]
+00a682e4	cbz x0,0x00a68330
+00a682e8	mov x0,x20
+00a682ec	bl 0x00c3d7e0
+00a682f0	cbz w0,0x00a68330
+00a682f4	str x20,[x19]
+00a682f8	b 0x00a68384
+00a682fc	bl 0x00c342a0
+00a68300	adrp x0,0x2a6000
+00a68304	adrp x2,0x2b0000
+00a68308	add x0,x0,#0x18
+00a6830c	add x2,x2,#0x24
+00a68310	mov w1,#0x1d
+00a68314	bl 0x00c342b0
+00a68318	mov w1,#0x100
+00a6831c	orr w0,wzr,#0x6
+00a68320	movk w1,#0xc, LSL #16
+00a68324	mov x2,xzr
+00a68328	bl 0x00c342c0
+00a6832c	b 0x00a6836c
+00a68330	bl 0x00c342a0
+00a68334	adrp x0,0x2a6000
+00a68338	adrp x2,0x2b0000
+00a6833c	add x0,x0,#0x18
+00a68340	add x2,x2,#0x24
+00a68344	mov w1,#0x1d
+00a68348	bl 0x00c342b0
+00a6834c	mov w1,#0x100
+00a68350	orr w0,wzr,#0x6
+00a68354	movk w1,#0xc, LSL #16
+00a68358	mov x2,xzr
+00a6835c	bl 0x00c342c0
+00a68360	ldr x8,[x20, #0x40]
+00a68364	ldr x0,[x19, #0x8]
+00a68368	blr x8
+00a6836c	adrp x1,0x2a6000
+00a68370	add x1,x1,#0x18
+00a68374	mov w2,#0x20
+00a68378	mov x0,x19
+00a6837c	bl 0x00c32310
+00a68380	mov x19,xzr
+00a68384	mov x0,x19
+00a68388	ldp x29,x30,[sp, #0x20]
+00a6838c	ldp x20,x19,[sp, #0x10]
+00a68390	ldr x21,[sp], #0x30
+00a68394	ret

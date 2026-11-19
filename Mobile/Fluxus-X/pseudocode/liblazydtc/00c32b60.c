@@ -1,0 +1,13 @@
+/* Ghidra 12.2 pseudocode; native types and names may be inferred.
+ * Binary: liblazydtc.so; entry: 00c32b60
+ */
+
+ASN1_OCTET_STRING * X509_EXTENSION_get_data(X509_EXTENSION *ne)
+
+{
+  ASN1_OCTET_STRING *pAVar1;
+  
+  pAVar1 = X509_EXTENSION_get_data(ne);
+  return pAVar1;
+}
+

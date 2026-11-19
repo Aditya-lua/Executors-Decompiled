@@ -1,0 +1,5 @@
+; OSSL_PARAM_get_int @ 00c36510
+00c36510	adrp x16,0xcb9000
+00c36514	ldr x17,[x16, #0x270]
+00c36518	add x16,x16,#0x270
+00c3651c	br x17

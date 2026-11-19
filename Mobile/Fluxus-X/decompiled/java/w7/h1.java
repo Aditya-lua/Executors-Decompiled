@@ -1,0 +1,76 @@
+package w7;
+
+import com.google.android.gms.internal.play_billing.j7;
+import com.google.android.gms.internal.play_billing.l7;
+import com.google.android.gms.internal.play_billing.n7;
+import com.google.android.gms.internal.play_billing.p7;
+import com.google.android.gms.internal.play_billing.q7;
+import com.google.android.gms.internal.play_billing.s7;
+import com.google.android.gms.internal.play_billing.u7;
+import com.google.android.gms.internal.play_billing.z7;
+
+/* JADX INFO: loaded from: classes.dex */
+public final /* synthetic */ class h1 {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ int f35606a = 0;
+
+    static {
+        int i10 = i1.f35617a;
+    }
+
+    public static String a(Exception exc) {
+        if (exc == null) {
+            return null;
+        }
+        try {
+            String str = exc.getClass().getSimpleName() + ":" + com.google.android.gms.internal.play_billing.a0.c(exc.getMessage());
+            int i10 = com.google.android.gms.internal.play_billing.m0.f7176a;
+            return str.length() > 40 ? str.substring(0, 40) : str;
+        } catch (Throwable th2) {
+            com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to get truncated exception info", th2);
+            return null;
+        }
+    }
+
+    public static l7 b(s7 s7Var, int i10, com.android.billingclient.api.d dVar, String str, z7 z7Var) {
+        try {
+            q7 q7VarC = u7.C();
+            q7VarC.v(dVar.c());
+            q7VarC.r(dVar.a());
+            if (dVar.b() != 0) {
+                q7VarC.t(dVar.b());
+            }
+            if (s7Var != null) {
+                q7VarC.u(s7Var);
+            }
+            if (str != null) {
+                q7VarC.q(str);
+            }
+            j7 j7VarE = l7.E();
+            j7VarE.r(q7VarC);
+            j7VarE.v(i10);
+            if (!z7Var.equals(z7.BROADCAST_ACTION_UNSPECIFIED)) {
+                j7VarE.q(z7Var);
+            }
+            return (l7) j7VarE.k();
+        } catch (Throwable th2) {
+            com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to create logging payload", th2);
+            return null;
+        }
+    }
+
+    public static p7 c(int i10, z7 z7Var) {
+        try {
+            n7 n7VarC = p7.C();
+            n7VarC.u(i10);
+            if (!z7Var.equals(z7.BROADCAST_ACTION_UNSPECIFIED)) {
+                n7VarC.q(z7Var);
+            }
+            return (p7) n7VarC.k();
+        } catch (Exception e10) {
+            com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to create logging payload", e10);
+            return null;
+        }
+    }
+}

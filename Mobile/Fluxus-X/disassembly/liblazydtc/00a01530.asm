@@ -1,0 +1,47 @@
+; BN_num_bits_word @ 00a01530
+00a01530	lsr x8,x0,#0x20
+00a01534	neg x10,x8
+00a01538	eor x8,x8,x0
+00a0153c	asr x10,x10,#0x3f
+00a01540	and x8,x8,x10
+00a01544	cmp x0,#0x0
+00a01548	eor x8,x8,x0
+00a0154c	cset w9,ne
+00a01550	and w11,w10,#0x20
+00a01554	lsr x10,x8,#0x10
+00a01558	orr w9,w11,w9
+00a0155c	neg x11,x10
+00a01560	eor x10,x10,x8
+00a01564	asr x11,x11,#0x3f
+00a01568	and x10,x10,x11
+00a0156c	eor x8,x10,x8
+00a01570	lsr x10,x8,#0x8
+00a01574	and w12,w11,#0x10
+00a01578	neg x11,x10
+00a0157c	eor x10,x10,x8
+00a01580	asr x11,x11,#0x3f
+00a01584	and x10,x10,x11
+00a01588	eor x8,x10,x8
+00a0158c	lsr x10,x8,#0x4
+00a01590	orr w9,w9,w12
+00a01594	and w12,w11,#0x8
+00a01598	neg x11,x10
+00a0159c	eor x10,x10,x8
+00a015a0	asr x11,x11,#0x3f
+00a015a4	and x10,x10,x11
+00a015a8	eor x8,x10,x8
+00a015ac	lsr x10,x8,#0x2
+00a015b0	orr w9,w9,w12
+00a015b4	and w12,w11,#0x4
+00a015b8	neg x11,x10
+00a015bc	eor x10,x10,x8
+00a015c0	asr x11,x11,#0x3f
+00a015c4	and x10,x10,x11
+00a015c8	eor x8,x10,x8
+00a015cc	orr w9,w9,w12
+00a015d0	and w12,w11,#0x2
+00a015d4	neg x8,x8, LSR #0x1
+00a015d8	orr w9,w9,w12
+00a015dc	lsr x8,x8,#0x3f
+00a015e0	add w0,w8,w9
+00a015e4	ret

@@ -1,0 +1,4 @@
+; PROXY_CERT_INFO_EXTENSION_free @ 00b00fc0
+00b00fc0	adrp x1,0xc80000
+00b00fc4	add x1,x1,#0x980
+00b00fc8	b 0x00c36160

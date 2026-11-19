@@ -1,0 +1,87 @@
+; ossl_crypto_cleanup_all_ex_data_int @ 00a834d4
+00a834d4	stp x20,x19,[sp, #-0x20]!
+00a834d8	stp x29,x30,[sp, #0x10]
+00a834dc	add x29,sp,#0x10
+00a834e0	bl 0x00c3dee0
+00a834e4	cbz x0,0x00a83620
+00a834e8	mov x19,x0
+00a834ec	ldr x0,[x0, #0x8]
+00a834f0	adrp x20,0xa83000
+00a834f4	add x20,x20,#0x62c
+00a834f8	mov x1,x20
+00a834fc	bl 0x00c32600
+00a83500	ldr x0,[x19, #0x10]
+00a83504	mov x1,x20
+00a83508	str xzr,[x19, #0x8]
+00a8350c	bl 0x00c32600
+00a83510	ldr x0,[x19, #0x18]
+00a83514	mov x1,x20
+00a83518	str xzr,[x19, #0x10]
+00a8351c	bl 0x00c32600
+00a83520	ldr x0,[x19, #0x20]
+00a83524	mov x1,x20
+00a83528	str xzr,[x19, #0x18]
+00a8352c	bl 0x00c32600
+00a83530	ldr x0,[x19, #0x28]
+00a83534	mov x1,x20
+00a83538	str xzr,[x19, #0x20]
+00a8353c	bl 0x00c32600
+00a83540	ldr x0,[x19, #0x30]
+00a83544	mov x1,x20
+00a83548	str xzr,[x19, #0x28]
+00a8354c	bl 0x00c32600
+00a83550	ldr x0,[x19, #0x38]
+00a83554	mov x1,x20
+00a83558	str xzr,[x19, #0x30]
+00a8355c	bl 0x00c32600
+00a83560	ldr x0,[x19, #0x40]
+00a83564	mov x1,x20
+00a83568	str xzr,[x19, #0x38]
+00a8356c	bl 0x00c32600
+00a83570	ldr x0,[x19, #0x48]
+00a83574	mov x1,x20
+00a83578	str xzr,[x19, #0x40]
+00a8357c	bl 0x00c32600
+00a83580	ldr x0,[x19, #0x50]
+00a83584	mov x1,x20
+00a83588	str xzr,[x19, #0x48]
+00a8358c	bl 0x00c32600
+00a83590	ldr x0,[x19, #0x58]
+00a83594	mov x1,x20
+00a83598	str xzr,[x19, #0x50]
+00a8359c	bl 0x00c32600
+00a835a0	ldr x0,[x19, #0x60]
+00a835a4	mov x1,x20
+00a835a8	str xzr,[x19, #0x58]
+00a835ac	bl 0x00c32600
+00a835b0	ldr x0,[x19, #0x68]
+00a835b4	mov x1,x20
+00a835b8	str xzr,[x19, #0x60]
+00a835bc	bl 0x00c32600
+00a835c0	ldr x0,[x19, #0x70]
+00a835c4	mov x1,x20
+00a835c8	str xzr,[x19, #0x68]
+00a835cc	bl 0x00c32600
+00a835d0	ldr x0,[x19, #0x78]
+00a835d4	mov x1,x20
+00a835d8	str xzr,[x19, #0x70]
+00a835dc	bl 0x00c32600
+00a835e0	ldr x0,[x19, #0x80]
+00a835e4	mov x1,x20
+00a835e8	str xzr,[x19, #0x78]
+00a835ec	bl 0x00c32600
+00a835f0	ldr x0,[x19, #0x88]
+00a835f4	mov x1,x20
+00a835f8	str xzr,[x19, #0x80]
+00a835fc	bl 0x00c32600
+00a83600	ldr x0,[x19, #0x90]
+00a83604	mov x1,x20
+00a83608	str xzr,[x19, #0x88]
+00a8360c	bl 0x00c32600
+00a83610	ldr x0,[x19]
+00a83614	str xzr,[x19, #0x90]
+00a83618	bl 0x00c34d40
+00a8361c	str xzr,[x19]
+00a83620	ldp x29,x30,[sp, #0x10]
+00a83624	ldp x20,x19,[sp], #0x20
+00a83628	ret

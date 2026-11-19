@@ -1,0 +1,41 @@
+; FUN_009082b0 @ 009082b0
+009082b0	sub sp,sp,#0x30
+009082b4	str x19,[sp, #0x10]
+009082b8	stp x29,x30,[sp, #0x20]
+009082bc	add x29,sp,#0x20
+009082c0	mrs x19,tpidr_el0
+009082c4	ldr x8,[x19, #0x28]
+009082c8	str x8,[sp, #0x8]
+009082cc	str wzr,[sp, #0x4]
+009082d0	add x8,x1,w2, SXTW  #0x3
+009082d4	ldr x8,[x8, #0x248]
+009082d8	mov x1,x0
+009082dc	cbz x8,0x0090830c
+009082e0	ldr x9,[x8]
+009082e4	mov w2,#0x1
+009082e8	add x3,sp,#0x4
+009082ec	mov x0,x8
+009082f0	ldr x9,[x9, #0x70]
+009082f4	mov x4,xzr
+009082f8	blr x9
+009082fc	ldr w9,[sp, #0x4]
+00908300	cmp w0,#0x0
+00908304	cset w8,ne
+00908308	b 0x00908314
+0090830c	mov w9,wzr
+00908310	mov w8,#0x1
+00908314	cmp w9,#0x1
+00908318	ldr x10,[x19, #0x28]
+0090831c	ldr x11,[sp, #0x8]
+00908320	cset w12,lt
+00908324	orr w8,w8,w12
+00908328	sxtw x9,w9
+0090832c	cmp w8,#0x0
+00908330	csinc x0,x9,xzr,eq
+00908334	cmp x10,x11
+00908338	b.ne 0x0090834c
+0090833c	ldp x29,x30,[sp, #0x20]
+00908340	ldr x19,[sp, #0x10]
+00908344	add sp,sp,#0x30
+00908348	ret
+0090834c	bl 0x00c2fec0

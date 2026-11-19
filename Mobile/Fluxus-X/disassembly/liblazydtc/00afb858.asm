@@ -1,0 +1,4 @@
+; d2i_CERTIFICATEPOLICIES @ 00afb858
+00afb858	adrp x3,0xc7e000
+00afb85c	add x3,x3,#0xf30
+00afb860	b 0x00c36150

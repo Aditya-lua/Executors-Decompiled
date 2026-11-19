@@ -1,0 +1,77 @@
+; DobbyHook @ 008e3388
+008e3388	str x30,[sp, #-0x30]!
+008e338c	stp x22,x21,[sp, #0x10]
+008e3390	stp x20,x19,[sp, #0x20]
+008e3394	cbz x0,0x008e345c
+008e3398	mov x19,x2
+008e339c	mov x20,x1
+008e33a0	mov x21,x0
+008e33a4	bl 0x008e4ce8
+008e33a8	mov x1,x21
+008e33ac	bl 0x008e4d3c
+008e33b0	cbz x0,0x008e33c4
+008e33b4	ldr x8,[x0, #0x10]
+008e33b8	ldr x8,[x8, #0x30]
+008e33bc	cmp x8,x20
+008e33c0	b.eq 0x008e3480
+008e33c4	mov w0,#0x70
+008e33c8	bl 0x00c2fed0
+008e33cc	movi v0.2D,#0x0
+008e33d0	mov x22,x0
+008e33d4	stp q0,q0,[x0]
+008e33d8	stp q0,q0,[x0, #0x20]
+008e33dc	stp q0,q0,[x0, #0x40]
+008e33e0	str q0,[x0, #0x60]
+008e33e4	bl 0x008e4ce8
+008e33e8	bl 0x008e4d8c
+008e33ec	mov w8,#0x1
+008e33f0	stp w0,w8,[x22]
+008e33f4	mov w0,#0x40
+008e33f8	str x21,[x22, #0x8]
+008e33fc	bl 0x00c2fed0
+008e3400	str x0,[x22, #0x10]
+008e3404	stp xzr,xzr,[x0, #0x20]
+008e3408	adrp x8,0xc4e000
+008e340c	add x8,x8,#0x3a0
+008e3410	mov x21,x0
+008e3414	stp xzr,x20,[x0, #0x30]
+008e3418	add x9,x8,#0x10
+008e341c	ldr x8,[x8, #0x18]
+008e3420	stp x9,x22,[x0]
+008e3424	blr x8
+008e3428	ldr x8,[x21]
+008e342c	mov x0,x21
+008e3430	ldr x8,[x8]
+008e3434	blr x8
+008e3438	bl 0x008e4ce8
+008e343c	mov x1,x22
+008e3440	bl 0x008e4d54
+008e3444	ldr x8,[x22, #0x18]
+008e3448	mov x0,x21
+008e344c	str x8,[x19]
+008e3450	bl 0x008e3624
+008e3454	mov w19,wzr
+008e3458	b 0x008e34a4
+008e345c	bl 0x008e34b8
+008e3460	mov w3,#0x9
+008e3464	mov w19,#0xffffffff
+008e3468	bl 0x00c30b30
+008e346c	adrp x1,0x2a7000
+008e3470	add x1,x1,#0x1fa
+008e3474	mov w0,#0xffffffff
+008e3478	bl 0x00c30b30
+008e347c	b 0x008e34a4
+008e3480	bl 0x008e34b8
+008e3484	mov w3,#0x14
+008e3488	mov w19,#0xffffffff
+008e348c	bl 0x00c30b30
+008e3490	adrp x1,0x2af000
+008e3494	add x1,x1,#0xbf
+008e3498	mov w0,#0xffffffff
+008e349c	mov x2,x21
+008e34a0	bl 0x00c30b30
+008e34a4	mov w0,w19
+008e34a8	ldp x20,x19,[sp, #0x20]
+008e34ac	ldp x22,x21,[sp, #0x10]
+008e34b0	ldr x30,[sp], #0x30
+008e34b4	ret

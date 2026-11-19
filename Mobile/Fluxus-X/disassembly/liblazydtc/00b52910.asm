@@ -1,0 +1,24 @@
+; FUN_00b52910 @ 00b52910
+00b52910	stp x20,x19,[sp, #-0x20]!
+00b52914	stp x29,x30,[sp, #0x10]
+00b52918	add x29,sp,#0x10
+00b5291c	mov x20,x1
+00b52920	mov x19,x0
+00b52924	bl 0x00c41000
+00b52928	mov w8,w0
+00b5292c	cmp x20,#0x8
+00b52930	mov x0,xzr
+00b52934	b.ne 0x00b52960
+00b52938	cbz w8,0x00b52960
+00b5293c	ldr x20,[x19]
+00b52940	orr w1,wzr,#0xf000
+00b52944	mov x0,x20
+00b52948	bl 0x00c3fac0
+00b5294c	cmp w0,#0x1, LSL #12
+00b52950	mov x0,xzr
+00b52954	b.ne 0x00b52960
+00b52958	mov x0,x20
+00b5295c	str xzr,[x19]
+00b52960	ldp x29,x30,[sp, #0x10]
+00b52964	ldp x20,x19,[sp], #0x20
+00b52968	ret

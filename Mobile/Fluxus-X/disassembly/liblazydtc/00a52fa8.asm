@@ -1,0 +1,83 @@
+; ossl_engine_table_select @ 00a52fa8
+00a52fa8	sub sp,sp,#0x60
+00a52fac	stp x20,x19,[sp, #0x40]
+00a52fb0	mov w19,w1
+00a52fb4	mov x20,x0
+00a52fb8	mov w0,#0x40
+00a52fbc	mov x1,xzr
+00a52fc0	stp x24,x23,[sp, #0x20]
+00a52fc4	stp x22,x21,[sp, #0x30]
+00a52fc8	stp x29,x30,[sp, #0x50]
+00a52fcc	add x29,sp,#0x50
+00a52fd0	bl 0x00c35500
+00a52fd4	ldr x8,[x20]
+00a52fd8	cbz x8,0x00a53034
+00a52fdc	bl 0x00c35250
+00a52fe0	adrp x22,0xcb5000
+00a52fe4	ldr x22,[x22, #0x5d8]
+00a52fe8	ldr x0,[x22]
+00a52fec	bl 0x00c356a0
+00a52ff0	cbz w0,0x00a5302c
+00a52ff4	ldr x0,[x20]
+00a52ff8	cbz x0,0x00a5302c
+00a52ffc	mov x1,sp
+00a53000	str w19,[sp]
+00a53004	bl 0x00c34de0
+00a53008	cbz x0,0x00a5302c
+00a5300c	mov x20,x0
+00a53010	ldr x0,[x0, #0x10]
+00a53014	cbz x0,0x00a5303c
+00a53018	bl 0x00c3bb30
+00a5301c	cbz w0,0x00a5303c
+00a53020	ldr x19,[x20, #0x10]
+00a53024	add x23,x20,#0x18
+00a53028	b 0x00a530c0
+00a5302c	mov x19,xzr
+00a53030	b 0x00a530c8
+00a53034	mov x19,xzr
+00a53038	b 0x00a530d4
+00a5303c	mov x23,x20
+00a53040	ldr w8,[x23, #0x18]!
+00a53044	cbz w8,0x00a53050
+00a53048	ldr x19,[x20, #0x10]
+00a5304c	b 0x00a530c0
+00a53050	mov w21,wzr
+00a53054	adrp x24,0xd21000
+00a53058	ldr x0,[x20, #0x8]
+00a5305c	mov w1,w21
+00a53060	bl 0x00c32610
+00a53064	mov x19,x0
+00a53068	cbz x0,0x00a530c0
+00a5306c	ldr w8,[x19, #0xa0]
+00a53070	add w21,w21,#0x1
+00a53074	cmp w8,#0x0
+00a53078	b.gt 0x00a53088
+00a5307c	ldrb w8,[x24, #0x9d0]
+00a53080	mov w0,wzr
+00a53084	tbnz w8,#0x0,0x00a53090
+00a53088	mov x0,x19
+00a5308c	bl 0x00c3bb30
+00a53090	cbz w0,0x00a53058
+00a53094	ldr x8,[x20, #0x10]
+00a53098	cmp x8,x19
+00a5309c	b.eq 0x00a530c0
+00a530a0	mov x0,x19
+00a530a4	bl 0x00c3bb30
+00a530a8	cbz w0,0x00a530c0
+00a530ac	ldr x0,[x20, #0x10]
+00a530b0	cbz x0,0x00a530bc
+00a530b4	mov w1,wzr
+00a530b8	bl 0x00c3bb20
+00a530bc	str x19,[x20, #0x10]
+00a530c0	mov w8,#0x1
+00a530c4	str w8,[x23]
+00a530c8	ldr x0,[x22]
+00a530cc	bl 0x00c35690
+00a530d0	bl 0x00c35240
+00a530d4	mov x0,x19
+00a530d8	ldp x29,x30,[sp, #0x50]
+00a530dc	ldp x20,x19,[sp, #0x40]
+00a530e0	ldp x22,x21,[sp, #0x30]
+00a530e4	ldp x24,x23,[sp, #0x20]
+00a530e8	add sp,sp,#0x60
+00a530ec	ret

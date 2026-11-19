@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/experience_item" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/experience_img" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@color/black" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/bottom_gradient" android:background="@drawable/recently_played_widget_small_gradient" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dp" android:text="@string/Widgets_RecentlyPlayed_Label_WidgetGalleryTitle" android:fontFamily="sans-serif" />
+        <TextView android:textSize="12.0sp" android:textStyle="normal" android:textColor="@color/white" android:ellipsize="end" android:id="@id/experience_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Roblox_Application_Name" android:maxLines="1" android:fontFamily="sans-serif" />
+    </LinearLayout>
+    <ImageView android:id="@id/app_icon" android:layout_width="@dimen/recently_played_widget_roblox_icon_with_shadow_size" android:layout_height="@dimen/recently_played_widget_roblox_icon_with_shadow_size" android:layout_marginTop="12.0dp" android:src="@drawable/roblox_logo_icon_with_shadow" android:layout_alignParentTop="true" android:importantForAccessibility="no" android:layout_marginEnd="12.0dp" android:layout_alignParentEnd="true" />
+</RelativeLayout>

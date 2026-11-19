@@ -1,0 +1,4 @@
+; i2d_X509_ATTRIBUTE @ 00b1b004
+00b1b004	adrp x2,0xc81000
+00b1b008	add x2,x2,#0xfd0
+00b1b00c	b 0x00c36170

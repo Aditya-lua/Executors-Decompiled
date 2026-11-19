@@ -1,0 +1,34 @@
+; ossl_kdf_data_new @ 00b51098
+00b51098	stp x20,x19,[sp, #-0x20]!
+00b5109c	stp x29,x30,[sp, #0x10]
+00b510a0	add x29,sp,#0x10
+00b510a4	mov x20,x0
+00b510a8	bl 0x00c41000
+00b510ac	cbz w0,0x00b51108
+00b510b0	adrp x1,0x2b0000
+00b510b4	add x1,x1,#0xe92
+00b510b8	orr w0,wzr,#0x18
+00b510bc	mov w2,#0x24
+00b510c0	bl 0x00c34250
+00b510c4	mov x19,x0
+00b510c8	cbz x0,0x00b5110c
+00b510cc	bl 0x00c34d50
+00b510d0	str x0,[x19, #0x10]
+00b510d4	cbz x0,0x00b510f4
+00b510d8	mov x0,x20
+00b510dc	bl 0x00c41210
+00b510e0	mov x8,x19
+00b510e4	str x0,[x8], #0x8
+00b510e8	mov w9,#0x1
+00b510ec	stlr w9,[x8]
+00b510f0	b 0x00b5110c
+00b510f4	adrp x1,0x2b0000
+00b510f8	add x1,x1,#0xe92
+00b510fc	mov w2,#0x2a
+00b51100	mov x0,x19
+00b51104	bl 0x00c32310
+00b51108	mov x19,xzr
+00b5110c	ldp x29,x30,[sp, #0x10]
+00b51110	mov x0,x19
+00b51114	ldp x20,x19,[sp], #0x20
+00b51118	ret

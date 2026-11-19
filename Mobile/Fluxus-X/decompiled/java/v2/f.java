@@ -1,0 +1,286 @@
+package v2;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.graphics.Typeface;
+import android.os.Build;
+import androidx.core.graphics.k;
+import backtraceio.library.services.BacktraceMetrics;
+import g0.o0;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import w1.i;
+import w1.j;
+
+/* JADX INFO: loaded from: classes.dex */
+public class f {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final i<String, Typeface> f34167a = new i<>(16);
+    public static final ExecutorService b = h.a("fonts-androidx", 10, BacktraceMetrics.defaultTimeBetweenRetriesMs);
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final Object f34168c = new Object();
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final j<String, ArrayList<x2.a<e>>> f34169d = new j<>();
+
+    public class a implements Callable<e> {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ String f34170a;
+        public final /* synthetic */ Context b;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public final /* synthetic */ v2.e f34171c;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        public final /* synthetic */ int f34172d;
+
+        public a(String str, Context context, v2.e eVar, int i10) {
+            this.f34170a = str;
+            this.b = context;
+            this.f34171c = eVar;
+            this.f34172d = i10;
+        }
+
+        @Override // java.util.concurrent.Callable
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public e call() {
+            return f.c(this.f34170a, this.b, o0.a(new Object[]{this.f34171c}), this.f34172d);
+        }
+    }
+
+    public class b implements x2.a<e> {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ v2.a f34173a;
+
+        public b(v2.a aVar) {
+            this.f34173a = aVar;
+        }
+
+        @Override // x2.a
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public void accept(e eVar) {
+            if (eVar == null) {
+                eVar = new e(-3);
+            }
+            this.f34173a.b(eVar);
+        }
+    }
+
+    public class c implements Callable<e> {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ String f34174a;
+        public final /* synthetic */ Context b;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public final /* synthetic */ List f34175c;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        public final /* synthetic */ int f34176d;
+
+        public c(String str, Context context, List list, int i10) {
+            this.f34174a = str;
+            this.b = context;
+            this.f34175c = list;
+            this.f34176d = i10;
+        }
+
+        @Override // java.util.concurrent.Callable
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public e call() {
+            try {
+                return f.c(this.f34174a, this.b, this.f34175c, this.f34176d);
+            } catch (Throwable unused) {
+                return new e(-3);
+            }
+        }
+    }
+
+    public class d implements x2.a<e> {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ String f34177a;
+
+        public d(String str) {
+            this.f34177a = str;
+        }
+
+        @Override // x2.a
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public void accept(e eVar) {
+            synchronized (f.f34168c) {
+                try {
+                    j<String, ArrayList<x2.a<e>>> jVar = f.f34169d;
+                    ArrayList<x2.a<e>> arrayList = jVar.get(this.f34177a);
+                    if (arrayList == null) {
+                        return;
+                    }
+                    jVar.remove(this.f34177a);
+                    for (int i10 = 0; i10 < arrayList.size(); i10++) {
+                        arrayList.get(i10).accept(eVar);
+                    }
+                } catch (Throwable th2) {
+                    throw th2;
+                }
+            }
+        }
+    }
+
+    public static String a(List<v2.e> list, int i10) {
+        StringBuilder sb2 = new StringBuilder();
+        for (int i11 = 0; i11 < list.size(); i11++) {
+            sb2.append(list.get(i11).d());
+            sb2.append("-");
+            sb2.append(i10);
+            if (i11 < list.size() - 1) {
+                sb2.append(";");
+            }
+        }
+        return sb2.toString();
+    }
+
+    @SuppressLint({"WrongConstant"})
+    public static int b(g.a aVar) {
+        int i10 = 1;
+        if (aVar.e() != 0) {
+            return aVar.e() != 1 ? -3 : -2;
+        }
+        g.b[] bVarArrC = aVar.c();
+        if (bVarArrC != null && bVarArrC.length != 0) {
+            i10 = 0;
+            for (g.b bVar : bVarArrC) {
+                int iB = bVar.b();
+                if (iB != 0) {
+                    if (iB < 0) {
+                        return -3;
+                    }
+                    return iB;
+                }
+            }
+        }
+        return i10;
+    }
+
+    public static e c(String str, Context context, List<v2.e> list, int i10) {
+        o5.a.c("getFontSync");
+        try {
+            i<String, Typeface> iVar = f34167a;
+            Typeface typefaceD = iVar.d(str);
+            if (typefaceD != null) {
+                e eVar = new e(typefaceD);
+                o5.a.f();
+                return eVar;
+            }
+            try {
+                g.a aVarE = v2.d.e(context, list, null);
+                int iB = b(aVarE);
+                if (iB != 0) {
+                    e eVar2 = new e(iB);
+                    o5.a.f();
+                    return eVar2;
+                }
+                Typeface typefaceB = (!aVarE.f() || Build.VERSION.SDK_INT < 29) ? k.b(context, null, aVarE.c(), i10) : k.c(context, null, aVarE.d(), i10);
+                if (typefaceB == null) {
+                    e eVar3 = new e(-3);
+                    o5.a.f();
+                    return eVar3;
+                }
+                iVar.e(str, typefaceB);
+                e eVar4 = new e(typefaceB);
+                o5.a.f();
+                return eVar4;
+            } catch (PackageManager.NameNotFoundException unused) {
+                e eVar5 = new e(-1);
+                o5.a.f();
+                return eVar5;
+            }
+        } catch (Throwable th2) {
+            o5.a.f();
+            throw th2;
+        }
+    }
+
+    public static Typeface d(Context context, List<v2.e> list, int i10, Executor executor, v2.a aVar) {
+        String strA = a(list, i10);
+        Typeface typefaceD = f34167a.d(strA);
+        if (typefaceD != null) {
+            aVar.b(new e(typefaceD));
+            return typefaceD;
+        }
+        b bVar = new b(aVar);
+        synchronized (f34168c) {
+            try {
+                j<String, ArrayList<x2.a<e>>> jVar = f34169d;
+                ArrayList<x2.a<e>> arrayList = jVar.get(strA);
+                if (arrayList != null) {
+                    arrayList.add(bVar);
+                    return null;
+                }
+                ArrayList<x2.a<e>> arrayList2 = new ArrayList<>();
+                arrayList2.add(bVar);
+                jVar.put(strA, arrayList2);
+                c cVar = new c(strA, context, list, i10);
+                if (executor == null) {
+                    executor = b;
+                }
+                h.c(executor, cVar, new d(strA));
+                return null;
+            } catch (Throwable th2) {
+                throw th2;
+            }
+        }
+    }
+
+    public static Typeface e(Context context, v2.e eVar, v2.a aVar, int i10, int i11) {
+        String strA = a(o0.a(new Object[]{eVar}), i10);
+        Typeface typefaceD = f34167a.d(strA);
+        if (typefaceD != null) {
+            aVar.b(new e(typefaceD));
+            return typefaceD;
+        }
+        if (i11 == -1) {
+            e eVarC = c(strA, context, o0.a(new Object[]{eVar}), i10);
+            aVar.b(eVarC);
+            return eVarC.f34178a;
+        }
+        try {
+            e eVar2 = (e) h.d(b, new a(strA, context, eVar, i10), i11);
+            aVar.b(eVar2);
+            return eVar2.f34178a;
+        } catch (InterruptedException unused) {
+            aVar.b(new e(-3));
+            return null;
+        }
+    }
+
+    public static final class e {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final Typeface f34178a;
+        public final int b;
+
+        public e(int i10) {
+            this.f34178a = null;
+            this.b = i10;
+        }
+
+        @SuppressLint({"WrongConstant"})
+        public boolean a() {
+            return this.b == 0;
+        }
+
+        @SuppressLint({"WrongConstant"})
+        public e(Typeface typeface) {
+            this.f34178a = typeface;
+            this.b = 0;
+        }
+    }
+}

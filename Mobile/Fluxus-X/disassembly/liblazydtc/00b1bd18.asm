@@ -1,0 +1,4 @@
+; i2d_X509_NAME_ENTRY @ 00b1bd18
+00b1bd18	adrp x2,0xc82000
+00b1bd1c	add x2,x2,#0x478
+00b1bd20	b 0x00c36170

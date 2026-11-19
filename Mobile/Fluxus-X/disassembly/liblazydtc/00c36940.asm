@@ -1,0 +1,5 @@
+; HMAC_Update @ 00c36940
+00c36940	adrp x16,0xcb9000
+00c36944	ldr x17,[x16, #0x488]
+00c36948	add x16,x16,#0x488
+00c3694c	br x17

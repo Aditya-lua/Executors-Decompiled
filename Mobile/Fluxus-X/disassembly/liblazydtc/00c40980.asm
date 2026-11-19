@@ -1,0 +1,5 @@
+; v2i_GENERAL_NAMES @ 00c40980
+00c40980	adrp x16,0xcbe000
+00c40984	ldr x17,[x16, #0x4a8]
+00c40988	add x16,x16,#0x4a8
+00c4098c	br x17

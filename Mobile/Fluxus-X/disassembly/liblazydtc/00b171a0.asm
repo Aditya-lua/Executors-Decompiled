@@ -1,0 +1,43 @@
+; OSSL_HTTP_REQ_CTX_free @ 00b171a0
+00b171a0	cbz x0,0x00b17244
+00b171a4	stp x20,x19,[sp, #-0x20]!
+00b171a8	stp x29,x30,[sp, #0x10]
+00b171ac	ldr w8,[x0, #0x14]
+00b171b0	mov x19,x0
+00b171b4	add x29,sp,#0x10
+00b171b8	cbz w8,0x00b171c4
+00b171bc	ldr x0,[x19, #0x18]
+00b171c0	bl 0x00c355e0
+00b171c4	ldr x0,[x19, #0x58]
+00b171c8	bl 0x00c31a40
+00b171cc	ldr x0,[x19, #0x60]
+00b171d0	bl 0x00c31a40
+00b171d4	ldr x0,[x19, #0x8]
+00b171d8	adrp x20,0x2d6000
+00b171dc	add x20,x20,#0x829
+00b171e0	mov w2,#0x81
+00b171e4	mov x1,x20
+00b171e8	bl 0x00c32310
+00b171ec	ldr x0,[x19, #0x40]
+00b171f0	mov w2,#0x82
+00b171f4	mov x1,x20
+00b171f8	bl 0x00c32310
+00b171fc	ldr x0,[x19, #0x48]
+00b17200	mov w2,#0x83
+00b17204	mov x1,x20
+00b17208	bl 0x00c32310
+00b1720c	ldr x0,[x19, #0x50]
+00b17210	mov w2,#0x84
+00b17214	mov x1,x20
+00b17218	bl 0x00c32310
+00b1721c	ldr x0,[x19, #0x70]
+00b17220	mov w2,#0x85
+00b17224	mov x1,x20
+00b17228	bl 0x00c32310
+00b1722c	ldp x29,x30,[sp, #0x10]
+00b17230	mov w2,#0x86
+00b17234	mov x0,x19
+00b17238	mov x1,x20
+00b1723c	ldp x20,x19,[sp], #0x20
+00b17240	b 0x00c32310
+00b17244	ret

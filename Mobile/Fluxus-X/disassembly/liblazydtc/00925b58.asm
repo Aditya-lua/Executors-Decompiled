@@ -1,0 +1,81 @@
+; FUN_00925b58 @ 00925b58
+00925b58	sub sp,sp,#0x90
+00925b5c	stp x26,x25,[sp, #0x40]
+00925b60	stp x24,x23,[sp, #0x50]
+00925b64	stp x22,x21,[sp, #0x60]
+00925b68	stp x20,x19,[sp, #0x70]
+00925b6c	stp x29,x30,[sp, #0x80]
+00925b70	add x29,sp,#0x80
+00925b74	mrs x25,tpidr_el0
+00925b78	ldr x9,[x25, #0x28]
+00925b7c	mov w8,w0
+00925b80	mov x19,x5
+00925b84	mov x20,x4
+00925b88	mov x21,x3
+00925b8c	mov w0,wzr
+00925b90	cmp w8,#0x2
+00925b94	str x9,[sp, #0x38]
+00925b98	b.ne 0x00925c68
+00925b9c	cbz x21,0x00925c68
+00925ba0	mov x0,x21
+00925ba4	bl 0x00c2ff50
+00925ba8	mov x23,x0
+00925bac	cmp x0,#0xf
+00925bb0	mov w0,wzr
+00925bb4	b.hi 0x00925c68
+00925bb8	mov w0,#0x2
+00925bbc	mov w1,#0x1
+00925bc0	mov w2,wzr
+00925bc4	mov w26,#0x2
+00925bc8	bl 0x00c31c70
+00925bcc	mov w22,w0
+00925bd0	cmn w0,#0x1
+00925bd4	b.eq 0x00925c64
+00925bd8	add x24,x23,#0x1
+00925bdc	mov w8,#0x27
+00925be0	add x9,sp,#0x10
+00925be4	sub x8,x8,x23
+00925be8	cmp x24,#0x27
+00925bec	csel x2,xzr,x8,hi
+00925bf0	add x0,x9,x24
+00925bf4	mov w1,wzr
+00925bf8	bl 0x00c301c0
+00925bfc	add x0,sp,#0x10
+00925c00	mov x1,x21
+00925c04	mov x2,x24
+00925c08	bl 0x00c2ffd0
+00925c0c	mov w1,#0x8915
+00925c10	add x2,sp,#0x10
+00925c14	mov w0,w22
+00925c18	strh w26,[sp, #0x20]
+00925c1c	bl 0x00c31e90
+00925c20	tbnz w0,#0x1f,0x00925c5c
+00925c24	ldr w8,[sp, #0x24]
+00925c28	ldrh w0,[sp, #0x20]
+00925c2c	add x1,sp,#0x8
+00925c30	mov x2,x20
+00925c34	mov w3,w19
+00925c38	str w8,[sp, #0x8]
+00925c3c	bl 0x00c31bd0
+00925c40	mov x19,x0
+00925c44	mov w0,w22
+00925c48	bl 0x00c31bf0
+00925c4c	cmp x19,#0x0
+00925c50	mov w8,#0x2
+00925c54	csel w0,wzr,w8,eq
+00925c58	b 0x00925c68
+00925c5c	mov w0,w22
+00925c60	bl 0x00c31bf0
+00925c64	mov w0,wzr
+00925c68	ldr x8,[x25, #0x28]
+00925c6c	ldr x9,[sp, #0x38]
+00925c70	cmp x8,x9
+00925c74	b.ne 0x00925c94
+00925c78	ldp x29,x30,[sp, #0x80]
+00925c7c	ldp x20,x19,[sp, #0x70]
+00925c80	ldp x22,x21,[sp, #0x60]
+00925c84	ldp x24,x23,[sp, #0x50]
+00925c88	ldp x26,x25,[sp, #0x40]
+00925c8c	add sp,sp,#0x90
+00925c90	ret
+00925c94	bl 0x00c2fec0

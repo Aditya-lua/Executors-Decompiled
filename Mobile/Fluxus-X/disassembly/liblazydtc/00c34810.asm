@@ -1,0 +1,5 @@
+; X509_NAME_free @ 00c34810
+00c34810	adrp x16,0xcb8000
+00c34814	ldr x17,[x16, #0x3f0]
+00c34818	add x16,x16,#0x3f0
+00c3481c	br x17

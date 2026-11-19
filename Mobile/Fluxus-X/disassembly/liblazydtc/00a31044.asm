@@ -1,0 +1,22 @@
+; EC_GROUP_set_curve_GFp @ 00a31044
+00a31044	ldr x8,[x0]
+00a31048	ldr x5,[x8, #0x28]
+00a3104c	cbz x5,0x00a31054
+00a31050	br x5
+00a31054	stp x29,x30,[sp, #-0x10]!
+00a31058	mov x29,sp
+00a3105c	bl 0x00c342a0
+00a31060	adrp x0,0x29e000
+00a31064	adrp x2,0x2aa000
+00a31068	add x0,x0,#0xa7
+00a3106c	add x2,x2,#0x91
+00a31070	mov w1,#0x22f
+00a31074	bl 0x00c342b0
+00a31078	mov w1,#0x101
+00a3107c	mov w0,#0x10
+00a31080	movk w1,#0xc, LSL #16
+00a31084	mov x2,xzr
+00a31088	bl 0x00c342c0
+00a3108c	mov w0,wzr
+00a31090	ldp x29,x30,[sp], #0x10
+00a31094	ret

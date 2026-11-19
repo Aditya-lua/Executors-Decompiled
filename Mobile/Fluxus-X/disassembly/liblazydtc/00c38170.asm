@@ -1,0 +1,5 @@
+; ASN1_OCTET_STRING_new @ 00c38170
+00c38170	adrp x16,0xcba000
+00c38174	ldr x17,[x16, #0xa0]
+00c38178	add x16,x16,#0xa0
+00c3817c	br x17

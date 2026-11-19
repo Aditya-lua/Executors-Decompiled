@@ -1,0 +1,16 @@
+package k9;
+
+import android.content.Intent;
+import androidx.annotation.NonNull;
+
+/* JADX INFO: loaded from: classes.dex */
+public class n extends Exception {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final Intent f21277a;
+
+    public n(@NonNull String str, @NonNull Intent intent) {
+        super(str);
+        this.f21277a = intent;
+    }
+}

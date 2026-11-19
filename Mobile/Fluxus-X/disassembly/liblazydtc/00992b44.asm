@@ -1,0 +1,115 @@
+; ix::WebSocketPerMessageDeflateOptions::removeSpaces @ 00992b44
+00992b44	stp x24,x23,[sp, #-0x40]!
+00992b48	stp x22,x21,[sp, #0x10]
+00992b4c	stp x20,x19,[sp, #0x20]
+00992b50	stp x29,x30,[sp, #0x30]
+00992b54	add x29,sp,#0x30
+00992b58	stp xzr,xzr,[x8, #0x8]
+00992b5c	str xzr,[x8]
+00992b60	mov x19,x8
+00992b64	ldrb w8,[x0]
+00992b68	tbnz w8,#0x0,0x00992b80
+00992b6c	ldr x8,[x0, #0x10]
+00992b70	str x8,[x19, #0x10]
+00992b74	ldr q0,[x0]
+00992b78	str q0,[x19]
+00992b7c	b 0x00992be0
+00992b80	ldr x20,[x0, #0x8]
+00992b84	cmn x20,#0x10
+00992b88	b.cs 0x00992d04
+00992b8c	ldr x21,[x0, #0x10]
+00992b90	cmp x20,#0x17
+00992b94	b.cs 0x00992bac
+00992b98	lsl w8,w20,#0x1
+00992b9c	mov x22,x19
+00992ba0	strb w8,[x22], #0x1
+00992ba4	cbnz x20,0x00992bcc
+00992ba8	b 0x00992bdc
+00992bac	add x8,x20,#0x10
+00992bb0	and x23,x8,#-0x10
+00992bb4	mov x0,x23
+00992bb8	bl 0x00c2fed0
+00992bbc	orr x8,x23,#0x1
+00992bc0	mov x22,x0
+00992bc4	stp x20,x0,[x19, #0x8]
+00992bc8	str x8,[x19]
+00992bcc	mov x0,x22
+00992bd0	mov x1,x21
+00992bd4	mov x2,x20
+00992bd8	bl 0x00c2ffd0
+00992bdc	strb wzr,[x22, x20]
+00992be0	ldrb w20,[x19]
+00992be4	ldp x9,x8,[x19, #0x8]
+00992be8	lsr w10,w20,#0x1
+00992bec	tst w20,#0x1
+00992bf0	csinc x21,x8,x19,ne
+00992bf4	csel x23,x10,x9,eq
+00992bf8	add x22,x21,x23
+00992bfc	cbz x23,0x00992c30
+00992c00	add x24,x21,#0x1
+00992c04	ldurb w0,[x24, #-0x1]
+00992c08	bl 0x00c33dc0
+00992c0c	cbnz w0,0x00992c30
+00992c10	mov x21,x24
+00992c14	subs x23,x23,#0x1
+00992c18	add x24,x24,#0x1
+00992c1c	b.ne 0x00992c04
+00992c20	mov x21,x22
+00992c24	add x8,x19,#0x1
+00992c28	tbz w20,#0x0,0x00992c70
+00992c2c	b 0x00992c84
+00992c30	cmp x21,x22
+00992c34	b.eq 0x00992c68
+00992c38	add x23,x21,#0x1
+00992c3c	cmp x23,x22
+00992c40	b.eq 0x00992c68
+00992c44	ldrb w20,[x23]
+00992c48	mov w0,w20
+00992c4c	bl 0x00c33dc0
+00992c50	cbnz w0,0x00992c58
+00992c54	strb w20,[x21], #0x1
+00992c58	add x23,x23,#0x1
+00992c5c	cmp x22,x23
+00992c60	b.ne 0x00992c44
+00992c64	ldrb w20,[x19]
+00992c68	add x8,x19,#0x1
+00992c6c	tbnz w20,#0x0,0x00992c84
+00992c70	lsr w22,w20,#0x1
+00992c74	add x9,x19,x22
+00992c78	add x10,x9,#0x1
+00992c7c	mov x9,x8
+00992c80	b 0x00992c8c
+00992c84	ldp x22,x9,[x19, #0x8]
+00992c88	add x10,x9,x22
+00992c8c	sub x9,x21,x9
+00992c90	subs x11,x22,x9
+00992c94	b.cc 0x00992cfc
+00992c98	sub x10,x10,x21
+00992c9c	cbz x10,0x00992ce8
+00992ca0	ldr x12,[x19, #0x10]
+00992ca4	tst w20,#0x1
+00992ca8	csel x21,x8,x12,eq
+00992cac	cmp x11,x10
+00992cb0	csel x23,x11,x10,cc
+00992cb4	subs x2,x11,x23
+00992cb8	b.eq 0x00992ccc
+00992cbc	add x0,x21,x9
+00992cc0	add x1,x0,x23
+00992cc4	bl 0x00c2ff60
+00992cc8	ldrb w20,[x19]
+00992ccc	sub x8,x22,x23
+00992cd0	tbnz w20,#0x0,0x00992ce0
+00992cd4	lsl w9,w8,#0x1
+00992cd8	strb w9,[x19]
+00992cdc	b 0x00992ce4
+00992ce0	str x8,[x19, #0x8]
+00992ce4	strb wzr,[x21, x8]
+00992ce8	ldp x29,x30,[sp, #0x30]
+00992cec	ldp x20,x19,[sp, #0x20]
+00992cf0	ldp x22,x21,[sp, #0x10]
+00992cf4	ldp x24,x23,[sp], #0x40
+00992cf8	ret
+00992cfc	mov x0,x19
+00992d00	bl 0x00c31420
+00992d04	mov x0,x19
+00992d08	bl 0x00c30ce0

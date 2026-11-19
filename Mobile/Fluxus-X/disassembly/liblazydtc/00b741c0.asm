@@ -1,0 +1,86 @@
+; mbedtls_ctr_drbg_update_seed_file @ 00b741c0
+00b741c0	sub sp,sp,#0x1a0
+00b741c4	str x28,[sp, #0x150]
+00b741c8	stp x24,x23,[sp, #0x160]
+00b741cc	stp x22,x21,[sp, #0x170]
+00b741d0	stp x20,x19,[sp, #0x180]
+00b741d4	stp x29,x30,[sp, #0x190]
+00b741d8	add x29,sp,#0x190
+00b741dc	mrs x23,tpidr_el0
+00b741e0	ldr x8,[x23, #0x28]
+00b741e4	mov x19,x1
+00b741e8	adrp x1,0x2bb000
+00b741ec	mov x20,x0
+00b741f0	add x24,sp,#0x8
+00b741f4	add x1,x1,#0x65
+00b741f8	mov x0,x19
+00b741fc	str x8,[x24]
+00b74200	bl 0x00c30c10
+00b74204	mov x22,x0
+00b74208	cbz x0,0x00b74250
+00b7420c	mov x0,x22
+00b74210	mov x1,xzr
+00b74214	bl 0x00c42490
+00b74218	add x0,sp,#0x18
+00b7421c	mov w1,#0x1
+00b74220	mov w2,#0x100
+00b74224	mov x3,x22
+00b74228	bl 0x00c31e60
+00b7422c	mov x21,x0
+00b74230	add x0,sp,#0x14
+00b74234	mov w1,#0x1
+00b74238	mov w2,#0x1
+00b7423c	mov x3,x22
+00b74240	bl 0x00c31e60
+00b74244	cbz x0,0x00b74258
+00b74248	mov w21,#0xffffffc8
+00b7424c	b 0x00b7426c
+00b74250	mov w21,#0xffffffc6
+00b74254	b 0x00b74280
+00b74258	cbz x21,0x00b74268
+00b7425c	mov x0,x22
+00b74260	bl 0x00c38800
+00b74264	cbz w0,0x00b742b0
+00b74268	mov w21,#0xffffffc6
+00b7426c	add x0,sp,#0x18
+00b74270	mov w1,#0x100
+00b74274	bl 0x00c42220
+00b74278	mov x0,x22
+00b7427c	bl 0x00c30be0
+00b74280	ldr x8,[x23, #0x28]
+00b74284	ldr x9,[x24]
+00b74288	cmp x8,x9
+00b7428c	b.ne 0x00b74310
+00b74290	mov w0,w21
+00b74294	ldp x29,x30,[sp, #0x190]
+00b74298	ldp x20,x19,[sp, #0x180]
+00b7429c	ldp x22,x21,[sp, #0x170]
+00b742a0	ldp x24,x23,[sp, #0x160]
+00b742a4	ldr x28,[sp, #0x150]
+00b742a8	add sp,sp,#0x1a0
+00b742ac	ret
+00b742b0	mov x0,x22
+00b742b4	bl 0x00c30be0
+00b742b8	sub x0,x29,#0x78
+00b742bc	add x1,sp,#0x18
+00b742c0	mov x2,x21
+00b742c4	bl 0x00b7389c
+00b742c8	mov w21,w0
+00b742cc	cbnz w0,0x00b742e0
+00b742d0	sub x1,x29,#0x78
+00b742d4	mov x0,x20
+00b742d8	bl 0x00b73b88
+00b742dc	mov w21,w0
+00b742e0	sub x0,x29,#0x78
+00b742e4	orr w1,wzr,#0x30
+00b742e8	bl 0x00c42220
+00b742ec	add x0,sp,#0x18
+00b742f0	mov w1,#0x100
+00b742f4	bl 0x00c42220
+00b742f8	cbnz w21,0x00b74280
+00b742fc	mov x0,x20
+00b74300	mov x1,x19
+00b74304	bl 0x00c42480
+00b74308	mov w21,w0
+00b7430c	b 0x00b74280
+00b74310	bl 0x00c2fec0

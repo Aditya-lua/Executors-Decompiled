@@ -1,0 +1,37 @@
+; curl_mime_init @ 009268ac
+009268ac	stp x20,x19,[sp, #-0x20]!
+009268b0	stp x29,x30,[sp, #0x10]
+009268b4	add x29,sp,#0x10
+009268b8	adrp x8,0xcc4000
+009268bc	add x8,x8,#0x670
+009268c0	mov x20,x0
+009268c4	orr w0,wzr,#0x60
+009268c8	ldr x8,[x8]
+009268cc	blr x8
+009268d0	mov x19,x0
+009268d4	cbz x0,0x0092692c
+009268d8	mov x8,#0x2d2d
+009268dc	movk x8,#0x2d2d, LSL #16
+009268e0	movk x8,#0x2d2d, LSL #32
+009268e4	movk x8,#0x2d2d, LSL #48
+009268e8	add x1,x19,#0x30
+009268ec	mov w2,#0x17
+009268f0	mov x0,x20
+009268f4	stp xzr,xzr,[x19]
+009268f8	stp x8,x8,[x19, #0x20]
+009268fc	stp xzr,x8,[x19, #0x10]
+00926900	bl 0x00932640
+00926904	cbz w0,0x00926924
+00926908	adrp x8,0xcc4000
+0092690c	add x8,x8,#0x678
+00926910	mov x0,x19
+00926914	ldr x8,[x8]
+00926918	blr x8
+0092691c	mov x19,xzr
+00926920	b 0x0092692c
+00926924	str wzr,[x19, #0x48]
+00926928	stp xzr,xzr,[x19, #0x50]
+0092692c	ldp x29,x30,[sp, #0x10]
+00926930	mov x0,x19
+00926934	ldp x20,x19,[sp], #0x20
+00926938	ret

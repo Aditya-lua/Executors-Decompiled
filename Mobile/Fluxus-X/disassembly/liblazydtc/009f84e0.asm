@@ -1,0 +1,23 @@
+; ossl_x509_algor_new_from_md @ 009f84e0
+009f84e0	stp x20,x19,[sp, #-0x20]!
+009f84e4	stp x29,x30,[sp, #0x10]
+009f84e8	add x29,sp,#0x10
+009f84ec	cbz x1,0x009f8528
+009f84f0	mov x19,x1
+009f84f4	adrp x1,0x2d1000
+009f84f8	mov x20,x0
+009f84fc	add x1,x1,#0x42e
+009f8500	mov x0,x19
+009f8504	bl 0x00c34610
+009f8508	cbnz w0,0x009f8528
+009f850c	adrp x0,0xc59000
+009f8510	add x0,x0,#0x180
+009f8514	bl 0x00c372e0
+009f8518	str x0,[x20]
+009f851c	cbz x0,0x009f852c
+009f8520	mov x1,x19
+009f8524	bl 0x009f836c
+009f8528	mov w0,#0x1
+009f852c	ldp x29,x30,[sp, #0x10]
+009f8530	ldp x20,x19,[sp], #0x20
+009f8534	ret

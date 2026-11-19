@@ -1,0 +1,41 @@
+; dtls1_close_construct_packet @ 009e2320
+009e2320	str x21,[sp, #-0x30]!
+009e2324	stp x20,x19,[sp, #0x10]
+009e2328	mov w19,w2
+009e232c	mov x21,x1
+009e2330	cmp w2,#0x101
+009e2334	mov x20,x0
+009e2338	stp x29,x30,[sp, #0x20]
+009e233c	add x29,sp,#0x20
+009e2340	b.eq 0x009e2350
+009e2344	mov x0,x21
+009e2348	bl 0x00c34350
+009e234c	cbz w0,0x009e23b0
+009e2350	add x1,sp,#0x8
+009e2354	mov x0,x21
+009e2358	bl 0x00c36c60
+009e235c	cbz w0,0x009e23b0
+009e2360	ldr x8,[sp, #0x8]
+009e2364	mov w0,wzr
+009e2368	lsr x9,x8,#0x1f
+009e236c	cbnz x9,0x009e23b0
+009e2370	cmp w19,#0x101
+009e2374	b.eq 0x009e2388
+009e2378	ldr x9,[x20, #0x4b8]
+009e237c	sub x10,x8,#0xc
+009e2380	str x10,[x9, #0x140]
+009e2384	str x10,[x9, #0x158]
+009e2388	sxtw x8,w8
+009e238c	cmp w19,#0x3
+009e2390	stp x8,xzr,[x20, #0x98]
+009e2394	b.eq 0x009e23ac
+009e2398	cmp w19,#0x101
+009e239c	cset w1,eq
+009e23a0	mov x0,x20
+009e23a4	bl 0x009e1ed8
+009e23a8	cbz w0,0x009e23b0
+009e23ac	mov w0,#0x1
+009e23b0	ldp x29,x30,[sp, #0x20]
+009e23b4	ldp x20,x19,[sp, #0x10]
+009e23b8	ldr x21,[sp], #0x30
+009e23bc	ret

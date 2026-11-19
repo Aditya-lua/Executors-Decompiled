@@ -1,0 +1,35 @@
+; ssl_set_tmp_ecdh_groups @ 009c8108
+009c8108	sub sp,sp,#0x30
+009c810c	stp x20,x19,[sp, #0x10]
+009c8110	mov x20,x0
+009c8114	mov x0,x2
+009c8118	stp x29,x30,[sp, #0x20]
+009c811c	add x29,sp,#0x20
+009c8120	mov x19,x1
+009c8124	bl 0x00c36880
+009c8128	cbz x0,0x009c8150
+009c812c	bl 0x00c36870
+009c8130	str w0,[sp, #0xc]
+009c8134	cbz w0,0x009c8180
+009c8138	add x2,sp,#0xc
+009c813c	mov w3,#0x1
+009c8140	mov x0,x20
+009c8144	mov x1,x19
+009c8148	bl 0x00c34b10
+009c814c	b 0x009c8180
+009c8150	bl 0x00c342a0
+009c8154	adrp x0,0x2cb000
+009c8158	adrp x2,0x2bf000
+009c815c	add x0,x0,#0x5a7
+009c8160	add x2,x2,#0x92f
+009c8164	mov w1,#0xb0
+009c8168	bl 0x00c342b0
+009c816c	mov w0,#0x14
+009c8170	mov w1,#0x122
+009c8174	mov x2,xzr
+009c8178	bl 0x00c342c0
+009c817c	mov w0,wzr
+009c8180	ldp x29,x30,[sp, #0x20]
+009c8184	ldp x20,x19,[sp, #0x10]
+009c8188	add sp,sp,#0x30
+009c818c	ret

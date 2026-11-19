@@ -1,0 +1,4 @@
+; i2d_NETSCAPE_CERT_SEQUENCE @ 00ab5900
+00ab5900	adrp x2,0xc7a000
+00ab5904	add x2,x2,#0xec8
+00ab5908	b 0x00c36170

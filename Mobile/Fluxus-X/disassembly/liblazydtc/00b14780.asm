@@ -1,0 +1,30 @@
+; X509_VERIFY_PARAM_add0_table @ 00b14780
+00b14780	stp x20,x19,[sp, #-0x20]!
+00b14784	adrp x20,0xd22000
+00b14788	ldr x8,[x20, #0x7f0]
+00b1478c	mov x19,x0
+00b14790	stp x29,x30,[sp, #0x10]
+00b14794	add x29,sp,#0x10
+00b14798	cbz x8,0x00b147c0
+00b1479c	mov x0,x8
+00b147a0	mov x1,x19
+00b147a4	bl 0x00c34760
+00b147a8	tbnz w0,#0x1f,0x00b147d4
+00b147ac	mov w1,w0
+00b147b0	ldr x0,[x20, #0x7f0]
+00b147b4	bl 0x00c35320
+00b147b8	bl 0x00b13d88
+00b147bc	b 0x00b147d4
+00b147c0	adrp x0,0xb14000
+00b147c4	add x0,x0,#0x7f4
+00b147c8	bl 0x00c35340
+00b147cc	str x0,[x20, #0x7f0]
+00b147d0	cbz x0,0x00b147e8
+00b147d4	ldr x0,[x20, #0x7f0]
+00b147d8	mov x1,x19
+00b147dc	bl 0x00c347a0
+00b147e0	cmp w0,#0x0
+00b147e4	cset w0,gt
+00b147e8	ldp x29,x30,[sp, #0x10]
+00b147ec	ldp x20,x19,[sp], #0x20
+00b147f0	ret

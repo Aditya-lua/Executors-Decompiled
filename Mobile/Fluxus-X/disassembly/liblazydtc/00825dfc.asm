@@ -1,0 +1,116 @@
+; FUN_00825dfc @ 00825dfc
+00825dfc	cmp x1,x0
+00825e00	cset w8,eq
+00825e04	strb w8,[x1, #0x18]
+00825e08	b.eq 0x00825fc4
+00825e0c	mov w11,#0x1
+00825e10	b 0x00825e20
+00825e14	cmp x8,x0
+00825e18	mov x1,x8
+00825e1c	b.eq 0x00825fc4
+00825e20	ldr x9,[x1, #0x10]
+00825e24	ldrb w8,[x9, #0x18]
+00825e28	tbnz w8,#0x0,0x00825fc4
+00825e2c	ldr x8,[x9, #0x10]
+00825e30	ldr x10,[x8]
+00825e34	cmp x9,x10
+00825e38	b.eq 0x00825e60
+00825e3c	cbz x10,0x00825e88
+00825e40	ldrb w12,[x10, #0x18]
+00825e44	tbnz w12,#0x0,0x00825e88
+00825e48	cmp x8,x0
+00825e4c	strb w11,[x9, #0x18]
+00825e50	cset w9,eq
+00825e54	strb w9,[x8, #0x18]
+00825e58	strb w11,[x10, #0x18]
+00825e5c	b 0x00825e14
+00825e60	ldr x12,[x8, #0x8]
+00825e64	cbz x12,0x00825e9c
+00825e68	ldrb w13,[x12, #0x18]
+00825e6c	tbnz w13,#0x0,0x00825e9c
+00825e70	cmp x8,x0
+00825e74	strb w11,[x9, #0x18]
+00825e78	cset w9,eq
+00825e7c	strb w9,[x8, #0x18]
+00825e80	strb w11,[x12, #0x18]
+00825e84	b 0x00825e14
+00825e88	ldr x10,[x9]
+00825e8c	cmp x1,x10
+00825e90	b.eq 0x00825ed8
+00825e94	mov x10,x9
+00825e98	b 0x00825f7c
+00825e9c	ldr x11,[x9]
+00825ea0	cmp x1,x11
+00825ea4	b.eq 0x00825f04
+00825ea8	ldr x11,[x9, #0x8]
+00825eac	ldr x10,[x11]
+00825eb0	str x10,[x9, #0x8]
+00825eb4	cbz x10,0x00825f0c
+00825eb8	str x9,[x10, #0x10]
+00825ebc	ldr x8,[x9, #0x10]
+00825ec0	ldr x10,[x8]
+00825ec4	str x8,[x11, #0x10]
+00825ec8	cmp x9,x10
+00825ecc	b.eq 0x00825f10
+00825ed0	str x11,[x8, #0x8]
+00825ed4	b 0x00825f14
+00825ed8	ldr x11,[x10, #0x8]
+00825edc	str x11,[x9]
+00825ee0	cbz x11,0x00825eec
+00825ee4	str x9,[x11, #0x10]
+00825ee8	ldr x8,[x9, #0x10]
+00825eec	ldr x11,[x8]
+00825ef0	str x8,[x10, #0x10]
+00825ef4	cmp x9,x11
+00825ef8	b.eq 0x00825f6c
+00825efc	str x10,[x8, #0x8]
+00825f00	b 0x00825f70
+00825f04	mov x11,x9
+00825f08	b 0x00825f24
+00825f0c	str x8,[x11, #0x10]
+00825f10	str x11,[x8]
+00825f14	str x11,[x9, #0x10]
+00825f18	ldr x8,[x11, #0x10]
+00825f1c	str x9,[x11]
+00825f20	ldr x10,[x8]
+00825f24	ldr x9,[x10, #0x8]
+00825f28	mov w12,#0x1
+00825f2c	strb w12,[x11, #0x18]
+00825f30	strb wzr,[x8, #0x18]
+00825f34	str x9,[x8]
+00825f38	cbz x9,0x00825f40
+00825f3c	str x8,[x9, #0x10]
+00825f40	ldr x9,[x8, #0x10]
+00825f44	ldr x11,[x9]
+00825f48	str x9,[x10, #0x10]
+00825f4c	cmp x8,x11
+00825f50	b.eq 0x00825f5c
+00825f54	str x10,[x9, #0x8]
+00825f58	b 0x00825f60
+00825f5c	str x10,[x9]
+00825f60	str x8,[x10, #0x8]
+00825f64	str x10,[x8, #0x10]
+00825f68	ret
+00825f6c	str x10,[x8]
+00825f70	str x10,[x9, #0x10]
+00825f74	ldr x8,[x10, #0x10]
+00825f78	str x9,[x10, #0x8]
+00825f7c	ldr x9,[x8, #0x8]
+00825f80	mov w11,#0x1
+00825f84	strb w11,[x10, #0x18]
+00825f88	ldr x10,[x9]
+00825f8c	strb wzr,[x8, #0x18]
+00825f90	str x10,[x8, #0x8]
+00825f94	cbz x10,0x00825f9c
+00825f98	str x8,[x10, #0x10]
+00825f9c	ldr x10,[x8, #0x10]
+00825fa0	ldr x11,[x10]
+00825fa4	str x10,[x9, #0x10]
+00825fa8	cmp x8,x11
+00825fac	b.eq 0x00825fb8
+00825fb0	str x9,[x10, #0x8]
+00825fb4	b 0x00825fbc
+00825fb8	str x9,[x10]
+00825fbc	str x8,[x9]
+00825fc0	str x9,[x8, #0x10]
+00825fc4	ret

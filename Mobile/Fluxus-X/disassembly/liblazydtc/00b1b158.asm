@@ -1,0 +1,4 @@
+; X509_CRL_INFO_new @ 00b1b158
+00b1b158	adrp x0,0xc82000
+00b1b15c	add x0,x0,#0x90
+00b1b160	b 0x00c372e0

@@ -1,0 +1,27 @@
+; ERR_clear_last_mark @ 00a554f0
+00a554f0	stp x29,x30,[sp, #-0x10]!
+00a554f4	mov x29,sp
+00a554f8	bl 0x00a54260
+00a554fc	cbz x0,0x00a55538
+00a55500	ldr w10,[x0, #0x380]
+00a55504	ldr w9,[x0, #0x384]
+00a55508	mov w8,wzr
+00a5550c	cmp w9,w10
+00a55510	b.eq 0x00a5554c
+00a55514	orr w8,wzr,#0xf
+00a55518	add x11,x0,w10, SXTW  #0x2
+00a5551c	ldr w12,[x11, #0x40]!
+00a55520	cbnz w12,0x00a55540
+00a55524	sub w11,w10,#0x1
+00a55528	cmp w10,#0x0
+00a5552c	csel w10,w11,w8,gt
+00a55530	cmp w9,w10
+00a55534	b.ne 0x00a55518
+00a55538	mov w8,wzr
+00a5553c	b 0x00a5554c
+00a55540	sub w8,w12,#0x1
+00a55544	str w8,[x11]
+00a55548	mov w8,#0x1
+00a5554c	mov w0,w8
+00a55550	ldp x29,x30,[sp], #0x10
+00a55554	ret

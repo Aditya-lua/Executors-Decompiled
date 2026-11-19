@@ -1,0 +1,5 @@
+; EVP_KEYMGMT_fetch @ 00c36340
+00c36340	adrp x16,0xcb9000
+00c36344	ldr x17,[x16, #0x188]
+00c36348	add x16,x16,#0x188
+00c3634c	br x17

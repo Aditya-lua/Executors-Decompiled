@@ -1,0 +1,25 @@
+; FUN_0084a664 @ 0084a664
+0084a664	stp x29,x30,[sp, #-0x10]!
+0084a668	mov x29,sp
+0084a66c	and w8,w1,#0xf8
+0084a670	cmp w8,#0x30
+0084a674	b.eq 0x0084a684
+0084a678	and w8,w1,#0xfe
+0084a67c	cmp w8,#0x38
+0084a680	b.ne 0x0084a6b4
+0084a684	and w8,w1,#0xff
+0084a688	sub w9,w8,#0x31
+0084a68c	cmp w9,#0x8
+0084a690	b.hi 0x0084a6b4
+0084a694	ldr w9,[x0, #0x1c]
+0084a698	sub w1,w8,#0x30
+0084a69c	cmp w1,w9
+0084a6a0	b.hi 0x0084a6c0
+0084a6a4	bl 0x008459b0
+0084a6a8	mov w0,#0x1
+0084a6ac	ldp x29,x30,[sp], #0x10
+0084a6b0	ret
+0084a6b4	mov w0,wzr
+0084a6b8	ldp x29,x30,[sp], #0x10
+0084a6bc	ret
+0084a6c0	bl 0x00845964

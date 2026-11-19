@@ -1,0 +1,29 @@
+; curl_mime_type @ 00926b28
+00926b28	stp x20,x19,[sp, #-0x20]!
+00926b2c	stp x29,x30,[sp, #0x10]
+00926b30	add x29,sp,#0x10
+00926b34	mov x20,x1
+00926b38	mov x19,x0
+00926b3c	cbz x0,0x00926b80
+00926b40	adrp x8,0xcc4000
+00926b44	add x8,x8,#0x678
+00926b48	ldr x0,[x19, #0x58]
+00926b4c	ldr x8,[x8]
+00926b50	blr x8
+00926b54	str xzr,[x19, #0x58]
+00926b58	cbz x20,0x00926b78
+00926b5c	adrp x8,0xcc4000
+00926b60	add x8,x8,#0x688
+00926b64	mov x0,x20
+00926b68	ldr x8,[x8]
+00926b6c	blr x8
+00926b70	str x0,[x19, #0x58]
+00926b74	cbz x0,0x00926b88
+00926b78	mov w0,wzr
+00926b7c	b 0x00926b8c
+00926b80	mov w0,#0x2b
+00926b84	b 0x00926b8c
+00926b88	mov w0,#0x1b
+00926b8c	ldp x29,x30,[sp, #0x10]
+00926b90	ldp x20,x19,[sp], #0x20
+00926b94	ret

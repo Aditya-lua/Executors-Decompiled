@@ -1,0 +1,47 @@
+; EVP_PKEY_CTX_get0_provider @ 00a77964
+00a77964	ldr w8,[x0]
+00a77968	cmp w8,#0xff
+00a7796c	b.gt 0x00a7799c
+00a77970	sub w9,w8,#0x2
+00a77974	cmp w9,#0x1e
+00a77978	b.hi 0x00a779ec
+00a7797c	adrp x8,0x766000
+00a77980	add x8,x8,#0x85c
+00a77984	ldrsw x9,[x8, x9, LSL #0x2]
+00a77988	add x8,x9,x8
+00a7798c	br x8
+00a77990	ldr x0,[x0, #0x20]
+00a77994	cbz x0,0x00a77a14
+00a77998	b 0x00c36360
+00a7799c	cmp w8,#0x7ff
+00a779a0	b.gt 0x00a779c8
+00a779a4	cmp w8,#0x100
+00a779a8	b.eq 0x00a779fc
+00a779ac	cmp w8,#0x200
+00a779b0	b.eq 0x00a779bc
+00a779b4	cmp w8,#0x400
+00a779b8	b.ne 0x00a77a14
+00a779bc	ldr x0,[x0, #0x28]
+00a779c0	cbz x0,0x00a77a14
+00a779c4	b 0x00c3bf10
+00a779c8	cmp w8,#0x800
+00a779cc	b.eq 0x00a77a08
+00a779d0	cmp w8,#0x1, LSL #12
+00a779d4	b.eq 0x00a779e0
+00a779d8	cmp w8,#0x2, LSL #12
+00a779dc	b.ne 0x00a77a14
+00a779e0	ldr x0,[x0, #0x28]
+00a779e4	cbz x0,0x00a77a14
+00a779e8	b 0x00c3d2b0
+00a779ec	cmp w8,#0x40
+00a779f0	b.eq 0x00a779fc
+00a779f4	cmp w8,#0x80
+00a779f8	b.ne 0x00a77a14
+00a779fc	ldr x0,[x0, #0x28]
+00a77a00	cbz x0,0x00a77a14
+00a77a04	b 0x00c3d740
+00a77a08	ldr x0,[x0, #0x28]
+00a77a0c	cbz x0,0x00a77a14
+00a77a10	b 0x00c3d1d0
+00a77a14	mov x0,xzr
+00a77a18	ret

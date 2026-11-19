@@ -1,0 +1,25 @@
+; X509_INFO_free @ 009f8788
+009f8788	cbz x0,0x009f87e4
+009f878c	stp x20,x19,[sp, #-0x20]!
+009f8790	stp x29,x30,[sp, #0x10]
+009f8794	mov x19,x0
+009f8798	ldr x0,[x0]
+009f879c	add x29,sp,#0x10
+009f87a0	bl 0x00c31a90
+009f87a4	ldr x0,[x19, #0x8]
+009f87a8	bl 0x00c382b0
+009f87ac	ldr x0,[x19, #0x10]
+009f87b0	bl 0x00c382d0
+009f87b4	ldr x0,[x19, #0x38]
+009f87b8	adrp x20,0x2c3000
+009f87bc	add x20,x20,#0x6ff
+009f87c0	mov w2,#0x25
+009f87c4	mov x1,x20
+009f87c8	bl 0x00c32310
+009f87cc	ldp x29,x30,[sp, #0x10]
+009f87d0	mov w2,#0x26
+009f87d4	mov x0,x19
+009f87d8	mov x1,x20
+009f87dc	ldp x20,x19,[sp], #0x20
+009f87e0	b 0x00c32310
+009f87e4	ret

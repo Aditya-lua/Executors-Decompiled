@@ -1,0 +1,80 @@
+; IDEA_set_decrypt_key @ 00a97164
+00a97164	mov w8,wzr
+00a97168	orr w9,wzr,#0x10001
+00a9716c	add x10,x0,#0xc0
+00a97170	mov x11,x1
+00a97174	ldr w12,[x10]
+00a97178	cbz w12,0x00a971d4
+00a9717c	udiv w13,w9,w12
+00a97180	msub w14,w13,w12,w9
+00a97184	cbz w14,0x00a971d0
+00a97188	mov x13,xzr
+00a9718c	mov w14,w14
+00a97190	orr w16,wzr,#0x10001
+00a97194	mov w15,#0x1
+00a97198	mov x17,x15
+00a9719c	mov x18,x14
+00a971a0	sdiv x15,x16,x12
+00a971a4	sdiv x14,x12,x14
+00a971a8	msub x14,x14,x18,x12
+00a971ac	msub x15,x15,x17,x13
+00a971b0	mov x16,x12
+00a971b4	mov x13,x17
+00a971b8	mov x12,x18
+00a971bc	cbnz x14,0x00a97198
+00a971c0	add w12,w15,w9
+00a971c4	cmp x15,#0x0
+00a971c8	csel w12,w12,w15,lt
+00a971cc	b 0x00a971d4
+00a971d0	mov w12,#0x1
+00a971d4	str w12,[x11]
+00a971d8	ldr w12,[x10, #0x8]
+00a971dc	neg w12,w12
+00a971e0	and w12,w12,#0xffff
+00a971e4	str w12,[x11, #0x4]
+00a971e8	ldr w12,[x10, #0x4]
+00a971ec	neg w12,w12
+00a971f0	and w12,w12,#0xffff
+00a971f4	str w12,[x11, #0x8]
+00a971f8	ldr w12,[x10, #0xc]
+00a971fc	cbz w12,0x00a97258
+00a97200	udiv w13,w9,w12
+00a97204	msub w14,w13,w12,w9
+00a97208	cbz w14,0x00a97254
+00a9720c	mov x13,xzr
+00a97210	mov w14,w14
+00a97214	orr w16,wzr,#0x10001
+00a97218	mov w15,#0x1
+00a9721c	mov x17,x15
+00a97220	mov x18,x14
+00a97224	sdiv x15,x16,x12
+00a97228	sdiv x14,x12,x14
+00a9722c	msub x14,x14,x18,x12
+00a97230	msub x15,x15,x17,x13
+00a97234	mov x16,x12
+00a97238	mov x13,x17
+00a9723c	mov x12,x18
+00a97240	cbnz x14,0x00a9721c
+00a97244	add w12,w15,w9
+00a97248	cmp x15,#0x0
+00a9724c	csel w12,w12,w15,lt
+00a97250	b 0x00a97258
+00a97254	mov w12,#0x1
+00a97258	cmp w8,#0x8
+00a9725c	str w12,[x11, #0xc]
+00a97260	b.eq 0x00a9728c
+00a97264	ldur w12,[x10, #-0x8]
+00a97268	add w8,w8,#0x1
+00a9726c	add x13,x11,#0x18
+00a97270	cmp w8,#0x9
+00a97274	str w12,[x11, #0x10]
+00a97278	ldur w12,[x10, #-0x4]
+00a9727c	sub x10,x10,#0x18
+00a97280	str w12,[x11, #0x14]
+00a97284	mov x11,x13
+00a97288	b.cc 0x00a97174
+00a9728c	ldp w9,w8,[x1, #0x4]
+00a97290	ldp w11,w10,[x1, #0xc4]
+00a97294	stp w8,w9,[x1, #0x4]
+00a97298	stp w10,w11,[x1, #0xc4]
+00a9729c	ret

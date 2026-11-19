@@ -1,0 +1,45 @@
+; ix::SocketOpenSSL::~SocketOpenSSL @ 009a390c
+009a390c	stp x20,x19,[sp, #-0x20]!
+009a3910	stp x29,x30,[sp, #0x10]
+009a3914	add x29,sp,#0x10
+009a3918	adrp x8,0xcb5000
+009a391c	ldr x8,[x8, #0x120]
+009a3920	mov x19,x0
+009a3924	add x8,x8,#0x10
+009a3928	str x8,[x0]
+009a392c	bl 0x00c33ff0
+009a3930	add x0,x19,#0xe0
+009a3934	bl 0x00c2fee0
+009a3938	ldrb w8,[x19, #0xc0]
+009a393c	tbnz w8,#0x0,0x009a3978
+009a3940	ldrb w8,[x19, #0xa0]
+009a3944	tbnz w8,#0x0,0x009a3988
+009a3948	ldrb w8,[x19, #0x88]
+009a394c	tbnz w8,#0x0,0x009a3998
+009a3950	ldrb w8,[x19, #0x70]
+009a3954	tbnz w8,#0x0,0x009a39a8
+009a3958	ldrb w8,[x19, #0x58]
+009a395c	tbz w8,#0x0,0x009a3968
+009a3960	ldr x0,[x19, #0x68]
+009a3964	bl 0x00c301d0
+009a3968	ldp x29,x30,[sp, #0x10]
+009a396c	mov x0,x19
+009a3970	ldp x20,x19,[sp], #0x20
+009a3974	b 0x00c335b0
+009a3978	ldr x0,[x19, #0xd0]
+009a397c	bl 0x00c301d0
+009a3980	ldrb w8,[x19, #0xa0]
+009a3984	tbz w8,#0x0,0x009a3948
+009a3988	ldr x0,[x19, #0xb0]
+009a398c	bl 0x00c301d0
+009a3990	ldrb w8,[x19, #0x88]
+009a3994	tbz w8,#0x0,0x009a3950
+009a3998	ldr x0,[x19, #0x98]
+009a399c	bl 0x00c301d0
+009a39a0	ldrb w8,[x19, #0x70]
+009a39a4	tbz w8,#0x0,0x009a3958
+009a39a8	ldr x0,[x19, #0x80]
+009a39ac	bl 0x00c301d0
+009a39b0	ldrb w8,[x19, #0x58]
+009a39b4	tbnz w8,#0x0,0x009a3960
+009a39b8	b 0x009a3968

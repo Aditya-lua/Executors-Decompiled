@@ -1,0 +1,68 @@
+; engine_add_dynamic_id @ 00a51760
+00a51760	stp x22,x21,[sp, #-0x30]!
+00a51764	stp x20,x19,[sp, #0x10]
+00a51768	stp x29,x30,[sp, #0x20]
+00a5176c	add x29,sp,#0x20
+00a51770	cbz x0,0x00a51808
+00a51774	ldr x8,[x0, #0xd8]
+00a51778	mov x21,x1
+00a5177c	mov x20,x0
+00a51780	mov w22,wzr
+00a51784	orr x8,x1,x8
+00a51788	cbz x8,0x00a51858
+00a5178c	mov w19,w2
+00a51790	cbz w2,0x00a517a8
+00a51794	adrp x8,0xcb5000
+00a51798	ldr x8,[x8, #0x5d8]
+00a5179c	ldr x0,[x8]
+00a517a0	bl 0x00c356a0
+00a517a4	cbz w0,0x00a51808
+00a517a8	adrp x8,0xd21000
+00a517ac	ldr x9,[x8, #0x9a8]
+00a517b0	cbz x21,0x00a517e0
+00a517b4	cbz x9,0x00a517d0
+00a517b8	mov x10,x9
+00a517bc	ldr x11,[x10, #0xd8]
+00a517c0	cmp x11,x21
+00a517c4	b.eq 0x00a51810
+00a517c8	ldr x10,[x10, #0xc0]
+00a517cc	cbnz x10,0x00a517bc
+00a517d0	ldr x10,[x20, #0xd8]
+00a517d4	mov w22,wzr
+00a517d8	cbnz x10,0x00a51844
+00a517dc	str x21,[x20, #0xd8]
+00a517e0	adrp x10,0xd21000
+00a517e4	ldr x11,[x10, #0x9b0]
+00a517e8	cbz x9,0x00a5181c
+00a517ec	cbz x11,0x00a51840
+00a517f0	ldr x8,[x11, #0xd0]
+00a517f4	mov w22,wzr
+00a517f8	cbnz x8,0x00a51844
+00a517fc	str x20,[x11, #0xd0]
+00a51800	str x11,[x20, #0xc8]
+00a51804	b 0x00a5182c
+00a51808	mov w22,wzr
+00a5180c	b 0x00a51858
+00a51810	mov w22,wzr
+00a51814	cbnz w19,0x00a51848
+00a51818	b 0x00a51858
+00a5181c	mov w22,wzr
+00a51820	cbnz x11,0x00a51844
+00a51824	str x20,[x8, #0x9a8]
+00a51828	str xzr,[x20, #0xc8]
+00a5182c	mov w22,#0x1
+00a51830	str x20,[x10, #0x9b0]
+00a51834	str xzr,[x20, #0xd0]
+00a51838	cbnz w19,0x00a51848
+00a5183c	b 0x00a51858
+00a51840	mov w22,wzr
+00a51844	cbz w19,0x00a51858
+00a51848	adrp x8,0xcb5000
+00a5184c	ldr x8,[x8, #0x5d8]
+00a51850	ldr x0,[x8]
+00a51854	bl 0x00c35690
+00a51858	ldp x29,x30,[sp, #0x20]
+00a5185c	ldp x20,x19,[sp, #0x10]
+00a51860	mov w0,w22
+00a51864	ldp x22,x21,[sp], #0x30
+00a51868	ret

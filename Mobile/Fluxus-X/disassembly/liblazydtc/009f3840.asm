@@ -1,0 +1,3 @@
+; ASN1_ENUMERATED_get_int64 @ 009f3840
+009f3840	mov w2,#0xa
+009f3844	b 0x009f320c

@@ -1,0 +1,4 @@
+; X509_REQ_INFO_new @ 00b1e748
+00b1e748	adrp x0,0xc82000
+00b1e74c	add x0,x0,#0x748
+00b1e750	b 0x00c372e0

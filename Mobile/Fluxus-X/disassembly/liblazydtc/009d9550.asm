@@ -1,0 +1,39 @@
+; tls_construct_stoc_ems @ 009d9550
+009d9550	stp x20,x19,[sp, #-0x20]!
+009d9554	stp x29,x30,[sp, #0x10]
+009d9558	ldrb w8,[x0, #0xa9]
+009d955c	add x29,sp,#0x10
+009d9560	tbnz w8,#0x1,0x009d956c
+009d9564	mov w0,#0x2
+009d9568	b 0x009d95dc
+009d956c	mov x20,x1
+009d9570	mov x19,x0
+009d9574	mov w1,#0x17
+009d9578	mov w2,#0x2
+009d957c	mov x0,x20
+009d9580	bl 0x00c343a0
+009d9584	cbz w0,0x009d95a4
+009d9588	mov w2,#0x2
+009d958c	mov x0,x20
+009d9590	mov x1,xzr
+009d9594	bl 0x00c343a0
+009d9598	cbz w0,0x009d95a4
+009d959c	mov w0,#0x1
+009d95a0	b 0x009d95dc
+009d95a4	bl 0x00c342a0
+009d95a8	adrp x0,0x2d7000
+009d95ac	adrp x2,0x2c7000
+009d95b0	add x0,x0,#0xae0
+009d95b4	add x2,x2,#0x6c4
+009d95b8	mov w1,#0x618
+009d95bc	bl 0x00c342b0
+009d95c0	mov w2,#0x103
+009d95c4	mov w1,#0x50
+009d95c8	movk w2,#0xc, LSL #16
+009d95cc	mov x0,x19
+009d95d0	mov x3,xzr
+009d95d4	bl 0x00c34410
+009d95d8	mov w0,wzr
+009d95dc	ldp x29,x30,[sp, #0x10]
+009d95e0	ldp x20,x19,[sp], #0x20
+009d95e4	ret

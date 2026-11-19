@@ -1,0 +1,28 @@
+; curl_getdate @ 00930960
+00930960	sub sp,sp,#0x30
+00930964	stp x20,x19,[sp, #0x10]
+00930968	stp x29,x30,[sp, #0x20]
+0093096c	add x29,sp,#0x20
+00930970	mrs x20,tpidr_el0
+00930974	ldr x8,[x20, #0x28]
+00930978	mov x19,#-0x1
+0093097c	mov x1,sp
+00930980	str x8,[sp, #0x8]
+00930984	str x19,[sp]
+00930988	bl 0x009309cc
+0093098c	cbnz w0,0x009309a4
+00930990	ldr x19,[sp]
+00930994	cmn x19,#0x1
+00930998	b.ne 0x009309a4
+0093099c	mov x19,xzr
+009309a0	str xzr,[sp]
+009309a4	ldr x8,[x20, #0x28]
+009309a8	ldr x9,[sp, #0x8]
+009309ac	cmp x8,x9
+009309b0	b.ne 0x009309c8
+009309b4	mov x0,x19
+009309b8	ldp x29,x30,[sp, #0x20]
+009309bc	ldp x20,x19,[sp, #0x10]
+009309c0	add sp,sp,#0x30
+009309c4	ret
+009309c8	bl 0x00c2fec0

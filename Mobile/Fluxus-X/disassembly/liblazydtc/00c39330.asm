@@ -1,0 +1,5 @@
+; CMAC_Final @ 00c39330
+00c39330	adrp x16,0xcba000
+00c39334	ldr x17,[x16, #0x980]
+00c39338	add x16,x16,#0x980
+00c3933c	br x17

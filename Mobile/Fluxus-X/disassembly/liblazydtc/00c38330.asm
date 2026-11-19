@@ -1,0 +1,5 @@
+; NETSCAPE_SPKAC_it @ 00c38330
+00c38330	adrp x16,0xcba000
+00c38334	ldr x17,[x16, #0x180]
+00c38338	add x16,x16,#0x180
+00c3833c	br x17

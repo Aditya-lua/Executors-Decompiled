@@ -1,0 +1,4 @@
+; i2d_PKCS7_SIGNER_INFO @ 00abe040
+00abe040	adrp x2,0xc7b000
+00abe044	add x2,x2,#0x840
+00abe048	b 0x00c36170

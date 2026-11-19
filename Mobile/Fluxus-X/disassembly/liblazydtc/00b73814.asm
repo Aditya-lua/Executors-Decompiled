@@ -1,0 +1,35 @@
+; mbedtls_ctr_drbg_update @ 00b73814
+00b73814	sub sp,sp,#0x70
+00b73818	str x21,[sp, #0x40]
+00b7381c	stp x20,x19,[sp, #0x50]
+00b73820	stp x29,x30,[sp, #0x60]
+00b73824	add x29,sp,#0x60
+00b73828	mrs x21,tpidr_el0
+00b7382c	ldr x8,[x21, #0x28]
+00b73830	mov x20,x0
+00b73834	stur x8,[x29, #-0x28]
+00b73838	cbz x2,0x00b7386c
+00b7383c	add x0,sp,#0x8
+00b73840	bl 0x00b7389c
+00b73844	mov w19,w0
+00b73848	cbnz w0,0x00b7385c
+00b7384c	add x1,sp,#0x8
+00b73850	mov x0,x20
+00b73854	bl 0x00b73b88
+00b73858	mov w19,w0
+00b7385c	add x0,sp,#0x8
+00b73860	orr w1,wzr,#0x30
+00b73864	bl 0x00c42220
+00b73868	b 0x00b73870
+00b7386c	mov w19,wzr
+00b73870	ldr x8,[x21, #0x28]
+00b73874	ldur x9,[x29, #-0x28]
+00b73878	cmp x8,x9
+00b7387c	b.ne 0x00b73898
+00b73880	mov w0,w19
+00b73884	ldp x29,x30,[sp, #0x60]
+00b73888	ldp x20,x19,[sp, #0x50]
+00b7388c	ldr x21,[sp, #0x40]
+00b73890	add sp,sp,#0x70
+00b73894	ret
+00b73898	bl 0x00c2fec0

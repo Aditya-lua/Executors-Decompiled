@@ -1,0 +1,15 @@
+; X509_get0_authority_serial @ 00b03128
+00b03128	str x19,[sp, #-0x20]!
+00b0312c	stp x29,x30,[sp, #0x10]
+00b03130	add x29,sp,#0x10
+00b03134	mov x19,x0
+00b03138	bl 0x00b01d98
+00b0313c	cbz w0,0x00b03150
+00b03140	ldr x8,[x19, #0x100]
+00b03144	cbz x8,0x00b03150
+00b03148	ldr x0,[x8, #0x10]
+00b0314c	b 0x00b03154
+00b03150	mov x0,xzr
+00b03154	ldp x29,x30,[sp, #0x10]
+00b03158	ldr x19,[sp], #0x20
+00b0315c	ret

@@ -1,0 +1,5 @@
+; X509V3_add_value_int @ 00c40910
+00c40910	adrp x16,0xcbe000
+00c40914	ldr x17,[x16, #0x470]
+00c40918	add x16,x16,#0x470
+00c4091c	br x17

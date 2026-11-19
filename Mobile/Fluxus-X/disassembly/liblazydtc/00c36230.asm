@@ -1,0 +1,5 @@
+; EVP_MD_get0_name @ 00c36230
+00c36230	adrp x16,0xcb9000
+00c36234	ldr x17,[x16, #0x100]
+00c36238	add x16,x16,#0x100
+00c3623c	br x17

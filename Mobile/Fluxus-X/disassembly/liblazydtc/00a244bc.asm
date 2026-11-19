@@ -1,0 +1,4 @@
+; d2i_EC_PRIVATEKEY @ 00a244bc
+00a244bc	adrp x3,0xc5b000
+00a244c0	add x3,x3,#0x2e0
+00a244c4	b 0x00c36150

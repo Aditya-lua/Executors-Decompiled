@@ -1,0 +1,16 @@
+; FUN_009078cc @ 009078cc
+009078cc	ldr x9,[x0, #0x20]
+009078d0	mov x8,x0
+009078d4	add x9,x9,w1, SXTW  #0x3
+009078d8	ldr x0,[x9, #0x248]
+009078dc	cbz x0,0x009078f0
+009078e0	ldrb w9,[x0, #0x24]
+009078e4	tbnz w9,#0x0,0x009078f8
+009078e8	ldr x0,[x0, #0x8]
+009078ec	cbnz x0,0x009078e0
+009078f0	mov w0,wzr
+009078f4	ret
+009078f8	ldr x9,[x0]
+009078fc	mov x1,x8
+00907900	ldr x2,[x9, #0x40]
+00907904	br x2

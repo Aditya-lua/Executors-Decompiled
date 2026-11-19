@@ -1,0 +1,100 @@
+package em;
+
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.util.Log;
+import com.roblox.universalapp.messagebus.Callback;
+import com.roblox.universalapp.messagebus.Connection;
+import com.roblox.universalapp.messagebus.MessageBus;
+import java.util.HashMap;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class c {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public MessageBus f13828a;
+    public Context b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public Connection f13829c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public Connection f13830d;
+
+    public static class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final c f13831a = new c(MessageBus.getInstance());
+    }
+
+    public static c h() {
+        return a.f13831a;
+    }
+
+    /* JADX INFO: renamed from: e, reason: merged with bridge method [inline-methods] */
+    public void c(JSONObject jSONObject) {
+        boolean z10;
+        Log.d("SMSProtocol", "onSendSMS: " + jSONObject.toString());
+        try {
+            String string = jSONObject.getString("address");
+            String string2 = jSONObject.getString("message");
+            Intent intent = new Intent("android.intent.action.SENDTO", Uri.fromParts("smsto", string, null));
+            intent.addFlags(268468224);
+            intent.putExtra("sms_body", string2);
+            this.b.startActivity(intent);
+            z10 = true;
+        } catch (ActivityNotFoundException e10) {
+            Log.e("SMSProtocol", "Exception while handling send SMS request: " + e10.toString());
+            z10 = false;
+        } catch (JSONException e11) {
+            Log.e("SMSProtocol", "Exception while handling send SMS request: " + e11.toString());
+            z10 = false;
+        }
+        try {
+            JSONObject jSONObject2 = new JSONObject();
+            jSONObject2.put("sent", z10);
+            this.f13828a.publishProtocolMethodResponse("SMSProtocol", "sendSMS", jSONObject2, 0, new HashMap());
+        } catch (JSONException e12) {
+            Log.e("SMSProtocol", "Exception while handling send SMS request: " + e12.toString());
+            this.f13828a.publishProtocolMethodResponse("SMSProtocol", "sendSMS", new JSONObject(), 13, new HashMap());
+        }
+    }
+
+    /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
+    public void d(JSONObject jSONObject) {
+        Log.d("SMSProtocol", "onSupportsSMS: " + jSONObject.toString());
+        boolean zHasSystemFeature = this.b.getPackageManager().hasSystemFeature("android.hardware.telephony");
+        try {
+            JSONObject jSONObject2 = new JSONObject();
+            jSONObject2.put("support", zHasSystemFeature);
+            this.f13828a.publishProtocolMethodResponse("SMSProtocol", "supportsSMS", jSONObject2, 0, new HashMap());
+        } catch (JSONException e10) {
+            Log.e("SMSProtocol", "JSON exception while handling supports sms request: " + e10.toString());
+            this.f13828a.publishProtocolMethodResponse("SMSProtocol", "supportsSMS", new JSONObject(), 13, new HashMap());
+        }
+    }
+
+    public void g(Context context) {
+        this.b = context;
+    }
+
+    public c(MessageBus messageBus) {
+        this.f13828a = messageBus;
+        this.f13829c = messageBus.subscribeProtocolMethodRequest("SMSProtocol", "sendSMS", new Callback() { // from class: em.a
+            @Override // com.roblox.universalapp.messagebus.Callback
+            public final void run(JSONObject jSONObject) {
+                this.f13826a.c(jSONObject);
+            }
+        });
+        this.f13830d = messageBus.subscribeProtocolMethodRequest("SMSProtocol", "supportsSMS", new Callback() { // from class: em.b
+            @Override // com.roblox.universalapp.messagebus.Callback
+            public final void run(JSONObject jSONObject) {
+                this.f13827a.d(jSONObject);
+            }
+        });
+    }
+}

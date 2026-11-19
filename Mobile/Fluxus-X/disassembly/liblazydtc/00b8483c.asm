@@ -1,0 +1,27 @@
+; mbedtls_mpi_core_get_mont_r2_unsafe @ 00b8483c
+00b8483c	stp x20,x19,[sp, #-0x20]!
+00b84840	stp x29,x30,[sp, #0x10]
+00b84844	add x29,sp,#0x10
+00b84848	mov x20,x1
+00b8484c	mov w1,#0x1
+00b84850	mov x19,x0
+00b84854	bl 0x00c41c40
+00b84858	cbnz w0,0x00b84884
+00b8485c	ldrh w8,[x20, #0xa]
+00b84860	mov x0,x19
+00b84864	lsl x1,x8,#0x7
+00b84868	bl 0x00c41d00
+00b8486c	cbnz w0,0x00b84884
+00b84870	mov x0,x19
+00b84874	mov x1,x19
+00b84878	mov x2,x20
+00b8487c	bl 0x00c41c60
+00b84880	cbz w0,0x00b84890
+00b84884	ldp x29,x30,[sp, #0x10]
+00b84888	ldp x20,x19,[sp], #0x20
+00b8488c	ret
+00b84890	ldrh w1,[x20, #0xa]
+00b84894	ldp x29,x30,[sp, #0x10]
+00b84898	mov x0,x19
+00b8489c	ldp x20,x19,[sp], #0x20
+00b848a0	b 0x00c41d20

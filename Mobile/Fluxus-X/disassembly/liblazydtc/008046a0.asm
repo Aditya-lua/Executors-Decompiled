@@ -1,0 +1,33 @@
+; FUN_008046a0 @ 008046a0
+008046a0	sub sp,sp,#0x60
+008046a4	stp x29,x30,[sp, #0x40]
+008046a8	stp x20,x19,[sp, #0x50]
+008046ac	add x29,sp,#0x40
+008046b0	mrs x20,tpidr_el0
+008046b4	mov x19,x0
+008046b8	add x0,x0,#0x38
+008046bc	ldr x8,[x20, #0x28]
+008046c0	stur x8,[x29, #-0x8]
+008046c4	bl 0x00c2ff10
+008046c8	ldur q0,[x19, #0x8]
+008046cc	movi v1.2D,#0x0
+008046d0	ldur q2,[x19, #0x18]
+008046d4	mov x0,sp
+008046d8	stp q0,q2,[sp]
+008046dc	ldur q0,[x19, #0x28]
+008046e0	stur q1,[x19, #0x8]
+008046e4	stur q1,[x19, #0x18]
+008046e8	stur q1,[x19, #0x28]
+008046ec	str q0,[sp, #0x20]
+008046f0	bl 0x007fe8f8
+008046f4	add x0,x19,#0x38
+008046f8	bl 0x00c2ff20
+008046fc	ldr x8,[x20, #0x28]
+00804700	ldur x9,[x29, #-0x8]
+00804704	cmp x8,x9
+00804708	b.ne 0x0080471c
+0080470c	ldp x20,x19,[sp, #0x50]
+00804710	ldp x29,x30,[sp, #0x40]
+00804714	add sp,sp,#0x60
+00804718	ret
+0080471c	bl 0x00c2fec0

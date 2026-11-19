@@ -1,0 +1,373 @@
+package androidx.recyclerview.widget;
+
+import android.view.View;
+import android.view.ViewGroup;
+import java.util.ArrayList;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes.dex */
+public class e {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final b f2700a;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public View f2703e;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public int f2702d = 0;
+    public final a b = new a();
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final List<View> f2701c = new ArrayList();
+
+    public static class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public long f2704a = 0;
+        public a b;
+
+        public void a(int i10) {
+            if (i10 < 64) {
+                this.f2704a &= ~(1 << i10);
+                return;
+            }
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.a(i10 - 64);
+            }
+        }
+
+        public int b(int i10) {
+            a aVar = this.b;
+            if (aVar == null) {
+                return i10 >= 64 ? Long.bitCount(this.f2704a) : Long.bitCount(this.f2704a & ((1 << i10) - 1));
+            }
+            return i10 < 64 ? Long.bitCount(this.f2704a & ((1 << i10) - 1)) : aVar.b(i10 - 64) + Long.bitCount(this.f2704a);
+        }
+
+        public final void c() {
+            if (this.b == null) {
+                this.b = new a();
+            }
+        }
+
+        public boolean d(int i10) {
+            if (i10 < 64) {
+                return (this.f2704a & (1 << i10)) != 0;
+            }
+            c();
+            return this.b.d(i10 - 64);
+        }
+
+        public void e(int i10, boolean z10) {
+            if (i10 >= 64) {
+                c();
+                this.b.e(i10 - 64, z10);
+                return;
+            }
+            long j10 = this.f2704a;
+            boolean z11 = (Long.MIN_VALUE & j10) != 0;
+            long j11 = (1 << i10) - 1;
+            this.f2704a = ((j10 & (~j11)) << 1) | (j10 & j11);
+            if (z10) {
+                h(i10);
+            } else {
+                a(i10);
+            }
+            if (z11 || this.b != null) {
+                c();
+                this.b.e(0, z11);
+            }
+        }
+
+        public boolean f(int i10) {
+            if (i10 >= 64) {
+                c();
+                return this.b.f(i10 - 64);
+            }
+            long j10 = 1 << i10;
+            long j11 = this.f2704a;
+            boolean z10 = (j11 & j10) != 0;
+            long j12 = j11 & (~j10);
+            this.f2704a = j12;
+            long j13 = j10 - 1;
+            this.f2704a = (j12 & j13) | Long.rotateRight((~j13) & j12, 1);
+            a aVar = this.b;
+            if (aVar != null) {
+                if (aVar.d(0)) {
+                    h(63);
+                }
+                this.b.f(0);
+            }
+            return z10;
+        }
+
+        public void g() {
+            this.f2704a = 0L;
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.g();
+            }
+        }
+
+        public void h(int i10) {
+            if (i10 < 64) {
+                this.f2704a |= 1 << i10;
+            } else {
+                c();
+                this.b.h(i10 - 64);
+            }
+        }
+
+        public String toString() {
+            if (this.b == null) {
+                return Long.toBinaryString(this.f2704a);
+            }
+            return this.b.toString() + "xx" + Long.toBinaryString(this.f2704a);
+        }
+    }
+
+    public interface b {
+        View a(int i10);
+
+        void addView(View view, int i10);
+
+        void b(View view);
+
+        int c();
+
+        RecyclerView.g0 d(View view);
+
+        void e(int i10);
+
+        void f();
+
+        int g(View view);
+
+        void h(View view);
+
+        void i(int i10);
+
+        void j(View view, int i10, ViewGroup.LayoutParams layoutParams);
+    }
+
+    public e(b bVar) {
+        this.f2700a = bVar;
+    }
+
+    public void a(View view, int i10, boolean z10) {
+        int iC = i10 < 0 ? this.f2700a.c() : h(i10);
+        this.b.e(iC, z10);
+        if (z10) {
+            l(view);
+        }
+        this.f2700a.addView(view, iC);
+    }
+
+    public void b(View view, boolean z10) {
+        a(view, -1, z10);
+    }
+
+    public void c(View view, int i10, ViewGroup.LayoutParams layoutParams, boolean z10) {
+        int iC = i10 < 0 ? this.f2700a.c() : h(i10);
+        this.b.e(iC, z10);
+        if (z10) {
+            l(view);
+        }
+        this.f2700a.j(view, iC, layoutParams);
+    }
+
+    public void d(int i10) {
+        int iH = h(i10);
+        this.b.f(iH);
+        this.f2700a.e(iH);
+    }
+
+    public View e(int i10) {
+        int size = this.f2701c.size();
+        for (int i11 = 0; i11 < size; i11++) {
+            View view = this.f2701c.get(i11);
+            RecyclerView.g0 g0VarD = this.f2700a.d(view);
+            if (g0VarD.n() == i10 && !g0VarD.u() && !g0VarD.w()) {
+                return view;
+            }
+        }
+        return null;
+    }
+
+    public View f(int i10) {
+        return this.f2700a.a(h(i10));
+    }
+
+    public int g() {
+        return this.f2700a.c() - this.f2701c.size();
+    }
+
+    public final int h(int i10) {
+        if (i10 < 0) {
+            return -1;
+        }
+        int iC = this.f2700a.c();
+        int i11 = i10;
+        while (i11 < iC) {
+            int iB = i10 - (i11 - this.b.b(i11));
+            if (iB == 0) {
+                while (this.b.d(i11)) {
+                    i11++;
+                }
+                return i11;
+            }
+            i11 += iB;
+        }
+        return -1;
+    }
+
+    public View i(int i10) {
+        return this.f2700a.a(i10);
+    }
+
+    public int j() {
+        return this.f2700a.c();
+    }
+
+    public void k(View view) {
+        int iG = this.f2700a.g(view);
+        if (iG >= 0) {
+            this.b.h(iG);
+            l(view);
+        } else {
+            throw new IllegalArgumentException("view is not a child, cannot hide " + view);
+        }
+    }
+
+    public final void l(View view) {
+        this.f2701c.add(view);
+        this.f2700a.b(view);
+    }
+
+    public int m(View view) {
+        int iG = this.f2700a.g(view);
+        if (iG == -1 || this.b.d(iG)) {
+            return -1;
+        }
+        return iG - this.b.b(iG);
+    }
+
+    public boolean n(View view) {
+        return this.f2701c.contains(view);
+    }
+
+    public void o() {
+        this.b.g();
+        for (int size = this.f2701c.size() - 1; size >= 0; size--) {
+            this.f2700a.h(this.f2701c.get(size));
+            this.f2701c.remove(size);
+        }
+        this.f2700a.f();
+    }
+
+    public void p(View view) {
+        int i10 = this.f2702d;
+        if (i10 == 1) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeView(At)");
+        }
+        if (i10 == 2) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeViewIfHidden");
+        }
+        try {
+            this.f2702d = 1;
+            this.f2703e = view;
+            int iG = this.f2700a.g(view);
+            if (iG >= 0) {
+                if (this.b.f(iG)) {
+                    t(view);
+                }
+                this.f2700a.i(iG);
+            }
+        } finally {
+            this.f2702d = 0;
+            this.f2703e = null;
+        }
+    }
+
+    public void q(int i10) {
+        int i11 = this.f2702d;
+        if (i11 == 1) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeView(At)");
+        }
+        if (i11 == 2) {
+            throw new IllegalStateException("Cannot call removeView(At) within removeViewIfHidden");
+        }
+        try {
+            int iH = h(i10);
+            View viewA = this.f2700a.a(iH);
+            if (viewA != null) {
+                this.f2702d = 1;
+                this.f2703e = viewA;
+                if (this.b.f(iH)) {
+                    t(viewA);
+                }
+                this.f2700a.i(iH);
+            }
+        } finally {
+            this.f2702d = 0;
+            this.f2703e = null;
+        }
+    }
+
+    public boolean r(View view) {
+        int i10 = this.f2702d;
+        if (i10 == 1) {
+            if (this.f2703e == view) {
+                return false;
+            }
+            throw new IllegalStateException("Cannot call removeViewIfHidden within removeView(At) for a different view");
+        }
+        if (i10 == 2) {
+            throw new IllegalStateException("Cannot call removeViewIfHidden within removeViewIfHidden");
+        }
+        try {
+            this.f2702d = 2;
+            int iG = this.f2700a.g(view);
+            if (iG == -1) {
+                t(view);
+                return true;
+            }
+            if (!this.b.d(iG)) {
+                return false;
+            }
+            this.b.f(iG);
+            t(view);
+            this.f2700a.i(iG);
+            return true;
+        } finally {
+            this.f2702d = 0;
+        }
+    }
+
+    public void s(View view) {
+        int iG = this.f2700a.g(view);
+        if (iG < 0) {
+            throw new IllegalArgumentException("view is not a child, cannot hide " + view);
+        }
+        if (this.b.d(iG)) {
+            this.b.a(iG);
+            t(view);
+        } else {
+            throw new RuntimeException("trying to unhide a view that was not hidden" + view);
+        }
+    }
+
+    public final boolean t(View view) {
+        if (!this.f2701c.remove(view)) {
+            return false;
+        }
+        this.f2700a.h(view);
+        return true;
+    }
+
+    public String toString() {
+        return this.b.toString() + ", hidden list:" + this.f2701c.size();
+    }
+}

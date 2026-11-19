@@ -1,0 +1,4 @@
+; X509_REQ_free @ 00b1e790
+00b1e790	adrp x1,0xc82000
+00b1e794	add x1,x1,#0x7b0
+00b1e798	b 0x00c36160

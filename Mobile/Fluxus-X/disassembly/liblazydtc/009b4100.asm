@@ -1,0 +1,60 @@
+; SSL_copy_session_id @ 009b4100
+009b4100	stp x20,x19,[sp, #-0x20]!
+009b4104	mov x19,x0
+009b4108	mov x0,x1
+009b410c	stp x29,x30,[sp, #0x10]
+009b4110	add x29,sp,#0x10
+009b4114	mov x20,x1
+009b4118	bl 0x00c35a40
+009b411c	mov x1,x0
+009b4120	mov x0,x19
+009b4124	bl 0x00c32a00
+009b4128	cbz w0,0x009b41e0
+009b412c	ldr x8,[x19, #0x8]
+009b4130	ldr x9,[x20, #0x8]
+009b4134	cmp x8,x9
+009b4138	b.eq 0x009b4160
+009b413c	ldr x8,[x8, #0x20]
+009b4140	mov x0,x19
+009b4144	blr x8
+009b4148	ldr x8,[x20, #0x8]
+009b414c	mov x0,x19
+009b4150	str x8,[x19, #0x8]
+009b4154	ldr x8,[x8, #0x10]
+009b4158	blr x8
+009b415c	cbz w0,0x009b41e0
+009b4160	ldr x8,[x20, #0x898]
+009b4164	add x8,x8,#0x208
+009b4168	ldxr w9,[x8]
+009b416c	add w9,w9,#0x1
+009b4170	stxr w10,w9,[x8]
+009b4174	cbnz w10,0x009b4168
+009b4178	ldr x0,[x19, #0x898]
+009b417c	bl 0x00c35120
+009b4180	ldr x8,[x20, #0x898]
+009b4184	str x8,[x19, #0x898]
+009b4188	ldr x8,[x20, #0x8f0]
+009b418c	cmp w8,#0x20
+009b4190	b.ls 0x009b41c8
+009b4194	bl 0x00c342a0
+009b4198	adrp x0,0x2c5000
+009b419c	adrp x2,0x2b1000
+009b41a0	add x0,x0,#0x652
+009b41a4	add x2,x2,#0xeaa
+009b41a8	mov w1,#0x38a
+009b41ac	bl 0x00c342b0
+009b41b0	mov w0,#0x14
+009b41b4	mov w1,#0x111
+009b41b8	mov x2,xzr
+009b41bc	bl 0x00c342c0
+009b41c0	mov w0,wzr
+009b41c4	b 0x009b41e0
+009b41c8	and x2,x8,#0xffffffff
+009b41cc	add x1,x20,#0x8f8
+009b41d0	add x0,x19,#0x8f8
+009b41d4	str x2,[x19, #0x8f0]
+009b41d8	bl 0x00c2ffd0
+009b41dc	mov w0,#0x1
+009b41e0	ldp x29,x30,[sp, #0x10]
+009b41e4	ldp x20,x19,[sp], #0x20
+009b41e8	ret

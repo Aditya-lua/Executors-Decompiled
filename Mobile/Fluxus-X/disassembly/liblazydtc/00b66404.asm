@@ -1,0 +1,57 @@
+; ossl_cipher_unpadblock @ 00b66404
+00b66404	stp x29,x30,[sp, #-0x10]!
+00b66408	ldr x8,[x1]
+00b6640c	mov x29,sp
+00b66410	cmp x8,x2
+00b66414	b.ne 0x00b66464
+00b66418	add x8,x0,x2
+00b6641c	ldurb w8,[x8, #-0x1]
+00b66420	cbz x8,0x00b66490
+00b66424	cmp x8,x2
+00b66428	b.hi 0x00b66490
+00b6642c	mov x9,xzr
+00b66430	sub x10,x0,#0x1
+00b66434	ldrb w11,[x10, x2]
+00b66438	cmp w11,w8
+00b6643c	b.ne 0x00b664ac
+00b66440	add x9,x9,#0x1
+00b66444	cmp x9,x8
+00b66448	sub x10,x10,#0x1
+00b6644c	b.cc 0x00b66434
+00b66450	sub x8,x2,x9
+00b66454	str x8,[x1]
+00b66458	mov w0,#0x1
+00b6645c	ldp x29,x30,[sp], #0x10
+00b66460	ret
+00b66464	bl 0x00c342a0
+00b66468	adrp x0,0x2a8000
+00b6646c	adrp x2,0x2b0000
+00b66470	add x0,x0,#0xe31
+00b66474	add x2,x2,#0xf3e
+00b66478	mov w1,#0x72
+00b6647c	bl 0x00c342b0
+00b66480	mov w1,#0x103
+00b66484	mov w0,#0x39
+00b66488	movk w1,#0xc, LSL #16
+00b6648c	b 0x00b664d0
+00b66490	bl 0x00c342a0
+00b66494	adrp x0,0x2a8000
+00b66498	adrp x2,0x2b0000
+00b6649c	add x0,x0,#0xe31
+00b664a0	add x2,x2,#0xf3e
+00b664a4	orr w1,wzr,#0x7c
+00b664a8	b 0x00b664c4
+00b664ac	bl 0x00c342a0
+00b664b0	adrp x0,0x2a8000
+00b664b4	adrp x2,0x2b0000
+00b664b8	add x0,x0,#0xe31
+00b664bc	add x2,x2,#0xf3e
+00b664c0	mov w1,#0x81
+00b664c4	bl 0x00c342b0
+00b664c8	mov w0,#0x39
+00b664cc	mov w1,#0x64
+00b664d0	mov x2,xzr
+00b664d4	bl 0x00c342c0
+00b664d8	mov w0,wzr
+00b664dc	ldp x29,x30,[sp], #0x10
+00b664e0	ret

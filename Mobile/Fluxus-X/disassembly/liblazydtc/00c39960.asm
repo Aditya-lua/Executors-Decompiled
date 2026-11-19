@@ -1,0 +1,5 @@
+; X509_get_ext @ 00c39960
+00c39960	adrp x16,0xcba000
+00c39964	ldr x17,[x16, #0xc98]
+00c39968	add x16,x16,#0xc98
+00c3996c	br x17

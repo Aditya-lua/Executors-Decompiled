@@ -1,0 +1,26 @@
+; DTLS_RECORD_LAYER_free @ 009c9118
+009c9118	ldr x8,[x0, #0x10b8]
+009c911c	cbz x8,0x009c9178
+009c9120	str x19,[sp, #-0x20]!
+009c9124	stp x29,x30,[sp, #0x10]
+009c9128	add x29,sp,#0x10
+009c912c	mov x19,x0
+009c9130	bl 0x009c917c
+009c9134	ldr x8,[x19, #0x10b8]
+009c9138	ldr x0,[x8, #0x30]
+009c913c	bl 0x00c34440
+009c9140	ldr x8,[x19, #0x10b8]
+009c9144	ldr x0,[x8, #0x40]
+009c9148	bl 0x00c34440
+009c914c	ldr x8,[x19, #0x10b8]
+009c9150	ldr x0,[x8, #0x50]
+009c9154	bl 0x00c34440
+009c9158	ldr x0,[x19, #0x10b8]
+009c915c	adrp x1,0x2a3000
+009c9160	add x1,x1,#0xcf1
+009c9164	orr w2,wzr,#0x38
+009c9168	bl 0x00c32310
+009c916c	str xzr,[x19, #0x10b8]
+009c9170	ldp x29,x30,[sp, #0x10]
+009c9174	ldr x19,[sp], #0x20
+009c9178	ret

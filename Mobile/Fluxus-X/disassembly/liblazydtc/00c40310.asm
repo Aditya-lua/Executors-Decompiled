@@ -1,0 +1,5 @@
+; OSSL_STORE_find @ 00c40310
+00c40310	adrp x16,0xcbe000
+00c40314	ldr x17,[x16, #0x170]
+00c40318	add x16,x16,#0x170
+00c4031c	br x17

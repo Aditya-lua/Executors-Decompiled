@@ -1,0 +1,62 @@
+; ix::SocketServer::start @ 0098912c
+0098912c	sub sp,sp,#0x50
+00989130	stp x20,x19,[sp, #0x30]
+00989134	stp x29,x30,[sp, #0x40]
+00989138	add x29,sp,#0x40
+0098913c	mrs x20,tpidr_el0
+00989140	ldr x8,[x20, #0x28]
+00989144	add x9,x0,#0x40
+00989148	mov x19,x0
+0098914c	stur x8,[x29, #-0x18]
+00989150	stlrb wzr,[x9]
+00989154	ldr x8,[x0, #0x70]
+00989158	cbz x8,0x00989168
+0098915c	ldr x8,[x19, #0x80]
+00989160	cbnz x8,0x009891f8
+00989164	b 0x009891b4
+00989168	adrp x8,0xcb4000
+0098916c	ldr x8,[x8, #0xfc0]
+00989170	movi v0.2D,#0x0
+00989174	add x0,sp,#0x20
+00989178	add x1,sp,#0x10
+0098917c	mov v0.D[0x0],x8
+00989180	add x2,sp,#0x8
+00989184	str q0,[sp, #0x10]
+00989188	str x19,[sp, #0x8]
+0098918c	bl 0x0098a358
+00989190	ldr x8,[x19, #0x70]
+00989194	cbnz x8,0x0098921c
+00989198	ldr x8,[sp, #0x20]
+0098919c	add x0,sp,#0x20
+009891a0	str x8,[x19, #0x70]
+009891a4	str xzr,[sp, #0x20]
+009891a8	bl 0x00c2ff80
+009891ac	ldr x8,[x19, #0x80]
+009891b0	cbnz x8,0x009891f8
+009891b4	adrp x8,0xcb4000
+009891b8	ldr x8,[x8, #0xfc8]
+009891bc	movi v0.2D,#0x0
+009891c0	add x0,sp,#0x20
+009891c4	add x1,sp,#0x10
+009891c8	mov v0.D[0x0],x8
+009891cc	add x2,sp,#0x8
+009891d0	str q0,[sp, #0x10]
+009891d4	str x19,[sp, #0x8]
+009891d8	bl 0x0098a358
+009891dc	ldr x8,[x19, #0x80]
+009891e0	cbnz x8,0x0098921c
+009891e4	ldr x8,[sp, #0x20]
+009891e8	add x0,sp,#0x20
+009891ec	str x8,[x19, #0x80]
+009891f0	str xzr,[sp, #0x20]
+009891f4	bl 0x00c2ff80
+009891f8	ldr x8,[x20, #0x28]
+009891fc	ldur x9,[x29, #-0x18]
+00989200	cmp x8,x9
+00989204	b.ne 0x00989218
+00989208	ldp x29,x30,[sp, #0x40]
+0098920c	ldp x20,x19,[sp, #0x30]
+00989210	add sp,sp,#0x50
+00989214	ret
+00989218	bl 0x00c2fec0
+0098921c	bl 0x00c2fff0

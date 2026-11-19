@@ -1,0 +1,46 @@
+; FUN_00a0108c @ 00a0108c
+00a0108c	stp x22,x21,[sp, #-0x30]!
+00a01090	stp x20,x19,[sp, #0x10]
+00a01094	stp x29,x30,[sp, #0x20]
+00a01098	add x29,sp,#0x20
+00a0109c	mov w20,w2
+00a010a0	mov x22,x1
+00a010a4	mov x19,x0
+00a010a8	bl 0x00c30710
+00a010ac	str wzr,[x0]
+00a010b0	mov x21,x0
+00a010b4	ldr w0,[x19, #0x38]
+00a010b8	sxtw x2,w20
+00a010bc	mov x1,x22
+00a010c0	bl 0x00c31cc0
+00a010c4	mov x20,x0
+00a010c8	orr w1,wzr,#0xf
+00a010cc	mov x0,x19
+00a010d0	bl 0x00c32190
+00a010d4	cmp w20,#0x0
+00a010d8	b.gt 0x00a0112c
+00a010dc	add w8,w20,#0x1
+00a010e0	cmp w8,#0x1
+00a010e4	b.hi 0x00a0112c
+00a010e8	ldr w8,[x21]
+00a010ec	sub w9,w8,#0x47
+00a010f0	cmp w9,#0x2c
+00a010f4	b.hi 0x00a01110
+00a010f8	mov w10,#0x1
+00a010fc	lsl x9,x10,x9
+00a01100	mov x10,#0x100000001
+00a01104	movk x10,#0x1810, LSL #32
+00a01108	tst x9,x10
+00a0110c	b.ne 0x00a01120
+00a01110	cmp w8,#0xb
+00a01114	b.eq 0x00a01120
+00a01118	cmp w8,#0x4
+00a0111c	b.ne 0x00a0112c
+00a01120	mov w1,#0xa
+00a01124	mov x0,x19
+00a01128	bl 0x00c322a0
+00a0112c	mov w0,w20
+00a01130	ldp x29,x30,[sp, #0x20]
+00a01134	ldp x20,x19,[sp, #0x10]
+00a01138	ldp x22,x21,[sp], #0x30
+00a0113c	ret

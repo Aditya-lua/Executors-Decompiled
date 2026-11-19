@@ -1,0 +1,43 @@
+; ossl_ec_set_check_group_type_from_name @ 00a26918
+00a26918	stp x20,x19,[sp, #-0x20]!
+00a2691c	mov x20,x1
+00a26920	mov x19,x0
+00a26924	stp x29,x30,[sp, #0x10]
+00a26928	add x29,sp,#0x10
+00a2692c	cbz x1,0x00a26998
+00a26930	adrp x1,0x2c1000
+00a26934	add x1,x1,#0x1ad
+00a26938	mov x0,x20
+00a2693c	bl 0x00c35ee0
+00a26940	cbz w0,0x00a2697c
+00a26944	adrp x1,0x2cb000
+00a26948	add x1,x1,#0x7c5
+00a2694c	mov x0,x20
+00a26950	bl 0x00c35ee0
+00a26954	cbz w0,0x00a26984
+00a26958	adrp x1,0x2c5000
+00a2695c	add x1,x1,#0x887
+00a26960	mov x0,x20
+00a26964	bl 0x00c35ee0
+00a26968	mov w8,w0
+00a2696c	mov w0,wzr
+00a26970	cbnz w8,0x00a269b4
+00a26974	mov w8,#0x2
+00a26978	b 0x00a26988
+00a2697c	mov x8,xzr
+00a26980	b 0x00a26988
+00a26984	mov w8,#0x1
+00a26988	adrp x9,0xc5b000
+00a2698c	lsl x8,x8,#0x4
+00a26990	add x9,x9,#0x3d8
+00a26994	ldr w20,[x9, x8#0x0]
+00a26998	orr w1,wzr,#0x6000
+00a2699c	mov x0,x19
+00a269a0	bl 0x00c3ac70
+00a269a4	mov x0,x19
+00a269a8	mov w1,w20
+00a269ac	bl 0x00c3ab40
+00a269b0	mov w0,#0x1
+00a269b4	ldp x29,x30,[sp, #0x10]
+00a269b8	ldp x20,x19,[sp], #0x20
+00a269bc	ret

@@ -1,0 +1,10 @@
+; EVP_MD_up_ref @ 00a58944
+00a58944	ldr w8,[x0, #0x18]
+00a58948	cbnz w8,0x00a58960
+00a5894c	add x8,x0,#0x78
+00a58950	ldxr w9,[x8]
+00a58954	add w9,w9,#0x1
+00a58958	stxr w10,w9,[x8]
+00a5895c	cbnz w10,0x00a58950
+00a58960	mov w0,#0x1
+00a58964	ret

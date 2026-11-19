@@ -1,0 +1,47 @@
+; OpenSSL_version @ 00a833e8
+00a833e8	cmp w0,#0x9
+00a833ec	b.hi 0x00a8341c
+00a833f0	adrp x9,0x766000
+00a833f4	mov w8,w0
+00a833f8	add x9,x9,#0xd40
+00a833fc	ldrsw x8,[x9, x8, LSL #0x2]
+00a83400	adrp x0,0x2a9000
+00a83404	add x0,x0,#0xa87
+00a83408	add x8,x8,x9
+00a8340c	br x8
+00a83410	adrp x0,0x2a0000
+00a83414	add x0,x0,#0x3d2
+00a83418	ret
+00a8341c	adrp x0,0x2bb000
+00a83420	add x0,x0,#0xd20
+00a83424	ret
+00a83428	adrp x0,0x766000
+00a8342c	add x0,x0,#0xd68
+00a83430	ret
+00a83434	adrp x0,0x2b7000
+00a83438	add x0,x0,#0xd6a
+00a8343c	ret
+00a83440	adrp x0,0x2cb000
+00a83444	add x0,x0,#0xa14
+00a83448	ret
+00a8344c	adrp x0,0x2b9000
+00a83450	add x0,x0,#0xfa3
+00a83454	ret
+00a83458	adrp x0,0x2d5000
+00a8345c	add x0,x0,#0xd99
+00a83460	ret
+00a83464	stp x29,x30,[sp, #-0x10]!
+00a83468	orr w0,wzr,#0x3f0
+00a8346c	mov x29,sp
+00a83470	bl 0x00c3e040
+00a83474	adrp x8,0xcb5000
+00a83478	ldr x8,[x8, #0x658]
+00a8347c	adrp x9,0x2c5000
+00a83480	add x9,x9,#0xb96
+00a83484	cmp x0,#0x0
+00a83488	csel x0,x9,x8,eq
+00a8348c	ldp x29,x30,[sp], #0x10
+00a83490	ret
+00a83494	adrp x0,0x2bf000
+00a83498	add x0,x0,#0xdcd
+00a8349c	ret

@@ -1,0 +1,57 @@
+; tls_parse_stoc_cookie @ 009d5700
+009d5700	stp x22,x21,[sp, #-0x30]!
+009d5704	stp x20,x19,[sp, #0x10]
+009d5708	stp x29,x30,[sp, #0x20]
+009d570c	ldr x8,[x1, #0x8]
+009d5710	mov x19,x0
+009d5714	add x29,sp,#0x20
+009d5718	subs x9,x8,#0x2
+009d571c	b.cc 0x009d5794
+009d5720	ldr x8,[x1]
+009d5724	ldrb w10,[x8]
+009d5728	ldrb w20,[x8, #0x1]
+009d572c	bfm x20,x10,#0x38,#0x7
+009d5730	cmp x9,x20
+009d5734	b.ne 0x009d5794
+009d5738	add x21,x8,#0x2
+009d573c	add x8,x21,x20
+009d5740	stp x8,xzr,[x1]
+009d5744	ldr x0,[x19, #0xb38]
+009d5748	adrp x1,0x2d1000
+009d574c	add x1,x1,#0x573
+009d5750	mov w2,#0x1c6
+009d5754	bl 0x00c32310
+009d5758	str xzr,[x19, #0xb40]
+009d575c	str xzr,[x19, #0xb38]
+009d5760	cbz x20,0x009d57d8
+009d5764	adrp x2,0x2d1000
+009d5768	add x2,x2,#0x573
+009d576c	mov w3,#0x1cf
+009d5770	mov x0,x21
+009d5774	mov x1,x20
+009d5778	add x22,x19,#0xb38
+009d577c	bl 0x00c345f0
+009d5780	str x0,[x22]
+009d5784	cbz x0,0x009d5794
+009d5788	str x20,[x19, #0xb40]
+009d578c	mov w0,#0x1
+009d5790	b 0x009d57c8
+009d5794	bl 0x00c342a0
+009d5798	adrp x0,0x2bf000
+009d579c	adrp x2,0x2a7000
+009d57a0	add x0,x0,#0x967
+009d57a4	add x2,x2,#0xbd3
+009d57a8	mov w1,#0x75b
+009d57ac	bl 0x00c342b0
+009d57b0	mov w1,#0x32
+009d57b4	mov w2,#0x9f
+009d57b8	mov x0,x19
+009d57bc	mov x3,xzr
+009d57c0	bl 0x00c34410
+009d57c4	mov w0,wzr
+009d57c8	ldp x29,x30,[sp, #0x20]
+009d57cc	ldp x20,x19,[sp, #0x10]
+009d57d0	ldp x22,x21,[sp], #0x30
+009d57d4	ret
+009d57d8	mov w0,#0x1
+009d57dc	b 0x009d57c8

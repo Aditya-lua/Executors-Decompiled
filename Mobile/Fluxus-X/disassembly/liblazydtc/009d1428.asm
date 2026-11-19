@@ -1,0 +1,18 @@
+; FUN_009d1428 @ 009d1428
+009d1428	ldr w8,[x0, #0x38]
+009d142c	cbz w8,0x009d1464
+009d1430	str x19,[sp, #-0x20]!
+009d1434	stp x29,x30,[sp, #0x10]
+009d1438	mov x19,x0
+009d143c	ldr x0,[x0, #0xa58]
+009d1440	adrp x1,0x2c1000
+009d1444	add x1,x1,#0x800
+009d1448	mov w2,#0x3a0
+009d144c	add x29,sp,#0x10
+009d1450	str wzr,[x19, #0xb60]
+009d1454	bl 0x00c32310
+009d1458	str xzr,[x19, #0xa58]
+009d145c	ldp x29,x30,[sp, #0x10]
+009d1460	ldr x19,[sp], #0x20
+009d1464	mov w0,#0x1
+009d1468	ret

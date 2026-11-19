@@ -1,0 +1,5 @@
+; <EXTERNAL>::dlsym @ 00104a20
+00104a20	adrp x16,0x108000
+00104a24	ldr x17,[x16, #0xc20]
+00104a28	add x16,x16,#0xc20
+00104a2c	br x17

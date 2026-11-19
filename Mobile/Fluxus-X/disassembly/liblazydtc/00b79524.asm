@@ -1,0 +1,24 @@
+; mbedtls_md_hmac_reset @ 00b79524
+00b79524	stp x20,x19,[sp, #-0x20]!
+00b79528	stp x29,x30,[sp, #0x10]
+00b7952c	add x29,sp,#0x10
+00b79530	mov x19,x0
+00b79534	cbz x0,0x00b79570
+00b79538	ldr x8,[x19]
+00b7953c	cbz x8,0x00b79570
+00b79540	ldr x20,[x19, #0x10]
+00b79544	cbz x20,0x00b79570
+00b79548	mov x0,x19
+00b7954c	bl 0x00c42860
+00b79550	cbnz w0,0x00b79574
+00b79554	ldr x8,[x19]
+00b79558	ldp x29,x30,[sp, #0x10]
+00b7955c	mov x0,x19
+00b79560	mov x1,x20
+00b79564	ldrb w2,[x8, #0x5]
+00b79568	ldp x20,x19,[sp], #0x20
+00b7956c	b 0x00c42870
+00b79570	mov w0,#0xffffaf00
+00b79574	ldp x29,x30,[sp, #0x10]
+00b79578	ldp x20,x19,[sp], #0x20
+00b7957c	ret

@@ -1,0 +1,5 @@
+; ASN1_IA5STRING_free @ 00c38140
+00c38140	adrp x16,0xcba000
+00c38144	ldr x17,[x16, #0x88]
+00c38148	add x16,x16,#0x88
+00c3814c	br x17

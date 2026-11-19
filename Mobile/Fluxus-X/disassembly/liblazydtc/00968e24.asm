@@ -1,0 +1,27 @@
+; FUN_00968e24 @ 00968e24
+00968e24	stp x20,x19,[sp, #-0x20]!
+00968e28	stp x29,x30,[sp, #0x10]
+00968e2c	add x29,sp,#0x10
+00968e30	ldr x8,[x0, #0xca8]
+00968e34	mov x20,x1
+00968e38	mov x19,x0
+00968e3c	mov w0,wzr
+00968e40	cbnz x8,0x00968e80
+00968e44	adrp x8,0xcc4000
+00968e48	add x8,x8,#0x690
+00968e4c	mov w1,#0xc8
+00968e50	mov x0,x20
+00968e54	ldr x8,[x8]
+00968e58	blr x8
+00968e5c	mov x8,x0
+00968e60	cbz x0,0x00968e7c
+00968e64	mov w0,wzr
+00968e68	str x8,[x19, #0xca8]
+00968e6c	mov w8,#0x1
+00968e70	str x20,[x19, #0x6d0]
+00968e74	str x8,[x19, #0xcb0]
+00968e78	b 0x00968e80
+00968e7c	mov w0,#0x1b
+00968e80	ldp x29,x30,[sp, #0x10]
+00968e84	ldp x20,x19,[sp], #0x20
+00968e88	ret

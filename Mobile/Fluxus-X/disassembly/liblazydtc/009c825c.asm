@@ -1,0 +1,45 @@
+; ssl_srp_ctx_free_intern @ 009c825c
+009c825c	cbz x0,0x009c8308
+009c8260	str x21,[sp, #-0x30]!
+009c8264	stp x20,x19,[sp, #0x10]
+009c8268	stp x29,x30,[sp, #0x20]
+009c826c	mov x19,x0
+009c8270	ldr x0,[x0, #0xbf0]
+009c8274	adrp x21,0x2af000
+009c8278	add x21,x21,#0xb86
+009c827c	mov w2,#0x40
+009c8280	mov x1,x21
+009c8284	add x29,sp,#0x20
+009c8288	add x20,x19,#0xbd0
+009c828c	bl 0x00c32310
+009c8290	ldr x0,[x19, #0xc38]
+009c8294	mov w2,#0x41
+009c8298	mov x1,x21
+009c829c	bl 0x00c32310
+009c82a0	ldr x0,[x19, #0xbf8]
+009c82a4	bl 0x00c36290
+009c82a8	ldr x0,[x19, #0xc00]
+009c82ac	bl 0x00c36290
+009c82b0	ldr x0,[x19, #0xc08]
+009c82b4	bl 0x00c36290
+009c82b8	ldr x0,[x19, #0xc10]
+009c82bc	bl 0x00c36290
+009c82c0	ldr x0,[x19, #0xc18]
+009c82c4	bl 0x00c36290
+009c82c8	ldr x0,[x19, #0xc20]
+009c82cc	bl 0x00c36290
+009c82d0	ldr x0,[x19, #0xc28]
+009c82d4	bl 0x00c36290
+009c82d8	ldr x0,[x19, #0xc30]
+009c82dc	bl 0x00c36290
+009c82e0	mov w2,#0x80
+009c82e4	mov x0,x20
+009c82e8	mov w1,wzr
+009c82ec	bl 0x00c301c0
+009c82f0	mov w8,#0x400
+009c82f4	str w8,[x19, #0xc40]
+009c82f8	ldp x29,x30,[sp, #0x20]
+009c82fc	ldp x20,x19,[sp, #0x10]
+009c8300	mov w0,#0x1
+009c8304	ldr x21,[sp], #0x30
+009c8308	ret

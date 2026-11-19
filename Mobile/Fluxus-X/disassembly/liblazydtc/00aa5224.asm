@@ -1,0 +1,5 @@
+; OSSL_SELF_TEST_free @ 00aa5224
+00aa5224	adrp x1,0x2c3000
+00aa5228	add x1,x1,#0xd12
+00aa522c	mov w2,#0x77
+00aa5230	b 0x00c32310

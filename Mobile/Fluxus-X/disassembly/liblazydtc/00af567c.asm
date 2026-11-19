@@ -1,0 +1,4 @@
+; AUTHORITY_INFO_ACCESS_free @ 00af567c
+00af567c	adrp x1,0xc7e000
+00af5680	add x1,x1,#0x6a0
+00af5684	b 0x00c36160

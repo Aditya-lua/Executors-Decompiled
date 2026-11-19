@@ -1,0 +1,4 @@
+; i2d_ISSUING_DIST_POINT @ 00afc730
+00afc730	adrp x2,0xc7f000
+00afc734	add x2,x2,#0x890
+00afc738	b 0x00c36170

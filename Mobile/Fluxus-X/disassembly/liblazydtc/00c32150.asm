@@ -1,0 +1,5 @@
+; ASN1_STRING_print @ 00c32150
+00c32150	adrp x16,0xcb7000
+00c32154	ldr x17,[x16, #0x90]
+00c32158	add x16,x16,#0x90
+00c3215c	br x17

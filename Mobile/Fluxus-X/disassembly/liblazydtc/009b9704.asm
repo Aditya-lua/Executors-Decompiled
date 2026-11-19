@@ -1,0 +1,25 @@
+; ssl_evp_cipher_fetch @ 009b9704
+009b9704	str x21,[sp, #-0x30]!
+009b9708	stp x20,x19,[sp, #0x10]
+009b970c	mov x20,x0
+009b9710	mov w0,w1
+009b9714	stp x29,x30,[sp, #0x20]
+009b9718	add x29,sp,#0x20
+009b971c	mov x19,x2
+009b9720	mov w21,w1
+009b9724	bl 0x00c35e80
+009b9728	cbnz x0,0x009b9754
+009b972c	bl 0x00c35250
+009b9730	mov w0,w21
+009b9734	bl 0x00c324f0
+009b9738	mov x1,x0
+009b973c	mov x0,x20
+009b9740	mov x2,x19
+009b9744	bl 0x00c35260
+009b9748	mov x19,x0
+009b974c	bl 0x00c35240
+009b9750	mov x0,x19
+009b9754	ldp x29,x30,[sp, #0x20]
+009b9758	ldp x20,x19,[sp, #0x10]
+009b975c	ldr x21,[sp], #0x30
+009b9760	ret

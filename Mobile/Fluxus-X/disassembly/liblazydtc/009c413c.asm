@@ -1,0 +1,20 @@
+; tls1_save_sigalgs @ 009c413c
+009c413c	ldr x8,[x0, #0x8]
+009c4140	ldr x8,[x8, #0xc0]
+009c4144	ldrb w8,[x8, #0x60]
+009c4148	tbnz w8,#0x1,0x009c4154
+009c414c	mov w0,#0x1
+009c4150	ret
+009c4154	ldr x8,[x0, #0x898]
+009c4158	cbz x8,0x009c416c
+009c415c	cbz w2,0x009c4174
+009c4160	add x8,x0,#0x398
+009c4164	add x2,x0,#0x3a8
+009c4168	b 0x009c417c
+009c416c	mov w0,wzr
+009c4170	ret
+009c4174	add x8,x0,#0x390
+009c4178	add x2,x0,#0x3a0
+009c417c	mov x0,x1
+009c4180	mov x1,x8
+009c4184	b 0x009c401c

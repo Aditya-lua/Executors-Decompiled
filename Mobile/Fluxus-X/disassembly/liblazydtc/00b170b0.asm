@@ -1,0 +1,4 @@
+; NETSCAPE_SPKI_free @ 00b170b0
+00b170b0	adrp x1,0xc81000
+00b170b4	add x1,x1,#0xe70
+00b170b8	b 0x00c36160

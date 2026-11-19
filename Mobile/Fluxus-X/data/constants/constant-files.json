@@ -1,0 +1,38 @@
+[
+  {
+    "bytes": 295418,
+    "sha256": "dd529febae3b3f3ef198093dedf03c26ba12efa6cef450b4a12bf75f78c2d3c7",
+    "initializer_elf_vaddr": "0x70536c",
+    "memory_address": "0xbcb230",
+    "file": "recovered_ui.lua",
+    "luau_parse_exit": 0,
+    "diagnostic": ""
+  },
+  {
+    "bytes": 1843,
+    "sha256": "985fce0b2627aa9e3546e34da638a545a23722c170b6465662f7444d999c2f82",
+    "initializer_elf_vaddr": "0x70536c",
+    "memory_address": "0xc13438",
+    "file": "recovered_gc_cache.lua",
+    "luau_parse_exit": 0,
+    "diagnostic": ""
+  },
+  {
+    "bytes": 27581,
+    "sha256": "8b6fa7c3ab037b437ad0b70f9f035f876208803bd6c38d0d675203f9a6c61fb8",
+    "initializer_elf_vaddr": "0x70536c",
+    "memory_address": "0xc13b78",
+    "file": "recovered_drawing.lua",
+    "luau_parse_exit": 0,
+    "diagnostic": ""
+  },
+  {
+    "bytes": 2075,
+    "sha256": "893e42f05af086205ef55741a9247482665dfe59c6186ed5810449e530d181bd",
+    "initializer_elf_vaddr": "0x70536c",
+    "memory_address": "0xc1a740",
+    "file": "recovered_bit_compat.lua",
+    "luau_parse_exit": 0,
+    "diagnostic": ""
+  }
+]

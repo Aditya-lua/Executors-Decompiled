@@ -1,0 +1,21 @@
+; mbedtls_ecp_grp_id_list @ 00b91724
+00b91724	adrp x8,0xd25000
+00b91728	ldrb w9,[x8, #0xfc0]
+00b9172c	tbnz w9,#0x0,0x00b91768
+00b91730	adrp x9,0x29c000
+00b91734	adrp x11,0x29d000
+00b91738	adrp x12,0x29c000
+00b9173c	ldr q0,[x9, #0xdc0]
+00b91740	ldr q1,[x11, #0x270]
+00b91744	ldr q2,[x12, #0x200]
+00b91748	adrp x10,0xd25000
+00b9174c	add x10,x10,#0xfd0
+00b91750	mov w13,#0xd
+00b91754	mov w14,#0x1
+00b91758	str x13,[x10, #0x30]
+00b9175c	stp q0,q1,[x10]
+00b91760	str q2,[x10, #0x20]
+00b91764	strb w14,[x8, #0xfc0]
+00b91768	adrp x0,0xd25000
+00b9176c	add x0,x0,#0xfd0
+00b91770	ret

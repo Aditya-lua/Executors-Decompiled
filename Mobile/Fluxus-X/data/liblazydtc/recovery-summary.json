@@ -1,0 +1,10 @@
+{
+  "binary": "liblazydtc.so",
+  "ghidra_image_base": "00100000",
+  "language": "AARCH64:LE:64:v8A",
+  "functions": 19964,
+  "decompiled": 19964,
+  "failed": 0,
+  "external_skipped": 0,
+  "cancelled": false
+}

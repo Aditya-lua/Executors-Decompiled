@@ -1,0 +1,4 @@
+; EVP_aes_192_ecb @ 00a87050
+00a87050	adrp x0,0xc61000
+00a87054	add x0,x0,#0xd78
+00a87058	ret

@@ -1,0 +1,15 @@
+; FUN_0092f748 @ 0092f748
+0092f748	str x19,[sp, #-0x20]!
+0092f74c	stp x29,x30,[sp, #0x10]
+0092f750	add x29,sp,#0x10
+0092f754	adrp x1,0x92f000
+0092f758	mov x19,x0
+0092f75c	add x0,x0,#0x10
+0092f760	add x1,x1,#0x780
+0092f764	bl 0x00925c98
+0092f768	mov w8,#0x1
+0092f76c	strb w8,[x19, #0x40]
+0092f770	ldp x29,x30,[sp, #0x10]
+0092f774	mov w0,wzr
+0092f778	ldr x19,[sp], #0x20
+0092f77c	ret

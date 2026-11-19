@@ -1,0 +1,32 @@
+; FUN_0091b138 @ 0091b138
+0091b138	ldr x8,[x1, #0x3a8]
+0091b13c	ldrb w9,[x8, #0x8c]
+0091b140	mov w8,#0x131a
+0091b144	ldrb w8,[x0, x8]
+0091b148	tst w9,#0x7
+0091b14c	b.eq 0x0091b164
+0091b150	mov w9,#0x131e
+0091b154	ldrb w9,[x0, x9]
+0091b158	tst w9,#0x2
+0091b15c	mov w9,#0x4
+0091b160	csel w8,w8,w9,eq
+0091b164	ldr x9,[x0, #0x818]
+0091b168	cbnz x9,0x0091b1a8
+0091b16c	ldrb w9,[x0, #0x1b2]
+0091b170	tbnz w9,#0x7,0x0091b194
+0091b174	sub w9,w8,#0x1
+0091b178	cmp w9,#0x4
+0091b17c	b.hi 0x0091b1a0
+0091b180	adrp x10,0xc4f000
+0091b184	sxtb x9,w9
+0091b188	add x10,x10,#0x530
+0091b18c	ldr x9,[x10, x9, LSL #0x3]
+0091b190	b 0x0091b1a8
+0091b194	adrp x9,0x2bc000
+0091b198	add x9,x9,#0xe54
+0091b19c	b 0x0091b1a8
+0091b1a0	adrp x9,0x2d7000
+0091b1a4	add x9,x9,#0x152
+0091b1a8	str x9,[x2]
+0091b1ac	str w8,[x3]
+0091b1b0	ret

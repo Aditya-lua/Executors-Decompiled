@@ -1,0 +1,3 @@
+; X509_VERIFY_PARAM_get0_name @ 00b14778
+00b14778	ldr x0,[x0]
+00b1477c	ret

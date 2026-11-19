@@ -1,0 +1,5 @@
+; OCSP_BASICRESP_free @ 00c32510
+00c32510	adrp x16,0xcb7000
+00c32514	ldr x17,[x16, #0x270]
+00c32518	add x16,x16,#0x270
+00c3251c	br x17

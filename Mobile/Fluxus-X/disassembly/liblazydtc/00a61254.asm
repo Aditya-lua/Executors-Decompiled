@@ -1,0 +1,25 @@
+; OSSL_ENCODER_CTX_free @ 00a61254
+00a61254	cbz x0,0x00a612b0
+00a61258	stp x20,x19,[sp, #-0x20]!
+00a6125c	stp x29,x30,[sp, #0x10]
+00a61260	adrp x1,0xcb5000
+00a61264	mov x19,x0
+00a61268	ldr x0,[x0, #0x18]
+00a6126c	ldr x1,[x1, #0x5c0]
+00a61270	add x29,sp,#0x10
+00a61274	bl 0x00c32600
+00a61278	ldr x0,[x19, #0x30]
+00a6127c	adrp x20,0x2d3000
+00a61280	add x20,x20,#0xb3c
+00a61284	mov w2,#0x2b8
+00a61288	mov x1,x20
+00a6128c	bl 0x00c32310
+00a61290	add x0,x19,#0x38
+00a61294	bl 0x00c3b6b0
+00a61298	ldp x29,x30,[sp, #0x10]
+00a6129c	mov w2,#0x2ba
+00a612a0	mov x0,x19
+00a612a4	mov x1,x20
+00a612a8	ldp x20,x19,[sp], #0x20
+00a612ac	b 0x00c32310
+00a612b0	ret

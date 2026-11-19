@@ -1,0 +1,4 @@
+; i2d_CERTIFICATEPOLICIES @ 00afb864
+00afb864	adrp x2,0xc7e000
+00afb868	add x2,x2,#0xf30
+00afb86c	b 0x00c36170

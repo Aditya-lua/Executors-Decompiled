@@ -1,0 +1,160 @@
+; std::__ndk1::vector<unsigned_char,std::__ndk1::allocator<unsigned_char>>::insert<std::__ndk1::__wrap_iter<unsigned_char*>> @ 0099a47c
+0099a47c	str x27,[sp, #-0x60]!
+0099a480	stp x26,x25,[sp, #0x10]
+0099a484	stp x24,x23,[sp, #0x20]
+0099a488	stp x22,x21,[sp, #0x30]
+0099a48c	stp x20,x19,[sp, #0x40]
+0099a490	stp x29,x30,[sp, #0x50]
+0099a494	add x29,sp,#0x50
+0099a498	sub x26,x3,x2
+0099a49c	mov x21,x3
+0099a4a0	mov x22,x2
+0099a4a4	mov x19,x1
+0099a4a8	cmp x26,#0x1
+0099a4ac	mov x20,x0
+0099a4b0	b.lt 0x0099a6d0
+0099a4b4	ldp x9,x10,[x20, #0x8]
+0099a4b8	sub x8,x10,x9
+0099a4bc	cmp x26,x8
+0099a4c0	b.le 0x0099a500
+0099a4c4	ldr x24,[x20]
+0099a4c8	sub x8,x9,x24
+0099a4cc	adds x8,x8,x26
+0099a4d0	b.mi 0x0099a6f0
+0099a4d4	sub x9,x10,x24
+0099a4d8	orr x10,xzr,#0x3fffffffffffffff
+0099a4dc	cmp x9,x10
+0099a4e0	sub x27,x19,x24
+0099a4e4	b.cs 0x0099a5c0
+0099a4e8	lsl x9,x9,#0x1
+0099a4ec	cmp x9,x8
+0099a4f0	csel x23,x8,x9,cc
+0099a4f4	cbnz x23,0x0099a5c4
+0099a4f8	mov x25,xzr
+0099a4fc	b 0x0099a5d0
+0099a500	sub x11,x9,x19
+0099a504	cmp x26,x11
+0099a508	b.le 0x0099a54c
+0099a50c	add x10,x22,x11
+0099a510	mov x8,x9
+0099a514	cmp x10,x21
+0099a518	b.eq 0x0099a53c
+0099a51c	mov x12,x10
+0099a520	ldrb w13,[x12], #0x1
+0099a524	strb w13,[x8]
+0099a528	ldr x8,[x20, #0x8]
+0099a52c	cmp x21,x12
+0099a530	add x8,x8,#0x1
+0099a534	str x8,[x20, #0x8]
+0099a538	b.ne 0x0099a520
+0099a53c	cmp x11,#0x1
+0099a540	b.lt 0x0099a6d0
+0099a544	mov x21,x10
+0099a548	b 0x0099a550
+0099a54c	mov x8,x9
+0099a550	add x10,x19,x26
+0099a554	sub x11,x8,x26
+0099a558	cmp x11,x9
+0099a55c	sub x2,x8,x10
+0099a560	b.cs 0x0099a598
+0099a564	sub x11,x10,x8
+0099a568	add x12,x8,x19
+0099a56c	sub x11,x11,x19
+0099a570	add x9,x9,x11
+0099a574	sub x10,x12,x10
+0099a578	mov x11,x8
+0099a57c	ldrb w12,[x10], #0x1
+0099a580	subs x9,x9,#0x1
+0099a584	strb w12,[x11]
+0099a588	ldr x11,[x20, #0x8]
+0099a58c	add x11,x11,#0x1
+0099a590	str x11,[x20, #0x8]
+0099a594	b.ne 0x0099a57c
+0099a598	cbz x2,0x0099a5a8
+0099a59c	sub x0,x8,x2
+0099a5a0	mov x1,x19
+0099a5a4	bl 0x00c2ff60
+0099a5a8	subs x2,x21,x22
+0099a5ac	b.eq 0x0099a6d0
+0099a5b0	mov x0,x19
+0099a5b4	mov x1,x22
+0099a5b8	bl 0x00c2ff60
+0099a5bc	b 0x0099a6d0
+0099a5c0	orr x23,xzr,#0x7fffffffffffffff
+0099a5c4	mov x0,x23
+0099a5c8	bl 0x00c2fed0
+0099a5cc	mov x25,x0
+0099a5d0	cmp x22,x21
+0099a5d4	add x27,x25,x27
+0099a5d8	b.eq 0x0099a670
+0099a5dc	sub x8,x19,x22
+0099a5e0	sub x8,x8,x24
+0099a5e4	cmp x26,#0x20
+0099a5e8	add x8,x21,x8
+0099a5ec	mov x9,x27
+0099a5f0	mov x10,x22
+0099a5f4	b.cc 0x0099a654
+0099a5f8	cmp x27,x21
+0099a5fc	b.cs 0x0099a614
+0099a600	add x9,x25,x8
+0099a604	cmp x9,x22
+0099a608	mov x9,x27
+0099a60c	mov x10,x22
+0099a610	b.hi 0x0099a654
+0099a614	add x13,x19,#0x10
+0099a618	and x11,x26,#-0x20
+0099a61c	sub x13,x13,x24
+0099a620	add x12,x22,#0x10
+0099a624	add x9,x27,x11
+0099a628	add x10,x22,x11
+0099a62c	add x13,x25,x13
+0099a630	mov x14,x11
+0099a634	ldp q0,q1,[x12, #-0x10]
+0099a638	add x12,x12,#0x20
+0099a63c	subs x14,x14,#0x20
+0099a640	stp q0,q1,[x13, #-0x10]
+0099a644	add x13,x13,#0x20
+0099a648	b.ne 0x0099a634
+0099a64c	cmp x11,x26
+0099a650	b.eq 0x0099a664
+0099a654	ldrb w11,[x10], #0x1
+0099a658	cmp x21,x10
+0099a65c	strb w11,[x9], #0x1
+0099a660	b.ne 0x0099a654
+0099a664	ldr x24,[x20]
+0099a668	add x21,x25,x8
+0099a66c	b 0x0099a674
+0099a670	mov x21,x27
+0099a674	sub x2,x19,x24
+0099a678	cmp x2,#0x1
+0099a67c	sub x22,x27,x2
+0099a680	b.lt 0x0099a690
+0099a684	mov x0,x22
+0099a688	mov x1,x24
+0099a68c	bl 0x00c2ffd0
+0099a690	ldr x8,[x20, #0x8]
+0099a694	add x23,x25,x23
+0099a698	sub x26,x8,x19
+0099a69c	cmp x26,#0x1
+0099a6a0	b.lt 0x0099a6b8
+0099a6a4	mov x0,x21
+0099a6a8	mov x1,x19
+0099a6ac	mov x2,x26
+0099a6b0	bl 0x00c2ffd0
+0099a6b4	add x21,x21,x26
+0099a6b8	stp x22,x21,[x20]
+0099a6bc	str x23,[x20, #0x10]
+0099a6c0	cbz x24,0x0099a6cc
+0099a6c4	mov x0,x24
+0099a6c8	bl 0x00c301d0
+0099a6cc	mov x19,x27
+0099a6d0	mov x0,x19
+0099a6d4	ldp x29,x30,[sp, #0x50]
+0099a6d8	ldp x20,x19,[sp, #0x40]
+0099a6dc	ldp x22,x21,[sp, #0x30]
+0099a6e0	ldp x24,x23,[sp, #0x20]
+0099a6e4	ldp x26,x25,[sp, #0x10]
+0099a6e8	ldr x27,[sp], #0x60
+0099a6ec	ret
+0099a6f0	mov x0,x20
+0099a6f4	bl 0x00c30bd0

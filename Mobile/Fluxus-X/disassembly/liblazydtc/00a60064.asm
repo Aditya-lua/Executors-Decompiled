@@ -1,0 +1,28 @@
+; ASN1_TYPE_set_octetstring @ 00a60064
+00a60064	stp x22,x21,[sp, #-0x30]!
+00a60068	stp x20,x19,[sp, #0x10]
+00a6006c	stp x29,x30,[sp, #0x20]
+00a60070	add x29,sp,#0x20
+00a60074	mov w21,w2
+00a60078	mov x22,x1
+00a6007c	mov x19,x0
+00a60080	bl 0x00c38170
+00a60084	cbz x0,0x00a600c0
+00a60088	mov x1,x22
+00a6008c	mov w2,w21
+00a60090	mov x20,x0
+00a60094	bl 0x00c377a0
+00a60098	cbz w0,0x00a600b4
+00a6009c	mov w1,#0x4
+00a600a0	mov x0,x19
+00a600a4	mov x2,x20
+00a600a8	bl 0x00c37a60
+00a600ac	mov w0,#0x1
+00a600b0	b 0x00a600c0
+00a600b4	mov x0,x20
+00a600b8	bl 0x00c35530
+00a600bc	mov w0,wzr
+00a600c0	ldp x29,x30,[sp, #0x20]
+00a600c4	ldp x20,x19,[sp, #0x10]
+00a600c8	ldp x22,x21,[sp], #0x30
+00a600cc	ret

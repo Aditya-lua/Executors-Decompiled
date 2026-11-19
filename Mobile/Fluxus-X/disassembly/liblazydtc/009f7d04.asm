@@ -1,0 +1,4 @@
+; i2d_DIRECTORYSTRING @ 009f7d04
+009f7d04	adrp x2,0xc58000
+009f7d08	add x2,x2,#0xfa8
+009f7d0c	b 0x00c36170

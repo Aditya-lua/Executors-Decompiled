@@ -1,0 +1,4 @@
+; d2i_DIRECTORYSTRING @ 009f7cf8
+009f7cf8	adrp x3,0xc58000
+009f7cfc	add x3,x3,#0xfa8
+009f7d00	b 0x00c36150

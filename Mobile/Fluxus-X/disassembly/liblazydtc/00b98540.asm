@@ -1,0 +1,56 @@
+; mbedtls_psa_aead_finish @ 00b98540
+00b98540	str x21,[sp, #-0x30]!
+00b98544	stp x20,x19,[sp, #0x10]
+00b98548	stp x29,x30,[sp, #0x20]
+00b9854c	add x29,sp,#0x20
+00b98550	ldrb w8,[x0, #0x7]
+00b98554	mov x19,x6
+00b98558	mov x20,x3
+00b9855c	mov x21,x0
+00b98560	cmp x8,x5
+00b98564	b.ls 0x00b9857c
+00b98568	mov w0,#0xffffff76
+00b9856c	ldp x29,x30,[sp, #0x20]
+00b98570	ldp x20,x19,[sp, #0x10]
+00b98574	ldr x21,[sp], #0x30
+00b98578	ret
+00b9857c	ldr w9,[x21]
+00b98580	mov w10,#0x500
+00b98584	movk w10,#0x510, LSL #16
+00b98588	cmp w9,w10
+00b9858c	b.eq 0x00b985e8
+00b98590	mov w10,#0x100
+00b98594	movk w10,#0x550, LSL #16
+00b98598	cmp w9,w10
+00b9859c	b.eq 0x00b985cc
+00b985a0	mov w10,#0x200
+00b985a4	movk w10,#0x550, LSL #16
+00b985a8	cmp w9,w10
+00b985ac	b.ne 0x00b98614
+00b985b0	add x0,x21,#0x8
+00b985b4	mov x3,x20
+00b985b8	mov x5,x8
+00b985bc	bl 0x00c421c0
+00b985c0	bl 0x00c42bf0
+00b985c4	cbnz w0,0x00b9856c
+00b985c8	b 0x00b98604
+00b985cc	add x0,x21,#0x8
+00b985d0	mov x1,x4
+00b985d4	mov x2,x8
+00b985d8	bl 0x00c41ff0
+00b985dc	bl 0x00c42bf0
+00b985e0	cbnz w0,0x00b9856c
+00b985e4	b 0x00b98604
+00b985e8	cmp x5,#0x10
+00b985ec	b.cc 0x00b98568
+00b985f0	add x0,x21,#0x8
+00b985f4	mov x1,x4
+00b985f8	bl 0x00c420e0
+00b985fc	bl 0x00c42bf0
+00b98600	cbnz w0,0x00b9856c
+00b98604	str xzr,[x20]
+00b98608	ldrb w8,[x21, #0x7]
+00b9860c	str x8,[x19]
+00b98610	b 0x00b9856c
+00b98614	mov w0,#0xffffff7a
+00b98618	b 0x00b9856c

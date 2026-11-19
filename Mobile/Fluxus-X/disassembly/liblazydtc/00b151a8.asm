@@ -1,0 +1,55 @@
+; X509_NAME_add_entry_by_NID @ 00b151a8
+00b151a8	str x25,[sp, #-0x50]!
+00b151ac	stp x22,x21,[sp, #0x20]
+00b151b0	mov x21,x0
+00b151b4	mov w0,w1
+00b151b8	stp x24,x23,[sp, #0x10]
+00b151bc	stp x20,x19,[sp, #0x30]
+00b151c0	stp x29,x30,[sp, #0x40]
+00b151c4	add x29,sp,#0x40
+00b151c8	mov w19,w6
+00b151cc	mov w20,w5
+00b151d0	mov w22,w4
+00b151d4	mov x23,x3
+00b151d8	mov w24,w2
+00b151dc	bl 0x00c37740
+00b151e0	cbz x0,0x00b15238
+00b151e4	mov x25,x0
+00b151e8	mov x0,xzr
+00b151ec	mov x1,x25
+00b151f0	mov w2,w24
+00b151f4	mov x3,x23
+00b151f8	mov w4,w22
+00b151fc	bl 0x00b14f48
+00b15200	mov x22,x0
+00b15204	mov x0,x25
+00b15208	bl 0x00c37660
+00b1520c	cbz x22,0x00b15264
+00b15210	mov x0,x21
+00b15214	mov x1,x22
+00b15218	mov w2,w20
+00b1521c	mov w3,w19
+00b15220	bl 0x00b15038
+00b15224	mov w19,w0
+00b15228	mov x0,x22
+00b1522c	bl 0x00c40940
+00b15230	mov w0,w19
+00b15234	b 0x00b15268
+00b15238	bl 0x00c342a0
+00b1523c	adrp x0,0x2a0000
+00b15240	adrp x2,0x2b4000
+00b15244	add x0,x0,#0xe2d
+00b15248	add x2,x2,#0xbca
+00b1524c	mov w1,#0x10f
+00b15250	bl 0x00c342b0
+00b15254	mov w0,#0xb
+00b15258	mov w1,#0x6d
+00b1525c	mov x2,xzr
+00b15260	bl 0x00c342c0
+00b15264	mov w0,wzr
+00b15268	ldp x29,x30,[sp, #0x40]
+00b1526c	ldp x20,x19,[sp, #0x30]
+00b15270	ldp x22,x21,[sp, #0x20]
+00b15274	ldp x24,x23,[sp, #0x10]
+00b15278	ldr x25,[sp], #0x50
+00b1527c	ret

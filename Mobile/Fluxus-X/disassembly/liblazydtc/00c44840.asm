@@ -1,0 +1,5 @@
+; operator.new[] @ 00c44840
+00c44840	adrp x16,0xcc0000
+00c44844	ldr x17,[x16, #0x408]
+00c44848	add x16,x16,#0x408
+00c4484c	br x17

@@ -1,0 +1,4 @@
+; PKCS8_PRIV_KEY_INFO_new @ 009f2a5c
+009f2a5c	adrp x0,0xc58000
+009f2a60	add x0,x0,#0xa40
+009f2a64	b 0x00c372e0

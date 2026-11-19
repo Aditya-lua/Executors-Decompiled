@@ -1,0 +1,11 @@
+; EVP_KDF_fetch @ 00a64344
+00a64344	adrp x4,0xa64000
+00a64348	adrp x5,0xa64000
+00a6434c	adrp x6,0xa64000
+00a64350	mov x3,x2
+00a64354	mov x2,x1
+00a64358	add x4,x4,#0x36c
+00a6435c	add x5,x5,#0x670
+00a64360	add x6,x6,#0x68c
+00a64364	mov w1,#0x4
+00a64368	b 0x00c3bf50

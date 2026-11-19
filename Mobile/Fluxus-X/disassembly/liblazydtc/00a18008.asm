@@ -1,0 +1,27 @@
+; FUN_00a18008 @ 00a18008
+00a18008	stp x20,x19,[sp, #-0x20]!
+00a1800c	stp x29,x30,[sp, #0x10]
+00a18010	adrp x11,0xcb5000
+00a18014	ldr x8,[x0, #0x20]
+00a18018	ldr x9,[x1, #0x20]
+00a1801c	ldr x10,[x0, #0x8]
+00a18020	ldr x11,[x11, #0x330]
+00a18024	mov x20,x1
+00a18028	mov x19,x0
+00a1802c	add x0,x8,#0x8
+00a18030	cmp x10,x11
+00a18034	add x1,x9,#0x8
+00a18038	cset w2,ne
+00a1803c	add x29,sp,#0x10
+00a18040	bl 0x00c39c70
+00a18044	cbz w0,0x00a18064
+00a18048	ldr x8,[x20, #0x20]
+00a1804c	ldr x9,[x19, #0x20]
+00a18050	ldr x0,[x8, #0x70]
+00a18054	ldr x1,[x9, #0x70]
+00a18058	bl 0x00c38cc0
+00a1805c	cmp w0,#0x0
+00a18060	cset w0,eq
+00a18064	ldp x29,x30,[sp, #0x10]
+00a18068	ldp x20,x19,[sp], #0x20
+00a1806c	ret

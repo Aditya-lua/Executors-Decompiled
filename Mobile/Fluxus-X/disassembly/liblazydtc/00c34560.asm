@@ -1,0 +1,5 @@
+; pqueue_next @ 00c34560
+00c34560	adrp x16,0xcb8000
+00c34564	ldr x17,[x16, #0x298]
+00c34568	add x16,x16,#0x298
+00c3456c	br x17

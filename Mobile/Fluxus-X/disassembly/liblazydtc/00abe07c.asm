@@ -1,0 +1,4 @@
+; i2d_PKCS7_ISSUER_AND_SERIAL @ 00abe07c
+00abe07c	adrp x2,0xc7b000
+00abe080	add x2,x2,#0x8a8
+00abe084	b 0x00c36170

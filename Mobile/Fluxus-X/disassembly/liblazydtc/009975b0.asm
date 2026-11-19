@@ -1,0 +1,53 @@
+; ix::WebSocketTransport::setOnCloseCallback @ 009975b0
+009975b0	sub sp,sp,#0x70
+009975b4	str x21,[sp, #0x40]
+009975b8	stp x20,x19,[sp, #0x50]
+009975bc	stp x29,x30,[sp, #0x60]
+009975c0	add x29,sp,#0x60
+009975c4	mrs x20,tpidr_el0
+009975c8	ldr x8,[x20, #0x28]
+009975cc	add x19,x0,#0xf0
+009975d0	stur x8,[x29, #-0x28]
+009975d4	ldr x8,[x1, #0x20]
+009975d8	cbz x8,0x009975fc
+009975dc	cmp x1,x8
+009975e0	b.eq 0x00997604
+009975e4	ldr x9,[x8]
+009975e8	mov x0,x8
+009975ec	ldr x9,[x9, #0x10]
+009975f0	blr x9
+009975f4	str x0,[sp, #0x20]
+009975f8	b 0x00997620
+009975fc	str xzr,[sp, #0x20]
+00997600	b 0x00997620
+00997604	mov x9,sp
+00997608	str x9,[sp, #0x20]
+0099760c	ldr x9,[x8]
+00997610	mov x1,sp
+00997614	mov x0,x8
+00997618	ldr x9,[x9, #0x18]
+0099761c	blr x9
+00997620	mov x0,sp
+00997624	mov x1,x19
+00997628	mov x21,sp
+0099762c	bl 0x00c33f90
+00997630	ldr x0,[sp, #0x20]
+00997634	cmp x21,x0
+00997638	b.eq 0x0099764c
+0099763c	cbz x0,0x00997658
+00997640	ldr x8,[x0]
+00997644	ldr x8,[x8, #0x28]
+00997648	b 0x00997654
+0099764c	ldr x8,[x0]
+00997650	ldr x8,[x8, #0x20]
+00997654	blr x8
+00997658	ldr x8,[x20, #0x28]
+0099765c	ldur x9,[x29, #-0x28]
+00997660	cmp x8,x9
+00997664	b.ne 0x0099767c
+00997668	ldp x29,x30,[sp, #0x60]
+0099766c	ldp x20,x19,[sp, #0x50]
+00997670	ldr x21,[sp, #0x40]
+00997674	add sp,sp,#0x70
+00997678	ret
+0099767c	bl 0x00c2fec0

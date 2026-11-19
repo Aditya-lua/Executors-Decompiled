@@ -1,0 +1,4 @@
+; d2i_ASN1_BMPSTRING @ 009f7bc0
+009f7bc0	adrp x3,0xc58000
+009f7bc4	add x3,x3,#0xe20
+009f7bc8	b 0x00c36150

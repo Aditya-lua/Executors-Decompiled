@@ -1,0 +1,71 @@
+; ix::WebSocketTransport::sendOnSocket @ 0099a338
+0099a338	str x23,[sp, #-0x40]!
+0099a33c	stp x22,x21,[sp, #0x10]
+0099a340	stp x20,x19,[sp, #0x20]
+0099a344	stp x29,x30,[sp, #0x30]
+0099a348	add x29,sp,#0x30
+0099a34c	add x19,x0,#0x68
+0099a350	mov x20,x0
+0099a354	mov x0,x19
+0099a358	bl 0x00c2ff10
+0099a35c	ldp x8,x9,[x20, #0x50]
+0099a360	cmp x9,x8
+0099a364	b.ne 0x0099a38c
+0099a368	mov w20,#0x1
+0099a36c	mov x0,x19
+0099a370	bl 0x00c2ff20
+0099a374	mov w0,w20
+0099a378	ldp x29,x30,[sp, #0x30]
+0099a37c	ldp x20,x19,[sp, #0x20]
+0099a380	ldp x22,x21,[sp, #0x10]
+0099a384	ldr x23,[sp], #0x40
+0099a388	ret
+0099a38c	add x21,x20,#0xb8
+0099a390	mov x0,x21
+0099a394	bl 0x00c2ff10
+0099a398	ldr x0,[x20, #0xb0]
+0099a39c	ldp x1,x9,[x20, #0x50]
+0099a3a0	ldr x8,[x0]
+0099a3a4	sub x2,x9,x1
+0099a3a8	ldr x8,[x8, #0x28]
+0099a3ac	blr x8
+0099a3b0	mov x23,x0
+0099a3b4	mov x0,x21
+0099a3b8	bl 0x00c2ff20
+0099a3bc	tbnz x23,#0x3f,0x0099a400
+0099a3c0	cbz x23,0x0099a408
+0099a3c4	ldp x22,x8,[x20, #0x50]
+0099a3c8	add x1,x22,x23
+0099a3cc	subs x23,x8,x1
+0099a3d0	b.eq 0x0099a3e8
+0099a3d4	mov x0,x22
+0099a3d8	mov x2,x23
+0099a3dc	bl 0x00c2ff60
+0099a3e0	ldr x8,[x20, #0x50]
+0099a3e4	b 0x0099a3ec
+0099a3e8	mov x8,x22
+0099a3ec	add x9,x22,x23
+0099a3f0	cmp x8,x9
+0099a3f4	str x9,[x20, #0x58]
+0099a3f8	b.ne 0x0099a390
+0099a3fc	b 0x0099a368
+0099a400	bl 0x00c334f0
+0099a404	tbnz w0,#0x0,0x0099a368
+0099a408	mov x0,x21
+0099a40c	bl 0x00c2ff10
+0099a410	ldr x0,[x20, #0xb0]
+0099a414	ldr x8,[x0]
+0099a418	ldr x8,[x8, #0x20]
+0099a41c	blr x8
+0099a420	mov x0,x21
+0099a424	bl 0x00c2ff20
+0099a428	add x8,x20,#0xe0
+0099a42c	ldar w8,[x8]
+0099a430	cbz w8,0x0099a448
+0099a434	mov w1,#0x1
+0099a438	mov x0,x20
+0099a43c	bl 0x00c33ea0
+0099a440	mov w20,wzr
+0099a444	b 0x0099a36c
+0099a448	mov w20,wzr
+0099a44c	b 0x0099a36c

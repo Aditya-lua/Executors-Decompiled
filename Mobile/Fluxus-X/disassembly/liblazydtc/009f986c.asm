@@ -1,0 +1,18 @@
+; ASYNC_block_pause @ 009f986c
+009f986c	stp x29,x30,[sp, #-0x10]!
+009f9870	mov w0,#0x100
+009f9874	mov x1,xzr
+009f9878	mov x29,sp
+009f987c	bl 0x00c35500
+009f9880	cbz w0,0x009f98a8
+009f9884	adrp x0,0xd21000
+009f9888	add x0,x0,#0x8e8
+009f988c	bl 0x00c38360
+009f9890	cbz x0,0x009f98a8
+009f9894	ldr x8,[x0, #0x8]
+009f9898	cbz x8,0x009f98a8
+009f989c	ldr w8,[x0, #0x10]
+009f98a0	add w8,w8,#0x1
+009f98a4	str w8,[x0, #0x10]
+009f98a8	ldp x29,x30,[sp], #0x10
+009f98ac	ret

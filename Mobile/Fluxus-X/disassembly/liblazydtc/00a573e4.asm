@@ -1,0 +1,49 @@
+; evp_md_ctx_clear_digest @ 00a573e4
+00a573e4	str x21,[sp, #-0x30]!
+00a573e8	stp x20,x19,[sp, #0x10]
+00a573ec	stp x29,x30,[sp, #0x20]
+00a573f0	mov x19,x0
+00a573f4	ldr x0,[x0, #0x38]
+00a573f8	mov w20,w2
+00a573fc	mov w21,w1
+00a57400	add x29,sp,#0x20
+00a57404	cbz x0,0x00a5742c
+00a57408	ldr x8,[x19, #0x8]
+00a5740c	cbz x8,0x00a5741c
+00a57410	ldr x8,[x8, #0xb0]
+00a57414	cbz x8,0x00a5741c
+00a57418	blr x8
+00a5741c	mov w1,#0x2
+00a57420	mov x0,x19
+00a57424	str xzr,[x19, #0x38]
+00a57428	bl 0x00c3c1b0
+00a5742c	mov x0,x19
+00a57430	mov w1,w21
+00a57434	bl 0x00a574a4
+00a57438	cbz w21,0x00a57440
+00a5743c	str xzr,[x19, #0x8]
+00a57440	ldr x0,[x19, #0x10]
+00a57444	bl 0x00c32360
+00a57448	str xzr,[x19, #0x10]
+00a5744c	cbnz w20,0x00a57494
+00a57450	ldr x0,[x19, #0x40]
+00a57454	cbz x0,0x00a5748c
+00a57458	ldr w8,[x0, #0x18]
+00a5745c	cbnz w8,0x00a5748c
+00a57460	add x9,x0,#0x78
+00a57464	ldxr w8,[x9]
+00a57468	subs w10,w8,#0x1
+00a5746c	stxr w11,w10,[x9]
+00a57470	cbnz w11,0x00a57464
+00a57474	b.ne 0x00a57480
+00a57478	dmb ISHLD
+00a5747c	b 0x00a57488
+00a57480	cmp w8,#0x1
+00a57484	b.gt 0x00a5748c
+00a57488	bl 0x00c3c280
+00a5748c	str xzr,[x19, #0x40]
+00a57490	str xzr,[x19]
+00a57494	ldp x29,x30,[sp, #0x20]
+00a57498	ldp x20,x19,[sp, #0x10]
+00a5749c	ldr x21,[sp], #0x30
+00a574a0	ret

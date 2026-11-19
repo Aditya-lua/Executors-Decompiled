@@ -1,0 +1,53 @@
+; i2s_ASN1_UTF8STRING @ 00b05700
+00b05700	stp x20,x19,[sp, #-0x20]!
+00b05704	stp x29,x30,[sp, #0x10]
+00b05708	add x29,sp,#0x10
+00b0570c	cbz x1,0x00b05754
+00b05710	ldrsw x8,[x1]
+00b05714	mov x19,x1
+00b05718	cbz w8,0x00b05754
+00b0571c	adrp x1,0x2d6000
+00b05720	add x0,x8,#0x1
+00b05724	add x1,x1,#0x72f
+00b05728	mov w2,#0x26
+00b0572c	bl 0x00c32320
+00b05730	mov x20,x0
+00b05734	cbz x0,0x00b05790
+00b05738	ldr x1,[x19, #0x8]
+00b0573c	ldrsw x2,[x19]
+00b05740	mov x0,x20
+00b05744	bl 0x00c2ffd0
+00b05748	ldrsw x8,[x19]
+00b0574c	strb wzr,[x20, x8]
+00b05750	b 0x00b057c0
+00b05754	bl 0x00c342a0
+00b05758	adrp x0,0x2d6000
+00b0575c	adrp x2,0x2d2000
+00b05760	add x0,x0,#0x72f
+00b05764	add x2,x2,#0x4e5
+00b05768	mov w1,#0x23
+00b0576c	bl 0x00c342b0
+00b05770	mov w8,#0x100
+00b05774	movk w8,#0xc, LSL #16
+00b05778	add w1,w8,#0x2
+00b0577c	mov w0,#0x22
+00b05780	mov x2,xzr
+00b05784	bl 0x00c342c0
+00b05788	mov x20,xzr
+00b0578c	b 0x00b057c0
+00b05790	bl 0x00c342a0
+00b05794	adrp x0,0x2d6000
+00b05798	adrp x2,0x2d2000
+00b0579c	add x0,x0,#0x72f
+00b057a0	add x2,x2,#0x4e5
+00b057a4	mov w1,#0x27
+00b057a8	bl 0x00c342b0
+00b057ac	mov w1,#0x100
+00b057b0	mov w0,#0x22
+00b057b4	movk w1,#0xc, LSL #16
+00b057b8	mov x2,xzr
+00b057bc	bl 0x00c342c0
+00b057c0	ldp x29,x30,[sp, #0x10]
+00b057c4	mov x0,x20
+00b057c8	ldp x20,x19,[sp], #0x20
+00b057cc	ret

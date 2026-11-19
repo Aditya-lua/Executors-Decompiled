@@ -1,0 +1,62 @@
+; ossl_crypto_free_ex_index_ex @ 00a8363c
+00a8363c	stp x22,x21,[sp, #-0x30]!
+00a83640	stp x20,x19,[sp, #0x10]
+00a83644	stp x29,x30,[sp, #0x20]
+00a83648	add x29,sp,#0x20
+00a8364c	mov w20,w2
+00a83650	mov w21,w1
+00a83654	bl 0x00c3dee0
+00a83658	cbz x0,0x00a83708
+00a8365c	cmp w21,#0x12
+00a83660	b.cc 0x00a83698
+00a83664	bl 0x00c342a0
+00a83668	adrp x0,0x2a6000
+00a8366c	adrp x2,0x2b2000
+00a83670	add x0,x0,#0xa7
+00a83674	add x2,x2,#0x2d9
+00a83678	mov w1,#0x23
+00a8367c	bl 0x00c342b0
+00a83680	mov w1,#0x106
+00a83684	orr w0,wzr,#0xf
+00a83688	movk w1,#0x8, LSL #16
+00a8368c	mov x2,xzr
+00a83690	bl 0x00c342c0
+00a83694	b 0x00a83708
+00a83698	mov x19,x0
+00a8369c	ldr x0,[x0]
+00a836a0	cbz x0,0x00a83708
+00a836a4	bl 0x00c356a0
+00a836a8	cbz w0,0x00a83708
+00a836ac	tbnz w20,#0x1f,0x00a83720
+00a836b0	add x22,x19,w21, SXTW  #0x3
+00a836b4	ldr x0,[x22, #0x8]!
+00a836b8	bl 0x00c325e0
+00a836bc	cmp w0,w20
+00a836c0	mov w21,wzr
+00a836c4	b.le 0x00a83724
+00a836c8	ldr x0,[x22]
+00a836cc	mov w1,w20
+00a836d0	bl 0x00c32610
+00a836d4	cbz x0,0x00a83720
+00a836d8	adrp x9,0xa83000
+00a836dc	add x9,x9,#0x730
+00a836e0	adrp x10,0xa83000
+00a836e4	adrp x8,0xa83000
+00a836e8	add x10,x10,#0x73c
+00a836ec	fmov d0,x9
+00a836f0	add x8,x8,#0x734
+00a836f4	mov v0.D[0x1],x10
+00a836f8	mov w21,#0x1
+00a836fc	str x8,[x0, #0x28]
+00a83700	stur q0,[x0, #0x18]
+00a83704	b 0x00a83724
+00a83708	mov w21,wzr
+00a8370c	ldp x29,x30,[sp, #0x20]
+00a83710	ldp x20,x19,[sp, #0x10]
+00a83714	mov w0,w21
+00a83718	ldp x22,x21,[sp], #0x30
+00a8371c	ret
+00a83720	mov w21,wzr
+00a83724	ldr x0,[x19]
+00a83728	bl 0x00c35690
+00a8372c	b 0x00a8370c

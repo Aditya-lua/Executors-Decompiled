@@ -1,0 +1,5 @@
+; RSA_sign_ASN1_OCTET_STRING @ 00c40000
+00c40000	adrp x16,0xcbd000
+00c40004	ldr x17,[x16, #0xfe8]
+00c40008	add x16,x16,#0xfe8
+00c4000c	br x17

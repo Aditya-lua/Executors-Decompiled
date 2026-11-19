@@ -1,0 +1,27 @@
+; evp_do_md_ctx_setparams @ 00a63014
+00a63014	cbz x0,0x00a63078
+00a63018	ldr x8,[x0, #0x70]
+00a6301c	cbz x8,0x00a63034
+00a63020	ldr x3,[x0, #0xc8]
+00a63024	cbz x3,0x00a6303c
+00a63028	mov x0,x1
+00a6302c	mov x1,x2
+00a63030	br x3
+00a63034	mov w0,#0xffffffff
+00a63038	ret
+00a6303c	stp x29,x30,[sp, #-0x10]!
+00a63040	mov x29,sp
+00a63044	bl 0x00c342a0
+00a63048	adrp x0,0x2af000
+00a6304c	adrp x2,0x2d9000
+00a63050	add x0,x0,#0xfe8
+00a63054	add x2,x2,#0xcac
+00a63058	mov w1,#0x46
+00a6305c	bl 0x00c342b0
+00a63060	orr w0,wzr,#0x6
+00a63064	mov w1,#0xc6
+00a63068	mov x2,xzr
+00a6306c	bl 0x00c342c0
+00a63070	mov w0,wzr
+00a63074	ldp x29,x30,[sp], #0x10
+00a63078	ret

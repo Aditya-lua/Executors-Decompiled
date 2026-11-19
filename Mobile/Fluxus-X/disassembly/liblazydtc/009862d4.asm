@@ -1,0 +1,29 @@
+; ix::SocketConnect::configure @ 009862d4
+009862d4	sub sp,sp,#0x30
+009862d8	stp x20,x19,[sp, #0x10]
+009862dc	stp x29,x30,[sp, #0x20]
+009862e0	add x29,sp,#0x20
+009862e4	mrs x20,tpidr_el0
+009862e8	ldr x8,[x20, #0x28]
+009862ec	mov w9,#0x1
+009862f0	orr w1,wzr,#0x6
+009862f4	mov w2,#0x1
+009862f8	add x3,sp,#0x4
+009862fc	mov w4,#0x4
+00986300	mov w19,w0
+00986304	str x8,[sp, #0x8]
+00986308	str w9,[sp, #0x4]
+0098630c	bl 0x00c31c60
+00986310	mov w1,#0x4
+00986314	mov w2,#0x800
+00986318	mov w0,w19
+0098631c	bl 0x00c31f20
+00986320	ldr x8,[x20, #0x28]
+00986324	ldr x9,[sp, #0x8]
+00986328	cmp x8,x9
+0098632c	b.ne 0x00986340
+00986330	ldp x29,x30,[sp, #0x20]
+00986334	ldp x20,x19,[sp, #0x10]
+00986338	add sp,sp,#0x30
+0098633c	ret
+00986340	bl 0x00c2fec0

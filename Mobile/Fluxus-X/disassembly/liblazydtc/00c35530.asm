@@ -1,0 +1,5 @@
+; ASN1_OCTET_STRING_free @ 00c35530
+00c35530	adrp x16,0xcb8000
+00c35534	ldr x17,[x16, #0xa80]
+00c35538	add x16,x16,#0xa80
+00c3553c	br x17

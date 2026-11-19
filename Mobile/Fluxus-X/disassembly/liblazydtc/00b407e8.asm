@@ -1,0 +1,18 @@
+; FUN_00b407e8 @ 00b407e8
+00b407e8	stp x29,x30,[sp, #-0x10]!
+00b407ec	mov x29,sp
+00b407f0	bl 0x00c342a0
+00b407f4	adrp x0,0x2a3000
+00b407f8	adrp x2,0x2d2000
+00b407fc	add x0,x0,#0x181
+00b40800	add x2,x2,#0x819
+00b40804	mov w1,#0xea
+00b40808	bl 0x00c342b0
+00b4080c	mov w1,#0x106
+00b40810	mov w0,#0x39
+00b40814	movk w1,#0x8, LSL #16
+00b40818	mov x2,xzr
+00b4081c	bl 0x00c342c0
+00b40820	mov w0,wzr
+00b40824	ldp x29,x30,[sp], #0x10
+00b40828	ret

@@ -1,0 +1,74 @@
+; ossl_ec_GFp_simple_group_get_curve @ 00a397bc
+00a397bc	str x23,[sp, #-0x40]!
+00a397c0	stp x22,x21,[sp, #0x10]
+00a397c4	stp x20,x19,[sp, #0x20]
+00a397c8	mov x22,x4
+00a397cc	mov x19,x3
+00a397d0	mov x23,x2
+00a397d4	mov x20,x0
+00a397d8	stp x29,x30,[sp, #0x30]
+00a397dc	add x29,sp,#0x30
+00a397e0	cbz x1,0x00a397f8
+00a397e4	ldr x8,[x20, #0x40]
+00a397e8	mov x0,x1
+00a397ec	mov x1,x8
+00a397f0	bl 0x00c36990
+00a397f4	cbz x0,0x00a3987c
+00a397f8	orr x8,x23,x19
+00a397fc	mov x21,xzr
+00a39800	cbz x8,0x00a398b0
+00a39804	ldr x8,[x20]
+00a39808	ldr x8,[x8, #0x120]
+00a3980c	cbz x8,0x00a39884
+00a39810	mov x21,xzr
+00a39814	cbnz x22,0x00a3982c
+00a39818	ldr x0,[x20, #0xa8]
+00a3981c	bl 0x00c38a60
+00a39820	mov x22,x0
+00a39824	mov x21,x0
+00a39828	cbz x0,0x00a3987c
+00a3982c	cbz x23,0x00a39850
+00a39830	ldr x8,[x20]
+00a39834	ldr x2,[x20, #0x60]
+00a39838	mov x0,x20
+00a3983c	mov x1,x23
+00a39840	ldr x8,[x8, #0x120]
+00a39844	mov x3,x22
+00a39848	blr x8
+00a3984c	cbz w0,0x00a39874
+00a39850	cbz x19,0x00a398b0
+00a39854	ldr x8,[x20]
+00a39858	ldr x2,[x20, #0x68]
+00a3985c	mov x0,x20
+00a39860	mov x1,x19
+00a39864	ldr x8,[x8, #0x120]
+00a39868	mov x3,x22
+00a3986c	blr x8
+00a39870	cbnz w0,0x00a398b0
+00a39874	mov w19,wzr
+00a39878	b 0x00a398b4
+00a3987c	mov w19,wzr
+00a39880	b 0x00a398bc
+00a39884	cbz x23,0x00a39898
+00a39888	ldr x1,[x20, #0x60]
+00a3988c	mov x0,x23
+00a39890	bl 0x00c36990
+00a39894	cbz x0,0x00a398d4
+00a39898	cbz x19,0x00a398ac
+00a3989c	ldr x1,[x20, #0x68]
+00a398a0	mov x0,x19
+00a398a4	bl 0x00c36990
+00a398a8	cbz x0,0x00a398d4
+00a398ac	mov x21,xzr
+00a398b0	mov w19,#0x1
+00a398b4	mov x0,x21
+00a398b8	bl 0x00c38a30
+00a398bc	mov w0,w19
+00a398c0	ldp x29,x30,[sp, #0x30]
+00a398c4	ldp x20,x19,[sp, #0x20]
+00a398c8	ldp x22,x21,[sp, #0x10]
+00a398cc	ldr x23,[sp], #0x40
+00a398d0	ret
+00a398d4	mov w19,wzr
+00a398d8	mov x21,xzr
+00a398dc	b 0x00a398b4

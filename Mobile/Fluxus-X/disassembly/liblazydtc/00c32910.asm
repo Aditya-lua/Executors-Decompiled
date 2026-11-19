@@ -1,0 +1,5 @@
+; SSL_get_error @ 00c32910
+00c32910	adrp x16,0xcb7000
+00c32914	ldr x17,[x16, #0x470]
+00c32918	add x16,x16,#0x470
+00c3291c	br x17

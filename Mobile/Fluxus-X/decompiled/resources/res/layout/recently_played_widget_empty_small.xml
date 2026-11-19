@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/empty_state" android:background="@color/widget_surface_container" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/roblox_logo" android:layout_width="@dimen/recently_played_widget_roblox_icon_size" android:layout_height="@dimen/recently_played_widget_roblox_icon_size" android:src="@drawable/roblox_logo_widget" android:layout_alignParentTop="true" android:importantForAccessibility="no" android:layout_alignParentEnd="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/widget_primary_text" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/Widgets_RecentlyPlayed_Description_NoExperiences" android:layout_alignParentTop="true" android:fontFamily="sans-serif-medium" android:layout_toStartOf="@id/roblox_logo" />
+</RelativeLayout>

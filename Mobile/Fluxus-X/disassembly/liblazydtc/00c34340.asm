@@ -1,0 +1,5 @@
+; WPACKET_cleanup @ 00c34340
+00c34340	adrp x16,0xcb8000
+00c34344	ldr x17,[x16, #0x188]
+00c34348	add x16,x16,#0x188
+00c3434c	br x17

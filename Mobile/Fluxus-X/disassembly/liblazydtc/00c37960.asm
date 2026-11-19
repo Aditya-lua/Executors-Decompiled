@@ -1,0 +1,5 @@
+; ASN1_UTCTIME_check @ 00c37960
+00c37960	adrp x16,0xcb9000
+00c37964	ldr x17,[x16, #0xc98]
+00c37968	add x16,x16,#0xc98
+00c3796c	br x17

@@ -1,0 +1,5 @@
+; X509_VERIFY_PARAM_move_peername @ 00c35040
+00c35040	adrp x16,0xcb8000
+00c35044	ldr x17,[x16, #0x808]
+00c35048	add x16,x16,#0x808
+00c3504c	br x17

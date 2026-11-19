@@ -1,0 +1,4 @@
+; i2d_X509_REVOKED @ 00b1b108
+00b1b108	adrp x2,0xc82000
+00b1b10c	add x2,x2,#0x58
+00b1b110	b 0x00c36170

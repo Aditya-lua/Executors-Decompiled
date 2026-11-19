@@ -1,0 +1,4 @@
+; i2d_AUTHORITY_INFO_ACCESS @ 00af5664
+00af5664	adrp x2,0xc7e000
+00af5668	add x2,x2,#0x6a0
+00af566c	b 0x00c36170

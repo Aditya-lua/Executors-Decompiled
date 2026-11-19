@@ -1,0 +1,88 @@
+; FUN_00c13140 @ 00c13140
+00c13140	paciasp
+00c13144	stp x29,x30,[sp, #-0x60]!
+00c13148	str x27,[sp, #0x10]
+00c1314c	stp x26,x25,[sp, #0x20]
+00c13150	stp x24,x23,[sp, #0x30]
+00c13154	stp x22,x21,[sp, #0x40]
+00c13158	stp x20,x19,[sp, #0x50]
+00c1315c	mov x29,sp
+00c13160	ldp x24,x26,[x0, #0x10]
+00c13164	sub x8,x26,x24
+00c13168	asr x25,x8,#0x3
+00c1316c	cmp x1,x25
+00c13170	b.hi 0x00c13258
+00c13174	add x22,x24,x1, LSL #0x3
+00c13178	ldr x23,[x0, #0x1330]
+00c1317c	mov x19,x0
+00c13180	mov x20,x1
+00c13184	sub x21,x26,x22
+00c13188	ldr x8,[x23, #0x8]
+00c1318c	add w9,w21,#0xf
+00c13190	and x27,x9,#0xfffffff0
+00c13194	add x9,x8,x27
+00c13198	cmp x9,#0xff0
+00c1319c	b.cc 0x00c131ec
+00c131a0	cmp x27,#0xff1
+00c131a4	b.cc 0x00c131d0
+00c131a8	add x0,x27,#0x10
+00c131ac	bl 0x00c308d0
+00c131b0	cbz x0,0x00c13298
+00c131b4	ldr x8,[x23]
+00c131b8	stp x8,xzr,[x0]
+00c131bc	str x0,[x23]
+00c131c0	add x23,x0,#0x10
+00c131c4	cmp x26,x22
+00c131c8	b.ne 0x00c13204
+00c131cc	b 0x00c13220
+00c131d0	mov w0,#0x1000
+00c131d4	bl 0x00c308d0
+00c131d8	cbz x0,0x00c13298
+00c131dc	mov x8,xzr
+00c131e0	stp x23,xzr,[x0]
+00c131e4	mov x23,x0
+00c131e8	str x0,[x19, #0x1330]
+00c131ec	add x9,x8,x27
+00c131f0	add x8,x23,x8
+00c131f4	str x9,[x23, #0x8]
+00c131f8	add x23,x8,#0x10
+00c131fc	cmp x26,x22
+00c13200	b.eq 0x00c13220
+00c13204	mov x0,x23
+00c13208	mov x1,x22
+00c1320c	mov x2,x21
+00c13210	bl 0x00c2ff60
+00c13214	ldp x24,x8,[x19, #0x10]
+00c13218	sub x8,x8,x24
+00c1321c	asr x25,x8,#0x3
+00c13220	cmp x20,x25
+00c13224	b.hi 0x00c13278
+00c13228	add x8,x24,x20, LSL #0x3
+00c1322c	asr x1,x21,#0x3
+00c13230	mov x0,x23
+00c13234	str x8,[x19, #0x18]
+00c13238	ldp x20,x19,[sp, #0x50]
+00c1323c	ldr x27,[sp, #0x10]
+00c13240	ldp x22,x21,[sp, #0x40]
+00c13244	ldp x24,x23,[sp, #0x30]
+00c13248	ldp x26,x25,[sp, #0x20]
+00c1324c	ldp x29,x30,[sp], #0x60
+00c13250	autiasp
+00c13254	ret
+00c13258	adrp x0,0x29f000
+00c1325c	add x0,x0,#0x357
+00c13260	adrp x1,0x2c0000
+00c13264	add x1,x1,#0xcf7
+00c13268	adrp x3,0x2ab000
+00c1326c	add x3,x3,#0x32c
+00c13270	mov w2,#0xb18
+00c13274	bl 0x00c0de94
+00c13278	adrp x0,0x29f000
+00c1327c	add x0,x0,#0x357
+00c13280	adrp x1,0x2c0000
+00c13284	add x1,x1,#0xcf7
+00c13288	adrp x3,0x2c0000
+00c1328c	add x3,x3,#0xd31
+00c13290	mov w2,#0x86
+00c13294	bl 0x00c0de94
+00c13298	bl 0x00c2fff0

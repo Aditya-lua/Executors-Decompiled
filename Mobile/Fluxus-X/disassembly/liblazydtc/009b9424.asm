@@ -1,0 +1,44 @@
+; SSL_stateless @ 009b9424
+009b9424	str x19,[sp, #-0x20]!
+009b9428	stp x29,x30,[sp, #0x10]
+009b942c	add x29,sp,#0x10
+009b9430	mov x19,x0
+009b9434	bl 0x009b1998
+009b9438	cbz w0,0x009b94c4
+009b943c	bl 0x00c323e0
+009b9440	ldr x8,[x19, #0xa8]
+009b9444	ldr x9,[x19, #0x30]
+009b9448	orr x8,x8,#0x800
+009b944c	str x8,[x19, #0xa8]
+009b9450	cbnz x9,0x009b947c
+009b9454	mov w8,#0x1
+009b9458	mov x0,x19
+009b945c	str w8,[x19, #0x38]
+009b9460	str wzr,[x19, #0x44]
+009b9464	bl 0x00c35cd0
+009b9468	ldr x8,[x19, #0x8]
+009b946c	mov x0,x19
+009b9470	ldr x8,[x8, #0x28]
+009b9474	str x8,[x19, #0x30]
+009b9478	bl 0x009b1b60
+009b947c	mov x0,x19
+009b9480	bl 0x009b445c
+009b9484	ldr x8,[x19, #0xa8]
+009b9488	cmp w0,#0x1
+009b948c	and x8,x8,#-0x801
+009b9490	str x8,[x19, #0xa8]
+009b9494	b.lt 0x009b94a8
+009b9498	ldr w8,[x19, #0xb48]
+009b949c	cbz w8,0x009b94a8
+009b94a0	mov w0,#0x1
+009b94a4	b 0x009b94c4
+009b94a8	ldr w8,[x19, #0x8e8]
+009b94ac	cmp w8,#0x1
+009b94b0	b.ne 0x009b94c0
+009b94b4	mov x0,x19
+009b94b8	bl 0x00c35ce0
+009b94bc	cbz w0,0x009b94c4
+009b94c0	mov w0,#0xffffffff
+009b94c4	ldp x29,x30,[sp, #0x10]
+009b94c8	ldr x19,[sp], #0x20
+009b94cc	ret

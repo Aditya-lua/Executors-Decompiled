@@ -1,0 +1,57 @@
+; X509_NAME_hash_old @ 00b090f8
+00b090f8	sub sp,sp,#0x40
+00b090fc	adrp x1,0x2d5000
+00b09100	adrp x2,0x2a4000
+00b09104	stp x22,x21,[sp, #0x10]
+00b09108	mov x21,x0
+00b0910c	add x1,x1,#0x3fd
+00b09110	add x2,x2,#0x5d
+00b09114	mov x0,xzr
+00b09118	stp x20,x19,[sp, #0x20]
+00b0911c	stp x29,x30,[sp, #0x30]
+00b09120	add x29,sp,#0x30
+00b09124	bl 0x00c357f0
+00b09128	mov x19,x0
+00b0912c	bl 0x00c31fa0
+00b09130	mov x20,x0
+00b09134	mov x22,xzr
+00b09138	cbz x19,0x00b091b0
+00b0913c	cbz x20,0x00b091b0
+00b09140	mov x0,x21
+00b09144	mov x1,xzr
+00b09148	bl 0x00c350f0
+00b0914c	tbnz w0,#0x1f,0x00b091ac
+00b09150	mov x0,x20
+00b09154	mov x1,x19
+00b09158	mov x2,xzr
+00b0915c	bl 0x00c31f70
+00b09160	cbz w0,0x00b091ac
+00b09164	ldr x8,[x21, #0x10]
+00b09168	mov x0,x20
+00b0916c	ldp x2,x1,[x8]
+00b09170	bl 0x00c31f80
+00b09174	cbz w0,0x00b091ac
+00b09178	mov x1,sp
+00b0917c	mov x0,x20
+00b09180	mov x2,xzr
+00b09184	bl 0x00c31f60
+00b09188	cbz w0,0x00b091ac
+00b0918c	ldrb w22,[sp]
+00b09190	ldrb w8,[sp, #0x1]
+00b09194	ldrb w9,[sp, #0x2]
+00b09198	ldrb w10,[sp, #0x3]
+00b0919c	bfm x22,x8,#0x38,#0x7
+00b091a0	bfm x22,x9,#0x30,#0x7
+00b091a4	bfm x22,x10,#0x28,#0x7
+00b091a8	b 0x00b091b0
+00b091ac	mov x22,xzr
+00b091b0	mov x0,x20
+00b091b4	bl 0x00c31f90
+00b091b8	mov x0,x19
+00b091bc	bl 0x00c35800
+00b091c0	mov x0,x22
+00b091c4	ldp x29,x30,[sp, #0x30]
+00b091c8	ldp x20,x19,[sp, #0x20]
+00b091cc	ldp x22,x21,[sp, #0x10]
+00b091d0	add sp,sp,#0x40
+00b091d4	ret

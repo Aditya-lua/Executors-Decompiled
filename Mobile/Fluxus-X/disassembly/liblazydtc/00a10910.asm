@@ -1,0 +1,43 @@
+; ASN1_generate_nconf @ 00a10910
+00a10910	sub sp,sp,#0x70
+00a10914	stp x20,x19,[sp, #0x50]
+00a10918	mov x19,x0
+00a1091c	stp x29,x30,[sp, #0x60]
+00a10920	add x29,sp,#0x60
+00a10924	cbz x1,0x00a10994
+00a10928	add x0,sp,#0x8
+00a1092c	bl 0x00c396e0
+00a10930	add x1,sp,#0x8
+00a10934	sub x3,x29,#0x14
+00a10938	mov x0,x19
+00a1093c	mov w2,wzr
+00a10940	stur wzr,[x29, #-0x14]
+00a10944	bl 0x00a10a24
+00a10948	ldur w20,[x29, #-0x14]
+00a1094c	mov x19,x0
+00a10950	cbz w20,0x00a10980
+00a10954	bl 0x00c342a0
+00a10958	adrp x0,0x2a9000
+00a1095c	adrp x2,0x2af000
+00a10960	add x0,x0,#0xfe8
+00a10964	add x2,x2,#0xd8a
+00a10968	mov w1,#0x5e
+00a1096c	bl 0x00c342b0
+00a10970	mov w0,#0xd
+00a10974	mov w1,w20
+00a10978	mov x2,xzr
+00a1097c	bl 0x00c342c0
+00a10980	mov x0,x19
+00a10984	ldp x29,x30,[sp, #0x60]
+00a10988	ldp x20,x19,[sp, #0x50]
+00a1098c	add sp,sp,#0x70
+00a10990	ret
+00a10994	add x3,sp,#0x8
+00a10998	mov x0,x19
+00a1099c	mov w2,wzr
+00a109a0	str wzr,[sp, #0x8]
+00a109a4	bl 0x00a10a24
+00a109a8	ldr w20,[sp, #0x8]
+00a109ac	mov x19,x0
+00a109b0	cbnz w20,0x00a10954
+00a109b4	b 0x00a10980

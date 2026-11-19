@@ -1,0 +1,5 @@
+; EVP_DigestInit @ 00c32430
+00c32430	adrp x16,0xcb7000
+00c32434	ldr x17,[x16, #0x200]
+00c32438	add x16,x16,#0x200
+00c3243c	br x17

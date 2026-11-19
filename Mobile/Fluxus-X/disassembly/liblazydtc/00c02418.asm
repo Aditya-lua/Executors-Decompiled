@@ -1,0 +1,10 @@
+; FUN_00c02418 @ 00c02418
+00c02418	paciasp
+00c0241c	stp x29,x30,[sp, #-0x10]!
+00c02420	mov x29,sp
+00c02424	ldr x0,[x0]
+00c02428	cbz x0,0x00c02430
+00c0242c	bl 0x00c43980
+00c02430	ldp x29,x30,[sp], #0x10
+00c02434	autiasp
+00c02438	ret

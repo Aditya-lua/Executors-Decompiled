@@ -1,0 +1,59 @@
+; OSSL_ENCODER_CTX_set_params @ 00a6116c
+00a6116c	str x25,[sp, #-0x50]!
+00a61170	stp x24,x23,[sp, #0x10]
+00a61174	stp x22,x21,[sp, #0x20]
+00a61178	stp x20,x19,[sp, #0x30]
+00a6117c	stp x29,x30,[sp, #0x40]
+00a61180	add x29,sp,#0x40
+00a61184	cbz x0,0x00a611fc
+00a61188	ldr x8,[x0, #0x18]
+00a6118c	mov x20,x0
+00a61190	cbz x8,0x00a61234
+00a61194	mov x0,x20
+00a61198	mov x19,x1
+00a6119c	bl 0x00c3b7d0
+00a611a0	cbz w0,0x00a61234
+00a611a4	mov x22,xzr
+00a611a8	sxtw x25,w0
+00a611ac	mov w21,#0x1
+00a611b0	ldr x0,[x20, #0x18]
+00a611b4	mov w1,w22
+00a611b8	bl 0x00c32610
+00a611bc	mov x24,x0
+00a611c0	bl 0x00c3b840
+00a611c4	mov x23,x0
+00a611c8	mov x0,x24
+00a611cc	bl 0x00c3b850
+00a611d0	cbz x0,0x00a611ec
+00a611d4	ldr x8,[x23, #0x58]
+00a611d8	cbz x8,0x00a611ec
+00a611dc	mov x1,x19
+00a611e0	blr x8
+00a611e4	cmp w0,#0x0
+00a611e8	csel w21,wzr,w21,eq
+00a611ec	add x22,x22,#0x1
+00a611f0	cmp x22,x25
+00a611f4	b.cc 0x00a611b0
+00a611f8	b 0x00a61238
+00a611fc	bl 0x00c342a0
+00a61200	adrp x0,0x2d3000
+00a61204	adrp x2,0x2ac000
+00a61208	add x0,x0,#0xb3c
+00a6120c	add x2,x2,#0x14e
+00a61210	mov w1,#0x29d
+00a61214	bl 0x00c342b0
+00a61218	mov w1,#0x102
+00a6121c	mov w0,#0x3b
+00a61220	movk w1,#0xc, LSL #16
+00a61224	mov x2,xzr
+00a61228	bl 0x00c342c0
+00a6122c	mov w21,wzr
+00a61230	b 0x00a61238
+00a61234	mov w21,#0x1
+00a61238	mov w0,w21
+00a6123c	ldp x29,x30,[sp, #0x40]
+00a61240	ldp x20,x19,[sp, #0x30]
+00a61244	ldp x22,x21,[sp, #0x20]
+00a61248	ldp x24,x23,[sp, #0x10]
+00a6124c	ldr x25,[sp], #0x50
+00a61250	ret

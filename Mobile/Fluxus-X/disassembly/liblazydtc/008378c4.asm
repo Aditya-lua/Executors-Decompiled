@@ -1,0 +1,22 @@
+; FUN_008378c4 @ 008378c4
+008378c4	ldrb w8,[x0, #0x15]
+008378c8	cmp w8,#0x1
+008378cc	b.ne 0x00837914
+008378d0	ldr s0,[x0, #0x10]
+008378d4	adrp x8,0x29a000
+008378d8	mov w9,#0x73
+008378dc	ldr d1,[x8, #0xb50]
+008378e0	adrp x8,0x29d000
+008378e4	strb wzr,[x0, #0x15]
+008378e8	uxtl v0.8H,v0.8B
+008378ec	ldr q2,[x8, #0xd0]
+008378f0	ldrb w8,[x0, #0x14]
+008378f4	eor w8,w8,w9
+008378f8	eor v0.8B,v0.8B,v1.8B
+008378fc	ldr q1,[x0]
+00837900	strb w8,[x0, #0x14]
+00837904	eor v1.16B,v1.16B,v2.16B
+00837908	uzp1 v0.8B,v0.8B,v0.8B
+0083790c	str q1,[x0]
+00837910	str s0,[x0, #0x10]
+00837914	ret

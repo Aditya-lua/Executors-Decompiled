@@ -1,0 +1,81 @@
+; FUN_0086b358 @ 0086b358
+0086b358	sub sp,sp,#0x70
+0086b35c	stp x29,x30,[sp, #0x20]
+0086b360	str x25,[sp, #0x30]
+0086b364	stp x24,x23,[sp, #0x40]
+0086b368	stp x22,x21,[sp, #0x50]
+0086b36c	stp x20,x19,[sp, #0x60]
+0086b370	add x29,sp,#0x20
+0086b374	mrs x24,tpidr_el0
+0086b378	mov x23,x0
+0086b37c	mov x19,x0
+0086b380	ldr x8,[x24, #0x28]
+0086b384	stur x8,[x29, #-0x8]
+0086b388	ldr x22,[x23, #0x94]!
+0086b38c	bl 0x0086c66c
+0086b390	ldr w8,[x19, #0x90]
+0086b394	mov x21,x0
+0086b398	cmp w8,#0x108
+0086b39c	b.ne 0x0086b460
+0086b3a0	ldur x20,[x19, #0x94]
+0086b3a4	mov x0,x19
+0086b3a8	bl 0x00858f2c
+0086b3ac	ldr w8,[x19, #0x90]
+0086b3b0	ldr q0,[x23]
+0086b3b4	mov x1,xzr
+0086b3b8	ldr w25,[x19, #0x124]
+0086b3bc	cmp w8,#0x26
+0086b3c0	str q0,[sp]
+0086b3c4	b.eq 0x0086b3e8
+0086b3c8	cmp w8,#0x7c
+0086b3cc	b.eq 0x0086b3e8
+0086b3d0	mov x0,x19
+0086b3d4	mov w1,wzr
+0086b3d8	mov w2,wzr
+0086b3dc	bl 0x008695d4
+0086b3e0	mov x1,x0
+0086b3e4	str w25,[x19, #0x124]
+0086b3e8	mov x2,sp
+0086b3ec	mov x0,x19
+0086b3f0	bl 0x00867310
+0086b3f4	str w25,[x19, #0x124]
+0086b3f8	mov x23,x0
+0086b3fc	mov w1,#0x30
+0086b400	ldur x8,[x0, #0x14]
+0086b404	ldr x0,[x19, #0xe8]
+0086b408	stp x22,x8,[sp]
+0086b40c	bl 0x0084e938
+0086b410	mov x1,sp
+0086b414	mov x2,x21
+0086b418	mov x3,x23
+0086b41c	mov x22,x0
+0086b420	bl 0x0084f3c4
+0086b424	ldrb w8,[x19, #0x68]
+0086b428	cmp w8,#0x1
+0086b42c	b.ne 0x0086b464
+0086b430	ldr x0,[x19, #0xe8]
+0086b434	mov w1,#0xc
+0086b438	bl 0x0084e938
+0086b43c	mov x1,x20
+0086b440	mov x21,x0
+0086b444	bl 0x00851e84
+0086b448	add x0,x19,#0x4b0
+0086b44c	mov x1,sp
+0086b450	str x22,[sp]
+0086b454	bl 0x00860fa0
+0086b458	str x21,[x0]
+0086b45c	b 0x0086b464
+0086b460	mov x22,x21
+0086b464	ldr x8,[x24, #0x28]
+0086b468	ldur x9,[x29, #-0x8]
+0086b46c	cmp x8,x9
+0086b470	b.ne 0x0086b494
+0086b474	mov x0,x22
+0086b478	ldp x20,x19,[sp, #0x60]
+0086b47c	ldr x25,[sp, #0x30]
+0086b480	ldp x22,x21,[sp, #0x50]
+0086b484	ldp x24,x23,[sp, #0x40]
+0086b488	ldp x29,x30,[sp, #0x20]
+0086b48c	add sp,sp,#0x70
+0086b490	ret
+0086b494	bl 0x00c2fec0

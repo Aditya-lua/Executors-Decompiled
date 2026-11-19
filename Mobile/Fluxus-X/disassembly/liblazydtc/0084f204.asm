@@ -1,0 +1,38 @@
+; FUN_0084f204 @ 0084f204
+0084f204	stp x29,x30,[sp, #-0x30]!
+0084f208	str x21,[sp, #0x10]
+0084f20c	stp x20,x19,[sp, #0x20]
+0084f210	mov x29,sp
+0084f214	ldr x8,[x1]
+0084f218	mov x20,x0
+0084f21c	mov x19,x1
+0084f220	mov x0,x1
+0084f224	mov x1,x20
+0084f228	ldr x8,[x8, #0x98]
+0084f22c	blr x8
+0084f230	tbz w0,#0x0,0x0084f288
+0084f234	ldr x8,[x20, #0x28]
+0084f238	cbz x8,0x0084f288
+0084f23c	add x8,x8,x8, LSL #0x1
+0084f240	ldr x9,[x20, #0x20]
+0084f244	lsl x20,x8,#0x3
+0084f248	add x21,x9,#0x10
+0084f24c	b 0x0084f26c
+0084f250	ldr x0,[x21], #0x18
+0084f254	mov x1,x19
+0084f258	ldr x8,[x0]
+0084f25c	ldr x8,[x8]
+0084f260	blr x8
+0084f264	subs x20,x20,#0x18
+0084f268	b.eq 0x0084f288
+0084f26c	ldur x0,[x21, #-0x8]
+0084f270	cbz x0,0x0084f250
+0084f274	ldr x8,[x0]
+0084f278	mov x1,x19
+0084f27c	ldr x8,[x8]
+0084f280	blr x8
+0084f284	b 0x0084f250
+0084f288	ldp x20,x19,[sp, #0x20]
+0084f28c	ldr x21,[sp, #0x10]
+0084f290	ldp x29,x30,[sp], #0x30
+0084f294	ret

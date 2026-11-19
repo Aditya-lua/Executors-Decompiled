@@ -1,0 +1,52 @@
+; ENGINE_new @ 00a5122c
+00a5122c	str x19,[sp, #-0x20]!
+00a51230	stp x29,x30,[sp, #0x10]
+00a51234	adrp x0,0xcb5000
+00a51238	adrp x1,0xcb5000
+00a5123c	ldr x0,[x0, #0x5f0]
+00a51240	ldr x1,[x1, #0x5e0]
+00a51244	add x29,sp,#0x10
+00a51248	bl 0x00c34d60
+00a5124c	cbz w0,0x00a512b4
+00a51250	adrp x8,0xcb5000
+00a51254	ldr x8,[x8, #0x5e8]
+00a51258	ldr w8,[x8]
+00a5125c	cbz w8,0x00a512b4
+00a51260	adrp x1,0x2a2000
+00a51264	add x1,x1,#0x2ee
+00a51268	orr w0,wzr,#0xe0
+00a5126c	mov w2,#0x20
+00a51270	bl 0x00c34250
+00a51274	cbz x0,0x00a512b4
+00a51278	mov x19,x0
+00a5127c	add x8,x0,#0x9c
+00a51280	mov w9,#0x1
+00a51284	add x2,x0,#0xa8
+00a51288	mov w0,#0xa
+00a5128c	mov x1,x19
+00a51290	stlr w9,[x8]
+00a51294	bl 0x00c356e0
+00a51298	cbnz w0,0x00a512e8
+00a5129c	adrp x1,0x2a2000
+00a512a0	add x1,x1,#0x2ee
+00a512a4	mov w2,#0x27
+00a512a8	mov x0,x19
+00a512ac	bl 0x00c32310
+00a512b0	b 0x00a512e4
+00a512b4	bl 0x00c342a0
+00a512b8	adrp x0,0x2a2000
+00a512bc	adrp x2,0x2d1000
+00a512c0	add x0,x0,#0x2ee
+00a512c4	add x2,x2,#0x982
+00a512c8	mov w1,#0x21
+00a512cc	bl 0x00c342b0
+00a512d0	mov w1,#0x100
+00a512d4	mov w0,#0x26
+00a512d8	movk w1,#0xc, LSL #16
+00a512dc	mov x2,xzr
+00a512e0	bl 0x00c342c0
+00a512e4	mov x19,xzr
+00a512e8	ldp x29,x30,[sp, #0x10]
+00a512ec	mov x0,x19
+00a512f0	ldr x19,[sp], #0x20
+00a512f4	ret

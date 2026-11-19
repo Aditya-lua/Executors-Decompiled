@@ -1,0 +1,31 @@
+; ENGINE_register_all_DH @ 00a533c8
+00a533c8	stp x22,x21,[sp, #-0x30]!
+00a533cc	stp x20,x19,[sp, #0x10]
+00a533d0	stp x29,x30,[sp, #0x20]
+00a533d4	add x29,sp,#0x20
+00a533d8	bl 0x00c32380
+00a533dc	cbz x0,0x00a53430
+00a533e0	adrp x20,0xd21000
+00a533e4	adrp x21,0xa53000
+00a533e8	adrp x22,0x766000
+00a533ec	mov x19,x0
+00a533f0	add x20,x20,#0x9e0
+00a533f4	add x21,x21,#0x3bc
+00a533f8	add x22,x22,#0x0
+00a533fc	ldr x8,[x19, #0x20]
+00a53400	cbz x8,0x00a53420
+00a53404	mov w4,#0x1
+00a53408	mov x0,x20
+00a5340c	mov x1,x21
+00a53410	mov x2,x19
+00a53414	mov x3,x22
+00a53418	mov w5,wzr
+00a5341c	bl 0x00c3bce0
+00a53420	mov x0,x19
+00a53424	bl 0x00c323a0
+00a53428	mov x19,x0
+00a5342c	cbnz x0,0x00a533fc
+00a53430	ldp x29,x30,[sp, #0x20]
+00a53434	ldp x20,x19,[sp, #0x10]
+00a53438	ldp x22,x21,[sp], #0x30
+00a5343c	ret

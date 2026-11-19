@@ -1,0 +1,5 @@
+; X509_VERIFY_PARAM_get0_email @ 00c40690
+00c40690	adrp x16,0xcbe000
+00c40694	ldr x17,[x16, #0x330]
+00c40698	add x16,x16,#0x330
+00c4069c	br x17

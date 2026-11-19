@@ -1,0 +1,5 @@
+; pqueue_free @ 00c34440
+00c34440	adrp x16,0xcb8000
+00c34444	ldr x17,[x16, #0x208]
+00c34448	add x16,x16,#0x208
+00c3444c	br x17

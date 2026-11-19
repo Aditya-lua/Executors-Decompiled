@@ -1,0 +1,72 @@
+; mbedtls_asn1_write_oid @ 00b85564
+00b85564	str x21,[sp, #-0x30]!
+00b85568	stp x20,x19,[sp, #0x10]
+00b8556c	stp x29,x30,[sp, #0x20]
+00b85570	add x29,sp,#0x20
+00b85574	ldr x8,[x0]
+00b85578	mov x19,x3
+00b8557c	mov x20,x0
+00b85580	mov x21,x1
+00b85584	subs x9,x8,x1
+00b85588	b.cc 0x00b85594
+00b8558c	cmp x9,x19
+00b85590	b.cs 0x00b855ac
+00b85594	mov w19,#0xffffff94
+00b85598	mov w0,w19
+00b8559c	ldp x29,x30,[sp, #0x20]
+00b855a0	ldp x20,x19,[sp, #0x10]
+00b855a4	ldr x21,[sp], #0x30
+00b855a8	ret
+00b855ac	sub x0,x8,x19
+00b855b0	mov x1,x2
+00b855b4	mov x2,x19
+00b855b8	str x0,[x20]
+00b855bc	bl 0x00c2ffd0
+00b855c0	tbnz w19,#0x1f,0x00b85598
+00b855c4	sxtw x9,w19
+00b855c8	lsr x8,x9,#0x20
+00b855cc	cbz x8,0x00b855d8
+00b855d0	mov w19,#0xffffff9c
+00b855d4	b 0x00b85598
+00b855d8	mov w8,#0x1
+00b855dc	cmp x9,#0x80
+00b855e0	b.cc 0x00b855f4
+00b855e4	mov x10,x9
+00b855e8	lsr x10,x10,#0x8
+00b855ec	add w8,w8,#0x1
+00b855f0	cbnz x10,0x00b855e8
+00b855f4	ldr x10,[x20]
+00b855f8	sub x11,x10,x21
+00b855fc	cmp x11,w8, UXTW 
+00b85600	b.lt 0x00b85594
+00b85604	lsl x11,x19,#0x20
+00b85608	sub x12,x10,#0x1
+00b8560c	lsr x11,x11,#0x20
+00b85610	lsr x9,x9,#0x8
+00b85614	str x12,[x20]
+00b85618	sturb w11,[x10, #-0x1]
+00b8561c	cbz x9,0x00b85638
+00b85620	ldr x10,[x20]
+00b85624	sub x11,x10,#0x1
+00b85628	str x11,[x20]
+00b8562c	sturb w9,[x10, #-0x1]
+00b85630	lsr x9,x9,#0x8
+00b85634	cbnz x9,0x00b85620
+00b85638	cmp w8,#0x2
+00b8563c	b.cc 0x00b85654
+00b85640	ldr x9,[x20]
+00b85644	add w10,w8,#0x7f
+00b85648	sub x11,x9,#0x1
+00b8564c	str x11,[x20]
+00b85650	sturb w10,[x9, #-0x1]
+00b85654	ldr x9,[x20]
+00b85658	sub x10,x9,x21
+00b8565c	cmp x10,#0x1
+00b85660	b.lt 0x00b85594
+00b85664	add w8,w19,w8
+00b85668	sub x10,x9,#0x1
+00b8566c	orr w11,wzr,#0x6
+00b85670	add w19,w8,#0x1
+00b85674	str x10,[x20]
+00b85678	sturb w11,[x9, #-0x1]
+00b8567c	b 0x00b85598

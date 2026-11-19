@@ -1,0 +1,29 @@
+; OSSL_HTTP_REQ_CTX_set1_req @ 00b1770c
+00b1770c	str x21,[sp, #-0x30]!
+00b17710	stp x20,x19,[sp, #0x10]
+00b17714	mov x20,x1
+00b17718	mov x21,x0
+00b1771c	stp x29,x30,[sp, #0x20]
+00b17720	add x29,sp,#0x20
+00b17724	cbz x3,0x00b17744
+00b17728	mov x0,x2
+00b1772c	mov x1,x3
+00b17730	bl 0x00c37530
+00b17734	mov x19,x0
+00b17738	cbnz x0,0x00b17748
+00b1773c	mov w20,wzr
+00b17740	b 0x00b17760
+00b17744	mov x19,xzr
+00b17748	mov x0,x21
+00b1774c	mov x1,x20
+00b17750	mov x2,x19
+00b17754	bl 0x00b1777c
+00b17758	cmp w0,#0x0
+00b1775c	cset w20,ne
+00b17760	mov x0,x19
+00b17764	bl 0x00c31a40
+00b17768	mov w0,w20
+00b1776c	ldp x29,x30,[sp, #0x20]
+00b17770	ldp x20,x19,[sp, #0x10]
+00b17774	ldr x21,[sp], #0x30
+00b17778	ret

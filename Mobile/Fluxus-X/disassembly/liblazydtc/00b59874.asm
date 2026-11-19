@@ -1,0 +1,90 @@
+; FUN_00b59874 @ 00b59874
+00b59874	sub sp,sp,#0xb0
+00b59878	str x21,[sp, #0x80]
+00b5987c	stp x20,x19,[sp, #0x90]
+00b59880	mov x21,x1
+00b59884	mov x19,x0
+00b59888	add x0,sp,#0x30
+00b5988c	mov w2,#0x50
+00b59890	mov w1,wzr
+00b59894	stp x29,x30,[sp, #0xa0]
+00b59898	add x29,sp,#0xa0
+00b5989c	bl 0x00c301c0
+00b598a0	ldr x8,[x19, #0x50]
+00b598a4	cbz x8,0x00b59924
+00b598a8	ldr x20,[x19, #0x30]
+00b598ac	adrp x0,0x29e000
+00b598b0	add x0,x0,#0x95d
+00b598b4	add x8,sp,#0x8
+00b598b8	mov x1,x21
+00b598bc	bl 0x00c37340
+00b598c0	ldr x8,[sp, #0x28]
+00b598c4	ldur q0,[sp, #0x18]
+00b598c8	ldur q1,[sp, #0x8]
+00b598cc	str x8,[sp, #0x50]
+00b598d0	stp q1,q0,[sp, #0x30]
+00b598d4	ldr x0,[x19, #0x30]
+00b598d8	cbz x0,0x00b598ec
+00b598dc	ldr x8,[x19, #0x40]
+00b598e0	cbz x8,0x00b598ec
+00b598e4	blr x8
+00b598e8	cbz w0,0x00b59984
+00b598ec	ldr x8,[x19, #0x50]
+00b598f0	add x1,sp,#0x30
+00b598f4	mov x0,x20
+00b598f8	blr x8
+00b598fc	ldr x8,[x19, #0x30]
+00b59900	mov w20,w0
+00b59904	cbz x8,0x00b59918
+00b59908	ldr x9,[x19, #0x48]
+00b5990c	cbz x9,0x00b59918
+00b59910	mov x0,x8
+00b59914	blr x9
+00b59918	cbz w20,0x00b59940
+00b5991c	mov w0,#0x1
+00b59920	b 0x00b59970
+00b59924	bl 0x00c342a0
+00b59928	adrp x0,0x2be000
+00b5992c	adrp x2,0x2b4000
+00b59930	add x0,x0,#0xab1
+00b59934	add x2,x2,#0xeba
+00b59938	mov w1,#0x5b
+00b5993c	b 0x00b59958
+00b59940	bl 0x00c342a0
+00b59944	adrp x0,0x2be000
+00b59948	adrp x2,0x2b4000
+00b5994c	add x0,x0,#0xab1
+00b59950	add x2,x2,#0xeba
+00b59954	mov w1,#0x67
+00b59958	bl 0x00c342b0
+00b5995c	mov w0,#0x39
+00b59960	mov w1,#0xc7
+00b59964	mov x2,xzr
+00b59968	bl 0x00c342c0
+00b5996c	mov w0,wzr
+00b59970	ldp x29,x30,[sp, #0xa0]
+00b59974	ldp x20,x19,[sp, #0x90]
+00b59978	ldr x21,[sp, #0x80]
+00b5997c	add sp,sp,#0xb0
+00b59980	ret
+00b59984	bl 0x00c342a0
+00b59988	adrp x19,0x2be000
+00b5998c	add x19,x19,#0xab1
+00b59990	adrp x2,0x2be000
+00b59994	add x2,x2,#0xad8
+00b59998	mov w1,#0x46
+00b5999c	mov x0,x19
+00b599a0	bl 0x00c342b0
+00b599a4	mov w0,#0x39
+00b599a8	mov w1,#0xb6
+00b599ac	mov x2,xzr
+00b599b0	bl 0x00c342c0
+00b599b4	bl 0x00c342a0
+00b599b8	adrp x2,0x2b4000
+00b599bc	add x2,x2,#0xeba
+00b599c0	mov w1,#0x61
+00b599c4	mov x0,x19
+00b599c8	bl 0x00c342b0
+00b599cc	mov w0,#0x39
+00b599d0	mov w1,#0xc9
+00b599d4	b 0x00b59964

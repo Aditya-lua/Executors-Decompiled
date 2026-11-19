@@ -1,0 +1,32 @@
+; BN_MONT_CTX_copy @ 00a03870
+00a03870	stp x20,x19,[sp, #-0x20]!
+00a03874	mov x19,x0
+00a03878	cmp x0,x1
+00a0387c	stp x29,x30,[sp, #0x10]
+00a03880	add x29,sp,#0x10
+00a03884	b.eq 0x00a038dc
+00a03888	mov x20,x1
+00a0388c	add x0,x19,#0x8
+00a03890	add x1,x1,#0x8
+00a03894	bl 0x00c36990
+00a03898	cbz x0,0x00a038d8
+00a0389c	add x0,x19,#0x20
+00a038a0	add x1,x20,#0x20
+00a038a4	bl 0x00c36990
+00a038a8	cbz x0,0x00a038d8
+00a038ac	add x0,x19,#0x38
+00a038b0	add x1,x20,#0x38
+00a038b4	bl 0x00c36990
+00a038b8	cbz x0,0x00a038d8
+00a038bc	ldr w8,[x20]
+00a038c0	str w8,[x19]
+00a038c4	ldr x8,[x20, #0x50]
+00a038c8	str x8,[x19, #0x50]
+00a038cc	ldr x8,[x20, #0x58]
+00a038d0	str x8,[x19, #0x58]
+00a038d4	b 0x00a038dc
+00a038d8	mov x19,xzr
+00a038dc	ldp x29,x30,[sp, #0x10]
+00a038e0	mov x0,x19
+00a038e4	ldp x20,x19,[sp], #0x20
+00a038e8	ret

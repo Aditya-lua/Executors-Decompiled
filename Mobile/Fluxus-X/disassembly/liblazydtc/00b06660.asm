@@ -1,0 +1,28 @@
+; ossl_v3_name_cmp @ 00b06660
+00b06660	str x21,[sp, #-0x30]!
+00b06664	stp x20,x19,[sp, #0x10]
+00b06668	mov x19,x0
+00b0666c	mov x0,x1
+00b06670	stp x29,x30,[sp, #0x20]
+00b06674	add x29,sp,#0x20
+00b06678	mov x21,x1
+00b0667c	bl 0x00c2ff50
+00b06680	sxtw x20,w0
+00b06684	mov x0,x19
+00b06688	mov x1,x21
+00b0668c	mov x2,x20
+00b06690	bl 0x00c31bb0
+00b06694	cbz w0,0x00b066a8
+00b06698	ldp x29,x30,[sp, #0x20]
+00b0669c	ldp x20,x19,[sp, #0x10]
+00b066a0	ldr x21,[sp], #0x30
+00b066a4	ret
+00b066a8	ldrb w8,[x19, x20]
+00b066ac	cbz w8,0x00b066c4
+00b066b0	cmp w8,#0x2e
+00b066b4	mov w0,wzr
+00b066b8	b.eq 0x00b06698
+00b066bc	mov w0,#0x1
+00b066c0	b 0x00b06698
+00b066c4	mov w0,wzr
+00b066c8	b 0x00b06698

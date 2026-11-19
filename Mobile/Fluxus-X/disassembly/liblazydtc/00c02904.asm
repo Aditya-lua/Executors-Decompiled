@@ -1,0 +1,28 @@
+; std::__ndk1::__time_get_c_storage<char>::__weeks @ 00c02904
+00c02904	paciasp
+00c02908	stp x29,x30,[sp, #-0x10]!
+00c0290c	mov x29,sp
+00c02910	adrp x8,0xd27000
+00c02914	add x8,x8,#0x308
+00c02918	ldarb w9,[x8]
+00c0291c	adrp x8,0xd27000
+00c02920	tbz w9,#0x0,0x00c02934
+00c02924	ldr x0,[x8, #0x300]
+00c02928	ldp x29,x30,[sp], #0x10
+00c0292c	autiasp
+00c02930	ret
+00c02934	adrp x0,0xd27000
+00c02938	add x0,x0,#0x308
+00c0293c	bl 0x00c2fe90
+00c02940	adrp x8,0xd27000
+00c02944	cbz w0,0x00c02924
+00c02948	bl 0x00c02970
+00c0294c	adrp x9,0xd27000
+00c02950	add x9,x9,#0x400
+00c02954	adrp x8,0xd27000
+00c02958	adrp x0,0xd27000
+00c0295c	add x0,x0,#0x308
+00c02960	str x9,[x8, #0x300]
+00c02964	bl 0x00c2fea0
+00c02968	adrp x8,0xd27000
+00c0296c	b 0x00c02924

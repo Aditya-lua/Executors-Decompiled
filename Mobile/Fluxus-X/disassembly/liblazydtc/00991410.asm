@@ -1,0 +1,89 @@
+; std::__ndk1::function<void(std::__ndk1::unique_ptr<ix::WebSocketMessage,std::__ndk1::default_delete<ix::WebSocketMessage>>const&)>::swap @ 00991410
+00991410	sub sp,sp,#0x60
+00991414	str x21,[sp, #0x30]
+00991418	stp x20,x19,[sp, #0x40]
+0099141c	stp x29,x30,[sp, #0x50]
+00991420	add x29,sp,#0x50
+00991424	mrs x21,tpidr_el0
+00991428	ldr x8,[x21, #0x28]
+0099142c	mov x19,x1
+00991430	mov x20,x0
+00991434	cmp x1,x0
+00991438	str x8,[sp, #0x28]
+0099143c	b.eq 0x00991548
+00991440	ldr x0,[x20, #0x20]
+00991444	cmp x0,x20
+00991448	b.eq 0x00991464
+0099144c	ldr x8,[x19, #0x20]
+00991450	cmp x19,x8
+00991454	b.eq 0x0099149c
+00991458	str x8,[x20, #0x20]
+0099145c	str x0,[x19, #0x20]
+00991460	b 0x00991548
+00991464	ldr x8,[x19, #0x20]
+00991468	cmp x8,x19
+0099146c	b.eq 0x009914d0
+00991470	ldr x8,[x0]
+00991474	ldr x8,[x8, #0x18]
+00991478	mov x1,x19
+0099147c	blr x8
+00991480	ldr x0,[x20, #0x20]
+00991484	ldr x8,[x0]
+00991488	ldr x8,[x8, #0x20]
+0099148c	blr x8
+00991490	ldr x8,[x19, #0x20]
+00991494	str x8,[x20, #0x20]
+00991498	b 0x00991544
+0099149c	ldr x9,[x8]
+009914a0	ldr x9,[x9, #0x18]
+009914a4	mov x0,x8
+009914a8	mov x1,x20
+009914ac	blr x9
+009914b0	ldr x0,[x19, #0x20]
+009914b4	ldr x8,[x0]
+009914b8	ldr x8,[x8, #0x20]
+009914bc	blr x8
+009914c0	ldr x8,[x20, #0x20]
+009914c4	str x8,[x19, #0x20]
+009914c8	str x20,[x20, #0x20]
+009914cc	b 0x00991548
+009914d0	ldr x8,[x0]
+009914d4	ldr x8,[x8, #0x18]
+009914d8	mov x1,sp
+009914dc	blr x8
+009914e0	ldr x0,[x20, #0x20]
+009914e4	ldr x8,[x0]
+009914e8	ldr x8,[x8, #0x20]
+009914ec	blr x8
+009914f0	str xzr,[x20, #0x20]
+009914f4	ldr x0,[x19, #0x20]
+009914f8	ldr x8,[x0]
+009914fc	ldr x8,[x8, #0x18]
+00991500	mov x1,x20
+00991504	blr x8
+00991508	ldr x0,[x19, #0x20]
+0099150c	ldr x8,[x0]
+00991510	ldr x8,[x8, #0x20]
+00991514	blr x8
+00991518	str xzr,[x19, #0x20]
+0099151c	str x20,[x20, #0x20]
+00991520	ldr x8,[sp]
+00991524	ldr x8,[x8, #0x18]
+00991528	mov x0,sp
+0099152c	mov x1,x19
+00991530	blr x8
+00991534	ldr x8,[sp]
+00991538	mov x0,sp
+0099153c	ldr x8,[x8, #0x20]
+00991540	blr x8
+00991544	str x19,[x19, #0x20]
+00991548	ldr x8,[x21, #0x28]
+0099154c	ldr x9,[sp, #0x28]
+00991550	cmp x8,x9
+00991554	b.ne 0x0099156c
+00991558	ldp x29,x30,[sp, #0x50]
+0099155c	ldp x20,x19,[sp, #0x40]
+00991560	ldr x21,[sp, #0x30]
+00991564	add sp,sp,#0x60
+00991568	ret
+0099156c	bl 0x00c2fec0

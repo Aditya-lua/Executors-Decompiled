@@ -1,0 +1,5 @@
+; ssl_cert_free @ 00c35120
+00c35120	adrp x16,0xcb8000
+00c35124	ldr x17,[x16, #0x878]
+00c35128	add x16,x16,#0x878
+00c3512c	br x17

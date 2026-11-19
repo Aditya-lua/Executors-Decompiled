@@ -1,0 +1,13 @@
+; FUN_00a612e4 @ 00a612e4
+00a612e4	cbnz x0,0x00a6130c
+00a612e8	stp x29,x30,[sp, #-0x10]!
+00a612ec	ldr x0,[x1]
+00a612f0	adrp x2,0xc5d000
+00a612f4	add x2,x2,#0x818
+00a612f8	mov w1,#0xa
+00a612fc	mov x29,sp
+00a61300	bl 0x00c3b520
+00a61304	ldp x29,x30,[sp], #0x10
+00a61308	cbz x0,0x00a61310
+00a6130c	b 0x00c3b550
+00a61310	ret

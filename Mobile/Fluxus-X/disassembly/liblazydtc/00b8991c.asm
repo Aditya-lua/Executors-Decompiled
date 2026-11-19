@@ -1,0 +1,34 @@
+; psa_verify_hash_builtin @ 00b8991c
+00b8991c	ldrh w8,[x0]
+00b89920	mov w10,#0x4001
+00b89924	and w9,w8,#0xffffcfff
+00b89928	cmp w9,w10
+00b8992c	b.ne 0x00b89968
+00b89930	mov w9,#0x200
+00b89934	and w8,w3,#0xffffff00
+00b89938	movk w9,#0x600, LSL #16
+00b8993c	cmp w8,w9
+00b89940	b.eq 0x00b89964
+00b89944	mov w9,#0x1300
+00b89948	movk w9,#0x600, LSL #16
+00b8994c	cmp w8,w9
+00b89950	b.eq 0x00b89964
+00b89954	mov w9,#0x300
+00b89958	movk w9,#0x600, LSL #16
+00b8995c	cmp w8,w9
+00b89960	b.ne 0x00b89998
+00b89964	b 0x00c43170
+00b89968	mov w9,#0xcf00
+00b8996c	and w8,w8,w9
+00b89970	mov w9,#0x4100
+00b89974	cmp w8,w9
+00b89978	b.ne 0x00b89990
+00b8997c	lsr w8,w3,#0x9
+00b89980	orr w9,wzr,#0x30003
+00b89984	cmp w8,w9
+00b89988	b.ne 0x00b89998
+00b8998c	b 0x00c42f30
+00b89990	mov w0,#0xffffff7a
+00b89994	ret
+00b89998	mov w0,#0xffffff79
+00b8999c	ret

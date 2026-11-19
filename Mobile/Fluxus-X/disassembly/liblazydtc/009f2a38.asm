@@ -1,0 +1,4 @@
+; PKCS8_PRIV_KEY_INFO_it @ 009f2a38
+009f2a38	adrp x0,0xc58000
+009f2a3c	add x0,x0,#0xa40
+009f2a40	ret

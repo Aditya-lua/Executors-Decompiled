@@ -1,0 +1,5 @@
+; ssl_dh_to_pkey @ 00c34950
+00c34950	adrp x16,0xcb8000
+00c34954	ldr x17,[x16, #0x490]
+00c34958	add x16,x16,#0x490
+00c3495c	br x17

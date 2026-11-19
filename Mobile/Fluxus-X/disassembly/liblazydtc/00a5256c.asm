@@ -1,0 +1,83 @@
+; ENGINE_load_ssl_client_cert @ 00a5256c
+00a5256c	stp x28,x27,[sp, #-0x60]!
+00a52570	stp x26,x25,[sp, #0x10]
+00a52574	stp x24,x23,[sp, #0x20]
+00a52578	stp x22,x21,[sp, #0x30]
+00a5257c	stp x20,x19,[sp, #0x40]
+00a52580	stp x29,x30,[sp, #0x50]
+00a52584	add x29,sp,#0x50
+00a52588	cbz x0,0x00a52614
+00a5258c	adrp x27,0xcb5000
+00a52590	ldr x27,[x27, #0x5d8]
+00a52594	mov x26,x0
+00a52598	mov x19,x7
+00a5259c	mov x20,x6
+00a525a0	ldr x0,[x27]
+00a525a4	mov x21,x5
+00a525a8	mov x22,x4
+00a525ac	mov x23,x3
+00a525b0	mov x24,x2
+00a525b4	mov x25,x1
+00a525b8	bl 0x00c356a0
+00a525bc	cbz w0,0x00a52694
+00a525c0	ldr x0,[x27]
+00a525c4	ldr w28,[x26, #0xa0]
+00a525c8	bl 0x00c35690
+00a525cc	cbz w28,0x00a52640
+00a525d0	ldr x8,[x26, #0x88]
+00a525d4	cbz x8,0x00a52668
+00a525d8	mov x0,x26
+00a525dc	mov x1,x25
+00a525e0	mov x2,x24
+00a525e4	mov x3,x23
+00a525e8	mov x4,x22
+00a525ec	mov x5,x21
+00a525f0	mov x6,x20
+00a525f4	mov x7,x19
+00a525f8	ldp x29,x30,[sp, #0x50]
+00a525fc	ldp x20,x19,[sp, #0x40]
+00a52600	ldp x22,x21,[sp, #0x30]
+00a52604	ldp x24,x23,[sp, #0x20]
+00a52608	ldp x26,x25,[sp, #0x10]
+00a5260c	ldp x28,x27,[sp], #0x60
+00a52610	br x8
+00a52614	bl 0x00c342a0
+00a52618	adrp x0,0x2d5000
+00a5261c	adrp x2,0x2b7000
+00a52620	add x0,x0,#0xc9d
+00a52624	add x2,x2,#0xb9d
+00a52628	mov w1,#0x79
+00a5262c	bl 0x00c342b0
+00a52630	mov w1,#0x102
+00a52634	mov w0,#0x26
+00a52638	movk w1,#0xc, LSL #16
+00a5263c	b 0x00a5268c
+00a52640	bl 0x00c342a0
+00a52644	adrp x0,0x2d5000
+00a52648	adrp x2,0x2b7000
+00a5264c	add x0,x0,#0xc9d
+00a52650	add x2,x2,#0xb9d
+00a52654	mov w1,#0x80
+00a52658	bl 0x00c342b0
+00a5265c	mov w0,#0x26
+00a52660	mov w1,#0x75
+00a52664	b 0x00a5268c
+00a52668	bl 0x00c342a0
+00a5266c	adrp x0,0x2d5000
+00a52670	adrp x2,0x2b7000
+00a52674	add x0,x0,#0xc9d
+00a52678	add x2,x2,#0xb9d
+00a5267c	mov w1,#0x85
+00a52680	bl 0x00c342b0
+00a52684	mov w0,#0x26
+00a52688	mov w1,#0x7d
+00a5268c	mov x2,xzr
+00a52690	bl 0x00c342c0
+00a52694	ldp x29,x30,[sp, #0x50]
+00a52698	ldp x20,x19,[sp, #0x40]
+00a5269c	ldp x22,x21,[sp, #0x30]
+00a526a0	ldp x24,x23,[sp, #0x20]
+00a526a4	ldp x26,x25,[sp, #0x10]
+00a526a8	mov w0,wzr
+00a526ac	ldp x28,x27,[sp], #0x60
+00a526b0	ret

@@ -1,0 +1,5 @@
+; X509_CRL_set1_lastUpdate @ 00b1497c
+00b1497c	cbz x0,0x00b14988
+00b14980	add x0,x0,#0x20
+00b14984	b 0x00c40ce0
+00b14988	ret

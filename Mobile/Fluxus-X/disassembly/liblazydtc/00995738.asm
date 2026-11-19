@@ -1,0 +1,163 @@
+; ix::WebSocketTransport::WebSocketTransport @ 00995738
+00995738	sub sp,sp,#0x80
+0099573c	stp x28,x27,[sp, #0x20]
+00995740	stp x26,x25,[sp, #0x30]
+00995744	stp x24,x23,[sp, #0x40]
+00995748	stp x22,x21,[sp, #0x50]
+0099574c	stp x20,x19,[sp, #0x60]
+00995750	stp x29,x30,[sp, #0x70]
+00995754	add x29,sp,#0x70
+00995758	mov w27,#0x1
+0099575c	add x20,x0,#0x20
+00995760	mov x19,x0
+00995764	stp xzr,xzr,[x0]
+00995768	str xzr,[x0, #0x10]
+0099576c	strh w27,[x0, #0x18]
+00995770	orr w2,wzr,#0x70
+00995774	mov x0,x20
+00995778	mov w1,wzr
+0099577c	bl 0x00c301c0
+00995780	adrp x8,0xcb5000
+00995784	ldr x8,[x8, #0x68]
+00995788	mov x25,x19
+0099578c	adrp x9,0xcb5000
+00995790	ldr x9,[x9, #0x30]
+00995794	str xzr,[x25, #0xb0]!
+00995798	ldrh w8,[x8]
+0099579c	sub x26,x25,#0x20
+009957a0	mov x21,x25
+009957a4	stp x26,xzr,[x25, #-0x18]
+009957a8	sturb wzr,[x25, #-0x4]
+009957ac	stp xzr,xzr,[x25, #0x20]
+009957b0	stp xzr,xzr,[x25, #0x10]
+009957b4	stur x26,[x25, #-0x20]
+009957b8	str xzr,[x21, #0x8]!
+009957bc	str w27,[x25, #0x30]
+009957c0	str xzr,[x25, #0x60]
+009957c4	stp xzr,xzr,[x25, #0xa0]
+009957c8	stp xzr,xzr,[x25, #0x90]
+009957cc	stp xzr,xzr,[x25, #0x80]
+009957d0	stp xzr,xzr,[x25, #0x70]
+009957d4	str xzr,[x25, #0xb8]
+009957d8	strb wzr,[x25, #0xc0]
+009957dc	str xzr,[x25, #0xc8]
+009957e0	strh w8,[x25, #0xb0]
+009957e4	adrp x8,0xcb5000
+009957e8	ldr x8,[x8, #0x38]
+009957ec	add x22,x25,#0x70
+009957f0	add x23,x25,#0x88
+009957f4	add x0,x25,#0xd0
+009957f8	ldrb w4,[x9]
+009957fc	ldrb w5,[x8]
+00995800	mov w1,wzr
+00995804	mov w2,wzr
+00995808	mov w3,wzr
+0099580c	bl 0x00c33900
+00995810	add x24,x19,#0x188
+00995814	orr w2,wzr,#0x78
+00995818	mov x0,x24
+0099581c	mov w1,wzr
+00995820	strb wzr,[x19, #0x185]
+00995824	bl 0x00c301c0
+00995828	orr w8,wzr,#0xc
+0099582c	add x10,x19,#0x1ed
+00995830	strb w8,[x19, #0x1e8]
+00995834	mov w8,#0x4d45
+00995838	strh w8,[x10]
+0099583c	mov w8,#0x5953
+00995840	add x9,x19,#0x1e9
+00995844	movk w8,#0x5453, LSL #16
+00995848	add x10,x19,#0x208
+0099584c	movi v0.2D,#0x0
+00995850	str w8,[x9]
+00995854	orr w8,wzr,#0xe
+00995858	strb wzr,[x19, #0x1ef]
+0099585c	str q0,[x10]
+00995860	add x10,x19,#0x205
+00995864	str xzr,[x19, #0x200]
+00995868	strb w8,[x19, #0x200]
+0099586c	mov w8,#0x4c55
+00995870	strh w8,[x10]
+00995874	mov w10,#0x4544
+00995878	add x9,x19,#0x201
+0099587c	mov w8,#0x54
+00995880	movk w10,#0x4146, LSL #16
+00995884	str w10,[x9]
+00995888	add x28,x19,#0x244
+0099588c	add x9,x19,#0x264
+00995890	strb w8,[x19, #0x207]
+00995894	add x8,x19,#0x254
+00995898	strb wzr,[x19, #0x208]
+0099589c	strh wzr,[x19, #0x218]
+009958a0	str xzr,[x19, #0x230]
+009958a4	str q0,[x19, #0x220]
+009958a8	strb wzr,[x19, #0x238]
+009958ac	strb wzr,[x19, #0x240]
+009958b0	str xzr,[x9]
+009958b4	str q0,[x8]
+009958b8	str q0,[x28]
+009958bc	bl 0x00c31900
+009958c0	mov w8,#0xffffffff
+009958c4	mov w9,#0x2c
+009958c8	adrp x11,0x2d7000
+009958cc	str x0,[x19, #0x270]
+009958d0	strb w27,[x19, #0x278]
+009958d4	strh wzr,[x19, #0x280]
+009958d8	add x11,x11,#0x71a
+009958dc	str w8,[x19, #0x27c]
+009958e0	strb w9,[x19, #0x288]
+009958e4	ldur x8,[x11, #0xe]
+009958e8	ldr q0,[x11]
+009958ec	add x10,x19,#0x289
+009958f0	add x9,x19,#0x297
+009958f4	mov w11,#0x2
+009958f8	str x8,[x9]
+009958fc	add x8,x19,#0x2a8
+00995900	str q0,[x10]
+00995904	movi v0.2D,#0x0
+00995908	strb wzr,[x19, #0x29f]
+0099590c	str w11,[x19, #0x2a0]
+00995910	str xzr,[x19, #0x2d0]
+00995914	str xzr,[x19, #0x2c8]
+00995918	str xzr,[x19, #0x2c0]
+0099591c	str xzr,[x19, #0x2b8]
+00995920	str q0,[x8]
+00995924	bl 0x00c31900
+00995928	str x0,[x19, #0x2d8]
+0099592c	mov x0,x23
+00995930	bl 0x00c2ff10
+00995934	adrp x8,0xcb5000
+00995938	ldr x8,[x8, #0x88]
+0099593c	cmp x22,x8
+00995940	b.eq 0x00995964
+00995944	ldrb w9,[x8]
+00995948	ldp x11,x10,[x8, #0x8]
+0099594c	tst w9,#0x1
+00995950	lsr w12,w9,#0x1
+00995954	csinc x1,x10,x8,ne
+00995958	csel x2,x12,x11,eq
+0099595c	mov x0,x22
+00995960	bl 0x00c31090
+00995964	mov x0,x23
+00995968	bl 0x00c2ff20
+0099596c	ldp x8,x9,[x19, #0x20]
+00995970	sub x9,x9,x8
+00995974	lsr x10,x9,#0xf
+00995978	cbnz x10,0x00995990
+0099597c	mov w8,#0x8000
+00995980	sub x1,x8,x9
+00995984	mov x0,x20
+00995988	bl 0x00c33330
+0099598c	b 0x009959a0
+00995990	cmp x9,#0x8, LSL #12
+00995994	b.eq 0x009959a0
+00995998	add x8,x8,#0x8, LSL #12
+0099599c	str x8,[x19, #0x28]
+009959a0	ldp x29,x30,[sp, #0x70]
+009959a4	ldp x20,x19,[sp, #0x60]
+009959a8	ldp x22,x21,[sp, #0x50]
+009959ac	ldp x24,x23,[sp, #0x40]
+009959b0	ldp x26,x25,[sp, #0x30]
+009959b4	ldp x28,x27,[sp, #0x20]
+009959b8	add sp,sp,#0x80
+009959bc	ret

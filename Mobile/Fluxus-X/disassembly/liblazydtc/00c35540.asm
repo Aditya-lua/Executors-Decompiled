@@ -1,0 +1,5 @@
+; ASYNC_WAIT_CTX_free @ 00c35540
+00c35540	adrp x16,0xcb8000
+00c35544	ldr x17,[x16, #0xa88]
+00c35548	add x16,x16,#0xa88
+00c3554c	br x17

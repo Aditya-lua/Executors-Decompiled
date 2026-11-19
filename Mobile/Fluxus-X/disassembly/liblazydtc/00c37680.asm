@@ -1,0 +1,5 @@
+; a2d_ASN1_OBJECT @ 00c37680
+00c37680	adrp x16,0xcb9000
+00c37684	ldr x17,[x16, #0xb28]
+00c37688	add x16,x16,#0xb28
+00c3768c	br x17

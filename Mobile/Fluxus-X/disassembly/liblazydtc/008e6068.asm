@@ -1,0 +1,85 @@
+; cpr::AcceptEncoding::disabled @ 008e6068
+008e6068	sub sp,sp,#0x70
+008e606c	str x21,[sp, #0x40]
+008e6070	stp x20,x19,[sp, #0x50]
+008e6074	stp x29,x30,[sp, #0x60]
+008e6078	add x29,sp,#0x60
+008e607c	mrs x19,tpidr_el0
+008e6080	ldr x8,[x19, #0x28]
+008e6084	mov x20,x0
+008e6088	stur x8,[x29, #-0x28]
+008e608c	adrp x8,0xd1f000
+008e6090	add x8,x8,#0xef8
+008e6094	ldr x8,[x8, #0x8]
+008e6098	cbz x8,0x008e60c4
+008e609c	ldr w9,[x8, #0x20]
+008e60a0	cmp w9,#0x5
+008e60a4	b.lt 0x008e60b4
+008e60a8	ldr x8,[x8]
+008e60ac	cbnz x8,0x008e609c
+008e60b0	b 0x008e60c4
+008e60b4	cmp w9,#0x4
+008e60b8	b.eq 0x008e6104
+008e60bc	ldr x8,[x8, #0x8]
+008e60c0	cbnz x8,0x008e609c
+008e60c4	mov w0,#0x10
+008e60c8	bl 0x00c30000
+008e60cc	mov x19,x0
+008e60d0	adrp x1,0x29f000
+008e60d4	add x1,x1,#0x3b7
+008e60d8	bl 0x00c30040
+008e60dc	adrp x8,0xcb4000
+008e60e0	ldr x8,[x8, #0x9e0]
+008e60e4	adrp x1,0xcb4000
+008e60e8	adrp x2,0xcb4000
+008e60ec	mov x0,x19
+008e60f0	add x8,x8,#0x10
+008e60f4	str x8,[x19]
+008e60f8	ldr x1,[x1, #0x9d0]
+008e60fc	ldr x2,[x2, #0x9d8]
+008e6100	bl 0x00c30020
+008e6104	cbz x8,0x008e60c4
+008e6108	add x1,x8,#0x28
+008e610c	mov x0,x20
+008e6110	bl 0x00871a60
+008e6114	cbz x0,0x008e6128
+008e6118	ldr x8,[x20, #0x18]
+008e611c	cmp x8,#0x1
+008e6120	b.ne 0x008e6150
+008e6124	mov w0,#0x1
+008e6128	ldr x8,[x19, #0x28]
+008e612c	ldur x9,[x29, #-0x28]
+008e6130	cmp x8,x9
+008e6134	b.ne 0x008e614c
+008e6138	ldp x29,x30,[sp, #0x60]
+008e613c	ldp x20,x19,[sp, #0x50]
+008e6140	ldr x21,[sp, #0x40]
+008e6144	add sp,sp,#0x70
+008e6148	ret
+008e614c	bl 0x00c2fec0
+008e6150	mov w0,#0x10
+008e6154	bl 0x00c30000
+008e6158	mov x19,x0
+008e615c	add x8,sp,#0x8
+008e6160	mov x0,x20
+008e6164	bl 0x00c30cd0
+008e6168	adrp x0,0x2d4000
+008e616c	add x0,x0,#0xf09
+008e6170	add x8,sp,#0x20
+008e6174	add x1,sp,#0x8
+008e6178	bl 0x00c304a0
+008e617c	mov w21,#0x1
+008e6180	add x1,sp,#0x20
+008e6184	mov x0,x19
+008e6188	bl 0x00c30d20
+008e618c	adrp x8,0xcb4000
+008e6190	ldr x8,[x8, #0xc30]
+008e6194	add x8,x8,#0x10
+008e6198	str x8,[x19]
+008e619c	adrp x1,0xcb4000
+008e61a0	adrp x2,0xcb4000
+008e61a4	ldr x1,[x1, #0xc10]
+008e61a8	ldr x2,[x2, #0xc18]
+008e61ac	mov x0,x19
+008e61b0	mov w21,wzr
+008e61b4	bl 0x00c30020

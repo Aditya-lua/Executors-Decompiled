@@ -1,0 +1,97 @@
+; FUN_00854b10 @ 00854b10
+00854b10	ldp w13,w9,[x0, #0x10]
+00854b14	ldr w10,[x0, #0x18]
+00854b18	ldr x14,[x0, #0x8]
+00854b1c	sub w11,w13,w10
+00854b20	cmp x14,x13
+00854b24	orr x11,x9,x11, LSL #0x20
+00854b28	b.ls 0x00854b54
+00854b2c	ldr x12,[x0]
+00854b30	ldrsb w15,[x12, x13]
+00854b34	and w12,w15,#0xff
+00854b38	tbz w15,#0x1f,0x00854b58
+00854b3c	and w16,w12,#0xe0
+00854b40	cmp w16,#0xc0
+00854b44	b.ne 0x00854b88
+00854b48	mov w15,wzr
+00854b4c	mov w2,#0x1f
+00854b50	b 0x00854bb4
+00854b54	mov w12,wzr
+00854b58	mov w14,#0x1
+00854b5c	add w17,w13,w14
+00854b60	str w17,[x0, #0x10]
+00854b64	sub w10,w17,w10
+00854b68	stur x11,[x8, #0x4]
+00854b6c	mov w11,#0x120
+00854b70	orr x9,x9,x10, LSL #0x20
+00854b74	str w11,[x8]
+00854b78	str xzr,[x8, #0x18]
+00854b7c	stur x9,[x8, #0xc]
+00854b80	stp wzr,w12,[x8, #0x14]
+00854b84	ret
+00854b88	and w15,w12,#0xf0
+00854b8c	cmp w15,#0xe0
+00854b90	b.ne 0x00854ba0
+00854b94	mov w15,#0x1
+00854b98	mov w2,#0xf
+00854b9c	b 0x00854bb4
+00854ba0	and w15,w12,#0xf8
+00854ba4	cmp w15,#0xf0
+00854ba8	b.ne 0x00854c28
+00854bac	mov w15,wzr
+00854bb0	mov w2,#0x7
+00854bb4	add w3,w13,#0x1
+00854bb8	cmp x14,x3
+00854bbc	mov w17,w3
+00854bc0	str w3,[x0, #0x10]
+00854bc4	b.ls 0x00854c6c
+00854bc8	ldr x1,[x0]
+00854bcc	ldrsb w3,[x1, x3]
+00854bd0	cmn w3,#0x40
+00854bd4	b.ge 0x00854c6c
+00854bd8	and w17,w3,#0xff
+00854bdc	and w12,w12,w2
+00854be0	cmp w16,#0xc0
+00854be4	and w17,w17,#0x3f
+00854be8	orr w12,w17,w12, LSL #0x6
+00854bec	add w17,w13,#0x2
+00854bf0	str w17,[x0, #0x10]
+00854bf4	b.eq 0x00854b64
+00854bf8	cmp x14,x17
+00854bfc	b.ls 0x00854c6c
+00854c00	ldrsb w16,[x1, x17]
+00854c04	cmn w16,#0x41
+00854c08	b.gt 0x00854c6c
+00854c0c	and w16,w16,#0xff
+00854c10	add w17,w13,#0x3
+00854c14	and w16,w16,#0x3f
+00854c18	str w17,[x0, #0x10]
+00854c1c	orr w12,w16,w12, LSL #0x6
+00854c20	tbz w15,#0x0,0x00854c44
+00854c24	b 0x00854b64
+00854c28	add w12,w13,#0x1
+00854c2c	stur x11,[x8, #0x4]
+00854c30	mov w11,#0x120
+00854c34	str wzr,[x8, #0x14]
+00854c38	sub w10,w12,w10
+00854c3c	str w12,[x0, #0x10]
+00854c40	b 0x00854c7c
+00854c44	cmp x14,x17
+00854c48	b.ls 0x00854c6c
+00854c4c	ldrsb w14,[x1, x17]
+00854c50	cmn w14,#0x41
+00854c54	b.gt 0x00854c6c
+00854c58	and w14,w14,#0xff
+00854c5c	and w14,w14,#0x3f
+00854c60	orr w12,w14,w12, LSL #0x6
+00854c64	mov w14,#0x4
+00854c68	b 0x00854b5c
+00854c6c	sub w10,w17,w10
+00854c70	stur x11,[x8, #0x4]
+00854c74	mov w11,#0x120
+00854c78	str wzr,[x8, #0x14]
+00854c7c	orr x9,x9,x10, LSL #0x20
+00854c80	str w11,[x8]
+00854c84	str xzr,[x8, #0x18]
+00854c88	stur x9,[x8, #0xc]
+00854c8c	ret

@@ -1,0 +1,21 @@
+; dtls1_get_bitmap @ 009c9808
+009c9808	str wzr,[x2]
+009c980c	ldr x8,[x0, #0x1d10]
+009c9810	ldr x10,[x1, #0x40]
+009c9814	ldrh w9,[x8]
+009c9818	cmp x10,x9
+009c981c	b.ne 0x009c9828
+009c9820	add x0,x8,#0x8
+009c9824	ret
+009c9828	add x11,x9,#0x1
+009c982c	cmp x10,x11
+009c9830	mov x0,xzr
+009c9834	b.ne 0x009c9854
+009c9838	ldrh w10,[x8, #0x28]
+009c983c	mov x0,xzr
+009c9840	cmp w10,w9
+009c9844	b.eq 0x009c9854
+009c9848	mov w9,#0x1
+009c984c	add x0,x8,#0x18
+009c9850	str w9,[x2]
+009c9854	ret

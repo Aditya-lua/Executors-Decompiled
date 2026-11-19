@@ -1,0 +1,12 @@
+; SSL_get_ciphers @ 009b5924
+009b5924	cbz x0,0x009b5948
+009b5928	mov x8,x0
+009b592c	ldr x0,[x0, #0x528]
+009b5930	cbnz x0,0x009b5944
+009b5934	ldr x8,[x8, #0x9a8]
+009b5938	cbz x8,0x009b5948
+009b593c	ldr x0,[x8, #0x10]
+009b5940	cbz x0,0x009b5948
+009b5944	ret
+009b5948	mov x0,xzr
+009b594c	ret

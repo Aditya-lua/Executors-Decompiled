@@ -1,0 +1,42 @@
+; EC_KEY_print_fp @ 00a374c0
+00a374c0	stp x22,x21,[sp, #-0x30]!
+00a374c4	stp x20,x19,[sp, #0x10]
+00a374c8	stp x29,x30,[sp, #0x20]
+00a374cc	add x29,sp,#0x20
+00a374d0	mov w19,w2
+00a374d4	mov x20,x1
+00a374d8	mov x22,x0
+00a374dc	bl 0x00c32270
+00a374e0	bl 0x00c32240
+00a374e4	cbz x0,0x00a37520
+00a374e8	mov w1,#0x6a
+00a374ec	mov x2,xzr
+00a374f0	mov x3,x22
+00a374f4	mov x21,x0
+00a374f8	bl 0x00c321a0
+00a374fc	mov x0,x21
+00a37500	mov x1,x20
+00a37504	mov w2,w19
+00a37508	bl 0x00c3a710
+00a3750c	mov w19,w0
+00a37510	mov x0,x21
+00a37514	bl 0x00c31a40
+00a37518	mov w0,w19
+00a3751c	b 0x00a37554
+00a37520	bl 0x00c342a0
+00a37524	adrp x0,0x2d9000
+00a37528	adrp x2,0x2a0000
+00a3752c	add x0,x0,#0xb76
+00a37530	add x2,x2,#0x11a
+00a37534	mov w1,#0x2a
+00a37538	bl 0x00c342b0
+00a3753c	mov w1,#0x20
+00a37540	mov w0,#0x10
+00a37544	movk w1,#0x8, LSL #16
+00a37548	mov x2,xzr
+00a3754c	bl 0x00c342c0
+00a37550	mov w0,wzr
+00a37554	ldp x29,x30,[sp, #0x20]
+00a37558	ldp x20,x19,[sp, #0x10]
+00a3755c	ldp x22,x21,[sp], #0x30
+00a37560	ret

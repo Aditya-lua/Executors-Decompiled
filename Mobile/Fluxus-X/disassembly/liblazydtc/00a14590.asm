@@ -1,0 +1,37 @@
+; SCT_CTX_free @ 00a14590
+00a14590	cbz x0,0x00a1461c
+00a14594	stp x20,x19,[sp, #-0x20]!
+00a14598	stp x29,x30,[sp, #0x10]
+00a1459c	mov x19,x0
+00a145a0	ldr x0,[x0]
+00a145a4	add x29,sp,#0x10
+00a145a8	bl 0x00c32450
+00a145ac	ldr x0,[x19, #0x8]
+00a145b0	adrp x20,0x2aa000
+00a145b4	add x20,x20,#0x18
+00a145b8	mov w2,#0x32
+00a145bc	mov x1,x20
+00a145c0	bl 0x00c32310
+00a145c4	ldr x0,[x19, #0x18]
+00a145c8	mov w2,#0x33
+00a145cc	mov x1,x20
+00a145d0	bl 0x00c32310
+00a145d4	ldr x0,[x19, #0x28]
+00a145d8	mov w2,#0x34
+00a145dc	mov x1,x20
+00a145e0	bl 0x00c32310
+00a145e4	ldr x0,[x19, #0x38]
+00a145e8	mov w2,#0x35
+00a145ec	mov x1,x20
+00a145f0	bl 0x00c32310
+00a145f4	ldr x0,[x19, #0x58]
+00a145f8	mov w2,#0x36
+00a145fc	mov x1,x20
+00a14600	bl 0x00c32310
+00a14604	ldp x29,x30,[sp, #0x10]
+00a14608	mov w2,#0x37
+00a1460c	mov x0,x19
+00a14610	mov x1,x20
+00a14614	ldp x20,x19,[sp], #0x20
+00a14618	b 0x00c32310
+00a1461c	ret

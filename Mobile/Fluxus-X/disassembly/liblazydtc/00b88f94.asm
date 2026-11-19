@@ -1,0 +1,73 @@
+; psa_sign_message @ 00b88f94
+00b88f94	str x27,[sp, #-0x60]!
+00b88f98	stp x26,x25,[sp, #0x10]
+00b88f9c	stp x24,x23,[sp, #0x20]
+00b88fa0	stp x22,x21,[sp, #0x30]
+00b88fa4	stp x20,x19,[sp, #0x40]
+00b88fa8	stp x29,x30,[sp, #0x50]
+00b88fac	add x29,sp,#0x50
+00b88fb0	mov x20,x6
+00b88fb4	mov x21,x5
+00b88fb8	mov x19,x4
+00b88fbc	mov x23,x3
+00b88fc0	mov x26,x2
+00b88fc4	mov w24,w1
+00b88fc8	mov w25,w0
+00b88fcc	cbz x3,0x00b89008
+00b88fd0	mov w1,#0x1
+00b88fd4	mov x0,x23
+00b88fd8	bl 0x00c30a30
+00b88fdc	mov x22,x0
+00b88fe0	cbz x0,0x00b89080
+00b88fe4	mov x0,x22
+00b88fe8	mov x1,x26
+00b88fec	mov x2,x23
+00b88ff0	bl 0x00c2ffd0
+00b88ff4	cbnz x21,0x00b89010
+00b88ff8	mov x27,xzr
+00b88ffc	mov x26,xzr
+00b89000	mov x19,xzr
+00b89004	b 0x00b89028
+00b89008	mov x22,xzr
+00b8900c	cbz x21,0x00b88ff8
+00b89010	mov w1,#0x1
+00b89014	mov x0,x21
+00b89018	bl 0x00c30a30
+00b8901c	mov x26,x0
+00b89020	mov x27,x21
+00b89024	cbz x0,0x00b89080
+00b89028	mov w1,#0x1
+00b8902c	mov w0,w25
+00b89030	mov w2,w24
+00b89034	mov x3,x22
+00b89038	mov x4,x23
+00b8903c	mov x5,x26
+00b89040	mov x6,x21
+00b89044	mov x7,x20
+00b89048	bl 0x00b890b4
+00b8904c	mov w20,w0
+00b89050	mov x0,x22
+00b89054	bl 0x00c30960
+00b89058	cbz x26,0x00b89094
+00b8905c	cbz x19,0x00b89090
+00b89060	cbz x27,0x00b89074
+00b89064	mov x0,x19
+00b89068	mov x1,x26
+00b8906c	mov x2,x27
+00b89070	bl 0x00c2ffd0
+00b89074	mov x0,x26
+00b89078	bl 0x00c30960
+00b8907c	b 0x00b89094
+00b89080	mov x0,x22
+00b89084	bl 0x00c30960
+00b89088	mov w20,#0xffffff73
+00b8908c	b 0x00b89094
+00b89090	mov w20,#0xffffff69
+00b89094	mov w0,w20
+00b89098	ldp x29,x30,[sp, #0x50]
+00b8909c	ldp x20,x19,[sp, #0x40]
+00b890a0	ldp x22,x21,[sp, #0x30]
+00b890a4	ldp x24,x23,[sp, #0x20]
+00b890a8	ldp x26,x25,[sp, #0x10]
+00b890ac	ldr x27,[sp], #0x60
+00b890b0	ret

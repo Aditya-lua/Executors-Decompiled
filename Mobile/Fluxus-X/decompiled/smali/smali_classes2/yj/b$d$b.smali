@@ -1,0 +1,255 @@
+.class public final Lyj/b$d$b;
+.super Lgu/m;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lyj/b$d;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lgu/m;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Lav/p0;",
+        "Leu/b<",
+        "-",
+        "Lzt/n<",
+        "+",
+        "Landroid/graphics/Bitmap;",
+        ">;>;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lgu/f;
+    c = "com.roblox.client.pushnotification.v2.richpushnotifications.PushNotificationImageFetcher$loadImagesForBigPictureNotification$1$largeIcon$1"
+    f = "PushNotificationImageFetcher.kt"
+    l = {
+        0x39
+    }
+    m = "invokeSuspend"
+    v = 0x1
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0003\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u0001*\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
+    }
+    d2 = {
+        "Lav/p0;",
+        "Lzt/n;",
+        "Landroid/graphics/Bitmap;",
+        "<anonymous>",
+        "(Lav/p0;)Lzt/n;"
+    }
+    k = 0x3
+    mv = {
+        0x2,
+        0x2,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field public t:I
+
+.field public final synthetic u:Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;
+
+.field public final synthetic v:Landroid/content/Context;
+
+.field public final synthetic w:J
+
+
+# direct methods
+.method public constructor <init>(Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;Landroid/content/Context;JLeu/b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;",
+            "Landroid/content/Context;",
+            "J",
+            "Leu/b<",
+            "-",
+            "Lyj/b$d$b;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lyj/b$d$b;->u:Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;
+
+    iput-object p2, p0, Lyj/b$d$b;->v:Landroid/content/Context;
+
+    iput-wide p3, p0, Lyj/b$d$b;->w:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lgu/m;-><init>(ILeu/b;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Leu/b;)Leu/b;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Leu/b<",
+            "*>;)",
+            "Leu/b<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lyj/b$d$b;
+
+    iget-object v1, p0, Lyj/b$d$b;->u:Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;
+
+    iget-object v2, p0, Lyj/b$d$b;->v:Landroid/content/Context;
+
+    iget-wide v3, p0, Lyj/b$d$b;->w:J
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lyj/b$d$b;-><init>(Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;Landroid/content/Context;JLeu/b;)V
+
+    return-object v0
+.end method
+
+.method public final invoke(Lav/p0;Leu/b;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lav/p0;",
+            "Leu/b<",
+            "-",
+            "Lzt/n<",
+            "Landroid/graphics/Bitmap;",
+            ">;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lyj/b$d$b;->create(Ljava/lang/Object;Leu/b;)Leu/b;
+
+    move-result-object p1
+
+    check-cast p1, Lyj/b$d$b;
+
+    sget-object p2, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    invoke-virtual {p1, p2}, Lyj/b$d$b;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 2
+    check-cast p1, Lav/p0;
+
+    check-cast p2, Leu/b;
+
+    invoke-virtual {p0, p1, p2}, Lyj/b$d$b;->invoke(Lav/p0;Leu/b;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {}, Lfu/c;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, p0, Lyj/b$d$b;->t:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lzt/o;->b(Ljava/lang/Object;)V
+
+    check-cast p1, Lzt/n;
+
+    invoke-virtual {p1}, Lzt/n;->j()Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lzt/o;->b(Ljava/lang/Object;)V
+
+    sget-object v1, Lyj/b;->a:Lyj/b;
+
+    move p1, v2
+
+    iget-object v2, p0, Lyj/b$d$b;->u:Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;
+
+    iget-object v3, p0, Lyj/b$d$b;->v:Landroid/content/Context;
+
+    sget-object v4, Lkotlin/time/a;->b:Lkotlin/time/a$a;
+
+    iget-wide v4, p0, Lyj/b$d$b;->w:J
+
+    sget-object v6, Lzu/b;->d:Lzu/b;
+
+    invoke-static {v4, v5, v6}, Lkotlin/time/b;->q(JLzu/b;)J
+
+    move-result-wide v4
+
+    iput p1, p0, Lyj/b$d$b;->t:I
+
+    move-object v6, p0
+
+    invoke-static/range {v1 .. v6}, Lyj/b;->a(Lyj/b;Lcom/roblox/client/pushnotification/v2/richpushnotifications/PushNotificationImageConfig;Landroid/content/Context;JLeu/b;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    invoke-static {p1}, Lzt/n;->a(Ljava/lang/Object;)Lzt/n;
+
+    move-result-object p1
+
+    return-object p1
+.end method

@@ -1,0 +1,24 @@
+/* Ghidra 12.2 pseudocode; native types and names may be inferred.
+ * Binary: liblazydtc.so; entry: 009080e4
+ */
+
+void FUN_009080e4(long param_1,uint param_2)
+
+{
+  long *plVar1;
+  long lVar2;
+  
+  lVar2 = *(long *)(param_1 + 0x20);
+  for (plVar1 = *(long **)(lVar2 + 0x248); plVar1 != (long *)0x0; plVar1 = (long *)plVar1[1]) {
+    if (*(code **)(*plVar1 + 0x58) != (code *)&LAB_00907bd4) {
+      (**(code **)(*plVar1 + 0x58))(plVar1,param_1,7,param_2 & 1,0);
+    }
+  }
+  for (plVar1 = *(long **)(lVar2 + 0x250); plVar1 != (long *)0x0; plVar1 = (long *)plVar1[1]) {
+    if (*(code **)(*plVar1 + 0x58) != (code *)&LAB_00907bd4) {
+      (**(code **)(*plVar1 + 0x58))(plVar1,param_1,7,param_2 & 1,0);
+    }
+  }
+  return;
+}
+

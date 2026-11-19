@@ -1,0 +1,24 @@
+; EC_KEY_METHOD_new @ 00a30000
+00a30000	stp x20,x19,[sp, #-0x20]!
+00a30004	adrp x1,0x2cd000
+00a30008	mov x20,x0
+00a3000c	add x1,x1,#0x943
+00a30010	orr w0,wzr,#0x78
+00a30014	mov w2,#0xb8
+00a30018	stp x29,x30,[sp, #0x10]
+00a3001c	add x29,sp,#0x10
+00a30020	bl 0x00c34250
+00a30024	mov x19,x0
+00a30028	cbz x0,0x00a3004c
+00a3002c	cbz x20,0x00a30040
+00a30030	orr w2,wzr,#0x78
+00a30034	mov x0,x19
+00a30038	mov x1,x20
+00a3003c	bl 0x00c2ffd0
+00a30040	ldr w8,[x19, #0x8]
+00a30044	orr w8,w8,#0x1
+00a30048	str w8,[x19, #0x8]
+00a3004c	ldp x29,x30,[sp, #0x10]
+00a30050	mov x0,x19
+00a30054	ldp x20,x19,[sp], #0x20
+00a30058	ret

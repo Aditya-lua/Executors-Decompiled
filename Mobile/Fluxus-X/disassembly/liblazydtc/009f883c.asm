@@ -1,0 +1,4 @@
+; ZUINT64_it @ 009f883c
+009f883c	adrp x0,0xc59000
+009f8840	add x0,x0,#0x3f0
+009f8844	ret

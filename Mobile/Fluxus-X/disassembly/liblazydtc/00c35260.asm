@@ -1,0 +1,5 @@
+; EVP_CIPHER_fetch @ 00c35260
+00c35260	adrp x16,0xcb8000
+00c35264	ldr x17,[x16, #0x918]
+00c35268	add x16,x16,#0x918
+00c3526c	br x17

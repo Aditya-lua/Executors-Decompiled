@@ -1,0 +1,2 @@
+; OSSL_PARAM_get_int @ 00a9e010
+00a9e010	b 0x00a9e014

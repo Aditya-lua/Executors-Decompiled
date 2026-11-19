@@ -1,0 +1,75 @@
+; psa_hash_compute @ 00b880d4
+00b880d4	stp x26,x25,[sp, #-0x50]!
+00b880d8	stp x24,x23,[sp, #0x10]
+00b880dc	stp x22,x21,[sp, #0x20]
+00b880e0	stp x20,x19,[sp, #0x30]
+00b880e4	stp x29,x30,[sp, #0x40]
+00b880e8	add x29,sp,#0x40
+00b880ec	and w8,w0,#0x7f000000
+00b880f0	mov w9,#0x2000000
+00b880f4	mov x20,x5
+00b880f8	mov x21,x4
+00b880fc	mov x19,x3
+00b88100	mov x22,x2
+00b88104	mov x25,x1
+00b88108	mov w23,w0
+00b8810c	cmp w8,w9
+00b88110	str xzr,[x5]
+00b88114	b.ne 0x00b88154
+00b88118	cbz x22,0x00b8815c
+00b8811c	mov w1,#0x1
+00b88120	mov x0,x22
+00b88124	bl 0x00c30a30
+00b88128	mov x24,x0
+00b8812c	cbz x0,0x00b881cc
+00b88130	mov x0,x24
+00b88134	mov x1,x25
+00b88138	mov x2,x22
+00b8813c	bl 0x00c2ffd0
+00b88140	cbnz x21,0x00b88164
+00b88144	mov x26,xzr
+00b88148	mov x25,xzr
+00b8814c	mov x19,xzr
+00b88150	b 0x00b8817c
+00b88154	mov w20,#0xffffff79
+00b88158	b 0x00b881e0
+00b8815c	mov x24,xzr
+00b88160	cbz x21,0x00b88144
+00b88164	mov w1,#0x1
+00b88168	mov x0,x21
+00b8816c	bl 0x00c30a30
+00b88170	mov x25,x0
+00b88174	mov x26,x21
+00b88178	cbz x0,0x00b881cc
+00b8817c	mov w0,w23
+00b88180	mov x1,x24
+00b88184	mov x2,x22
+00b88188	mov x3,x25
+00b8818c	mov x4,x21
+00b88190	mov x5,x20
+00b88194	bl 0x00c43000
+00b88198	mov w20,w0
+00b8819c	mov x0,x24
+00b881a0	bl 0x00c30960
+00b881a4	cbz x25,0x00b881e0
+00b881a8	cbz x19,0x00b881dc
+00b881ac	cbz x26,0x00b881c0
+00b881b0	mov x0,x19
+00b881b4	mov x1,x25
+00b881b8	mov x2,x26
+00b881bc	bl 0x00c2ffd0
+00b881c0	mov x0,x25
+00b881c4	bl 0x00c30960
+00b881c8	b 0x00b881e0
+00b881cc	mov x0,x24
+00b881d0	bl 0x00c30960
+00b881d4	mov w20,#0xffffff73
+00b881d8	b 0x00b881e0
+00b881dc	mov w20,#0xffffff69
+00b881e0	mov w0,w20
+00b881e4	ldp x29,x30,[sp, #0x40]
+00b881e8	ldp x20,x19,[sp, #0x30]
+00b881ec	ldp x22,x21,[sp, #0x20]
+00b881f0	ldp x24,x23,[sp, #0x10]
+00b881f4	ldp x26,x25,[sp], #0x50
+00b881f8	ret

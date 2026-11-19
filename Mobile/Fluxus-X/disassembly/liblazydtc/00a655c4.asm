@@ -1,0 +1,32 @@
+; evp_keymgmt_util_assign_pkey @ 00a655c4
+00a655c4	stp x20,x19,[sp, #-0x20]!
+00a655c8	stp x29,x30,[sp, #0x10]
+00a655cc	add x29,sp,#0x10
+00a655d0	cbz x0,0x00a65600
+00a655d4	cbz x1,0x00a65600
+00a655d8	mov x20,x2
+00a655dc	cbz x2,0x00a65600
+00a655e0	mov x19,x0
+00a655e4	bl 0x00c3d200
+00a655e8	cbz w0,0x00a65600
+00a655ec	mov x0,x19
+00a655f0	str x20,[x19, #0x68]
+00a655f4	bl 0x00a65640
+00a655f8	mov w0,#0x1
+00a655fc	b 0x00a65634
+00a65600	bl 0x00c342a0
+00a65604	adrp x0,0x2cd000
+00a65608	adrp x2,0x2bd000
+00a6560c	add x0,x0,#0xabe
+00a65610	add x2,x2,#0xaf1
+00a65614	mov w1,#0x41
+00a65618	bl 0x00c342b0
+00a6561c	mov w1,#0x103
+00a65620	orr w0,wzr,#0x6
+00a65624	movk w1,#0xc, LSL #16
+00a65628	mov x2,xzr
+00a6562c	bl 0x00c342c0
+00a65630	mov w0,wzr
+00a65634	ldp x29,x30,[sp, #0x10]
+00a65638	ldp x20,x19,[sp], #0x20
+00a6563c	ret

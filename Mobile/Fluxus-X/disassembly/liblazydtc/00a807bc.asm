@@ -1,0 +1,55 @@
+; ossl_decode_der_length @ 00a807bc
+00a807bc	ldr x10,[x0, #0x8]
+00a807c0	cbz x10,0x00a8080c
+00a807c4	ldr x9,[x0]
+00a807c8	sub x12,x10,#0x1
+00a807cc	mov x13,x9
+00a807d0	ldrsb w8,[x13], #0x1
+00a807d4	and x11,x8,#0xff
+00a807d8	stp x13,x12,[x0]
+00a807dc	tbnz w8,#0x1f,0x00a80814
+00a807e0	cmp x12,x11
+00a807e4	mov w8,wzr
+00a807e8	b.cc 0x00a80870
+00a807ec	stp x13,x11,[x1]
+00a807f0	ldp x8,x9,[x0]
+00a807f4	add x8,x8,x11
+00a807f8	sub x9,x9,x11
+00a807fc	stp x8,x9,[x0]
+00a80800	mov w8,#0x1
+00a80804	mov w0,w8
+00a80808	ret
+00a8080c	mov w0,wzr
+00a80810	ret
+00a80814	cmp w11,#0x82
+00a80818	b.eq 0x00a80848
+00a8081c	cmp w11,#0x81
+00a80820	mov w8,wzr
+00a80824	b.ne 0x00a80870
+00a80828	cbz x12,0x00a80878
+00a8082c	ldrb w11,[x9, #0x1]
+00a80830	sub x8,x10,#0x2
+00a80834	subs x10,x8,x11
+00a80838	mov w8,wzr
+00a8083c	b.cc 0x00a80870
+00a80840	add x8,x9,#0x2
+00a80844	b 0x00a80884
+00a80848	cmp x12,#0x2
+00a8084c	mov w8,wzr
+00a80850	b.cc 0x00a80870
+00a80854	ldrb w8,[x9, #0x1]
+00a80858	ldrb w11,[x9, #0x2]
+00a8085c	bfm x11,x8,#0x38,#0x7
+00a80860	sub x8,x10,#0x3
+00a80864	subs x10,x8,x11
+00a80868	mov w8,wzr
+00a8086c	b.cs 0x00a80880
+00a80870	mov w0,w8
+00a80874	ret
+00a80878	mov w0,wzr
+00a8087c	ret
+00a80880	add x8,x9,#0x3
+00a80884	add x9,x8,x11
+00a80888	stp x9,x10,[x0]
+00a8088c	stp x8,x11,[x1]
+00a80890	b 0x00a80800

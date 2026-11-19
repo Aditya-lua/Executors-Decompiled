@@ -1,0 +1,5 @@
+; ASN1_BIT_STRING_new @ 00c38040
+00c38040	adrp x16,0xcba000
+00c38044	ldr x17,[x16, #0x8]
+00c38048	add x16,x16,#0x8
+00c3804c	br x17

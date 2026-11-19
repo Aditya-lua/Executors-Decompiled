@@ -1,0 +1,13 @@
+; _INIT_117 @ 00851a10
+00851a10	adrp x8,0xd1e000
+00851a14	ldrb w9,[x8, #0xa88]
+00851a18	tbnz w9,#0x0,0x00851a3c
+00851a1c	adrp x9,0xd1e000
+00851a20	mov w11,#0x1
+00851a24	ldr w10,[x9, #0x930]
+00851a28	strb w11,[x8, #0xa88]
+00851a2c	add w8,w10,#0x1
+00851a30	adrp x10,0xd1e000
+00851a34	str w8,[x9, #0x930]
+00851a38	str w8,[x10, #0xa80]
+00851a3c	ret

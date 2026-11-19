@@ -1,0 +1,22 @@
+; FUN_0088289c @ 0088289c
+0088289c	stp x29,x30,[sp, #-0x20]!
+008828a0	str x19,[sp, #0x10]
+008828a4	mov x29,sp
+008828a8	mov x19,x0
+008828ac	ldr x0,[x0]
+008828b0	cbz x0,0x008828e0
+008828b4	bl 0x00c301d0
+008828b8	ldr x0,[x19, #0x18]
+008828bc	str xzr,[x19]
+008828c0	bl 0x00c301d0
+008828c4	mov x0,xzr
+008828c8	stp xzr,xzr,[x19, #0x8]
+008828cc	str xzr,[x19, #0x18]
+008828d0	bl 0x00c301d0
+008828d4	mov w8,#0x40
+008828d8	str xzr,[x19, #0x20]
+008828dc	strb w8,[x19, #0x30]
+008828e0	ldr x0,[x19, #0x18]
+008828e4	ldr x19,[sp, #0x10]
+008828e8	ldp x29,x30,[sp], #0x20
+008828ec	b 0x00c301d0

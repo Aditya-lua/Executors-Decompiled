@@ -1,0 +1,156 @@
+; FUN_00a925fc @ 00a925fc
+00a925fc	stp x22,x21,[sp, #-0x30]!
+00a92600	mov w21,w2
+00a92604	cmp w1,#0x25
+00a92608	stp x20,x19,[sp, #0x10]
+00a9260c	stp x29,x30,[sp, #0x20]
+00a92610	add x29,sp,#0x20
+00a92614	b.hi 0x00a9268c
+00a92618	adrp x9,0x76e000
+00a9261c	mov w8,w1
+00a92620	add x9,x9,#0x5d8
+00a92624	ldrsw x8,[x9, x8, LSL #0x2]
+00a92628	ldr x19,[x0, #0x78]
+00a9262c	mov x20,x3
+00a92630	mov x22,x0
+00a92634	add x8,x8,x9
+00a92638	mov w0,#0x1
+00a9263c	br x8
+00a92640	cbnz x19,0x00a92668
+00a92644	bl 0x00c3e4a0
+00a92648	adrp x1,0x2d9000
+00a9264c	add x0,x0,#0xd0
+00a92650	add x1,x1,#0xde9
+00a92654	mov w2,#0x1f9
+00a92658	bl 0x00c34250
+00a9265c	mov x19,x0
+00a92660	str x0,[x22, #0x78]
+00a92664	cbz x0,0x00a92828
+00a92668	orr x8,xzr,#0xc00000000
+00a9266c	mov x9,#-0x1
+00a92670	stp xzr,xzr,[x19, #0xa8]
+00a92674	stur xzr,[x19, #0x9c]
+00a92678	stur xzr,[x19, #0x94]
+00a9267c	stp xzr,x8,[x19, #0xb8]
+00a92680	str x9,[x19, #0xc8]
+00a92684	mov w0,#0x1
+00a92688	b 0x00a92858
+00a9268c	mov w0,#0xffffffff
+00a92690	b 0x00a92858
+00a92694	cbz x19,0x00a92820
+00a92698	bl 0x00c3e4a0
+00a9269c	adrp x2,0x2d9000
+00a926a0	add x1,x0,#0xd0
+00a926a4	add x2,x2,#0xde9
+00a926a8	mov w3,#0x20d
+00a926ac	mov x0,x19
+00a926b0	bl 0x00c345f0
+00a926b4	str x0,[x20, #0x78]
+00a926b8	cbnz x0,0x00a92820
+00a926bc	bl 0x00c342a0
+00a926c0	adrp x0,0x2d9000
+00a926c4	adrp x2,0x2a8000
+00a926c8	add x0,x0,#0xde9
+00a926cc	add x2,x2,#0x11e
+00a926d0	mov w1,#0x20f
+00a926d4	bl 0x00c342b0
+00a926d8	orr w0,wzr,#0x6
+00a926dc	mov w1,#0xad
+00a926e0	b 0x00a9284c
+00a926e4	sub w8,w21,#0x1
+00a926e8	cmp w8,#0xb
+00a926ec	mov w0,wzr
+00a926f0	b.hi 0x00a92858
+00a926f4	str w21,[x19, #0xc4]
+00a926f8	mov w0,#0x1
+00a926fc	b 0x00a92858
+00a92700	sub w8,w21,#0x1
+00a92704	cmp w8,#0xf
+00a92708	mov w0,wzr
+00a9270c	b.hi 0x00a92858
+00a92710	ldr w8,[x22, #0x10]
+00a92714	cbz w8,0x00a92854
+00a92718	add x1,x19,#0x84
+00a9271c	sxtw x2,w21
+00a92720	mov x0,x20
+00a92724	bl 0x00c2ffd0
+00a92728	mov w0,#0x1
+00a9272c	b 0x00a92858
+00a92730	sub w8,w21,#0x1
+00a92734	cmp w8,#0xf
+00a92738	mov w0,wzr
+00a9273c	b.hi 0x00a92858
+00a92740	cbz x20,0x00a92820
+00a92744	add x0,x19,#0x84
+00a92748	sxtw x2,w21
+00a9274c	mov x1,x20
+00a92750	bl 0x00c2ffd0
+00a92754	str w21,[x19, #0xc0]
+00a92758	mov w0,#0x1
+00a9275c	b 0x00a92858
+00a92760	cmp w21,#0xc
+00a92764	mov w0,wzr
+00a92768	b.ne 0x00a92858
+00a9276c	ldr w8,[x20]
+00a92770	mov w0,#0x1
+00a92774	str w8,[x19, #0x24]
+00a92778	str w8,[x19, #0x78]
+00a9277c	ldr w8,[x20, #0x4]
+00a92780	str w8,[x19, #0x28]
+00a92784	str w8,[x19, #0x7c]
+00a92788	ldr w8,[x20, #0x8]
+00a9278c	str w8,[x19, #0x2c]
+00a92790	str w8,[x19, #0x80]
+00a92794	b 0x00a92858
+00a92798	cmp w21,#0xd
+00a9279c	mov w0,wzr
+00a927a0	b.ne 0x00a92858
+00a927a4	ldur x8,[x20, #0x5]
+00a927a8	stur x8,[x19, #0x99]
+00a927ac	ldr x8,[x20]
+00a927b0	stur x8,[x19, #0x94]
+00a927b4	ldrb w9,[x20, #0xb]
+00a927b8	ldrb w8,[x20, #0xc]
+00a927bc	ldr w10,[x22, #0x10]
+00a927c0	bfm w8,w9,#0x18,#0x7
+00a927c4	cbnz w10,0x00a927e0
+00a927c8	subs w8,w8,#0x10
+00a927cc	mov w0,wzr
+00a927d0	b.cc 0x00a92858
+00a927d4	lsr w9,w8,#0x8
+00a927d8	strb w9,[x19, #0x9f]
+00a927dc	strb w8,[x19, #0xa0]
+00a927e0	ldp w9,w10,[x19, #0x78]
+00a927e4	ldr w11,[x19, #0x80]
+00a927e8	ldp w12,w13,[x19, #0x94]
+00a927ec	mov w8,w8
+00a927f0	str x8,[x19, #0xc8]
+00a927f4	str w9,[x19, #0x24]
+00a927f8	eor w8,w12,w10
+00a927fc	eor w9,w13,w11
+00a92800	str wzr,[x19, #0xbc]
+00a92804	stp w8,w9,[x19, #0x28]
+00a92808	mov w0,#0x10
+00a9280c	b 0x00a92858
+00a92810	ldr w8,[x19, #0xc4]
+00a92814	mov w0,#0x1
+00a92818	str w8,[x20]
+00a9281c	b 0x00a92858
+00a92820	mov w0,#0x1
+00a92824	b 0x00a92858
+00a92828	bl 0x00c342a0
+00a9282c	adrp x0,0x2d9000
+00a92830	adrp x2,0x2a8000
+00a92834	add x0,x0,#0xde9
+00a92838	add x2,x2,#0x11e
+00a9283c	mov w1,#0x1fb
+00a92840	bl 0x00c342b0
+00a92844	orr w0,wzr,#0x6
+00a92848	mov w1,#0x86
+00a9284c	mov x2,xzr
+00a92850	bl 0x00c342c0
+00a92854	mov w0,wzr
+00a92858	ldp x29,x30,[sp, #0x20]
+00a9285c	ldp x20,x19,[sp, #0x10]
+00a92860	ldp x22,x21,[sp], #0x30
+00a92864	ret

@@ -1,0 +1,43 @@
+; ossl_drbg_enable_locking @ 00b59544
+00b59544	str x19,[sp, #-0x20]!
+00b59548	stp x29,x30,[sp, #0x10]
+00b5954c	add x29,sp,#0x10
+00b59550	cbz x0,0x00b59580
+00b59554	ldr x8,[x0]
+00b59558	mov x19,x0
+00b5955c	cbnz x8,0x00b59580
+00b59560	ldr x8,[x19, #0x38]
+00b59564	cbz x8,0x00b59574
+00b59568	ldr x0,[x19, #0x30]
+00b5956c	blr x8
+00b59570	cbz w0,0x00b595b8
+00b59574	bl 0x00c34d50
+00b59578	str x0,[x19]
+00b5957c	cbz x0,0x00b59590
+00b59580	mov w0,#0x1
+00b59584	ldp x29,x30,[sp, #0x10]
+00b59588	ldr x19,[sp], #0x20
+00b5958c	ret
+00b59590	bl 0x00c342a0
+00b59594	adrp x0,0x2be000
+00b59598	adrp x2,0x2dc000
+00b5959c	add x0,x0,#0xab1
+00b595a0	add x2,x2,#0xfbf
+00b595a4	mov w1,#0x2ee
+00b595a8	bl 0x00c342b0
+00b595ac	mov w0,#0x39
+00b595b0	mov w1,#0xb4
+00b595b4	b 0x00b595dc
+00b595b8	bl 0x00c342a0
+00b595bc	adrp x0,0x2be000
+00b595c0	adrp x2,0x2dc000
+00b595c4	add x0,x0,#0xab1
+00b595c8	add x2,x2,#0xfbf
+00b595cc	mov w1,#0x2e9
+00b595d0	bl 0x00c342b0
+00b595d4	mov w0,#0x39
+00b595d8	mov w1,#0xb6
+00b595dc	mov x2,xzr
+00b595e0	bl 0x00c342c0
+00b595e4	mov w0,wzr
+00b595e8	b 0x00b59584

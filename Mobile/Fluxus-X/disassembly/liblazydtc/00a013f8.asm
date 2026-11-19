@@ -1,0 +1,8 @@
+; BN_get_rfc3526_prime_3072 @ 00a013f8
+00a013f8	cbz x0,0x00a01408
+00a013fc	adrp x1,0xcb5000
+00a01400	ldr x1,[x1, #0x3f8]
+00a01404	b 0x00c36990
+00a01408	adrp x0,0xcb5000
+00a0140c	ldr x0,[x0, #0x3f8]
+00a01410	b 0x00c369a0

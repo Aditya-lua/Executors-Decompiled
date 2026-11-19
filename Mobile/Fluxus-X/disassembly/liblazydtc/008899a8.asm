@@ -1,0 +1,21 @@
+; FUN_008899a8 @ 008899a8
+008899a8	ldrb w8,[x1, #0x31]
+008899ac	cmp w8,#0x1
+008899b0	b.ne 0x008899dc
+008899b4	ldr x8,[x0, #0x668]
+008899b8	cbz x8,0x008899e0
+008899bc	ldr x8,[x8, #0x98]
+008899c0	ldr x9,[x0, #0x670]
+008899c4	orr x8,x8,x9
+008899c8	cbnz x8,0x008899e0
+008899cc	ldr x8,[x0, #0x7d0]
+008899d0	ldr x9,[x0, #0x7d8]
+008899d4	cmp x8,x9
+008899d8	b.ne 0x008899e0
+008899dc	ret
+008899e0	stp x29,x30,[sp, #-0x10]!
+008899e4	mov x29,sp
+008899e8	adrp x1,0x2ce000
+008899ec	add x1,x1,#0xcde
+008899f0	mov x0,x2
+008899f4	bl 0x0087fcd8

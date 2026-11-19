@@ -1,0 +1,5 @@
+; ASN1_STRING_length @ 00c32140
+00c32140	adrp x16,0xcb7000
+00c32144	ldr x17,[x16, #0x88]
+00c32148	add x16,x16,#0x88
+00c3214c	br x17

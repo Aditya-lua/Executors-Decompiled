@@ -1,0 +1,5 @@
+; <EXTERNAL>::log @ 00c30840
+00c30840	adrp x16,0xcb6000
+00c30844	ldr x17,[x16, #0x408]
+00c30848	add x16,x16,#0x408
+00c3084c	br x17

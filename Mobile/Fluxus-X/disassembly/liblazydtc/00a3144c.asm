@@ -1,0 +1,50 @@
+; EC_POINT_cmp @ 00a3144c
+00a3144c	stp x29,x30,[sp, #-0x10]!
+00a31450	ldr x9,[x0]
+00a31454	mov x29,sp
+00a31458	ldr x4,[x9, #0xc8]
+00a3145c	cbz x4,0x00a314b8
+00a31460	ldr x8,[x1]
+00a31464	cmp x9,x8
+00a31468	b.ne 0x00a31490
+00a3146c	ldr w8,[x0, #0x20]
+00a31470	cbz w8,0x00a31484
+00a31474	ldr w10,[x1, #0x8]
+00a31478	cbz w10,0x00a31484
+00a3147c	cmp w8,w10
+00a31480	b.ne 0x00a31490
+00a31484	ldr x10,[x2]
+00a31488	cmp x9,x10
+00a3148c	b.eq 0x00a314f4
+00a31490	bl 0x00c342a0
+00a31494	adrp x0,0x29e000
+00a31498	adrp x2,0x2b4000
+00a3149c	add x0,x0,#0xa7
+00a314a0	add x2,x2,#0x17e
+00a314a4	mov w1,#0x3fd
+00a314a8	bl 0x00c342b0
+00a314ac	mov w0,#0x10
+00a314b0	mov w1,#0x65
+00a314b4	b 0x00a314e0
+00a314b8	bl 0x00c342a0
+00a314bc	adrp x0,0x29e000
+00a314c0	adrp x2,0x2b4000
+00a314c4	add x0,x0,#0xa7
+00a314c8	add x2,x2,#0x17e
+00a314cc	mov w1,#0x3f9
+00a314d0	bl 0x00c342b0
+00a314d4	mov w1,#0x101
+00a314d8	mov w0,#0x10
+00a314dc	movk w1,#0xc, LSL #16
+00a314e0	mov x2,xzr
+00a314e4	bl 0x00c342c0
+00a314e8	mov w0,#0xffffffff
+00a314ec	ldp x29,x30,[sp], #0x10
+00a314f0	ret
+00a314f4	cbz w8,0x00a31508
+00a314f8	ldr w9,[x2, #0x8]
+00a314fc	cbz w9,0x00a31508
+00a31500	cmp w8,w9
+00a31504	b.ne 0x00a31490
+00a31508	ldp x29,x30,[sp], #0x10
+00a3150c	br x4

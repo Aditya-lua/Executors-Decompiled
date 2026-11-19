@@ -1,0 +1,11 @@
+; FUN_00828c20 @ 00828c20
+00828c20	ldrb w8,[x0, #0x8]
+00828c24	cmp w8,#0x1
+00828c28	b.ne 0x00828c44
+00828c2c	adrp x8,0x29b000
+00828c30	ldr d0,[x0]
+00828c34	strb wzr,[x0, #0x8]
+00828c38	ldr d1,[x8, #0x4d8]
+00828c3c	eor v0.8B,v0.8B,v1.8B
+00828c40	str d0,[x0]
+00828c44	ret

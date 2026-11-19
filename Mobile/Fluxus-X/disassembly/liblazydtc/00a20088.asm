@@ -1,0 +1,4 @@
+; i2d_DSAPrivateKey @ 00a20088
+00a20088	adrp x2,0xc5a000
+00a2008c	add x2,x2,#0x840
+00a20090	b 0x00c36170

@@ -1,0 +1,10 @@
+; FUN_008e498c @ 008e498c
+008e498c	ldr w9,[x1, #0x8]
+008e4990	lsr x10,x2,#0x9
+008e4994	lsr w8,w2,#0xc
+008e4998	and w10,w10,#0xffffe0
+008e499c	bfm w10,w8,#0x3,#0x1
+008e49a0	orr w8,w9,w10
+008e49a4	mov w9,#0x90000000
+008e49a8	orr w1,w8,w9
+008e49ac	b 0x008e4874

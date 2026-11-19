@@ -1,0 +1,3 @@
+; ASN1_ENUMERATED_new @ 009f79c8
+009f79c8	mov w0,#0xa
+009f79cc	b 0x00c378b0

@@ -1,0 +1,62 @@
+; ASN1_STRING_dup @ 009f107c
+009f107c	str x21,[sp, #-0x30]!
+009f1080	stp x20,x19,[sp, #0x10]
+009f1084	stp x29,x30,[sp, #0x20]
+009f1088	add x29,sp,#0x20
+009f108c	cbz x0,0x009f1160
+009f1090	adrp x1,0x2c7000
+009f1094	mov x20,x0
+009f1098	add x1,x1,#0x722
+009f109c	orr w0,wzr,#0x18
+009f10a0	mov w2,#0x15e
+009f10a4	bl 0x00c34250
+009f10a8	cbz x0,0x009f10f4
+009f10ac	mov w8,#0x4
+009f10b0	str w8,[x0, #0x4]
+009f10b4	ldr w8,[x20, #0x4]
+009f10b8	mov x19,x0
+009f10bc	str w8,[x0, #0x4]
+009f10c0	ldr x1,[x20, #0x8]
+009f10c4	ldr w2,[x20]
+009f10c8	bl 0x009f0f54
+009f10cc	ldr x21,[x19, #0x10]
+009f10d0	cbz w0,0x009f1128
+009f10d4	and x8,x21,#0x80
+009f10d8	str x8,[x19, #0x10]
+009f10dc	ldr x9,[x20, #0x10]
+009f10e0	mov x0,x19
+009f10e4	and x9,x9,#-0x81
+009f10e8	orr x8,x9,x8
+009f10ec	str x8,[x19, #0x10]
+009f10f0	b 0x009f1160
+009f10f4	bl 0x00c342a0
+009f10f8	adrp x0,0x2c7000
+009f10fc	adrp x2,0x2a5000
+009f1100	add x0,x0,#0x722
+009f1104	add x2,x2,#0xc2a
+009f1108	mov w1,#0x160
+009f110c	bl 0x00c342b0
+009f1110	mov w1,#0x100
+009f1114	mov w0,#0xd
+009f1118	movk w1,#0xc, LSL #16
+009f111c	mov x2,xzr
+009f1120	bl 0x00c342c0
+009f1124	b 0x009f115c
+009f1128	tbnz w21,#0x4,0x009f1140
+009f112c	ldr x0,[x19, #0x8]
+009f1130	adrp x1,0x2c7000
+009f1134	add x1,x1,#0x722
+009f1138	mov w2,#0x16c
+009f113c	bl 0x00c32310
+009f1140	mov x0,xzr
+009f1144	tbnz w21,#0x7,0x009f1160
+009f1148	adrp x1,0x2c7000
+009f114c	add x1,x1,#0x722
+009f1150	mov w2,#0x16e
+009f1154	mov x0,x19
+009f1158	bl 0x00c32310
+009f115c	mov x0,xzr
+009f1160	ldp x29,x30,[sp, #0x20]
+009f1164	ldp x20,x19,[sp, #0x10]
+009f1168	ldr x21,[sp], #0x30
+009f116c	ret

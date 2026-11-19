@@ -1,0 +1,49 @@
+; ossl_namemap_name2num_n @ 00a824d8
+00a824d8	sub sp,sp,#0x40
+00a824dc	str x21,[sp, #0x10]
+00a824e0	stp x20,x19,[sp, #0x20]
+00a824e4	mov x20,x2
+00a824e8	mov x21,x1
+00a824ec	mov x19,x0
+00a824f0	stp x29,x30,[sp, #0x30]
+00a824f4	add x29,sp,#0x30
+00a824f8	cbnz x0,0x00a82508
+00a824fc	bl 0x00a82598
+00a82500	mov x19,x0
+00a82504	cbz x0,0x00a8256c
+00a82508	ldr x0,[x19, #0x8]
+00a8250c	bl 0x00c35680
+00a82510	cbz w0,0x00a8256c
+00a82514	adrp x2,0x2bd000
+00a82518	add x2,x2,#0xc0d
+00a8251c	mov w3,#0xb6
+00a82520	mov x0,x21
+00a82524	mov x1,x20
+00a82528	bl 0x00c36180
+00a8252c	str x0,[sp]
+00a82530	cbz x0,0x00a82574
+00a82534	str wzr,[sp, #0x8]
+00a82538	ldr x0,[x19, #0x10]
+00a8253c	mov x1,sp
+00a82540	bl 0x00c34de0
+00a82544	ldr x8,[sp]
+00a82548	adrp x1,0x2bd000
+00a8254c	mov x20,x0
+00a82550	add x1,x1,#0xc0d
+00a82554	mov w2,#0xbb
+00a82558	mov x0,x8
+00a8255c	bl 0x00c32310
+00a82560	cbz x20,0x00a82578
+00a82564	ldr w20,[x20, #0x8]
+00a82568	b 0x00a82578
+00a8256c	mov w20,wzr
+00a82570	b 0x00a82580
+00a82574	mov w20,wzr
+00a82578	ldr x0,[x19, #0x8]
+00a8257c	bl 0x00c35690
+00a82580	mov w0,w20
+00a82584	ldp x29,x30,[sp, #0x30]
+00a82588	ldp x20,x19,[sp, #0x20]
+00a8258c	ldr x21,[sp, #0x10]
+00a82590	add sp,sp,#0x40
+00a82594	ret

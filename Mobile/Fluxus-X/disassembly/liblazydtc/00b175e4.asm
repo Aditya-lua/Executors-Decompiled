@@ -1,0 +1,75 @@
+; OSSL_HTTP_REQ_CTX_set_expected @ 00b175e4
+00b175e4	str x23,[sp, #-0x40]!
+00b175e8	stp x22,x21,[sp, #0x10]
+00b175ec	stp x20,x19,[sp, #0x20]
+00b175f0	stp x29,x30,[sp, #0x30]
+00b175f4	add x29,sp,#0x30
+00b175f8	cbz x0,0x00b17678
+00b175fc	mov w19,w4
+00b17600	mov w21,w3
+00b17604	mov w22,w2
+00b17608	mov x23,x1
+00b1760c	mov x20,x0
+00b17610	cbz w4,0x00b17624
+00b17614	ldr w8,[x20]
+00b17618	and w8,w8,#0xfffffffe
+00b1761c	cmp w8,#0x1, LSL #12
+00b17620	b.ne 0x00b176a8
+00b17624	ldr x0,[x20, #0x70]
+00b17628	adrp x1,0x2d6000
+00b1762c	add x1,x1,#0x829
+00b17630	mov w2,#0x102
+00b17634	bl 0x00c32310
+00b17638	str xzr,[x20, #0x70]
+00b1763c	cbz x23,0x00b1765c
+00b17640	adrp x1,0x2d6000
+00b17644	add x1,x1,#0x829
+00b17648	mov w2,#0x105
+00b1764c	mov x0,x23
+00b17650	bl 0x00c34600
+00b17654	str x0,[x20, #0x70]
+00b17658	cbz x0,0x00b176f8
+00b1765c	str w22,[x20, #0x78]
+00b17660	tbnz w21,#0x1f,0x00b176e0
+00b17664	cbz w21,0x00b176e8
+00b17668	mov x0,xzr
+00b1766c	bl 0x00c30970
+00b17670	add x8,x0,w21, SXTW 
+00b17674	b 0x00b176ec
+00b17678	bl 0x00c342a0
+00b1767c	adrp x0,0x2d6000
+00b17680	adrp x2,0x2ae000
+00b17684	add x0,x0,#0x829
+00b17688	add x2,x2,#0x845
+00b1768c	orr w1,wzr,#0xf8
+00b17690	bl 0x00c342b0
+00b17694	mov w8,#0x101
+00b17698	movk w8,#0xc, LSL #16
+00b1769c	add w1,w8,#0x1
+00b176a0	mov w0,#0x3d
+00b176a4	b 0x00b176d0
+00b176a8	bl 0x00c342a0
+00b176ac	adrp x0,0x2d6000
+00b176b0	adrp x2,0x2ae000
+00b176b4	add x0,x0,#0x829
+00b176b8	add x2,x2,#0x845
+00b176bc	orr w1,wzr,#0xfe
+00b176c0	bl 0x00c342b0
+00b176c4	mov w1,#0x101
+00b176c8	mov w0,#0x3d
+00b176cc	movk w1,#0xc, LSL #16
+00b176d0	mov x2,xzr
+00b176d4	bl 0x00c342c0
+00b176d8	mov w0,wzr
+00b176dc	b 0x00b176f8
+00b176e0	ldr x8,[x20, #0xb0]
+00b176e4	b 0x00b176ec
+00b176e8	mov x8,xzr
+00b176ec	mov w0,#0x1
+00b176f0	str x8,[x20, #0xa8]
+00b176f4	str w19,[x20, #0xa0]
+00b176f8	ldp x29,x30,[sp, #0x30]
+00b176fc	ldp x20,x19,[sp, #0x20]
+00b17700	ldp x22,x21,[sp, #0x10]
+00b17704	ldr x23,[sp], #0x40
+00b17708	ret

@@ -1,0 +1,70 @@
+; curl_mime_encoder @ 00926eb8
+00926eb8	str x21,[sp, #-0x30]!
+00926ebc	stp x20,x19,[sp, #0x10]
+00926ec0	stp x29,x30,[sp, #0x20]
+00926ec4	add x29,sp,#0x20
+00926ec8	mov x21,x1
+00926ecc	mov x19,x0
+00926ed0	cbz x0,0x00926f04
+00926ed4	str xzr,[x19, #0x90]
+00926ed8	cbz x21,0x00926f0c
+00926edc	adrp x1,0x2bc000
+00926ee0	add x1,x1,#0xf66
+00926ee4	mov x0,x21
+00926ee8	bl 0x00c31b40
+00926eec	cbz w0,0x00926f14
+00926ef0	adrp x8,0xc4f000
+00926ef4	mov w20,wzr
+00926ef8	add x8,x8,#0x6d8
+00926efc	str x8,[x19, #0x90]
+00926f00	b 0x00926f18
+00926f04	mov w20,#0x2b
+00926f08	b 0x00926fb8
+00926f0c	mov w20,wzr
+00926f10	b 0x00926fb8
+00926f14	mov w20,#0x2b
+00926f18	adrp x1,0x2c5000
+00926f1c	add x1,x1,#0xf
+00926f20	mov x0,x21
+00926f24	bl 0x00c31b40
+00926f28	cbz w0,0x00926f40
+00926f2c	adrp x8,0xc4f000
+00926f30	add x8,x8,#0x6d8
+00926f34	mov w20,wzr
+00926f38	add x8,x8,#0x18
+00926f3c	str x8,[x19, #0x90]
+00926f40	adrp x1,0x2d9000
+00926f44	add x1,x1,#0xce
+00926f48	mov x0,x21
+00926f4c	bl 0x00c31b40
+00926f50	cbz w0,0x00926f68
+00926f54	adrp x8,0xc4f000
+00926f58	add x8,x8,#0x6d8
+00926f5c	mov w20,wzr
+00926f60	add x8,x8,#0x30
+00926f64	str x8,[x19, #0x90]
+00926f68	adrp x1,0x2d5000
+00926f6c	add x1,x1,#0x16c
+00926f70	mov x0,x21
+00926f74	bl 0x00c31b40
+00926f78	cbz w0,0x00926f90
+00926f7c	adrp x8,0xc4f000
+00926f80	add x8,x8,#0x6d8
+00926f84	mov w20,wzr
+00926f88	add x8,x8,#0x48
+00926f8c	str x8,[x19, #0x90]
+00926f90	adrp x1,0x2a9000
+00926f94	add x1,x1,#0x5e6
+00926f98	mov x0,x21
+00926f9c	bl 0x00c31b40
+00926fa0	cbz w0,0x00926fb8
+00926fa4	adrp x8,0xc4f000
+00926fa8	add x8,x8,#0x6d8
+00926fac	mov w20,wzr
+00926fb0	add x8,x8,#0x60
+00926fb4	str x8,[x19, #0x90]
+00926fb8	mov w0,w20
+00926fbc	ldp x29,x30,[sp, #0x20]
+00926fc0	ldp x20,x19,[sp, #0x10]
+00926fc4	ldr x21,[sp], #0x30
+00926fc8	ret

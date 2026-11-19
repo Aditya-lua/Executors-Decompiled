@@ -1,0 +1,20 @@
+; _INIT_20 @ 00804df4
+00804df4	stp x29,x30,[sp, #-0x10]!
+00804df8	mov x29,sp
+00804dfc	movi v0.2D,#0x0
+00804e00	adrp x1,0xccb000
+00804e04	add x1,x1,#0x108
+00804e08	mov w8,#0x3f800000
+00804e0c	nop
+00804e10	adr x0,0x7fbc70
+00804e14	adrp x2,0xc48000
+00804e18	add x2,x2,#0x880
+00804e1c	str w8,[x1, #0x20]
+00804e20	stp q0,q0,[x1]
+00804e24	bl 0x00c2fe70
+00804e28	adrp x8,0xcca000
+00804e2c	adrp x9,0xccb000
+00804e30	ldr x8,[x8, #0x878]
+00804e34	str x8,[x9, #0x138]
+00804e38	ldp x29,x30,[sp], #0x10
+00804e3c	ret

@@ -1,0 +1,12 @@
+; FUN_00853390 @ 00853390
+00853390	mov x8,x0
+00853394	mov w0,#0xffffffff
+00853398	ldr x9,[x8, #0x18]
+0085339c	ldr w8,[x8, #0x14]
+008533a0	add x8,x9,x8
+008533a4	add w9,w0,#0x2
+008533a8	add w0,w0,#0x1
+008533ac	ldrb w9,[x8, w9, UXTW ]
+008533b0	cmp w9,#0x5d
+008533b4	b.ne 0x008533a4
+008533b8	ret

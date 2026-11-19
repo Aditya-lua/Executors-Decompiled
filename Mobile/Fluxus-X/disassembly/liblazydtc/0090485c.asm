@@ -1,0 +1,29 @@
+; FUN_0090485c @ 0090485c
+0090485c	sub sp,sp,#0x50
+00904860	str x19,[sp, #0x30]
+00904864	stp x29,x30,[sp, #0x40]
+00904868	add x29,sp,#0x40
+0090486c	mrs x19,tpidr_el0
+00904870	ldr x8,[x19, #0x28]
+00904874	stur x8,[x29, #-0x18]
+00904878	ldr q0,[x2, #0x10]
+0090487c	str q0,[sp, #0x10]
+00904880	ldr q0,[x2]
+00904884	mov x2,sp
+00904888	str q0,[sp]
+0090488c	bl 0x0092a3d4
+00904890	ldr x10,[x19, #0x28]
+00904894	ldur x11,[x29, #-0x18]
+00904898	cmp w0,#0x2
+0090489c	mov w8,#0x1b
+009048a0	mov w9,#0x64
+009048a4	csel w8,w9,w8,eq
+009048a8	cmp w0,#0x0
+009048ac	csel w0,wzr,w8,eq
+009048b0	cmp x10,x11
+009048b4	b.ne 0x009048c8
+009048b8	ldp x29,x30,[sp, #0x40]
+009048bc	ldr x19,[sp, #0x30]
+009048c0	add sp,sp,#0x50
+009048c4	ret
+009048c8	bl 0x00c2fec0

@@ -1,0 +1,4 @@
+; i2d_EC_PRIVATEKEY @ 00a244c8
+00a244c8	adrp x2,0xc5b000
+00a244cc	add x2,x2,#0x2e0
+00a244d0	b 0x00c36170

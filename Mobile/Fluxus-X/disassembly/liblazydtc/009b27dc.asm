@@ -1,0 +1,68 @@
+; SSL_CTX_dane_enable @ 009b27dc
+009b27dc	str x21,[sp, #-0x30]!
+009b27e0	stp x20,x19,[sp, #0x10]
+009b27e4	stp x29,x30,[sp, #0x20]
+009b27e8	ldr x8,[x0, #0x398]
+009b27ec	add x29,sp,#0x20
+009b27f0	cbnz x8,0x009b2878
+009b27f4	adrp x21,0x2c5000
+009b27f8	add x21,x21,#0x652
+009b27fc	mov x19,x0
+009b2800	orr w0,wzr,#0x18
+009b2804	mov w2,#0x7b
+009b2808	mov x1,x21
+009b280c	bl 0x00c34250
+009b2810	mov x20,x0
+009b2814	orr w0,wzr,#0x3
+009b2818	orr w2,wzr,#0x7c
+009b281c	mov x1,x21
+009b2820	bl 0x00c34250
+009b2824	mov x21,x0
+009b2828	cbz x20,0x009b288c
+009b282c	cbz x21,0x009b288c
+009b2830	mov w0,#0x2a0
+009b2834	bl 0x00c324f0
+009b2838	bl 0x00c35310
+009b283c	cbz x0,0x009b284c
+009b2840	mov w8,#0x1
+009b2844	str x0,[x20, #0x8]
+009b2848	strb w8,[x21, #0x1]
+009b284c	mov w0,#0x2a2
+009b2850	bl 0x00c324f0
+009b2854	bl 0x00c35310
+009b2858	cbz x0,0x009b2868
+009b285c	mov w8,#0x2
+009b2860	str x0,[x20, #0x10]
+009b2864	strb w8,[x21, #0x2]
+009b2868	mov w8,#0x2
+009b286c	str x20,[x19, #0x398]
+009b2870	str x21,[x19, #0x3a0]
+009b2874	strb w8,[x19, #0x3a8]
+009b2878	mov w0,#0x1
+009b287c	ldp x29,x30,[sp, #0x20]
+009b2880	ldp x20,x19,[sp, #0x10]
+009b2884	ldr x21,[sp], #0x30
+009b2888	ret
+009b288c	adrp x19,0x2c5000
+009b2890	add x19,x19,#0x652
+009b2894	orr w2,wzr,#0x7f
+009b2898	mov x0,x21
+009b289c	mov x1,x19
+009b28a0	bl 0x00c32310
+009b28a4	mov w2,#0x80
+009b28a8	mov x0,x20
+009b28ac	mov x1,x19
+009b28b0	bl 0x00c32310
+009b28b4	bl 0x00c342a0
+009b28b8	adrp x2,0x2af000
+009b28bc	add x2,x2,#0xabd
+009b28c0	mov w1,#0x81
+009b28c4	mov x0,x19
+009b28c8	bl 0x00c342b0
+009b28cc	mov w1,#0x100
+009b28d0	mov w0,#0x14
+009b28d4	movk w1,#0xc, LSL #16
+009b28d8	mov x2,xzr
+009b28dc	bl 0x00c342c0
+009b28e0	mov w0,wzr
+009b28e4	b 0x009b287c

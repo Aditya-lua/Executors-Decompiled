@@ -1,0 +1,44 @@
+; curl_version_info @ 00963988
+00963988	str x23,[sp, #-0x40]!
+0096398c	stp x22,x21,[sp, #0x10]
+00963990	stp x20,x19,[sp, #0x20]
+00963994	stp x29,x30,[sp, #0x30]
+00963998	add x29,sp,#0x30
+0096399c	adrp x20,0xd20000
+009639a0	add x20,x20,#0xc4
+009639a4	mov w1,#0x50
+009639a8	mov x0,x20
+009639ac	bl 0x00968e8c
+009639b0	adrp x19,0xcc4000
+009639b4	add x19,x19,#0xc30
+009639b8	str x20,[x19, #0x28]
+009639bc	bl 0x00c31e30
+009639c0	adrp x8,0xc51000
+009639c4	add x8,x8,#0x360
+009639c8	adrp x23,0xd20000
+009639cc	mov w20,wzr
+009639d0	mov x21,xzr
+009639d4	add x22,x8,#0x10
+009639d8	add x23,x23,#0x118
+009639dc	str x0,[x19, #0x38]
+009639e0	ldur x8,[x22, #-0x8]
+009639e4	cbz x8,0x009639f4
+009639e8	mov x0,x19
+009639ec	blr x8
+009639f0	cbz w0,0x00963a08
+009639f4	ldur x8,[x22, #-0x10]
+009639f8	ldr w9,[x22]
+009639fc	str x8,[x23, x21, LSL #0x3]
+00963a00	add x21,x21,#0x1
+00963a04	orr w20,w9,w20
+00963a08	ldr x8,[x22, #0x8]
+00963a0c	add x22,x22,#0x18
+00963a10	cbnz x8,0x009639e0
+00963a14	str xzr,[x23, x21, LSL #0x3]
+00963a18	str w20,[x19, #0x20]
+00963a1c	mov x0,x19
+00963a20	ldp x29,x30,[sp, #0x30]
+00963a24	ldp x20,x19,[sp, #0x20]
+00963a28	ldp x22,x21,[sp, #0x10]
+00963a2c	ldr x23,[sp], #0x40
+00963a30	ret

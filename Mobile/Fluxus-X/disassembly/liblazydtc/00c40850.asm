@@ -1,0 +1,5 @@
+; i2v_GENERAL_NAME @ 00c40850
+00c40850	adrp x16,0xcbe000
+00c40854	ldr x17,[x16, #0x410]
+00c40858	add x16,x16,#0x410
+00c4085c	br x17

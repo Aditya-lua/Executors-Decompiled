@@ -1,0 +1,45 @@
+; ossl_sm2_ciphertext_size @ 00b22020
+00b22020	str x23,[sp, #-0x40]!
+00b22024	stp x22,x21,[sp, #0x10]
+00b22028	stp x20,x19,[sp, #0x20]
+00b2202c	stp x29,x30,[sp, #0x30]
+00b22030	add x29,sp,#0x30
+00b22034	mov x19,x3
+00b22038	mov x20,x2
+00b2203c	mov x21,x1
+00b22040	bl 0x00c36880
+00b22044	bl 0x00b220d0
+00b22048	mov x23,x0
+00b2204c	mov x0,x21
+00b22050	bl 0x00c34c20
+00b22054	mov w22,wzr
+00b22058	cbz x23,0x00b220b8
+00b2205c	mov w21,w0
+00b22060	tbnz w0,#0x1f,0x00b220b8
+00b22064	add w1,w23,#0x1
+00b22068	mov w2,#0x2
+00b2206c	mov w0,wzr
+00b22070	bl 0x00c376b0
+00b22074	mov w22,w0
+00b22078	mov w2,#0x4
+00b2207c	mov w0,wzr
+00b22080	mov w1,w21
+00b22084	bl 0x00c376b0
+00b22088	add w21,w0,w22, LSL #0x1
+00b2208c	mov w2,#0x4
+00b22090	mov w0,wzr
+00b22094	mov w1,w20
+00b22098	bl 0x00c376b0
+00b2209c	add w1,w21,w0
+00b220a0	mov w0,#0x1
+00b220a4	mov w2,#0x10
+00b220a8	mov w22,#0x1
+00b220ac	bl 0x00c376b0
+00b220b0	sxtw x8,w0
+00b220b4	str x8,[x19]
+00b220b8	mov w0,w22
+00b220bc	ldp x29,x30,[sp, #0x30]
+00b220c0	ldp x20,x19,[sp, #0x20]
+00b220c4	ldp x22,x21,[sp, #0x10]
+00b220c8	ldr x23,[sp], #0x40
+00b220cc	ret

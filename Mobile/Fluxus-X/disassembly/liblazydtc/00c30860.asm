@@ -1,0 +1,5 @@
+; <EXTERNAL>::exp @ 00c30860
+00c30860	adrp x16,0xcb6000
+00c30864	ldr x17,[x16, #0x418]
+00c30868	add x16,x16,#0x418
+00c3086c	br x17

@@ -1,0 +1,25 @@
+; FUN_00b50184 @ 00b50184
+00b50184	stp x20,x19,[sp, #-0x20]!
+00b50188	stp x29,x30,[sp, #0x10]
+00b5018c	add x29,sp,#0x10
+00b50190	mov w20,w1
+00b50194	mov x19,x0
+00b50198	bl 0x00c41000
+00b5019c	mov w8,w0
+00b501a0	mov w0,wzr
+00b501a4	cbz x19,0x00b501d8
+00b501a8	cbz w8,0x00b501d8
+00b501ac	tbnz w20,#0x1,0x00b501cc
+00b501b0	mov w0,#0x1
+00b501b4	tbz w20,#0x0,0x00b501d8
+00b501b8	cbz w0,0x00b501d8
+00b501bc	ldr x8,[x19, #0x50]
+00b501c0	cmp x8,#0x0
+00b501c4	cset w0,ne
+00b501c8	b 0x00b501d8
+00b501cc	ldrb w8,[x19, #0x10]
+00b501d0	and w0,w8,#0x1
+00b501d4	tbnz w20,#0x0,0x00b501b8
+00b501d8	ldp x29,x30,[sp, #0x10]
+00b501dc	ldp x20,x19,[sp], #0x20
+00b501e0	ret

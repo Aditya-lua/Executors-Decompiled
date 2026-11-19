@@ -1,0 +1,7 @@
+; BN_get_rfc2409_prime_768 @ 00a01390
+00a01390	adrp x8,0x74e000
+00a01394	add x8,x8,#0x918
+00a01398	orr w1,wzr,#0x60
+00a0139c	mov x2,x0
+00a013a0	mov x0,x8
+00a013a4	b 0x00c36970

@@ -1,0 +1,34 @@
+; evp_pkey_ctx_get_params_strict @ 00a761f0
+00a761f0	stp x22,x21,[sp, #-0x30]!
+00a761f4	stp x20,x19,[sp, #0x10]
+00a761f8	mov x20,x0
+00a761fc	mov w0,wzr
+00a76200	stp x29,x30,[sp, #0x20]
+00a76204	add x29,sp,#0x20
+00a76208	cbz x20,0x00a76264
+00a7620c	mov x19,x1
+00a76210	cbz x1,0x00a76264
+00a76214	ldr x8,[x20, #0x20]
+00a76218	cbz x8,0x00a76248
+00a7621c	mov x0,x20
+00a76220	bl 0x00a75eac
+00a76224	ldr x1,[x19]
+00a76228	cbz x1,0x00a76248
+00a7622c	mov x21,x0
+00a76230	add x22,x19,#0x28
+00a76234	mov x0,x21
+00a76238	bl 0x00c36530
+00a7623c	cbz x0,0x00a76260
+00a76240	ldr x1,[x22], #0x28
+00a76244	cbnz x1,0x00a76234
+00a76248	mov x0,x20
+00a7624c	mov x1,x19
+00a76250	ldp x29,x30,[sp, #0x20]
+00a76254	ldp x20,x19,[sp, #0x10]
+00a76258	ldp x22,x21,[sp], #0x30
+00a7625c	b 0x00a75d88
+00a76260	orr w0,wzr,#0xfffffffe
+00a76264	ldp x29,x30,[sp, #0x20]
+00a76268	ldp x20,x19,[sp, #0x10]
+00a7626c	ldp x22,x21,[sp], #0x30
+00a76270	ret

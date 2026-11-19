@@ -1,0 +1,92 @@
+; mbedtls_psa_rsa_import_key @ 00b99530
+00b99530	sub sp,sp,#0x70
+00b99534	stp x26,x25,[sp, #0x20]
+00b99538	stp x24,x23,[sp, #0x30]
+00b9953c	stp x22,x21,[sp, #0x40]
+00b99540	stp x20,x19,[sp, #0x50]
+00b99544	stp x29,x30,[sp, #0x60]
+00b99548	add x29,sp,#0x60
+00b9954c	mrs x26,tpidr_el0
+00b99550	ldr x8,[x26, #0x28]
+00b99554	mov x25,x0
+00b99558	mov x22,x3
+00b9955c	add x3,sp,#0x8
+00b99560	str x8,[sp, #0x18]
+00b99564	str xzr,[sp, #0x8]
+00b99568	ldrh w0,[x0]
+00b9956c	mov x23,x6
+00b99570	mov x20,x5
+00b99574	mov x21,x4
+00b99578	bl 0x00c43150
+00b9957c	ldr x19,[sp, #0x8]
+00b99580	mov w24,w0
+00b99584	cbnz w0,0x00b99658
+00b99588	mov x0,x19
+00b9958c	bl 0x00c432f0
+00b99590	ubfiz x8,x0,#0x3,#0xd
+00b99594	str x8,[x23]
+00b99598	ldrh w8,[x25]
+00b9959c	add x24,x22,x21
+00b995a0	add x2,sp,#0x10
+00b995a4	mov x0,x19
+00b995a8	mvn w8,w8
+00b995ac	tst w8,#0x7000
+00b995b0	mov x1,x22
+00b995b4	str x24,[sp, #0x10]
+00b995b8	b.ne 0x00b99600
+00b995bc	bl 0x00c433c0
+00b995c0	mov w23,w0
+00b995c4	tbnz w0,#0x1f,0x00b9960c
+00b995c8	sbfiz x8,x23,#0x1,#0x20
+00b995cc	cmp x8,x21
+00b995d0	sxtw x23,w23
+00b995d4	b.ls 0x00b9962c
+00b995d8	cmp x23,x21
+00b995dc	b.cs 0x00b99650
+00b995e0	sub x1,x24,x23
+00b995e4	mov x0,x22
+00b995e8	mov x2,x23
+00b995ec	bl 0x00c2ff60
+00b995f0	add x0,x22,x23
+00b995f4	sub x2,x21,x23
+00b995f8	mov w1,wzr
+00b995fc	b 0x00b9964c
+00b99600	bl 0x00c433d0
+00b99604	mov w23,w0
+00b99608	tbz w0,#0x1f,0x00b995c8
+00b9960c	mov x0,x22
+00b99610	mov w1,wzr
+00b99614	mov x2,x21
+00b99618	bl 0x00c301c0
+00b9961c	mov w0,w23
+00b99620	bl 0x00c42bf0
+00b99624	mov w24,w0
+00b99628	b 0x00b99658
+00b9962c	sub x21,x24,x23
+00b99630	mov x0,x22
+00b99634	mov x1,x21
+00b99638	mov x2,x23
+00b9963c	bl 0x00c2ffd0
+00b99640	mov x0,x21
+00b99644	mov w1,wzr
+00b99648	mov x2,x23
+00b9964c	bl 0x00c301c0
+00b99650	mov w24,wzr
+00b99654	str x23,[x20]
+00b99658	mov x0,x19
+00b9965c	bl 0x00c432d0
+00b99660	mov x0,x19
+00b99664	bl 0x00c30960
+00b99668	ldr x8,[x26, #0x28]
+00b9966c	ldr x9,[sp, #0x18]
+00b99670	cmp x8,x9
+00b99674	b.ne 0x00b99698
+00b99678	mov w0,w24
+00b9967c	ldp x29,x30,[sp, #0x60]
+00b99680	ldp x20,x19,[sp, #0x50]
+00b99684	ldp x22,x21,[sp, #0x40]
+00b99688	ldp x24,x23,[sp, #0x30]
+00b9968c	ldp x26,x25,[sp, #0x20]
+00b99690	add sp,sp,#0x70
+00b99694	ret
+00b99698	bl 0x00c2fec0

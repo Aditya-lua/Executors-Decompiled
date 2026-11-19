@@ -1,0 +1,49 @@
+; FUN_00932640 @ 00932640
+00932640	sub sp,sp,#0x60
+00932644	str x25,[sp, #0x10]
+00932648	stp x24,x23,[sp, #0x20]
+0093264c	stp x22,x21,[sp, #0x30]
+00932650	stp x20,x19,[sp, #0x40]
+00932654	stp x29,x30,[sp, #0x50]
+00932658	add x29,sp,#0x50
+0093265c	mrs x21,tpidr_el0
+00932660	ldr x8,[x21, #0x28]
+00932664	mov x19,x1
+00932668	mov x20,x0
+0093266c	subs x22,x2,#0x1
+00932670	str x8,[sp, #0x8]
+00932674	b.eq 0x009326c8
+00932678	mov w23,#0x843
+0093267c	adrp x25,0x2b1000
+00932680	movk w23,#0x8421, LSL #16
+00932684	orr w24,wzr,#0x3e
+00932688	add x25,x25,#0x5c1
+0093268c	add x1,sp,#0x4
+00932690	mov x0,x20
+00932694	bl 0x00932448
+00932698	cbnz w0,0x009326d0
+0093269c	ldr w8,[sp, #0x4]
+009326a0	cmn w8,#0x5
+009326a4	b.hi 0x0093268c
+009326a8	lsr w9,w8,#0x1
+009326ac	umull x9,w9,w23
+009326b0	lsr x9,x9,#0x24
+009326b4	msub w8,w9,w24,w8
+009326b8	ldrb w8,[x25, w8, UXTW ]
+009326bc	subs x22,x22,#0x1
+009326c0	strb w8,[x19], #0x1
+009326c4	b.ne 0x0093268c
+009326c8	mov w0,wzr
+009326cc	strb wzr,[x19]
+009326d0	ldr x8,[x21, #0x28]
+009326d4	ldr x9,[sp, #0x8]
+009326d8	cmp x8,x9
+009326dc	b.ne 0x009326fc
+009326e0	ldp x29,x30,[sp, #0x50]
+009326e4	ldp x20,x19,[sp, #0x40]
+009326e8	ldp x22,x21,[sp, #0x30]
+009326ec	ldp x24,x23,[sp, #0x20]
+009326f0	ldr x25,[sp, #0x10]
+009326f4	add sp,sp,#0x60
+009326f8	ret
+009326fc	bl 0x00c2fec0

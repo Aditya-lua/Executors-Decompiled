@@ -1,0 +1,3 @@
+; i2t_ASN1_OBJECT @ 009ec720
+009ec720	mov w3,wzr
+009ec724	b 0x00c32500

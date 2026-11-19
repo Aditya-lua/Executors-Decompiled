@@ -1,0 +1,37 @@
+; ossl_statem_client_post_process_message @ 009e0128
+009e0128	str x19,[sp, #-0x20]!
+009e012c	stp x29,x30,[sp, #0x10]
+009e0130	ldr w8,[x0, #0x5c]
+009e0134	mov x19,x0
+009e0138	add x29,sp,#0x10
+009e013c	cmp w8,#0x27
+009e0140	b.eq 0x009e0164
+009e0144	cmp w8,#0x7
+009e0148	b.eq 0x009e0164
+009e014c	cmp w8,#0x4
+009e0150	b.ne 0x009e0174
+009e0154	ldp x29,x30,[sp, #0x10]
+009e0158	mov x0,x19
+009e015c	ldr x19,[sp], #0x20
+009e0160	b 0x009e01b8
+009e0164	ldp x29,x30,[sp, #0x10]
+009e0168	mov x0,x19
+009e016c	ldr x19,[sp], #0x20
+009e0170	b 0x009e03b4
+009e0174	bl 0x00c342a0
+009e0178	adrp x0,0x2d7000
+009e017c	adrp x2,0x2d7000
+009e0180	add x0,x0,#0xb1a
+009e0184	add x2,x2,#0xb33
+009e0188	mov w1,#0x439
+009e018c	bl 0x00c342b0
+009e0190	mov w2,#0x103
+009e0194	mov w1,#0x50
+009e0198	movk w2,#0xc, LSL #16
+009e019c	mov x0,x19
+009e01a0	mov x3,xzr
+009e01a4	bl 0x00c34410
+009e01a8	ldp x29,x30,[sp, #0x10]
+009e01ac	mov w0,wzr
+009e01b0	ldr x19,[sp], #0x20
+009e01b4	ret

@@ -1,0 +1,21 @@
+; FUN_0081f63c @ 0081f63c
+0081f63c	stp x29,x30,[sp, #-0x20]!
+0081f640	stp x20,x19,[sp, #0x10]
+0081f644	mov x29,sp
+0081f648	adrp x20,0xcb4000
+0081f64c	mov x19,x0
+0081f650	ldr x20,[x20, #0xa10]
+0081f654	ldr x8,[x20]
+0081f658	ldr x9,[x20, #0x18]
+0081f65c	str x8,[x0]
+0081f660	ldur x8,[x8, #-0x18]
+0081f664	str x9,[x0, x8#0x0]
+0081f668	add x0,x0,#0x8
+0081f66c	bl 0x00c300d0
+0081f670	add x1,x20,#0x8
+0081f674	mov x0,x19
+0081f678	bl 0x00c303d0
+0081f67c	add x0,x19,#0xb0
+0081f680	ldp x20,x19,[sp, #0x10]
+0081f684	ldp x29,x30,[sp], #0x20
+0081f688	b 0x00c300f0

@@ -1,0 +1,4 @@
+; d2i_ASN1_ENUMERATED @ 009f79b0
+009f79b0	adrp x3,0xc58000
+009f79b4	add x3,x3,#0xbb8
+009f79b8	b 0x00c36150

@@ -1,0 +1,30 @@
+; ossl_sm2_do_verify @ 00b6213c
+00b6213c	str x21,[sp, #-0x30]!
+00b62140	mov x21,x0
+00b62144	stp x20,x19,[sp, #0x10]
+00b62148	mov x20,x2
+00b6214c	mov x0,x1
+00b62150	mov x1,x21
+00b62154	mov x2,x3
+00b62158	mov x3,x4
+00b6215c	mov x4,x5
+00b62160	mov x5,x6
+00b62164	stp x29,x30,[sp, #0x20]
+00b62168	add x29,sp,#0x20
+00b6216c	bl 0x00b61ac8
+00b62170	mov x19,x0
+00b62174	cbz x0,0x00b62190
+00b62178	mov x0,x21
+00b6217c	mov x1,x20
+00b62180	mov x2,x19
+00b62184	bl 0x00b621b0
+00b62188	mov w20,w0
+00b6218c	b 0x00b62194
+00b62190	mov w20,wzr
+00b62194	mov x0,x19
+00b62198	bl 0x00c36290
+00b6219c	mov w0,w20
+00b621a0	ldp x29,x30,[sp, #0x20]
+00b621a4	ldp x20,x19,[sp, #0x10]
+00b621a8	ldr x21,[sp], #0x30
+00b621ac	ret

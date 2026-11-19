@@ -1,0 +1,73 @@
+; mbedtls_psa_rsa_load_representation @ 00b99410
+00b99410	sub sp,sp,#0x60
+00b99414	str x23,[sp, #0x20]
+00b99418	stp x22,x21,[sp, #0x30]
+00b9941c	stp x20,x19,[sp, #0x40]
+00b99420	stp x29,x30,[sp, #0x50]
+00b99424	add x29,sp,#0x50
+00b99428	mrs x23,tpidr_el0
+00b9942c	ldr x8,[x23, #0x28]
+00b99430	mov x21,x1
+00b99434	mov w22,w0
+00b99438	mov w0,#0x1
+00b9943c	mov w1,#0xe8
+00b99440	mov x19,x3
+00b99444	mov x20,x2
+00b99448	str x8,[sp, #0x18]
+00b9944c	bl 0x00c30a30
+00b99450	str x0,[x19]
+00b99454	cbz x0,0x00b9947c
+00b99458	bl 0x00c43300
+00b9945c	ldr x0,[x19]
+00b99460	mvn w8,w22
+00b99464	mov x1,x21
+00b99468	mov x2,x20
+00b9946c	tst w8,#0x7000
+00b99470	b.ne 0x00b99484
+00b99474	bl 0x00c43310
+00b99478	b 0x00b99488
+00b9947c	mov w20,#0xffffff73
+00b99480	b 0x00b99500
+00b99484	bl 0x00c43320
+00b99488	bl 0x00c42bf0
+00b9948c	mov w20,w0
+00b99490	cbnz w0,0x00b99500
+00b99494	ldr x0,[x19]
+00b99498	bl 0x00c432f0
+00b9949c	lsl x8,x0,#0x3
+00b994a0	cmp x8,#0x1, LSL #12
+00b994a4	b.ls 0x00b994b0
+00b994a8	mov w20,#0xffffff7a
+00b994ac	b 0x00b99500
+00b994b0	ldr x19,[x19]
+00b994b4	add x0,sp,#0x8
+00b994b8	bl 0x00c41c00
+00b994bc	add x1,sp,#0x8
+00b994c0	mov x0,x19
+00b994c4	mov x2,xzr
+00b994c8	mov x3,xzr
+00b994cc	mov x4,xzr
+00b994d0	mov x5,xzr
+00b994d4	bl 0x00c432c0
+00b994d8	bl 0x00c42bf0
+00b994dc	mov w20,w0
+00b994e0	cbnz w0,0x00b994f8
+00b994e4	add x0,sp,#0x8
+00b994e8	bl 0x00c41b30
+00b994ec	tst x0,#0x7
+00b994f0	mov w8,#0xffffff7a
+00b994f4	csel w20,wzr,w8,eq
+00b994f8	add x0,sp,#0x8
+00b994fc	bl 0x00c41bb0
+00b99500	ldr x8,[x23, #0x28]
+00b99504	ldr x9,[sp, #0x18]
+00b99508	cmp x8,x9
+00b9950c	b.ne 0x00b9952c
+00b99510	mov w0,w20
+00b99514	ldp x29,x30,[sp, #0x50]
+00b99518	ldp x20,x19,[sp, #0x40]
+00b9951c	ldp x22,x21,[sp, #0x30]
+00b99520	ldr x23,[sp, #0x20]
+00b99524	add sp,sp,#0x60
+00b99528	ret
+00b9952c	bl 0x00c2fec0

@@ -1,0 +1,31 @@
+; FUN_00b552a8 @ 00b552a8
+00b552a8	stp x20,x19,[sp, #-0x20]!
+00b552ac	mov x20,x1
+00b552b0	adrp x1,0x2d7000
+00b552b4	mov x19,x0
+00b552b8	add x1,x1,#0xe7d
+00b552bc	mov x0,x20
+00b552c0	stp x29,x30,[sp, #0x10]
+00b552c4	add x29,sp,#0x10
+00b552c8	bl 0x00c3e8c0
+00b552cc	cbz x0,0x00b552dc
+00b552d0	ldr x1,[x19, #0x28]
+00b552d4	bl 0x00c3e950
+00b552d8	cbz w0,0x00b55314
+00b552dc	adrp x1,0x2dc000
+00b552e0	add x1,x1,#0x8b
+00b552e4	mov x0,x20
+00b552e8	bl 0x00c3e8c0
+00b552ec	cbz x0,0x00b55310
+00b552f0	mov x20,x0
+00b552f4	add x0,x19,#0x10
+00b552f8	bl 0x00c41160
+00b552fc	bl 0x00c3cf40
+00b55300	mov w1,w0
+00b55304	mov x0,x20
+00b55308	bl 0x00c3da90
+00b5530c	cbz w0,0x00b55314
+00b55310	mov w0,#0x1
+00b55314	ldp x29,x30,[sp, #0x10]
+00b55318	ldp x20,x19,[sp], #0x20
+00b5531c	ret

@@ -1,0 +1,9 @@
+; FUN_00963a34 @ 00963a34
+00963a34	stp x29,x30,[sp, #-0x10]!
+00963a38	mov x29,sp
+00963a3c	mov w1,#0x10
+00963a40	mov x0,xzr
+00963a44	bl 0x0096a5f4
+00963a48	and w0,w0,#0x1
+00963a4c	ldp x29,x30,[sp], #0x10
+00963a50	ret

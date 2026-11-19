@@ -1,0 +1,43 @@
+; BN_security_bits @ 00a02c20
+00a02c20	mov w8,#0x3bff
+00a02c24	cmp w0,w8
+00a02c28	b.le 0x00a02c5c
+00a02c2c	mov w8,#0x100
+00a02c30	cmn w1,#0x1
+00a02c34	b.eq 0x00a02c74
+00a02c38	cmp w1,#0x0
+00a02c3c	cinc w9,w1,lt
+00a02c40	cmp w1,#0xa0
+00a02c44	mov w0,wzr
+00a02c48	b.lt 0x00a02c58
+00a02c4c	asr w9,w9,#0x1
+00a02c50	cmp w9,w8
+00a02c54	csel w0,w9,w8,lt
+00a02c58	ret
+00a02c5c	mov w8,#0x1dff
+00a02c60	cmp w0,w8
+00a02c64	b.le 0x00a02c7c
+00a02c68	orr w8,wzr,#0xc0
+00a02c6c	cmn w1,#0x1
+00a02c70	b.ne 0x00a02c38
+00a02c74	mov w0,w8
+00a02c78	ret
+00a02c7c	cmp w0,#0xbff
+00a02c80	b.le 0x00a02c94
+00a02c84	mov w8,#0x80
+00a02c88	cmn w1,#0x1
+00a02c8c	b.ne 0x00a02c38
+00a02c90	b 0x00a02c74
+00a02c94	cmp w0,#0x7ff
+00a02c98	b.le 0x00a02cac
+00a02c9c	orr w8,wzr,#0x70
+00a02ca0	cmn w1,#0x1
+00a02ca4	b.ne 0x00a02c38
+00a02ca8	b 0x00a02c74
+00a02cac	cmp w0,#0x400
+00a02cb0	mov w0,wzr
+00a02cb4	b.lt 0x00a02c58
+00a02cb8	mov w8,#0x50
+00a02cbc	cmn w1,#0x1
+00a02cc0	b.ne 0x00a02c38
+00a02cc4	b 0x00a02c74

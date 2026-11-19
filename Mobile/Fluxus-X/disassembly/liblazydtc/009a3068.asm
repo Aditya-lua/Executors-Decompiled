@@ -1,0 +1,153 @@
+; std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::insert<unsigned_char*> @ 009a3068
+009a3068	sub sp,sp,#0x70
+009a306c	stp x28,x27,[sp, #0x10]
+009a3070	stp x26,x25,[sp, #0x20]
+009a3074	stp x24,x23,[sp, #0x30]
+009a3078	stp x22,x21,[sp, #0x40]
+009a307c	stp x20,x19,[sp, #0x50]
+009a3080	stp x29,x30,[sp, #0x60]
+009a3084	add x29,sp,#0x60
+009a3088	ldrb w8,[x0]
+009a308c	mov x20,x3
+009a3090	mov x22,x2
+009a3094	mov x19,x0
+009a3098	mov x26,x1
+009a309c	tbnz w8,#0x0,0x009a30a8
+009a30a0	add x28,x19,#0x1
+009a30a4	b 0x009a30ac
+009a30a8	ldr x28,[x19, #0x10]
+009a30ac	subs x27,x20,x22
+009a30b0	sub x21,x26,x28
+009a30b4	b.eq 0x009a3288
+009a30b8	tbnz w8,#0x0,0x009a30cc
+009a30bc	lsr w25,w8,#0x1
+009a30c0	mov w23,#0x16
+009a30c4	mov w9,w8
+009a30c8	b 0x009a30d8
+009a30cc	ldp x9,x25,[x19]
+009a30d0	and x10,x9,#-0x2
+009a30d4	sub x23,x10,#0x1
+009a30d8	sub x10,x23,x25
+009a30dc	cmp x10,x27
+009a30e0	b.cs 0x009a3108
+009a30e4	add x9,x25,x27
+009a30e8	orr x10,xzr,#-0x11
+009a30ec	sub x11,x9,x23
+009a30f0	sub x10,x10,x23
+009a30f4	cmp x10,x11
+009a30f8	b.cc 0x009a32c0
+009a30fc	tbnz w8,#0x0,0x009a3154
+009a3100	add x8,x19,#0x1
+009a3104	b 0x009a3158
+009a3108	tbnz w8,#0x0,0x009a312c
+009a310c	add x24,x19,#0x1
+009a3110	subs x2,x25,x21
+009a3114	b.ne 0x009a3138
+009a3118	add x8,x25,x27
+009a311c	tbnz w9,#0x0,0x009a31fc
+009a3120	lsl w9,w8,#0x1
+009a3124	strb w9,[x19]
+009a3128	b 0x009a3200
+009a312c	ldr x24,[x19, #0x10]
+009a3130	subs x2,x25,x21
+009a3134	b.eq 0x009a3118
+009a3138	add x1,x24,x21
+009a313c	add x0,x1,x27
+009a3140	bl 0x00c2ff60
+009a3144	ldrb w9,[x19]
+009a3148	add x8,x25,x27
+009a314c	tbz w9,#0x0,0x009a3120
+009a3150	b 0x009a31fc
+009a3154	ldr x8,[x19, #0x10]
+009a3158	stp x26,x8,[sp]
+009a315c	mov x8,#-0x1a
+009a3160	movk x8,#0x7fff, LSL #48
+009a3164	cmp x23,x8
+009a3168	b.hi 0x009a3188
+009a316c	lsl x8,x23,#0x1
+009a3170	cmp x9,x8
+009a3174	csel x8,x8,x9,cc
+009a3178	cmp x8,#0x17
+009a317c	b.cs 0x009a3190
+009a3180	mov w26,#0x17
+009a3184	b 0x009a3198
+009a3188	orr x26,xzr,#-0x11
+009a318c	b 0x009a3198
+009a3190	add x8,x8,#0x10
+009a3194	and x26,x8,#-0x10
+009a3198	mov x0,x26
+009a319c	bl 0x00c2fed0
+009a31a0	mov x24,x0
+009a31a4	cbz x21,0x009a31b8
+009a31a8	ldr x1,[sp, #0x8]
+009a31ac	mov x0,x24
+009a31b0	mov x2,x21
+009a31b4	bl 0x00c2ffd0
+009a31b8	subs x2,x25,x21
+009a31bc	b.eq 0x009a31d4
+009a31c0	add x8,x24,x21
+009a31c4	add x0,x8,x27
+009a31c8	ldr x8,[sp, #0x8]
+009a31cc	add x1,x8,x21
+009a31d0	bl 0x00c2ffd0
+009a31d4	cmp x23,#0x16
+009a31d8	b.eq 0x009a31e4
+009a31dc	ldr x0,[sp, #0x8]
+009a31e0	bl 0x00c301d0
+009a31e4	orr x9,x26,#0x1
+009a31e8	ldr x26,[sp]
+009a31ec	str x24,[x19, #0x10]
+009a31f0	str x9,[x19]
+009a31f4	add x8,x25,x27
+009a31f8	tbz w9,#0x0,0x009a3120
+009a31fc	str x8,[x19, #0x8]
+009a3200	cmp x22,x20
+009a3204	strb wzr,[x24, x8]
+009a3208	b.eq 0x009a3288
+009a320c	cmp x27,#0x20
+009a3210	add x8,x24,x21
+009a3214	b.cc 0x009a3278
+009a3218	cmp x8,x20
+009a321c	b.cs 0x009a3238
+009a3220	sub x9,x26,x22
+009a3224	sub x9,x9,x28
+009a3228	add x9,x20,x9
+009a322c	add x9,x24,x9
+009a3230	cmp x9,x22
+009a3234	b.hi 0x009a3278
+009a3238	add x11,x26,#0x10
+009a323c	and x9,x27,#-0x20
+009a3240	sub x11,x11,x28
+009a3244	add x10,x22,#0x10
+009a3248	add x8,x8,x9
+009a324c	add x22,x22,x9
+009a3250	add x11,x24,x11
+009a3254	mov x12,x9
+009a3258	ldp q0,q1,[x10, #-0x10]
+009a325c	add x10,x10,#0x20
+009a3260	subs x12,x12,#0x20
+009a3264	stp q0,q1,[x11, #-0x10]
+009a3268	add x11,x11,#0x20
+009a326c	b.ne 0x009a3258
+009a3270	cmp x27,x9
+009a3274	b.eq 0x009a3288
+009a3278	ldrb w9,[x22], #0x1
+009a327c	cmp x20,x22
+009a3280	strb w9,[x8], #0x1
+009a3284	b.ne 0x009a3278
+009a3288	ldrb w8,[x19]
+009a328c	tbnz w8,#0x0,0x009a3298
+009a3290	add x8,x19,#0x1
+009a3294	b 0x009a329c
+009a3298	ldr x8,[x19, #0x10]
+009a329c	add x0,x8,x21
+009a32a0	ldp x29,x30,[sp, #0x60]
+009a32a4	ldp x20,x19,[sp, #0x50]
+009a32a8	ldp x22,x21,[sp, #0x40]
+009a32ac	ldp x24,x23,[sp, #0x30]
+009a32b0	ldp x26,x25,[sp, #0x20]
+009a32b4	ldp x28,x27,[sp, #0x10]
+009a32b8	add sp,sp,#0x70
+009a32bc	ret
+009a32c0	mov x0,x19
+009a32c4	bl 0x00c30ce0

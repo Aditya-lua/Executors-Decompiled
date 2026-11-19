@@ -1,0 +1,5 @@
+; OSSL_STORE_INFO_new_CRL @ 00c40280
+00c40280	adrp x16,0xcbe000
+00c40284	ldr x17,[x16, #0x128]
+00c40288	add x16,x16,#0x128
+00c4028c	br x17

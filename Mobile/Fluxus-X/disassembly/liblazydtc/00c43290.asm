@@ -1,0 +1,5 @@
+; psa_its_set @ 00c43290
+00c43290	adrp x16,0xcbf000
+00c43294	ldr x17,[x16, #0x930]
+00c43298	add x16,x16,#0x930
+00c4329c	br x17

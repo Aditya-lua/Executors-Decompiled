@@ -1,0 +1,32 @@
+; FUN_00900f00 @ 00900f00
+00900f00	stp x20,x19,[sp, #-0x20]!
+00900f04	stp x29,x30,[sp, #0x10]
+00900f08	add x29,sp,#0x10
+00900f0c	ldr x8,[x0]
+00900f10	adrp x9,0xcb4000
+00900f14	ldur x8,[x8, #-0x18]
+00900f18	ldr x9,[x9, #0xd80]
+00900f1c	add x20,x0,x8
+00900f20	add x10,x9,#0x18
+00900f24	add x8,x9,#0x40
+00900f28	mov x19,x20
+00900f2c	str x10,[x20]
+00900f30	str x8,[x19, #0x78]!
+00900f34	adrp x9,0xcb4000
+00900f38	ldrb w8,[x20, #0x50]
+00900f3c	ldr x9,[x9, #0xa00]
+00900f40	add x9,x9,#0x10
+00900f44	str x9,[x20, #0x10]
+00900f48	tbz w8,#0x0,0x00900f54
+00900f4c	ldr x0,[x20, #0x60]
+00900f50	bl 0x00c301d0
+00900f54	adrp x8,0xcb4000
+00900f58	ldr x8,[x8, #0xa08]
+00900f5c	add x0,x20,#0x18
+00900f60	add x8,x8,#0x10
+00900f64	str x8,[x20, #0x10]
+00900f68	bl 0x00c30090
+00900f6c	ldp x29,x30,[sp, #0x10]
+00900f70	mov x0,x19
+00900f74	ldp x20,x19,[sp], #0x20
+00900f78	b 0x00c30ee0

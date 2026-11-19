@@ -1,0 +1,34 @@
+; bn_from_mont_fixed_top @ 00a03458
+00a03458	str x23,[sp, #-0x40]!
+00a0345c	stp x22,x21,[sp, #0x10]
+00a03460	mov x21,x0
+00a03464	mov x0,x3
+00a03468	stp x20,x19,[sp, #0x20]
+00a0346c	stp x29,x30,[sp, #0x30]
+00a03470	add x29,sp,#0x30
+00a03474	mov x19,x3
+00a03478	mov x20,x2
+00a0347c	mov x22,x1
+00a03480	bl 0x00c38a90
+00a03484	mov x0,x19
+00a03488	bl 0x00c38a40
+00a0348c	cbz x0,0x00a034b8
+00a03490	mov x1,x22
+00a03494	mov x23,x0
+00a03498	bl 0x00c36990
+00a0349c	cbz x0,0x00a034b8
+00a034a0	mov x0,x21
+00a034a4	mov x1,x23
+00a034a8	mov x2,x20
+00a034ac	bl 0x00a03110
+00a034b0	mov w20,w0
+00a034b4	b 0x00a034bc
+00a034b8	mov w20,wzr
+00a034bc	mov x0,x19
+00a034c0	bl 0x00c38a20
+00a034c4	mov w0,w20
+00a034c8	ldp x29,x30,[sp, #0x30]
+00a034cc	ldp x20,x19,[sp, #0x20]
+00a034d0	ldp x22,x21,[sp, #0x10]
+00a034d4	ldr x23,[sp], #0x40
+00a034d8	ret

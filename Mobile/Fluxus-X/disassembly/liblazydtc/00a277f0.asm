@@ -1,0 +1,59 @@
+; ossl_ec_pt_format_param2id @ 00a277f0
+00a277f0	sub sp,sp,#0x30
+00a277f4	stp x20,x19,[sp, #0x10]
+00a277f8	stp x29,x30,[sp, #0x20]
+00a277fc	str xzr,[sp, #0x8]
+00a27800	ldr w8,[x0, #0x8]
+00a27804	mov x19,x1
+00a27808	add x29,sp,#0x20
+00a2780c	cmp w8,#0x6
+00a27810	b.eq 0x00a27884
+00a27814	cmp w8,#0x4
+00a27818	mov w8,wzr
+00a2781c	b.ne 0x00a278c4
+00a27820	ldr x8,[x0, #0x10]
+00a27824	cmp x8,#0x0
+00a27828	str x8,[sp, #0x8]
+00a2782c	cset w0,ne
+00a27830	cbz w0,0x00a27890
+00a27834	ldr x20,[sp, #0x8]
+00a27838	cbz x20,0x00a27898
+00a2783c	adrp x1,0x2cd000
+00a27840	add x1,x1,#0x936
+00a27844	mov x0,x20
+00a27848	bl 0x00c35ee0
+00a2784c	cbz w0,0x00a278a0
+00a27850	adrp x1,0x2a3000
+00a27854	add x1,x1,#0xf0c
+00a27858	mov x0,x20
+00a2785c	bl 0x00c35ee0
+00a27860	cbz w0,0x00a278a8
+00a27864	adrp x1,0x2a0000
+00a27868	add x1,x1,#0x19
+00a2786c	mov x0,x20
+00a27870	bl 0x00c35ee0
+00a27874	mov w8,wzr
+00a27878	cbnz w0,0x00a278c4
+00a2787c	mov w8,#0x2
+00a27880	b 0x00a278ac
+00a27884	add x1,sp,#0x8
+00a27888	bl 0x00c3acf0
+00a2788c	cbnz w0,0x00a27834
+00a27890	mov w8,wzr
+00a27894	b 0x00a278c4
+00a27898	mov w8,#0x4
+00a2789c	b 0x00a278bc
+00a278a0	mov x8,xzr
+00a278a4	b 0x00a278ac
+00a278a8	mov w8,#0x1
+00a278ac	adrp x9,0xc5b000
+00a278b0	lsl x8,x8,#0x4
+00a278b4	add x9,x9,#0x408
+00a278b8	ldr w8,[x9, x8#0x0]
+00a278bc	str w8,[x19]
+00a278c0	mov w8,#0x1
+00a278c4	ldp x29,x30,[sp, #0x20]
+00a278c8	ldp x20,x19,[sp, #0x10]
+00a278cc	mov w0,w8
+00a278d0	add sp,sp,#0x30
+00a278d4	ret

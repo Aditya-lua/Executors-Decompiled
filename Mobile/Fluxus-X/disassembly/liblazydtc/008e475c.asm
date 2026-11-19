@@ -1,0 +1,9 @@
+; FUN_008e475c @ 008e475c
+008e475c	ldr w8,[x0]
+008e4760	tbnz w8,#0x1f,0x008e4774
+008e4764	sub w9,w8,#0x1
+008e4768	cmp w8,#0x0
+008e476c	csel w0,wzr,w9,eq
+008e4770	ret
+008e4774	mvn w0,w8
+008e4778	ret

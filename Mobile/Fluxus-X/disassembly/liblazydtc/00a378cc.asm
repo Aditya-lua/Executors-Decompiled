@@ -1,0 +1,93 @@
+; ossl_ec_GFp_mont_group_set_curve @ 00a378cc
+00a378cc	stp x26,x25,[sp, #-0x50]!
+00a378d0	stp x24,x23,[sp, #0x10]
+00a378d4	stp x22,x21,[sp, #0x20]
+00a378d8	stp x20,x19,[sp, #0x30]
+00a378dc	stp x29,x30,[sp, #0x40]
+00a378e0	mov x21,x0
+00a378e4	ldr x0,[x0, #0x78]
+00a378e8	add x29,sp,#0x40
+00a378ec	mov x24,x4
+00a378f0	mov x22,x3
+00a378f4	mov x23,x2
+00a378f8	mov x25,x1
+00a378fc	bl 0x00c38f70
+00a37900	ldr x0,[x21, #0x80]
+00a37904	str xzr,[x21, #0x78]
+00a37908	bl 0x00c36290
+00a3790c	mov x19,xzr
+00a37910	str xzr,[x21, #0x80]
+00a37914	cbnz x24,0x00a3792c
+00a37918	ldr x0,[x21, #0xa8]
+00a3791c	bl 0x00c38a60
+00a37920	mov x24,x0
+00a37924	mov x19,x0
+00a37928	cbz x0,0x00a37a10
+00a3792c	bl 0x00c38f80
+00a37930	mov x20,x0
+00a37934	cbz x0,0x00a379d4
+00a37938	mov x0,x20
+00a3793c	mov x1,x25
+00a37940	mov x2,x24
+00a37944	bl 0x00c38f90
+00a37948	cbz w0,0x00a379a4
+00a3794c	bl 0x00c37710
+00a37950	mov x26,x0
+00a37954	cbz x0,0x00a379d8
+00a37958	bl 0x00c38de0
+00a3795c	mov x1,x0
+00a37960	mov x0,x26
+00a37964	mov x2,x20
+00a37968	mov x3,x24
+00a3796c	bl 0x00c38dd0
+00a37970	cbz w0,0x00a379d8
+00a37974	mov x0,x21
+00a37978	mov x1,x25
+00a3797c	mov x2,x23
+00a37980	mov x3,x22
+00a37984	mov x4,x24
+00a37988	stp x20,x26,[x21, #0x78]
+00a3798c	bl 0x00c3b210
+00a37990	mov w22,w0
+00a37994	cbz w0,0x00a37a18
+00a37998	mov x20,xzr
+00a3799c	mov x26,xzr
+00a379a0	b 0x00a379dc
+00a379a4	bl 0x00c342a0
+00a379a8	adrp x0,0x2bf000
+00a379ac	adrp x2,0x2cd000
+00a379b0	add x0,x0,#0xbb4
+00a379b4	add x2,x2,#0x987
+00a379b8	mov w1,#0xa6
+00a379bc	bl 0x00c342b0
+00a379c0	mov w1,#0x3
+00a379c4	mov w0,#0x10
+00a379c8	movk w1,#0x8, LSL #16
+00a379cc	mov x2,xzr
+00a379d0	bl 0x00c342c0
+00a379d4	mov x26,xzr
+00a379d8	mov w22,wzr
+00a379dc	mov x0,x26
+00a379e0	bl 0x00c36290
+00a379e4	mov x0,x19
+00a379e8	bl 0x00c38a30
+00a379ec	mov x0,x20
+00a379f0	bl 0x00c38f70
+00a379f4	mov w0,w22
+00a379f8	ldp x29,x30,[sp, #0x40]
+00a379fc	ldp x20,x19,[sp, #0x30]
+00a37a00	ldp x22,x21,[sp, #0x20]
+00a37a04	ldp x24,x23,[sp, #0x10]
+00a37a08	ldp x26,x25,[sp], #0x50
+00a37a0c	ret
+00a37a10	mov w22,wzr
+00a37a14	b 0x00a379f4
+00a37a18	ldr x0,[x21, #0x78]
+00a37a1c	bl 0x00c38f70
+00a37a20	ldr x0,[x21, #0x80]
+00a37a24	str xzr,[x21, #0x78]
+00a37a28	bl 0x00c36290
+00a37a2c	mov x20,xzr
+00a37a30	mov x26,xzr
+00a37a34	str xzr,[x21, #0x80]
+00a37a38	b 0x00a379dc

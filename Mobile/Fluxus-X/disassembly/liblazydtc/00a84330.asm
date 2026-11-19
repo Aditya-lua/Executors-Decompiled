@@ -1,0 +1,46 @@
+; OPENSSL_info @ 00a84330
+00a84330	str x19,[sp, #-0x20]!
+00a84334	mov w19,w0
+00a84338	adrp x0,0xd21000
+00a8433c	adrp x1,0xa84000
+00a84340	add x0,x0,#0xde8
+00a84344	add x1,x1,#0x3e4
+00a84348	stp x29,x30,[sp, #0x10]
+00a8434c	add x29,sp,#0x10
+00a84350	bl 0x00c34d60
+00a84354	sub w8,w19,#0x3e9
+00a84358	cmp w8,#0x7
+00a8435c	b.hi 0x00a843d4
+00a84360	adrp x9,0x767000
+00a84364	add x9,x9,#0x70
+00a84368	ldrsw x8,[x9, x8, LSL #0x2]
+00a8436c	adrp x0,0x2ac000
+00a84370	add x0,x0,#0x193
+00a84374	add x8,x8,x9
+00a84378	br x8
+00a8437c	adrp x0,0x2ac000
+00a84380	add x0,x0,#0x4b
+00a84384	b 0x00a843d8
+00a84388	adrp x0,0x2ad000
+00a8438c	add x0,x0,#0xd2f
+00a84390	b 0x00a843d8
+00a84394	adrp x0,0x2d1000
+00a84398	add x0,x0,#0xb34
+00a8439c	b 0x00a843d8
+00a843a0	adrp x0,0x2a9000
+00a843a4	add x0,x0,#0x1de
+00a843a8	b 0x00a843d8
+00a843ac	adrp x0,0x767000
+00a843b0	add x0,x0,#0x90
+00a843b4	b 0x00a843d8
+00a843b8	adrp x8,0xd21000
+00a843bc	ldr x0,[x8, #0xdf0]
+00a843c0	b 0x00a843d8
+00a843c4	adrp x0,0xcb5000
+00a843c8	ldr x0,[x0, #0x658]
+00a843cc	ldrb w8,[x0], #0x9
+00a843d0	cbnz w8,0x00a843d8
+00a843d4	mov x0,xzr
+00a843d8	ldp x29,x30,[sp, #0x10]
+00a843dc	ldr x19,[sp], #0x20
+00a843e0	ret

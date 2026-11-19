@@ -1,0 +1,4 @@
+; DIRECTORYSTRING_new @ 009f7d10
+009f7d10	adrp x0,0xc58000
+009f7d14	add x0,x0,#0xfa8
+009f7d18	b 0x00c372e0

@@ -1,0 +1,161 @@
+; ix::WebSocketOpenInfo::WebSocketOpenInfo @ 00990980
+00990980	sub sp,sp,#0x90
+00990984	str x27,[sp, #0x30]
+00990988	stp x26,x25,[sp, #0x40]
+0099098c	stp x24,x23,[sp, #0x50]
+00990990	stp x22,x21,[sp, #0x60]
+00990994	stp x20,x19,[sp, #0x70]
+00990998	stp x29,x30,[sp, #0x80]
+0099099c	add x29,sp,#0x80
+009909a0	mrs x26,tpidr_el0
+009909a4	ldr x8,[x26, #0x28]
+009909a8	mov x20,x1
+009909ac	mov x19,x0
+009909b0	str x8,[sp, #0x28]
+009909b4	stp xzr,xzr,[x0, #0x8]
+009909b8	str xzr,[x0]
+009909bc	ldrb w8,[x1]
+009909c0	tbnz w8,#0x0,0x009909d8
+009909c4	ldr x8,[x20, #0x10]
+009909c8	str x8,[x19, #0x10]
+009909cc	ldr q0,[x20]
+009909d0	str q0,[x19]
+009909d4	b 0x00990a38
+009909d8	ldr x21,[x20, #0x8]
+009909dc	cmn x21,#0x10
+009909e0	b.cs 0x00990bf0
+009909e4	ldr x22,[x20, #0x10]
+009909e8	cmp x21,#0x17
+009909ec	b.cs 0x00990a04
+009909f0	lsl w8,w21,#0x1
+009909f4	mov x23,x19
+009909f8	strb w8,[x23], #0x1
+009909fc	cbnz x21,0x00990a24
+00990a00	b 0x00990a34
+00990a04	add x8,x21,#0x10
+00990a08	and x24,x8,#-0x10
+00990a0c	mov x0,x24
+00990a10	bl 0x00c2fed0
+00990a14	orr x8,x24,#0x1
+00990a18	mov x23,x0
+00990a1c	stp x21,x0,[x19, #0x8]
+00990a20	str x8,[x19]
+00990a24	mov x0,x23
+00990a28	mov x1,x22
+00990a2c	mov x2,x21
+00990a30	bl 0x00c2ffd0
+00990a34	strb wzr,[x23, x21]
+00990a38	mov x21,x19
+00990a3c	str xzr,[x21, #0x20]!
+00990a40	str xzr,[x21, #0x8]
+00990a44	stur x21,[x21, #-0x8]
+00990a48	ldr x27,[x20, #0x18]
+00990a4c	add x25,x20,#0x20
+00990a50	sub x22,x21,#0x8
+00990a54	cmp x27,x25
+00990a58	b.eq 0x00990b34
+00990a5c	add x24,x27,#0x20
+00990a60	add x2,sp,#0x8
+00990a64	mov x3,sp
+00990a68	mov x0,x22
+00990a6c	mov x1,x21
+00990a70	mov x4,x24
+00990a74	bl 0x00c32f90
+00990a78	ldr x8,[x0]
+00990a7c	mov x23,x0
+00990a80	cbz x8,0x00990a90
+00990a84	ldr x8,[x27, #0x8]
+00990a88	cbnz x8,0x00990ae0
+00990a8c	b 0x00990af0
+00990a90	add x8,sp,#0x10
+00990a94	mov x0,x22
+00990a98	mov x1,x24
+00990a9c	bl 0x00c32fa0
+00990aa0	ldp x8,x1,[sp, #0x8]
+00990aa4	stp xzr,xzr,[x1]
+00990aa8	str x8,[x1, #0x10]
+00990aac	str x1,[x23]
+00990ab0	ldr x8,[x22]
+00990ab4	ldr x8,[x8]
+00990ab8	cbz x8,0x00990ac4
+00990abc	str x8,[x22]
+00990ac0	ldr x1,[x23]
+00990ac4	ldr x0,[x19, #0x20]
+00990ac8	bl 0x00c30c90
+00990acc	ldr x8,[x19, #0x28]
+00990ad0	add x8,x8,#0x1
+00990ad4	str x8,[x19, #0x28]
+00990ad8	ldr x8,[x27, #0x8]
+00990adc	cbz x8,0x00990af0
+00990ae0	mov x27,x8
+00990ae4	ldr x8,[x8]
+00990ae8	cbnz x8,0x00990ae0
+00990aec	b 0x00990b1c
+00990af0	mov x8,x27
+00990af4	ldr x9,[x8, #0x10]!
+00990af8	ldr x10,[x9]
+00990afc	cmp x10,x27
+00990b00	b.eq 0x00990b28
+00990b04	ldr x9,[x8]
+00990b08	mov x8,x9
+00990b0c	ldr x27,[x8, #0x10]!
+00990b10	ldr x10,[x27]
+00990b14	cmp x10,x9
+00990b18	b.ne 0x00990b04
+00990b1c	cmp x27,x25
+00990b20	b.ne 0x00990a5c
+00990b24	b 0x00990b34
+00990b28	mov x27,x9
+00990b2c	cmp x27,x25
+00990b30	b.ne 0x00990a5c
+00990b34	mov x23,x19
+00990b38	str xzr,[x23, #0x30]!
+00990b3c	stp xzr,xzr,[x23, #0x8]
+00990b40	mov x8,x20
+00990b44	ldrb w9,[x8, #0x30]!
+00990b48	tbnz w9,#0x0,0x00990b60
+00990b4c	ldr x9,[x8, #0x10]
+00990b50	str x9,[x23, #0x10]
+00990b54	ldr q0,[x8]
+00990b58	str q0,[x23]
+00990b5c	b 0x00990bbc
+00990b60	ldr x24,[x20, #0x38]
+00990b64	cmn x24,#0x10
+00990b68	b.cs 0x00990bf8
+00990b6c	ldr x20,[x20, #0x40]
+00990b70	cmp x24,#0x17
+00990b74	b.cs 0x00990b88
+00990b78	lsl w8,w24,#0x1
+00990b7c	strb w8,[x23], #0x1
+00990b80	cbnz x24,0x00990ba8
+00990b84	b 0x00990bb8
+00990b88	add x8,x24,#0x10
+00990b8c	and x25,x8,#-0x10
+00990b90	mov x0,x25
+00990b94	bl 0x00c2fed0
+00990b98	orr x8,x25,#0x1
+00990b9c	mov x23,x0
+00990ba0	stp x24,x0,[x19, #0x38]
+00990ba4	str x8,[x19, #0x30]
+00990ba8	mov x0,x23
+00990bac	mov x1,x20
+00990bb0	mov x2,x24
+00990bb4	bl 0x00c2ffd0
+00990bb8	strb wzr,[x23, x24]
+00990bbc	ldr x8,[x26, #0x28]
+00990bc0	ldr x9,[sp, #0x28]
+00990bc4	cmp x8,x9
+00990bc8	b.ne 0x00990bec
+00990bcc	ldp x29,x30,[sp, #0x80]
+00990bd0	ldp x20,x19,[sp, #0x70]
+00990bd4	ldp x22,x21,[sp, #0x60]
+00990bd8	ldp x24,x23,[sp, #0x50]
+00990bdc	ldp x26,x25,[sp, #0x40]
+00990be0	ldr x27,[sp, #0x30]
+00990be4	add sp,sp,#0x90
+00990be8	ret
+00990bec	bl 0x00c2fec0
+00990bf0	mov x0,x19
+00990bf4	bl 0x00c30ce0
+00990bf8	mov x0,x23
+00990bfc	bl 0x00c30ce0

@@ -1,0 +1,5 @@
+; CRYPTO_malloc @ 00c32320
+00c32320	adrp x16,0xcb7000
+00c32324	ldr x17,[x16, #0x178]
+00c32328	add x16,x16,#0x178
+00c3232c	br x17

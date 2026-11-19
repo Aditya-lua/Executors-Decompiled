@@ -1,0 +1,63 @@
+; curl_easy_recv @ 00902e0c
+00902e0c	sub sp,sp,#0x60
+00902e10	str x23,[sp, #0x20]
+00902e14	stp x22,x21,[sp, #0x30]
+00902e18	stp x20,x19,[sp, #0x40]
+00902e1c	stp x29,x30,[sp, #0x50]
+00902e20	add x29,sp,#0x50
+00902e24	mrs x23,tpidr_el0
+00902e28	ldr x8,[x23, #0x28]
+00902e2c	mov x19,x3
+00902e30	mov x21,x2
+00902e34	mov x22,x1
+00902e38	mov x20,x0
+00902e3c	str x8,[sp, #0x18]
+00902e40	bl 0x0092f1bc
+00902e44	tbz w0,#0x0,0x00902e50
+00902e48	mov w0,#0x5d
+00902e4c	b 0x00902ed8
+00902e50	cbz x20,0x00902eb0
+00902e54	ldrb w8,[x20, #0xa81]
+00902e58	cbz w8,0x00902eb8
+00902e5c	add x1,sp,#0x8
+00902e60	mov x0,x20
+00902e64	bl 0x00908b60
+00902e68	cmn w0,#0x1
+00902e6c	b.eq 0x00902ec4
+00902e70	ldr x8,[x20, #0x20]
+00902e74	cbnz x8,0x00902e84
+00902e78	ldr x1,[sp, #0x8]
+00902e7c	mov x0,x20
+00902e80	bl 0x0092bb60
+00902e84	add x4,sp,#0x10
+00902e88	mov x0,x20
+00902e8c	mov w1,wzr
+00902e90	mov x2,x22
+00902e94	mov x3,x21
+00902e98	str xzr,[x19]
+00902e9c	bl 0x00908350
+00902ea0	cbnz w0,0x00902ed8
+00902ea4	ldr x8,[sp, #0x10]
+00902ea8	str x8,[x19]
+00902eac	b 0x00902ed8
+00902eb0	mov w0,#0x2b
+00902eb4	b 0x00902ed8
+00902eb8	adrp x1,0x2d0000
+00902ebc	add x1,x1,#0xd47
+00902ec0	b 0x00902ecc
+00902ec4	adrp x1,0x2c0000
+00902ec8	add x1,x1,#0xea1
+00902ecc	mov x0,x20
+00902ed0	bl 0x00904b80
+00902ed4	mov w0,#0x1
+00902ed8	ldr x8,[x23, #0x28]
+00902edc	ldr x9,[sp, #0x18]
+00902ee0	cmp x8,x9
+00902ee4	b.ne 0x00902f00
+00902ee8	ldp x29,x30,[sp, #0x50]
+00902eec	ldp x20,x19,[sp, #0x40]
+00902ef0	ldp x22,x21,[sp, #0x30]
+00902ef4	ldr x23,[sp, #0x20]
+00902ef8	add sp,sp,#0x60
+00902efc	ret
+00902f00	bl 0x00c2fec0

@@ -1,0 +1,5 @@
+; tls13_hkdf_expand @ 00c36850
+00c36850	adrp x16,0xcb9000
+00c36854	ldr x17,[x16, #0x410]
+00c36858	add x16,x16,#0x410
+00c3685c	br x17

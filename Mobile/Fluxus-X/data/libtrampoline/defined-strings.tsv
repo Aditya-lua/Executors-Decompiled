@@ -1,0 +1,43 @@
+address	value
+001002a8	/system/bin/linker64
+001004cd	__libc_init
+001004d9	__cxa_atexit
+001004e6	__android_log_print
+001004fa	dlopen
+00100501	dlsym
+00100507	dlerror
+0010050f	__stack_chk_fail
+00100520	libdl.so
+00100529	LIBC
+0010052e	libc.so
+00100536	liblog.so
+00100648	crashpad_trampoline
+0010065c	dlopen: %s
+00100667	dlsym: %s
+00100671	usage: %s <path>
+00100682	CrashpadHandlerMain
+001006d9	zR
+.comment::00000000	
+.comment::00000001	Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)
+.comment::000000b9	Linker: LLD 19.0.1
+.shstrtab::00000001	.text
+.shstrtab::00000007	.got
+.shstrtab::0000000c	.comment
+.shstrtab::00000015	.note.android.ident
+.shstrtab::00000029	.got.plt
+.shstrtab::00000032	.rela.plt
+.shstrtab::0000003c	.bss
+.shstrtab::00000041	.dynstr
+.shstrtab::00000049	.eh_frame_hdr
+.shstrtab::00000057	.gnu.version_r
+.shstrtab::00000066	.interp
+.shstrtab::0000006e	.rela.dyn
+.shstrtab::00000078	.gnu.version
+.shstrtab::00000085	.dynsym
+.shstrtab::0000008d	.gnu.hash
+.shstrtab::00000097	.relro_padding
+.shstrtab::000000a6	.eh_frame
+.shstrtab::000000b0	.dynamic
+.shstrtab::000000b9	.shstrtab
+.shstrtab::000000c3	.rodata
+.shstrtab::000000cb	.data

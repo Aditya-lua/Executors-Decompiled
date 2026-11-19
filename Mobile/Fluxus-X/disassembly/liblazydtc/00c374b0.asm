@@ -1,0 +1,5 @@
+; ASN1_GENERALIZEDTIME_adj @ 00c374b0
+00c374b0	adrp x16,0xcb9000
+00c374b4	ldr x17,[x16, #0xa40]
+00c374b8	add x16,x16,#0xa40
+00c374bc	br x17

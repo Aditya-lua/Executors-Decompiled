@@ -1,0 +1,5 @@
+; WPACKET_init @ 00c37040
+00c37040	adrp x16,0xcb9000
+00c37044	ldr x17,[x16, #0x808]
+00c37048	add x16,x16,#0x808
+00c3704c	br x17

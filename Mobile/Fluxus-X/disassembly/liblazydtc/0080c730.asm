@@ -1,0 +1,21 @@
+; FUN_0080c730 @ 0080c730
+0080c730	stp x29,x30,[sp, #-0x20]!
+0080c734	str x19,[sp, #0x10]
+0080c738	mov x29,sp
+0080c73c	ldr x19,[x0, #0x8]
+0080c740	cbz x19,0x0080c754
+0080c744	add x1,x19,#0x8
+0080c748	mov x0,#-0x1
+0080c74c	bl 0x00c2bd10
+0080c750	cbz x0,0x0080c760
+0080c754	ldr x19,[sp, #0x10]
+0080c758	ldp x29,x30,[sp], #0x20
+0080c75c	ret
+0080c760	ldr x8,[x19]
+0080c764	mov x0,x19
+0080c768	ldr x8,[x8, #0x10]
+0080c76c	blr x8
+0080c770	mov x0,x19
+0080c774	ldr x19,[sp, #0x10]
+0080c778	ldp x29,x30,[sp], #0x20
+0080c77c	b 0x00c2ff00

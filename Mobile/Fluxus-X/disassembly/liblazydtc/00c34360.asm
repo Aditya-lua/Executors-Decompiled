@@ -1,0 +1,5 @@
+; WPACKET_finish @ 00c34360
+00c34360	adrp x16,0xcb8000
+00c34364	ldr x17,[x16, #0x198]
+00c34368	add x16,x16,#0x198
+00c3436c	br x17

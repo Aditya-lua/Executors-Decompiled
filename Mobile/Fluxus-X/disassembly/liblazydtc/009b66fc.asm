@@ -1,0 +1,25 @@
+; ssl_evp_md_fetch @ 009b66fc
+009b66fc	str x21,[sp, #-0x30]!
+009b6700	stp x20,x19,[sp, #0x10]
+009b6704	mov x20,x0
+009b6708	mov w0,w1
+009b670c	stp x29,x30,[sp, #0x20]
+009b6710	add x29,sp,#0x20
+009b6714	mov x19,x2
+009b6718	mov w21,w1
+009b671c	bl 0x00c35e90
+009b6720	cbnz x0,0x009b674c
+009b6724	bl 0x00c35250
+009b6728	mov w0,w21
+009b672c	bl 0x00c324f0
+009b6730	mov x1,x0
+009b6734	mov x0,x20
+009b6738	mov x2,x19
+009b673c	bl 0x00c357f0
+009b6740	mov x19,x0
+009b6744	bl 0x00c35240
+009b6748	mov x0,x19
+009b674c	ldp x29,x30,[sp, #0x20]
+009b6750	ldp x20,x19,[sp, #0x10]
+009b6754	ldr x21,[sp], #0x30
+009b6758	ret

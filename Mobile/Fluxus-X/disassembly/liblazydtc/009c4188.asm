@@ -1,0 +1,53 @@
+; SSL_get_sigalgs @ 009c4188
+009c4188	stp x22,x21,[sp, #-0x30]!
+009c418c	stp x20,x19,[sp, #0x10]
+009c4190	stp x29,x30,[sp, #0x20]
+009c4194	ldr x8,[x0, #0x390]
+009c4198	mov x21,x2
+009c419c	mov w2,wzr
+009c41a0	add x29,sp,#0x20
+009c41a4	cbz x8,0x009c4244
+009c41a8	ldr x22,[x0, #0x3a0]
+009c41ac	lsr x9,x22,#0x1f
+009c41b0	cbnz x9,0x009c4244
+009c41b4	tbnz w1,#0x1f,0x009c4240
+009c41b8	cmp w22,w1
+009c41bc	mov w2,wzr
+009c41c0	b.le 0x009c4244
+009c41c4	mov x19,x4
+009c41c8	mov x20,x3
+009c41cc	sxtw x9,w1
+009c41d0	cbz x6,0x009c41e0
+009c41d4	add x10,x8,x9, LSL #0x1
+009c41d8	ldrb w10,[x10, #0x1]
+009c41dc	strb w10,[x6]
+009c41e0	cbz x5,0x009c41f0
+009c41e4	lsl x10,x9,#0x1
+009c41e8	ldrb w10,[x8, x10]
+009c41ec	strb w10,[x5]
+009c41f0	ldrh w1,[x8, x9, LSL #0x1]
+009c41f4	bl 0x009c21e4
+009c41f8	cbz x21,0x009c4210
+009c41fc	cbz x0,0x009c4208
+009c4200	ldr w8,[x0, #0x14]
+009c4204	b 0x009c420c
+009c4208	mov w8,wzr
+009c420c	str w8,[x21]
+009c4210	cbz x20,0x009c4228
+009c4214	cbz x0,0x009c4220
+009c4218	ldr w8,[x0, #0xc]
+009c421c	b 0x009c4224
+009c4220	mov w8,wzr
+009c4224	str w8,[x20]
+009c4228	cbz x19,0x009c4240
+009c422c	cbz x0,0x009c4238
+009c4230	ldr w8,[x0, #0x1c]
+009c4234	b 0x009c423c
+009c4238	mov w8,wzr
+009c423c	str w8,[x19]
+009c4240	mov w2,w22
+009c4244	ldp x29,x30,[sp, #0x20]
+009c4248	ldp x20,x19,[sp, #0x10]
+009c424c	mov w0,w2
+009c4250	ldp x22,x21,[sp], #0x30
+009c4254	ret

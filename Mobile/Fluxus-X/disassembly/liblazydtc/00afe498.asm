@@ -1,0 +1,4 @@
+; i2d_EXTENDED_KEY_USAGE @ 00afe498
+00afe498	adrp x2,0xc80000
+00afe49c	add x2,x2,#0x190
+00afe4a0	b 0x00c36170

@@ -1,0 +1,63 @@
+; tls1_set_groups_list @ 009c1704
+009c1704	sub sp,sp,#0x50
+009c1708	adrp x8,0x29c000
+009c170c	ldr q0,[x8, #0x7e0]
+009c1710	stp x20,x19,[sp, #0x30]
+009c1714	mov x20,x1
+009c1718	adrp x1,0x2c3000
+009c171c	stp x22,x21,[sp, #0x20]
+009c1720	mov x19,x2
+009c1724	mov x22,x0
+009c1728	add x1,x1,#0x5d8
+009c172c	mov w0,#0x50
+009c1730	mov w2,#0x304
+009c1734	stp x29,x30,[sp, #0x40]
+009c1738	add x29,sp,#0x40
+009c173c	mov x21,x3
+009c1740	stur q0,[sp, #0x8]
+009c1744	bl 0x00c32320
+009c1748	str x0,[sp, #0x18]
+009c174c	cbz x0,0x009c17c4
+009c1750	adrp x3,0x9c1000
+009c1754	add x3,x3,#0x7fc
+009c1758	mov w1,#0x3a
+009c175c	mov w2,#0x1
+009c1760	mov x4,sp
+009c1764	mov x0,x21
+009c1768	str x22,[sp]
+009c176c	bl 0x00c35230
+009c1770	cbz w0,0x009c17cc
+009c1774	cbz x20,0x009c17bc
+009c1778	ldr x8,[sp, #0x8]
+009c177c	ldr x0,[sp, #0x18]
+009c1780	adrp x2,0x2c3000
+009c1784	add x2,x2,#0x5d8
+009c1788	lsl x1,x8,#0x1
+009c178c	mov w3,#0x313
+009c1790	bl 0x00c345f0
+009c1794	cbz x0,0x009c17cc
+009c1798	mov x21,x0
+009c179c	ldr x0,[x20]
+009c17a0	adrp x1,0x2c3000
+009c17a4	add x1,x1,#0x5d8
+009c17a8	mov w2,#0x316
+009c17ac	bl 0x00c32310
+009c17b0	str x21,[x20]
+009c17b4	ldr x8,[sp, #0x8]
+009c17b8	str x8,[x19]
+009c17bc	mov w19,#0x1
+009c17c0	b 0x009c17d0
+009c17c4	mov w19,wzr
+009c17c8	b 0x009c17e4
+009c17cc	mov w19,wzr
+009c17d0	ldr x0,[sp, #0x18]
+009c17d4	adrp x1,0x2c3000
+009c17d8	add x1,x1,#0x5d8
+009c17dc	mov w2,#0x31b
+009c17e0	bl 0x00c32310
+009c17e4	mov w0,w19
+009c17e8	ldp x29,x30,[sp, #0x40]
+009c17ec	ldp x20,x19,[sp, #0x30]
+009c17f0	ldp x22,x21,[sp, #0x20]
+009c17f4	add sp,sp,#0x50
+009c17f8	ret

@@ -1,0 +1,13 @@
+; _INIT_116 @ 008519e0
+008519e0	adrp x8,0xd1e000
+008519e4	ldrb w9,[x8, #0xa78]
+008519e8	tbnz w9,#0x0,0x00851a0c
+008519ec	adrp x9,0xd1e000
+008519f0	mov w11,#0x1
+008519f4	ldr w10,[x9, #0x930]
+008519f8	strb w11,[x8, #0xa78]
+008519fc	add w8,w10,#0x1
+00851a00	adrp x10,0xd1e000
+00851a04	str w8,[x9, #0x930]
+00851a08	str w8,[x10, #0xa70]
+00851a0c	ret

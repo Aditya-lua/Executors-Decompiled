@@ -1,0 +1,4 @@
+; PROXY_POLICY_free @ 00b00f84
+00b00f84	adrp x1,0xc80000
+00b00f88	add x1,x1,#0x948
+00b00f8c	b 0x00c36160

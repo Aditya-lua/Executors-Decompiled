@@ -1,0 +1,47 @@
+; ENGINE_get_first @ 00a5191c
+00a5191c	stp x20,x19,[sp, #-0x20]!
+00a51920	stp x29,x30,[sp, #0x10]
+00a51924	adrp x0,0xcb5000
+00a51928	adrp x1,0xcb5000
+00a5192c	ldr x0,[x0, #0x5f0]
+00a51930	ldr x1,[x1, #0x5e0]
+00a51934	add x29,sp,#0x10
+00a51938	bl 0x00c34d60
+00a5193c	cbz w0,0x00a51990
+00a51940	adrp x8,0xcb5000
+00a51944	ldr x8,[x8, #0x5e8]
+00a51948	ldr w8,[x8]
+00a5194c	cbz w8,0x00a51990
+00a51950	adrp x20,0xcb5000
+00a51954	ldr x20,[x20, #0x5d8]
+00a51958	ldr x0,[x20]
+00a5195c	bl 0x00c356a0
+00a51960	cbz w0,0x00a519c0
+00a51964	adrp x8,0xd21000
+00a51968	ldr x19,[x8, #0x9b8]
+00a5196c	cbz x19,0x00a51984
+00a51970	add x8,x19,#0x9c
+00a51974	ldaxr w9,[x8]
+00a51978	add w9,w9,#0x1
+00a5197c	stlxr w10,w9,[x8]
+00a51980	cbnz w10,0x00a51974
+00a51984	ldr x0,[x20]
+00a51988	bl 0x00c35690
+00a5198c	b 0x00a519c4
+00a51990	bl 0x00c342a0
+00a51994	adrp x0,0x2cd000
+00a51998	adrp x2,0x2c3000
+00a5199c	add x0,x0,#0x9e1
+00a519a0	add x2,x2,#0x8c4
+00a519a4	mov w1,#0xe1
+00a519a8	bl 0x00c342b0
+00a519ac	mov w1,#0x100
+00a519b0	mov w0,#0x26
+00a519b4	movk w1,#0xc, LSL #16
+00a519b8	mov x2,xzr
+00a519bc	bl 0x00c342c0
+00a519c0	mov x19,xzr
+00a519c4	ldp x29,x30,[sp, #0x10]
+00a519c8	mov x0,x19
+00a519cc	ldp x20,x19,[sp], #0x20
+00a519d0	ret

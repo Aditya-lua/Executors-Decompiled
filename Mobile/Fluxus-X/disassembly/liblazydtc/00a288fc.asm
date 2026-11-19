@@ -1,0 +1,35 @@
+; EC_GROUP_new_curve_GF2m @ 00a288fc
+00a288fc	str x23,[sp, #-0x40]!
+00a28900	stp x22,x21,[sp, #0x10]
+00a28904	stp x20,x19,[sp, #0x20]
+00a28908	stp x29,x30,[sp, #0x30]
+00a2890c	add x29,sp,#0x30
+00a28910	mov x19,x3
+00a28914	mov x20,x2
+00a28918	mov x21,x1
+00a2891c	mov x23,x0
+00a28920	bl 0x00c3a6f0
+00a28924	mov x22,x0
+00a28928	mov x0,x19
+00a2892c	bl 0x00c38aa0
+00a28930	mov x1,xzr
+00a28934	mov x2,x22
+00a28938	bl 0x00c3ad00
+00a2893c	mov x22,x0
+00a28940	cbz x0,0x00a2896c
+00a28944	mov x0,x22
+00a28948	mov x1,x23
+00a2894c	mov x2,x21
+00a28950	mov x3,x20
+00a28954	mov x4,x19
+00a28958	bl 0x00c3aee0
+00a2895c	cbnz w0,0x00a2896c
+00a28960	mov x0,x22
+00a28964	bl 0x00c3a770
+00a28968	mov x22,xzr
+00a2896c	mov x0,x22
+00a28970	ldp x29,x30,[sp, #0x30]
+00a28974	ldp x20,x19,[sp, #0x20]
+00a28978	ldp x22,x21,[sp, #0x10]
+00a2897c	ldr x23,[sp], #0x40
+00a28980	ret

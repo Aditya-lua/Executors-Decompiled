@@ -1,0 +1,37 @@
+; curl_easy_send @ 0090305c
+0090305c	sub sp,sp,#0x50
+00903060	str x23,[sp, #0x10]
+00903064	stp x22,x21,[sp, #0x20]
+00903068	stp x20,x19,[sp, #0x30]
+0090306c	stp x29,x30,[sp, #0x40]
+00903070	add x29,sp,#0x40
+00903074	mrs x23,tpidr_el0
+00903078	ldr x8,[x23, #0x28]
+0090307c	mov x19,x3
+00903080	mov x20,x2
+00903084	mov x21,x1
+00903088	mov x22,x0
+0090308c	str x8,[sp, #0x8]
+00903090	str xzr,[sp]
+00903094	bl 0x0092f1bc
+00903098	tbz w0,#0x0,0x009030a4
+0090309c	mov w0,#0x5d
+009030a0	b 0x009030c0
+009030a4	mov x3,sp
+009030a8	mov x0,x22
+009030ac	mov x1,x21
+009030b0	mov x2,x20
+009030b4	bl 0x00902f04
+009030b8	ldr x8,[sp]
+009030bc	str x8,[x19]
+009030c0	ldr x8,[x23, #0x28]
+009030c4	ldr x9,[sp, #0x8]
+009030c8	cmp x8,x9
+009030cc	b.ne 0x009030e8
+009030d0	ldp x29,x30,[sp, #0x40]
+009030d4	ldp x20,x19,[sp, #0x30]
+009030d8	ldp x22,x21,[sp, #0x20]
+009030dc	ldr x23,[sp, #0x10]
+009030e0	add sp,sp,#0x50
+009030e4	ret
+009030e8	bl 0x00c2fec0

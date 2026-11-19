@@ -1,0 +1,61 @@
+; cpr::util::writeUserFunction @ 00900954
+00900954	sub sp,sp,#0x60
+00900958	stp x24,x23,[sp, #0x20]
+0090095c	stp x22,x21,[sp, #0x30]
+00900960	stp x20,x19,[sp, #0x40]
+00900964	stp x29,x30,[sp, #0x50]
+00900968	add x29,sp,#0x50
+0090096c	mrs x24,tpidr_el0
+00900970	ldr x8,[x24, #0x28]
+00900974	mul x19,x2,x1
+00900978	mov x20,x3
+0090097c	mov x21,x0
+00900980	cmn x19,#0x10
+00900984	str x8,[sp, #0x18]
+00900988	stp xzr,xzr,[sp, #0x8]
+0090098c	str xzr,[sp]
+00900990	b.cs 0x00900a38
+00900994	cmp x19,#0x17
+00900998	b.cs 0x009009b4
+0090099c	mov x9,sp
+009009a0	lsl w8,w19,#0x1
+009009a4	orr x22,x9,#0x1
+009009a8	strb w8,[sp]
+009009ac	cbnz x19,0x009009d4
+009009b0	b 0x009009e4
+009009b4	add x8,x19,#0x10
+009009b8	and x23,x8,#-0x10
+009009bc	mov x0,x23
+009009c0	bl 0x00c2fed0
+009009c4	orr x8,x23,#0x1
+009009c8	mov x22,x0
+009009cc	stp x19,x0,[sp, #0x8]
+009009d0	str x8,[sp]
+009009d4	mov x0,x22
+009009d8	mov x1,x21
+009009dc	mov x2,x19
+009009e0	bl 0x00c2ffd0
+009009e4	strb wzr,[x22, x19]
+009009e8	mov x1,sp
+009009ec	mov x0,x20
+009009f0	bl 0x00c319b0
+009009f4	ldrb w8,[sp]
+009009f8	tst w0,#0x1
+009009fc	csel x19,x19,xzr,ne
+00900a00	tbz w8,#0x0,0x00900a0c
+00900a04	ldr x0,[sp, #0x10]
+00900a08	bl 0x00c301d0
+00900a0c	ldr x8,[x24, #0x28]
+00900a10	ldr x9,[sp, #0x18]
+00900a14	cmp x8,x9
+00900a18	b.ne 0x00900a40
+00900a1c	mov x0,x19
+00900a20	ldp x29,x30,[sp, #0x50]
+00900a24	ldp x20,x19,[sp, #0x40]
+00900a28	ldp x22,x21,[sp, #0x30]
+00900a2c	ldp x24,x23,[sp, #0x20]
+00900a30	add sp,sp,#0x60
+00900a34	ret
+00900a38	mov x0,sp
+00900a3c	bl 0x00c30ce0
+00900a40	bl 0x00c2fec0

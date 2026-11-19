@@ -1,0 +1,30 @@
+; ossl_dh_params_todata @ 00a19650
+00a19650	stp x22,x21,[sp, #-0x30]!
+00a19654	stp x20,x19,[sp, #0x10]
+00a19658	stp x29,x30,[sp, #0x20]
+00a1965c	add x29,sp,#0x20
+00a19660	mov x19,x2
+00a19664	mov x20,x1
+00a19668	mov x22,x0
+00a1966c	bl 0x00c39b10
+00a19670	mov x21,x0
+00a19674	mov x0,x22
+00a19678	bl 0x00c39d70
+00a1967c	mov x1,x20
+00a19680	mov x2,x19
+00a19684	bl 0x00c39dd0
+00a19688	cbz w0,0x00a196b4
+00a1968c	cmp x21,#0x1
+00a19690	b.lt 0x00a196b0
+00a19694	adrp x2,0x2a5000
+00a19698	add x2,x2,#0xce7
+00a1969c	mov x0,x20
+00a196a0	mov x1,x19
+00a196a4	mov x3,x21
+00a196a8	bl 0x00c39df0
+00a196ac	cbz w0,0x00a196b4
+00a196b0	mov w0,#0x1
+00a196b4	ldp x29,x30,[sp, #0x20]
+00a196b8	ldp x20,x19,[sp, #0x10]
+00a196bc	ldp x22,x21,[sp], #0x30
+00a196c0	ret

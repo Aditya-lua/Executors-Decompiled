@@ -1,0 +1,13 @@
+; _INIT_124 @ 00851b60
+00851b60	adrp x8,0xd1e000
+00851b64	ldrb w9,[x8, #0xaf8]
+00851b68	tbnz w9,#0x0,0x00851b8c
+00851b6c	adrp x9,0xd1e000
+00851b70	mov w11,#0x1
+00851b74	ldr w10,[x9, #0x930]
+00851b78	strb w11,[x8, #0xaf8]
+00851b7c	add w8,w10,#0x1
+00851b80	adrp x10,0xd1e000
+00851b84	str w8,[x9, #0x930]
+00851b88	str w8,[x10, #0xaf0]
+00851b8c	ret

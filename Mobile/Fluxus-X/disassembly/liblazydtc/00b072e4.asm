@@ -1,0 +1,57 @@
+; X509V3_NAME_from_section @ 00b072e4
+00b072e4	stp x22,x21,[sp, #-0x30]!
+00b072e8	stp x20,x19,[sp, #0x10]
+00b072ec	stp x29,x30,[sp, #0x20]
+00b072f0	add x29,sp,#0x20
+00b072f4	cbz x0,0x00b073b4
+00b072f8	mov x21,x0
+00b072fc	mov x0,x1
+00b07300	mov x19,x2
+00b07304	mov x20,x1
+00b07308	bl 0x00c325e0
+00b0730c	cmp w0,#0x1
+00b07310	b.lt 0x00b073b0
+00b07314	mov w22,wzr
+00b07318	mov x0,x20
+00b0731c	mov w1,w22
+00b07320	bl 0x00c32610
+00b07324	ldr x8,[x0, #0x8]
+00b07328	add x9,x8,#0x1
+00b0732c	b 0x00b07334
+00b07330	add x9,x9,#0x1
+00b07334	ldurb w10,[x9, #-0x1]
+00b07338	cmp w10,#0x2d
+00b0733c	b.gt 0x00b07350
+00b07340	cbz w10,0x00b0736c
+00b07344	cmp w10,#0x2c
+00b07348	b.ne 0x00b07330
+00b0734c	b 0x00b07360
+00b07350	cmp w10,#0x2e
+00b07354	b.eq 0x00b07360
+00b07358	cmp w10,#0x3a
+00b0735c	b.ne 0x00b07330
+00b07360	ldrb w10,[x9]
+00b07364	cmp w10,#0x0
+00b07368	csel x8,x8,x9,eq
+00b0736c	mov x9,x8
+00b07370	ldrb w10,[x9], #0x1
+00b07374	ldr x3,[x0, #0x10]
+00b07378	mov w4,#0xffffffff
+00b0737c	mov w5,#0xffffffff
+00b07380	cmp w10,#0x2b
+00b07384	csetm w6,eq
+00b07388	csel x1,x9,x8,eq
+00b0738c	mov x0,x21
+00b07390	mov w2,w19
+00b07394	bl 0x00c40b20
+00b07398	cbz w0,0x00b073b4
+00b0739c	mov x0,x20
+00b073a0	add w22,w22,#0x1
+00b073a4	bl 0x00c325e0
+00b073a8	cmp w22,w0
+00b073ac	b.lt 0x00b07318
+00b073b0	mov w0,#0x1
+00b073b4	ldp x29,x30,[sp, #0x20]
+00b073b8	ldp x20,x19,[sp, #0x10]
+00b073bc	ldp x22,x21,[sp], #0x30
+00b073c0	ret

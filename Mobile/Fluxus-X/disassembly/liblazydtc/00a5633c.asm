@@ -1,0 +1,35 @@
+; EVP_ASYM_CIPHER_free @ 00a5633c
+00a5633c	stp x20,x19,[sp, #-0x20]!
+00a56340	stp x29,x30,[sp, #0x10]
+00a56344	add x29,sp,#0x10
+00a56348	cbz x0,0x00a56378
+00a5634c	mov x19,x0
+00a56350	add x9,x0,#0x20
+00a56354	ldxr w8,[x9]
+00a56358	subs w10,w8,#0x1
+00a5635c	stxr w11,w10,[x9]
+00a56360	cbnz w11,0x00a56354
+00a56364	b.ne 0x00a56370
+00a56368	dmb ISHLD
+00a5636c	b 0x00a56384
+00a56370	cmp w8,#0x1
+00a56374	b.le 0x00a56384
+00a56378	ldp x29,x30,[sp, #0x10]
+00a5637c	ldp x20,x19,[sp], #0x20
+00a56380	ret
+00a56384	ldr x0,[x19, #0x8]
+00a56388	adrp x20,0x2cb000
+00a5638c	add x20,x20,#0x8db
+00a56390	mov w2,#0x1c2
+00a56394	mov x1,x20
+00a56398	bl 0x00c32310
+00a5639c	ldr x0,[x19, #0x18]
+00a563a0	bl 0x00c3b690
+00a563a4	ldr x0,[x19, #0x28]
+00a563a8	bl 0x00c34d40
+00a563ac	ldp x29,x30,[sp, #0x10]
+00a563b0	mov w2,#0x1c5
+00a563b4	mov x0,x19
+00a563b8	mov x1,x20
+00a563bc	ldp x20,x19,[sp], #0x20
+00a563c0	b 0x00c32310

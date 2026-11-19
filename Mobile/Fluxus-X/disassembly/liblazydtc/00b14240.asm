@@ -1,0 +1,60 @@
+; X509_VERIFY_PARAM_set1_ip @ 00b14240
+00b14240	stp x22,x21,[sp, #-0x30]!
+00b14244	cmp x2,#0x10
+00b14248	stp x20,x19,[sp, #0x10]
+00b1424c	stp x29,x30,[sp, #0x20]
+00b14250	add x29,sp,#0x20
+00b14254	b.hi 0x00b142e8
+00b14258	mov w8,#0x1
+00b1425c	mov w9,#0x11
+00b14260	lsl x8,x8,x2
+00b14264	movk w9,#0x1, LSL #16
+00b14268	mov x20,x2
+00b1426c	tst x8,x9
+00b14270	b.eq 0x00b142e8
+00b14274	mov x21,x1
+00b14278	mov x19,x0
+00b1427c	cbz x1,0x00b142c0
+00b14280	cbnz x20,0x00b14290
+00b14284	mov x0,x21
+00b14288	bl 0x00c2ff50
+00b1428c	mov x20,x0
+00b14290	adrp x1,0x2d8000
+00b14294	add x0,x20,#0x1
+00b14298	add x1,x1,#0xa44
+00b1429c	mov w2,#0xf7
+00b142a0	bl 0x00c32320
+00b142a4	cbz x0,0x00b1431c
+00b142a8	mov x1,x21
+00b142ac	mov x2,x20
+00b142b0	mov x22,x0
+00b142b4	bl 0x00c2ffd0
+00b142b8	strb wzr,[x22, x20]
+00b142bc	b 0x00b142c8
+00b142c0	mov x20,xzr
+00b142c4	mov x22,xzr
+00b142c8	ldr x0,[x19, #0x60]
+00b142cc	adrp x1,0x2d8000
+00b142d0	add x1,x1,#0xa44
+00b142d4	mov w2,#0x100
+00b142d8	bl 0x00c32310
+00b142dc	mov w0,#0x1
+00b142e0	stp x22,x20,[x19, #0x60]
+00b142e4	b 0x00b1431c
+00b142e8	bl 0x00c342a0
+00b142ec	adrp x0,0x2d8000
+00b142f0	adrp x2,0x2a6000
+00b142f4	add x0,x0,#0xa44
+00b142f8	add x2,x2,#0xa24
+00b142fc	mov w1,#0x1d4
+00b14300	bl 0x00c342b0
+00b14304	mov w1,#0x106
+00b14308	mov w0,#0xb
+00b1430c	movk w1,#0x8, LSL #16
+00b14310	mov x2,xzr
+00b14314	bl 0x00c342c0
+00b14318	mov w0,wzr
+00b1431c	ldp x29,x30,[sp, #0x20]
+00b14320	ldp x20,x19,[sp, #0x10]
+00b14324	ldp x22,x21,[sp], #0x30
+00b14328	ret

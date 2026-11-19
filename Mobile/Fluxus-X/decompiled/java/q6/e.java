@@ -1,0 +1,188 @@
+package q6;
+
+import com.github.luben.zstd.BuildConfig;
+import gu.f;
+import gu.l;
+import java.util.List;
+import l6.j;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import p001kotlin.Metadata;
+import y6.ImageRequest;
+import y6.k;
+import y6.m;
+import z6.Size;
+import zt.o;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0019\b\u0000\u0018\u00002\u00020\u0001BE\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\f\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\t\u001a\u00020\u0002\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b\u0010\u0010\u0011J\u0010\u0010\u0013\u001a\u00020\u0012H\u0096@¢\u0006\u0004\b\u0013\u0010\u0014J\u001f\u0010\u0017\u001a\u00020\u00162\u0006\u0010\t\u001a\u00020\u00022\u0006\u0010\u0015\u001a\u00020\u0005H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J-\u0010\u0019\u001a\u00020\u00002\b\b\u0002\u0010\b\u001a\u00020\u00072\b\b\u0002\u0010\t\u001a\u00020\u00022\b\b\u0002\u0010\u000b\u001a\u00020\nH\u0002¢\u0006\u0004\b\u0019\u0010\u001aR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u001d\u0010\u001eR\u001d\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u00048\u0006¢\u0006\f\n\u0004\b\u0017\u0010\u001f\u001a\u0004\b \u0010!R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b\u0019\u0010\"\u001a\u0004\b#\u0010$R\u001a\u0010\t\u001a\u00020\u00028\u0016X\u0096\u0004¢\u0006\f\n\u0004\b%\u0010\u001c\u001a\u0004\b\u001b\u0010\u001eR\u001a\u0010\u000b\u001a\u00020\n8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b&\u0010'\u001a\u0004\b(\u0010)R\u0017\u0010\r\u001a\u00020\f8\u0006¢\u0006\f\n\u0004\b*\u0010+\u001a\u0004\b&\u0010,R\u0017\u0010\u000f\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\b\u0013\u0010-\u001a\u0004\b*\u0010.¨\u0006/"}, d2 = {"Lq6/e;", "Lq6/d$a;", "Ly6/g;", "initialRequest", BuildConfig.FLAVOR, "Lq6/d;", "interceptors", BuildConfig.FLAVOR, "index", "request", "Lz6/g;", "size", "Ll6/j;", "eventListener", BuildConfig.FLAVOR, "isPlaceholderCached", "<init>", "(Ly6/g;Ljava/util/List;ILy6/g;Lz6/g;Ll6/j;Z)V", "Ly6/k;", "g", "(Leu/b;)Ljava/lang/Object;", "interceptor", BuildConfig.FLAVOR, "b", "(Ly6/g;Lq6/d;)V", "c", "(ILy6/g;Lz6/g;)Lq6/e;", "a", "Ly6/g;", "getInitialRequest", "()Ly6/g;", "Ljava/util/List;", "getInterceptors", "()Ljava/util/List;", "I", "getIndex", "()I", "d", "e", "Lz6/g;", "i", "()Lz6/g;", "f", "Ll6/j;", "()Ll6/j;", "Z", "()Z", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class e implements d.a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    @NotNull
+    public final ImageRequest initialRequest;
+
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
+    @NotNull
+    public final List<d> interceptors;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
+    public final int index;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    @NotNull
+    public final ImageRequest request;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    @NotNull
+    public final Size size;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
+    @NotNull
+    public final j eventListener;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
+    public final boolean isPlaceholderCached;
+
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    @f(c = "coil3.intercept.RealInterceptorChain", f = "RealInterceptorChain.kt", l = {31}, m = "proceed")
+    public static final class a extends gu.d {
+
+        /* JADX INFO: renamed from: t, reason: collision with root package name */
+        public Object f29931t;
+
+        /* JADX INFO: renamed from: u, reason: collision with root package name */
+        public Object f29932u;
+
+        /* JADX INFO: renamed from: v, reason: collision with root package name */
+        public /* synthetic */ Object f29933v;
+
+        /* JADX INFO: renamed from: x, reason: collision with root package name */
+        public int f29935x;
+
+        public a(eu.b<? super a> bVar) {
+            super(bVar);
+        }
+
+        @Override // gu.a
+        @Nullable
+        public final Object invokeSuspend(@NotNull Object obj) {
+            this.f29933v = obj;
+            this.f29935x |= Integer.MIN_VALUE;
+            return e.this.g(this);
+        }
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public e(@NotNull ImageRequest imageRequest, @NotNull List<? extends d> list, int i10, @NotNull ImageRequest imageRequest2, @NotNull Size size, @NotNull j jVar, boolean z10) {
+        this.initialRequest = imageRequest;
+        this.interceptors = list;
+        this.index = i10;
+        this.request = imageRequest2;
+        this.size = size;
+        this.eventListener = jVar;
+        this.isPlaceholderCached = z10;
+    }
+
+    public static /* synthetic */ e d(e eVar, int i10, ImageRequest imageRequest, Size size, int i11, Object obj) {
+        if ((i11 & 1) != 0) {
+            i10 = eVar.index;
+        }
+        if ((i11 & 2) != 0) {
+            imageRequest = eVar.getRequest();
+        }
+        if ((i11 & 4) != 0) {
+            size = eVar.getSize();
+        }
+        return eVar.c(i10, imageRequest, size);
+    }
+
+    @Override // q6.d.a
+    @NotNull
+    /* JADX INFO: renamed from: a, reason: from getter */
+    public ImageRequest getRequest() {
+        return this.request;
+    }
+
+    public final void b(ImageRequest request, d interceptor) {
+        if (request.getContext() != this.initialRequest.getContext()) {
+            throw new IllegalStateException(("Interceptor '" + interceptor + "' cannot modify the request's context.").toString());
+        }
+        if (request.getData() == m.f37671a) {
+            throw new IllegalStateException(("Interceptor '" + interceptor + "' cannot set the request's data to null.").toString());
+        }
+        if (request.getTarget() != this.initialRequest.getTarget()) {
+            throw new IllegalStateException(("Interceptor '" + interceptor + "' cannot modify the request's target.").toString());
+        }
+        if (request.getSizeResolver() == this.initialRequest.getSizeResolver()) {
+            return;
+        }
+        throw new IllegalStateException(("Interceptor '" + interceptor + "' cannot modify the request's size resolver. Use `Interceptor.Chain.withSize` instead.").toString());
+    }
+
+    public final e c(int index, ImageRequest request, Size size) {
+        return new e(this.initialRequest, this.interceptors, index, request, size, this.eventListener, this.isPlaceholderCached);
+    }
+
+    @NotNull
+    /* JADX INFO: renamed from: e, reason: from getter */
+    public final j getEventListener() {
+        return this.eventListener;
+    }
+
+    /* JADX INFO: renamed from: f, reason: from getter */
+    public final boolean getIsPlaceholderCached() {
+        return this.isPlaceholderCached;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
+    @Nullable
+    public Object g(@NotNull eu.b<? super k> bVar) {
+        a aVar;
+        d dVar;
+        if (bVar instanceof a) {
+            aVar = (a) bVar;
+            int i10 = aVar.f29935x;
+            if ((i10 & Integer.MIN_VALUE) != 0) {
+                aVar.f29935x = i10 - Integer.MIN_VALUE;
+            } else {
+                aVar = new a(bVar);
+            }
+        } else {
+            aVar = new a(bVar);
+        }
+        Object obj = aVar.f29933v;
+        Object objE = fu.c.e();
+        int i11 = aVar.f29935x;
+        if (i11 == 0) {
+            o.b(obj);
+            d dVar2 = this.interceptors.get(this.index);
+            d.a aVarD = d(this, this.index + 1, null, null, 6, null);
+            aVar.f29931t = dVar2;
+            aVar.f29932u = l.a(aVarD);
+            aVar.f29935x = 1;
+            Object objA = dVar2.a(aVarD, aVar);
+            if (objA == objE) {
+                return objE;
+            }
+            dVar = dVar2;
+            obj = objA;
+        } else {
+            if (i11 != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            dVar = (d) aVar.f29931t;
+            o.b(obj);
+        }
+        k kVar = (k) obj;
+        b(kVar.getRequest(), dVar);
+        return kVar;
+    }
+
+    @Override // q6.d.a
+    @NotNull
+    /* JADX INFO: renamed from: i, reason: from getter */
+    public Size getSize() {
+        return this.size;
+    }
+}

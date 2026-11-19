@@ -1,0 +1,42 @@
+; EC_ec_pre_comp_free @ 00a3303c
+00a3303c	stp x20,x19,[sp, #-0x20]!
+00a33040	stp x29,x30,[sp, #0x10]
+00a33044	add x29,sp,#0x10
+00a33048	cbz x0,0x00a33078
+00a3304c	mov x19,x0
+00a33050	add x9,x0,#0x30
+00a33054	ldxr w8,[x9]
+00a33058	subs w10,w8,#0x1
+00a3305c	stxr w11,w10,[x9]
+00a33060	cbnz w11,0x00a33054
+00a33064	b.ne 0x00a33070
+00a33068	dmb ISHLD
+00a3306c	b 0x00a33084
+00a33070	cmp w8,#0x1
+00a33074	b.le 0x00a33084
+00a33078	ldp x29,x30,[sp, #0x10]
+00a3307c	ldp x20,x19,[sp], #0x20
+00a33080	ret
+00a33084	ldr x0,[x19, #0x20]
+00a33088	cbz x0,0x00a330bc
+00a3308c	ldr x8,[x0]
+00a33090	cbz x8,0x00a330ac
+00a33094	add x20,x0,#0x8
+00a33098	mov x0,x8
+00a3309c	bl 0x00c3ab60
+00a330a0	ldr x8,[x20], #0x8
+00a330a4	cbnz x8,0x00a33098
+00a330a8	ldr x0,[x19, #0x20]
+00a330ac	adrp x1,0x2c1000
+00a330b0	add x1,x1,#0xb11
+00a330b4	mov w2,#0x68
+00a330b8	bl 0x00c32310
+00a330bc	ldr x0,[x19, #0x38]
+00a330c0	bl 0x00c34d40
+00a330c4	ldp x29,x30,[sp, #0x10]
+00a330c8	adrp x1,0x2c1000
+00a330cc	add x1,x1,#0xb11
+00a330d0	mov w2,#0x6b
+00a330d4	mov x0,x19
+00a330d8	ldp x20,x19,[sp], #0x20
+00a330dc	b 0x00c32310

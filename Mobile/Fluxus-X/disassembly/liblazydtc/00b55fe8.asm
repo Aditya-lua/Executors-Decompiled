@@ -1,0 +1,95 @@
+; SipHash_Update @ 00b55fe8
+00b55fe8	str x27,[sp, #-0x60]!
+00b55fec	stp x26,x25,[sp, #0x10]
+00b55ff0	stp x24,x23,[sp, #0x20]
+00b55ff4	stp x22,x21,[sp, #0x30]
+00b55ff8	stp x20,x19,[sp, #0x40]
+00b55ffc	stp x29,x30,[sp, #0x50]
+00b56000	ldp x8,x26,[x0]
+00b56004	ldp x24,x25,[x0, #0x10]
+00b56008	ldr w27,[x0, #0x28]
+00b5600c	ldr x23,[x0, #0x20]
+00b56010	mov x21,x2
+00b56014	mov x20,x1
+00b56018	mov x19,x0
+00b5601c	add x8,x8,x2
+00b56020	add x29,sp,#0x50
+00b56024	str x8,[x0]
+00b56028	cbz w27,0x00b560bc
+00b5602c	mov w8,#0x8
+00b56030	sub w22,w8,w27
+00b56034	add x8,x19,x27
+00b56038	cmp x22,x21
+00b5603c	add x0,x8,#0x38
+00b56040	b.ls 0x00b5605c
+00b56044	mov x1,x20
+00b56048	mov x2,x21
+00b5604c	bl 0x00c2ffd0
+00b56050	add w8,w27,w21
+00b56054	str w8,[x19, #0x28]
+00b56058	b 0x00b56144
+00b5605c	mov x1,x20
+00b56060	mov x2,x22
+00b56064	bl 0x00c2ffd0
+00b56068	ldr x8,[x19, #0x38]
+00b5606c	ldr w9,[x19, #0x30]
+00b56070	sub x21,x21,x22
+00b56074	add x20,x20,x22
+00b56078	eor x23,x8,x23
+00b5607c	cbz w9,0x00b560b8
+00b56080	mov w10,wzr
+00b56084	add x11,x24,x26
+00b56088	add x12,x23,x25
+00b5608c	eor x13,x11,x24, ROR #0x33
+00b56090	ror x11,x11,#0x20
+00b56094	eor x14,x12,x23, ROR #0x30
+00b56098	add w10,w10,#0x1
+00b5609c	add x26,x14,x11
+00b560a0	add x11,x12,x13
+00b560a4	cmp w10,w9
+00b560a8	eor x23,x26,x14, ROR #0x2b
+00b560ac	eor x24,x11,x13, ROR #0x2f
+00b560b0	ror x25,x11,#0x20
+00b560b4	b.cc 0x00b56084
+00b560b8	eor x26,x26,x8
+00b560bc	and w22,w21,#0x7
+00b560c0	add x8,x20,x21
+00b560c4	sub x1,x8,x22
+00b560c8	cmp x20,x1
+00b560cc	b.eq 0x00b56128
+00b560d0	ldr w8,[x19, #0x30]
+00b560d4	ldr x9,[x20]
+00b560d8	eor x23,x9,x23
+00b560dc	cbz w8,0x00b56118
+00b560e0	mov w10,wzr
+00b560e4	add x11,x24,x26
+00b560e8	add x12,x23,x25
+00b560ec	eor x13,x11,x24, ROR #0x33
+00b560f0	ror x11,x11,#0x20
+00b560f4	eor x14,x12,x23, ROR #0x30
+00b560f8	add w10,w10,#0x1
+00b560fc	add x26,x14,x11
+00b56100	add x11,x12,x13
+00b56104	cmp w10,w8
+00b56108	eor x23,x26,x14, ROR #0x2b
+00b5610c	eor x24,x11,x13, ROR #0x2f
+00b56110	ror x25,x11,#0x20
+00b56114	b.cc 0x00b560e4
+00b56118	add x20,x20,#0x8
+00b5611c	cmp x20,x1
+00b56120	eor x26,x26,x9
+00b56124	b.ne 0x00b560d4
+00b56128	cbz w22,0x00b56138
+00b5612c	add x0,x19,#0x38
+00b56130	mov x2,x22
+00b56134	bl 0x00c2ffd0
+00b56138	str w22,[x19, #0x28]
+00b5613c	stp x26,x24,[x19, #0x8]
+00b56140	stp x25,x23,[x19, #0x18]
+00b56144	ldp x29,x30,[sp, #0x50]
+00b56148	ldp x20,x19,[sp, #0x40]
+00b5614c	ldp x22,x21,[sp, #0x30]
+00b56150	ldp x24,x23,[sp, #0x20]
+00b56154	ldp x26,x25,[sp, #0x10]
+00b56158	ldr x27,[sp], #0x60
+00b5615c	ret

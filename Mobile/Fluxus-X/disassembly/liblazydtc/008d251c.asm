@@ -1,0 +1,33 @@
+; LZ4_resetStream_fast @ 008d251c
+008d251c	stp x29,x30,[sp, #-0x20]!
+008d2520	stp x20,x19,[sp, #0x10]
+008d2524	mov x29,sp
+008d2528	add x20,x0,#0x4, LSL #12
+008d252c	mov x19,x0
+008d2530	ldr w8,[x20, #0x14]
+008d2534	cmp w8,#0x2
+008d2538	b.eq 0x008d2548
+008d253c	cbnz w8,0x008d255c
+008d2540	ldr w8,[x20, #0x10]
+008d2544	b 0x008d2578
+008d2548	ldr w8,[x20, #0x10]
+008d254c	mov w9,#0x1
+008d2550	movk w9,#0x4000, LSL #16
+008d2554	cmp w8,w9
+008d2558	b.cc 0x008d2578
+008d255c	mov x0,x19
+008d2560	mov w1,wzr
+008d2564	mov w2,#0x4000
+008d2568	bl 0x00c301c0
+008d256c	movi v0.2D,#0x0
+008d2570	str d0,[x19, #0x4010]
+008d2574	b 0x008d2584
+008d2578	cbz w8,0x008d2584
+008d257c	add w8,w8,#0x10, LSL #12
+008d2580	str w8,[x20, #0x10]
+008d2584	movi v0.2D,#0x0
+008d2588	str wzr,[x20, #0x18]
+008d258c	str q0,[x19, #0x4000]
+008d2590	ldp x20,x19,[sp, #0x10]
+008d2594	ldp x29,x30,[sp], #0x20
+008d2598	ret

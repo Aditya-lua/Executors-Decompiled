@@ -1,0 +1,5 @@
+; SSL_get_wbio @ 00c34310
+00c34310	adrp x16,0xcb8000
+00c34314	ldr x17,[x16, #0x170]
+00c34318	add x16,x16,#0x170
+00c3431c	br x17

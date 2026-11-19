@@ -1,0 +1,5 @@
+; i2s_ASN1_ENUMERATED @ 00c40920
+00c40920	adrp x16,0xcbe000
+00c40924	ldr x17,[x16, #0x478]
+00c40928	add x16,x16,#0x478
+00c4092c	br x17

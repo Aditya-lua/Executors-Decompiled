@@ -1,0 +1,19 @@
+{
+  "source": "Temurin JDK 25 include/jni.h",
+  "pointer_bytes": 8,
+  "reserved_slots": 4,
+  "entries": {
+    "GetJavaVM": {
+      "slot": 219,
+      "arm64_byte_offset": "0x6d8"
+    },
+    "NewGlobalRef": {
+      "slot": 21,
+      "arm64_byte_offset": "0xa8"
+    },
+    "NewStringUTF": {
+      "slot": 167,
+      "arm64_byte_offset": "0x538"
+    }
+  }
+}

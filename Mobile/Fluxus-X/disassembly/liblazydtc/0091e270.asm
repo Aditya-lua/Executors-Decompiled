@@ -1,0 +1,89 @@
+; FUN_0091e270 @ 0091e270
+0091e270	str x27,[sp, #-0x60]!
+0091e274	stp x26,x25,[sp, #0x10]
+0091e278	stp x24,x23,[sp, #0x20]
+0091e27c	stp x22,x21,[sp, #0x30]
+0091e280	stp x20,x19,[sp, #0x40]
+0091e284	stp x29,x30,[sp, #0x50]
+0091e288	add x29,sp,#0x50
+0091e28c	add x8,x2,#0x1
+0091e290	mov x21,x7
+0091e294	mov x22,x6
+0091e298	mov x23,x5
+0091e29c	mov x24,x4
+0091e2a0	mov x25,x3
+0091e2a4	mov x26,x2
+0091e2a8	mov x27,x1
+0091e2ac	cmp x8,#0x18
+0091e2b0	mov x19,x0
+0091e2b4	b.ls 0x0091e2c0
+0091e2b8	mov w0,#0x2b
+0091e2bc	b 0x0091e3b4
+0091e2c0	adrp x8,0xcc4000
+0091e2c4	add x8,x8,#0x690
+0091e2c8	mov w0,#0x1
+0091e2cc	mov w1,#0xa0
+0091e2d0	ldr x8,[x8]
+0091e2d4	blr x8
+0091e2d8	mov x20,x0
+0091e2dc	cbz x0,0x0091e3ac
+0091e2e0	mov x0,x20
+0091e2e4	mov x1,x27
+0091e2e8	mov x2,x26
+0091e2ec	bl 0x00c2ffd0
+0091e2f0	cbz x25,0x0091e308
+0091e2f4	mov x0,x25
+0091e2f8	mov x1,x24
+0091e2fc	bl 0x00941948
+0091e300	str x0,[x20, #0x18]
+0091e304	cbz x0,0x0091e360
+0091e308	cbz x23,0x0091e320
+0091e30c	mov x0,x23
+0091e310	mov x1,x22
+0091e314	bl 0x00941948
+0091e318	str x0,[x20, #0x20]
+0091e31c	cbz x0,0x0091e360
+0091e320	cbz x21,0x0091e338
+0091e324	ldr x1,[x29, #0x10]
+0091e328	mov x0,x21
+0091e32c	bl 0x00941948
+0091e330	str x0,[x20, #0x28]
+0091e334	cbz x0,0x0091e360
+0091e338	add x0,x20,#0x30
+0091e33c	mov w2,#0x100000
+0091e340	mov x1,xzr
+0091e344	bl 0x0091fdb8
+0091e348	add x0,x20,#0x68
+0091e34c	mov w2,#0x100000
+0091e350	mov x1,xzr
+0091e354	bl 0x0091fdb8
+0091e358	mov w0,wzr
+0091e35c	b 0x0091e3b0
+0091e360	adrp x21,0xcc4000
+0091e364	add x21,x21,#0x678
+0091e368	ldr x0,[x20, #0x18]
+0091e36c	ldr x8,[x21]
+0091e370	blr x8
+0091e374	ldr x8,[x21]
+0091e378	ldr x0,[x20, #0x20]
+0091e37c	blr x8
+0091e380	ldr x8,[x21]
+0091e384	ldr x0,[x20, #0x28]
+0091e388	blr x8
+0091e38c	add x0,x20,#0x30
+0091e390	bl 0x0091fdcc
+0091e394	add x0,x20,#0x68
+0091e398	bl 0x0091fdcc
+0091e39c	ldr x8,[x21]
+0091e3a0	mov x0,x20
+0091e3a4	blr x8
+0091e3a8	mov x20,xzr
+0091e3ac	mov w0,#0x1b
+0091e3b0	str x20,[x19]
+0091e3b4	ldp x29,x30,[sp, #0x50]
+0091e3b8	ldp x20,x19,[sp, #0x40]
+0091e3bc	ldp x22,x21,[sp, #0x30]
+0091e3c0	ldp x24,x23,[sp, #0x20]
+0091e3c4	ldp x26,x25,[sp, #0x10]
+0091e3c8	ldr x27,[sp], #0x60
+0091e3cc	ret

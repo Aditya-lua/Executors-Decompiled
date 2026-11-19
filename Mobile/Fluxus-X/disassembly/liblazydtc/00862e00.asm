@@ -1,0 +1,28 @@
+; FUN_00862e00 @ 00862e00
+00862e00	stp x29,x30,[sp, #-0x30]!
+00862e04	str x21,[sp, #0x10]
+00862e08	stp x20,x19,[sp, #0x20]
+00862e0c	mov x29,sp
+00862e10	ldr w9,[x0, #0x90]
+00862e14	and w8,w1,#0xff
+00862e18	cmp w9,w8
+00862e1c	b.ne 0x00862e38
+00862e20	bl 0x00858f2c
+00862e24	mov w0,#0x1
+00862e28	ldp x20,x19,[sp, #0x20]
+00862e2c	ldr x21,[sp, #0x10]
+00862e30	ldp x29,x30,[sp], #0x30
+00862e34	ret
+00862e38	mov w19,w3
+00862e3c	mov w21,w1
+00862e40	mov w1,w8
+00862e44	mov x3,xzr
+00862e48	mov x20,x0
+00862e4c	bl 0x0086b5f8
+00862e50	and w3,w19,#0x1
+00862e54	mov x0,x20
+00862e58	mov w1,w21
+00862e5c	ldp x20,x19,[sp, #0x20]
+00862e60	ldr x21,[sp, #0x10]
+00862e64	ldp x29,x30,[sp], #0x30
+00862e68	b 0x0086e434

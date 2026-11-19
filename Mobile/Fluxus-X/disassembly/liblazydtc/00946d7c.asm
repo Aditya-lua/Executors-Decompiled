@@ -1,0 +1,46 @@
+; FUN_00946d7c @ 00946d7c
+00946d7c	add x8,x0,#0xa82
+00946d80	ldr x8,[x8]
+00946d84	tst x8,#0x10000000
+00946d88	cset w9,eq
+00946d8c	cmp x0,#0x0
+00946d90	cset w10,eq
+00946d94	cmp w2,#0x1
+00946d98	orr w9,w10,w9
+00946d9c	b.ne 0x00946dd0
+00946da0	tbz w8,#0x1c,0x00946dd0
+00946da4	tbnz w9,#0x0,0x00946dd4
+00946da8	ldr x8,[x0, #0x12a0]
+00946dac	cbz x8,0x00946dbc
+00946db0	ldr w8,[x8, #0x8]
+00946db4	cmp w8,#0x1
+00946db8	b.lt 0x00946dd4
+00946dbc	ldr w3,[x1, #0x1c0]
+00946dc0	add x2,x1,#0x164
+00946dc4	adrp x1,0x2cc000
+00946dc8	add x1,x1,#0xfde
+00946dcc	b 0x00904c98
+00946dd0	tbz w9,#0x0,0x00946dd8
+00946dd4	ret
+00946dd8	ldr x8,[x0, #0x12a0]
+00946ddc	cbz x8,0x00946dec
+00946de0	ldr w8,[x8, #0x8]
+00946de4	cmp w8,#0x1
+00946de8	b.lt 0x00946dd4
+00946dec	ldr x8,[x1, #0x3a0]
+00946df0	tbnz w8,#0x1,0x00946e04
+00946df4	tbnz w8,#0x0,0x00946e0c
+00946df8	tbnz w8,#0x9,0x00946e14
+00946dfc	add x8,x1,#0x58
+00946e00	b 0x00946e18
+00946e04	add x8,x1,#0xa8
+00946e08	b 0x00946e18
+00946e0c	add x8,x1,#0xe0
+00946e10	b 0x00946e18
+00946e14	add x8,x1,#0x88
+00946e18	ldr x2,[x8]
+00946e1c	ldr w4,[x1, #0x15c]
+00946e20	add x3,x1,#0x100
+00946e24	adrp x1,0x2cd000
+00946e28	add x1,x1,#0x5
+00946e2c	b 0x00904c98

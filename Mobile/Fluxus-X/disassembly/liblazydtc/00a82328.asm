@@ -1,0 +1,33 @@
+; FUN_00a82328 @ 00a82328
+00a82328	stp x29,x30,[sp, #-0x10]!
+00a8232c	mov x29,sp
+00a82330	cbz x4,0x00a82360
+00a82334	mov w8,#0x1
+00a82338	str w8,[x4]
+00a8233c	cbz w2,0x00a82348
+00a82340	ldr w8,[x3, #0x14]
+00a82344	cbz w8,0x00a8239c
+00a82348	sxtw x1,w1
+00a8234c	bl 0x00c3dfc0
+00a82350	cmp w0,#0x0
+00a82354	cset w0,ne
+00a82358	ldp x29,x30,[sp], #0x10
+00a8235c	ret
+00a82360	bl 0x00c342a0
+00a82364	adrp x0,0x2a6000
+00a82368	adrp x2,0x2bb000
+00a8236c	add x0,x0,#0x93
+00a82370	add x2,x2,#0xcfc
+00a82374	mov w1,#0x5b
+00a82378	bl 0x00c342b0
+00a8237c	mov w1,#0x102
+00a82380	orr w0,wzr,#0xf
+00a82384	movk w1,#0xc, LSL #16
+00a82388	mov x2,xzr
+00a8238c	bl 0x00c342c0
+00a82390	mov w0,wzr
+00a82394	ldp x29,x30,[sp], #0x10
+00a82398	ret
+00a8239c	mov w0,#0x1
+00a823a0	ldp x29,x30,[sp], #0x10
+00a823a4	ret

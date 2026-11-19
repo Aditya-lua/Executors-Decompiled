@@ -1,0 +1,4 @@
+; EC_PRIVATEKEY_free @ 00a244e0
+00a244e0	adrp x1,0xc5b000
+00a244e4	add x1,x1,#0x2e0
+00a244e8	b 0x00c36160

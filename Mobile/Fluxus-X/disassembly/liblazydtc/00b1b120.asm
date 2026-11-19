@@ -1,0 +1,4 @@
+; X509_REVOKED_free @ 00b1b120
+00b1b120	adrp x1,0xc82000
+00b1b124	add x1,x1,#0x58
+00b1b128	b 0x00c36160

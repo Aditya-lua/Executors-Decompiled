@@ -1,0 +1,77 @@
+; bn_div_words @ 00a05000
+00a05000	cbz x2,0x00a05128
+00a05004	str x21,[sp, #-0x30]!
+00a05008	mov x21,x0
+00a0500c	mov x0,x2
+00a05010	stp x20,x19,[sp, #0x10]
+00a05014	stp x29,x30,[sp, #0x20]
+00a05018	add x29,sp,#0x20
+00a0501c	mov x19,x2
+00a05020	mov x20,x1
+00a05024	bl 0x00c38d80
+00a05028	mov w8,#0x40
+00a0502c	cmp x21,x19
+00a05030	sub w9,w8,w0
+00a05034	csel x8,xzr,x19,cc
+00a05038	sub x8,x21,x8
+00a0503c	cbz w9,0x00a0505c
+00a05040	mov w9,w9
+00a05044	mov w10,w0
+00a05048	lsl x8,x8,x9
+00a0504c	lsr x10,x20,x10
+00a05050	lsl x19,x19,x9
+00a05054	orr x8,x8,x10
+00a05058	lsl x20,x20,x9
+00a0505c	lsr x9,x19,#0x20
+00a05060	mov x13,xzr
+00a05064	and x10,x19,#0xffffffff
+00a05068	lsl x11,x9,#0x20
+00a0506c	mov w12,#0x2
+00a05070	b 0x00a05090
+00a05074	cmp x8,x16
+00a05078	sub w17,w8,w16
+00a0507c	csel w8,w19,wzr,cc
+00a05080	add w8,w17,w8
+00a05084	lsl x13,x14,#0x20
+00a05088	extr x8,x8,x15,#0x20
+00a0508c	lsl x20,x15,#0x20
+00a05090	lsr x14,x8,#0x20
+00a05094	cmp x14,x9
+00a05098	b.ne 0x00a050a4
+00a0509c	mov w14,#0xffffffff
+00a050a0	b 0x00a050a8
+00a050a4	udiv x14,x8,x9
+00a050a8	mul x15,x14,x9
+00a050ac	sub x17,x8,x15
+00a050b0	lsr x18,x17,#0x20
+00a050b4	mul x16,x14,x10
+00a050b8	cbnz x18,0x00a050f0
+00a050bc	lsl x0,x8,#0x20
+00a050c0	lsr x18,x20,#0x20
+00a050c4	msub x0,x11,x14,x0
+00a050c8	orr x1,x0,x18
+00a050cc	cmp x16,x1
+00a050d0	b.ls 0x00a050f0
+00a050d4	add x17,x17,x9
+00a050d8	sub x14,x14,#0x1
+00a050dc	sub x15,x15,x9
+00a050e0	sub x16,x16,x10
+00a050e4	lsr x1,x17,#0x20
+00a050e8	add x0,x0,x11
+00a050ec	cbz x1,0x00a050c8
+00a050f0	lsl x17,x16,#0x20
+00a050f4	add x16,x15,x16, LSR #0x20
+00a050f8	subs x15,x20,x17
+00a050fc	cinc x16,x16,cc
+00a05100	cmp x8,x16
+00a05104	cset w17,cc
+00a05108	subs w12,w12,#0x1
+00a0510c	sub x14,x14,x17
+00a05110	b.ne 0x00a05074
+00a05114	ldp x29,x30,[sp, #0x20]
+00a05118	ldp x20,x19,[sp, #0x10]
+00a0511c	orr x0,x14,x13
+00a05120	ldr x21,[sp], #0x30
+00a05124	ret
+00a05128	mov x0,#-0x1
+00a0512c	ret

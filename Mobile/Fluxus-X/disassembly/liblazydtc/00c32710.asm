@@ -1,0 +1,5 @@
+; SSL_CTX_ctrl @ 00c32710
+00c32710	adrp x16,0xcb7000
+00c32714	ldr x17,[x16, #0x370]
+00c32718	add x16,x16,#0x370
+00c3271c	br x17

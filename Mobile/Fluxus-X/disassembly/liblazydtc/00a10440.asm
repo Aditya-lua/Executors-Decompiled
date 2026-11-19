@@ -1,0 +1,56 @@
+; ASN1_STRING_set_default_mask_asc @ 00a10440
+00a10440	str x19,[sp, #-0x20]!
+00a10444	adrp x1,0x2c7000
+00a10448	add x1,x1,#0x77b
+00a1044c	mov w2,#0x5
+00a10450	stp x29,x30,[sp, #0x10]
+00a10454	add x29,sp,#0x10
+00a10458	mov x19,x0
+00a1045c	bl 0x00c31bb0
+00a10460	cbz w0,0x00a104c0
+00a10464	adrp x1,0x29f000
+00a10468	add x1,x1,#0xf66
+00a1046c	mov x0,x19
+00a10470	bl 0x00c301f0
+00a10474	cbz w0,0x00a104ec
+00a10478	adrp x1,0x2bb000
+00a1047c	add x1,x1,#0xa39
+00a10480	mov x0,x19
+00a10484	bl 0x00c301f0
+00a10488	cbz w0,0x00a104f4
+00a1048c	adrp x1,0x2a7000
+00a10490	add x1,x1,#0xd67
+00a10494	mov x0,x19
+00a10498	bl 0x00c301f0
+00a1049c	cbz w0,0x00a104fc
+00a104a0	adrp x1,0x2c1000
+00a104a4	add x1,x1,#0x1ad
+00a104a8	mov x0,x19
+00a104ac	bl 0x00c301f0
+00a104b0	mov w8,wzr
+00a104b4	cbnz w0,0x00a1050c
+00a104b8	mov w0,#0xffffffff
+00a104bc	b 0x00a10500
+00a104c0	ldrb w8,[x19, #0x5]!
+00a104c4	cbz w8,0x00a1050c
+00a104c8	add x1,sp,#0x8
+00a104cc	mov x0,x19
+00a104d0	mov w2,wzr
+00a104d4	bl 0x00c300c0
+00a104d8	ldr x8,[sp, #0x8]
+00a104dc	ldrb w9,[x8]
+00a104e0	mov w8,wzr
+00a104e4	cbnz w9,0x00a1050c
+00a104e8	b 0x00a10500
+00a104ec	mov x0,#-0x2801
+00a104f0	b 0x00a10500
+00a104f4	orr x0,xzr,#-0x5
+00a104f8	b 0x00a10500
+00a104fc	mov w0,#0x2000
+00a10500	adrp x8,0xcc8000
+00a10504	str x0,[x8, #0x7e0]
+00a10508	mov w8,#0x1
+00a1050c	ldp x29,x30,[sp, #0x10]
+00a10510	mov w0,w8
+00a10514	ldr x19,[sp], #0x20
+00a10518	ret

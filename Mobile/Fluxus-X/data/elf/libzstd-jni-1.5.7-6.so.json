@@ -1,0 +1,5534 @@
+{
+  "path": "lib/arm64-v8a/libzstd-jni-1.5.7-6.so",
+  "bytes": 603960,
+  "sha256": "e5ebc383da2f10794b1ca23964fb7e202fcb351e83942f0c8fe5d082a119b2c6",
+  "machine": "EM_AARCH64",
+  "class": 64,
+  "little_endian": true,
+  "needed": [
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+  ],
+  "imports": 32,
+  "exports": 728,
+  "defined_functions": 719,
+  "sections": [
+    {
+      "name": "",
+      "address": "0x0",
+      "file_offset": "0x0",
+      "bytes": 0,
+      "type": "SHT_NULL",
+      "flags": 0
+    },
+    {
+      "name": ".hash",
+      "address": "0x1c8",
+      "file_offset": "0x1c8",
+      "bytes": 5144,
+      "type": "SHT_HASH",
+      "flags": 2
+    },
+    {
+      "name": ".dynsym",
+      "address": "0x15e0",
+      "file_offset": "0x15e0",
+      "bytes": 18312,
+      "type": "SHT_DYNSYM",
+      "flags": 2
+    },
+    {
+      "name": ".dynstr",
+      "address": "0x5d68",
+      "file_offset": "0x5d68",
+      "bytes": 23155,
+      "type": "SHT_STRTAB",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version",
+      "address": "0xb7dc",
+      "file_offset": "0xb7dc",
+      "bytes": 1526,
+      "type": "SHT_GNU_versym",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version_r",
+      "address": "0xbdd8",
+      "file_offset": "0xbdd8",
+      "bytes": 32,
+      "type": "SHT_GNU_verneed",
+      "flags": 2
+    },
+    {
+      "name": ".rela.dyn",
+      "address": "0xbdf8",
+      "file_offset": "0xbdf8",
+      "bytes": 1992,
+      "type": "SHT_RELA",
+      "flags": 2
+    },
+    {
+      "name": ".rela.plt",
+      "address": "0xc5c0",
+      "file_offset": "0xc5c0",
+      "bytes": 8088,
+      "type": "SHT_RELA",
+      "flags": 66
+    },
+    {
+      "name": ".plt",
+      "address": "0xe560",
+      "file_offset": "0xe560",
+      "bytes": 5424,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".text",
+      "address": "0xfa90",
+      "file_offset": "0xfa90",
+      "bytes": 420484,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".rodata",
+      "address": "0x76520",
+      "file_offset": "0x76520",
+      "bytes": 23544,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".eh_frame_hdr",
+      "address": "0x7c118",
+      "file_offset": "0x7c118",
+      "bytes": 19420,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".eh_frame",
+      "address": "0x80cf8",
+      "file_offset": "0x80cf8",
+      "bytes": 69176,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".note.android.ident",
+      "address": "0x91b30",
+      "file_offset": "0x91b30",
+      "bytes": 152,
+      "type": "SHT_NOTE",
+      "flags": 2
+    },
+    {
+      "name": ".note.gnu.property",
+      "address": "0x91bc8",
+      "file_offset": "0x91bc8",
+      "bytes": 32,
+      "type": "SHT_NOTE",
+      "flags": 2
+    },
+    {
+      "name": ".fini_array",
+      "address": "0x96000",
+      "file_offset": "0x92000",
+      "bytes": 16,
+      "type": "SHT_FINI_ARRAY",
+      "flags": 3
+    },
+    {
+      "name": ".data.rel.ro",
+      "address": "0x96010",
+      "file_offset": "0x92010",
+      "bytes": 656,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".dynamic",
+      "address": "0x962a0",
+      "file_offset": "0x922a0",
+      "bytes": 432,
+      "type": "SHT_DYNAMIC",
+      "flags": 3
+    },
+    {
+      "name": ".got",
+      "address": "0x96450",
+      "file_offset": "0x92450",
+      "bytes": 80,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".got.plt",
+      "address": "0x964a0",
+      "file_offset": "0x924a0",
+      "bytes": 2720,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".data",
+      "address": "0x96f40",
+      "file_offset": "0x92f40",
+      "bytes": 8,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".bss",
+      "address": "0x96f48",
+      "file_offset": "0x92f48",
+      "bytes": 152,
+      "type": "SHT_NOBITS",
+      "flags": 3
+    },
+    {
+      "name": ".comment",
+      "address": "0x0",
+      "file_offset": "0x92f48",
+      "bytes": 263,
+      "type": "SHT_PROGBITS",
+      "flags": 48
+    },
+    {
+      "name": ".shstrtab",
+      "address": "0x0",
+      "file_offset": "0x9304f",
+      "bytes": 226,
+      "type": "SHT_STRTAB",
+      "flags": 0
+    }
+  ],
+  "imported_symbols": [
+    {
+      "name": "ZSTD_trace_decompress_end",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_WEAK"
+    },
+    {
+      "name": "pthread_mutex_destroy",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_create",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_join",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__cxa_finalize",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "calloc",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_cond_destroy",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "clock",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_mutex_init",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_cond_init",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "qsort",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__sF",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_OBJECT",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "memcmp",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "fflush",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "fputc",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__stack_chk_fail",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_cond_wait",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_mutex_lock",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "memmove",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "fprintf",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "malloc",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "memcpy",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "memset",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_trace_compress_begin",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_WEAK"
+    },
+    {
+      "name": "fwrite",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "pthread_cond_broadcast",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "free",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_trace_decompress_begin",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_WEAK"
+    },
+    {
+      "name": "pthread_cond_signal",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_trace_compress_end",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_WEAK"
+    },
+    {
+      "name": "pthread_mutex_unlock",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__cxa_atexit",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    }
+  ],
+  "exported_symbols": [
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStream",
+      "address": "0x63fe0",
+      "bytes": 80,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_createCCtx_advanced",
+      "address": "0x4c2d4",
+      "bytes": 564,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressBlock",
+      "address": "0x5abdc",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_best_wait",
+      "address": "0x5c408",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress1X2",
+      "address": "0x6b3f4",
+      "bytes": 156,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_refPrefix",
+      "address": "0x559d4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressEnd",
+      "address": "0x1913c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_getFrameParams",
+      "address": "0x6c518",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_computeEpochs",
+      "address": "0x5b608",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_decompressStream",
+      "address": "0x65d4c",
+      "bytes": 440,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_createDCtx",
+      "address": "0x67f3c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_versionNumber",
+      "address": "0xfacc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompressDCtx",
+      "address": "0x74e24",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getCParamsFromCCtxParams",
+      "address": "0x16a94",
+      "bytes": 212,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_selectDecoder",
+      "address": "0x73808",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_freeDTable",
+      "address": "0x722f0",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_decompress4X_hufOnly_wksp",
+      "address": "0x52734",
+      "bytes": 228,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_convertBlockSequences",
+      "address": "0x1b508",
+      "bytes": 640,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress4X2_usingDTable",
+      "address": "0x6f018",
+      "bytes": 860,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompress_usingDDict",
+      "address": "0x75544",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_fast_dictMatchState",
+      "address": "0x27d18",
+      "bytes": 6556,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCCtxSize_usingCCtxParams",
+      "address": "0x16ce4",
+      "bytes": 184,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HIST_countFast",
+      "address": "0x1308c",
+      "bytes": 84,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress1X4",
+      "address": "0x6befc",
+      "bytes": 156,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_chainLogMin",
+      "address": "0x67134",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressStream2",
+      "address": "0x1a438",
+      "bytes": 1728,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressRleLiteralsBlock",
+      "address": "0x1f2b8",
+      "bytes": 108,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompressBlock",
+      "address": "0x70198",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_buildDTable",
+      "address": "0x722f4",
+      "bytes": 396,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeDStream",
+      "address": "0x55894",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_endStream",
+      "address": "0x6613c",
+      "bytes": 124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_dedicatedDictSearch_lazy_loadDictionary",
+      "address": "0x2af24",
+      "bytes": 848,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy_dictMatchState",
+      "address": "0x2b924",
+      "bytes": 548,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compress_usingDict",
+      "address": "0x19284",
+      "bytes": 196,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errDictionaryWrong",
+      "address": "0x671c4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_freeState",
+      "address": "0x115dc",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X_DCtx",
+      "address": "0x73a34",
+      "bytes": 180,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_isError",
+      "address": "0x71de4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_trainFromBufferDirect0",
+      "address": "0x66544",
+      "bytes": 392,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress4X4_usingDTable",
+      "address": "0x6bf98",
+      "bytes": 812,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X2_usingDTable",
+      "address": "0x72a38",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_endStream",
+      "address": "0x64390",
+      "bytes": 152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_sizeof_CCtx",
+      "address": "0x4c944",
+      "bytes": 236,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "_bss_end__",
+      "address": "0x96fe0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_flushStream",
+      "address": "0x1bba4",
+      "bytes": 104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_findFrameSizeInfoLegacy",
+      "address": "0x74ea0",
+      "bytes": 292,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy_dictMatchState_row",
+      "address": "0x2e24c",
+      "bytes": 1956,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getDictID_fromDict",
+      "address": "0x5578c",
+      "bytes": 40,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress1X2_usingDTable",
+      "address": "0x6ed20",
+      "bytes": 164,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_isError",
+      "address": "0x6df14",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_createDCtx",
+      "address": "0x755a0",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_setContentSize0",
+      "address": "0x64e88",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBufferStream0",
+      "address": "0x65490",
+      "bytes": 340,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_blockCompress",
+      "address": "0x446b4",
+      "bytes": 828,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_loadDDictFast0",
+      "address": "0x65398",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X4_usingDTable",
+      "address": "0x73270",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress",
+      "address": "0x73848",
+      "bytes": 152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCDict",
+      "address": "0x19b84",
+      "bytes": 96,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtxParams_registerSequenceProducer",
+      "address": "0x1bcec",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_splitBlock",
+      "address": "0x4be9c",
+      "bytes": 468,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getDictIdFromFrameBuffer",
+      "address": "0x66a14",
+      "bytes": 104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setDecompressionLongMax",
+      "address": "0x66f38",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_reset_compressedBlockState",
+      "address": "0x17448",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compress2",
+      "address": "0x178d0",
+      "bytes": 144,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressEnd_public",
+      "address": "0x19000",
+      "bytes": 316,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_isError",
+      "address": "0x6ae84",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_free",
+      "address": "0x64e5c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HIST_count",
+      "address": "0x130e0",
+      "bytes": 84,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompressBlock",
+      "address": "0x6c574",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_setFParams",
+      "address": "0x16414",
+      "bytes": 116,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_resize",
+      "address": "0x11224",
+      "bytes": 312,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeCStream",
+      "address": "0x1a10c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_readNCount",
+      "address": "0x71dec",
+      "bytes": 548,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_compressDirectByteBuffer",
+      "address": "0x6420c",
+      "bytes": 388,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDictCompress_init",
+      "address": "0x647c4",
+      "bytes": 180,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompressContinue",
+      "address": "0x7503c",
+      "bytes": 856,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy_extDict_row",
+      "address": "0x33058",
+      "bytes": 2408,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_sum",
+      "address": "0x5b580",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCDict_advanced2",
+      "address": "0x196b4",
+      "bytes": 708,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X_DCtx",
+      "address": "0x738e0",
+      "bytes": 180,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressContinue",
+      "address": "0x54ccc",
+      "bytes": 1104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_resetDStream",
+      "address": "0x55d10",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errParameterOutOfBound",
+      "address": "0x671dc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2_extDict",
+      "address": "0x339c0",
+      "bytes": 1260,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_loadDictionary",
+      "address": "0x1669c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_adjustCParams",
+      "address": "0x167e0",
+      "bytes": 276,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_loadDDict0",
+      "address": "0x653f0",
+      "bytes": 148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getDecompressedSize",
+      "address": "0x5418c",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_loadCEntropy",
+      "address": "0x18658",
+      "bytes": 748,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X4_usingDTable",
+      "address": "0x73400",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_compress_usingCTable",
+      "address": "0x128a0",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_writeSkippableFrame",
+      "address": "0x17d34",
+      "bytes": 112,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_copyDCtx",
+      "address": "0x6c510",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_windowLogMax",
+      "address": "0x6712c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_createDCtx",
+      "address": "0x70088",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_findFrameSizeInfoLegacy",
+      "address": "0x71054",
+      "bytes": 292,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getErrorCode",
+      "address": "0x11fa8",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_decompressContinue",
+      "address": "0x75750",
+      "bytes": 1152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionHashLog",
+      "address": "0x66fe4",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompress_usingPreparedDCtx",
+      "address": "0x6d174",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_decompress_wksp_bmi2",
+      "address": "0x1045c",
+      "bytes": 1600,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_resetCStream",
+      "address": "0x65f30",
+      "bytes": 148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btultra_extDict",
+      "address": "0x46e58",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_freeDStreamNative",
+      "address": "0x645a0",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress1X2",
+      "address": "0x6ef7c",
+      "bytes": 156,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_canonicalFromHash",
+      "address": "0x118cc",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_decompressFastDict0",
+      "address": "0x64ad8",
+      "bytes": 252,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_add",
+      "address": "0x1135c",
+      "bytes": 104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DDict_dictSize",
+      "address": "0x5321c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btultra2",
+      "address": "0x46d40",
+      "bytes": 256,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtxParams_init_advanced",
+      "address": "0x15730",
+      "bytes": 132,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_generateSequences",
+      "address": "0x43e88",
+      "bytes": 1824,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_optimalTableLog",
+      "address": "0x12548",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionJobSize",
+      "address": "0x66f90",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_freeCStream",
+      "address": "0x65f18",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_compress1X_repeat",
+      "address": "0x14a20",
+      "bytes": 48,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_nextInputSizeHint",
+      "address": "0x4d500",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_decompressedDirectByteBufferSize",
+      "address": "0x66af8",
+      "bytes": 108,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompressBegin",
+      "address": "0x70078",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_decompressByteArray0",
+      "address": "0x656d4",
+      "bytes": 192,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_recommendedDInSize",
+      "address": "0x75bd0",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_flushStream",
+      "address": "0x661b8",
+      "bytes": 124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "g_debuglevel",
+      "address": "0x96f48",
+      "bytes": 4,
+      "type": "STT_OBJECT",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCCtx",
+      "address": "0x15190",
+      "bytes": 76,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getErrorString",
+      "address": "0x11fb4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_hashLogMax",
+      "address": "0x67148",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_copyCCtx",
+      "address": "0x174b4",
+      "bytes": 472,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeThreadPool",
+      "address": "0x11204",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionOverlapLog",
+      "address": "0x66fac",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress1X4",
+      "address": "0x6fa94",
+      "bytes": 160,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_createDCtx",
+      "address": "0x6c4cc",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_trace",
+      "address": "0x18f34",
+      "bytes": 204,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCCtxParams",
+      "address": "0x1561c",
+      "bytes": 84,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_findFrameCompressedSize",
+      "address": "0x54184",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_loadDictionary_byReference",
+      "address": "0x5597c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy_dictMatchState_row",
+      "address": "0x2c464",
+      "bytes": 1312,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_fast",
+      "address": "0x266c0",
+      "bytes": 5720,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HIST_count_wksp",
+      "address": "0x13040",
+      "bytes": 76,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_sizeof",
+      "address": "0x11208",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionLevel",
+      "address": "0x66eac",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initDStream_usingDDict",
+      "address": "0x55ce4",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBegin",
+      "address": "0x18f24",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompressDCtx",
+      "address": "0x70fe0",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_sizeofDCtx",
+      "address": "0x73af8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBegin_advanced",
+      "address": "0x18e14",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_referenceExternalSequences",
+      "address": "0x17dc8",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createDDict_byReference",
+      "address": "0x535c8",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getErrorName",
+      "address": "0x66c04",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_dictSelectionFree",
+      "address": "0x5c5cc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errDstSizeTooSmall",
+      "address": "0x6721c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy_dedicatedDictSearch",
+      "address": "0x2d6f0",
+      "bytes": 896,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_getDictID",
+      "address": "0x61cc8",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy_row",
+      "address": "0x2bd6c",
+      "bytes": 1784,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCDictSize_advanced",
+      "address": "0x19430",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_createCStream",
+      "address": "0x63fd4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_getDictHeaderSize",
+      "address": "0x61cf4",
+      "bytes": 172,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_dParam_getBounds",
+      "address": "0x55d80",
+      "bytes": 96,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HIST_add",
+      "address": "0x12cac",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_insertAndFindFirstIndex",
+      "address": "0x2b274",
+      "bytes": 368,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_create",
+      "address": "0x10d68",
+      "bytes": 80,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH_versionNumber",
+      "address": "0x114e0",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_decompressInit",
+      "address": "0x6dad8",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompress",
+      "address": "0x6d624",
+      "bytes": 104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_getNbBitsFromCTable",
+      "address": "0x135dc",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_setChecksum0",
+      "address": "0x64e74",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_warnOnSmallCorpus",
+      "address": "0x5b5a4",
+      "bytes": 100,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_createDCtx",
+      "address": "0x73bf4",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_sizeof_CStream",
+      "address": "0x15610",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_getErrorName",
+      "address": "0x6a804",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompressBegin",
+      "address": "0x73b08",
+      "bytes": 108,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_sizeof_CCtx",
+      "address": "0x15590",
+      "bytes": 128,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HIST_isError",
+      "address": "0x12ca0",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_best_start",
+      "address": "0x5c488",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_readStats",
+      "address": "0xfde8",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_decompress_usingDTable",
+      "address": "0x6aaa0",
+      "bytes": 768,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_validateCTable",
+      "address": "0x13cac",
+      "bytes": 100,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionStrategy",
+      "address": "0x67070",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "divbwt",
+      "address": "0x5eccc",
+      "bytes": 1292,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_deprecated",
+      "address": "0x18620",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_isError",
+      "address": "0x7005c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_loadCDict0",
+      "address": "0x64f08",
+      "bytes": 148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_registerSequenceProducer",
+      "address": "0x66e64",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressBegin",
+      "address": "0x55540",
+      "bytes": 232,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy_extDict",
+      "address": "0x31e14",
+      "bytes": 1092,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_update",
+      "address": "0x11b5c",
+      "bytes": 524,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_cParam_getBounds",
+      "address": "0x15910",
+      "bytes": 468,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_skipRawSeqStoreBytes",
+      "address": "0x44648",
+      "bytes": 108,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btlazy2_dictMatchState",
+      "address": "0x31a54",
+      "bytes": 960,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_digest",
+      "address": "0x117e4",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_nextSrcSizeToDecompress",
+      "address": "0x75020",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_decompressWithDictionary",
+      "address": "0x67ad0",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_free",
+      "address": "0x10f94",
+      "bytes": 272,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_toFlushNow",
+      "address": "0x4cc38",
+      "bytes": 136,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress4X2",
+      "address": "0x6b8a0",
+      "bytes": 156,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompress_usingDict",
+      "address": "0x748fc",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBegin_usingDict",
+      "address": "0x18e8c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_freeDCtx",
+      "address": "0x714b8",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress4X4",
+      "address": "0x6c2fc",
+      "bytes": 156,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X2_DCtx",
+      "address": "0x72da8",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_defaultCompressionLevel",
+      "address": "0x6716c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_loadDictionary",
+      "address": "0x55988",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_decompressedSize0",
+      "address": "0x667cc",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressDCtx",
+      "address": "0x54b6c",
+      "bytes": 76,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_searchLogMin",
+      "address": "0x6714c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_setPledgedSrcSize",
+      "address": "0x16530",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeCDict",
+      "address": "0x19ad4",
+      "bytes": 176,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy",
+      "address": "0x2cea4",
+      "bytes": 1228,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getFrameHeader_advanced",
+      "address": "0x53c4c",
+      "bytes": 696,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "divsufsort",
+      "address": "0x5d2e4",
+      "bytes": 580,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decodeSeqHeaders",
+      "address": "0x578f0",
+      "bytes": 492,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_buildDTable_wksp",
+      "address": "0x10234",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_getErrorName",
+      "address": "0x6df18",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_freeDCtx",
+      "address": "0x6da78",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initCStream_internal",
+      "address": "0x1a13c",
+      "bytes": 128,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getDictIdFromFrame",
+      "address": "0x669cc",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_decompressContinue",
+      "address": "0x67ad8",
+      "bytes": 1124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_canonicalFromHash",
+      "address": "0x11f58",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_setParameter",
+      "address": "0x55dec",
+      "bytes": 324,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_dictSelectionIsError",
+      "address": "0x5c5a8",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2_dictMatchState_row",
+      "address": "0x30600",
+      "bytes": 2108,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_createDCtx",
+      "address": "0x67a08",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_writeCTable_wksp",
+      "address": "0x1313c",
+      "bytes": 676,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_optimizeTrainFromBuffer_fastCover",
+      "address": "0x613a0",
+      "bytes": 1572,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createThreadPool",
+      "address": "0x10d60",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_findDecompressedSize",
+      "address": "0x540b8",
+      "bytes": 204,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initCStream_usingCDict_advanced",
+      "address": "0x1a1bc",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_maxCLevel",
+      "address": "0x15aec",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_freeDStreamNative",
+      "address": "0x63d30",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_getFrameProgression0",
+      "address": "0x64fa8",
+      "bytes": 192,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_estimateCompressedSize",
+      "address": "0x13c74",
+      "bytes": 56,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_reset0",
+      "address": "0x65484",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_versionString",
+      "address": "0x11f84",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_getDecompressedSize",
+      "address": "0x73e6c",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_setDictID0",
+      "address": "0x64e9c",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_isError",
+      "address": "0x11f90",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_getFrameParams",
+      "address": "0x700d4",
+      "bytes": 196,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress1X2_usingDTable",
+      "address": "0x6b188",
+      "bytes": 180,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompressContinue",
+      "address": "0x6d7d0",
+      "bytes": 580,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_freeDCtx",
+      "address": "0x756c4",
+      "bytes": 96,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_searchLogMax",
+      "address": "0x67154",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_finalizeDictionary",
+      "address": "0x61da0",
+      "bytes": 468,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "stubSequenceProducer",
+      "address": "0x66e44",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initCStream_usingDict",
+      "address": "0x1a2d0",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_fillDoubleHashTable",
+      "address": "0x20edc",
+      "bytes": 620,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errWorkSpaceTooSmall",
+      "address": "0x67214",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStreamWithFastDict",
+      "address": "0x64144",
+      "bytes": 200,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_recommendedDOutSize",
+      "address": "0x65cac",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_reset",
+      "address": "0x11608",
+      "bytes": 56,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompressContinue",
+      "address": "0x711e0",
+      "bytes": 636,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_loadFastDictCompress",
+      "address": "0x66d64",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress4X2_usingDTable",
+      "address": "0x6b490",
+      "bytes": 856,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_minCompressionLevel",
+      "address": "0x67174",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_initDStream",
+      "address": "0x65ccc",
+      "bytes": 128,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_getErrorName",
+      "address": "0x67520",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getCParams",
+      "address": "0x1bcbc",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initStaticDDict",
+      "address": "0x5360c",
+      "bytes": 148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_loadDictionary_advanced",
+      "address": "0x16550",
+      "bytes": 212,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy_extDict",
+      "address": "0x329c0",
+      "bytes": 1688,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setSequenceProducerFallback",
+      "address": "0x670c4",
+      "bytes": 40,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressionMargin",
+      "address": "0x54410",
+      "bytes": 236,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_buildDTable",
+      "address": "0x6e4c4",
+      "bytes": 396,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_encodeSequences",
+      "address": "0x1fae8",
+      "bytes": 1136,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getDictID_fromDDict",
+      "address": "0x536f8",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_initCStreamWithDict",
+      "address": "0x64030",
+      "bytes": 276,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_copyDCtx",
+      "address": "0x53b28",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_writeLastEmptyBlock",
+      "address": "0x17da4",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errVersionUnsupported",
+      "address": "0x67194",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initStaticDStream",
+      "address": "0x55854",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_readCTable",
+      "address": "0x133e0",
+      "bytes": 508,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initCStream_advanced",
+      "address": "0x1a200",
+      "bytes": 208,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_loadFastDictDecompress",
+      "address": "0x66cb8",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CStreamInSize",
+      "address": "0x1a110",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btopt_dictMatchState",
+      "address": "0x46e40",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy_dictMatchState",
+      "address": "0x2d370",
+      "bytes": 896,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_findDirectByteBufferFrameCompressedSize",
+      "address": "0x66954",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompressBegin_usingDict",
+      "address": "0x74958",
+      "bytes": 696,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_trainFromBuffer0",
+      "address": "0x662e4",
+      "bytes": 608,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionTargetLength",
+      "address": "0x67054",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompress",
+      "address": "0x70fec",
+      "bytes": 104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setSearchForExternalRepcodes",
+      "address": "0x670ec",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getErrorCode",
+      "address": "0x66c38",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDictCompress_free",
+      "address": "0x6492c",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock",
+      "address": "0x18654",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_freeDTable",
+      "address": "0x6a63c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy_row",
+      "address": "0x2da70",
+      "bytes": 2012,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_compressFastDict0",
+      "address": "0x64bd4",
+      "bytes": 252,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_invalidateRepCodes",
+      "address": "0x1748c",
+      "bytes": 40,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_sizeof_DCtx",
+      "address": "0x53740",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_createDDict",
+      "address": "0x75404",
+      "bytes": 232,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_getFrameParams",
+      "address": "0x73c68",
+      "bytes": 428,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errFrameParameterUnsupported",
+      "address": "0x6719c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionWindowLog",
+      "address": "0x66fc8",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_createDStreamNative",
+      "address": "0x63d2c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_updateCParams_whileCompressing",
+      "address": "0x4ca9c",
+      "bytes": 136,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getBlockSize",
+      "address": "0x18604",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getFrameContentSize0",
+      "address": "0x66898",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_isError",
+      "address": "0xfad4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_getErrorName",
+      "address": "0x73af4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCCtx_advanced",
+      "address": "0x151dc",
+      "bytes": 148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errNoError",
+      "address": "0x6717c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_createDCtx",
+      "address": "0x6da30",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_seqToCodes",
+      "address": "0x1768c",
+      "bytes": 216,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_compressStream_generic",
+      "address": "0x4d514",
+      "bytes": 2072,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_cycleLog",
+      "address": "0x167d0",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createDDict_advanced",
+      "address": "0x532c4",
+      "bytes": 224,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2_row",
+      "address": "0x2fcf0",
+      "bytes": 2320,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errMaxSymbolValueTooLarge",
+      "address": "0x671ec",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_sizeofDCtx",
+      "address": "0x6c4b0",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_setFormat",
+      "address": "0x55de0",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_freeDDict",
+      "address": "0x754ec",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_compressBound",
+      "address": "0x66bdc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_decompress1X_DCtx_wksp",
+      "address": "0x4f6ac",
+      "bytes": 248,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_checkCParams",
+      "address": "0x157b4",
+      "bytes": 160,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_estimateDCtxSize",
+      "address": "0x73b00",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_readNCount",
+      "address": "0x6e278",
+      "bytes": 556,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_defaultCLevel",
+      "address": "0x1bcb4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_fillHashTable",
+      "address": "0x43b80",
+      "bytes": 368,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_decompressContinue",
+      "address": "0x677c8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createDDict",
+      "address": "0x53584",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createDCtx",
+      "address": "0x53958",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_compressBound",
+      "address": "0x12afc",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBegin_usingCDict_advanced",
+      "address": "0x19e8c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_refThreadPool",
+      "address": "0x166e0",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_checkContinuity",
+      "address": "0x5ab38",
+      "bytes": 48,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_isError",
+      "address": "0x71dd0",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errInitMissing",
+      "address": "0x67204",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressBound",
+      "address": "0x541f0",
+      "bytes": 148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_resetDCtx",
+      "address": "0x677a0",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2",
+      "address": "0x2f194",
+      "bytes": 988,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initDStream",
+      "address": "0x55aa8",
+      "bytes": 76,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_decompressInit",
+      "address": "0x67a90",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_selectBlockCompressor",
+      "address": "0x17764",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtxParams_init",
+      "address": "0x156f4",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compress_usingCDict",
+      "address": "0x1a060",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errSrcSizeWrong",
+      "address": "0x67224",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_getErrorName",
+      "address": "0x71de8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "g_ZSTD_threading_useless_symbol",
+      "address": "0x96fd8",
+      "bytes": 4,
+      "type": "STT_OBJECT",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_findFrameCompressedSize0",
+      "address": "0x668dc",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setDecompressionMagicless",
+      "address": "0x66f58",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressContinue",
+      "address": "0x18600",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_buildDTable_rle",
+      "address": "0x6e650",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_decompressInit",
+      "address": "0x75744",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBegin_advanced_internal",
+      "address": "0x18944",
+      "bytes": 196,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_generateSequences",
+      "address": "0x177d0",
+      "bytes": 256,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_maxCompressionLevel",
+      "address": "0x67178",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_loadDictionary_byReference",
+      "address": "0x16690",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HIST_count_simple",
+      "address": "0x12cd0",
+      "bytes": 180,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_readSkippableFrame",
+      "address": "0x53ffc",
+      "bytes": 188,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateDStreamSize_fromFrame",
+      "address": "0x56054",
+      "bytes": 116,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCDict_byReference",
+      "address": "0x19be4",
+      "bytes": 96,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressSuperBlock",
+      "address": "0x2012c",
+      "bytes": 1976,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errGeneric",
+      "address": "0x67184",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_hashLogMin",
+      "address": "0x67140",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_getErrorName",
+      "address": "0x6e268",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_refPrefix_advanced",
+      "address": "0x55994",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_createState",
+      "address": "0x11ad8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_getParameter",
+      "address": "0x55f30",
+      "bytes": 132,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_decompress4X_usingDTable",
+      "address": "0x4fa30",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_create_advanced",
+      "address": "0x10db8",
+      "bytes": 400,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getDictIdFromDict",
+      "address": "0x66a7c",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_sizeofDCtx",
+      "address": "0x7006c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_freeDCtx",
+      "address": "0x73c3c",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btopt",
+      "address": "0x44e24",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X_usingDTable",
+      "address": "0x737e8",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getDictIdFromDictDirect",
+      "address": "0x66ac4",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_initDStreamNative",
+      "address": "0x63d38",
+      "bytes": 140,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_copyDCtx",
+      "address": "0x73c60",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressStream2_simpleArgs",
+      "address": "0x1aefc",
+      "bytes": 128,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_refCDict",
+      "address": "0x166a8",
+      "bytes": 56,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress1X4_usingDTable",
+      "address": "0x6bcf8",
+      "bytes": 172,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressSequencesAndLiterals",
+      "address": "0x1b8a8",
+      "bytes": 764,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_recommendedDInSize",
+      "address": "0x65ca8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_writeNCount",
+      "address": "0x12288",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionChecksums",
+      "address": "0x66e74",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionLong",
+      "address": "0x66ec8",
+      "bytes": 112,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_isError",
+      "address": "0x6c4a8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getFrameHeader",
+      "address": "0x53f04",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_getParameter",
+      "address": "0x16104",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_decompress",
+      "address": "0x6ada0",
+      "bytes": 228,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_digest",
+      "address": "0x11d68",
+      "bytes": 252,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_freeDStream",
+      "address": "0x65cb4",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_init",
+      "address": "0x65384",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompress_usingDDict",
+      "address": "0x54bb8",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_buildCTable_wksp",
+      "address": "0x11fb8",
+      "bytes": 684,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_endStream",
+      "address": "0x1bc0c",
+      "bytes": 168,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_buildDTable",
+      "address": "0x6a640",
+      "bytes": 448,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_compress4X_usingCTable",
+      "address": "0x14768",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setEnableLongDistanceMatching",
+      "address": "0x67108",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_registerSequenceProducer",
+      "address": "0x1bcdc",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_isError",
+      "address": "0x6a800",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_isError",
+      "address": "0xfae8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_refPrefix_advanced",
+      "address": "0x16704",
+      "bytes": 84,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__bss_start",
+      "address": "0x96f48",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X2",
+      "address": "0x729bc",
+      "bytes": 124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_recommendedDOutSize",
+      "address": "0x71980",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X4",
+      "address": "0x7376c",
+      "bytes": 124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressStream",
+      "address": "0x1a3e0",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_getErrorName",
+      "address": "0xfaec",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_createDTable",
+      "address": "0x6e4a4",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_copyState",
+      "address": "0x11af8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errStageWrong",
+      "address": "0x671fc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X2",
+      "address": "0x72e00",
+      "bytes": 124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_isSkippableFrame",
+      "address": "0x53bb8",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X4",
+      "address": "0x73384",
+      "bytes": 124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressLiterals",
+      "address": "0x1f324",
+      "bytes": 784,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_recommendedCOutSize",
+      "address": "0x65f10",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getFrameContentSize",
+      "address": "0x53f0c",
+      "bytes": 240,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getCParamsFromCDict",
+      "address": "0x19e6c",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getParams",
+      "address": "0x1bccc",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errTableLogTooLarge",
+      "address": "0x671e4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_compressByteArray0",
+      "address": "0x652c4",
+      "bytes": 192,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__end__",
+      "address": "0x96fe0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressSequences",
+      "address": "0x1af7c",
+      "bytes": 1052,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_buildDTable_raw",
+      "address": "0x6aa50",
+      "bytes": 80,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_decompressDirectByteBufferFastDict0",
+      "address": "0x64d94",
+      "bytes": 196,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_crossEntropyCost",
+      "address": "0x1f6f0",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getFrameProgression",
+      "address": "0x173e8",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_hashFromCanonical",
+      "address": "0x11f64",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decodeLiteralsBlock_wrapper",
+      "address": "0x57288",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_isError",
+      "address": "0x70064",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionChainLog",
+      "address": "0x67000",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_findFrameSizeInfoLegacy",
+      "address": "0x673d4",
+      "bytes": 240,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getBuiltinSequenceProducer",
+      "address": "0x66e4c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_getErrorName",
+      "address": "0x70060",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressBegin_usingDict",
+      "address": "0x55628",
+      "bytes": 232,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompressBlock",
+      "address": "0x73ec8",
+      "bytes": 72,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressBlock_internal",
+      "address": "0x57c78",
+      "bytes": 11968,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_resetSeqStore",
+      "address": "0x177a4",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_getErrorName",
+      "address": "0x61cbc",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressContinue_public",
+      "address": "0x17de0",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_normalizeCount",
+      "address": "0x12550",
+      "bytes": 816,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_readDTableX2",
+      "address": "0x6ea20",
+      "bytes": 296,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_readDTableX4",
+      "address": "0x6f4c8",
+      "bytes": 976,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_reset",
+      "address": "0x55a08",
+      "bytes": 160,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionSearchLog",
+      "address": "0x6701c",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_createCStream",
+      "address": "0x65f14",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_nextSrcSizeToDecompress",
+      "address": "0x677c0",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DDict_dictContent",
+      "address": "0x53214",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_compressDirectByteBufferFastDict0",
+      "address": "0x64cd0",
+      "bytes": 196,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getSeqStore",
+      "address": "0x15614",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_magicNumber",
+      "address": "0x67158",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBegin_usingCDict_deprecated",
+      "address": "0x19fd4",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_isError",
+      "address": "0x61cb0",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCStream_advanced",
+      "address": "0x1a0b8",
+      "bytes": 80,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_sizeof_DDict",
+      "address": "0x536d4",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_nextSrcSizeToDecompress",
+      "address": "0x54c9c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtxParams_getParameter",
+      "address": "0x1610c",
+      "bytes": 500,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDictDecompress_free",
+      "address": "0x64aac",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_trainFromBuffer_fastCover",
+      "address": "0x60998",
+      "bytes": 760,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_readDTableX2_wksp",
+      "address": "0x4ee80",
+      "bytes": 1148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_isError",
+      "address": "0x6e264",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionMagicless",
+      "address": "0x66e90",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_getErrorName",
+      "address": "0x71dd4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_minCLevel",
+      "address": "0x15ae4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompressDCtx",
+      "address": "0x6d618",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2_dedicatedDictSearch",
+      "address": "0x2f930",
+      "bytes": 960,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32",
+      "address": "0x114e8",
+      "bytes": 236,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_decompressDCtx",
+      "address": "0x67540",
+      "bytes": 436,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X2_usingDTable",
+      "address": "0x728a4",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_buildFSETable",
+      "address": "0x57710",
+      "bytes": 480,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X_hufOnly",
+      "address": "0x73994",
+      "bytes": 160,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_minTableLog",
+      "address": "0x14890",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_createDCtx_advanced",
+      "address": "0x73b74",
+      "bytes": 128,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompressBegin_usingDict",
+      "address": "0x70d94",
+      "bytes": 588,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_setMaxWindowSize",
+      "address": "0x55d44",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_dictSelectionError",
+      "address": "0x5c59c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_doubleFast_dictMatchState",
+      "address": "0x22fc0",
+      "bytes": 7540,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_sequenceBound",
+      "address": "0x177bc",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_decompressContinue",
+      "address": "0x71524",
+      "bytes": 1104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_buildDTable_rle",
+      "address": "0x72480",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compress_advanced_internal",
+      "address": "0x191f8",
+      "bytes": 140,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_readNCount_bmi2",
+      "address": "0xfaf0",
+      "bytes": 756,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDictCompress_initDirect",
+      "address": "0x64878",
+      "bytes": 180,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBound",
+      "address": "0x15154",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionWorkers",
+      "address": "0x66f74",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompress_usingDict",
+      "address": "0x70d38",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeCCtxParams",
+      "address": "0x15670",
+      "bytes": 84,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompressBegin",
+      "address": "0x6c4bc",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_decompressUnsafe",
+      "address": "0x667b8",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_buildBlockEntropyStats",
+      "address": "0x179bc",
+      "bytes": 832,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdOutputStreamNoFinalizer_compressStream",
+      "address": "0x65fc4",
+      "bytes": 376,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initStaticCCtx",
+      "address": "0x152cc",
+      "bytes": 292,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCDict_advanced",
+      "address": "0x195f4",
+      "bytes": 192,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_setLevel0",
+      "address": "0x64e64",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressBegin_usingDDict",
+      "address": "0x55710",
+      "bytes": 124,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressStream",
+      "address": "0x560c8",
+      "bytes": 2552,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_compressDirectByteBufferStream0",
+      "address": "0x65080",
+      "bytes": 340,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_joinJobs",
+      "address": "0x111ac",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_decompress1X2_DCtx_wksp",
+      "address": "0x4f2fc",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompress_usingDict",
+      "address": "0x54538",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_decompress",
+      "address": "0x6e934",
+      "bytes": 236,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_refPrefix",
+      "address": "0x166fc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_compressUnsafe",
+      "address": "0x66720",
+      "bytes": 152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_decompress_usingDTable",
+      "address": "0x724d4",
+      "bytes": 652,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errFrameParameterWindowTooLarge",
+      "address": "0x671a4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_row_update",
+      "address": "0x2b3e4",
+      "bytes": 332,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_isFrame",
+      "address": "0x53b30",
+      "bytes": 84,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCStreamSize",
+      "address": "0x17368",
+      "bytes": 128,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_decompress_usingPreparedDCtx",
+      "address": "0x70b38",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCCtxSize",
+      "address": "0x1710c",
+      "bytes": 228,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createDStream_advanced",
+      "address": "0x55858",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initCStream_srcSize",
+      "address": "0x1a328",
+      "bytes": 116,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_readStats_wksp",
+      "address": "0xfe44",
+      "bytes": 440,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initCStream",
+      "address": "0x1a39c",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_getErrorName",
+      "address": "0xfad8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errPrefixUnknown",
+      "address": "0x6718c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getDirectByteBufferFrameContentSize",
+      "address": "0x66b64",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errDictionaryCorrupted",
+      "address": "0x671bc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_selectEncodingType",
+      "address": "0x1f748",
+      "bytes": 524,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_recommendedDInSize",
+      "address": "0x6752c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_chainLogMax",
+      "address": "0x6713c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_getErrorName",
+      "address": "0x73aec",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getcBlockSize",
+      "address": "0x57238",
+      "bytes": 80,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_setParameter",
+      "address": "0x15af4",
+      "bytes": 192,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initStaticDCtx",
+      "address": "0x53790",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompress_usingDict",
+      "address": "0x6d374",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_frameHeaderSize",
+      "address": "0x53bdc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_hashFromCanonical",
+      "address": "0x118d8",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_readDTableX4",
+      "address": "0x72e7c",
+      "bytes": 1012,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_copyDDictParameters",
+      "address": "0x53224",
+      "bytes": 160,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setCompressionMinMatch",
+      "address": "0x67038",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errChecksumWrong",
+      "address": "0x671b4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_buildCTable",
+      "address": "0x1f954",
+      "bytes": 404,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_loadDEntropy",
+      "address": "0x55314",
+      "bytes": 556,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X_usingDTable",
+      "address": "0x737f8",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDictDecompress_init",
+      "address": "0x64958",
+      "bytes": 172,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_reset",
+      "address": "0x11b00",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_flushStream",
+      "address": "0x64428",
+      "bytes": 152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress4X4_DCtx",
+      "address": "0x73714",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_freeDCtx",
+      "address": "0x6c4f8",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtxParams_setParameter",
+      "address": "0x15bb4",
+      "bytes": 1212,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compress",
+      "address": "0x19384",
+      "bytes": 172,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_decompress1X1_DCtx_wksp",
+      "address": "0x4f7a4",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_noCompressLiterals",
+      "address": "0x1f220",
+      "bytes": 152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__bss_start__",
+      "address": "0x96f48",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_recommendedDOutSize",
+      "address": "0x75bd8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_decompress",
+      "address": "0x676f4",
+      "bytes": 112,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeDDict",
+      "address": "0x53500",
+      "bytes": 132,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createDStream",
+      "address": "0x55814",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtxParams_reset",
+      "address": "0x156c4",
+      "bytes": 48,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_decompress",
+      "address": "0x721e8",
+      "bytes": 236,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createCStream",
+      "address": "0x1a06c",
+      "bytes": 76,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_insertBlock",
+      "address": "0x544fc",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_createState",
+      "address": "0x115d4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBuffer0",
+      "address": "0x655e4",
+      "bytes": 240,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_decompressContinue",
+      "address": "0x6dae4",
+      "bytes": 1072,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errCorruptionDetected",
+      "address": "0x671ac",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressCCtx",
+      "address": "0x19374",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_getTableSize",
+      "address": "0x43b2c",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDictDecompress_initDirect",
+      "address": "0x64a04",
+      "bytes": 168,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCStreamSize_usingCCtxParams",
+      "address": "0x171f0",
+      "bytes": 232,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_toFlushNow",
+      "address": "0x1742c",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_compressDirectByteBuffer0",
+      "address": "0x651d4",
+      "bytes": 240,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2_dedicatedDictSearch_row",
+      "address": "0x30e3c",
+      "bytes": 2108,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_buildCTable_rle",
+      "address": "0x12880",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_freeCStream",
+      "address": "0x63fd8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_freeCCtx",
+      "address": "0x4c508",
+      "bytes": 308,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_decompressStreamNative",
+      "address": "0x63dc4",
+      "bytes": 500,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compress_advanced",
+      "address": "0x19140",
+      "bytes": 184,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCStreamSize_usingCParams",
+      "address": "0x172d8",
+      "bytes": 144,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_setPledgedSrcSize0",
+      "address": "0x65068",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_getFrameProgression",
+      "address": "0x4cb24",
+      "bytes": 276,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_buildDTable_rle",
+      "address": "0x6aa3c",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_createDStreamNative",
+      "address": "0x6459c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_getErrorName",
+      "address": "0x6ae88",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompress",
+      "address": "0x54c08",
+      "bytes": 148,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ERR_getErrorString",
+      "address": "0x10008",
+      "bytes": 556,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_optimizeTrainFromBuffer_cover",
+      "address": "0x5c8a4",
+      "bytes": 1424,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_getErrorName",
+      "address": "0x70068",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_recommendedDInSize",
+      "address": "0x71974",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_insertBlock",
+      "address": "0x748c0",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_fillHashTable",
+      "address": "0x263f8",
+      "bytes": 712,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_compressBound",
+      "address": "0x13d10",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_best_finish",
+      "address": "0x5c4bc",
+      "bytes": 224,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_loadDictionary_advanced",
+      "address": "0x558ac",
+      "bytes": 208,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressStream_simpleArgs",
+      "address": "0x56d8c",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "POOL_tryAdd",
+      "address": "0x11450",
+      "bytes": 84,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errDictionaryCreationFailed",
+      "address": "0x671cc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_loadCDictFast0",
+      "address": "0x64eb0",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_nextSrcSizeToDecompress",
+      "address": "0x711d8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_doubleFast_extDict",
+      "address": "0x24d34",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_fseBitCost",
+      "address": "0x1f64c",
+      "bytes": 164,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_cardinality",
+      "address": "0x14868",
+      "bytes": 40,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_isError",
+      "address": "0x73af0",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_decompress1X_usingDTable",
+      "address": "0x4f800",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_freeDTable",
+      "address": "0x6e4c0",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_readDTableX2",
+      "address": "0x72760",
+      "bytes": 324,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_init",
+      "address": "0x64e58",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2_dictMatchState",
+      "address": "0x2f570",
+      "bytes": 960,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decompressBlock_deprecated",
+      "address": "0x5ab68",
+      "bytes": 116,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress4X4_usingDTable",
+      "address": "0x6fb34",
+      "bytes": 816,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_optimalTableLog_internal",
+      "address": "0x124dc",
+      "bytes": 108,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_fast_extDict",
+      "address": "0x296b4",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initCStream_usingCDict",
+      "address": "0x1a1e8",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDMT_initCStream_internal",
+      "address": "0x4ccc0",
+      "bytes": 1808,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_readDTableX1_wksp",
+      "address": "0x4eaac",
+      "bytes": 980,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBegin_usingCDict",
+      "address": "0x19fe4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_compress4X_repeat",
+      "address": "0x14dec",
+      "bytes": 48,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_readNCount",
+      "address": "0xfde4",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_readCTableHeader",
+      "address": "0x13134",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_decompressStreamNative",
+      "address": "0x64634",
+      "bytes": 388,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HIST_countFast_wksp",
+      "address": "0x12d84",
+      "bytes": 80,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_adjustParameters",
+      "address": "0x43a68",
+      "bytes": 196,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_trainFromBuffer",
+      "address": "0x63840",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_decompress",
+      "address": "0x74e30",
+      "bytes": 112,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_initDStreamNative",
+      "address": "0x645a8",
+      "bytes": 140,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "builtinSequenceProducer",
+      "address": "0x66dac",
+      "bytes": 152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_nextSrcSizeToDecompress",
+      "address": "0x6d7c8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_loadDictCompress",
+      "address": "0x66d00",
+      "bytes": 100,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_doubleFast",
+      "address": "0x21148",
+      "bytes": 7800,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_free",
+      "address": "0x65388",
+      "bytes": 16,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_nextInputType",
+      "address": "0x54ca4",
+      "bytes": 40,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeCCtx",
+      "address": "0x15474",
+      "bytes": 152,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_selectDict",
+      "address": "0x5c5d4",
+      "bytes": 720,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_decompressDirectByteBufferToByteArray0",
+      "address": "0x658ac",
+      "bytes": 280,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_isSkipFrame",
+      "address": "0x75028",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_decodingBufferSize_min",
+      "address": "0x55ffc",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DCtx_refDDict",
+      "address": "0x55af4",
+      "bytes": 496,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_createDCtx_advanced",
+      "address": "0x53874",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compress_usingCDict_advanced",
+      "address": "0x19fe8",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btlazy2_extDict",
+      "address": "0x348e8",
+      "bytes": 1260,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDecompressCtx_decompressByteArrayToDirectByteBuffer0",
+      "address": "0x65794",
+      "bytes": 280,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getDictID_fromFrame",
+      "address": "0x557b4",
+      "bytes": 96,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_checkTotalCompressedSize",
+      "address": "0x5c270",
+      "bytes": 332,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_findFrameSizeInfoLegacy",
+      "address": "0x6d68c",
+      "bytes": 236,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_decompressInitDictionary",
+      "address": "0x6dab8",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initDStream_usingDict",
+      "address": "0x559dc",
+      "bytes": 44,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_windowLogMin",
+      "address": "0x67124",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_decompressBegin_usingDict",
+      "address": "0x6d3d0",
+      "bytes": 584,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_addEntropyTablesFromBuffer",
+      "address": "0x638b8",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateDDictSize",
+      "address": "0x536c0",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "_edata",
+      "address": "0x96f48",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_copyDCtx",
+      "address": "0x700cc",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initStaticCStream",
+      "address": "0x1a108",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_isError",
+      "address": "0x67514",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_getMaxNbSeq",
+      "address": "0x43b60",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64",
+      "address": "0x118e4",
+      "bytes": 500,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_isError",
+      "address": "0x66be4",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_update",
+      "address": "0x11640",
+      "bytes": 420,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_best_destroy",
+      "address": "0x5c44c",
+      "bytes": 60,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DStreamInSize",
+      "address": "0x55898",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_readNCount",
+      "address": "0x6a814",
+      "bytes": 552,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_trainFromBuffer_legacy",
+      "address": "0x6291c",
+      "bytes": 3876,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_freeDCtx",
+      "address": "0x53998",
+      "bytes": 260,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy_dedicatedDictSearch_row",
+      "address": "0x2e9f0",
+      "bytes": 1956,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSE_NCountWriteBound",
+      "address": "0x12264",
+      "bytes": 36,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_decompressInitDictionary",
+      "address": "0x75724",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_setParams",
+      "address": "0x16488",
+      "bytes": 168,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getErrorName",
+      "address": "0x11f9c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_optimalTableLog",
+      "address": "0x148a0",
+      "bytes": 384,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_setCParams",
+      "address": "0x16334",
+      "bytes": 224,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_versionNumber",
+      "address": "0x11f7c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_freeDCtx",
+      "address": "0x67a50",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_lazy2_extDict_row",
+      "address": "0x33eac",
+      "bytes": 2620,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__bss_end__",
+      "address": "0x96fe0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH64_freeState",
+      "address": "0x11ae0",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "COVER_best_init",
+      "address": "0x5c3bc",
+      "bytes": 76,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_updateTree",
+      "address": "0x44b64",
+      "bytes": 704,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress4X4",
+      "address": "0x6fe9c",
+      "bytes": 160,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_buildDTable_raw",
+      "address": "0x72494",
+      "bytes": 64,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress1X4_usingDTable",
+      "address": "0x6f898",
+      "bytes": 164,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_decompressInitDictionary",
+      "address": "0x714f8",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress4X2",
+      "address": "0x6f42c",
+      "bytes": 156,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv06_decompress",
+      "address": "0x6ff3c",
+      "bytes": 288,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy_extDict_row",
+      "address": "0x32258",
+      "bytes": 1896,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_blockSizeMax",
+      "address": "0x67164",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateDStreamSize",
+      "address": "0x56020",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_selectDecoder",
+      "address": "0x4f660",
+      "bytes": 76,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_getDictID_fromCDict",
+      "address": "0x19e80",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_XXH32_copyState",
+      "address": "0x115f4",
+      "bytes": 20,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCCtxSize_usingCParams",
+      "address": "0x16f6c",
+      "bytes": 144,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy_dedicatedDictSearch",
+      "address": "0x2bb48",
+      "bytes": 548,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy",
+      "address": "0x2b530",
+      "bytes": 1012,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_readStats",
+      "address": "0x72010",
+      "bytes": 472,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errMemoryAllocation",
+      "address": "0x6720c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_get1BlockSummary",
+      "address": "0x1b850",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_compress1X_usingCTable",
+      "address": "0x13d1c",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_readDTableX4",
+      "address": "0x6b93c",
+      "bytes": 956,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv07_isError",
+      "address": "0x73ae8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X4_DCtx",
+      "address": "0x7332c",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_recommendedDInSize",
+      "address": "0x6df1c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "_end",
+      "address": "0x96fe0",
+      "bytes": 0,
+      "type": "STT_NOTYPE",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_readDTableX2",
+      "address": "0x6ae8c",
+      "bytes": 292,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateDCtxSize",
+      "address": "0x53784",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btultra_dictMatchState",
+      "address": "0x46e50",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_ldm_skipSequences",
+      "address": "0x445a8",
+      "bytes": 160,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv07_decompress1X2_DCtx",
+      "address": "0x72964",
+      "bytes": 88,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_loadDictDecompress",
+      "address": "0x66c54",
+      "bytes": 100,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_mergeBlockDelimiters",
+      "address": "0x17960",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv04_freeDCtx",
+      "address": "0x67f40",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_DStreamOutSize",
+      "address": "0x558a4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv05_getErrorName",
+      "address": "0x6c4ac",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setRefMultipleDDicts",
+      "address": "0x6708c",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errMaxSymbolValueTooSmall",
+      "address": "0x671f4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv04_recommendedDOutSize",
+      "address": "0x67538",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_sizeof_CDict",
+      "address": "0x195d4",
+      "bytes": 32,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdBufferDecompressingStreamNoFinalizer_recommendedDOutSizeNative",
+      "address": "0x63d28",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_resetCStream",
+      "address": "0x1a124",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZDICT_trainFromBuffer_cover",
+      "address": "0x5b64c",
+      "bytes": 632,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_getStubSequenceProducer",
+      "address": "0x66e58",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_setValidateSequences",
+      "address": "0x670a8",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv07_createDCtx_advanced",
+      "address": "0x755e8",
+      "bytes": 220,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdInputStreamNoFinalizer_createDStream",
+      "address": "0x65cb0",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_estimateCDictSize",
+      "address": "0x1956c",
+      "bytes": 104,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_decompressInit",
+      "address": "0x71518",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_reset",
+      "address": "0x16758",
+      "bytes": 120,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_initStaticCDict",
+      "address": "0x19cac",
+      "bytes": 448,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_greedy_dedicatedDictSearch_row",
+      "address": "0x2c984",
+      "bytes": 1312,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv07_createDTable",
+      "address": "0x722d4",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btlazy2",
+      "address": "0x31678",
+      "bytes": 988,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_decompress_usingDTable",
+      "address": "0x6e6a8",
+      "bytes": 652,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUFv05_decompress",
+      "address": "0x6c398",
+      "bytes": 272,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv05_recommendedDOutSize",
+      "address": "0x6df28",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv06_buildDTable_raw",
+      "address": "0x6e664",
+      "bytes": 68,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CCtx_setParametersUsingCCtxParams",
+      "address": "0x16300",
+      "bytes": 52,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZBUFFv06_createDCtx",
+      "address": "0x7145c",
+      "bytes": 92,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btopt_extDict",
+      "address": "0x46e48",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_CStreamOutSize",
+      "address": "0x1a118",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "HUF_buildCTable_wksp",
+      "address": "0x135fc",
+      "bytes": 1656,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errParameterUnsupported",
+      "address": "0x671d4",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferCompressingStreamNoFinalizer_recommendedCOutSize",
+      "address": "0x63fd0",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdCompressCtx_reset0",
+      "address": "0x64f9c",
+      "bytes": 12,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_compressBlock_btultra",
+      "address": "0x45c90",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_ZstdDirectBufferDecompressingStreamNoFinalizer_recommendedDOutSizeNative",
+      "address": "0x64598",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTD_sizeof_DStream",
+      "address": "0x55ff8",
+      "bytes": 4,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ZSTDv06_freeDCtx",
+      "address": "0x700b4",
+      "bytes": 24,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "FSEv05_createDTable",
+      "address": "0x6a620",
+      "bytes": 28,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "Java_com_github_luben_zstd_Zstd_errDstBufferNull",
+      "address": "0x6722c",
+      "bytes": 8,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    }
+  ]
+}

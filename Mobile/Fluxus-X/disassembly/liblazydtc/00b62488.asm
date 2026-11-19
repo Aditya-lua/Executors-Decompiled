@@ -1,0 +1,84 @@
+; ossl_sm2_internal_sign @ 00b62488
+00b62488	str x21,[sp, #-0x30]!
+00b6248c	stp x20,x19,[sp, #0x10]
+00b62490	stp x29,x30,[sp, #0x20]
+00b62494	add x29,sp,#0x20
+00b62498	str x2,[sp, #0x8]
+00b6249c	cbz x2,0x00b624e8
+00b624a0	mov x2,xzr
+00b624a4	mov x20,x4
+00b624a8	mov x21,x3
+00b624ac	bl 0x00c36970
+00b624b0	mov x19,x0
+00b624b4	cbz x0,0x00b62528
+00b624b8	mov x0,x20
+00b624bc	mov x1,x19
+00b624c0	bl 0x00b61d48
+00b624c4	mov x20,x0
+00b624c8	cbz x0,0x00b62560
+00b624cc	add x1,sp,#0x8
+00b624d0	mov x0,x20
+00b624d4	bl 0x00c3abc0
+00b624d8	tbnz w0,#0x1f,0x00b6257c
+00b624dc	str w0,[x21]
+00b624e0	mov w21,#0x1
+00b624e4	b 0x00b625b0
+00b624e8	bl 0x00c342a0
+00b624ec	adrp x0,0x2a8000
+00b624f0	adrp x2,0x2be000
+00b624f4	add x0,x0,#0xdb3
+00b624f8	add x2,x2,#0xb1d
+00b624fc	mov w1,#0x1c5
+00b62500	bl 0x00c342b0
+00b62504	mov w8,#0x103
+00b62508	movk w8,#0xc, LSL #16
+00b6250c	sub w1,w8,#0x1
+00b62510	mov w0,#0x35
+00b62514	mov x2,xzr
+00b62518	bl 0x00c342c0
+00b6251c	mov x20,xzr
+00b62520	mov x19,xzr
+00b62524	b 0x00b625ac
+00b62528	bl 0x00c342a0
+00b6252c	adrp x0,0x2a8000
+00b62530	adrp x2,0x2be000
+00b62534	add x0,x0,#0xdb3
+00b62538	add x2,x2,#0xb1d
+00b6253c	mov w1,#0x1cb
+00b62540	bl 0x00c342b0
+00b62544	mov w1,#0x3
+00b62548	mov w0,#0x35
+00b6254c	movk w1,#0x8, LSL #16
+00b62550	mov x2,xzr
+00b62554	bl 0x00c342c0
+00b62558	mov x20,xzr
+00b6255c	b 0x00b625ac
+00b62560	bl 0x00c342a0
+00b62564	adrp x0,0x2a8000
+00b62568	adrp x2,0x2be000
+00b6256c	add x0,x0,#0xdb3
+00b62570	add x2,x2,#0xb1d
+00b62574	mov w1,#0x1d1
+00b62578	b 0x00b62594
+00b6257c	bl 0x00c342a0
+00b62580	adrp x0,0x2a8000
+00b62584	adrp x2,0x2be000
+00b62588	add x0,x0,#0xdb3
+00b6258c	add x2,x2,#0xb1d
+00b62590	mov w1,#0x1d7
+00b62594	bl 0x00c342b0
+00b62598	mov w1,#0x103
+00b6259c	mov w0,#0x35
+00b625a0	movk w1,#0xc, LSL #16
+00b625a4	mov x2,xzr
+00b625a8	bl 0x00c342c0
+00b625ac	mov w21,#0xffffffff
+00b625b0	mov x0,x20
+00b625b4	bl 0x00c3a9e0
+00b625b8	mov x0,x19
+00b625bc	bl 0x00c36290
+00b625c0	ldp x29,x30,[sp, #0x20]
+00b625c4	ldp x20,x19,[sp, #0x10]
+00b625c8	mov w0,w21
+00b625cc	ldr x21,[sp], #0x30
+00b625d0	ret

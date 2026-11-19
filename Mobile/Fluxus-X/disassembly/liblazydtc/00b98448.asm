@@ -1,0 +1,63 @@
+; mbedtls_psa_aead_update @ 00b98448
+00b98448	sub sp,sp,#0x30
+00b9844c	stp x20,x19,[sp, #0x10]
+00b98450	stp x29,x30,[sp, #0x20]
+00b98454	add x29,sp,#0x20
+00b98458	mrs x20,tpidr_el0
+00b9845c	ldr x8,[x20, #0x28]
+00b98460	mov x19,x5
+00b98464	str x8,[sp, #0x8]
+00b98468	str x2,[sp]
+00b9846c	ldr w9,[x0]
+00b98470	mov w8,#0x500
+00b98474	movk w8,#0x510, LSL #16
+00b98478	cmp w9,w8
+00b9847c	mov x8,x1
+00b98480	b.eq 0x00b984e4
+00b98484	mov w10,#0x100
+00b98488	movk w10,#0x550, LSL #16
+00b9848c	cmp w9,w10
+00b98490	b.eq 0x00b984c0
+00b98494	mov w10,#0x200
+00b98498	movk w10,#0x550, LSL #16
+00b9849c	cmp w9,w10
+00b984a0	b.ne 0x00b984f4
+00b984a4	add x0,x0,#0x8
+00b984a8	mov x5,sp
+00b984ac	mov x1,x8
+00b984b0	bl 0x00c421e0
+00b984b4	bl 0x00c42bf0
+00b984b8	cbnz w0,0x00b9851c
+00b984bc	b 0x00b98514
+00b984c0	cmp x4,x2
+00b984c4	b.cc 0x00b984ec
+00b984c8	add x0,x0,#0x8
+00b984cc	mov x5,sp
+00b984d0	mov x1,x8
+00b984d4	bl 0x00c42050
+00b984d8	bl 0x00c42bf0
+00b984dc	cbnz w0,0x00b9851c
+00b984e0	b 0x00b98514
+00b984e4	cmp x4,x2
+00b984e8	b.cs 0x00b984fc
+00b984ec	mov w0,#0xffffff76
+00b984f0	b 0x00b9851c
+00b984f4	mov w0,#0xffffff7a
+00b984f8	b 0x00b9851c
+00b984fc	add x0,x0,#0x8
+00b98500	mov x1,x2
+00b98504	mov x2,x8
+00b98508	bl 0x00c42130
+00b9850c	bl 0x00c42bf0
+00b98510	cbnz w0,0x00b9851c
+00b98514	ldr x8,[sp]
+00b98518	str x8,[x19]
+00b9851c	ldr x8,[x20, #0x28]
+00b98520	ldr x9,[sp, #0x8]
+00b98524	cmp x8,x9
+00b98528	b.ne 0x00b9853c
+00b9852c	ldp x29,x30,[sp, #0x20]
+00b98530	ldp x20,x19,[sp, #0x10]
+00b98534	add sp,sp,#0x30
+00b98538	ret
+00b9853c	bl 0x00c2fec0

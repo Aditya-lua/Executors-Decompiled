@@ -1,0 +1,17 @@
+; FUN_00b50664 @ 00b50664
+00b50664	stp x20,x19,[sp, #-0x20]!
+00b50668	stp x29,x30,[sp, #0x10]
+00b5066c	add x29,sp,#0x10
+00b50670	mov x20,x1
+00b50674	mov x19,x0
+00b50678	bl 0x00c41000
+00b5067c	mov w8,w0
+00b50680	cmp x20,#0x8
+00b50684	mov x0,xzr
+00b50688	b.ne 0x00b50698
+00b5068c	cbz w8,0x00b50698
+00b50690	ldr x0,[x19]
+00b50694	str xzr,[x19]
+00b50698	ldp x29,x30,[sp, #0x10]
+00b5069c	ldp x20,x19,[sp], #0x20
+00b506a0	ret

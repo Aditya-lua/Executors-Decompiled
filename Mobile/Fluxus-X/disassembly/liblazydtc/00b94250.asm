@@ -1,0 +1,64 @@
+; mbedtls_ecp_gen_privkey @ 00b94250
+00b94250	str x21,[sp, #-0x30]!
+00b94254	stp x20,x19,[sp, #0x10]
+00b94258	stp x29,x30,[sp, #0x20]
+00b9425c	add x29,sp,#0x20
+00b94260	ldr x8,[x0, #0x38]
+00b94264	mov x4,x3
+00b94268	mov x3,x2
+00b9426c	mov x19,x1
+00b94270	cbz x8,0x00b9429c
+00b94274	ldr x8,[x0, #0x48]
+00b94278	cbz x8,0x00b942a4
+00b9427c	add x2,x0,#0x68
+00b94280	mov w1,#0x1
+00b94284	mov x0,x19
+00b94288	bl 0x00c41c90
+00b9428c	cmn w0,#0xe
+00b94290	mov w8,#0xffffb300
+00b94294	csel w0,w8,w0,eq
+00b94298	b 0x00b94304
+00b9429c	mov w0,#0xffffb080
+00b942a0	b 0x00b94304
+00b942a4	ldr x20,[x0, #0x80]
+00b942a8	mov x0,x19
+00b942ac	mov x2,x3
+00b942b0	mov x3,x4
+00b942b4	lsr x8,x20,#0x3
+00b942b8	add x21,x8,#0x1
+00b942bc	mov x1,x21
+00b942c0	bl 0x00c41ba0
+00b942c4	cbnz w0,0x00b94304
+00b942c8	mvn x8,x20
+00b942cc	add x1,x8,x21, LSL #0x3
+00b942d0	mov x0,x19
+00b942d4	bl 0x00c41d10
+00b942d8	cbnz w0,0x00b94304
+00b942dc	mov w2,#0x1
+00b942e0	mov x0,x19
+00b942e4	mov x1,x20
+00b942e8	bl 0x00c41cf0
+00b942ec	cbnz w0,0x00b94304
+00b942f0	mov x0,x19
+00b942f4	mov x1,xzr
+00b942f8	mov w2,wzr
+00b942fc	bl 0x00c41cf0
+00b94300	cbz w0,0x00b94314
+00b94304	ldp x29,x30,[sp, #0x20]
+00b94308	ldp x20,x19,[sp, #0x10]
+00b9430c	ldr x21,[sp], #0x30
+00b94310	ret
+00b94314	mov w1,#0x1
+00b94318	mov x0,x19
+00b9431c	mov w2,wzr
+00b94320	bl 0x00c41cf0
+00b94324	cmp x20,#0xfe
+00b94328	b.ne 0x00b94304
+00b9432c	cbnz w0,0x00b94304
+00b94330	mov x0,x19
+00b94334	ldp x29,x30,[sp, #0x20]
+00b94338	ldp x20,x19,[sp, #0x10]
+00b9433c	mov w1,#0x2
+00b94340	mov w2,wzr
+00b94344	ldr x21,[sp], #0x30
+00b94348	b 0x00c41cf0

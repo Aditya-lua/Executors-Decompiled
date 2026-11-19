@@ -1,0 +1,10 @@
+; async_deinit @ 009f947c
+009f947c	stp x29,x30,[sp, #-0x10]!
+009f9480	adrp x0,0xd21000
+009f9484	add x0,x0,#0x8e8
+009f9488	mov x29,sp
+009f948c	bl 0x00c38350
+009f9490	adrp x0,0xd21000
+009f9494	add x0,x0,#0x8ec
+009f9498	ldp x29,x30,[sp], #0x10
+009f949c	b 0x00c38350

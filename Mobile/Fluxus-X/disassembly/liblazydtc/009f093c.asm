@@ -1,0 +1,27 @@
+; EVP_PKEY_asn1_free @ 009f093c
+009f093c	stp x20,x19,[sp, #-0x20]!
+009f0940	stp x29,x30,[sp, #0x10]
+009f0944	add x29,sp,#0x10
+009f0948	cbz x0,0x009f0958
+009f094c	ldrb w8,[x0, #0x8]
+009f0950	mov x19,x0
+009f0954	tbnz w8,#0x1,0x009f0964
+009f0958	ldp x29,x30,[sp, #0x10]
+009f095c	ldp x20,x19,[sp], #0x20
+009f0960	ret
+009f0964	ldr x0,[x19, #0x10]
+009f0968	adrp x20,0x2af000
+009f096c	add x20,x20,#0xc32
+009f0970	mov w2,#0x114
+009f0974	mov x1,x20
+009f0978	bl 0x00c32310
+009f097c	ldr x0,[x19, #0x18]
+009f0980	mov w2,#0x115
+009f0984	mov x1,x20
+009f0988	bl 0x00c32310
+009f098c	ldp x29,x30,[sp, #0x10]
+009f0990	mov w2,#0x116
+009f0994	mov x0,x19
+009f0998	mov x1,x20
+009f099c	ldp x20,x19,[sp], #0x20
+009f09a0	b 0x00c32310

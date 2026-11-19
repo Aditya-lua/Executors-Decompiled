@@ -1,0 +1,40 @@
+; CMAC_CTX_new @ 00b53890
+00b53890	str x19,[sp, #-0x20]!
+00b53894	adrp x1,0x2c6000
+00b53898	add x1,x1,#0x767
+00b5389c	mov w0,#0x90
+00b538a0	orr w2,wzr,#0x38
+00b538a4	stp x29,x30,[sp, #0x10]
+00b538a8	add x29,sp,#0x10
+00b538ac	bl 0x00c32320
+00b538b0	mov x19,x0
+00b538b4	cbz x0,0x00b538d0
+00b538b8	bl 0x00c34b90
+00b538bc	str x0,[x19]
+00b538c0	cbz x0,0x00b53904
+00b538c4	mov w8,#0xffffffff
+00b538c8	str w8,[x19, #0x88]
+00b538cc	b 0x00b5391c
+00b538d0	bl 0x00c342a0
+00b538d4	adrp x0,0x2c6000
+00b538d8	adrp x2,0x2c2000
+00b538dc	add x0,x0,#0x767
+00b538e0	add x2,x2,#0xb13
+00b538e4	mov w1,#0x39
+00b538e8	bl 0x00c342b0
+00b538ec	mov w1,#0x100
+00b538f0	orr w0,wzr,#0xf
+00b538f4	movk w1,#0xc, LSL #16
+00b538f8	mov x2,xzr
+00b538fc	bl 0x00c342c0
+00b53900	b 0x00b5391c
+00b53904	adrp x1,0x2c6000
+00b53908	add x1,x1,#0x767
+00b5390c	orr w2,wzr,#0x3e
+00b53910	mov x0,x19
+00b53914	bl 0x00c32310
+00b53918	mov x19,xzr
+00b5391c	ldp x29,x30,[sp, #0x10]
+00b53920	mov x0,x19
+00b53924	ldr x19,[sp], #0x20
+00b53928	ret

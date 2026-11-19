@@ -1,0 +1,4 @@
+; d2i_ISSUING_DIST_POINT @ 00afc724
+00afc724	adrp x3,0xc7f000
+00afc728	add x3,x3,#0x890
+00afc72c	b 0x00c36150

@@ -1,0 +1,29 @@
+; FUN_00b473e0 @ 00b473e0
+00b473e0	stp x22,x21,[sp, #-0x30]!
+00b473e4	stp x20,x19,[sp, #0x10]
+00b473e8	stp x29,x30,[sp, #0x20]
+00b473ec	ldr x22,[x0]
+00b473f0	add x20,x0,#0x8
+00b473f4	mov x19,x0
+00b473f8	mov x0,x20
+00b473fc	add x29,sp,#0x20
+00b47400	bl 0x00c41170
+00b47404	ldr x0,[x19, #0x30]
+00b47408	adrp x21,0x29e000
+00b4740c	add x21,x21,#0xf04
+00b47410	mov w2,#0x9d
+00b47414	mov x1,x21
+00b47418	bl 0x00c32310
+00b4741c	ldp x0,x1,[x19, #0x20]
+00b47420	mov w3,#0x9e
+00b47424	mov x2,x21
+00b47428	bl 0x00c345e0
+00b4742c	mov w2,#0x48
+00b47430	mov x0,x20
+00b47434	mov w1,wzr
+00b47438	bl 0x00c301c0
+00b4743c	str x22,[x19]
+00b47440	ldp x29,x30,[sp, #0x20]
+00b47444	ldp x20,x19,[sp, #0x10]
+00b47448	ldp x22,x21,[sp], #0x30
+00b4744c	ret

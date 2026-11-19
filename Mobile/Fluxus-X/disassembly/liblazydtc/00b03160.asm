@@ -1,0 +1,15 @@
+; X509_get_pathlen @ 00b03160
+00b03160	str x19,[sp, #-0x20]!
+00b03164	stp x29,x30,[sp, #0x10]
+00b03168	add x29,sp,#0x10
+00b0316c	mov x19,x0
+00b03170	bl 0x00b01d98
+00b03174	cbz w0,0x00b03180
+00b03178	ldrb w8,[x19, #0xe8]
+00b0317c	tbnz w8,#0x0,0x00b03188
+00b03180	mov x0,#-0x1
+00b03184	b 0x00b0318c
+00b03188	ldr x0,[x19, #0xd8]
+00b0318c	ldp x29,x30,[sp, #0x10]
+00b03190	ldr x19,[sp], #0x20
+00b03194	ret

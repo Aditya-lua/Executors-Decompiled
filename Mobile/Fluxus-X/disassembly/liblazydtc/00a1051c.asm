@@ -1,0 +1,72 @@
+; ASN1_STRING_set_by_NID @ 00a1051c
+00a1051c	sub sp,sp,#0x70
+00a10520	cmp x0,#0x0
+00a10524	mov x8,sp
+00a10528	stp x22,x21,[sp, #0x40]
+00a1052c	stp x20,x19,[sp, #0x50]
+00a10530	mov x22,x1
+00a10534	csel x19,x8,x0,eq
+00a10538	mov w0,#0x40
+00a1053c	mov x1,xzr
+00a10540	stp x24,x23,[sp, #0x30]
+00a10544	stp x29,x30,[sp, #0x60]
+00a10548	add x29,sp,#0x60
+00a1054c	mov w23,w4
+00a10550	mov w20,w3
+00a10554	mov w21,w2
+00a10558	str xzr,[sp]
+00a1055c	bl 0x00c35500
+00a10560	adrp x24,0xd21000
+00a10564	ldr x0,[x24, #0x958]
+00a10568	str w23,[sp, #0x8]
+00a1056c	cbz x0,0x00a105c0
+00a10570	add x1,sp,#0x8
+00a10574	bl 0x00c34760
+00a10578	tbnz w0,#0x1f,0x00a105c0
+00a1057c	mov w1,w0
+00a10580	ldr x0,[x24, #0x958]
+00a10584	bl 0x00c32610
+00a10588	cbnz x0,0x00a105e4
+00a1058c	adrp x8,0xcc8000
+00a10590	ldr x8,[x8, #0x7e0]
+00a10594	mov w9,#0x2806
+00a10598	mov x0,x19
+00a1059c	mov x1,x22
+00a105a0	and x4,x8,x9
+00a105a4	mov w2,w21
+00a105a8	mov w3,w20
+00a105ac	bl 0x00c37640
+00a105b0	cmp w0,#0x1
+00a105b4	b.ge 0x00a1061c
+00a105b8	mov x0,xzr
+00a105bc	b 0x00a10620
+00a105c0	adrp x1,0x752000
+00a105c4	adrp x4,0xa10000
+00a105c8	add x1,x1,#0x178
+00a105cc	add x4,x4,#0x8e8
+00a105d0	add x0,sp,#0x8
+00a105d4	orr w2,wzr,#0x1c
+00a105d8	mov w3,#0x28
+00a105dc	bl 0x00c35830
+00a105e0	cbz x0,0x00a1058c
+00a105e4	ldp x8,x9,[x0, #0x18]
+00a105e8	adrp x10,0xcc8000
+00a105ec	ldr x10,[x10, #0x7e0]
+00a105f0	ldp x5,x6,[x0, #0x8]
+00a105f4	tst x9,#0x2
+00a105f8	mov x0,x19
+00a105fc	csinv x9,x10,xzr,eq
+00a10600	and x4,x9,x8
+00a10604	mov x1,x22
+00a10608	mov w2,w21
+00a1060c	mov w3,w20
+00a10610	bl 0x00c37650
+00a10614	cmp w0,#0x1
+00a10618	b.lt 0x00a105b8
+00a1061c	ldr x0,[x19]
+00a10620	ldp x29,x30,[sp, #0x60]
+00a10624	ldp x20,x19,[sp, #0x50]
+00a10628	ldp x22,x21,[sp, #0x40]
+00a1062c	ldp x24,x23,[sp, #0x30]
+00a10630	add sp,sp,#0x70
+00a10634	ret

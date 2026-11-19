@@ -1,0 +1,5 @@
+; ssl_cert_new @ 00c35160
+00c35160	adrp x16,0xcb8000
+00c35164	ldr x17,[x16, #0x898]
+00c35168	add x16,x16,#0x898
+00c3516c	br x17

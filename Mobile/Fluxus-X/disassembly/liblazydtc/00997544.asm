@@ -1,0 +1,15 @@
+; ix::WebSocketTransport::getCloseReason @ 00997544
+00997544	stp x20,x19,[sp, #-0x20]!
+00997548	stp x29,x30,[sp, #0x10]
+0099754c	add x29,sp,#0x10
+00997550	add x20,x0,#0x138
+00997554	mov x19,x0
+00997558	mov x0,x20
+0099755c	bl 0x00c2ff10
+00997560	mov x0,x20
+00997564	add x19,x19,#0x120
+00997568	bl 0x00c2ff20
+0099756c	ldp x29,x30,[sp, #0x10]
+00997570	mov x0,x19
+00997574	ldp x20,x19,[sp], #0x20
+00997578	ret

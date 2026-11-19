@@ -1,0 +1,4 @@
+; i2d_X509_CERT_AUX @ 00b1f11c
+00b1f11c	adrp x2,0xc82000
+00b1f120	add x2,x2,#0xc60
+00b1f124	b 0x00c36170

@@ -1,0 +1,29 @@
+; FUN_0084e184 @ 0084e184
+0084e184	stp x29,x30,[sp, #-0x10]!
+0084e188	mov x29,sp
+0084e18c	adrp x8,0xd1e000
+0084e190	add x8,x8,#0x808
+0084e194	ldarb w8,[x8]
+0084e198	tbz w8,#0x0,0x0084e1a4
+0084e19c	ldp x29,x30,[sp], #0x10
+0084e1a0	ret
+0084e1a4	adrp x0,0xd1e000
+0084e1a8	add x0,x0,#0x808
+0084e1ac	bl 0x00c2fe90
+0084e1b0	cbz w0,0x0084e19c
+0084e1b4	adrp x8,0x29a000
+0084e1b8	mov w9,#0x1
+0084e1bc	adrp x1,0xd1e000
+0084e1c0	add x1,x1,#0x800
+0084e1c4	ldr d0,[x8, #0x670]
+0084e1c8	nop
+0084e1cc	adr x0,0x84e770
+0084e1d0	adrp x2,0xc48000
+0084e1d4	add x2,x2,#0x880
+0084e1d8	strb w9,[x1, #0x4]
+0084e1dc	str s0,[x1]
+0084e1e0	bl 0x00c2fe70
+0084e1e4	adrp x0,0xd1e000
+0084e1e8	add x0,x0,#0x808
+0084e1ec	ldp x29,x30,[sp], #0x10
+0084e1f0	b 0x00c2fea0

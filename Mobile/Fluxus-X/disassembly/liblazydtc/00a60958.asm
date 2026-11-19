@@ -1,0 +1,5 @@
+; EVP_PKEY_get0_provider @ 00a60958
+00a60958	ldr x0,[x0, #0x60]
+00a6095c	cbz x0,0x00a60964
+00a60960	b 0x00c36360
+00a60964	ret

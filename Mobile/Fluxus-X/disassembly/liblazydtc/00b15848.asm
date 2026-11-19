@@ -1,0 +1,34 @@
+; X509_sign_ctx @ 00b15848
+00b15848	stp x20,x19,[sp, #-0x20]!
+00b1584c	stp x29,x30,[sp, #0x10]
+00b15850	add x29,sp,#0x10
+00b15854	cbz x0,0x00b1588c
+00b15858	mov w8,#0x1
+00b1585c	mov x19,x1
+00b15860	mov x20,x0
+00b15864	str w8,[x0, #0x80]
+00b15868	bl 0x00c40ec0
+00b1586c	ldp x29,x30,[sp, #0x10]
+00b15870	add x1,x20,#0x20
+00b15874	add x2,x20,#0x88
+00b15878	add x3,x20,#0x98
+00b1587c	mov x4,x20
+00b15880	mov x5,x19
+00b15884	ldp x20,x19,[sp], #0x20
+00b15888	b 0x00c377d0
+00b1588c	bl 0x00c342a0
+00b15890	adrp x0,0x2c4000
+00b15894	adrp x2,0x2c4000
+00b15898	add x0,x0,#0x3b5
+00b1589c	add x2,x2,#0x3c9
+00b158a0	mov w1,#0x53
+00b158a4	bl 0x00c342b0
+00b158a8	mov w1,#0x102
+00b158ac	mov w0,#0xb
+00b158b0	movk w1,#0xc, LSL #16
+00b158b4	mov x2,xzr
+00b158b8	bl 0x00c342c0
+00b158bc	ldp x29,x30,[sp, #0x10]
+00b158c0	mov w0,wzr
+00b158c4	ldp x20,x19,[sp], #0x20
+00b158c8	ret

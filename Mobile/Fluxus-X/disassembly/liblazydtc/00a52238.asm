@@ -1,0 +1,26 @@
+; ENGINE_up_ref @ 00a52238
+00a52238	cbz x0,0x00a52258
+00a5223c	add x8,x0,#0x9c
+00a52240	ldxr w9,[x8]
+00a52244	add w9,w9,#0x1
+00a52248	stxr w10,w9,[x8]
+00a5224c	cbnz w10,0x00a52240
+00a52250	mov w0,#0x1
+00a52254	ret
+00a52258	stp x29,x30,[sp, #-0x10]!
+00a5225c	mov x29,sp
+00a52260	bl 0x00c342a0
+00a52264	adrp x0,0x2cd000
+00a52268	adrp x2,0x2d9000
+00a5226c	add x0,x0,#0x9e1
+00a52270	add x2,x2,#0xbe5
+00a52274	mov w1,#0x1ba
+00a52278	bl 0x00c342b0
+00a5227c	mov w1,#0x102
+00a52280	mov w0,#0x26
+00a52284	movk w1,#0xc, LSL #16
+00a52288	mov x2,xzr
+00a5228c	bl 0x00c342c0
+00a52290	mov w0,wzr
+00a52294	ldp x29,x30,[sp], #0x10
+00a52298	ret

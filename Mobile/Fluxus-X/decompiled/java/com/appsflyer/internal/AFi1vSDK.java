@@ -1,0 +1,22 @@
+package com.appsflyer.internal;
+
+import android.content.Context;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import p001kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class AFi1vSDK {
+
+    @NotNull
+    public final Context AFLogger;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    @Nullable
+    public AFi1ySDK f5945d;
+
+    public AFi1vSDK(@NotNull Context context) {
+        Intrinsics.checkNotNullParameter(context, "");
+        this.AFLogger = context;
+    }
+}

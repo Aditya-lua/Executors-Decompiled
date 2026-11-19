@@ -1,0 +1,81 @@
+; FUN_009109f8 @ 009109f8
+009109f8	str x21,[sp, #-0x30]!
+009109fc	stp x20,x19,[sp, #0x10]
+00910a00	stp x29,x30,[sp, #0x20]
+00910a04	add x29,sp,#0x20
+00910a08	add x9,x0,#0xa82
+00910a0c	ldr x8,[x0, #0xc0]
+00910a10	ldr x9,[x9]
+00910a14	mov w21,w2
+00910a18	mov x19,x0
+00910a1c	mov x20,x1
+00910a20	cbz x8,0x00910a8c
+00910a24	tbz w9,#0x1c,0x00910a6c
+00910a28	ldr x9,[x19, #0x12a0]
+00910a2c	cbz x9,0x00910a3c
+00910a30	ldr w9,[x9, #0x8]
+00910a34	cmp w9,#0x1
+00910a38	b.lt 0x00910a6c
+00910a3c	ldr x3,[x20, #0x28]
+00910a40	adrp x8,0x2d2000
+00910a44	adrp x9,0x2d7000
+00910a48	add x8,x8,#0xe68
+00910a4c	add x9,x9,#0x181
+00910a50	tst w21,#0x1
+00910a54	adrp x1,0x2a1000
+00910a58	csel x2,x9,x8,ne
+00910a5c	add x1,x1,#0x758
+00910a60	mov x0,x19
+00910a64	bl 0x00904c98
+00910a68	ldr x8,[x19, #0xc0]
+00910a6c	mov x1,x19
+00910a70	mov x2,x20
+00910a74	ldp x29,x30,[sp, #0x20]
+00910a78	ldp x20,x19,[sp, #0x10]
+00910a7c	add x0,x8,#0x158
+00910a80	and w3,w21,#0x1
+00910a84	ldr x21,[sp], #0x30
+00910a88	b 0x00910b38
+00910a8c	tbz w9,#0x1c,0x00910ab8
+00910a90	ldr x8,[x19, #0x12a0]
+00910a94	cbz x8,0x00910aa4
+00910a98	ldr w8,[x8, #0x8]
+00910a9c	cmp w8,#0x1
+00910aa0	b.lt 0x00910ab8
+00910aa4	ldr x2,[x20, #0x28]
+00910aa8	adrp x1,0x2bf000
+00910aac	add x1,x1,#0xec
+00910ab0	mov x0,x19
+00910ab4	bl 0x00904c98
+00910ab8	ldr w8,[x20, #0x3a0]
+00910abc	tbnz w8,#0x1f,0x00910b14
+00910ac0	ldr x1,[x20, #0x30]
+00910ac4	cbz x1,0x00910ad4
+00910ac8	mov x0,x19
+00910acc	bl 0x00917b54
+00910ad0	str xzr,[x20, #0x30]
+00910ad4	mov x0,x20
+00910ad8	bl 0x00924ee4
+00910adc	ldr x8,[x20, #0x3a8]
+00910ae0	cbz x8,0x00910b00
+00910ae4	ldr x8,[x8, #0x60]
+00910ae8	cbz x8,0x00910b00
+00910aec	ldr x9,[x20, #0x3a0]
+00910af0	mov x0,x19
+00910af4	mov x1,x20
+00910af8	ubfx x2,x9,#0x1e,#0x1
+00910afc	blr x8
+00910b00	mov x0,x19
+00910b04	bl 0x0090ea54
+00910b08	ldr x8,[x20, #0x3a0]
+00910b0c	orr x8,x8,#0x80000000
+00910b10	str x8,[x20, #0x3a0]
+00910b14	mov x0,x19
+00910b18	mov x1,x20
+00910b1c	ldp x29,x30,[sp, #0x20]
+00910b20	ldp x20,x19,[sp, #0x10]
+00910b24	mvn w8,w21
+00910b28	and w3,w8,#0x1
+00910b2c	mov x2,xzr
+00910b30	ldr x21,[sp], #0x30
+00910b34	b 0x009103b0

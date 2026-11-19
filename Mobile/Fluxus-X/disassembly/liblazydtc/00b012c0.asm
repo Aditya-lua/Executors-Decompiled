@@ -1,0 +1,4 @@
+; i2d_PKEY_USAGE_PERIOD @ 00b012c0
+00b012c0	adrp x2,0xc80000
+00b012c4	add x2,x2,#0xbb0
+00b012c8	b 0x00c36170

@@ -1,0 +1,5 @@
+; OSSL_STORE_INFO_new_CERT @ 00c40270
+00c40270	adrp x16,0xcbe000
+00c40274	ldr x17,[x16, #0x120]
+00c40278	add x16,x16,#0x120
+00c4027c	br x17

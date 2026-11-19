@@ -1,0 +1,46 @@
+; ASN1_TYPE_get_octetstring @ 00a600d0
+00a600d0	stp x22,x21,[sp, #-0x30]!
+00a600d4	stp x20,x19,[sp, #0x10]
+00a600d8	stp x29,x30,[sp, #0x20]
+00a600dc	ldr w8,[x0]
+00a600e0	add x29,sp,#0x20
+00a600e4	cmp w8,#0x4
+00a600e8	b.ne 0x00a60140
+00a600ec	mov x20,x0
+00a600f0	ldr x0,[x0, #0x8]
+00a600f4	cbz x0,0x00a60140
+00a600f8	mov w21,w2
+00a600fc	mov x19,x1
+00a60100	bl 0x00c32130
+00a60104	ldr x8,[x20, #0x8]
+00a60108	mov x22,x0
+00a6010c	mov x0,x8
+00a60110	bl 0x00c32140
+00a60114	cmp w0,w21
+00a60118	mov w20,w0
+00a6011c	csel w8,w0,w21,lt
+00a60120	cbz x19,0x00a60170
+00a60124	cmp w8,#0x1
+00a60128	b.lt 0x00a60170
+00a6012c	sxtw x2,w8
+00a60130	mov x0,x19
+00a60134	mov x1,x22
+00a60138	bl 0x00c2ffd0
+00a6013c	b 0x00a60170
+00a60140	bl 0x00c342a0
+00a60144	adrp x0,0x2d9000
+00a60148	adrp x2,0x2a7000
+00a6014c	add x0,x0,#0xc95
+00a60150	add x2,x2,#0xfa1
+00a60154	mov w1,#0x28
+00a60158	bl 0x00c342b0
+00a6015c	mov w0,#0xd
+00a60160	mov w1,#0x6d
+00a60164	mov x2,xzr
+00a60168	bl 0x00c342c0
+00a6016c	mov w20,#0xffffffff
+00a60170	mov w0,w20
+00a60174	ldp x29,x30,[sp, #0x20]
+00a60178	ldp x20,x19,[sp, #0x10]
+00a6017c	ldp x22,x21,[sp], #0x30
+00a60180	ret

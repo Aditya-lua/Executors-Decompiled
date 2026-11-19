@@ -1,0 +1,54 @@
+; ix::Socket::readByte @ 00984ba4
+00984ba4	str x23,[sp, #-0x40]!
+00984ba8	stp x22,x21,[sp, #0x10]
+00984bac	stp x20,x19,[sp, #0x20]
+00984bb0	stp x29,x30,[sp, #0x30]
+00984bb4	add x29,sp,#0x30
+00984bb8	mov x20,x2
+00984bbc	mov x21,x1
+00984bc0	mov x22,x0
+00984bc4	add x23,x0,#0x38
+00984bc8	ldr x0,[x20, #0x20]
+00984bcc	cbz x0,0x00984be0
+00984bd0	ldr x8,[x0]
+00984bd4	ldr x8,[x8, #0x30]
+00984bd8	blr x8
+00984bdc	tbnz w0,#0x0,0x00984c54
+00984be0	ldr x8,[x22]
+00984be4	mov w2,#0x1
+00984be8	mov x0,x22
+00984bec	mov x1,x21
+00984bf0	ldr x8,[x8, #0x30]
+00984bf4	blr x8
+00984bf8	cmp x0,#0x1
+00984bfc	b.eq 0x00984c5c
+00984c00	tbz x0,#0x3f,0x00984c54
+00984c04	bl 0x00c30710
+00984c08	ldr w8,[x0]
+00984c0c	cmp w8,#0x73
+00984c10	b.eq 0x00984c1c
+00984c14	cmp w8,#0xb
+00984c18	b.ne 0x00984c54
+00984c1c	add x8,x22,#0x8
+00984c20	ldar w9,[x8]
+00984c24	cmn w9,#0x1
+00984c28	b.eq 0x00984c54
+00984c2c	ldar w2,[x8]
+00984c30	mov w0,#0x1
+00984c34	mov w1,#0x1
+00984c38	mov x3,x23
+00984c3c	bl 0x00c33550
+00984c40	cmp w0,#0x3
+00984c44	cset w8,ne
+00984c48	and w19,w19,w8
+00984c4c	b.ne 0x00984bc8
+00984c50	b 0x00984c60
+00984c54	mov w19,wzr
+00984c58	b 0x00984c60
+00984c5c	mov w19,#0x1
+00984c60	mov w0,w19
+00984c64	ldp x29,x30,[sp, #0x30]
+00984c68	ldp x20,x19,[sp, #0x20]
+00984c6c	ldp x22,x21,[sp, #0x10]
+00984c70	ldr x23,[sp], #0x40
+00984c74	ret

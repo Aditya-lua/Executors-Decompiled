@@ -1,0 +1,4 @@
+; i2d_ASN1_UTF8STRING @ 009f7a1c
+009f7a1c	adrp x2,0xc58000
+009f7a20	add x2,x2,#0xc28
+009f7a24	b 0x00c36170

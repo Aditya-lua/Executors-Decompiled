@@ -1,0 +1,5 @@
+; <EXTERNAL>::sin @ 00c30870
+00c30870	adrp x16,0xcb6000
+00c30874	ldr x17,[x16, #0x420]
+00c30878	add x16,x16,#0x420
+00c3087c	br x17

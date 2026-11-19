@@ -1,0 +1,5 @@
+; tls1_check_chain @ 00c36710
+00c36710	adrp x16,0xcb9000
+00c36714	ldr x17,[x16, #0x370]
+00c36718	add x16,x16,#0x370
+00c3671c	br x17

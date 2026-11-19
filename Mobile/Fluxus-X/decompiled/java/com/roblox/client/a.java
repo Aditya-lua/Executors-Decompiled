@@ -1,0 +1,466 @@
+package com.roblox.client;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.appcompat.widget.Toolbar;
+import bh.a1;
+import bh.e2;
+import bh.j0;
+import bh.q0;
+import bh.t0;
+import bh.y;
+import com.roblox.client.analytics.TelemetryFlushWorker;
+import com.roblox.client.components.RobloxToolbar;
+import com.roblox.client.startup.ActivitySplash;
+import com.roblox.engine.jni.NativeReportingInterface;
+import com.roblox.engine.jni.memstorage.MemStorage;
+import e.x;
+import eh.k;
+import eh.o;
+import ik.k0;
+import ok.a0;
+import ok.q;
+import ok.t;
+import rj.r;
+import yi.h;
+
+/* JADX INFO: loaded from: classes2.dex */
+public abstract class a extends com.roblox.client.b implements lk.e.b {
+    public static int R;
+    public androidx.appcompat.app.a I;
+    public androidx.appcompat.app.a J;
+    public androidx.appcompat.app.a K;
+    public ProgressDialog L;
+    public boolean M = false;
+    public ui.c N = Q1();
+    public kh.a O = new kh.a();
+    public Toolbar P;
+    public lk.e Q;
+
+    /* JADX INFO: renamed from: com.roblox.client.a$a, reason: collision with other inner class name */
+    public class C0137a implements h.d {
+        public C0137a() {
+        }
+
+        @Override // yi.h.d
+        public void a(boolean z10) {
+            if (!z10) {
+                q.h("rbx.locale", "Retrieved locale same as current locale");
+            } else {
+                q.h("rbx.locale", "(OnAppResume) Recreating activity due to Locale change.");
+                a.this.recreate();
+            }
+        }
+    }
+
+    public class b implements DialogInterface.OnDismissListener {
+        public b() {
+        }
+
+        @Override // android.content.DialogInterface.OnDismissListener
+        public void onDismiss(DialogInterface dialogInterface) {
+            a.this.I = null;
+        }
+    }
+
+    public class c implements DialogInterface.OnClickListener {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ com.roblox.client.d.e f8804a;
+        public final /* synthetic */ Activity b;
+
+        public c(com.roblox.client.d.e eVar, Activity activity, g gVar) {
+            this.f8804a = eVar;
+            this.b = activity;
+        }
+
+        @Override // android.content.DialogInterface.OnClickListener
+        public void onClick(DialogInterface dialogInterface, int i10) {
+            a0.d(this.b);
+            a.this.g2(true, null);
+        }
+    }
+
+    public class d implements DialogInterface.OnClickListener {
+        public d(g gVar) {
+        }
+
+        @Override // android.content.DialogInterface.OnClickListener
+        public void onClick(DialogInterface dialogInterface, int i10) {
+        }
+    }
+
+    public class e implements DialogInterface.OnClickListener {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ com.roblox.client.d.e f8807a;
+        public final /* synthetic */ Activity b;
+
+        public e(com.roblox.client.d.e eVar, Activity activity, g gVar) {
+            this.f8807a = eVar;
+            this.b = activity;
+        }
+
+        @Override // android.content.DialogInterface.OnClickListener
+        public void onClick(DialogInterface dialogInterface, int i10) {
+            a0.d(this.b);
+        }
+    }
+
+    public static /* synthetic */ class f {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f8809a;
+
+        static {
+            int[] iArr = new int[cm.a.values().length];
+            f8809a = iArr;
+            try {
+                iArr[cm.a.LIGHT.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f8809a[cm.a.CLASSIC.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f8809a[cm.a.DARK.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+        }
+    }
+
+    public interface g {
+    }
+
+    public boolean N1() {
+        boolean zJ = e2.j(this);
+        boolean z10 = !zJ;
+        if (!zJ) {
+            e2();
+        }
+        return z10;
+    }
+
+    public void O1() {
+        U1();
+        if (this.J == null) {
+            this.J = new androidx.appcompat.app.a.C0021a(this).p(q0.V).g(q0.R).d(false).a();
+        }
+        if (this.J.isShowing()) {
+            return;
+        }
+        this.J.show();
+    }
+
+    public boolean P1() {
+        return false;
+    }
+
+    public ui.c Q1() {
+        return new ui.c();
+    }
+
+    public boolean R1() {
+        return a1.U(this).getBoolean("ROBLOXCrash", false);
+    }
+
+    public final void S1(androidx.appcompat.app.a aVar) {
+        if (aVar == null || !aVar.isShowing()) {
+            return;
+        }
+        aVar.dismiss();
+    }
+
+    public void T1() {
+        ProgressDialog progressDialog = this.L;
+        if (progressDialog == null || !progressDialog.isShowing()) {
+            return;
+        }
+        this.L.dismiss();
+        this.L = null;
+    }
+
+    public final void U1() {
+        S1(this.I);
+        this.I = null;
+    }
+
+    public final String V1() {
+        return getString(q0.E);
+    }
+
+    public ui.c W1() {
+        return this.N;
+    }
+
+    public void X1(dj.b.d dVar) {
+        q.h("RobloxActivity", "navigateToPostLogoutUI: logoutType = " + dVar + ", foreground = " + J1());
+        q.h("RobloxActivity", "navigateToPostLogoutUI: [New Startup] Launch Main activity...");
+        startActivity(y.h().i(this));
+        if (dVar != dj.b.d.LOGOUT_BY_USER_IN_LUA) {
+            q.h("RobloxActivity", "navigateToPostLogoutUI: notify Lua about this 401 logout condition");
+            MemStorage.fire("NativeShellEvent", "NETWORK_ERROR_401");
+        }
+    }
+
+    public final void Y1() {
+        super.setContentView(this.N.i(LayoutInflater.from(this), this));
+    }
+
+    public final void Z1(int i10) {
+        Y1();
+        LayoutInflater.from(this).inflate(i10, this.N.g());
+    }
+
+    public final void a2(View view, ViewGroup.LayoutParams layoutParams) {
+        Y1();
+        this.N.g().addView(view, layoutParams);
+    }
+
+    public final void b2(cm.a aVar) {
+        boolean z10 = aVar != cm.a.LIGHT;
+        int systemUiVisibility = getWindow().getDecorView().getSystemUiVisibility();
+        getWindow().getDecorView().setSystemUiVisibility(z10 ? systemUiVisibility & (-8193) : systemUiVisibility | 8192);
+        if (a1.k0()) {
+            getWindow().setStatusBarColor(f.f8809a[aVar.ordinal()] != 1 ? getResources().getColor(j0.f4084g) : getResources().getColor(j0.f4090m));
+        }
+        getWindow().setNavigationBarColor(getResources().getColor(j0.f4082e));
+    }
+
+    public void c2() {
+        View decorView = getWindow().getDecorView();
+        if (bi.h.a().G()) {
+            x.a(this);
+        } else {
+            decorView.setSystemUiVisibility(1280);
+        }
+        this.E.g(decorView);
+    }
+
+    public void d2(Context context) {
+        String string = getString(q0.f4264p);
+        String string2 = getString(q0.f4267q);
+        ProgressDialog progressDialog = new ProgressDialog(context);
+        progressDialog.setTitle(string);
+        progressDialog.setMessage(string2);
+        progressDialog.setIndeterminate(true);
+        progressDialog.setCancelable(false);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setOnCancelListener(null);
+        this.L = progressDialog;
+        progressDialog.show();
+    }
+
+    public final void e2() {
+        androidx.appcompat.app.a aVar = this.I;
+        if (aVar == null) {
+            androidx.appcompat.app.a aVarD = e2.d(this, getResources().getString(q0.S));
+            this.I = aVarD;
+            aVarD.setOnDismissListener(new b());
+        } else if (aVar.isShowing()) {
+            q.b("RobloxActivity", "A network-disconnected alert already exists. Do nothing.");
+        } else {
+            this.I.show();
+        }
+    }
+
+    public void f2(boolean z10) {
+        g2(z10, null);
+    }
+
+    public void g0(cm.a aVar) {
+        int color;
+        q.b("rbx.theme", getClass().getSimpleName() + ".onThemeChanged() " + aVar);
+        Toolbar toolbar = this.P;
+        if (toolbar instanceof RobloxToolbar) {
+            ((RobloxToolbar) toolbar).g0(aVar);
+        }
+        if (this.N != null) {
+            int i10 = f.f8809a[aVar.ordinal()];
+            if (i10 != 1) {
+                color = i10 != 2 ? getResources().getColor(j0.f4084g) : getResources().getColor(j0.f4079a);
+            } else {
+                color = getResources().getColor(j0.f4090m);
+            }
+            this.N.l(color);
+        }
+        b2(aVar);
+    }
+
+    public void g2(boolean z10, g gVar) {
+        if (a1.q0()) {
+            ok.x.a(this, q0.X);
+            if (z10) {
+                finish();
+                return;
+            }
+            return;
+        }
+        S1(this.I);
+        S1(this.K);
+        getPackageName();
+        com.roblox.client.d.e eVarD = com.roblox.client.d.e().d();
+        String string = t.j() ? getString(q0.f4252l) : getString(q0.f4258n, V1());
+        if (z10) {
+            S1(this.J);
+            if (kh.a.a(getIntent())) {
+                this.O.b(this, true, eVarD);
+                return;
+            }
+            this.K = new androidx.appcompat.app.a.C0021a(this).p(q0.f4255m).h(string).m(q0.f4246j, new c(eVarD, this, gVar)).a();
+        } else {
+            this.K = new androidx.appcompat.app.a.C0021a(this).p(q0.f4255m).h(string).m(q0.f4246j, new e(eVarD, this, gVar)).i(q0.f4243i, new d(gVar)).a();
+        }
+        this.K.setCancelable(false);
+        this.K.show();
+    }
+
+    public final void h2() {
+        q.h("rbx.locale", "using new api on app resume. mIsAppResumedFromColdStart: " + this.M);
+        new h().c(this, new C0137a());
+    }
+
+    @Override // f4.v, e.p, android.app.Activity
+    public void onActivityResult(int i10, int i11, Intent intent) {
+        q.b("RobloxActivity", "onActivityResult: requestCode = " + i10);
+        if (i10 != 20103) {
+            super.onActivityResult(i10, i11, intent);
+            return;
+        }
+        if (i11 != -1) {
+            q.h("RobloxActivity", "Sharing dialog dismissed.");
+            dj.g.b().q("Android-AppMain-GameShare-ChooserDismissed");
+            return;
+        }
+        String packageName = intent.getComponent().getPackageName();
+        q.h("RobloxActivity", "Sharing with=" + packageName + ".");
+        startActivity(intent);
+        t0.y(packageName);
+        dj.g.b().q("Android-AppMain-GameShare-AppSelected");
+    }
+
+    @Override // com.roblox.client.b, f4.v, e.p, k2.g, android.app.Activity
+    public void onCreate(Bundle bundle) {
+        if (k0.B()) {
+            q.h("RobloxActivity", "onCreate: App was previously destroyed due to process death");
+            super.onCreate(bundle);
+            finish();
+            return;
+        }
+        if (bi.h.a().Q1()) {
+            q.h("RobloxActivity", "GameActivity = ON. Return!");
+            super.onCreate(bundle);
+            return;
+        }
+        dj.b.f().k(this);
+        boolean z10 = this instanceof ActivitySplash;
+        boolean zM = com.roblox.client.startup.a.m();
+        if (!zM && !z10) {
+            q.h("RobloxActivity", "onCreate ... settingsLoaded = false. Load from preferences!!!");
+            com.roblox.client.startup.a.s(this);
+        }
+        yi.b.f().u(this);
+        dj.e.c().d(this);
+        super.onCreate(bundle);
+        q.b("RobloxActivity", "activity onCreate, name = " + getClass().getSimpleName());
+        E1();
+        c2();
+        if (!zM && !P1()) {
+            q.h("RobloxActivity", "onCreate: no AppSettings in activity:" + getClass().getSimpleName() + ". Finish self!");
+            finish();
+        }
+        this.M = true;
+        lk.e eVar = new lk.e(this);
+        this.Q = eVar;
+        eVar.b(this);
+    }
+
+    @Override // com.roblox.client.b, j.b, f4.v, android.app.Activity
+    public void onDestroy() {
+        if (k0.B()) {
+            q.h("RobloxActivity", "onCreate: App was previously destroyed due to process death");
+            super.onDestroy();
+        } else {
+            super.onDestroy();
+            U1();
+            S1(this.J);
+        }
+    }
+
+    @Override // com.roblox.client.b, f4.v, android.app.Activity
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override // com.roblox.client.b, f4.v, android.app.Activity
+    public void onResume() {
+        super.onResume();
+        r.k().s(this);
+    }
+
+    @Override // com.roblox.client.b, j.b, f4.v, android.app.Activity
+    public void onStart() {
+        super.onStart();
+        if (wh.b.a() && a1.x0()) {
+            q.k("RobloxActivity", "Alert: needs restart");
+            O1();
+        }
+        int i10 = R;
+        R = i10 + 1;
+        if (i10 == 0) {
+            dj.b.f().q(true);
+            a1.U(this).edit().putBoolean("ROBLOXCrash", true).apply();
+            if (!this.M) {
+                h2();
+            }
+        }
+        dj.g.b().i0();
+        this.M = false;
+    }
+
+    @Override // com.roblox.client.b, j.b, f4.v, android.app.Activity
+    public void onStop() {
+        int i10 = R - 1;
+        R = i10;
+        if (i10 == 0) {
+            dj.b.f().q(false);
+            NativeReportingInterface.stopPushNotificationSession();
+            a1.U(this).edit().remove("ROBLOXCrash").apply();
+            q.h("RobloxActivity", "The Shell is in background.");
+            k.q().s();
+            k.q().r();
+            o.j(false);
+            if (bi.h.a().E1()) {
+                boolean zT2 = bi.h.a().T2();
+                boolean zF = bi.h.a().f();
+                if (zT2 || zF) {
+                    TelemetryFlushWorker.d(this);
+                }
+            }
+        }
+        super.onStop();
+    }
+
+    @Override // j.b, e.p, android.app.Activity
+    public void setContentView(int i10) {
+        Z1(i10);
+    }
+
+    @Override // j.b, e.p, android.app.Activity
+    public void setContentView(View view) {
+        a2(view, null);
+    }
+
+    @Override // j.b, e.p, android.app.Activity
+    public void setContentView(View view, ViewGroup.LayoutParams layoutParams) {
+        a2(view, layoutParams);
+    }
+}

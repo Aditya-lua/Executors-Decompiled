@@ -1,0 +1,5 @@
+; EVP_PKEY_up_ref @ 00c34730
+00c34730	adrp x16,0xcb8000
+00c34734	ldr x17,[x16, #0x380]
+00c34738	add x16,x16,#0x380
+00c3473c	br x17

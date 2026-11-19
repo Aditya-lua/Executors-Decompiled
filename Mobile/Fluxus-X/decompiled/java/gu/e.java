@@ -1,0 +1,12 @@
+package gu;
+
+import com.github.luben.zstd.BuildConfig;
+import org.jetbrains.annotations.Nullable;
+import p001kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\bg\u0018\u00002\u00020\u0001R\u0016\u0010\u0004\u001a\u0004\u0018\u00010\u00008&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0002\u0010\u0003¨\u0006\u0005"}, d2 = {"Lgu/e;", BuildConfig.FLAVOR, "getCallerFrame", "()Lgu/e;", "callerFrame", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface e {
+    @Nullable
+    e getCallerFrame();
+}

@@ -1,0 +1,43 @@
+; ix::SocketOpenSSL::send @ 009a5274
+009a5274	stp x22,x21,[sp, #-0x30]!
+009a5278	stp x20,x19,[sp, #0x10]
+009a527c	stp x29,x30,[sp, #0x20]
+009a5280	add x29,sp,#0x20
+009a5284	add x19,x0,#0xe0
+009a5288	mov x20,x0
+009a528c	mov x0,x19
+009a5290	mov x21,x2
+009a5294	mov x22,x1
+009a5298	bl 0x00c2ff10
+009a529c	ldr x8,[x20, #0x40]
+009a52a0	cbz x8,0x009a52f4
+009a52a4	ldr x8,[x20, #0x48]
+009a52a8	cbz x8,0x009a52f4
+009a52ac	bl 0x00c323e0
+009a52b0	ldr x0,[x20, #0x40]
+009a52b4	mov x1,x22
+009a52b8	mov w2,w21
+009a52bc	bl 0x00c32a20
+009a52c0	mov w21,w0
+009a52c4	ldr x0,[x20, #0x40]
+009a52c8	mov w1,w21
+009a52cc	bl 0x00c32910
+009a52d0	cbz w0,0x009a5314
+009a52d4	orr w8,w0,#0x1
+009a52d8	cmp w8,#0x3
+009a52dc	b.ne 0x009a52ec
+009a52e0	bl 0x00c30710
+009a52e4	mov w8,#0xb
+009a52e8	str w8,[x0]
+009a52ec	mov x20,#-0x1
+009a52f0	b 0x009a52f8
+009a52f4	mov x20,xzr
+009a52f8	mov x0,x19
+009a52fc	bl 0x00c2ff20
+009a5300	mov x0,x20
+009a5304	ldp x29,x30,[sp, #0x20]
+009a5308	ldp x20,x19,[sp, #0x10]
+009a530c	ldp x22,x21,[sp], #0x30
+009a5310	ret
+009a5314	sxtw x20,w21
+009a5318	b 0x009a52f8

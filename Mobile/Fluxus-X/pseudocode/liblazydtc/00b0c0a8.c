@@ -1,0 +1,16 @@
+/* Ghidra 12.2 pseudocode; native types and names may be inferred.
+ * Binary: liblazydtc.so; entry: 00b0c0a8
+ */
+
+EVP_PKEY * X509_REQ_get_pubkey(X509_REQ *req)
+
+{
+  EVP_PKEY *pEVar1;
+  
+  if (req == (X509_REQ *)0x0) {
+    return (EVP_PKEY *)0x0;
+  }
+  pEVar1 = X509_PUBKEY_get((X509_PUBKEY *)req[1].sig_alg);
+  return pEVar1;
+}
+

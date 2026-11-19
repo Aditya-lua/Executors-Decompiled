@@ -1,0 +1,4 @@
+; d2i_X509_CERT_AUX @ 00b1f110
+00b1f110	adrp x3,0xc82000
+00b1f114	add x3,x3,#0xc60
+00b1f118	b 0x00c36150

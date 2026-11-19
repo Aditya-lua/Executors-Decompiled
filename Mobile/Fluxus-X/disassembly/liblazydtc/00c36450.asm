@@ -1,0 +1,5 @@
+; EVP_PKEY_new @ 00c36450
+00c36450	adrp x16,0xcb9000
+00c36454	ldr x17,[x16, #0x210]
+00c36458	add x16,x16,#0x210
+00c3645c	br x17

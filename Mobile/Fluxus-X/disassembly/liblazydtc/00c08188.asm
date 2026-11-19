@@ -1,0 +1,167 @@
+; std::__ndk1::__time_get_storage<wchar_t>::__do_date_order @ 00c08188
+00c08188	bti c
+00c0818c	ldrb w9,[x0, #0x3f8]
+00c08190	ldr x8,[x0, #0x400]
+00c08194	ldr x11,[x0, #0x408]
+00c08198	lsr x10,x9,#0x1
+00c0819c	tst w9,#0x1
+00c081a0	csel x8,x10,x8,eq
+00c081a4	cbz x8,0x00c081dc
+00c081a8	add x12,x0,#0x3fc
+00c081ac	tst w9,#0x1
+00c081b0	mov x10,xzr
+00c081b4	mov w13,wzr
+00c081b8	csel x12,x12,x11,eq
+00c081bc	ldr w10,[x12, x10, LSL #0x2]
+00c081c0	cmp w10,#0x25
+00c081c4	b.eq 0x00c081e4
+00c081c8	add w10,w13,#0x1
+00c081cc	cmp x8,x10
+00c081d0	mov w13,w10
+00c081d4	b.hi 0x00c081bc
+00c081d8	b 0x00c081e8
+00c081dc	mov w10,wzr
+00c081e0	b 0x00c081e8
+00c081e4	mov w10,w13
+00c081e8	add x12,x0,#0x3fc
+00c081ec	tst w9,#0x1
+00c081f0	add w13,w10,#0x1
+00c081f4	csel x9,x12,x11,eq
+00c081f8	ldr w11,[x9, w13, UXTW #0x2]
+00c081fc	cmp w11,#0x6c
+00c08200	b.gt 0x00c08294
+00c08204	cmp w11,#0x59
+00c08208	b.eq 0x00c082a4
+00c0820c	cmp w11,#0x64
+00c08210	b.ne 0x00c08418
+00c08214	add w10,w10,#0x2
+00c08218	cmp x8,x10
+00c0821c	b.ls 0x00c08238
+00c08220	ldr w11,[x9, x10, LSL #0x2]
+00c08224	cmp w11,#0x25
+00c08228	b.eq 0x00c08238
+00c0822c	add w10,w10,#0x1
+00c08230	cmp x8,x10
+00c08234	b.hi 0x00c08220
+00c08238	cmp x8,x10
+00c0823c	b.eq 0x00c08418
+00c08240	add w11,w10,#0x1
+00c08244	ldr w11,[x9, w11, UXTW #0x2]
+00c08248	cmp w11,#0x6d
+00c0824c	b.ne 0x00c08418
+00c08250	add w10,w10,#0x2
+00c08254	cmp x8,x10
+00c08258	b.ls 0x00c08274
+00c0825c	ldr w11,[x9, x10, LSL #0x2]
+00c08260	cmp w11,#0x25
+00c08264	b.eq 0x00c08274
+00c08268	add w10,w10,#0x1
+00c0826c	cmp x8,x10
+00c08270	b.hi 0x00c0825c
+00c08274	cmp x8,x10
+00c08278	b.eq 0x00c08418
+00c0827c	add w8,w10,#0x1
+00c08280	ldr w10,[x9, w8, UXTW #0x2]
+00c08284	cmp w10,#0x79
+00c08288	b.ne 0x00c083f0
+00c0828c	mov w0,#0x1
+00c08290	ret
+00c08294	cmp w11,#0x6d
+00c08298	b.eq 0x00c0832c
+00c0829c	cmp w11,#0x79
+00c082a0	b.ne 0x00c08418
+00c082a4	add w10,w10,#0x2
+00c082a8	cmp x8,x10
+00c082ac	b.ls 0x00c082c8
+00c082b0	ldr w11,[x9, x10, LSL #0x2]
+00c082b4	cmp w11,#0x25
+00c082b8	b.eq 0x00c082c8
+00c082bc	add w10,w10,#0x1
+00c082c0	cmp x8,x10
+00c082c4	b.hi 0x00c082b0
+00c082c8	cmp x8,x10
+00c082cc	b.eq 0x00c08418
+00c082d0	add w11,w10,#0x1
+00c082d4	ldr w11,[x9, w11, UXTW #0x2]
+00c082d8	cmp w11,#0x64
+00c082dc	b.eq 0x00c083ac
+00c082e0	cmp w11,#0x6d
+00c082e4	b.ne 0x00c08418
+00c082e8	add w10,w10,#0x2
+00c082ec	cmp x8,x10
+00c082f0	b.ls 0x00c0830c
+00c082f4	ldr w11,[x9, x10, LSL #0x2]
+00c082f8	cmp w11,#0x25
+00c082fc	b.eq 0x00c0830c
+00c08300	add w10,w10,#0x1
+00c08304	cmp x8,x10
+00c08308	b.hi 0x00c082f4
+00c0830c	cmp x8,x10
+00c08310	b.eq 0x00c08418
+00c08314	add w8,w10,#0x1
+00c08318	ldr w8,[x9, w8, UXTW #0x2]
+00c0831c	cmp w8,#0x64
+00c08320	b.ne 0x00c08418
+00c08324	mov w0,#0x3
+00c08328	ret
+00c0832c	add w10,w10,#0x2
+00c08330	cmp x8,x10
+00c08334	b.ls 0x00c08350
+00c08338	ldr w11,[x9, x10, LSL #0x2]
+00c0833c	cmp w11,#0x25
+00c08340	b.eq 0x00c08350
+00c08344	add w10,w10,#0x1
+00c08348	cmp x8,x10
+00c0834c	b.hi 0x00c08338
+00c08350	cmp x8,x10
+00c08354	b.eq 0x00c08418
+00c08358	add w11,w10,#0x1
+00c0835c	ldr w11,[x9, w11, UXTW #0x2]
+00c08360	cmp w11,#0x64
+00c08364	b.ne 0x00c08418
+00c08368	add w10,w10,#0x2
+00c0836c	cmp x8,x10
+00c08370	b.ls 0x00c0838c
+00c08374	ldr w11,[x9, x10, LSL #0x2]
+00c08378	cmp w11,#0x25
+00c0837c	b.eq 0x00c0838c
+00c08380	add w10,w10,#0x1
+00c08384	cmp x8,x10
+00c08388	b.hi 0x00c08374
+00c0838c	cmp x8,x10
+00c08390	b.eq 0x00c08418
+00c08394	add w8,w10,#0x1
+00c08398	ldr w10,[x9, w8, UXTW #0x2]
+00c0839c	cmp w10,#0x79
+00c083a0	b.ne 0x00c08404
+00c083a4	mov w0,#0x2
+00c083a8	ret
+00c083ac	add w10,w10,#0x2
+00c083b0	cmp x8,x10
+00c083b4	b.ls 0x00c083d0
+00c083b8	ldr w11,[x9, x10, LSL #0x2]
+00c083bc	cmp w11,#0x25
+00c083c0	b.eq 0x00c083d0
+00c083c4	add w10,w10,#0x1
+00c083c8	cmp x8,x10
+00c083cc	b.hi 0x00c083b8
+00c083d0	cmp x8,x10
+00c083d4	b.eq 0x00c08418
+00c083d8	add w8,w10,#0x1
+00c083dc	ldr w8,[x9, w8, UXTW #0x2]
+00c083e0	cmp w8,#0x6d
+00c083e4	b.ne 0x00c08418
+00c083e8	mov w0,#0x4
+00c083ec	ret
+00c083f0	ldr w8,[x9, w8, UXTW #0x2]
+00c083f4	cmp w8,#0x59
+00c083f8	b.ne 0x00c08418
+00c083fc	mov w0,#0x1
+00c08400	ret
+00c08404	ldr w8,[x9, w8, UXTW #0x2]
+00c08408	cmp w8,#0x59
+00c0840c	b.ne 0x00c08418
+00c08410	mov w0,#0x2
+00c08414	ret
+00c08418	mov w0,wzr
+00c0841c	ret

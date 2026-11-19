@@ -1,0 +1,30 @@
+; FUN_0095f6e4 @ 0095f6e4
+0095f6e4	add w8,w0,#0x64
+0095f6e8	cmp w8,#0x6b
+0095f6ec	b.hi 0x0095f728
+0095f6f0	adrp x9,0x748000
+0095f6f4	add x9,x9,#0xe4c
+0095f6f8	ldrsw x8,[x9, x8, LSL #0x2]
+0095f6fc	mov w0,#0x44
+0095f700	add x8,x8,x9
+0095f704	br x8
+0095f708	mov w0,#0x47
+0095f70c	ret
+0095f710	mov w0,wzr
+0095f714	ret
+0095f718	orr w0,wzr,#0x1c
+0095f71c	ret
+0095f720	orr w0,wzr,#0x7
+0095f724	ret
+0095f728	mov w0,#0x2a
+0095f72c	ret
+0095f730	mov w0,#0x45
+0095f734	ret
+0095f738	mov w0,#0x46
+0095f73c	ret
+0095f740	mov w0,#0x48
+0095f744	ret
+0095f748	mov w0,#0x49
+0095f74c	ret
+0095f750	mov w0,#0x4a
+0095f754	ret

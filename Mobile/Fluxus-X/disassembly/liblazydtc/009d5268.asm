@@ -1,0 +1,50 @@
+; tls_parse_stoc_supported_versions @ 009d5268
+009d5268	str x19,[sp, #-0x20]!
+009d526c	stp x29,x30,[sp, #0x10]
+009d5270	ldr x8,[x1, #0x8]
+009d5274	mov x19,x0
+009d5278	add x29,sp,#0x10
+009d527c	cmp x8,#0x2
+009d5280	b.cc 0x009d52a0
+009d5284	ldr x11,[x1]
+009d5288	subs x8,x8,#0x2
+009d528c	ldrb w9,[x11]
+009d5290	ldrb w10,[x11, #0x1]
+009d5294	add x11,x11,#0x2
+009d5298	stp x11,x8,[x1]
+009d529c	b.eq 0x009d52e0
+009d52a0	bl 0x00c342a0
+009d52a4	adrp x0,0x2bf000
+009d52a8	adrp x2,0x2cf000
+009d52ac	add x0,x0,#0x967
+009d52b0	add x2,x2,#0x830
+009d52b4	mov w1,#0x6b1
+009d52b8	bl 0x00c342b0
+009d52bc	mov w1,#0x32
+009d52c0	mov w2,#0x9f
+009d52c4	mov x0,x19
+009d52c8	mov x3,xzr
+009d52cc	bl 0x00c34410
+009d52d0	mov w0,wzr
+009d52d4	ldp x29,x30,[sp, #0x10]
+009d52d8	ldr x19,[sp], #0x20
+009d52dc	ret
+009d52e0	bfm w10,w9,#0x18,#0x7
+009d52e4	cmp w10,#0x304
+009d52e8	b.ne 0x009d5304
+009d52ec	cmp w2,#0x800
+009d52f0	b.eq 0x009d52fc
+009d52f4	mov w8,#0x304
+009d52f8	str w8,[x19]
+009d52fc	mov w0,#0x1
+009d5300	b 0x009d52d4
+009d5304	bl 0x00c342a0
+009d5308	adrp x0,0x2bf000
+009d530c	adrp x2,0x2cf000
+009d5310	add x0,x0,#0x967
+009d5314	add x2,x2,#0x830
+009d5318	mov w1,#0x6bb
+009d531c	bl 0x00c342b0
+009d5320	mov w1,#0x2f
+009d5324	mov w2,#0x74
+009d5328	b 0x009d52c4

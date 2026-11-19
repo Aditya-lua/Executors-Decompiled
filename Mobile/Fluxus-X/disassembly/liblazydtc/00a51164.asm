@@ -1,0 +1,38 @@
+; ENGINE_finish @ 00a51164
+00a51164	stp x20,x19,[sp, #-0x20]!
+00a51168	stp x29,x30,[sp, #0x10]
+00a5116c	add x29,sp,#0x10
+00a51170	cbz x0,0x00a511dc
+00a51174	adrp x20,0xcb5000
+00a51178	ldr x20,[x20, #0x5d8]
+00a5117c	mov x19,x0
+00a51180	ldr x0,[x20]
+00a51184	bl 0x00c356a0
+00a51188	cbz w0,0x00a511e4
+00a5118c	mov w1,#0x1
+00a51190	mov x0,x19
+00a51194	bl 0x00a50f6c
+00a51198	ldr x8,[x20]
+00a5119c	mov w19,w0
+00a511a0	mov x0,x8
+00a511a4	bl 0x00c35690
+00a511a8	cbnz w19,0x00a511e8
+00a511ac	bl 0x00c342a0
+00a511b0	adrp x0,0x2b9000
+00a511b4	adrp x2,0x2bb000
+00a511b8	add x0,x0,#0xd2a
+00a511bc	add x2,x2,#0xbb3
+00a511c0	mov w1,#0x6f
+00a511c4	bl 0x00c342b0
+00a511c8	mov w0,#0x26
+00a511cc	mov w1,#0x6a
+00a511d0	mov x2,xzr
+00a511d4	bl 0x00c342c0
+00a511d8	b 0x00a511e8
+00a511dc	mov w19,#0x1
+00a511e0	b 0x00a511e8
+00a511e4	mov w19,wzr
+00a511e8	ldp x29,x30,[sp, #0x10]
+00a511ec	mov w0,w19
+00a511f0	ldp x20,x19,[sp], #0x20
+00a511f4	ret

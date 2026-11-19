@@ -1,0 +1,167 @@
+; std::__ndk1::__time_get_storage<char>::__do_date_order @ 00c07ef0
+00c07ef0	bti c
+00c07ef4	ldrb w9,[x0, #0x3f8]
+00c07ef8	ldr x8,[x0, #0x400]
+00c07efc	ldr x11,[x0, #0x408]
+00c07f00	lsr x10,x9,#0x1
+00c07f04	tst w9,#0x1
+00c07f08	csel x8,x10,x8,eq
+00c07f0c	cbz x8,0x00c07f44
+00c07f10	add x12,x0,#0x3f9
+00c07f14	tst w9,#0x1
+00c07f18	mov x10,xzr
+00c07f1c	mov w13,wzr
+00c07f20	csel x12,x12,x11,eq
+00c07f24	ldrb w10,[x12, x10]
+00c07f28	cmp w10,#0x25
+00c07f2c	b.eq 0x00c07f4c
+00c07f30	add w10,w13,#0x1
+00c07f34	cmp x8,x10
+00c07f38	mov w13,w10
+00c07f3c	b.hi 0x00c07f24
+00c07f40	b 0x00c07f50
+00c07f44	mov w10,wzr
+00c07f48	b 0x00c07f50
+00c07f4c	mov w10,w13
+00c07f50	add x12,x0,#0x3f9
+00c07f54	tst w9,#0x1
+00c07f58	add w13,w10,#0x1
+00c07f5c	csel x9,x12,x11,eq
+00c07f60	ldrb w11,[x9, w13, UXTW ]
+00c07f64	cmp w11,#0x6c
+00c07f68	b.gt 0x00c07ffc
+00c07f6c	cmp w11,#0x59
+00c07f70	b.eq 0x00c0800c
+00c07f74	cmp w11,#0x64
+00c07f78	b.ne 0x00c08180
+00c07f7c	add w10,w10,#0x2
+00c07f80	cmp x8,x10
+00c07f84	b.ls 0x00c07fa0
+00c07f88	ldrb w11,[x9, x10]
+00c07f8c	cmp w11,#0x25
+00c07f90	b.eq 0x00c07fa0
+00c07f94	add w10,w10,#0x1
+00c07f98	cmp x8,x10
+00c07f9c	b.hi 0x00c07f88
+00c07fa0	cmp x8,x10
+00c07fa4	b.eq 0x00c08180
+00c07fa8	add w11,w10,#0x1
+00c07fac	ldrb w11,[x9, w11, UXTW ]
+00c07fb0	cmp w11,#0x6d
+00c07fb4	b.ne 0x00c08180
+00c07fb8	add w10,w10,#0x2
+00c07fbc	cmp x8,x10
+00c07fc0	b.ls 0x00c07fdc
+00c07fc4	ldrb w11,[x9, x10]
+00c07fc8	cmp w11,#0x25
+00c07fcc	b.eq 0x00c07fdc
+00c07fd0	add w10,w10,#0x1
+00c07fd4	cmp x8,x10
+00c07fd8	b.hi 0x00c07fc4
+00c07fdc	cmp x8,x10
+00c07fe0	b.eq 0x00c08180
+00c07fe4	add w8,w10,#0x1
+00c07fe8	ldrb w10,[x9, w8, UXTW ]
+00c07fec	cmp w10,#0x79
+00c07ff0	b.ne 0x00c08158
+00c07ff4	mov w0,#0x1
+00c07ff8	ret
+00c07ffc	cmp w11,#0x6d
+00c08000	b.eq 0x00c08094
+00c08004	cmp w11,#0x79
+00c08008	b.ne 0x00c08180
+00c0800c	add w10,w10,#0x2
+00c08010	cmp x8,x10
+00c08014	b.ls 0x00c08030
+00c08018	ldrb w11,[x9, x10]
+00c0801c	cmp w11,#0x25
+00c08020	b.eq 0x00c08030
+00c08024	add w10,w10,#0x1
+00c08028	cmp x8,x10
+00c0802c	b.hi 0x00c08018
+00c08030	cmp x8,x10
+00c08034	b.eq 0x00c08180
+00c08038	add w11,w10,#0x1
+00c0803c	ldrb w11,[x9, w11, UXTW ]
+00c08040	cmp w11,#0x64
+00c08044	b.eq 0x00c08114
+00c08048	cmp w11,#0x6d
+00c0804c	b.ne 0x00c08180
+00c08050	add w10,w10,#0x2
+00c08054	cmp x8,x10
+00c08058	b.ls 0x00c08074
+00c0805c	ldrb w11,[x9, x10]
+00c08060	cmp w11,#0x25
+00c08064	b.eq 0x00c08074
+00c08068	add w10,w10,#0x1
+00c0806c	cmp x8,x10
+00c08070	b.hi 0x00c0805c
+00c08074	cmp x8,x10
+00c08078	b.eq 0x00c08180
+00c0807c	add w8,w10,#0x1
+00c08080	ldrb w8,[x9, w8, UXTW ]
+00c08084	cmp w8,#0x64
+00c08088	b.ne 0x00c08180
+00c0808c	mov w0,#0x3
+00c08090	ret
+00c08094	add w10,w10,#0x2
+00c08098	cmp x8,x10
+00c0809c	b.ls 0x00c080b8
+00c080a0	ldrb w11,[x9, x10]
+00c080a4	cmp w11,#0x25
+00c080a8	b.eq 0x00c080b8
+00c080ac	add w10,w10,#0x1
+00c080b0	cmp x8,x10
+00c080b4	b.hi 0x00c080a0
+00c080b8	cmp x8,x10
+00c080bc	b.eq 0x00c08180
+00c080c0	add w11,w10,#0x1
+00c080c4	ldrb w11,[x9, w11, UXTW ]
+00c080c8	cmp w11,#0x64
+00c080cc	b.ne 0x00c08180
+00c080d0	add w10,w10,#0x2
+00c080d4	cmp x8,x10
+00c080d8	b.ls 0x00c080f4
+00c080dc	ldrb w11,[x9, x10]
+00c080e0	cmp w11,#0x25
+00c080e4	b.eq 0x00c080f4
+00c080e8	add w10,w10,#0x1
+00c080ec	cmp x8,x10
+00c080f0	b.hi 0x00c080dc
+00c080f4	cmp x8,x10
+00c080f8	b.eq 0x00c08180
+00c080fc	add w8,w10,#0x1
+00c08100	ldrb w10,[x9, w8, UXTW ]
+00c08104	cmp w10,#0x79
+00c08108	b.ne 0x00c0816c
+00c0810c	mov w0,#0x2
+00c08110	ret
+00c08114	add w10,w10,#0x2
+00c08118	cmp x8,x10
+00c0811c	b.ls 0x00c08138
+00c08120	ldrb w11,[x9, x10]
+00c08124	cmp w11,#0x25
+00c08128	b.eq 0x00c08138
+00c0812c	add w10,w10,#0x1
+00c08130	cmp x8,x10
+00c08134	b.hi 0x00c08120
+00c08138	cmp x8,x10
+00c0813c	b.eq 0x00c08180
+00c08140	add w8,w10,#0x1
+00c08144	ldrb w8,[x9, w8, UXTW ]
+00c08148	cmp w8,#0x6d
+00c0814c	b.ne 0x00c08180
+00c08150	mov w0,#0x4
+00c08154	ret
+00c08158	ldrb w8,[x9, w8, UXTW ]
+00c0815c	cmp w8,#0x59
+00c08160	b.ne 0x00c08180
+00c08164	mov w0,#0x1
+00c08168	ret
+00c0816c	ldrb w8,[x9, w8, UXTW ]
+00c08170	cmp w8,#0x59
+00c08174	b.ne 0x00c08180
+00c08178	mov w0,#0x2
+00c0817c	ret
+00c08180	mov w0,wzr
+00c08184	ret

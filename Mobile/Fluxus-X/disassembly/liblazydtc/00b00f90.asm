@@ -1,0 +1,4 @@
+; PROXY_CERT_INFO_EXTENSION_it @ 00b00f90
+00b00f90	adrp x0,0xc80000
+00b00f94	add x0,x0,#0x980
+00b00f98	ret

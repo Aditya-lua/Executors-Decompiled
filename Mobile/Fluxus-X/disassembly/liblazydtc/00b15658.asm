@@ -1,0 +1,8 @@
+; X509_REQ_set_pubkey @ 00b15658
+00b15658	cbz x0,0x00b15670
+00b1565c	mov w9,#0x1
+00b15660	add x8,x0,#0x28
+00b15664	str w9,[x0, #0x10]
+00b15668	mov x0,x8
+00b1566c	b 0x00c39910
+00b15670	ret

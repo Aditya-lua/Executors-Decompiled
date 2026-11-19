@@ -1,0 +1,5 @@
+; BUF_reverse @ 00c37260
+00c37260	adrp x16,0xcb9000
+00c37264	ldr x17,[x16, #0x918]
+00c37268	add x16,x16,#0x918
+00c3726c	br x17

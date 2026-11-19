@@ -1,0 +1,23 @@
+; CTLOG_STORE_free @ 00a12134
+00a12134	cbz x0,0x00a12188
+00a12138	stp x20,x19,[sp, #-0x20]!
+00a1213c	stp x29,x30,[sp, #0x10]
+00a12140	mov x19,x0
+00a12144	ldr x0,[x0, #0x8]
+00a12148	adrp x20,0x2b2000
+00a1214c	add x20,x20,#0xaa
+00a12150	mov w2,#0x8d
+00a12154	mov x1,x20
+00a12158	add x29,sp,#0x10
+00a1215c	bl 0x00c32310
+00a12160	adrp x1,0xcb5000
+00a12164	ldr x0,[x19, #0x10]
+00a12168	ldr x1,[x1, #0x4b8]
+00a1216c	bl 0x00c32600
+00a12170	ldp x29,x30,[sp, #0x10]
+00a12174	mov w2,#0x8f
+00a12178	mov x0,x19
+00a1217c	mov x1,x20
+00a12180	ldp x20,x19,[sp], #0x20
+00a12184	b 0x00c32310
+00a12188	ret

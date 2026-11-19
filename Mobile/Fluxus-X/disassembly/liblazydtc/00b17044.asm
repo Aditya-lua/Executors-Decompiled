@@ -1,0 +1,4 @@
+; NETSCAPE_SPKAC_it @ 00b17044
+00b17044	adrp x0,0xc81000
+00b17048	add x0,x0,#0xe38
+00b1704c	ret

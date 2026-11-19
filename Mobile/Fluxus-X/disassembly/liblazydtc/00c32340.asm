@@ -1,0 +1,5 @@
+; ENGINE_ctrl @ 00c32340
+00c32340	adrp x16,0xcb7000
+00c32344	ldr x17,[x16, #0x188]
+00c32348	add x16,x16,#0x188
+00c3234c	br x17

@@ -1,0 +1,78 @@
+; FUN_00b6731c @ 00b6731c
+00b6731c	str x25,[sp, #-0x50]!
+00b67320	stp x24,x23,[sp, #0x10]
+00b67324	stp x22,x21,[sp, #0x20]
+00b67328	stp x20,x19,[sp, #0x30]
+00b6732c	stp x29,x30,[sp, #0x40]
+00b67330	add x29,sp,#0x40
+00b67334	mov w25,w6
+00b67338	mov x19,x5
+00b6733c	mov x23,x4
+00b67340	mov x24,x3
+00b67344	mov x21,x2
+00b67348	mov x22,x1
+00b6734c	mov x20,x0
+00b67350	bl 0x00c41000
+00b67354	cbz w0,0x00b67434
+00b67358	ldrb w8,[x20, #0x54]
+00b6735c	bfxil w8,w25,#0x0,#0x1
+00b67360	strb w8,[x20, #0x54]
+00b67364	cbz x24,0x00b673b8
+00b67368	sub x8,x23,#0x1
+00b6736c	cmp x8,#0x80
+00b67370	b.cc 0x00b6739c
+00b67374	bl 0x00c342a0
+00b67378	adrp x0,0x2ac000
+00b6737c	adrp x2,0x2d0000
+00b67380	add x0,x0,#0xc00
+00b67384	add x2,x2,#0x967
+00b67388	mov w1,#0x3d
+00b6738c	bl 0x00c342b0
+00b67390	mov w0,#0x39
+00b67394	mov w1,#0x6d
+00b67398	b 0x00b6742c
+00b6739c	add x0,x20,#0x55
+00b673a0	mov x1,x24
+00b673a4	mov x2,x23
+00b673a8	str x23,[x20, #0x10]
+00b673ac	bl 0x00c2ffd0
+00b673b0	mov w8,#0x1
+00b673b4	str w8,[x20, #0x50]
+00b673b8	cbz x22,0x00b673e8
+00b673bc	ldr x8,[x20, #0x8]
+00b673c0	cmp x8,x21
+00b673c4	b.ne 0x00b67408
+00b673c8	ldr x8,[x20, #0xf0]
+00b673cc	mov x0,x20
+00b673d0	mov x1,x22
+00b673d4	mov x2,x21
+00b673d8	ldr x8,[x8]
+00b673dc	blr x8
+00b673e0	cbz w0,0x00b67434
+00b673e4	str xzr,[x20, #0x30]
+00b673e8	mov x0,x20
+00b673ec	mov x1,x19
+00b673f0	ldp x29,x30,[sp, #0x40]
+00b673f4	ldp x20,x19,[sp, #0x30]
+00b673f8	ldp x22,x21,[sp, #0x20]
+00b673fc	ldp x24,x23,[sp, #0x10]
+00b67400	ldr x25,[sp], #0x50
+00b67404	b 0x00b67810
+00b67408	bl 0x00c342a0
+00b6740c	adrp x0,0x2ac000
+00b67410	adrp x2,0x2d0000
+00b67414	add x0,x0,#0xc00
+00b67418	add x2,x2,#0x967
+00b6741c	mov w1,#0x47
+00b67420	bl 0x00c342b0
+00b67424	mov w0,#0x39
+00b67428	mov w1,#0x69
+00b6742c	mov x2,xzr
+00b67430	bl 0x00c342c0
+00b67434	ldp x29,x30,[sp, #0x40]
+00b67438	ldp x20,x19,[sp, #0x30]
+00b6743c	ldp x22,x21,[sp, #0x20]
+00b67440	ldp x24,x23,[sp, #0x10]
+00b67444	mov w0,wzr
+00b67448	ldr x25,[sp], #0x50
+00b6744c	ret

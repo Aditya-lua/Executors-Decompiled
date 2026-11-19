@@ -1,0 +1,11 @@
+; EVP_KDF_do_all_provided @ 00a64910
+00a64910	adrp x4,0xa64000
+00a64914	adrp x5,0xa64000
+00a64918	adrp x6,0xa64000
+00a6491c	mov x3,x2
+00a64920	mov x2,x1
+00a64924	add x4,x4,#0x36c
+00a64928	add x5,x5,#0x670
+00a6492c	add x6,x6,#0x68c
+00a64930	mov w1,#0x4
+00a64934	b 0x00c3bf40

@@ -1,0 +1,4 @@
+; EVP_PKCS82PKEY @ 00a606a0
+00a606a0	mov x1,xzr
+00a606a4	mov x2,xzr
+00a606a8	b 0x00a605b8

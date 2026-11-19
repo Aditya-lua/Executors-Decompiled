@@ -1,0 +1,64 @@
+; std::__ndk1::__codecvt_utf16<char32_t,true>::do_in @ 00c011c4
+00c011c4	bti c
+00c011c8	sub x8,x3,x2
+00c011cc	cmp x8,#0x2
+00c011d0	b.lt 0x00c011f8
+00c011d4	ldr w8,[x0, #0x18]
+00c011d8	tbz w8,#0x2,0x00c011f8
+00c011dc	ldrb w8,[x2]
+00c011e0	cmp w8,#0xff
+00c011e4	b.ne 0x00c011f8
+00c011e8	ldrb w8,[x2, #0x1]
+00c011ec	cmp w8,#0xfe
+00c011f0	cset w8,eq
+00c011f4	add x2,x2,w8, UXTW  #0x1
+00c011f8	sub x8,x3,#0x1
+00c011fc	cmp x2,x8
+00c01200	b.cs 0x00c0129c
+00c01204	ldr x9,[x0, #0x10]
+00c01208	mov w10,#0xd800
+00c0120c	mov w11,#0xdc00
+00c01210	b 0x00c01224
+00c01214	add x2,x2,x0
+00c01218	str w12,[x5], #0x4
+00c0121c	cmp x2,x8
+00c01220	b.cs 0x00c0129c
+00c01224	cmp x5,x6
+00c01228	b.cs 0x00c0129c
+00c0122c	ldrb w14,[x2, #0x1]
+00c01230	ldrb w12,[x2]
+00c01234	lsl w13,w14,#0x8
+00c01238	bfm w12,w14,#0x18,#0x7
+00c0123c	and w13,w13,#0xfc00
+00c01240	cmp w13,w10
+00c01244	b.eq 0x00c01260
+00c01248	cmp w13,w11
+00c0124c	b.eq 0x00c012b0
+00c01250	cmp x9,w12, UXTW 
+00c01254	mov w0,#0x2
+00c01258	b.cs 0x00c01214
+00c0125c	b 0x00c012a4
+00c01260	sub x13,x3,x2
+00c01264	cmp x13,#0x4
+00c01268	b.lt 0x00c012b8
+00c0126c	ldrb w13,[x2, #0x3]
+00c01270	and w14,w13,#0xfc
+00c01274	cmp w14,#0xdc
+00c01278	b.ne 0x00c012b0
+00c0127c	ldrb w14,[x2, #0x2]
+00c01280	bfm w14,w13,#0x18,#0x1
+00c01284	bfm w14,w12,#0x16,#0x9
+00c01288	add w12,w14,#0x10, LSL #12
+00c0128c	cmp x9,x12
+00c01290	b.cc 0x00c012b0
+00c01294	mov w0,#0x4
+00c01298	b 0x00c01214
+00c0129c	cmp x2,x3
+00c012a0	cset w0,cc
+00c012a4	str x2,[x4]
+00c012a8	str x5,[x7]
+00c012ac	ret
+00c012b0	mov w0,#0x2
+00c012b4	b 0x00c012a4
+00c012b8	mov w0,#0x1
+00c012bc	b 0x00c012a4

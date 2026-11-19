@@ -1,0 +1,4 @@
+; ASN1_OCTET_STRING_NDEF_it @ 009f7d4c
+009f7d4c	adrp x0,0xc59000
+009f7d50	add x0,x0,#0x88
+009f7d54	ret

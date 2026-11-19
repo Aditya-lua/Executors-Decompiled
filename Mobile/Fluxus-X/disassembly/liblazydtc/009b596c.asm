@@ -1,0 +1,57 @@
+; SSL_get1_supported_ciphers @ 009b596c
+009b596c	str x23,[sp, #-0x40]!
+009b5970	stp x22,x21,[sp, #0x10]
+009b5974	stp x20,x19,[sp, #0x20]
+009b5978	stp x29,x30,[sp, #0x30]
+009b597c	add x29,sp,#0x30
+009b5980	cbz x0,0x009b5a30
+009b5984	ldr x20,[x0, #0x528]
+009b5988	mov x19,x0
+009b598c	cbz x20,0x009b5a14
+009b5990	mov x0,x19
+009b5994	bl 0x00c35e10
+009b5998	cbz w0,0x009b5a30
+009b599c	mov x0,x20
+009b59a0	bl 0x00c325e0
+009b59a4	cmp w0,#0x1
+009b59a8	b.lt 0x009b5a30
+009b59ac	mov w22,wzr
+009b59b0	mov x21,xzr
+009b59b4	mov x0,x20
+009b59b8	mov w1,w22
+009b59bc	bl 0x00c32610
+009b59c0	mov x23,x0
+009b59c4	orr w2,wzr,#0x10001
+009b59c8	mov x0,x19
+009b59cc	mov x1,x23
+009b59d0	mov w3,wzr
+009b59d4	bl 0x00c35d40
+009b59d8	cbnz w0,0x009b59fc
+009b59dc	cbnz x21,0x009b59ec
+009b59e0	bl 0x00c34780
+009b59e4	mov x21,x0
+009b59e8	cbz x0,0x009b5a34
+009b59ec	mov x0,x21
+009b59f0	mov x1,x23
+009b59f4	bl 0x00c347a0
+009b59f8	cbz w0,0x009b5a28
+009b59fc	mov x0,x20
+009b5a00	add w22,w22,#0x1
+009b5a04	bl 0x00c325e0
+009b5a08	cmp w22,w0
+009b5a0c	b.lt 0x009b59b4
+009b5a10	b 0x009b5a34
+009b5a14	ldr x8,[x19, #0x9a8]
+009b5a18	cbz x8,0x009b5a30
+009b5a1c	ldr x20,[x8, #0x10]
+009b5a20	cbnz x20,0x009b5990
+009b5a24	b 0x009b5a30
+009b5a28	mov x0,x21
+009b5a2c	bl 0x00c34770
+009b5a30	mov x21,xzr
+009b5a34	mov x0,x21
+009b5a38	ldp x29,x30,[sp, #0x30]
+009b5a3c	ldp x20,x19,[sp, #0x20]
+009b5a40	ldp x22,x21,[sp, #0x10]
+009b5a44	ldr x23,[sp], #0x40
+009b5a48	ret

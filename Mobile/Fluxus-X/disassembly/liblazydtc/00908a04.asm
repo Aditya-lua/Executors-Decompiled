@@ -1,0 +1,38 @@
+; FUN_00908a04 @ 00908a04
+00908a04	stp x20,x19,[sp, #-0x20]!
+00908a08	stp x29,x30,[sp, #0x10]
+00908a0c	add x29,sp,#0x10
+00908a10	mov w9,#0x137c
+00908a14	mov x8,x2
+00908a18	mov x20,x1
+00908a1c	mov x19,x0
+00908a20	add x0,x0,x9
+00908a24	cbz x2,0x00908a38
+00908a28	mov w2,#0x64
+00908a2c	mov x1,x8
+00908a30	bl 0x00c2ffd0
+00908a34	b 0x00908a4c
+00908a38	mov w2,#0x5c
+00908a3c	mov w1,wzr
+00908a40	bl 0x00c301c0
+00908a44	movi d0,#-0x1
+00908a48	str d0,[x19, #0x13d8]
+00908a4c	ldr x8,[x20, #0x3a8]
+00908a50	ldr x9,[x8]
+00908a54	str x9,[x19, #0x13e8]
+00908a58	ldr w8,[x8, #0x8c]
+00908a5c	mov w9,#0x140c
+00908a60	and w8,w8,#0x3ffffff
+00908a64	str w8,[x19, #0x13f0]
+00908a68	ldr w8,[x20, #0x560]
+00908a6c	str w8,[x19, #0x13e0]
+00908a70	ldr w8,[x20, #0x3a0]
+00908a74	ldrb w10,[x19, x9]
+00908a78	lsr w8,w8,#0x4
+00908a7c	and w8,w8,#0x2
+00908a80	and w10,w10,#0xfffffffd
+00908a84	orr w8,w8,w10
+00908a88	strb w8,[x19, x9]
+00908a8c	ldp x29,x30,[sp, #0x10]
+00908a90	ldp x20,x19,[sp], #0x20
+00908a94	ret

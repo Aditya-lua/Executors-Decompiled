@@ -1,0 +1,93 @@
+; FUN_00a9463c @ 00a9463c
+00a9463c	sub sp,sp,#0x90
+00a94640	stp x28,x27,[sp, #0x30]
+00a94644	stp x24,x23,[sp, #0x50]
+00a94648	stp x22,x21,[sp, #0x60]
+00a9464c	stp x20,x19,[sp, #0x70]
+00a94650	mov x19,x3
+00a94654	mov x23,x2
+00a94658	mov x27,x1
+00a9465c	lsr x8,x3,#0x1e
+00a94660	mov x21,x0
+00a94664	stp x26,x25,[sp, #0x40]
+00a94668	stp x29,x30,[sp, #0x80]
+00a9466c	add x29,sp,#0x80
+00a94670	cbz x8,0x00a94728
+00a94674	orr x22,xzr,#-0x40000000
+00a94678	add x8,x19,x22
+00a9467c	str x8,[sp, #0x18]
+00a94680	and x8,x8,#-0x40000000
+00a94684	mov w20,#0x40000000
+00a94688	str x8,[sp, #0x10]
+00a9468c	add x8,x8,x20
+00a94690	add x24,x21,#0x28
+00a94694	str x8,[sp, #0x8]
+00a94698	add x8,x23,x8
+00a9469c	mov x25,x27
+00a946a0	stp x8,x27,[sp, #0x20]
+00a946a4	mov x0,x21
+00a946a8	bl 0x00c3cea0
+00a946ac	mov x26,x0
+00a946b0	mov x0,x21
+00a946b4	bl 0x00c3cea0
+00a946b8	add x27,x0,#0x80
+00a946bc	mov x0,x21
+00a946c0	bl 0x00c3cea0
+00a946c4	add x28,x0,#0x100
+00a946c8	mov x0,x21
+00a946cc	bl 0x00c3cec0
+00a946d0	mov w2,#0x8
+00a946d4	mov w3,#0x40000000
+00a946d8	str w0,[sp]
+00a946dc	mov x0,x23
+00a946e0	mov x1,x25
+00a946e4	mov x4,x26
+00a946e8	mov x5,x27
+00a946ec	mov x6,x28
+00a946f0	mov x7,x24
+00a946f4	bl 0x00c399b0
+00a946f8	add x19,x19,x22
+00a946fc	add x23,x23,x20
+00a94700	lsr x8,x19,#0x1e
+00a94704	add x25,x25,x20
+00a94708	cbnz x8,0x00a946a4
+00a9470c	ldp x9,x8,[sp, #0x10]
+00a94710	ldp x20,x27,[sp, #0x20]
+00a94714	sub x19,x8,x9
+00a94718	ldr x8,[sp, #0x8]
+00a9471c	add x27,x27,x8
+00a94720	cbnz x19,0x00a94730
+00a94724	b 0x00a94788
+00a94728	mov x20,x23
+00a9472c	cbz x19,0x00a94788
+00a94730	mov x0,x21
+00a94734	bl 0x00c3cea0
+00a94738	mov x23,x0
+00a9473c	mov x0,x21
+00a94740	bl 0x00c3cea0
+00a94744	add x24,x0,#0x80
+00a94748	mov x0,x21
+00a9474c	bl 0x00c3cea0
+00a94750	add x25,x0,#0x100
+00a94754	mov x0,x21
+00a94758	add x26,x21,#0x28
+00a9475c	bl 0x00c3cec0
+00a94760	mov w2,#0x8
+00a94764	str w0,[sp]
+00a94768	mov x0,x20
+00a9476c	mov x1,x27
+00a94770	mov x3,x19
+00a94774	mov x4,x23
+00a94778	mov x5,x24
+00a9477c	mov x6,x25
+00a94780	mov x7,x26
+00a94784	bl 0x00c399b0
+00a94788	ldp x29,x30,[sp, #0x80]
+00a9478c	ldp x20,x19,[sp, #0x70]
+00a94790	ldp x22,x21,[sp, #0x60]
+00a94794	ldp x24,x23,[sp, #0x50]
+00a94798	ldp x26,x25,[sp, #0x40]
+00a9479c	ldp x28,x27,[sp, #0x30]
+00a947a0	mov w0,#0x1
+00a947a4	add sp,sp,#0x90
+00a947a8	ret

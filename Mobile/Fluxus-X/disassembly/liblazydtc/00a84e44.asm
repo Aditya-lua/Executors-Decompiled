@@ -1,0 +1,86 @@
+; FUN_00a84e44 @ 00a84e44
+00a84e44	sub sp,sp,#0x30
+00a84e48	mov w1,#0x3a
+00a84e4c	stp x20,x19,[sp, #0x10]
+00a84e50	stp x29,x30,[sp, #0x20]
+00a84e54	add x29,sp,#0x20
+00a84e58	mov x19,x0
+00a84e5c	bl 0x00c30890
+00a84e60	cbz x0,0x00a84e94
+00a84e64	adrp x1,0x2a6000
+00a84e68	mov x20,x0
+00a84e6c	add x1,x1,#0xcc
+00a84e70	mov w2,#0x4
+00a84e74	mov x0,x19
+00a84e78	bl 0x00c31bb0
+00a84e7c	add x8,x19,#0x4
+00a84e80	cmp w0,#0x0
+00a84e84	csel x1,x8,x19,eq
+00a84e88	sub x8,x20,x1
+00a84e8c	cmp w8,#0x5
+00a84e90	b.le 0x00a84ea8
+00a84e94	mov w0,#0xffffffff
+00a84e98	ldp x29,x30,[sp, #0x20]
+00a84e9c	ldp x20,x19,[sp, #0x10]
+00a84ea0	add sp,sp,#0x30
+00a84ea4	ret
+00a84ea8	orr x9,xzr,#0x100000000
+00a84eac	add x8,x9,x8, LSL #0x20
+00a84eb0	asr x2,x8,#0x20
+00a84eb4	add x0,sp,#0x8
+00a84eb8	bl 0x00c387f0
+00a84ebc	adrp x1,0x2b9000
+00a84ec0	add x1,x1,#0xfde
+00a84ec4	add x0,sp,#0x8
+00a84ec8	bl 0x00c301f0
+00a84ecc	cbz w0,0x00a84e98
+00a84ed0	adrp x1,0x2d1000
+00a84ed4	add x1,x1,#0xb38
+00a84ed8	add x0,sp,#0x8
+00a84edc	bl 0x00c301f0
+00a84ee0	cbz w0,0x00a84f68
+00a84ee4	adrp x1,0x2d5000
+00a84ee8	add x1,x1,#0xdda
+00a84eec	add x0,sp,#0x8
+00a84ef0	bl 0x00c301f0
+00a84ef4	cbz w0,0x00a84f70
+00a84ef8	adrp x1,0x2b9000
+00a84efc	add x1,x1,#0xfe4
+00a84f00	add x0,sp,#0x8
+00a84f04	bl 0x00c301f0
+00a84f08	cbz w0,0x00a84f78
+00a84f0c	adrp x1,0x2dc000
+00a84f10	add x1,x1,#0x111
+00a84f14	add x0,sp,#0x8
+00a84f18	bl 0x00c301f0
+00a84f1c	cbz w0,0x00a84f80
+00a84f20	adrp x1,0x2c1000
+00a84f24	add x1,x1,#0xd53
+00a84f28	add x0,sp,#0x8
+00a84f2c	bl 0x00c301f0
+00a84f30	cbz w0,0x00a84f88
+00a84f34	adrp x1,0x2c5000
+00a84f38	add x1,x1,#0xbc3
+00a84f3c	add x0,sp,#0x8
+00a84f40	bl 0x00c301f0
+00a84f44	cbz w0,0x00a84f90
+00a84f48	adrp x1,0x2c7000
+00a84f4c	add x1,x1,#0xa83
+00a84f50	add x0,sp,#0x8
+00a84f54	bl 0x00c301f0
+00a84f58	cmp w0,#0x0
+00a84f5c	orr w8,wzr,#0x7
+00a84f60	csinv w0,w8,wzr,eq
+00a84f64	b 0x00a84e98
+00a84f68	mov w0,#0x1
+00a84f6c	b 0x00a84e98
+00a84f70	mov w0,#0x2
+00a84f74	b 0x00a84e98
+00a84f78	orr w0,wzr,#0x3
+00a84f7c	b 0x00a84e98
+00a84f80	mov w0,#0x4
+00a84f84	b 0x00a84e98
+00a84f88	mov w0,#0x5
+00a84f8c	b 0x00a84e98
+00a84f90	orr w0,wzr,#0x6
+00a84f94	b 0x00a84e98

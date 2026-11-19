@@ -1,0 +1,34 @@
+; cpr::Session::PreparePut @ 008f0210
+008f0210	str x19,[sp, #-0x20]!
+008f0214	stp x29,x30,[sp, #0x10]
+008f0218	add x29,sp,#0x10
+008f021c	ldr x8,[x0, #0x18]
+008f0220	mov x19,x0
+008f0224	mov w1,#0x2c
+008f0228	mov x2,xzr
+008f022c	ldr x0,[x8]
+008f0230	bl 0x00c317c0
+008f0234	ldrb w8,[x19, #0x10]
+008f0238	cbnz w8,0x008f0258
+008f023c	ldr x8,[x19, #0x110]
+008f0240	cbz x8,0x008f0258
+008f0244	ldr x8,[x19, #0x18]
+008f0248	mov w1,#0x271f
+008f024c	mov x2,xzr
+008f0250	ldr x0,[x8]
+008f0254	bl 0x00c317c0
+008f0258	ldr x8,[x19, #0x18]
+008f025c	adrp x2,0x2ad000
+008f0260	add x2,x2,#0x95
+008f0264	mov w1,#0x2734
+008f0268	ldr x0,[x8]
+008f026c	bl 0x00c317c0
+008f0270	ldr x8,[x19, #0x18]
+008f0274	mov w1,#0x2717
+008f0278	mov x2,xzr
+008f027c	ldr x0,[x8]
+008f0280	bl 0x00c317c0
+008f0284	ldp x29,x30,[sp, #0x10]
+008f0288	mov x0,x19
+008f028c	ldr x19,[sp], #0x20
+008f0290	b 0x00c31270

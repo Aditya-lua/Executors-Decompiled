@@ -1,0 +1,5 @@
+; i2d_ASN1_TYPE @ 00c37880
+00c37880	adrp x16,0xcb9000
+00c37884	ldr x17,[x16, #0xc28]
+00c37888	add x16,x16,#0xc28
+00c3788c	br x17

@@ -1,0 +1,42 @@
+; ossl_ccm_generic_auth_decrypt @ 00b67218
+00b67218	sub sp,sp,#0x50
+00b6721c	stp x22,x21,[sp, #0x20]
+00b67220	stp x20,x19,[sp, #0x30]
+00b67224	stp x29,x30,[sp, #0x40]
+00b67228	mov x22,x4
+00b6722c	ldr x4,[x0, #0x88]
+00b67230	str x23,[sp, #0x10]
+00b67234	add x23,x0,#0x50
+00b67238	mov x21,x5
+00b6723c	mov x19,x3
+00b67240	mov x20,x2
+00b67244	mov x0,x23
+00b67248	add x29,sp,#0x40
+00b6724c	cbz x4,0x00b6725c
+00b67250	bl 0x00c3e280
+00b67254	cbnz w0,0x00b6728c
+00b67258	b 0x00b67264
+00b6725c	bl 0x00c3e270
+00b67260	cbnz w0,0x00b6728c
+00b67264	mov x1,sp
+00b67268	mov x0,x23
+00b6726c	mov x2,x21
+00b67270	bl 0x00c3e2d0
+00b67274	cbz x0,0x00b6728c
+00b67278	mov x0,sp
+00b6727c	mov x1,x22
+00b67280	mov x2,x21
+00b67284	bl 0x00c362f0
+00b67288	cbz w0,0x00b672b4
+00b6728c	mov x0,x20
+00b67290	mov x1,x19
+00b67294	bl 0x00c34750
+00b67298	mov w0,wzr
+00b6729c	ldp x29,x30,[sp, #0x40]
+00b672a0	ldp x20,x19,[sp, #0x30]
+00b672a4	ldp x22,x21,[sp, #0x20]
+00b672a8	ldr x23,[sp, #0x10]
+00b672ac	add sp,sp,#0x50
+00b672b0	ret
+00b672b4	mov w0,#0x1
+00b672b8	b 0x00b6729c

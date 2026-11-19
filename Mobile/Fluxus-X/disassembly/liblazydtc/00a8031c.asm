@@ -1,0 +1,25 @@
+; OPENSSL_LH_doall @ 00a8031c
+00a8031c	stp x22,x21,[sp, #-0x30]!
+00a80320	stp x20,x19,[sp, #0x10]
+00a80324	stp x29,x30,[sp, #0x20]
+00a80328	add x29,sp,#0x20
+00a8032c	cbz x0,0x00a8036c
+00a80330	ldr w8,[x0, #0x18]
+00a80334	mov x20,x0
+00a80338	subs w8,w8,#0x1
+00a8033c	b.mi 0x00a8036c
+00a80340	mov x19,x1
+00a80344	sxtw x21,w8
+00a80348	ldr x8,[x20]
+00a8034c	ldr x8,[x8, x21, LSL #0x3]
+00a80350	cbz x8,0x00a80364
+00a80354	ldp x0,x22,[x8]
+00a80358	blr x19
+00a8035c	mov x8,x22
+00a80360	cbnz x22,0x00a80354
+00a80364	sub x21,x21,#0x1
+00a80368	tbz w21,#0x1f,0x00a80348
+00a8036c	ldp x29,x30,[sp, #0x20]
+00a80370	ldp x20,x19,[sp, #0x10]
+00a80374	ldp x22,x21,[sp], #0x30
+00a80378	ret

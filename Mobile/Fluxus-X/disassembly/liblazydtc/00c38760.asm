@@ -1,0 +1,5 @@
+; BIO_listen @ 00c38760
+00c38760	adrp x16,0xcba000
+00c38764	ldr x17,[x16, #0x398]
+00c38768	add x16,x16,#0x398
+00c3876c	br x17

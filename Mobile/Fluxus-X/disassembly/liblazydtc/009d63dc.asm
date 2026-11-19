@@ -1,0 +1,42 @@
+; custom_exts_free @ 009d63dc
+009d63dc	str x23,[sp, #-0x40]!
+009d63e0	stp x22,x21,[sp, #0x10]
+009d63e4	stp x20,x19,[sp, #0x20]
+009d63e8	stp x29,x30,[sp, #0x30]
+009d63ec	mov x19,x0
+009d63f0	ldp x0,x8,[x0]
+009d63f4	add x29,sp,#0x30
+009d63f8	cbz x8,0x009d6458
+009d63fc	adrp x23,0x9d6000
+009d6400	adrp x20,0x2b9000
+009d6404	mov x21,xzr
+009d6408	add x22,x0,#0x30
+009d640c	add x23,x23,#0x3b4
+009d6410	add x20,x20,#0xa64
+009d6414	ldur x9,[x22, #-0x20]
+009d6418	cmp x9,x23
+009d641c	b.ne 0x009d6444
+009d6420	ldur x0,[x22, #-0x10]
+009d6424	mov w2,#0x14c
+009d6428	mov x1,x20
+009d642c	bl 0x00c32310
+009d6430	ldr x0,[x22]
+009d6434	mov w2,#0x14d
+009d6438	mov x1,x20
+009d643c	bl 0x00c32310
+009d6440	ldr x8,[x19, #0x8]
+009d6444	add x21,x21,#0x1
+009d6448	cmp x21,x8
+009d644c	add x22,x22,#0x38
+009d6450	b.cc 0x009d6414
+009d6454	ldr x0,[x19]
+009d6458	adrp x1,0x2b9000
+009d645c	add x1,x1,#0xa64
+009d6460	mov w2,#0x14f
+009d6464	bl 0x00c32310
+009d6468	stp xzr,xzr,[x19]
+009d646c	ldp x29,x30,[sp, #0x30]
+009d6470	ldp x20,x19,[sp, #0x20]
+009d6474	ldp x22,x21,[sp, #0x10]
+009d6478	ldr x23,[sp], #0x40
+009d647c	ret

@@ -1,0 +1,8 @@
+; ASN1_add_stable_module @ 00a10050
+00a10050	adrp x0,0x2b5000
+00a10054	adrp x1,0xa10000
+00a10058	adrp x2,0xa10000
+00a1005c	add x0,x0,#0xaa6
+00a10060	add x1,x1,#0x6c
+00a10064	add x2,x2,#0x424
+00a10068	b 0x00c39530

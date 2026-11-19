@@ -1,0 +1,93 @@
+; SSL_dane_enable @ 009b2910
+009b2910	stp x20,x19,[sp, #-0x20]!
+009b2914	stp x29,x30,[sp, #0x10]
+009b2918	ldr x8,[x0, #0x9a8]
+009b291c	add x29,sp,#0x10
+009b2920	ldrb w8,[x8, #0x3a8]
+009b2924	cbz w8,0x009b295c
+009b2928	ldr x8,[x0, #0x4e8]
+009b292c	mov x19,x0
+009b2930	cbz x8,0x009b2998
+009b2934	bl 0x00c342a0
+009b2938	adrp x0,0x2c5000
+009b293c	adrp x2,0x2bb000
+009b2940	add x0,x0,#0x652
+009b2944	add x2,x2,#0x80a
+009b2948	mov w1,#0x422
+009b294c	bl 0x00c342b0
+009b2950	mov w0,#0x14
+009b2954	mov w1,#0xac
+009b2958	b 0x009b2980
+009b295c	bl 0x00c342a0
+009b2960	adrp x0,0x2c5000
+009b2964	adrp x2,0x2bb000
+009b2968	add x0,x0,#0x652
+009b296c	add x2,x2,#0x80a
+009b2970	mov w1,#0x41e
+009b2974	bl 0x00c342b0
+009b2978	mov w0,#0x14
+009b297c	mov w1,#0xa7
+009b2980	mov x2,xzr
+009b2984	bl 0x00c342c0
+009b2988	mov w0,wzr
+009b298c	ldp x29,x30,[sp, #0x10]
+009b2990	ldp x20,x19,[sp], #0x20
+009b2994	ret
+009b2998	ldr x8,[x19, #0xa58]
+009b299c	mov x20,x1
+009b29a0	cbnz x8,0x009b29c4
+009b29a4	ldr x8,[x19, #0x8]
+009b29a8	mov w1,#0x37
+009b29ac	mov x0,x19
+009b29b0	mov x2,xzr
+009b29b4	ldr x8,[x8, #0x80]
+009b29b8	mov x3,x20
+009b29bc	blr x8
+009b29c0	cbz x0,0x009b2a4c
+009b29c4	ldr x0,[x19, #0x4d8]
+009b29c8	mov x1,x20
+009b29cc	mov x2,xzr
+009b29d0	bl 0x00c340a0
+009b29d4	cbz w0,0x009b2a04
+009b29d8	add x8,x19,#0x50c
+009b29dc	movi d0,#-0x1
+009b29e0	str d0,[x8]
+009b29e4	ldr x8,[x19, #0x9a8]
+009b29e8	add x8,x8,#0x398
+009b29ec	str x8,[x19, #0x4e0]
+009b29f0	bl 0x00c34780
+009b29f4	str x0,[x19, #0x4e8]
+009b29f8	cbz x0,0x009b2a20
+009b29fc	mov w0,#0x1
+009b2a00	b 0x009b298c
+009b2a04	bl 0x00c342a0
+009b2a08	adrp x0,0x2c5000
+009b2a0c	adrp x2,0x2bb000
+009b2a10	add x0,x0,#0x652
+009b2a14	add x2,x2,#0x80a
+009b2a18	mov w1,#0x434
+009b2a1c	b 0x009b2a64
+009b2a20	bl 0x00c342a0
+009b2a24	adrp x0,0x2c5000
+009b2a28	adrp x2,0x2bb000
+009b2a2c	add x0,x0,#0x652
+009b2a30	add x2,x2,#0x80a
+009b2a34	mov w1,#0x43e
+009b2a38	bl 0x00c342b0
+009b2a3c	mov w1,#0x100
+009b2a40	mov w0,#0x14
+009b2a44	movk w1,#0xc, LSL #16
+009b2a48	b 0x009b2a70
+009b2a4c	bl 0x00c342a0
+009b2a50	adrp x0,0x2c5000
+009b2a54	adrp x2,0x2bb000
+009b2a58	add x0,x0,#0x652
+009b2a5c	add x2,x2,#0x80a
+009b2a60	mov w1,#0x42d
+009b2a64	bl 0x00c342b0
+009b2a68	mov w0,#0x14
+009b2a6c	mov w1,#0xcc
+009b2a70	mov x2,xzr
+009b2a74	bl 0x00c342c0
+009b2a78	mov w0,#0xffffffff
+009b2a7c	b 0x009b298c

@@ -1,0 +1,4 @@
+; TLS_FEATURE_new @ 00b05404
+00b05404	adrp x0,0xc81000
+00b05408	add x0,x0,#0x108
+00b0540c	b 0x00c372e0

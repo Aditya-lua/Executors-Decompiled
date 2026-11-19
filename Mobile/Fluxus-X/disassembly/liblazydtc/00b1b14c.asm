@@ -1,0 +1,4 @@
+; i2d_X509_CRL_INFO @ 00b1b14c
+00b1b14c	adrp x2,0xc82000
+00b1b150	add x2,x2,#0x90
+00b1b154	b 0x00c36170

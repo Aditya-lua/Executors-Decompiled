@@ -1,0 +1,55 @@
+; curl_mvaprintf @ 0092a4e4
+0092a4e4	sub sp,sp,#0x90
+0092a4e8	str x21,[sp, #0x60]
+0092a4ec	stp x20,x19,[sp, #0x70]
+0092a4f0	stp x29,x30,[sp, #0x80]
+0092a4f4	add x29,sp,#0x80
+0092a4f8	mrs x21,tpidr_el0
+0092a4fc	ldr x8,[x21, #0x28]
+0092a500	mov x19,x1
+0092a504	mov w1,#0x1200
+0092a508	mov x20,x0
+0092a50c	add x9,sp,#0x28
+0092a510	add x0,sp,#0x28
+0092a514	movk w1,#0x7a, LSL #16
+0092a518	stur x8,[x29, #-0x28]
+0092a51c	stur x9,[x29, #-0x38]
+0092a520	bl 0x00904528
+0092a524	sturb wzr,[x29, #-0x30]
+0092a528	ldr q0,[x19, #0x10]
+0092a52c	nop
+0092a530	adr x1,0x92a464
+0092a534	sub x0,x29,#0x38
+0092a538	str q0,[sp, #0x10]
+0092a53c	ldr q0,[x19]
+0092a540	mov x3,sp
+0092a544	mov x2,x20
+0092a548	str q0,[sp]
+0092a54c	bl 0x00929028
+0092a550	ldurb w8,[x29, #-0x30]
+0092a554	ldur x0,[x29, #-0x38]
+0092a558	cbz w8,0x0092a568
+0092a55c	bl 0x00904534
+0092a560	mov x0,xzr
+0092a564	b 0x0092a594
+0092a568	bl 0x00904984
+0092a56c	cbz x0,0x0092a57c
+0092a570	ldur x0,[x29, #-0x38]
+0092a574	bl 0x00904974
+0092a578	b 0x0092a594
+0092a57c	adrp x8,0xcc4000
+0092a580	add x8,x8,#0x688
+0092a584	adrp x0,0x2ab000
+0092a588	add x0,x0,#0x32c
+0092a58c	ldr x8,[x8]
+0092a590	blr x8
+0092a594	ldr x8,[x21, #0x28]
+0092a598	ldur x9,[x29, #-0x28]
+0092a59c	cmp x8,x9
+0092a5a0	b.ne 0x0092a5b8
+0092a5a4	ldp x29,x30,[sp, #0x80]
+0092a5a8	ldp x20,x19,[sp, #0x70]
+0092a5ac	ldr x21,[sp, #0x60]
+0092a5b0	add sp,sp,#0x90
+0092a5b4	ret
+0092a5b8	bl 0x00c2fec0

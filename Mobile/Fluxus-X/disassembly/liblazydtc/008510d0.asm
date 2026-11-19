@@ -1,0 +1,14 @@
+; FUN_008510d0 @ 008510d0
+008510d0	adrp x8,0xd1b000
+008510d4	adrp x9,0xc4a000
+008510d8	add x9,x9,#0x508
+008510dc	ldr w8,[x8, #0x300]
+008510e0	str x9,[x0]
+008510e4	str w8,[x0, #0x8]
+008510e8	adrp x8,0xc49000
+008510ec	add x8,x8,#0xdf8
+008510f0	ldr q0,[x1]
+008510f4	str x8,[x0]
+008510f8	str x2,[x0, #0x20]
+008510fc	stur q0,[x0, #0xc]
+00851100	ret

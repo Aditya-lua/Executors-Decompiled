@@ -1,0 +1,5 @@
+; <EXTERNAL>::puts @ 00c30760
+00c30760	adrp x16,0xcb6000
+00c30764	ldr x17,[x16, #0x398]
+00c30768	add x16,x16,#0x398
+00c3076c	br x17

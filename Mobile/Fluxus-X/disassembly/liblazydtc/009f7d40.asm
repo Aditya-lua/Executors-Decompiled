@@ -1,0 +1,4 @@
+; ASN1_FBOOLEAN_it @ 009f7d40
+009f7d40	adrp x0,0xc59000
+009f7d44	add x0,x0,#0x50
+009f7d48	ret

@@ -1,0 +1,132 @@
+; BN_num_bits @ 00a015e8
+00a015e8	ldr w9,[x0, #0x8]
+00a015ec	ldrb w10,[x0, #0x14]
+00a015f0	sub w8,w9,#0x1
+00a015f4	tbnz w10,#0x2,0x00a016c0
+00a015f8	cbz w9,0x00a017d4
+00a015fc	ldr x9,[x0]
+00a01600	ldr x9,[x9, w8, SXTW #0x3]
+00a01604	lsr x10,x9,#0x20
+00a01608	neg x12,x10
+00a0160c	eor x10,x10,x9
+00a01610	asr x12,x12,#0x3f
+00a01614	and x10,x10,x12
+00a01618	cmp x9,#0x0
+00a0161c	eor x9,x10,x9
+00a01620	lsr x10,x9,#0x10
+00a01624	and w13,w12,#0x20
+00a01628	neg x12,x10
+00a0162c	eor x10,x10,x9
+00a01630	asr x12,x12,#0x3f
+00a01634	and x10,x10,x12
+00a01638	eor x9,x10,x9
+00a0163c	cset w11,ne
+00a01640	lsr x10,x9,#0x8
+00a01644	orr w11,w13,w11
+00a01648	and w13,w12,#0x10
+00a0164c	neg x12,x10
+00a01650	eor x10,x10,x9
+00a01654	asr x12,x12,#0x3f
+00a01658	and x10,x10,x12
+00a0165c	eor x9,x10,x9
+00a01660	lsr x10,x9,#0x4
+00a01664	orr w11,w11,w13
+00a01668	and w13,w12,#0x8
+00a0166c	neg x12,x10
+00a01670	eor x10,x10,x9
+00a01674	asr x12,x12,#0x3f
+00a01678	and x10,x10,x12
+00a0167c	eor x9,x10,x9
+00a01680	lsr x10,x9,#0x2
+00a01684	orr w11,w11,w13
+00a01688	and w13,w12,#0x4
+00a0168c	neg x12,x10
+00a01690	eor x10,x10,x9
+00a01694	asr x12,x12,#0x3f
+00a01698	and x10,x10,x12
+00a0169c	eor x9,x10,x9
+00a016a0	orr w11,w11,w13
+00a016a4	and w13,w12,#0x2
+00a016a8	neg x9,x9, LSR #0x1
+00a016ac	orr w11,w11,w13
+00a016b0	lsr x9,x9,#0x3f
+00a016b4	add w9,w9,w11
+00a016b8	add w0,w9,w8, LSL #0x6
+00a016bc	ret
+00a016c0	ldrsw x10,[x0, #0xc]
+00a016c4	cmp w10,#0x1
+00a016c8	b.lt 0x00a017dc
+00a016cc	ldr x13,[x0]
+00a016d0	orr w14,wzr,#0x7fffffff
+00a016d4	mov x11,xzr
+00a016d8	mov w12,wzr
+00a016dc	mov w15,wzr
+00a016e0	add w14,w9,w14
+00a016e4	ldr x17,[x13, x11, LSL #0x3]
+00a016e8	eor w16,w8,w11
+00a016ec	sub w16,w16,#0x1
+00a016f0	and w16,w16,w14
+00a016f4	lsr x18,x17,#0x20
+00a016f8	asr w16,w16,#0x1f
+00a016fc	neg x2,x18
+00a01700	orr w12,w16,w12
+00a01704	eor x18,x18,x17
+00a01708	asr x2,x2,#0x3f
+00a0170c	mvn w0,w12
+00a01710	and x18,x18,x2
+00a01714	cmp x17,#0x0
+00a01718	and w0,w0,#0x40
+00a0171c	eor x17,x18,x17
+00a01720	cset w1,ne
+00a01724	add w15,w0,w15
+00a01728	and w0,w2,#0x20
+00a0172c	lsr x18,x17,#0x10
+00a01730	orr w0,w0,w1
+00a01734	neg x1,x18
+00a01738	eor x18,x18,x17
+00a0173c	asr x1,x1,#0x3f
+00a01740	and x18,x18,x1
+00a01744	eor x17,x18,x17
+00a01748	lsr x18,x17,#0x8
+00a0174c	and w2,w1,#0x10
+00a01750	neg x1,x18
+00a01754	eor x18,x18,x17
+00a01758	asr x1,x1,#0x3f
+00a0175c	and x18,x18,x1
+00a01760	eor x17,x18,x17
+00a01764	lsr x18,x17,#0x4
+00a01768	orr w0,w0,w2
+00a0176c	and w2,w1,#0x8
+00a01770	neg x1,x18
+00a01774	eor x18,x18,x17
+00a01778	asr x1,x1,#0x3f
+00a0177c	and x18,x18,x1
+00a01780	eor x17,x18,x17
+00a01784	lsr x18,x17,#0x2
+00a01788	orr w0,w0,w2
+00a0178c	and w2,w1,#0x4
+00a01790	neg x1,x18
+00a01794	eor x18,x18,x17
+00a01798	asr x1,x1,#0x3f
+00a0179c	and x18,x18,x1
+00a017a0	eor x17,x18,x17
+00a017a4	orr w0,w0,w2
+00a017a8	and w2,w1,#0x2
+00a017ac	neg x17,x17, LSR #0x1
+00a017b0	orr w0,w0,w2
+00a017b4	lsr x17,x17,#0x3f
+00a017b8	add w17,w17,w0
+00a017bc	add x11,x11,#0x1
+00a017c0	and w16,w16,w17
+00a017c4	cmp x10,x11
+00a017c8	add w15,w15,w16
+00a017cc	b.ne 0x00a016e4
+00a017d0	b 0x00a017e0
+00a017d4	mov w0,wzr
+00a017d8	ret
+00a017dc	mov w15,wzr
+00a017e0	mov w8,#0x80000000
+00a017e4	sub w8,w8,w9
+00a017e8	bic w8,w8,w9
+00a017ec	bic w0,w15,w8, ASR #0x1f
+00a017f0	ret

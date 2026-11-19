@@ -1,0 +1,92 @@
+; FUN_00904f80 @ 00904f80
+00904f80	str x28,[sp, #-0x50]!
+00904f84	stp x24,x23,[sp, #0x10]
+00904f88	stp x22,x21,[sp, #0x20]
+00904f8c	stp x20,x19,[sp, #0x30]
+00904f90	stp x29,x30,[sp, #0x40]
+00904f94	add x29,sp,#0x40
+00904f98	sub sp,sp,#0x920
+00904f9c	stp q6,q7,[sp, #0x60]
+00904fa0	stp q4,q5,[sp, #0x40]
+00904fa4	stp q2,q3,[sp, #0x20]
+00904fa8	stp q0,q1,[sp]
+00904fac	stp x6,x7,[sp, #0xa0]
+00904fb0	stp x4,x5,[sp, #0x90]
+00904fb4	stp x2,x3,[sp, #0x80]
+00904fb8	mrs x21,tpidr_el0
+00904fbc	ldr x8,[x21, #0x28]
+00904fc0	mov x20,x1
+00904fc4	mov x19,x0
+00904fc8	stur x8,[x29, #-0x48]
+00904fcc	cbz x0,0x009050a4
+00904fd0	ldrb w8,[x19, #0xa85]
+00904fd4	tbz w8,#0x4,0x009050a4
+00904fd8	ldr x8,[x19, #0x12a0]
+00904fdc	cbz x8,0x009050d0
+00904fe0	ldr w8,[x8, #0x8]
+00904fe4	cmp w8,#0x1
+00904fe8	b.lt 0x009050a4
+00904fec	adrp x8,0xcc4000
+00904ff0	add x8,x8,#0x698
+00904ff4	ldr w8,[x8, #0x8]
+00904ff8	cmp w8,#0x0
+00904ffc	b.le 0x009050a4
+00905000	orr x8,xzr,#-0x7f00000080
+00905004	movk x8,#0xffd0
+00905008	str x8,[sp, #0xe8]
+0090500c	add x8,x29,#0x10
+00905010	str x8,[sp, #0xd0]
+00905014	mov x8,sp
+00905018	add x8,x8,#0x80
+0090501c	str x8,[sp, #0xe0]
+00905020	add x8,sp,#0x80
+00905024	add x8,x8,#0x30
+00905028	str x8,[sp, #0xd8]
+0090502c	adrp x8,0xcc4000
+00905030	ldp q1,q0,[sp, #0xd0]
+00905034	ldr x3,[x8, #0x698]
+00905038	adrp x2,0x2a9000
+0090503c	add x2,x2,#0x4a6
+00905040	add x0,sp,#0x114
+00905044	mov w1,#0x800
+00905048	stp q1,q0,[sp, #0xb0]
+0090504c	mov w22,#0x800
+00905050	add x23,sp,#0x114
+00905054	bl 0x00c31b70
+00905058	ldp q0,q1,[sp, #0xb0]
+0090505c	sxtw x24,w0
+00905060	sub w8,w22,w0
+00905064	add x0,x23,x24
+00905068	sxtw x1,w8
+0090506c	add x3,sp,#0xf0
+00905070	mov x2,x20
+00905074	stp q0,q1,[sp, #0xf0]
+00905078	bl 0x00c31b80
+0090507c	add x8,x24,w0, SXTW 
+00905080	sxtw x10,w8
+00905084	mov w9,#0xa
+00905088	add x3,x10,#0x1
+0090508c	add x2,sp,#0x114
+00905090	mov x0,x19
+00905094	mov w1,wzr
+00905098	strb w9,[x23, x8]
+0090509c	strb wzr,[x23, x3]
+009050a0	bl 0x00904a98
+009050a4	ldr x8,[x21, #0x28]
+009050a8	ldur x9,[x29, #-0x48]
+009050ac	cmp x8,x9
+009050b0	b.ne 0x009050e8
+009050b4	add sp,sp,#0x920
+009050b8	ldp x29,x30,[sp, #0x40]
+009050bc	ldp x20,x19,[sp, #0x30]
+009050c0	ldp x22,x21,[sp, #0x20]
+009050c4	ldp x24,x23,[sp, #0x10]
+009050c8	ldr x28,[sp], #0x50
+009050cc	ret
+009050d0	adrp x8,0xcc4000
+009050d4	add x8,x8,#0x698
+009050d8	ldr w8,[x8, #0x8]
+009050dc	cmp w8,#0x1
+009050e0	b.ge 0x00905000
+009050e4	b 0x009050a4
+009050e8	bl 0x00c2fec0

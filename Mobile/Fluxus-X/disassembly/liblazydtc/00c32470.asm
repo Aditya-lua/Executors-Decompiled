@@ -1,0 +1,5 @@
+; EVP_PKEY_get1_RSA @ 00c32470
+00c32470	adrp x16,0xcb7000
+00c32474	ldr x17,[x16, #0x220]
+00c32478	add x16,x16,#0x220
+00c3247c	br x17

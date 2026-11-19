@@ -1,0 +1,57 @@
+; ix::Socket::writeBytes @ 00984ac4
+00984ac4	stp x24,x23,[sp, #-0x40]!
+00984ac8	stp x22,x21,[sp, #0x10]
+00984acc	stp x20,x19,[sp, #0x20]
+00984ad0	stp x29,x30,[sp, #0x30]
+00984ad4	add x29,sp,#0x30
+00984ad8	ldrb w9,[x1]
+00984adc	ldr w10,[x1, #0x8]
+00984ae0	mov x19,x2
+00984ae4	mov x20,x1
+00984ae8	lsr w11,w9,#0x1
+00984aec	tst w9,#0x1
+00984af0	mov x21,x0
+00984af4	mov w8,wzr
+00984af8	csel w9,w11,w10,eq
+00984afc	add x23,x1,#0x1
+00984b00	b 0x00984b0c
+00984b04	add w8,w24,w0
+00984b08	sub w9,w22,w0
+00984b0c	sxtw x24,w8
+00984b10	sxtw x22,w9
+00984b14	ldr x0,[x19, #0x20]
+00984b18	cbz x0,0x00984b2c
+00984b1c	ldr x8,[x0]
+00984b20	ldr x8,[x8, #0x30]
+00984b24	blr x8
+00984b28	tbnz w0,#0x0,0x00984b8c
+00984b2c	ldr x8,[x21]
+00984b30	ldrb w9,[x20]
+00984b34	ldr x10,[x20, #0x10]
+00984b38	mov x0,x21
+00984b3c	ldr x8,[x8, #0x28]
+00984b40	tst w9,#0x1
+00984b44	csel x9,x23,x10,eq
+00984b48	add x1,x9,x24
+00984b4c	mov x2,x22
+00984b50	blr x8
+00984b54	cmp x0,#0x1
+00984b58	b.ge 0x00984b7c
+00984b5c	tbz x0,#0x3f,0x00984b8c
+00984b60	bl 0x00c30710
+00984b64	ldr w8,[x0]
+00984b68	cmp w8,#0xb
+00984b6c	b.eq 0x00984b14
+00984b70	cmp w8,#0x73
+00984b74	b.eq 0x00984b14
+00984b78	b 0x00984b8c
+00984b7c	cmp x0,x22
+00984b80	b.ne 0x00984b04
+00984b84	mov w0,#0x1
+00984b88	b 0x00984b90
+00984b8c	mov w0,wzr
+00984b90	ldp x29,x30,[sp, #0x30]
+00984b94	ldp x20,x19,[sp, #0x20]
+00984b98	ldp x22,x21,[sp, #0x10]
+00984b9c	ldp x24,x23,[sp], #0x40
+00984ba0	ret

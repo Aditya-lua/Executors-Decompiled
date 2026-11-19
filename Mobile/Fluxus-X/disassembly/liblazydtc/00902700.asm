@@ -1,0 +1,50 @@
+; curl_easy_cleanup @ 00902700
+00902700	sub sp,sp,#0x80
+00902704	str x19,[sp, #0x60]
+00902708	stp x29,x30,[sp, #0x70]
+0090270c	add x29,sp,#0x70
+00902710	mrs x19,tpidr_el0
+00902714	ldr x8,[x19, #0x28]
+00902718	stur x8,[x29, #-0x18]
+0090271c	str x0,[sp]
+00902720	cbz x0,0x009027a0
+00902724	ldr w8,[x0]
+00902728	mov w9,#0xdbad
+0090272c	movk w9,#0xc0de, LSL #16
+00902730	cmp w8,w9
+00902734	b.ne 0x009027a0
+00902738	add x8,x0,#0xa82
+0090273c	ldr w8,[x8]
+00902740	lsr w9,w8,#0x1f
+00902744	strb w9,[sp, #0x28]
+00902748	tbnz w8,#0x1f,0x00902780
+0090274c	mov w0,#0xd
+00902750	add x2,sp,#0x8
+00902754	mov x1,xzr
+00902758	bl 0x00c31b20
+0090275c	ldur q0,[sp, #0x8]
+00902760	ldur q1,[sp, #0x18]
+00902764	mov w8,#0x1
+00902768	mov w0,#0xd
+0090276c	add x1,sp,#0x30
+00902770	mov x2,xzr
+00902774	stp q0,q1,[sp, #0x30]
+00902778	str x8,[sp, #0x38]
+0090277c	bl 0x00c31b20
+00902780	mov x0,sp
+00902784	bl 0x00946590
+00902788	ldrb w8,[sp, #0x28]
+0090278c	cbnz w8,0x009027a0
+00902790	mov w0,#0xd
+00902794	add x1,sp,#0x8
+00902798	mov x2,xzr
+0090279c	bl 0x00c31b20
+009027a0	ldr x8,[x19, #0x28]
+009027a4	ldur x9,[x29, #-0x18]
+009027a8	cmp x8,x9
+009027ac	b.ne 0x009027c0
+009027b0	ldp x29,x30,[sp, #0x70]
+009027b4	ldr x19,[sp, #0x60]
+009027b8	add sp,sp,#0x80
+009027bc	ret
+009027c0	bl 0x00c2fec0

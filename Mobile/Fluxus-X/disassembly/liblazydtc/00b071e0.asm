@@ -1,0 +1,66 @@
+; a2i_IPADDRESS_NC @ 00b071e0
+00b071e0	sub sp,sp,#0x50
+00b071e4	mov w1,#0x2f
+00b071e8	stp x22,x21,[sp, #0x20]
+00b071ec	stp x20,x19,[sp, #0x30]
+00b071f0	stp x29,x30,[sp, #0x40]
+00b071f4	add x29,sp,#0x40
+00b071f8	mov x20,x0
+00b071fc	bl 0x00c30890
+00b07200	cbz x0,0x00b072c8
+00b07204	adrp x1,0x2c2000
+00b07208	mov x21,x0
+00b0720c	add x1,x1,#0x5ca
+00b07210	mov w2,#0x452
+00b07214	mov x0,x20
+00b07218	bl 0x00c34600
+00b0721c	cbz x0,0x00b072c8
+00b07220	mov x19,x0
+00b07224	sub x8,x21,x20
+00b07228	add x20,x0,x8
+00b0722c	mov x0,sp
+00b07230	mov x1,x19
+00b07234	strb wzr,[x20]
+00b07238	mov x22,sp
+00b0723c	bl 0x00b06eb8
+00b07240	cbz w0,0x00b072a8
+00b07244	mov w21,w0
+00b07248	add x1,x20,#0x1
+00b0724c	add x0,x22,w0, SXTW 
+00b07250	bl 0x00b06eb8
+00b07254	adrp x1,0x2c2000
+00b07258	mov w20,w0
+00b0725c	add x1,x1,#0x5ca
+00b07260	mov w2,#0x45f
+00b07264	mov x0,x19
+00b07268	bl 0x00c32310
+00b0726c	mov x19,xzr
+00b07270	cbz w20,0x00b072a8
+00b07274	cmp w21,w20
+00b07278	mov x20,xzr
+00b0727c	b.ne 0x00b072ac
+00b07280	bl 0x00c38170
+00b07284	mov x20,x0
+00b07288	cbz x0,0x00b072a0
+00b0728c	lsl w2,w21,#0x1
+00b07290	mov x1,sp
+00b07294	mov x0,x20
+00b07298	bl 0x00c377a0
+00b0729c	cbnz w0,0x00b072cc
+00b072a0	mov x19,xzr
+00b072a4	b 0x00b072ac
+00b072a8	mov x20,xzr
+00b072ac	adrp x1,0x2c2000
+00b072b0	add x1,x1,#0x5ca
+00b072b4	mov w2,#0x46e
+00b072b8	mov x0,x19
+00b072bc	bl 0x00c32310
+00b072c0	mov x0,x20
+00b072c4	bl 0x00c35530
+00b072c8	mov x20,xzr
+00b072cc	mov x0,x20
+00b072d0	ldp x29,x30,[sp, #0x40]
+00b072d4	ldp x20,x19,[sp, #0x30]
+00b072d8	ldp x22,x21,[sp, #0x20]
+00b072dc	add sp,sp,#0x50
+00b072e0	ret

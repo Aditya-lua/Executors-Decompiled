@@ -1,0 +1,8 @@
+; ASN1_str2mask @ 00a11354
+00a11354	adrp x3,0xa11000
+00a11358	mov x4,x1
+00a1135c	add x3,x3,#0x370
+00a11360	orr w1,wzr,#0x7c
+00a11364	mov w2,#0x1
+00a11368	str xzr,[x4]
+00a1136c	b 0x00c35230

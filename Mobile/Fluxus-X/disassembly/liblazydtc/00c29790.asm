@@ -1,0 +1,58 @@
+; __cxa_rethrow @ 00c29790
+00c29790	paciasp
+00c29794	stp x29,x30,[sp, #-0x30]!
+00c29798	stp x22,x21,[sp, #0x10]
+00c2979c	stp x20,x19,[sp, #0x20]
+00c297a0	mov x29,sp
+00c297a4	bl 0x00c44720
+00c297a8	ldr x20,[x0]
+00c297ac	cbnz x20,0x00c297b4
+00c297b0	bl 0x00c2fff0
+00c297b4	mov x19,x20
+00c297b8	mov x21,#0x2b00
+00c297bc	ldr x8,[x19, #0x60]!
+00c297c0	movk x21,#0x432b, LSL #16
+00c297c4	movk x21,#0x4e47, LSL #32
+00c297c8	movk x21,#0x434c, LSL #48
+00c297cc	and x22,x8,#-0x100
+00c297d0	cmp x22,x21
+00c297d4	b.ne 0x00c297f4
+00c297d8	ldr w8,[x20, #0x38]
+00c297dc	ldr w9,[x0, #0x8]
+00c297e0	neg w8,w8
+00c297e4	add w9,w9,#0x1
+00c297e8	str w8,[x20, #0x38]
+00c297ec	str w9,[x0, #0x8]
+00c297f0	b 0x00c297f8
+00c297f4	str xzr,[x0]
+00c297f8	mov x0,x19
+00c297fc	bl 0x00c2bd40
+00c29800	ldr x19,[x19]
+00c29804	bl 0x00c44720
+00c29808	and x8,x19,#-0x100
+00c2980c	cmp x8,x21
+00c29810	b.ne 0x00c29854
+00c29814	ldr w9,[x20, #0x38]
+00c29818	ldr x8,[x0]
+00c2981c	cmp w9,#0x0
+00c29820	cneg w9,w9,mi
+00c29824	cmp x20,x8
+00c29828	add w9,w9,#0x1
+00c2982c	str w9,[x20, #0x38]
+00c29830	b.eq 0x00c2983c
+00c29834	str x8,[x20, #0x30]
+00c29838	str x20,[x0]
+00c2983c	ldr w8,[x0, #0x8]
+00c29840	sub w8,w8,#0x1
+00c29844	str w8,[x0, #0x8]
+00c29848	cmp x22,x21
+00c2984c	b.ne 0x00c297b0
+00c29850	b 0x00c29868
+00c29854	ldr x8,[x0]
+00c29858	cbnz x8,0x00c297b0
+00c2985c	str x20,[x0]
+00c29860	cmp x22,x21
+00c29864	b.ne 0x00c297b0
+00c29868	ldr x0,[x20, #0x28]
+00c2986c	bl 0x00c0d774
+00c29870	bl 0x007fe114

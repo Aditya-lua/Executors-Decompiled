@@ -1,0 +1,24 @@
+; ASN1_STRING_free @ 009f11dc
+009f11dc	stp x20,x19,[sp, #-0x20]!
+009f11e0	stp x29,x30,[sp, #0x10]
+009f11e4	add x29,sp,#0x10
+009f11e8	cbz x0,0x009f122c
+009f11ec	ldr x20,[x0, #0x10]
+009f11f0	mov x19,x0
+009f11f4	tbnz w20,#0x4,0x009f120c
+009f11f8	ldr x0,[x19, #0x8]
+009f11fc	adrp x1,0x2c7000
+009f1200	add x1,x1,#0x722
+009f1204	mov w2,#0x16c
+009f1208	bl 0x00c32310
+009f120c	tbnz w20,#0x7,0x009f122c
+009f1210	ldp x29,x30,[sp, #0x10]
+009f1214	adrp x1,0x2c7000
+009f1218	add x1,x1,#0x722
+009f121c	mov w2,#0x16e
+009f1220	mov x0,x19
+009f1224	ldp x20,x19,[sp], #0x20
+009f1228	b 0x00c32310
+009f122c	ldp x29,x30,[sp, #0x10]
+009f1230	ldp x20,x19,[sp], #0x20
+009f1234	ret

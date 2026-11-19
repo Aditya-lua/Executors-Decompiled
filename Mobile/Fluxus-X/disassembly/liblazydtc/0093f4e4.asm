@@ -1,0 +1,82 @@
+; curl_share_cleanup @ 0093f4e4
+0093f4e4	str x21,[sp, #-0x30]!
+0093f4e8	stp x20,x19,[sp, #0x10]
+0093f4ec	stp x29,x30,[sp, #0x20]
+0093f4f0	add x29,sp,#0x20
+0093f4f4	mov x19,x0
+0093f4f8	cbz x0,0x0093f554
+0093f4fc	ldr w8,[x19]
+0093f500	mov w9,#0x7a1e
+0093f504	movk w9,#0x7e11, LSL #16
+0093f508	cmp w8,w9
+0093f50c	b.ne 0x0093f554
+0093f510	ldr x8,[x19, #0x10]
+0093f514	cbz x8,0x0093f52c
+0093f518	ldr x3,[x19, #0x20]
+0093f51c	mov w1,#0x1
+0093f520	mov w2,#0x2
+0093f524	mov x0,xzr
+0093f528	blr x8
+0093f52c	ldr w8,[x19, #0x8]
+0093f530	cbz w8,0x0093f568
+0093f534	ldr x8,[x19, #0x18]
+0093f538	cbz x8,0x0093f54c
+0093f53c	ldr x2,[x19, #0x20]
+0093f540	mov w1,#0x1
+0093f544	mov x0,xzr
+0093f548	blr x8
+0093f54c	mov w0,#0x2
+0093f550	b 0x0093f558
+0093f554	orr w0,wzr,#0x3
+0093f558	ldp x29,x30,[sp, #0x20]
+0093f55c	ldp x20,x19,[sp, #0x10]
+0093f560	ldr x21,[sp], #0x30
+0093f564	ret
+0093f568	add x20,x19,#0x28
+0093f56c	mov x0,x20
+0093f570	bl 0x00910600
+0093f574	mov x0,x20
+0093f578	bl 0x0090fb7c
+0093f57c	add x0,x19,#0xb8
+0093f580	bl 0x00916838
+0093f584	ldr x0,[x19, #0xe8]
+0093f588	bl 0x00914d68
+0093f58c	add x0,x19,#0xf0
+0093f590	bl 0x0091839c
+0093f594	ldr x0,[x19, #0xf8]
+0093f598	cbz x0,0x0093f5f0
+0093f59c	ldr x8,[x19, #0x100]
+0093f5a0	cbz x8,0x0093f5e0
+0093f5a4	bl 0x00968604
+0093f5a8	ldr x8,[x19, #0x100]
+0093f5ac	cmp x8,#0x2
+0093f5b0	b.cc 0x0093f5dc
+0093f5b4	mov w20,#0x1
+0093f5b8	mov w21,#0xc8
+0093f5bc	ldr x8,[x19, #0xf8]
+0093f5c0	add x0,x8,x21
+0093f5c4	bl 0x00968604
+0093f5c8	ldr x8,[x19, #0x100]
+0093f5cc	add x20,x20,#0x1
+0093f5d0	add x21,x21,#0xc8
+0093f5d4	cmp x20,x8
+0093f5d8	b.cc 0x0093f5bc
+0093f5dc	ldr x0,[x19, #0xf8]
+0093f5e0	adrp x8,0xcc4000
+0093f5e4	add x8,x8,#0x678
+0093f5e8	ldr x8,[x8]
+0093f5ec	blr x8
+0093f5f0	ldr x8,[x19, #0x18]
+0093f5f4	cbz x8,0x0093f608
+0093f5f8	ldr x2,[x19, #0x20]
+0093f5fc	mov w1,#0x1
+0093f600	mov x0,xzr
+0093f604	blr x8
+0093f608	str wzr,[x19]
+0093f60c	adrp x8,0xcc4000
+0093f610	add x8,x8,#0x678
+0093f614	mov x0,x19
+0093f618	ldr x8,[x8]
+0093f61c	blr x8
+0093f620	mov w0,wzr
+0093f624	b 0x0093f558

@@ -1,0 +1,5 @@
+; X509_STORE_CTX_get0_store @ 00c40630
+00c40630	adrp x16,0xcbe000
+00c40634	ldr x17,[x16, #0x300]
+00c40638	add x16,x16,#0x300
+00c4063c	br x17

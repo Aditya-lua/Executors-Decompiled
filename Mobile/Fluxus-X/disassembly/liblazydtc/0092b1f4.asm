@@ -1,0 +1,82 @@
+; FUN_0092b1f4 @ 0092b1f4
+0092b1f4	str x21,[sp, #-0x30]!
+0092b1f8	stp x20,x19,[sp, #0x10]
+0092b1fc	stp x29,x30,[sp, #0x20]
+0092b200	add x29,sp,#0x20
+0092b204	ldr x8,[x0, #0x200]
+0092b208	mov x19,x0
+0092b20c	cbz x8,0x0092b324
+0092b210	ldrb w9,[x19, #0x231]
+0092b214	mov w8,wzr
+0092b218	tbnz w9,#0x4,0x0092b324
+0092b21c	ldr x8,[x19, #0xd0]
+0092b220	cbz x8,0x0092b288
+0092b224	bl 0x00941cb8
+0092b228	ldr x2,[x19, #0xd0]
+0092b22c	mov x20,x0
+0092b230	mov x21,x1
+0092b234	mov x0,xzr
+0092b238	mov x1,xzr
+0092b23c	bl 0x00941308
+0092b240	str x0,[x19, #0xd0]
+0092b244	ldr x8,[x0, #0x20]
+0092b248	cmp x8,x20
+0092b24c	b.lt 0x0092b2b4
+0092b250	b.gt 0x0092b260
+0092b254	ldr w9,[x0, #0x28]
+0092b258	cmp w9,w21
+0092b25c	b.le 0x0092b2b4
+0092b260	ldr x1,[x0, #0x28]
+0092b264	mov x0,x8
+0092b268	mov x2,x20
+0092b26c	mov x3,x21
+0092b270	bl 0x00941dc4
+0092b274	mov x1,x0
+0092b278	tbnz x0,#0x3f,0x0092b288
+0092b27c	ldr x0,[x19, #0xd0]
+0092b280	ldr x8,[x0, #0x20]
+0092b284	b 0x0092b2b8
+0092b288	ldr x8,[x19, #0x210]
+0092b28c	cbnz x8,0x0092b298
+0092b290	ldr w8,[x19, #0x218]
+0092b294	cbz w8,0x0092b324
+0092b298	add x8,x19,#0x210
+0092b29c	stp xzr,xzr,[x8]
+0092b2a0	ldrb w8,[x19, #0x231]
+0092b2a4	ldr x9,[x19, #0x200]
+0092b2a8	ldr x2,[x19, #0x208]
+0092b2ac	mov x1,#-0x1
+0092b2b0	b 0x0092b2f0
+0092b2b4	mov x1,xzr
+0092b2b8	ldr x9,[x19, #0x210]
+0092b2bc	cmp x8,x9
+0092b2c0	b.ne 0x0092b2d8
+0092b2c4	ldr w8,[x0, #0x28]
+0092b2c8	ldr w9,[x19, #0x218]
+0092b2cc	cmp w8,w9
+0092b2d0	mov w8,wzr
+0092b2d4	b.eq 0x0092b324
+0092b2d8	ldr q0,[x0, #0x20]
+0092b2dc	add x8,x19,#0x210
+0092b2e0	str q0,[x8]
+0092b2e4	ldrb w8,[x19, #0x231]
+0092b2e8	ldr x9,[x19, #0x200]
+0092b2ec	ldr x2,[x19, #0x208]
+0092b2f0	orr w8,w8,#0x4
+0092b2f4	strb w8,[x19, #0x231]
+0092b2f8	mov x0,x19
+0092b2fc	blr x9
+0092b300	ldrb w9,[x19, #0x231]
+0092b304	mov w8,wzr
+0092b308	cmn w0,#0x1
+0092b30c	and w9,w9,#0xfffffffb
+0092b310	strb w9,[x19, #0x231]
+0092b314	b.ne 0x0092b324
+0092b318	orr w8,w9,#0x10
+0092b31c	strb w8,[x19, #0x231]
+0092b320	mov w8,#0xb
+0092b324	ldp x29,x30,[sp, #0x20]
+0092b328	ldp x20,x19,[sp, #0x10]
+0092b32c	mov w0,w8
+0092b330	ldr x21,[sp], #0x30
+0092b334	ret

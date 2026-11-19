@@ -1,0 +1,5 @@
+; bn_sqr_comba4 @ 00c38910
+00c38910	adrp x16,0xcba000
+00c38914	ldr x17,[x16, #0x470]
+00c38918	add x16,x16,#0x470
+00c3891c	br x17

@@ -1,0 +1,13 @@
+; ossl_err_load_DSO_strings @ 00a99138
+00a99138	stp x29,x30,[sp, #-0x10]!
+00a9913c	mov w0,#0x64
+00a99140	movk w0,#0x1280, LSL #16
+00a99144	mov x29,sp
+00a99148	bl 0x00c35520
+00a9914c	cbnz x0,0x00a9915c
+00a99150	adrp x0,0xc6c000
+00a99154	add x0,x0,#0x308
+00a99158	bl 0x00c35510
+00a9915c	mov w0,#0x1
+00a99160	ldp x29,x30,[sp], #0x10
+00a99164	ret

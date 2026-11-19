@@ -1,0 +1,53 @@
+; ossl_x509at_add1_attr_by_txt @ 00b08640
+00b08640	stp x24,x23,[sp, #-0x40]!
+00b08644	stp x20,x19,[sp, #0x20]
+00b08648	mov x20,x1
+00b0864c	mov x19,x0
+00b08650	mov x0,x1
+00b08654	mov w1,wzr
+00b08658	stp x22,x21,[sp, #0x10]
+00b0865c	stp x29,x30,[sp, #0x30]
+00b08660	add x29,sp,#0x30
+00b08664	mov w21,w4
+00b08668	mov x22,x3
+00b0866c	mov w23,w2
+00b08670	bl 0x00c39690
+00b08674	cbz x0,0x00b086c4
+00b08678	mov x24,x0
+00b0867c	mov x0,xzr
+00b08680	mov x1,x24
+00b08684	mov w2,w23
+00b08688	mov x3,x22
+00b0868c	mov w4,w21
+00b08690	bl 0x00b08184
+00b08694	mov x20,x0
+00b08698	mov x0,x24
+00b0869c	bl 0x00c37660
+00b086a0	cbz x20,0x00b086f8
+00b086a4	mov x0,x19
+00b086a8	mov x1,x20
+00b086ac	bl 0x00b07f40
+00b086b0	mov x19,x0
+00b086b4	mov x0,x20
+00b086b8	bl 0x00c3d9a0
+00b086bc	mov x0,x19
+00b086c0	b 0x00b086fc
+00b086c4	bl 0x00c342a0
+00b086c8	adrp x0,0x2ba000
+00b086cc	adrp x2,0x2bc000
+00b086d0	add x0,x0,#0x8ba
+00b086d4	add x2,x2,#0x6aa
+00b086d8	mov w1,#0x13a
+00b086dc	bl 0x00c342b0
+00b086e0	adrp x2,0x2ad000
+00b086e4	add x2,x2,#0x7ba
+00b086e8	mov w0,#0xb
+00b086ec	mov w1,#0x77
+00b086f0	mov x3,x20
+00b086f4	bl 0x00c342c0
+00b086f8	mov x0,xzr
+00b086fc	ldp x29,x30,[sp, #0x30]
+00b08700	ldp x20,x19,[sp, #0x20]
+00b08704	ldp x22,x21,[sp, #0x10]
+00b08708	ldp x24,x23,[sp], #0x40
+00b0870c	ret

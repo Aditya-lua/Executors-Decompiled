@@ -1,0 +1,79 @@
+; FUN_00879ca4 @ 00879ca4
+00879ca4	stp x29,x30,[sp, #-0x50]!
+00879ca8	str x25,[sp, #0x10]
+00879cac	stp x24,x23,[sp, #0x20]
+00879cb0	stp x22,x21,[sp, #0x30]
+00879cb4	stp x20,x19,[sp, #0x40]
+00879cb8	mov x29,sp
+00879cbc	ldp x8,x11,[x0]
+00879cc0	mov w9,#0x16
+00879cc4	ldrb w10,[x0]
+00879cc8	mov x20,x1
+00879ccc	mov x19,x0
+00879cd0	and x12,x8,#-0x2
+00879cd4	tst w10,#0x1
+00879cd8	ubfx x10,x8,#0x1,#0x7
+00879cdc	sub x25,x12,#0x1
+00879ce0	csel x24,x9,x25,eq
+00879ce4	tst w8,#0x1
+00879ce8	csel x23,x10,x11,eq
+00879cec	cmp x1,#0x16
+00879cf0	b.ls 0x00879d10
+00879cf4	cmp x20,x24
+00879cf8	and w22,w8,#0xff
+00879cfc	b.ls 0x00879d84
+00879d00	add x0,x20,#0x1
+00879d04	bl 0x00c2fed0
+00879d08	mov x21,x0
+00879d0c	b 0x00879dc4
+00879d10	ldr x22,[x19, #0x10]
+00879d14	add x21,x19,#0x1
+00879d18	mov w25,#0x1
+00879d1c	adds x2,x23,#0x1
+00879d20	b.cs 0x00879d30
+00879d24	mov x0,x21
+00879d28	mov x1,x22
+00879d2c	bl 0x00c2ff60
+00879d30	tbnz w25,#0x0,0x00879d50
+00879d34	cmp x20,#0x17
+00879d38	b.cc 0x00879d64
+00879d3c	add x8,x20,#0x1
+00879d40	str x21,[x19, #0x10]
+00879d44	orr x8,x8,#0x1
+00879d48	stp x8,x23,[x19]
+00879d4c	b 0x00879d6c
+00879d50	add x1,x24,#0x1
+00879d54	mov x0,x22
+00879d58	bl 0x00c2fe80
+00879d5c	cmp x20,#0x17
+00879d60	b.cs 0x00879d3c
+00879d64	lsl w8,w23,#0x1
+00879d68	strb w8,[x19]
+00879d6c	ldp x20,x19,[sp, #0x40]
+00879d70	ldr x25,[sp, #0x10]
+00879d74	ldp x22,x21,[sp, #0x30]
+00879d78	ldp x24,x23,[sp, #0x20]
+00879d7c	ldp x29,x30,[sp], #0x50
+00879d80	ret
+00879d84	add x0,x20,#0x1
+00879d88	bl 0x00c2fed0
+00879d8c	tst w22,#0x1
+00879d90	mov w8,#0x16
+00879d94	mov x21,x0
+00879d98	csel x8,x8,x25,eq
+00879d9c	cmp x20,x8
+00879da0	b.ls 0x00879dc4
+00879da4	add x1,x20,#0x1
+00879da8	mov x0,x21
+00879dac	ldp x20,x19,[sp, #0x40]
+00879db0	ldr x25,[sp, #0x10]
+00879db4	ldp x22,x21,[sp, #0x30]
+00879db8	ldp x24,x23,[sp, #0x20]
+00879dbc	ldp x29,x30,[sp], #0x50
+00879dc0	b 0x00c2fe80
+00879dc4	ldr x8,[x19, #0x10]
+00879dc8	ands w25,w22,#0x1
+00879dcc	csinc x22,x8,x19,ne
+00879dd0	adds x2,x23,#0x1
+00879dd4	b.cc 0x00879d24
+00879dd8	b 0x00879d30

@@ -1,0 +1,5 @@
+; CRYPTO_THREAD_unlock @ 00c35690
+00c35690	adrp x16,0xcb8000
+00c35694	ldr x17,[x16, #0xb30]
+00c35698	add x16,x16,#0xb30
+00c3569c	br x17

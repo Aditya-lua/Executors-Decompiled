@@ -1,0 +1,19 @@
+; ossl_x509at_add1_attr_by_OBJ @ 00b0813c
+00b0813c	stp x20,x19,[sp, #-0x20]!
+00b08140	mov x19,x0
+00b08144	mov x0,xzr
+00b08148	stp x29,x30,[sp, #0x10]
+00b0814c	add x29,sp,#0x10
+00b08150	bl 0x00b08184
+00b08154	cbz x0,0x00b08178
+00b08158	mov x20,x0
+00b0815c	mov x0,x19
+00b08160	mov x1,x20
+00b08164	bl 0x00b07f40
+00b08168	mov x19,x0
+00b0816c	mov x0,x20
+00b08170	bl 0x00c3d9a0
+00b08174	mov x0,x19
+00b08178	ldp x29,x30,[sp, #0x10]
+00b0817c	ldp x20,x19,[sp], #0x20
+00b08180	ret

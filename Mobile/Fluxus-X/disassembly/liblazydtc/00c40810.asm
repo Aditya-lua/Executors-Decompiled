@@ -1,0 +1,5 @@
+; GENERAL_NAME_cmp @ 00c40810
+00c40810	adrp x16,0xcbe000
+00c40814	ldr x17,[x16, #0x3f0]
+00c40818	add x16,x16,#0x3f0
+00c4081c	br x17

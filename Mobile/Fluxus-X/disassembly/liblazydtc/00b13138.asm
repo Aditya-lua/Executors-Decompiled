@@ -1,0 +1,17 @@
+; X509_policy_level_node_count @ 00b13138
+00b13138	str x19,[sp, #-0x20]!
+00b1313c	stp x29,x30,[sp, #0x10]
+00b13140	add x29,sp,#0x10
+00b13144	cbz x0,0x00b13164
+00b13148	ldp x0,x8,[x0, #0x8]
+00b1314c	cmp x8,#0x0
+00b13150	cset w19,ne
+00b13154	cbz x0,0x00b13168
+00b13158	bl 0x00c325e0
+00b1315c	add w19,w0,w19
+00b13160	b 0x00b13168
+00b13164	mov w19,wzr
+00b13168	ldp x29,x30,[sp, #0x10]
+00b1316c	mov w0,w19
+00b13170	ldr x19,[sp], #0x20
+00b13174	ret

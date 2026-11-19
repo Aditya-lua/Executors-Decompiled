@@ -1,0 +1,5 @@
+; CRYPTO_free @ 00c32310
+00c32310	adrp x16,0xcb7000
+00c32314	ldr x17,[x16, #0x170]
+00c32318	add x16,x16,#0x170
+00c3231c	br x17

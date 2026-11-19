@@ -1,0 +1,84 @@
+; ASN1_item_pack @ 009f2180
+009f2180	str x23,[sp, #-0x40]!
+009f2184	stp x22,x21,[sp, #0x10]
+009f2188	stp x20,x19,[sp, #0x20]
+009f218c	mov x20,x2
+009f2190	mov x21,x1
+009f2194	mov x22,x0
+009f2198	stp x29,x30,[sp, #0x30]
+009f219c	add x29,sp,#0x30
+009f21a0	cbz x2,0x009f21ac
+009f21a4	ldr x19,[x20]
+009f21a8	cbnz x19,0x009f21b8
+009f21ac	bl 0x00c37950
+009f21b0	mov x19,x0
+009f21b4	cbz x0,0x009f2238
+009f21b8	mov x23,x19
+009f21bc	ldr x0,[x23, #0x8]!
+009f21c0	adrp x1,0x2db000
+009f21c4	add x1,x1,#0xd56
+009f21c8	mov w2,#0x1d
+009f21cc	bl 0x00c32310
+009f21d0	mov x0,x22
+009f21d4	mov x1,x23
+009f21d8	mov x2,x21
+009f21dc	str xzr,[x23]
+009f21e0	bl 0x00c36170
+009f21e4	cmp w0,#0x0
+009f21e8	str w0,[x19]
+009f21ec	b.le 0x009f2210
+009f21f0	ldr x8,[x23]
+009f21f4	cbz x8,0x009f226c
+009f21f8	cbz x20,0x009f2208
+009f21fc	ldr x8,[x20]
+009f2200	cbnz x8,0x009f2208
+009f2204	str x19,[x20]
+009f2208	mov x0,x19
+009f220c	b 0x009f22b8
+009f2210	bl 0x00c342a0
+009f2214	adrp x0,0x2db000
+009f2218	adrp x2,0x2af000
+009f221c	add x0,x0,#0xd56
+009f2220	add x2,x2,#0xc72
+009f2224	mov w1,#0x21
+009f2228	bl 0x00c342b0
+009f222c	mov w0,#0xd
+009f2230	orr w1,wzr,#0x70
+009f2234	b 0x009f2294
+009f2238	bl 0x00c342a0
+009f223c	adrp x0,0x2db000
+009f2240	adrp x2,0x2af000
+009f2244	add x0,x0,#0xd56
+009f2248	add x2,x2,#0xc72
+009f224c	mov w1,#0x16
+009f2250	bl 0x00c342b0
+009f2254	mov w1,#0x100
+009f2258	mov w0,#0xd
+009f225c	movk w1,#0xc, LSL #16
+009f2260	mov x2,xzr
+009f2264	bl 0x00c342c0
+009f2268	b 0x009f22b4
+009f226c	bl 0x00c342a0
+009f2270	adrp x0,0x2db000
+009f2274	adrp x2,0x2af000
+009f2278	add x0,x0,#0xd56
+009f227c	add x2,x2,#0xc72
+009f2280	mov w1,#0x25
+009f2284	bl 0x00c342b0
+009f2288	mov w1,#0x100
+009f228c	mov w0,#0xd
+009f2290	movk w1,#0xc, LSL #16
+009f2294	mov x2,xzr
+009f2298	bl 0x00c342c0
+009f229c	cbz x20,0x009f22ac
+009f22a0	ldr x8,[x20]
+009f22a4	mov x0,xzr
+009f22a8	cbnz x8,0x009f22b8
+009f22ac	mov x0,x19
+009f22b0	bl 0x00c37890
+009f22b4	mov x0,xzr
+009f22b8	ldp x29,x30,[sp, #0x30]
+009f22bc	ldp x20,x19,[sp, #0x20]
+009f22c0	ldp x22,x21,[sp, #0x10]
+009f22c4	ldr x23,[sp], #0x40
+009f22c8	ret

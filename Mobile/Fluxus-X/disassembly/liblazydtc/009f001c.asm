@@ -1,0 +1,7 @@
+; ASN1_UTCTIME_print @ 009f001c
+009f001c	ldr w8,[x1, #0x4]
+009f0020	cmp w8,#0x17
+009f0024	b.ne 0x009f002c
+009f0028	b 0x00c32180
+009f002c	mov w0,wzr
+009f0030	ret

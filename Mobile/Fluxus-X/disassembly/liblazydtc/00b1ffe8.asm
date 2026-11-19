@@ -1,0 +1,27 @@
+; ossl_bio_new_from_core_bio @ 00b1ffe8
+00b1ffe8	stp x20,x19,[sp, #-0x20]!
+00b1ffec	stp x29,x30,[sp, #0x10]
+00b1fff0	add x29,sp,#0x10
+00b1fff4	mov x19,x1
+00b1fff8	bl 0x00c40fb0
+00b1fffc	cbz x0,0x00b2003c
+00b20000	bl 0x00c32240
+00b20004	mov x20,x0
+00b20008	cbz x0,0x00b20040
+00b2000c	adrp x8,0xd23000
+00b20010	ldr x8,[x8, #0x7f0]
+00b20014	cbz x8,0x00b20034
+00b20018	mov x0,x19
+00b2001c	blr x8
+00b20020	cbz w0,0x00b20034
+00b20024	mov x0,x20
+00b20028	mov x1,x19
+00b2002c	bl 0x00c32290
+00b20030	b 0x00b20040
+00b20034	mov x0,x20
+00b20038	bl 0x00c31a40
+00b2003c	mov x20,xzr
+00b20040	ldp x29,x30,[sp, #0x10]
+00b20044	mov x0,x20
+00b20048	ldp x20,x19,[sp], #0x20
+00b2004c	ret

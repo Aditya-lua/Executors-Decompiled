@@ -1,0 +1,43 @@
+; tls_process_hello_req @ 009e0080
+009e0080	stp x20,x19,[sp, #-0x20]!
+009e0084	stp x29,x30,[sp, #0x10]
+009e0088	ldr x8,[x1, #0x8]
+009e008c	mov x19,x0
+009e0090	add x29,sp,#0x10
+009e0094	cbz x8,0x009e00d0
+009e0098	bl 0x00c342a0
+009e009c	adrp x0,0x2d7000
+009e00a0	adrp x2,0x2ab000
+009e00a4	add x0,x0,#0xb1a
+009e00a8	add x2,x2,#0xd9c
+009e00ac	mov w1,#0xe16
+009e00b0	bl 0x00c342b0
+009e00b4	mov w1,#0x32
+009e00b8	mov w2,#0x9f
+009e00bc	mov x0,x19
+009e00c0	mov x3,xzr
+009e00c4	bl 0x00c34410
+009e00c8	mov w20,wzr
+009e00cc	b 0x009e0118
+009e00d0	ldrb w8,[x19, #0x9eb]
+009e00d4	tbnz w8,#0x6,0x009e00f4
+009e00d8	ldr x8,[x19, #0x8]
+009e00dc	ldr x8,[x8, #0xc0]
+009e00e0	ldrb w8,[x8, #0x60]
+009e00e4	tbnz w8,#0x3,0x009e010c
+009e00e8	mov x0,x19
+009e00ec	bl 0x00c35a80
+009e00f0	b 0x009e0114
+009e00f4	mov w1,#0x1
+009e00f8	mov w2,#0x64
+009e00fc	mov x0,x19
+009e0100	mov w20,#0x1
+009e0104	bl 0x00c34890
+009e0108	b 0x009e0118
+009e010c	mov x0,x19
+009e0110	bl 0x00c35a70
+009e0114	mov w20,#0x1
+009e0118	ldp x29,x30,[sp, #0x10]
+009e011c	mov w0,w20
+009e0120	ldp x20,x19,[sp], #0x20
+009e0124	ret

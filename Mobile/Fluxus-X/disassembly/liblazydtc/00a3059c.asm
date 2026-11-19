@@ -1,0 +1,161 @@
+; EC_GROUP_copy @ 00a3059c
+00a3059c	stp x22,x21,[sp, #-0x30]!
+00a305a0	stp x20,x19,[sp, #0x10]
+00a305a4	stp x29,x30,[sp, #0x20]
+00a305a8	ldr x8,[x0]
+00a305ac	add x29,sp,#0x20
+00a305b0	ldr x9,[x8, #0x20]
+00a305b4	cbz x9,0x00a305f0
+00a305b8	ldr x9,[x1]
+00a305bc	mov x20,x1
+00a305c0	cmp x8,x9
+00a305c4	b.eq 0x00a30638
+00a305c8	bl 0x00c342a0
+00a305cc	adrp x0,0x29e000
+00a305d0	adrp x2,0x2d5000
+00a305d4	add x0,x0,#0xa7
+00a305d8	add x2,x2,#0xbf8
+00a305dc	mov w1,#0xa7
+00a305e0	bl 0x00c342b0
+00a305e4	mov w0,#0x10
+00a305e8	mov w1,#0x65
+00a305ec	b 0x00a3061c
+00a305f0	bl 0x00c342a0
+00a305f4	adrp x0,0x29e000
+00a305f8	adrp x2,0x2d5000
+00a305fc	add x0,x0,#0xa7
+00a30600	add x2,x2,#0xbf8
+00a30604	mov w1,#0xa3
+00a30608	bl 0x00c342b0
+00a3060c	mov w8,#0x100
+00a30610	movk w8,#0xc, LSL #16
+00a30614	add w1,w8,#0x1
+00a30618	mov w0,#0x10
+00a3061c	mov x2,xzr
+00a30620	bl 0x00c342c0
+00a30624	mov w0,wzr
+00a30628	ldp x29,x30,[sp, #0x20]
+00a3062c	ldp x20,x19,[sp, #0x10]
+00a30630	ldp x22,x21,[sp], #0x30
+00a30634	ret
+00a30638	mov x19,x0
+00a3063c	cmp x0,x20
+00a30640	b.eq 0x00a30678
+00a30644	ldr x8,[x20, #0xa8]
+00a30648	str x8,[x19, #0xa8]
+00a3064c	ldr w8,[x20, #0x20]
+00a30650	str w8,[x19, #0x20]
+00a30654	ldr w8,[x20, #0x98]
+00a30658	str w8,[x19, #0x98]
+00a3065c	ldr w8,[x20, #0x98]
+00a30660	cbz w8,0x00a30680
+00a30664	cmp w8,#0x5
+00a30668	b.ne 0x00a30688
+00a3066c	ldr x0,[x20, #0xa0]
+00a30670	bl 0x00c3b080
+00a30674	b 0x00a30684
+00a30678	mov w0,#0x1
+00a3067c	b 0x00a30628
+00a30680	mov x0,xzr
+00a30684	str x0,[x19, #0xa0]
+00a30688	ldr x1,[x20, #0x90]
+00a3068c	ldr x0,[x19, #0x90]
+00a30690	cbz x1,0x00a306b4
+00a30694	cbnz x0,0x00a306a8
+00a30698	bl 0x00c38f80
+00a3069c	str x0,[x19, #0x90]
+00a306a0	cbz x0,0x00a30628
+00a306a4	ldr x1,[x20, #0x90]
+00a306a8	bl 0x00c38f60
+00a306ac	cbnz x0,0x00a306bc
+00a306b0	b 0x00a30628
+00a306b4	bl 0x00c38f70
+00a306b8	str xzr,[x19, #0x90]
+00a306bc	ldr x1,[x20, #0x8]
+00a306c0	ldr x21,[x19, #0x8]
+00a306c4	cbz x1,0x00a306f4
+00a306c8	cbnz x21,0x00a306e4
+00a306cc	mov x0,x19
+00a306d0	bl 0x00a3081c
+00a306d4	str x0,[x19, #0x8]
+00a306d8	cbz x0,0x00a30628
+00a306dc	ldr x1,[x20, #0x8]
+00a306e0	mov x21,x0
+00a306e4	mov x0,x21
+00a306e8	bl 0x00a30938
+00a306ec	cbnz w0,0x00a30730
+00a306f0	b 0x00a30628
+00a306f4	cbz x21,0x00a3072c
+00a306f8	ldr x9,[x21]
+00a306fc	ldr x8,[x9, #0x60]
+00a30700	cbnz x8,0x00a3070c
+00a30704	ldr x8,[x9, #0x58]
+00a30708	cbz x8,0x00a30714
+00a3070c	mov x0,x21
+00a30710	blr x8
+00a30714	adrp x2,0x29e000
+00a30718	add x2,x2,#0xa7
+00a3071c	orr w1,wzr,#0x30
+00a30720	mov w3,#0x2fc
+00a30724	mov x0,x21
+00a30728	bl 0x00c345e0
+00a3072c	str xzr,[x19, #0x8]
+00a30730	ldr x8,[x20]
+00a30734	ldrb w8,[x8]
+00a30738	tbnz w8,#0x1,0x00a3075c
+00a3073c	ldr x0,[x19, #0x10]
+00a30740	ldr x1,[x20, #0x10]
+00a30744	bl 0x00c36990
+00a30748	cbz x0,0x00a30628
+00a3074c	ldr x0,[x19, #0x18]
+00a30750	ldr x1,[x20, #0x18]
+00a30754	bl 0x00c36990
+00a30758	cbz x0,0x00a30628
+00a3075c	mov x22,x19
+00a30760	ldr w8,[x20, #0x2c]
+00a30764	ldr x0,[x22, #0x30]!
+00a30768	stur w8,[x22, #-0x4]
+00a3076c	ldur x8,[x20, #0x24]
+00a30770	stur x8,[x22, #-0xc]
+00a30774	ldr x8,[x20, #0x30]
+00a30778	cbz x8,0x00a307bc
+00a3077c	adrp x21,0x29e000
+00a30780	add x21,x21,#0xa7
+00a30784	orr w2,wzr,#0xf8
+00a30788	mov x1,x21
+00a3078c	bl 0x00c32310
+00a30790	ldr x0,[x20, #0x38]
+00a30794	mov w2,#0xf9
+00a30798	mov x1,x21
+00a3079c	bl 0x00c32320
+00a307a0	str x0,[x22]
+00a307a4	cbz x0,0x00a307f0
+00a307a8	ldp x1,x2,[x20, #0x30]
+00a307ac	bl 0x00c2ffd0
+00a307b0	ldr x8,[x20, #0x38]
+00a307b4	str x8,[x19, #0x38]
+00a307b8	b 0x00a307d0
+00a307bc	adrp x1,0x29e000
+00a307c0	add x1,x1,#0xa7
+00a307c4	mov w2,#0x101
+00a307c8	bl 0x00c32310
+00a307cc	stp xzr,xzr,[x22]
+00a307d0	ldr x8,[x19]
+00a307d4	mov x0,x19
+00a307d8	mov x1,x20
+00a307dc	ldp x29,x30,[sp, #0x20]
+00a307e0	ldr x2,[x8, #0x20]
+00a307e4	ldp x20,x19,[sp, #0x10]
+00a307e8	ldp x22,x21,[sp], #0x30
+00a307ec	br x2
+00a307f0	bl 0x00c342a0
+00a307f4	adrp x0,0x29e000
+00a307f8	adrp x2,0x2d5000
+00a307fc	add x0,x0,#0xa7
+00a30800	add x2,x2,#0xbf8
+00a30804	mov w1,#0xfa
+00a30808	bl 0x00c342b0
+00a3080c	mov w1,#0x100
+00a30810	mov w0,#0x10
+00a30814	movk w1,#0xc, LSL #16
+00a30818	b 0x00a3061c

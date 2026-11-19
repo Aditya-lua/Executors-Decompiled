@@ -1,0 +1,14 @@
+; _INIT_47 @ 008061cc
+008061cc	adrp x8,0xd1b000
+008061d0	ldrb w9,[x8, #0x128]
+008061d4	tbnz w9,#0x0,0x008061fc
+008061d8	adrp x9,0xcb4000
+008061dc	mov w11,#0x1
+008061e0	ldr x9,[x9, #0x9b0]
+008061e4	strb w11,[x8, #0x128]
+008061e8	ldr w10,[x9]
+008061ec	add w8,w10,#0x1
+008061f0	adrp x10,0xd1b000
+008061f4	str w8,[x9]
+008061f8	str w8,[x10, #0x120]
+008061fc	ret

@@ -1,0 +1,138 @@
+{
+  "result": "pass",
+  "scope": "Static structure and publication checks; no Android/executor runtime validation",
+  "apk_sha256": "0491e1c5d9bce3c47fdd27f32593dd2a3ad3d3adab5902fe315e7d4d64e6d2aa",
+  "files_scanned": 81217,
+  "bytes_scanned": 318600196,
+  "xml_documents_parsed": 985,
+  "dex_coverage": [
+    {
+      "dex": "classes.dex",
+      "class_defs": 12222,
+      "smali_class_descriptors": 12222,
+      "missing": [],
+      "unexpected": [],
+      "duplicate_descriptors": 0,
+      "dex_sha1_ok": true,
+      "dex_adler32_ok": true
+    },
+    {
+      "dex": "classes2.dex",
+      "class_defs": 7195,
+      "smali_class_descriptors": 7195,
+      "missing": [],
+      "unexpected": [],
+      "duplicate_descriptors": 0,
+      "dex_sha1_ok": true,
+      "dex_adler32_ok": true
+    },
+    {
+      "dex": "classes3.dex",
+      "class_defs": 7245,
+      "smali_class_descriptors": 7245,
+      "missing": [],
+      "unexpected": [],
+      "duplicate_descriptors": 0,
+      "dex_sha1_ok": true,
+      "dex_adler32_ok": true
+    },
+    {
+      "dex": "classes4.dex",
+      "class_defs": 2,
+      "smali_class_descriptors": 2,
+      "missing": [],
+      "unexpected": [],
+      "duplicate_descriptors": 0,
+      "dex_sha1_ok": true,
+      "dex_adler32_ok": true
+    }
+  ],
+  "native_exports": [
+    {
+      "library": "liblazydtc",
+      "indexed_functions": 19964,
+      "statuses": {
+        "decompiled": 19963,
+        "withheld-credential": 1
+      }
+    },
+    {
+      "library": "libtrampoline",
+      "indexed_functions": 19,
+      "statuses": {
+        "decompiled": 19
+      }
+    }
+  ],
+  "recovered_lua_syntax": [
+    {
+      "path": "decompiled/decoded/recovered_bit_compat.lua",
+      "sha256": "893e42f05af086205ef55741a9247482665dfe59c6186ed5810449e530d181bd",
+      "bytes": 2075,
+      "parse_exit": 0
+    },
+    {
+      "path": "decompiled/decoded/recovered_drawing.lua",
+      "sha256": "8b6fa7c3ab037b437ad0b70f9f035f876208803bd6c38d0d675203f9a6c61fb8",
+      "bytes": 27581,
+      "parse_exit": 0
+    },
+    {
+      "path": "decompiled/decoded/recovered_gc_cache.lua",
+      "sha256": "985fce0b2627aa9e3546e34da638a545a23722c170b6465662f7444d999c2f82",
+      "bytes": 1843,
+      "parse_exit": 0
+    },
+    {
+      "path": "decompiled/decoded/recovered_ui.lua",
+      "sha256": "dd529febae3b3f3ef198093dedf03c26ba12efa6cef450b4a12bf75f78c2d3c7",
+      "bytes": 295418,
+      "parse_exit": 0
+    }
+  ],
+  "jadx_reported_errors": 114,
+  "verified_git_index_entries": 81217,
+  "largest_files": [
+    {
+      "bytes": 4194294,
+      "path": "data/liblazydtc/references-0003.tsv"
+    },
+    {
+      "bytes": 4194287,
+      "path": "data/liblazydtc/references-0002.tsv"
+    },
+    {
+      "bytes": 4194279,
+      "path": "data/liblazydtc/references-0001.tsv"
+    },
+    {
+      "bytes": 2606902,
+      "path": "data/liblazydtc/functions.tsv"
+    },
+    {
+      "bytes": 2533972,
+      "path": "data/liblazydtc/references-0004.tsv"
+    },
+    {
+      "bytes": 2130446,
+      "path": "data/liblazydtc/calls.tsv"
+    },
+    {
+      "bytes": 1990498,
+      "path": "data/elf/liblazydtc.so.json"
+    },
+    {
+      "bytes": 1965630,
+      "path": "data/elf/libbacktrace-native.so.json"
+    },
+    {
+      "bytes": 1915013,
+      "path": "evidence/derived-files-0004.json"
+    },
+    {
+      "bytes": 1847159,
+      "path": "evidence/derived-files-0008.json"
+    }
+  ],
+  "issues": []
+}

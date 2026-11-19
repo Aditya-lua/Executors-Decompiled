@@ -1,0 +1,28 @@
+; ENGINE_get_digest @ 00a53648
+00a53648	sub sp,sp,#0x20
+00a5364c	stp x29,x30,[sp, #0x10]
+00a53650	ldr x8,[x0, #0x40]
+00a53654	add x29,sp,#0x10
+00a53658	cbz x8,0x00a53678
+00a5365c	mov w3,w1
+00a53660	add x1,sp,#0x8
+00a53664	mov x2,xzr
+00a53668	blr x8
+00a5366c	cbz w0,0x00a53678
+00a53670	ldr x0,[sp, #0x8]
+00a53674	b 0x00a536a8
+00a53678	bl 0x00c342a0
+00a5367c	adrp x0,0x2d9000
+00a53680	adrp x2,0x2d9000
+00a53684	add x0,x0,#0xc0d
+00a53688	add x2,x2,#0xc27
+00a5368c	mov w1,#0x4e
+00a53690	bl 0x00c342b0
+00a53694	mov w0,#0x26
+00a53698	mov w1,#0x93
+00a5369c	mov x2,xzr
+00a536a0	bl 0x00c342c0
+00a536a4	mov x0,xzr
+00a536a8	ldp x29,x30,[sp, #0x10]
+00a536ac	add sp,sp,#0x20
+00a536b0	ret

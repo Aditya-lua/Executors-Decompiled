@@ -1,0 +1,22 @@
+; ix::SocketServer::logInfo @ 009880cc
+009880cc	stp x20,x19,[sp, #-0x20]!
+009880d0	stp x29,x30,[sp, #0x10]
+009880d4	add x29,sp,#0x10
+009880d8	add x20,x0,#0x44
+009880dc	mov x0,x20
+009880e0	mov x19,x1
+009880e4	bl 0x00c2ff10
+009880e8	ldrb w8,[x19]
+009880ec	ldr x9,[x19, #0x10]
+009880f0	adrp x1,0x2a7000
+009880f4	add x1,x1,#0x2d3
+009880f8	tst w8,#0x1
+009880fc	adrp x8,0xcb4000
+00988100	ldr x8,[x8, #0xba0]
+00988104	csinc x2,x9,x19,ne
+00988108	add x0,x8,#0x98
+0098810c	bl 0x00c30940
+00988110	ldp x29,x30,[sp, #0x10]
+00988114	mov x0,x20
+00988118	ldp x20,x19,[sp], #0x20
+0098811c	b 0x00c2ff20

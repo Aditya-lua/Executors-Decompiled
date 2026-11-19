@@ -1,0 +1,25 @@
+/* Ghidra 12.2 pseudocode; native types and names may be inferred.
+ * Binary: liblazydtc.so; entry: 00a78b6c
+ */
+
+void ossl_dh_generate_ffc_parameters
+               (long param_1,int param_2,int param_3,int param_4,undefined8 param_5)
+
+{
+  int iVar1;
+  undefined1 auStack_14 [4];
+  
+  if (param_2 == 1) {
+    iVar1 = ossl_ffc_params_FIPS186_2_generate();
+  }
+  else {
+    iVar1 = ossl_ffc_params_FIPS186_4_generate
+                      (*(undefined8 *)(param_1 + 0xb0),param_1 + 8,1,(long)param_3,(long)param_4,
+                       auStack_14,param_5);
+  }
+  if (0 < iVar1) {
+    *(long *)(param_1 + 200) = *(long *)(param_1 + 200) + 1;
+  }
+  return;
+}
+

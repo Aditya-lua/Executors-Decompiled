@@ -1,0 +1,4 @@
+; i2d_ASN1_INTEGER @ 009f798c
+009f798c	adrp x2,0xc58000
+009f7990	add x2,x2,#0xb80
+009f7994	b 0x00c36170

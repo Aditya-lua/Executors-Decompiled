@@ -1,0 +1,3 @@
+; ASN1_ENUMERATED_to_BN @ 009f39bc
+009f39bc	mov w2,#0xa
+009f39c0	b 0x009f3780

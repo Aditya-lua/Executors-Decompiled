@@ -1,0 +1,6 @@
+; FUN_008498cc @ 008498cc
+008498cc	stp x29,x30,[sp, #-0x10]!
+008498d0	mov x29,sp
+008498d4	adrp x0,0x2ca000
+008498d8	add x0,x0,#0xa6b
+008498dc	bl 0x007fe138

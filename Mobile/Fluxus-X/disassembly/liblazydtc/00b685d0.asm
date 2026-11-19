@@ -1,0 +1,88 @@
+; ossl_cipher_hw_chunked_cbc @ 00b685d0
+00b685d0	sub sp,sp,#0x70
+00b685d4	stp x24,x23,[sp, #0x30]
+00b685d8	stp x22,x21,[sp, #0x40]
+00b685dc	stp x20,x19,[sp, #0x50]
+00b685e0	mov x19,x3
+00b685e4	mov x23,x2
+00b685e8	mov x20,x1
+00b685ec	lsr x8,x3,#0x1e
+00b685f0	mov x21,x0
+00b685f4	stp x28,x27,[sp, #0x10]
+00b685f8	stp x26,x25,[sp, #0x20]
+00b685fc	stp x29,x30,[sp, #0x60]
+00b68600	add x29,sp,#0x60
+00b68604	cbz x8,0x00b686d4
+00b68608	orr x27,xzr,#-0x40000000
+00b6860c	add x8,x19,x27
+00b68610	and x28,x8,#-0x40000000
+00b68614	mov w26,#0x40000000
+00b68618	add x22,x28,x26
+00b6861c	add x24,x21,#0x20
+00b68620	str x8,[sp]
+00b68624	add x8,x23,x22
+00b68628	mov x25,x20
+00b6862c	str x8,[sp, #0x8]
+00b68630	ldr x8,[x21, #0x38]
+00b68634	cbz x8,0x00b6865c
+00b68638	ldrb w9,[x21, #0x6c]
+00b6863c	ldr x3,[x21, #0xb0]
+00b68640	mov w2,#0x40000000
+00b68644	mov x0,x23
+00b68648	ubfx w5,w9,#0x1,#0x1
+00b6864c	mov x1,x25
+00b68650	mov x4,x24
+00b68654	blr x8
+00b68658	b 0x00b68688
+00b6865c	ldrb w8,[x21, #0x6c]
+00b68660	ldr x3,[x21, #0xb0]
+00b68664	ldr x5,[x21, #0x30]
+00b68668	mov w2,#0x40000000
+00b6866c	mov x0,x23
+00b68670	mov x1,x25
+00b68674	mov x4,x24
+00b68678	tbnz w8,#0x1,0x00b68684
+00b6867c	bl 0x00c3e240
+00b68680	b 0x00b68688
+00b68684	bl 0x00c3e250
+00b68688	add x19,x19,x27
+00b6868c	add x23,x23,x26
+00b68690	lsr x8,x19,#0x1e
+00b68694	add x25,x25,x26
+00b68698	cbnz x8,0x00b68630
+00b6869c	ldp x8,x0,[sp]
+00b686a0	add x20,x20,x22
+00b686a4	sub x19,x8,x28
+00b686a8	cbz x19,0x00b68708
+00b686ac	ldr x8,[x21, #0x38]
+00b686b0	cbz x8,0x00b686e0
+00b686b4	ldrb w9,[x21, #0x6c]
+00b686b8	ldr x3,[x21, #0xb0]
+00b686bc	add x4,x21,#0x20
+00b686c0	mov x1,x20
+00b686c4	ubfx w5,w9,#0x1,#0x1
+00b686c8	mov x2,x19
+00b686cc	blr x8
+00b686d0	b 0x00b68708
+00b686d4	mov x0,x23
+00b686d8	cbnz x19,0x00b686ac
+00b686dc	b 0x00b68708
+00b686e0	ldrb w8,[x21, #0x6c]
+00b686e4	ldr x3,[x21, #0xb0]
+00b686e8	ldr x5,[x21, #0x30]
+00b686ec	add x4,x21,#0x20
+00b686f0	mov x1,x20
+00b686f4	mov x2,x19
+00b686f8	tbnz w8,#0x1,0x00b68704
+00b686fc	bl 0x00c3e240
+00b68700	b 0x00b68708
+00b68704	bl 0x00c3e250
+00b68708	ldp x29,x30,[sp, #0x60]
+00b6870c	ldp x20,x19,[sp, #0x50]
+00b68710	ldp x22,x21,[sp, #0x40]
+00b68714	ldp x24,x23,[sp, #0x30]
+00b68718	ldp x26,x25,[sp, #0x20]
+00b6871c	ldp x28,x27,[sp, #0x10]
+00b68720	mov w0,#0x1
+00b68724	add sp,sp,#0x70
+00b68728	ret

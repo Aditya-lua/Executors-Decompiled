@@ -1,0 +1,20 @@
+; EVP_KDF_CTX_free @ 00a64024
+00a64024	cbz x0,0x00a6406c
+00a64028	str x19,[sp, #-0x20]!
+00a6402c	stp x29,x30,[sp, #0x10]
+00a64030	mov x19,x0
+00a64034	ldp x8,x0,[x0]
+00a64038	add x29,sp,#0x10
+00a6403c	ldr x8,[x8, #0x40]
+00a64040	blr x8
+00a64044	ldr x0,[x19]
+00a64048	str xzr,[x19, #0x8]
+00a6404c	bl 0x00c36220
+00a64050	ldp x29,x30,[sp, #0x10]
+00a64054	adrp x1,0x2a0000
+00a64058	add x1,x1,#0x2e6
+00a6405c	mov w2,#0x34
+00a64060	mov x0,x19
+00a64064	ldr x19,[sp], #0x20
+00a64068	b 0x00c32310
+00a6406c	ret

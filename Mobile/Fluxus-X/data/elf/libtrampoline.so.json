@@ -1,0 +1,262 @@
+{
+  "path": "lib/arm64-v8a/libtrampoline.so",
+  "bytes": 5104,
+  "sha256": "50506346d08f40a483df80025b62246298816ebf344ec3ccdb854a14582bdd35",
+  "machine": "EM_AARCH64",
+  "class": 64,
+  "little_endian": true,
+  "needed": [
+    "liblog.so",
+    "libdl.so",
+    "libc.so"
+  ],
+  "imports": 7,
+  "exports": 0,
+  "defined_functions": 0,
+  "sections": [
+    {
+      "name": "",
+      "address": "0x0",
+      "file_offset": "0x0",
+      "bytes": 0,
+      "type": "SHT_NULL",
+      "flags": 0
+    },
+    {
+      "name": ".interp",
+      "address": "0x2a8",
+      "file_offset": "0x2a8",
+      "bytes": 21,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".note.android.ident",
+      "address": "0x2c0",
+      "file_offset": "0x2c0",
+      "bytes": 152,
+      "type": "SHT_NOTE",
+      "flags": 2
+    },
+    {
+      "name": ".dynsym",
+      "address": "0x358",
+      "file_offset": "0x358",
+      "bytes": 192,
+      "type": "SHT_DYNSYM",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version",
+      "address": "0x418",
+      "file_offset": "0x418",
+      "bytes": 16,
+      "type": "SHT_GNU_versym",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version_r",
+      "address": "0x428",
+      "file_offset": "0x428",
+      "bytes": 64,
+      "type": "SHT_GNU_verneed",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.hash",
+      "address": "0x468",
+      "file_offset": "0x468",
+      "bytes": 28,
+      "type": "SHT_GNU_HASH",
+      "flags": 2
+    },
+    {
+      "name": ".hash",
+      "address": "0x484",
+      "file_offset": "0x484",
+      "bytes": 72,
+      "type": "SHT_HASH",
+      "flags": 2
+    },
+    {
+      "name": ".dynstr",
+      "address": "0x4cc",
+      "file_offset": "0x4cc",
+      "bytes": 116,
+      "type": "SHT_STRTAB",
+      "flags": 2
+    },
+    {
+      "name": ".rela.dyn",
+      "address": "0x540",
+      "file_offset": "0x540",
+      "bytes": 96,
+      "type": "SHT_RELA",
+      "flags": 2
+    },
+    {
+      "name": ".rela.plt",
+      "address": "0x5a0",
+      "file_offset": "0x5a0",
+      "bytes": 168,
+      "type": "SHT_RELA",
+      "flags": 66
+    },
+    {
+      "name": ".rodata",
+      "address": "0x648",
+      "file_offset": "0x648",
+      "bytes": 78,
+      "type": "SHT_PROGBITS",
+      "flags": 50
+    },
+    {
+      "name": ".eh_frame_hdr",
+      "address": "0x698",
+      "file_offset": "0x698",
+      "bytes": 52,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".eh_frame",
+      "address": "0x6d0",
+      "file_offset": "0x6d0",
+      "bytes": 216,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".text",
+      "address": "0x47a8",
+      "file_offset": "0x7a8",
+      "bytes": 536,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".plt",
+      "address": "0x49c0",
+      "file_offset": "0x9c0",
+      "bytes": 144,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".dynamic",
+      "address": "0x8a50",
+      "file_offset": "0xa50",
+      "bytes": 384,
+      "type": "SHT_DYNAMIC",
+      "flags": 3
+    },
+    {
+      "name": ".got",
+      "address": "0x8bd0",
+      "file_offset": "0xbd0",
+      "bytes": 24,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".got.plt",
+      "address": "0x8be8",
+      "file_offset": "0xbe8",
+      "bytes": 80,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".relro_padding",
+      "address": "0x8c38",
+      "file_offset": "0xc38",
+      "bytes": 968,
+      "type": "SHT_NOBITS",
+      "flags": 3
+    },
+    {
+      "name": ".data",
+      "address": "0xcc38",
+      "file_offset": "0xc38",
+      "bytes": 24,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".bss",
+      "address": "0xcc50",
+      "file_offset": "0xc50",
+      "bytes": 8,
+      "type": "SHT_NOBITS",
+      "flags": 3
+    },
+    {
+      "name": ".comment",
+      "address": "0x0",
+      "file_offset": "0xc50",
+      "bytes": 204,
+      "type": "SHT_PROGBITS",
+      "flags": 48
+    },
+    {
+      "name": ".shstrtab",
+      "address": "0x0",
+      "file_offset": "0xd1c",
+      "bytes": 209,
+      "type": "SHT_STRTAB",
+      "flags": 0
+    }
+  ],
+  "imported_symbols": [
+    {
+      "name": "__libc_init",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__cxa_atexit",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__android_log_print",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "dlopen",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "dlsym",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "dlerror",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__stack_chk_fail",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    }
+  ],
+  "exported_symbols": []
+}

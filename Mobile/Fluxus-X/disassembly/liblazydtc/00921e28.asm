@@ -1,0 +1,40 @@
+; FUN_00921e28 @ 00921e28
+00921e28	stp x20,x19,[sp, #-0x20]!
+00921e2c	stp x29,x30,[sp, #0x10]
+00921e30	add x29,sp,#0x10
+00921e34	ldp x9,x11,[x0, #0x18]
+00921e38	ldr x12,[x0, #0x28]
+00921e3c	adrp x8,0x2ab000
+00921e40	adrp x10,0x2c0000
+00921e44	add x8,x8,#0x32c
+00921e48	add x10,x10,#0xfba
+00921e4c	cmp x9,#0x0
+00921e50	csel x3,x8,x9,eq
+00921e54	csel x4,x8,x10,eq
+00921e58	cmp x11,#0x0
+00921e5c	mov w7,w1
+00921e60	mov x20,x0
+00921e64	csel x5,x8,x11,eq
+00921e68	cmp x12,#0x0
+00921e6c	adrp x1,0x29f000
+00921e70	mov x19,x2
+00921e74	csel x6,x8,x12,eq
+00921e78	add x1,x1,#0x56a
+00921e7c	mov x0,x2
+00921e80	mov x2,x20
+00921e84	bl 0x009048cc
+00921e88	cbnz w0,0x00921e9c
+00921e8c	add x0,x20,#0x30
+00921e90	mov x1,x19
+00921e94	bl 0x009202b4
+00921e98	cbz w0,0x00921ea8
+00921e9c	ldp x29,x30,[sp, #0x10]
+00921ea0	ldp x20,x19,[sp], #0x20
+00921ea4	ret
+00921ea8	ldp x29,x30,[sp, #0x10]
+00921eac	adrp x1,0x2b9000
+00921eb0	add x1,x1,#0x17a
+00921eb4	mov w2,#0x2
+00921eb8	mov x0,x19
+00921ebc	ldp x20,x19,[sp], #0x20
+00921ec0	b 0x009045fc

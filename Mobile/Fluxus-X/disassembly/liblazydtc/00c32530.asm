@@ -1,0 +1,5 @@
+; OCSP_RESPONSE_free @ 00c32530
+00c32530	adrp x16,0xcb7000
+00c32534	ldr x17,[x16, #0x280]
+00c32538	add x16,x16,#0x280
+00c3253c	br x17

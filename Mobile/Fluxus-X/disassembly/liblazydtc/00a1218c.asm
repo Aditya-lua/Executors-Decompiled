@@ -1,0 +1,4 @@
+; CTLOG_STORE_new @ 00a1218c
+00a1218c	mov x0,xzr
+00a12190	mov x1,xzr
+00a12194	b 0x00a12000

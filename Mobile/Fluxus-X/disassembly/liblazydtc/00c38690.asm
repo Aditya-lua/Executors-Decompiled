@@ -1,0 +1,5 @@
+; bio_cleanup @ 00c38690
+00c38690	adrp x16,0xcba000
+00c38694	ldr x17,[x16, #0x330]
+00c38698	add x16,x16,#0x330
+00c3869c	br x17

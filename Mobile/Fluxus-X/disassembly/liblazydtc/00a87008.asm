@@ -1,0 +1,4 @@
+; EVP_aes_128_ofb @ 00a87008
+00a87008	adrp x0,0xc61000
+00a8700c	add x0,x0,#0x778
+00a87010	ret

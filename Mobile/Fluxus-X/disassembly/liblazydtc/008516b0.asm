@@ -1,0 +1,13 @@
+; _INIT_99 @ 008516b0
+008516b0	adrp x8,0xd1e000
+008516b4	ldrb w9,[x8, #0x968]
+008516b8	tbnz w9,#0x0,0x008516dc
+008516bc	adrp x9,0xd1e000
+008516c0	mov w11,#0x1
+008516c4	ldr w10,[x9, #0x930]
+008516c8	strb w11,[x8, #0x968]
+008516cc	add w8,w10,#0x1
+008516d0	adrp x10,0xd1e000
+008516d4	str w8,[x9, #0x930]
+008516d8	str w8,[x10, #0x960]
+008516dc	ret

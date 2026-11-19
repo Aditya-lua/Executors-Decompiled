@@ -1,0 +1,115 @@
+; ossl_DER_w_algorithmIdentifier_MDWithRSAEncryption @ 00b60864
+00b60864	stp x22,x21,[sp, #-0x30]!
+00b60868	stp x20,x19,[sp, #0x10]
+00b6086c	mov w19,w1
+00b60870	mov x20,x0
+00b60874	cmp w2,#0x445
+00b60878	mov w0,#0xffffffff
+00b6087c	stp x29,x30,[sp, #0x20]
+00b60880	add x29,sp,#0x20
+00b60884	b.gt 0x00b608b4
+00b60888	cmp w2,#0x74
+00b6088c	b.gt 0x00b608e0
+00b60890	cmp w2,#0x3f
+00b60894	b.gt 0x00b6090c
+00b60898	cmp w2,#0x3
+00b6089c	b.eq 0x00b60948
+00b608a0	cmp w2,#0x4
+00b608a4	b.ne 0x00b60a0c
+00b608a8	adrp x21,0xcb5000
+00b608ac	ldr x21,[x21, #0x930]
+00b608b0	b 0x00b609bc
+00b608b4	sub w8,w2,#0x446
+00b608b8	cmp w8,#0x5
+00b608bc	b.hi 0x00b60a0c
+00b608c0	adrp x9,0x77c000
+00b608c4	add x9,x9,#0x310
+00b608c8	ldrsw x8,[x9, x8, LSL #0x2]
+00b608cc	add x8,x8,x9
+00b608d0	br x8
+00b608d4	adrp x21,0xcb5000
+00b608d8	ldr x21,[x21, #0x970]
+00b608dc	b 0x00b609bc
+00b608e0	sub w8,w2,#0x2a0
+00b608e4	cmp w8,#0x3
+00b608e8	b.hi 0x00b6092c
+00b608ec	adrp x9,0x77c000
+00b608f0	add x9,x9,#0x300
+00b608f4	ldrsw x8,[x9, x8, LSL #0x2]
+00b608f8	add x8,x8,x9
+00b608fc	br x8
+00b60900	adrp x21,0xcb5000
+00b60904	ldr x21,[x21, #0x958]
+00b60908	b 0x00b609bc
+00b6090c	cmp w2,#0x40
+00b60910	b.eq 0x00b60954
+00b60914	cmp w2,#0x5f
+00b60918	b.ne 0x00b60a0c
+00b6091c	adrp x21,0xcb5000
+00b60920	ldr x21,[x21, #0x938]
+00b60924	orr w22,wzr,#0x7
+00b60928	b 0x00b609c0
+00b6092c	cmp w2,#0x75
+00b60930	b.eq 0x00b60a1c
+00b60934	cmp w2,#0x101
+00b60938	b.ne 0x00b60a0c
+00b6093c	adrp x21,0xcb5000
+00b60940	ldr x21,[x21, #0x928]
+00b60944	b 0x00b609bc
+00b60948	adrp x21,0xcb5000
+00b6094c	ldr x21,[x21, #0x920]
+00b60950	b 0x00b609bc
+00b60954	adrp x21,0xcb5000
+00b60958	ldr x21,[x21, #0x948]
+00b6095c	b 0x00b609bc
+00b60960	adrp x21,0xcb5000
+00b60964	ldr x21,[x21, #0x978]
+00b60968	b 0x00b609bc
+00b6096c	adrp x21,0xcb5000
+00b60970	ldr x21,[x21, #0x900]
+00b60974	b 0x00b609bc
+00b60978	adrp x21,0xcb5000
+00b6097c	ldr x21,[x21, #0x908]
+00b60980	b 0x00b609bc
+00b60984	adrp x21,0xcb5000
+00b60988	ldr x21,[x21, #0x910]
+00b6098c	b 0x00b609bc
+00b60990	adrp x21,0xcb5000
+00b60994	ldr x21,[x21, #0x918]
+00b60998	b 0x00b609bc
+00b6099c	adrp x21,0xcb5000
+00b609a0	ldr x21,[x21, #0x960]
+00b609a4	b 0x00b609bc
+00b609a8	adrp x21,0xcb5000
+00b609ac	ldr x21,[x21, #0x968]
+00b609b0	b 0x00b609bc
+00b609b4	adrp x21,0xcb5000
+00b609b8	ldr x21,[x21, #0x950]
+00b609bc	mov w22,#0xb
+00b609c0	mov x0,x20
+00b609c4	mov w1,w19
+00b609c8	bl 0x00c3e050
+00b609cc	cbz w0,0x00b60a0c
+00b609d0	mov w1,#0xffffffff
+00b609d4	mov x0,x20
+00b609d8	bl 0x00c3e070
+00b609dc	cbz w0,0x00b60a0c
+00b609e0	mov w1,#0xffffffff
+00b609e4	mov x0,x20
+00b609e8	mov x2,x21
+00b609ec	mov x3,x22
+00b609f0	bl 0x00c3e0a0
+00b609f4	cbz w0,0x00b60a0c
+00b609f8	mov x0,x20
+00b609fc	mov w1,w19
+00b60a00	bl 0x00c3e060
+00b60a04	cmp w0,#0x0
+00b60a08	cset w0,ne
+00b60a0c	ldp x29,x30,[sp, #0x20]
+00b60a10	ldp x20,x19,[sp, #0x10]
+00b60a14	ldp x22,x21,[sp], #0x30
+00b60a18	ret
+00b60a1c	adrp x21,0xcb5000
+00b60a20	ldr x21,[x21, #0x940]
+00b60a24	mov w22,#0x8
+00b60a28	b 0x00b609c0

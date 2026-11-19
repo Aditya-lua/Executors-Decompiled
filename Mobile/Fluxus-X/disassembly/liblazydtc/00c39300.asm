@@ -1,0 +1,5 @@
+; CMAC_CTX_free @ 00c39300
+00c39300	adrp x16,0xcba000
+00c39304	ldr x17,[x16, #0x968]
+00c39308	add x16,x16,#0x968
+00c3930c	br x17

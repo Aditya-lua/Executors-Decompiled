@@ -1,0 +1,5 @@
+; HMAC_CTX_free @ 00c36900
+00c36900	adrp x16,0xcb9000
+00c36904	ldr x17,[x16, #0x468]
+00c36908	add x16,x16,#0x468
+00c3690c	br x17

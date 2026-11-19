@@ -1,0 +1,48 @@
+; ossl_dh_key_fromdata @ 00a19594
+00a19594	sub sp,sp,#0x40
+00a19598	stp x22,x21,[sp, #0x10]
+00a1959c	stp x20,x19,[sp, #0x20]
+00a195a0	stp x29,x30,[sp, #0x30]
+00a195a4	add x29,sp,#0x30
+00a195a8	stp xzr,xzr,[sp]
+00a195ac	cbz x0,0x00a1963c
+00a195b0	mov x20,x1
+00a195b4	adrp x1,0x2a3000
+00a195b8	mov x19,x0
+00a195bc	add x1,x1,#0xe83
+00a195c0	mov x0,x20
+00a195c4	mov w21,w2
+00a195c8	bl 0x00c36530
+00a195cc	adrp x1,0x2ad000
+00a195d0	mov x22,x0
+00a195d4	add x1,x1,#0x463
+00a195d8	mov x0,x20
+00a195dc	bl 0x00c36530
+00a195e0	mov x20,x0
+00a195e4	cbz w21,0x00a195fc
+00a195e8	cbz x22,0x00a195fc
+00a195ec	add x1,sp,#0x8
+00a195f0	mov x0,x22
+00a195f4	bl 0x00c39d50
+00a195f8	cbz w0,0x00a19628
+00a195fc	cbz x20,0x00a19610
+00a19600	mov x1,sp
+00a19604	mov x0,x20
+00a19608	bl 0x00c39d50
+00a1960c	cbz w0,0x00a19628
+00a19610	ldp x1,x2,[sp]
+00a19614	mov x0,x19
+00a19618	bl 0x00c39d30
+00a1961c	cbz w0,0x00a19628
+00a19620	mov w0,#0x1
+00a19624	b 0x00a1963c
+00a19628	ldr x0,[sp, #0x8]
+00a1962c	bl 0x00c322e0
+00a19630	ldr x0,[sp]
+00a19634	bl 0x00c36290
+00a19638	mov w0,wzr
+00a1963c	ldp x29,x30,[sp, #0x30]
+00a19640	ldp x20,x19,[sp, #0x20]
+00a19644	ldp x22,x21,[sp, #0x10]
+00a19648	add sp,sp,#0x40
+00a1964c	ret

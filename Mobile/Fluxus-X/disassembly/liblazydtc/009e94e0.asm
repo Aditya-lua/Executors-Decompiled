@@ -1,0 +1,63 @@
+; tls_process_end_of_early_data @ 009e94e0
+009e94e0	str x19,[sp, #-0x20]!
+009e94e4	stp x29,x30,[sp, #0x10]
+009e94e8	ldr x8,[x1, #0x8]
+009e94ec	mov x19,x0
+009e94f0	add x29,sp,#0x10
+009e94f4	cbz x8,0x009e9520
+009e94f8	bl 0x00c342a0
+009e94fc	adrp x0,0x2bd000
+009e9500	adrp x2,0x2bf000
+009e9504	add x0,x0,#0x74c
+009e9508	add x2,x2,#0xa40
+009e950c	mov w1,#0x100e
+009e9510	bl 0x00c342b0
+009e9514	mov w1,#0x32
+009e9518	mov w2,#0x9f
+009e951c	b 0x009e958c
+009e9520	ldr w8,[x19, #0x84]
+009e9524	and w8,w8,#0xfffffffe
+009e9528	cmp w8,#0xa
+009e952c	b.ne 0x009e9564
+009e9530	add x0,x19,#0xc58
+009e9534	bl 0x00c358f0
+009e9538	cbz w0,0x009e95a8
+009e953c	bl 0x00c342a0
+009e9540	adrp x0,0x2bd000
+009e9544	adrp x2,0x2bf000
+009e9548	add x0,x0,#0x74c
+009e954c	add x2,x2,#0xa40
+009e9550	mov w1,#0x101d
+009e9554	bl 0x00c342b0
+009e9558	mov w1,#0xa
+009e955c	mov w2,#0xb6
+009e9560	b 0x009e958c
+009e9564	bl 0x00c342a0
+009e9568	adrp x0,0x2bd000
+009e956c	adrp x2,0x2bf000
+009e9570	add x0,x0,#0x74c
+009e9574	add x2,x2,#0xa40
+009e9578	mov w1,#0x1014
+009e957c	bl 0x00c342b0
+009e9580	mov w2,#0x103
+009e9584	mov w1,#0x50
+009e9588	movk w2,#0xc, LSL #16
+009e958c	mov x0,x19
+009e9590	mov x3,xzr
+009e9594	bl 0x00c34410
+009e9598	mov w0,wzr
+009e959c	ldp x29,x30,[sp, #0x10]
+009e95a0	ldr x19,[sp], #0x20
+009e95a4	ret
+009e95a8	ldr x8,[x19, #0x8]
+009e95ac	orr w9,wzr,#0xc
+009e95b0	str w9,[x19, #0x84]
+009e95b4	mov w1,#0xa1
+009e95b8	ldr x8,[x8, #0xc0]
+009e95bc	mov x0,x19
+009e95c0	ldr x8,[x8, #0x20]
+009e95c4	blr x8
+009e95c8	cmp w0,#0x0
+009e95cc	orr w8,wzr,#0x3
+009e95d0	csel w0,wzr,w8,eq
+009e95d4	b 0x009e959c

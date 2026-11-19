@@ -1,0 +1,29 @@
+; FUN_00925d10 @ 00925d10
+00925d10	mov x9,x0
+00925d14	ldr x11,[x9, #0x8]!
+00925d18	str x1,[x2]
+00925d1c	ldr x8,[x9, #0x10]
+00925d20	cbz x8,0x00925d58
+00925d24	add x10,x11,#0x10
+00925d28	cmp x11,#0x0
+00925d2c	csel x12,x10,x0,ne
+00925d30	ldr x12,[x12]
+00925d34	stp x11,x12,[x2, #0x8]
+00925d38	cbz x11,0x00925d64
+00925d3c	ldr x11,[x10]
+00925d40	add x12,x11,#0x8
+00925d44	cmp x11,#0x0
+00925d48	csel x9,x9,x12,eq
+00925d4c	str x2,[x9]
+00925d50	mov x9,x10
+00925d54	b 0x00925d70
+00925d58	str x2,[x0]
+00925d5c	stp xzr,xzr,[x2, #0x8]
+00925d60	b 0x00925d70
+00925d64	ldr x9,[x0]
+00925d68	str x2,[x9, #0x8]
+00925d6c	mov x9,x0
+00925d70	add x8,x8,#0x1
+00925d74	str x2,[x9]
+00925d78	str x8,[x0, #0x18]
+00925d7c	ret

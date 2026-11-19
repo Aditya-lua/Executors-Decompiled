@@ -1,0 +1,64 @@
+; EVP_PKEY_asn1_add0 @ 009f0600
+009f0600	sub sp,sp,#0x170
+009f0604	stp x20,x19,[sp, #0x150]
+009f0608	mov x19,x0
+009f060c	mov x0,sp
+009f0610	mov w2,#0x140
+009f0614	mov w1,wzr
+009f0618	str x28,[sp, #0x140]
+009f061c	stp x29,x30,[sp, #0x160]
+009f0620	add x29,sp,#0x160
+009f0624	bl 0x00c301c0
+009f0628	ldp x8,x9,[x19, #0x8]
+009f062c	cbz x9,0x009f0690
+009f0630	tbnz w8,#0x0,0x009f0694
+009f0634	adrp x20,0xd21000
+009f0638	ldr x0,[x20, #0x8e0]
+009f063c	cbnz x0,0x009f0654
+009f0640	adrp x0,0x9f0000
+009f0644	add x0,x0,#0x6fc
+009f0648	bl 0x00c35340
+009f064c	str x0,[x20, #0x8e0]
+009f0650	cbz x0,0x009f06c8
+009f0654	ldr w8,[x19]
+009f0658	mov x1,sp
+009f065c	str w8,[sp]
+009f0660	bl 0x00c34760
+009f0664	tbnz w0,#0x1f,0x009f06dc
+009f0668	bl 0x00c342a0
+009f066c	adrp x0,0x2af000
+009f0670	adrp x2,0x2a5000
+009f0674	add x0,x0,#0xc32
+009f0678	add x2,x2,#0xc17
+009f067c	mov w1,#0xab
+009f0680	bl 0x00c342b0
+009f0684	orr w0,wzr,#0x6
+009f0688	mov w1,#0xb3
+009f068c	b 0x009f06bc
+009f0690	tbnz w8,#0x0,0x009f0634
+009f0694	bl 0x00c342a0
+009f0698	adrp x0,0x2af000
+009f069c	adrp x2,0x2a5000
+009f06a0	add x0,x0,#0xc32
+009f06a4	add x2,x2,#0xc17
+009f06a8	mov w1,#0x9e
+009f06ac	bl 0x00c342b0
+009f06b0	mov w1,#0x106
+009f06b4	orr w0,wzr,#0x6
+009f06b8	movk w1,#0x8, LSL #16
+009f06bc	mov x2,xzr
+009f06c0	bl 0x00c342c0
+009f06c4	mov w0,wzr
+009f06c8	ldp x29,x30,[sp, #0x160]
+009f06cc	ldp x20,x19,[sp, #0x150]
+009f06d0	ldr x28,[sp, #0x140]
+009f06d4	add sp,sp,#0x170
+009f06d8	ret
+009f06dc	ldr x0,[x20, #0x8e0]
+009f06e0	mov x1,x19
+009f06e4	bl 0x00c347a0
+009f06e8	cbz w0,0x009f06c8
+009f06ec	ldr x0,[x20, #0x8e0]
+009f06f0	bl 0x00c35350
+009f06f4	mov w0,#0x1
+009f06f8	b 0x009f06c8

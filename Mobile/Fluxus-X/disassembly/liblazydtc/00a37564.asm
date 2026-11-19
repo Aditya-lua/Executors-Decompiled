@@ -1,0 +1,40 @@
+; ECParameters_print_fp @ 00a37564
+00a37564	str x21,[sp, #-0x30]!
+00a37568	stp x20,x19,[sp, #0x10]
+00a3756c	stp x29,x30,[sp, #0x20]
+00a37570	add x29,sp,#0x20
+00a37574	mov x19,x1
+00a37578	mov x21,x0
+00a3757c	bl 0x00c32270
+00a37580	bl 0x00c32240
+00a37584	cbz x0,0x00a375bc
+00a37588	mov w1,#0x6a
+00a3758c	mov x2,xzr
+00a37590	mov x3,x21
+00a37594	mov x20,x0
+00a37598	bl 0x00c321a0
+00a3759c	mov x0,x20
+00a375a0	mov x1,x19
+00a375a4	bl 0x00c3a700
+00a375a8	mov w19,w0
+00a375ac	mov x0,x20
+00a375b0	bl 0x00c31a40
+00a375b4	mov w0,w19
+00a375b8	b 0x00a375f0
+00a375bc	bl 0x00c342a0
+00a375c0	adrp x0,0x2d9000
+00a375c4	adrp x2,0x2c5000
+00a375c8	add x0,x0,#0xb76
+00a375cc	add x2,x2,#0x969
+00a375d0	mov w1,#0x39
+00a375d4	bl 0x00c342b0
+00a375d8	mov w1,#0x20
+00a375dc	mov w0,#0x10
+00a375e0	movk w1,#0x8, LSL #16
+00a375e4	mov x2,xzr
+00a375e8	bl 0x00c342c0
+00a375ec	mov w0,wzr
+00a375f0	ldp x29,x30,[sp, #0x20]
+00a375f4	ldp x20,x19,[sp, #0x10]
+00a375f8	ldr x21,[sp], #0x30
+00a375fc	ret

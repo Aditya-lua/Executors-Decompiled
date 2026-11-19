@@ -1,0 +1,39 @@
+; ossl_mac_key_free @ 00b51348
+00b51348	stp x20,x19,[sp, #-0x20]!
+00b5134c	stp x29,x30,[sp, #0x10]
+00b51350	add x29,sp,#0x10
+00b51354	cbz x0,0x00b51384
+00b51358	mov x19,x0
+00b5135c	add x9,x0,#0x10
+00b51360	ldxr w8,[x9]
+00b51364	subs w10,w8,#0x1
+00b51368	stxr w11,w10,[x9]
+00b5136c	cbnz w11,0x00b51360
+00b51370	b.ne 0x00b5137c
+00b51374	dmb ISHLD
+00b51378	b 0x00b51390
+00b5137c	cmp w8,#0x1
+00b51380	b.le 0x00b51390
+00b51384	ldp x29,x30,[sp, #0x10]
+00b51388	ldp x20,x19,[sp], #0x20
+00b5138c	ret
+00b51390	ldp x0,x1,[x19, #0x18]
+00b51394	adrp x20,0x2be000
+00b51398	add x20,x20,#0xa4e
+00b5139c	mov w3,#0x62
+00b513a0	mov x2,x20
+00b513a4	bl 0x00c38e10
+00b513a8	ldr x0,[x19, #0x40]
+00b513ac	mov w2,#0x63
+00b513b0	mov x1,x20
+00b513b4	bl 0x00c32310
+00b513b8	add x0,x19,#0x28
+00b513bc	bl 0x00c41110
+00b513c0	ldr x0,[x19]
+00b513c4	bl 0x00c34d40
+00b513c8	ldp x29,x30,[sp, #0x10]
+00b513cc	mov w2,#0x66
+00b513d0	mov x0,x19
+00b513d4	mov x1,x20
+00b513d8	ldp x20,x19,[sp], #0x20
+00b513dc	b 0x00c32310

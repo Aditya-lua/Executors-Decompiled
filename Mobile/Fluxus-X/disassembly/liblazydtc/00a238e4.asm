@@ -1,0 +1,36 @@
+; FUN_00a238e4 @ 00a238e4
+00a238e4	stp x29,x30,[sp, #-0x10]!
+00a238e8	ldr x0,[x0, #0x20]
+00a238ec	mov x29,sp
+00a238f0	bl 0x00c36880
+00a238f4	bl 0x00c3a790
+00a238f8	cmp w0,#0x1ff
+00a238fc	b.le 0x00a2390c
+00a23900	mov w0,#0x100
+00a23904	ldp x29,x30,[sp], #0x10
+00a23908	ret
+00a2390c	cmp w0,#0x17f
+00a23910	b.le 0x00a23920
+00a23914	orr w0,wzr,#0xc0
+00a23918	ldp x29,x30,[sp], #0x10
+00a2391c	ret
+00a23920	cmp w0,#0xff
+00a23924	b.le 0x00a23934
+00a23928	mov w0,#0x80
+00a2392c	ldp x29,x30,[sp], #0x10
+00a23930	ret
+00a23934	cmp w0,#0xdf
+00a23938	b.le 0x00a23948
+00a2393c	orr w0,wzr,#0x70
+00a23940	ldp x29,x30,[sp], #0x10
+00a23944	ret
+00a23948	cmp w0,#0x9f
+00a2394c	b.le 0x00a2395c
+00a23950	mov w0,#0x50
+00a23954	ldp x29,x30,[sp], #0x10
+00a23958	ret
+00a2395c	cmp w0,#0x0
+00a23960	cinc w8,w0,lt
+00a23964	asr w0,w8,#0x1
+00a23968	ldp x29,x30,[sp], #0x10
+00a2396c	ret

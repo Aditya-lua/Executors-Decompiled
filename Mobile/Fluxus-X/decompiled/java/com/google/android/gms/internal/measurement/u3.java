@@ -1,0 +1,27 @@
+package com.google.android.gms.internal.measurement;
+
+import android.app.Activity;
+import java.util.Objects;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class u3 extends n3 {
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public final /* synthetic */ Activity f6866e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public final /* synthetic */ y3 f6867f;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public u3(y3 y3Var, Activity activity) {
+        super(y3Var.f6943a, true);
+        this.f6866e = activity;
+        Objects.requireNonNull(y3Var);
+        this.f6867f = y3Var;
+    }
+
+    @Override // com.google.android.gms.internal.measurement.n3
+    public final void a() {
+        ((u1) o9.s.l(this.f6867f.f6943a.m())).onActivityStoppedByScionActivityInfo(j2.a(this.f6866e), this.b);
+    }
+}

@@ -1,0 +1,37 @@
+; FUN_00877e3c @ 00877e3c
+00877e3c	ldrb w8,[x0, #0xf0]
+00877e40	tbnz w8,#0x0,0x00877ec8
+00877e44	ldp x8,x9,[x0, #0x90]
+00877e48	cmp x8,x9
+00877e4c	b.eq 0x00877ec8
+00877e50	ldr x10,[x0, #0x30]
+00877e54	b 0x00877e6c
+00877e58	str w14,[x10, x11, LSL #0x2]
+00877e5c	str w12,[x8, #0x4]
+00877e60	add x8,x8,#0x8
+00877e64	cmp x8,x9
+00877e68	b.eq 0x00877ec8
+00877e6c	ldr w11,[x8]
+00877e70	ldr w13,[x10, x11, LSL #0x2]
+00877e74	add w12,w11,w13, ASR #0x10
+00877e78	add w12,w12,#0x1
+00877e7c	ldr w14,[x10, w12, UXTW #0x2]
+00877e80	and w15,w14,#0xff
+00877e84	cmp w15,#0x17
+00877e88	b.ne 0x00877e9c
+00877e8c	asr w16,w14,#0x10
+00877e90	tbnz w16,#0x1f,0x00877e9c
+00877e94	add w12,w12,w16
+00877e98	b 0x00877e78
+00877e9c	and w16,w13,#0xff
+00877ea0	cmp w16,#0x17
+00877ea4	ccmp w15,#0x16,#0x0,eq
+00877ea8	b.eq 0x00877e58
+00877eac	mvn w14,w11
+00877eb0	add w14,w12,w14
+00877eb4	cmp w14,w14, SXTH 
+00877eb8	b.ne 0x00877e5c
+00877ebc	bfm w13,w14,#0x10,#0xf
+00877ec0	mov w14,w13
+00877ec4	b 0x00877e58
+00877ec8	ret

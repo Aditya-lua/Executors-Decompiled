@@ -1,0 +1,5 @@
+; OCSP_CERTID_free @ 00c32520
+00c32520	adrp x16,0xcb7000
+00c32524	ldr x17,[x16, #0x278]
+00c32528	add x16,x16,#0x278
+00c3252c	br x17

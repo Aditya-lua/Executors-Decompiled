@@ -1,0 +1,14 @@
+; _INIT_35 @ 00805f5c
+00805f5c	adrp x8,0xd1b000
+00805f60	ldrb w9,[x8, #0x68]
+00805f64	tbnz w9,#0x0,0x00805f8c
+00805f68	adrp x9,0xcb4000
+00805f6c	mov w11,#0x1
+00805f70	ldr x9,[x9, #0x9b0]
+00805f74	strb w11,[x8, #0x68]
+00805f78	ldr w10,[x9]
+00805f7c	add w8,w10,#0x1
+00805f80	adrp x10,0xd1b000
+00805f84	str w8,[x9]
+00805f88	str w8,[x10, #0x60]
+00805f8c	ret

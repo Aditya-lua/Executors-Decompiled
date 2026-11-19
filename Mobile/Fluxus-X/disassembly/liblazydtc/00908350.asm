@@ -1,0 +1,27 @@
+; FUN_00908350 @ 00908350
+00908350	sub sp,sp,#0x30
+00908354	stp x20,x19,[sp, #0x10]
+00908358	stp x29,x30,[sp, #0x20]
+0090835c	add x29,sp,#0x20
+00908360	mrs x20,tpidr_el0
+00908364	ldr x8,[x20, #0x28]
+00908368	mov x19,x4
+0090836c	add x4,sp,#0x4
+00908370	str x8,[sp, #0x8]
+00908374	str wzr,[sp, #0x4]
+00908378	ldr x8,[x0, #0x20]
+0090837c	add x8,x8,w1, SXTW  #0x3
+00908380	ldr x8,[x8, #0x228]
+00908384	blr x8
+00908388	bic x8,x0,x0, ASR #0x3f
+0090838c	str x8,[x19]
+00908390	ldr w0,[sp, #0x4]
+00908394	ldr x8,[x20, #0x28]
+00908398	ldr x9,[sp, #0x8]
+0090839c	cmp x8,x9
+009083a0	b.ne 0x009083b4
+009083a4	ldp x29,x30,[sp, #0x20]
+009083a8	ldp x20,x19,[sp, #0x10]
+009083ac	add sp,sp,#0x30
+009083b0	ret
+009083b4	bl 0x00c2fec0

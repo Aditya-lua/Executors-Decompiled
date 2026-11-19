@@ -1,0 +1,4 @@
+; d2i_ASN1_TYPE @ 009f7c44
+009f7c44	adrp x3,0xc58000
+009f7c48	add x3,x3,#0xec8
+009f7c4c	b 0x00c36150

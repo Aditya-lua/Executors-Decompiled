@@ -1,0 +1,15 @@
+; ENGINE_register_EC @ 00a5381c
+00a5381c	ldr x8,[x0, #0x28]
+00a53820	cbz x8,0x00a5384c
+00a53824	mov x2,x0
+00a53828	adrp x0,0xd21000
+00a5382c	adrp x1,0xa53000
+00a53830	adrp x3,0x766000
+00a53834	add x0,x0,#0x9f8
+00a53838	add x1,x1,#0x854
+00a5383c	add x3,x3,#0x8
+00a53840	mov w4,#0x1
+00a53844	mov w5,wzr
+00a53848	b 0x00c3bce0
+00a5384c	mov w0,#0x1
+00a53850	ret

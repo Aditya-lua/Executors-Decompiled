@@ -1,0 +1,4 @@
+; ACCESS_DESCRIPTION_new @ 00af5640
+00af5640	adrp x0,0xc7e000
+00af5644	add x0,x0,#0x668
+00af5648	b 0x00c372e0

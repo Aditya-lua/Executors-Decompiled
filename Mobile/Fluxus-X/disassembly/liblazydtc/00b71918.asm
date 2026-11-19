@@ -1,0 +1,5 @@
+; mbedtls_camellia_free @ 00b71918
+00b71918	cbz x0,0x00b71924
+00b7191c	mov w1,#0x114
+00b71920	b 0x00c42220
+00b71924	ret

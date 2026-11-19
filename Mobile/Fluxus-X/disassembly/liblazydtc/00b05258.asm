@@ -1,0 +1,51 @@
+; SXNET_get_id_asc @ 00b05258
+00b05258	stp x22,x21,[sp, #-0x30]!
+00b0525c	stp x20,x19,[sp, #0x10]
+00b05260	mov x20,x0
+00b05264	mov x0,xzr
+00b05268	stp x29,x30,[sp, #0x20]
+00b0526c	add x29,sp,#0x20
+00b05270	bl 0x00c396f0
+00b05274	cbz x0,0x00b052cc
+00b05278	mov x19,x0
+00b0527c	ldr x0,[x20, #0x8]
+00b05280	bl 0x00c325e0
+00b05284	cmp w0,#0x1
+00b05288	b.lt 0x00b052c4
+00b0528c	mov w21,wzr
+00b05290	ldr x0,[x20, #0x8]
+00b05294	mov w1,w21
+00b05298	bl 0x00c32610
+00b0529c	mov x22,x0
+00b052a0	ldr x0,[x0]
+00b052a4	mov x1,x19
+00b052a8	bl 0x00c37560
+00b052ac	cbz w0,0x00b05300
+00b052b0	ldr x0,[x20, #0x8]
+00b052b4	add w21,w21,#0x1
+00b052b8	bl 0x00c325e0
+00b052bc	cmp w21,w0
+00b052c0	b.lt 0x00b05290
+00b052c4	mov x20,xzr
+00b052c8	b 0x00b05304
+00b052cc	bl 0x00c342a0
+00b052d0	adrp x0,0x2a6000
+00b052d4	adrp x2,0x2c4000
+00b052d8	add x0,x0,#0x8d3
+00b052dc	add x2,x2,#0x365
+00b052e0	mov w1,#0xda
+00b052e4	bl 0x00c342b0
+00b052e8	mov w0,#0x22
+00b052ec	mov w1,#0x83
+00b052f0	mov x2,xzr
+00b052f4	bl 0x00c342c0
+00b052f8	mov x20,xzr
+00b052fc	b 0x00b0530c
+00b05300	ldr x20,[x22, #0x8]
+00b05304	mov x0,x19
+00b05308	bl 0x00c37c30
+00b0530c	mov x0,x20
+00b05310	ldp x29,x30,[sp, #0x20]
+00b05314	ldp x20,x19,[sp, #0x10]
+00b05318	ldp x22,x21,[sp], #0x30
+00b0531c	ret

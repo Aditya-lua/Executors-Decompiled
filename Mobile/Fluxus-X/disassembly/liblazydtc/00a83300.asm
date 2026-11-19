@@ -1,0 +1,8 @@
+; OPENSSL_die @ 00a83300
+00a83300	stp x29,x30,[sp, #-0x10]!
+00a83304	mov x3,x0
+00a83308	adrp x0,0x2a8000
+00a8330c	add x0,x0,#0x5e
+00a83310	mov x29,sp
+00a83314	bl 0x00a8326c
+00a83318	bl 0x00c30b40

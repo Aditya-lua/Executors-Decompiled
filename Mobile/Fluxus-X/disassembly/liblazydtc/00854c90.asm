@@ -1,0 +1,9 @@
+; FUN_00854c90 @ 00854c90
+00854c90	ldp x9,x8,[x0, #0x60]
+00854c94	cmp x9,x8
+00854c98	b.eq 0x00854ca8
+00854c9c	ldur w8,[x8, #-0x4]
+00854ca0	orr x0,x8,#0x100000000
+00854ca4	ret
+00854ca8	mov x0,xzr
+00854cac	ret

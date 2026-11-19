@@ -1,0 +1,37 @@
+; evp_get_cipherbyname_ex @ 00a693fc
+00a693fc	sub sp,sp,#0x30
+00a69400	stp x20,x19,[sp, #0x10]
+00a69404	mov x19,x1
+00a69408	mov x20,x0
+00a6940c	mov w0,#0x4
+00a69410	mov x1,xzr
+00a69414	stp x29,x30,[sp, #0x20]
+00a69418	add x29,sp,#0x20
+00a6941c	bl 0x00c35500
+00a69420	cbz w0,0x00a69478
+00a69424	mov w1,#0x2
+00a69428	mov x0,x19
+00a6942c	bl 0x00c3c230
+00a69430	str x0,[sp, #0x8]
+00a69434	cbnz x0,0x00a6947c
+00a69438	mov x0,x20
+00a6943c	bl 0x00c3b650
+00a69440	mov x1,x19
+00a69444	mov x20,x0
+00a69448	bl 0x00c3b620
+00a6944c	cbz w0,0x00a69478
+00a69450	adrp x2,0xa69000
+00a69454	mov w1,w0
+00a69458	add x2,x2,#0x48c
+00a6945c	add x3,sp,#0x8
+00a69460	mov x0,x20
+00a69464	bl 0x00c3b610
+00a69468	ldr x8,[sp, #0x8]
+00a6946c	cmp w0,#0x0
+00a69470	csel x0,xzr,x8,eq
+00a69474	b 0x00a6947c
+00a69478	mov x0,xzr
+00a6947c	ldp x29,x30,[sp, #0x20]
+00a69480	ldp x20,x19,[sp, #0x10]
+00a69484	add sp,sp,#0x30
+00a69488	ret

@@ -1,0 +1,55 @@
+; tls_construct_server_certificate @ 009e74b4
+009e74b4	str x21,[sp, #-0x30]!
+009e74b8	stp x20,x19,[sp, #0x10]
+009e74bc	stp x29,x30,[sp, #0x20]
+009e74c0	ldr x20,[x0, #0x388]
+009e74c4	mov x19,x0
+009e74c8	add x29,sp,#0x20
+009e74cc	cbz x20,0x009e7528
+009e74d0	ldr x8,[x19, #0x8]
+009e74d4	mov x21,x1
+009e74d8	ldr x9,[x8, #0xc0]
+009e74dc	ldrb w9,[x9, #0x60]
+009e74e0	tbnz w9,#0x3,0x009e750c
+009e74e4	ldr w8,[x8]
+009e74e8	cmp w8,#0x304
+009e74ec	b.lt 0x009e750c
+009e74f0	cmp w8,#0x10, LSL #12
+009e74f4	b.eq 0x009e750c
+009e74f8	mov w2,#0x1
+009e74fc	mov x0,x21
+009e7500	mov x1,xzr
+009e7504	bl 0x00c343a0
+009e7508	cbz w0,0x009e7570
+009e750c	mov x0,x19
+009e7510	mov x1,x21
+009e7514	mov x2,x20
+009e7518	bl 0x00c37170
+009e751c	cmp x0,#0x0
+009e7520	cset w0,ne
+009e7524	b 0x009e7560
+009e7528	bl 0x00c342a0
+009e752c	adrp x0,0x2bd000
+009e7530	adrp x2,0x2d7000
+009e7534	add x0,x0,#0x74c
+009e7538	add x2,x2,#0xb74
+009e753c	mov w1,#0xe10
+009e7540	bl 0x00c342b0
+009e7544	mov w2,#0x103
+009e7548	mov w1,#0x50
+009e754c	movk w2,#0xc, LSL #16
+009e7550	mov x0,x19
+009e7554	mov x3,xzr
+009e7558	bl 0x00c34410
+009e755c	mov w0,wzr
+009e7560	ldp x29,x30,[sp, #0x20]
+009e7564	ldp x20,x19,[sp, #0x10]
+009e7568	ldr x21,[sp], #0x30
+009e756c	ret
+009e7570	bl 0x00c342a0
+009e7574	adrp x0,0x2bd000
+009e7578	adrp x2,0x2d7000
+009e757c	add x0,x0,#0x74c
+009e7580	add x2,x2,#0xb74
+009e7584	mov w1,#0xe19
+009e7588	b 0x009e7540

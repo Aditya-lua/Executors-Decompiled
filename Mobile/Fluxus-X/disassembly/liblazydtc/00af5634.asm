@@ -1,0 +1,4 @@
+; i2d_ACCESS_DESCRIPTION @ 00af5634
+00af5634	adrp x2,0xc7e000
+00af5638	add x2,x2,#0x668
+00af563c	b 0x00c36170

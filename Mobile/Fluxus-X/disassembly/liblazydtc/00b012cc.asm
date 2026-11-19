@@ -1,0 +1,4 @@
+; PKEY_USAGE_PERIOD_new @ 00b012cc
+00b012cc	adrp x0,0xc80000
+00b012d0	add x0,x0,#0xbb0
+00b012d4	b 0x00c372e0

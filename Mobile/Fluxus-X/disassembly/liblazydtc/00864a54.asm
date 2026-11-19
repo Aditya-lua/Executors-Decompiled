@@ -1,0 +1,22 @@
+; FUN_00864a54 @ 00864a54
+00864a54	stp x29,x30,[sp, #-0x20]!
+00864a58	str x19,[sp, #0x10]
+00864a5c	mov x29,sp
+00864a60	mov x19,x0
+00864a64	ldr x0,[x0]
+00864a68	cbz x0,0x00864a98
+00864a6c	bl 0x00c301d0
+00864a70	ldr x0,[x19, #0x18]
+00864a74	str xzr,[x19]
+00864a78	bl 0x00c301d0
+00864a7c	mov x0,xzr
+00864a80	stp xzr,xzr,[x19, #0x8]
+00864a84	str xzr,[x19, #0x18]
+00864a88	bl 0x00c301d0
+00864a8c	mov w8,#0x40
+00864a90	str xzr,[x19, #0x20]
+00864a94	strb w8,[x19, #0x30]
+00864a98	ldr x0,[x19, #0x18]
+00864a9c	ldr x19,[sp, #0x10]
+00864aa0	ldp x29,x30,[sp], #0x20
+00864aa4	b 0x00c301d0

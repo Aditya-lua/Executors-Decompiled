@@ -1,0 +1,5 @@
+; X509_OBJECT_set1_X509_CRL @ 00c40510
+00c40510	adrp x16,0xcbe000
+00c40514	ldr x17,[x16, #0x270]
+00c40518	add x16,x16,#0x270
+00c4051c	br x17

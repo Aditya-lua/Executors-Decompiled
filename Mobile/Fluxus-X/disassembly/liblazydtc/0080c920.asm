@@ -1,0 +1,13 @@
+; FUN_0080c920 @ 0080c920
+0080c920	stp x29,x30,[sp, #-0x20]!
+0080c924	str x19,[sp, #0x10]
+0080c928	mov x29,sp
+0080c92c	mov x19,x0
+0080c930	bl 0x00c30040
+0080c934	adrp x8,0xcb4000
+0080c938	ldr x8,[x8, #0x9e0]
+0080c93c	add x8,x8,#0x10
+0080c940	str x8,[x19]
+0080c944	ldr x19,[sp, #0x10]
+0080c948	ldp x29,x30,[sp], #0x20
+0080c94c	ret

@@ -1,0 +1,18 @@
+; FUN_008e5014 @ 008e5014
+008e5014	str x30,[sp, #-0x20]!
+008e5018	stp x20,x19,[sp, #0x10]
+008e501c	mov x20,x0
+008e5020	mov w0,#0x4
+008e5024	mov x19,x1
+008e5028	bl 0x008e4ff0
+008e502c	str x0,[x20, #0x10]
+008e5030	ldr x8,[x19]
+008e5034	mov x1,x0
+008e5038	mov x0,x19
+008e503c	ldr x8,[x8, #0x28]
+008e5040	blr x8
+008e5044	str x19,[x20, #0x8]
+008e5048	ldp x20,x19,[sp, #0x10]
+008e504c	mov w0,#0x1
+008e5050	ldr x30,[sp], #0x20
+008e5054	ret

@@ -1,0 +1,4 @@
+; CERTIFICATEPOLICIES_new @ 00afb870
+00afb870	adrp x0,0xc7e000
+00afb874	add x0,x0,#0xf30
+00afb878	b 0x00c372e0

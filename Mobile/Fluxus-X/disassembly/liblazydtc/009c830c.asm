@@ -1,0 +1,2 @@
+; SSL_SRP_CTX_free @ 009c830c
+009c830c	b 0x009c825c

@@ -1,0 +1,64 @@
+/* Ghidra 12.2 pseudocode; native types and names may be inferred.
+ * Binary: liblazydtc.so; entry: 00844cfc
+ */
+
+void FUN_00844cfc(undefined8 *param_1,ulong param_2)
+
+{
+  ulong uVar1;
+  void *__s;
+  ulong uVar2;
+  void *pvVar3;
+  void *__src;
+  ulong uVar4;
+  size_t __n;
+  void *__dest;
+  
+  pvVar3 = (void *)param_1[1];
+  if ((ulong)(param_1[2] - (long)pvVar3 >> 4) < param_2) {
+    __src = (void *)*param_1;
+    __n = (long)pvVar3 - (long)__src;
+    uVar1 = ((long)__n >> 4) + param_2;
+    if (uVar1 >> 0x3c != 0) {
+      FUN_00844e28();
+LAB_00844e24:
+                    /* WARNING: Subroutine does not return */
+      FUN_007fe1b8();
+    }
+    uVar4 = param_1[2] - (long)__src;
+    uVar2 = (long)uVar4 >> 3;
+    if ((ulong)((long)uVar4 >> 3) <= uVar1) {
+      uVar2 = uVar1;
+    }
+    if (0x7fffffffffffffef < uVar4) {
+      uVar2 = 0xfffffffffffffff;
+    }
+    if (uVar2 == 0) {
+      pvVar3 = (void *)0x0;
+    }
+    else {
+      if (uVar2 >> 0x3c != 0) goto LAB_00844e24;
+      pvVar3 = operator_new(uVar2 << 4);
+    }
+    __s = (void *)((long)pvVar3 + __n);
+    memset(__s,0,param_2 * 0x10);
+    __dest = (void *)((long)__s + ((long)__n >> 4) * -0x10);
+    memcpy(__dest,__src,__n);
+    *param_1 = __dest;
+    param_1[1] = (void *)((long)__s + param_2 * 0x10);
+    param_1[2] = (void *)((long)pvVar3 + uVar2 * 0x10);
+    if (__src != (void *)0x0) {
+      operator_delete(__src,uVar4);
+      return;
+    }
+  }
+  else {
+    if (param_2 != 0) {
+      memset(pvVar3,0,param_2 * 0x10);
+      pvVar3 = (void *)((long)pvVar3 + param_2 * 0x10);
+    }
+    param_1[1] = pvVar3;
+  }
+  return;
+}
+

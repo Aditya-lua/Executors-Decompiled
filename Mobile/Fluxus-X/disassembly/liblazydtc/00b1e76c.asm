@@ -1,0 +1,4 @@
+; d2i_X509_REQ @ 00b1e76c
+00b1e76c	adrp x3,0xc82000
+00b1e770	add x3,x3,#0x7b0
+00b1e774	b 0x00c36150

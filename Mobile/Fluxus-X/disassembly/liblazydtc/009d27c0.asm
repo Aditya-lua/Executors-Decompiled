@@ -1,0 +1,162 @@
+; tls_construct_ctos_supported_groups @ 009d27c0
+009d27c0	sub sp,sp,#0x60
+009d27c4	stp x20,x19,[sp, #0x40]
+009d27c8	mov x20,x1
+009d27cc	add x1,sp,#0xc
+009d27d0	add x2,sp,#0x8
+009d27d4	mov x3,xzr
+009d27d8	stp x24,x23,[sp, #0x20]
+009d27dc	stp x22,x21,[sp, #0x30]
+009d27e0	stp x29,x30,[sp, #0x50]
+009d27e4	add x29,sp,#0x50
+009d27e8	mov x19,x0
+009d27ec	stp xzr,xzr,[sp, #0x10]
+009d27f0	bl 0x00c365c0
+009d27f4	cbz w0,0x009d2828
+009d27f8	mov w21,w0
+009d27fc	bl 0x00c342a0
+009d2800	adrp x0,0x2bf000
+009d2804	adrp x2,0x2ab000
+009d2808	add x0,x0,#0x967
+009d280c	add x2,x2,#0xd4e
+009d2810	mov w1,#0xc3
+009d2814	bl 0x00c342b0
+009d2818	mov w1,#0x50
+009d281c	mov x0,x19
+009d2820	mov w2,w21
+009d2824	b 0x009d2974
+009d2828	ldp w2,w1,[sp, #0x8]
+009d282c	mov x0,x19
+009d2830	bl 0x009d2668
+009d2834	cbnz w0,0x009d2858
+009d2838	ldr x8,[x19, #0x8]
+009d283c	mov w0,#0x2
+009d2840	ldr x8,[x8, #0xc0]
+009d2844	ldr w8,[x8, #0x60]
+009d2848	tbnz w8,#0x3,0x009d2980
+009d284c	ldr w8,[sp, #0x8]
+009d2850	cmp w8,#0x304
+009d2854	b.lt 0x009d2980
+009d2858	add x1,sp,#0x18
+009d285c	add x2,sp,#0x10
+009d2860	mov x0,x19
+009d2864	bl 0x00c36740
+009d2868	mov w1,#0xa
+009d286c	mov w2,#0x2
+009d2870	mov x0,x20
+009d2874	bl 0x00c343a0
+009d2878	cbz w0,0x009d2948
+009d287c	mov w1,#0x2
+009d2880	mov x0,x20
+009d2884	bl 0x00c343b0
+009d2888	cbz w0,0x009d2948
+009d288c	mov w1,#0x2
+009d2890	mov x0,x20
+009d2894	bl 0x00c343b0
+009d2898	cbz w0,0x009d2948
+009d289c	mov w1,#0x1
+009d28a0	mov x0,x20
+009d28a4	bl 0x00c36e80
+009d28a8	cbz w0,0x009d2948
+009d28ac	ldr x8,[sp, #0x10]
+009d28b0	cbz x8,0x009d2998
+009d28b4	mov x24,xzr
+009d28b8	mov x22,xzr
+009d28bc	mov x23,xzr
+009d28c0	ldr x8,[sp, #0x18]
+009d28c4	ldp w3,w2,[sp, #0x8]
+009d28c8	add x5,sp,#0x4
+009d28cc	mov x0,x19
+009d28d0	ldrh w21,[x8, x24, LSL #0x1]
+009d28d4	mov w4,wzr
+009d28d8	mov w1,w21
+009d28dc	bl 0x00c36800
+009d28e0	cbz w0,0x009d2934
+009d28e4	and x21,x21,#0xffff
+009d28e8	mov w2,#0x4
+009d28ec	movk w2,#0x2, LSL #16
+009d28f0	mov x0,x19
+009d28f4	mov w1,w21
+009d28f8	bl 0x00c367e0
+009d28fc	cbz w0,0x009d2934
+009d2900	mov w2,#0x2
+009d2904	mov x0,x20
+009d2908	mov x1,x21
+009d290c	bl 0x00c343a0
+009d2910	cbz w0,0x009d2a28
+009d2914	ldp w8,w9,[sp, #0x4]
+009d2918	add x22,x22,#0x1
+009d291c	cmp w8,#0x0
+009d2920	cset w8,ne
+009d2924	cmp w9,#0x304
+009d2928	cset w9,eq
+009d292c	and w8,w8,w9
+009d2930	add x23,x23,x8
+009d2934	ldr x8,[sp, #0x10]
+009d2938	add x24,x24,#0x1
+009d293c	cmp x24,x8
+009d2940	b.cc 0x009d28c0
+009d2944	b 0x009d29a0
+009d2948	bl 0x00c342a0
+009d294c	adrp x0,0x2bf000
+009d2950	adrp x2,0x2ab000
+009d2954	add x0,x0,#0x967
+009d2958	add x2,x2,#0xd4e
+009d295c	mov w1,#0xd9
+009d2960	bl 0x00c342b0
+009d2964	mov w2,#0x103
+009d2968	mov w1,#0x50
+009d296c	movk w2,#0xc, LSL #16
+009d2970	mov x0,x19
+009d2974	mov x3,xzr
+009d2978	bl 0x00c34410
+009d297c	mov w0,wzr
+009d2980	ldp x29,x30,[sp, #0x50]
+009d2984	ldp x20,x19,[sp, #0x40]
+009d2988	ldp x22,x21,[sp, #0x30]
+009d298c	ldp x24,x23,[sp, #0x20]
+009d2990	add sp,sp,#0x60
+009d2994	ret
+009d2998	mov x23,xzr
+009d299c	mov x22,xzr
+009d29a0	mov x0,x20
+009d29a4	bl 0x00c34350
+009d29a8	cbz w0,0x009d29e8
+009d29ac	mov x0,x20
+009d29b0	bl 0x00c34350
+009d29b4	cbz w0,0x009d29e8
+009d29b8	mov w0,#0x1
+009d29bc	cbnz x23,0x009d2980
+009d29c0	ldr w8,[sp, #0x8]
+009d29c4	cmp w8,#0x304
+009d29c8	b.ne 0x009d2980
+009d29cc	bl 0x00c342a0
+009d29d0	adrp x0,0x2bf000
+009d29d4	adrp x2,0x2ab000
+009d29d8	add x0,x0,#0x967
+009d29dc	add x2,x2,#0xd4e
+009d29e0	mov w1,#0xf6
+009d29e4	b 0x009d2a0c
+009d29e8	bl 0x00c342a0
+009d29ec	adrp x0,0x2bf000
+009d29f0	adrp x2,0x2ab000
+009d29f4	add x0,x0,#0x967
+009d29f8	add x2,x2,#0xd4e
+009d29fc	cbz x22,0x009d2a08
+009d2a00	mov w1,#0xf1
+009d2a04	b 0x009d2960
+009d2a08	mov w1,#0xee
+009d2a0c	bl 0x00c342b0
+009d2a10	adrp x3,0x2b9000
+009d2a14	add x3,x3,#0xa04
+009d2a18	mov w1,#0x50
+009d2a1c	mov w2,#0x127
+009d2a20	mov x0,x19
+009d2a24	b 0x009d2978
+009d2a28	bl 0x00c342a0
+009d2a2c	adrp x0,0x2bf000
+009d2a30	adrp x2,0x2ab000
+009d2a34	add x0,x0,#0x967
+009d2a38	add x2,x2,#0xd4e
+009d2a3c	mov w1,#0xe4
+009d2a40	b 0x009d2960

@@ -1,0 +1,22 @@
+; dtls1_clear_received_buffer @ 009a6724
+009a6724	stp x20,x19,[sp, #-0x20]!
+009a6728	stp x29,x30,[sp, #0x10]
+009a672c	ldr x8,[x0, #0x4b8]
+009a6730	mov x19,x0
+009a6734	add x29,sp,#0x10
+009a6738	ldr x0,[x8, #0x118]
+009a673c	bl 0x00c34460
+009a6740	cbz x0,0x009a676c
+009a6744	mov x20,x0
+009a6748	ldr x0,[x20, #0x8]
+009a674c	bl 0x00c343d0
+009a6750	mov x0,x20
+009a6754	bl 0x00c34430
+009a6758	ldr x8,[x19, #0x4b8]
+009a675c	ldr x0,[x8, #0x118]
+009a6760	bl 0x00c34460
+009a6764	mov x20,x0
+009a6768	cbnz x0,0x009a6748
+009a676c	ldp x29,x30,[sp, #0x10]
+009a6770	ldp x20,x19,[sp], #0x20
+009a6774	ret

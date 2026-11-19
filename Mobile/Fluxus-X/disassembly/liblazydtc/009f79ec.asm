@@ -1,0 +1,4 @@
+; i2d_ASN1_BIT_STRING @ 009f79ec
+009f79ec	adrp x2,0xc58000
+009f79f0	add x2,x2,#0xbf0
+009f79f4	b 0x00c36170

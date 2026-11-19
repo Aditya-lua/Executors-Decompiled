@@ -1,0 +1,4 @@
+; X509_CRL_INFO_free @ 00b1b164
+00b1b164	adrp x1,0xc82000
+00b1b168	add x1,x1,#0x90
+00b1b16c	b 0x00c36160

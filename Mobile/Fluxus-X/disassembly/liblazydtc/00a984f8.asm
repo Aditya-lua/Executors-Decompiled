@@ -1,0 +1,80 @@
+; FUN_00a984f8 @ 00a984f8
+00a984f8	sub sp,sp,#0x80
+00a984fc	stp x24,x23,[sp, #0x40]
+00a98500	stp x22,x21,[sp, #0x50]
+00a98504	stp x20,x19,[sp, #0x60]
+00a98508	mov x20,x3
+00a9850c	mov x23,x2
+00a98510	mov x21,x1
+00a98514	lsr x8,x3,#0x1e
+00a98518	mov x19,x0
+00a9851c	stp x28,x27,[sp, #0x20]
+00a98520	stp x26,x25,[sp, #0x30]
+00a98524	stp x29,x30,[sp, #0x70]
+00a98528	add x29,sp,#0x70
+00a9852c	cbz x8,0x00a985c8
+00a98530	orr x27,xzr,#-0x40000000
+00a98534	add x8,x20,x27
+00a98538	mov w22,#0x40000000
+00a9853c	and x28,x8,#-0x40000000
+00a98540	str x8,[sp]
+00a98544	add x8,x28,x22
+00a98548	str x8,[sp, #0x8]
+00a9854c	add x8,x23,x8
+00a98550	str x8,[sp, #0x10]
+00a98554	adrp x25,0xcb5000
+00a98558	ldr x25,[x25, #0x690]
+00a9855c	add x24,x19,#0x28
+00a98560	mov x26,x21
+00a98564	mov x0,x19
+00a98568	bl 0x00c3ceb0
+00a9856c	str w0,[sp, #0x1c]
+00a98570	mov x0,x19
+00a98574	bl 0x00c3cea0
+00a98578	mov x3,x0
+00a9857c	mov w2,#0x40000000
+00a98580	add x5,sp,#0x1c
+00a98584	mov x0,x23
+00a98588	mov x1,x26
+00a9858c	mov x4,x24
+00a98590	mov x6,x25
+00a98594	bl 0x00c3e450
+00a98598	ldr w1,[sp, #0x1c]
+00a9859c	mov x0,x19
+00a985a0	bl 0x00c3ced0
+00a985a4	add x20,x20,x27
+00a985a8	add x23,x23,x22
+00a985ac	lsr x8,x20,#0x1e
+00a985b0	add x26,x26,x22
+00a985b4	cbnz x8,0x00a98564
+00a985b8	ldr x8,[sp]
+00a985bc	sub x20,x8,x28
+00a985c0	ldp x8,x23,[sp, #0x8]
+00a985c4	add x21,x21,x8
+00a985c8	cbz x20,0x00a98610
+00a985cc	mov x0,x19
+00a985d0	bl 0x00c3ceb0
+00a985d4	str w0,[sp, #0x18]
+00a985d8	mov x0,x19
+00a985dc	bl 0x00c3cea0
+00a985e0	adrp x6,0xcb5000
+00a985e4	ldr x6,[x6, #0x690]
+00a985e8	mov x3,x0
+00a985ec	add x4,x19,#0x28
+00a985f0	add x5,sp,#0x18
+00a985f4	mov x0,x23
+00a985f8	mov x1,x21
+00a985fc	mov x2,x20
+00a98600	bl 0x00c3e450
+00a98604	ldr w1,[sp, #0x18]
+00a98608	mov x0,x19
+00a9860c	bl 0x00c3ced0
+00a98610	ldp x29,x30,[sp, #0x70]
+00a98614	ldp x20,x19,[sp, #0x60]
+00a98618	ldp x22,x21,[sp, #0x50]
+00a9861c	ldp x24,x23,[sp, #0x40]
+00a98620	ldp x26,x25,[sp, #0x30]
+00a98624	ldp x28,x27,[sp, #0x20]
+00a98628	mov w0,#0x1
+00a9862c	add sp,sp,#0x80
+00a98630	ret

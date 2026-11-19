@@ -1,0 +1,6 @@
+; FUN_008e51c4 @ 008e51c4
+008e51c4	adrp x8,0xc4e000
+008e51c8	add x8,x8,#0x460
+008e51cc	add x9,x8,#0x58
+008e51d0	stp x8,x9,[x0]
+008e51d4	b 0x008e5360

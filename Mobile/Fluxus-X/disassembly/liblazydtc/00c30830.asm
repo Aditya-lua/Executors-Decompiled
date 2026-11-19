@@ -1,0 +1,5 @@
+; <EXTERNAL>::acos @ 00c30830
+00c30830	adrp x16,0xcb6000
+00c30834	ldr x17,[x16, #0x400]
+00c30838	add x16,x16,#0x400
+00c3083c	br x17

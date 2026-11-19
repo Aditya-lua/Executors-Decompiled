@@ -1,0 +1,5 @@
+; BN_bin2bn @ 00c36970
+00c36970	adrp x16,0xcb9000
+00c36974	ldr x17,[x16, #0x4a0]
+00c36978	add x16,x16,#0x4a0
+00c3697c	br x17

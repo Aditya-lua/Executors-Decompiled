@@ -1,0 +1,35 @@
+; EVP_KEYMGMT_free @ 00a667bc
+00a667bc	stp x20,x19,[sp, #-0x20]!
+00a667c0	stp x29,x30,[sp, #0x10]
+00a667c4	add x29,sp,#0x10
+00a667c8	cbz x0,0x00a667f8
+00a667cc	mov x19,x0
+00a667d0	add x9,x0,#0x20
+00a667d4	ldxr w8,[x9]
+00a667d8	subs w10,w8,#0x1
+00a667dc	stxr w11,w10,[x9]
+00a667e0	cbnz w11,0x00a667d4
+00a667e4	b.ne 0x00a667f0
+00a667e8	dmb ISHLD
+00a667ec	b 0x00a66804
+00a667f0	cmp w8,#0x1
+00a667f4	b.le 0x00a66804
+00a667f8	ldp x29,x30,[sp, #0x10]
+00a667fc	ldp x20,x19,[sp], #0x20
+00a66800	ret
+00a66804	ldr x0,[x19, #0x8]
+00a66808	adrp x20,0x2b9000
+00a6680c	add x20,x20,#0xe45
+00a66810	orr w2,wzr,#0xfe
+00a66814	mov x1,x20
+00a66818	bl 0x00c32310
+00a6681c	ldr x0,[x19, #0x18]
+00a66820	bl 0x00c3b690
+00a66824	ldr x0,[x19, #0x28]
+00a66828	bl 0x00c34d40
+00a6682c	ldp x29,x30,[sp, #0x10]
+00a66830	mov w2,#0x101
+00a66834	mov x0,x19
+00a66838	mov x1,x20
+00a6683c	ldp x20,x19,[sp], #0x20
+00a66840	b 0x00c32310

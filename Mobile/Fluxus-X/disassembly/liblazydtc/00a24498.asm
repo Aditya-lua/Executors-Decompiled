@@ -1,0 +1,4 @@
+; i2d_ECPKPARAMETERS @ 00a24498
+00a24498	adrp x2,0xc5a000
+00a2449c	add x2,x2,#0xde8
+00a244a0	b 0x00c36170

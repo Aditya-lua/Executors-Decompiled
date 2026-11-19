@@ -1,0 +1,4 @@
+; d2i_X509_CRL_INFO @ 00b1b140
+00b1b140	adrp x3,0xc82000
+00b1b144	add x3,x3,#0x90
+00b1b148	b 0x00c36150

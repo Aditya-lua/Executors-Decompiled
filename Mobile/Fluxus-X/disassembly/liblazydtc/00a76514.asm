@@ -1,0 +1,92 @@
+; FUN_00a76514 @ 00a76514
+00a76514	sub sp,sp,#0xc0
+00a76518	str x23,[sp, #0x80]
+00a7651c	stp x22,x21,[sp, #0x90]
+00a76520	stp x20,x19,[sp, #0xa0]
+00a76524	stp x29,x30,[sp, #0xb0]
+00a76528	add x29,sp,#0xb0
+00a7652c	cbz x0,0x00a76584
+00a76530	ldr w8,[x0]
+00a76534	mov w22,w3
+00a76538	mov x19,x0
+00a7653c	tst w8,w3
+00a76540	b.eq 0x00a76584
+00a76544	mov x20,x1
+00a76548	cbz w2,0x00a765b8
+00a7654c	mov w21,w4
+00a76550	bl 0x00c35250
+00a76554	mov w1,#0xffffffff
+00a76558	mov x0,x19
+00a7655c	mov w2,w22
+00a76560	mov w3,w21
+00a76564	mov x4,xzr
+00a76568	mov x5,x20
+00a7656c	mov x6,xzr
+00a76570	bl 0x00a772a4
+00a76574	cmn w0,#0x2
+00a76578	b.ne 0x00a765cc
+00a7657c	bl 0x00c35240
+00a76580	b 0x00a765e4
+00a76584	bl 0x00c342a0
+00a76588	adrp x0,0x2c3000
+00a7658c	adrp x2,0x2c3000
+00a76590	add x0,x0,#0xa9f
+00a76594	add x2,x2,#0xab6
+00a76598	mov w1,#0x3bd
+00a7659c	bl 0x00c342b0
+00a765a0	orr w0,wzr,#0x6
+00a765a4	mov w1,#0x93
+00a765a8	mov x2,xzr
+00a765ac	bl 0x00c342c0
+00a765b0	orr w23,wzr,#0xfffffffe
+00a765b4	b 0x00a76664
+00a765b8	cbz x20,0x00a76604
+00a765bc	mov x0,x20
+00a765c0	bl 0x00c36230
+00a765c4	mov x1,x0
+00a765c8	b 0x00a7660c
+00a765cc	mov w23,w0
+00a765d0	bl 0x00c35ed0
+00a765d4	cmp w23,#0x1
+00a765d8	b.lt 0x00a76664
+00a765dc	ldr w8,[x19]
+00a765e0	cbz w8,0x00a76664
+00a765e4	mov w1,#0xffffffff
+00a765e8	mov x0,x19
+00a765ec	mov w2,w22
+00a765f0	mov w3,w21
+00a765f4	mov w4,wzr
+00a765f8	mov x5,x20
+00a765fc	bl 0x00a77554
+00a76600	b 0x00a76660
+00a76604	adrp x1,0x2ab000
+00a76608	add x1,x1,#0x32c
+00a7660c	adrp x0,0x29d000
+00a76610	add x0,x0,#0xe2e
+00a76614	add x8,sp,#0x8
+00a76618	mov x2,xzr
+00a7661c	bl 0x00c36280
+00a76620	ldr x8,[sp, #0x28]
+00a76624	ldur q0,[sp, #0x18]
+00a76628	ldur q1,[sp, #0x8]
+00a7662c	str x8,[sp, #0x50]
+00a76630	add x8,sp,#0x8
+00a76634	stp q1,q0,[sp, #0x30]
+00a76638	bl 0x00c34c40
+00a7663c	ldr x8,[sp, #0x28]
+00a76640	ldur q0,[sp, #0x18]
+00a76644	ldur q1,[sp, #0x8]
+00a76648	add x1,sp,#0x30
+00a7664c	mov x0,x19
+00a76650	str x8,[sp, #0x78]
+00a76654	stur q0,[sp, #0x68]
+00a76658	stur q1,[sp, #0x58]
+00a7665c	bl 0x00a75c0c
+00a76660	mov w23,w0
+00a76664	mov w0,w23
+00a76668	ldp x29,x30,[sp, #0xb0]
+00a7666c	ldp x20,x19,[sp, #0xa0]
+00a76670	ldp x22,x21,[sp, #0x90]
+00a76674	ldr x23,[sp, #0x80]
+00a76678	add sp,sp,#0xc0
+00a7667c	ret

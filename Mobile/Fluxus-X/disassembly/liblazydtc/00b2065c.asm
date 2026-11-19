@@ -1,0 +1,58 @@
+; ossl_prov_digest_load_from_params @ 00b2065c
+00b2065c	str x23,[sp, #-0x40]!
+00b20660	stp x22,x21,[sp, #0x10]
+00b20664	stp x20,x19,[sp, #0x20]
+00b20668	stp x29,x30,[sp, #0x30]
+00b2066c	add x29,sp,#0x30
+00b20670	cbz x1,0x00b20710
+00b20674	mov x21,x1
+00b20678	mov x20,x2
+00b2067c	mov x19,x0
+00b20680	add x2,x0,#0x10
+00b20684	add x1,sp,#0x8
+00b20688	mov x0,x21
+00b2068c	bl 0x00b2049c
+00b20690	cbz w0,0x00b20714
+00b20694	adrp x1,0x29d000
+00b20698	add x1,x1,#0xe2e
+00b2069c	mov x0,x21
+00b206a0	bl 0x00c36530
+00b206a4	cbz x0,0x00b20710
+00b206a8	ldr w8,[x0, #0x8]
+00b206ac	mov x21,x0
+00b206b0	mov w0,wzr
+00b206b4	cmp w8,#0x4
+00b206b8	b.ne 0x00b20714
+00b206bc	bl 0x00c35250
+00b206c0	ldr x0,[x19, #0x8]
+00b206c4	ldr x22,[x21, #0x10]
+00b206c8	ldr x23,[sp, #0x8]
+00b206cc	bl 0x00c35800
+00b206d0	mov x0,x20
+00b206d4	mov x1,x22
+00b206d8	mov x2,x23
+00b206dc	bl 0x00c357f0
+00b206e0	stp x0,x0,[x19]
+00b206e4	cbnz x0,0x00b2072c
+00b206e8	ldr x0,[x21, #0x10]
+00b206ec	bl 0x00c35310
+00b206f0	cbz x0,0x00b20700
+00b206f4	ldr w8,[x0, #0x18]
+00b206f8	cmp w8,#0x1
+00b206fc	b.ne 0x00b20728
+00b20700	ldr x8,[x19]
+00b20704	cbnz x8,0x00b2072c
+00b20708	bl 0x00c35ed0
+00b2070c	b 0x00b20730
+00b20710	mov w0,#0x1
+00b20714	ldp x29,x30,[sp, #0x30]
+00b20718	ldp x20,x19,[sp, #0x20]
+00b2071c	ldp x22,x21,[sp, #0x10]
+00b20720	ldr x23,[sp], #0x40
+00b20724	ret
+00b20728	str x0,[x19]
+00b2072c	bl 0x00c35240
+00b20730	ldr x8,[x19]
+00b20734	cmp x8,#0x0
+00b20738	cset w0,ne
+00b2073c	b 0x00b20714

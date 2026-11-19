@@ -1,0 +1,38 @@
+; SSL_set0_tmp_dh_pkey @ 009b97d4
+009b97d4	stp x20,x19,[sp, #-0x20]!
+009b97d8	mov x20,x0
+009b97dc	mov x0,x1
+009b97e0	stp x29,x30,[sp, #0x10]
+009b97e4	add x29,sp,#0x10
+009b97e8	mov x19,x1
+009b97ec	bl 0x00c324c0
+009b97f0	mov w1,#0x7
+009b97f4	mov w2,w0
+009b97f8	movk w1,#0x4, LSL #16
+009b97fc	mov x0,x20
+009b9800	mov w3,wzr
+009b9804	mov x4,x19
+009b9808	bl 0x00c34a30
+009b980c	cbz w0,0x009b982c
+009b9810	ldr x8,[x20, #0x898]
+009b9814	ldr x0,[x8, #0x8]
+009b9818	bl 0x00c32450
+009b981c	ldr x8,[x20, #0x898]
+009b9820	mov w0,#0x1
+009b9824	str x19,[x8, #0x8]
+009b9828	b 0x009b985c
+009b982c	bl 0x00c342a0
+009b9830	adrp x0,0x2c5000
+009b9834	adrp x2,0x2c1000
+009b9838	add x0,x0,#0x652
+009b983c	add x2,x2,#0x6b5
+009b9840	mov w1,#0x179b
+009b9844	bl 0x00c342b0
+009b9848	mov w0,#0x14
+009b984c	mov w1,#0x18a
+009b9850	mov x2,xzr
+009b9854	bl 0x00c342c0
+009b9858	mov w0,wzr
+009b985c	ldp x29,x30,[sp, #0x10]
+009b9860	ldp x20,x19,[sp], #0x20
+009b9864	ret

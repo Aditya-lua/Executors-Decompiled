@@ -1,0 +1,4 @@
+; AUTHORITY_INFO_ACCESS_it @ 00af5214
+00af5214	adrp x0,0xc7e000
+00af5218	add x0,x0,#0x6a0
+00af521c	ret

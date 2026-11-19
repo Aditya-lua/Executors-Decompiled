@@ -1,0 +1,4 @@
+; DIRECTORYSTRING_free @ 009f7d1c
+009f7d1c	adrp x1,0xc58000
+009f7d20	add x1,x1,#0xfa8
+009f7d24	b 0x00c36160

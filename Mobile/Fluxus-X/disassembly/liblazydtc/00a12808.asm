@@ -1,0 +1,35 @@
+; CTLOG_STORE_get0_log_by_id @ 00a12808
+00a12808	str x23,[sp, #-0x40]!
+00a1280c	stp x22,x21,[sp, #0x10]
+00a12810	stp x20,x19,[sp, #0x20]
+00a12814	stp x29,x30,[sp, #0x30]
+00a12818	mov x20,x0
+00a1281c	ldr x0,[x0, #0x10]
+00a12820	add x29,sp,#0x30
+00a12824	mov x19,x2
+00a12828	mov x21,x1
+00a1282c	bl 0x00c325e0
+00a12830	cmp w0,#0x1
+00a12834	b.lt 0x00a12874
+00a12838	mov w22,wzr
+00a1283c	ldr x0,[x20, #0x10]
+00a12840	mov w1,w22
+00a12844	bl 0x00c32610
+00a12848	mov x23,x0
+00a1284c	add x0,x0,#0x18
+00a12850	mov x1,x21
+00a12854	mov x2,x19
+00a12858	bl 0x00c300b0
+00a1285c	cbz w0,0x00a12878
+00a12860	ldr x0,[x20, #0x10]
+00a12864	add w22,w22,#0x1
+00a12868	bl 0x00c325e0
+00a1286c	cmp w22,w0
+00a12870	b.lt 0x00a1283c
+00a12874	mov x23,xzr
+00a12878	ldp x29,x30,[sp, #0x30]
+00a1287c	ldp x20,x19,[sp, #0x20]
+00a12880	ldp x22,x21,[sp, #0x10]
+00a12884	mov x0,x23
+00a12888	ldr x23,[sp], #0x40
+00a1288c	ret

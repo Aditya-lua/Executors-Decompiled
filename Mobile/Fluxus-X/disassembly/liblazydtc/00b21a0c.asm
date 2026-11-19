@@ -1,0 +1,87 @@
+; ossl_digest_get_approved_nid @ 00b21a0c
+00b21a0c	str x19,[sp, #-0x20]!
+00b21a10	stp x29,x30,[sp, #0x10]
+00b21a14	add x29,sp,#0x10
+00b21a18	cbz x0,0x00b21b58
+00b21a1c	adrp x1,0x2d1000
+00b21a20	add x1,x1,#0x42e
+00b21a24	mov x19,x0
+00b21a28	bl 0x00c34610
+00b21a2c	mov x8,xzr
+00b21a30	cbnz w0,0x00b21b48
+00b21a34	adrp x1,0x2a0000
+00b21a38	add x1,x1,#0xbe3
+00b21a3c	mov x0,x19
+00b21a40	bl 0x00c34610
+00b21a44	cbz w0,0x00b21a50
+00b21a48	mov w8,#0x1
+00b21a4c	b 0x00b21b48
+00b21a50	adrp x1,0x2a9000
+00b21a54	add x1,x1,#0xb18
+00b21a58	mov x0,x19
+00b21a5c	bl 0x00c34610
+00b21a60	cbz w0,0x00b21a6c
+00b21a64	mov w8,#0x2
+00b21a68	b 0x00b21b48
+00b21a6c	adrp x1,0x2b2000
+00b21a70	add x1,x1,#0xb64
+00b21a74	mov x0,x19
+00b21a78	bl 0x00c34610
+00b21a7c	cbz w0,0x00b21a88
+00b21a80	orr w8,wzr,#0x3
+00b21a84	b 0x00b21b48
+00b21a88	adrp x1,0x2b6000
+00b21a8c	add x1,x1,#0x439
+00b21a90	mov x0,x19
+00b21a94	bl 0x00c34610
+00b21a98	cbz w0,0x00b21aa4
+00b21a9c	mov w8,#0x4
+00b21aa0	b 0x00b21b48
+00b21aa4	adrp x1,0x2b0000
+00b21aa8	add x1,x1,#0x88f
+00b21aac	mov x0,x19
+00b21ab0	bl 0x00c34610
+00b21ab4	cbz w0,0x00b21ac0
+00b21ab8	mov w8,#0x5
+00b21abc	b 0x00b21b48
+00b21ac0	adrp x1,0x29e000
+00b21ac4	add x1,x1,#0xa05
+00b21ac8	mov x0,x19
+00b21acc	bl 0x00c34610
+00b21ad0	cbz w0,0x00b21adc
+00b21ad4	orr w8,wzr,#0x6
+00b21ad8	b 0x00b21b48
+00b21adc	adrp x1,0x2ca000
+00b21ae0	add x1,x1,#0xfa
+00b21ae4	mov x0,x19
+00b21ae8	bl 0x00c34610
+00b21aec	cbz w0,0x00b21af8
+00b21af0	orr w8,wzr,#0x7
+00b21af4	b 0x00b21b48
+00b21af8	adrp x1,0x2ca000
+00b21afc	add x1,x1,#0x103
+00b21b00	mov x0,x19
+00b21b04	bl 0x00c34610
+00b21b08	cbz w0,0x00b21b14
+00b21b0c	mov w8,#0x8
+00b21b10	b 0x00b21b48
+00b21b14	adrp x1,0x29e000
+00b21b18	add x1,x1,#0x75e
+00b21b1c	mov x0,x19
+00b21b20	bl 0x00c34610
+00b21b24	cbz w0,0x00b21b30
+00b21b28	mov w8,#0x9
+00b21b2c	b 0x00b21b48
+00b21b30	adrp x1,0x2a4000
+00b21b34	add x1,x1,#0x774
+00b21b38	mov x0,x19
+00b21b3c	bl 0x00c34610
+00b21b40	cbz w0,0x00b21b58
+00b21b44	mov w8,#0xa
+00b21b48	adrp x9,0xc8c000
+00b21b4c	lsl x8,x8,#0x4
+00b21b50	add x9,x9,#0xa28
+00b21b54	ldr w0,[x9, x8#0x0]
+00b21b58	ldp x29,x30,[sp, #0x10]
+00b21b5c	ldr x19,[sp], #0x20
+00b21b60	ret

@@ -1,0 +1,14 @@
+; BN_mod_add_quick @ 00a09024
+00a09024	stp x20,x19,[sp, #-0x20]!
+00a09028	stp x29,x30,[sp, #0x10]
+00a0902c	add x29,sp,#0x10
+00a09030	mov x19,x0
+00a09034	bl 0x00a08e48
+00a09038	mov w20,w0
+00a0903c	cbz w0,0x00a09048
+00a09040	mov x0,x19
+00a09044	bl 0x00c38e40
+00a09048	ldp x29,x30,[sp, #0x10]
+00a0904c	mov w0,w20
+00a09050	ldp x20,x19,[sp], #0x20
+00a09054	ret

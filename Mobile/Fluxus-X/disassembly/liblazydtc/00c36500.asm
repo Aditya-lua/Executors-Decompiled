@@ -1,0 +1,5 @@
+; OSSL_PARAM_free @ 00c36500
+00c36500	adrp x16,0xcb9000
+00c36504	ldr x17,[x16, #0x268]
+00c36508	add x16,x16,#0x268
+00c3650c	br x17

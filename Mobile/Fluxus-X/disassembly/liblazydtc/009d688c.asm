@@ -1,0 +1,57 @@
+; tls_parse_ctos_renegotiate @ 009d688c
+009d688c	str x19,[sp, #-0x20]!
+009d6890	stp x29,x30,[sp, #0x10]
+009d6894	ldr x8,[x1, #0x8]
+009d6898	mov x19,x0
+009d689c	add x29,sp,#0x10
+009d68a0	cbz x8,0x009d68bc
+009d68a4	ldr x0,[x1]
+009d68a8	sub x9,x8,#0x1
+009d68ac	ldrb w2,[x0], #0x1
+009d68b0	subs x8,x9,x2
+009d68b4	stp x0,x9,[x1]
+009d68b8	b.cs 0x009d68e4
+009d68bc	bl 0x00c342a0
+009d68c0	adrp x0,0x2d7000
+009d68c4	adrp x2,0x2cb000
+009d68c8	add x0,x0,#0xae0
+009d68cc	add x2,x2,#0x625
+009d68d0	mov w1,#0x32
+009d68d4	bl 0x00c342b0
+009d68d8	mov w1,#0x32
+009d68dc	mov w2,#0x150
+009d68e0	b 0x009d6944
+009d68e4	add x9,x0,x2
+009d68e8	stp x9,x8,[x1]
+009d68ec	ldr x8,[x19, #0x430]
+009d68f0	cmp x8,x2
+009d68f4	b.ne 0x009d6920
+009d68f8	add x1,x19,#0x3f0
+009d68fc	bl 0x00c300b0
+009d6900	cbz w0,0x009d6960
+009d6904	bl 0x00c342a0
+009d6908	adrp x0,0x2d7000
+009d690c	adrp x2,0x2cb000
+009d6910	add x0,x0,#0xae0
+009d6914	add x2,x2,#0x625
+009d6918	orr w1,wzr,#0x3e
+009d691c	b 0x009d6938
+009d6920	bl 0x00c342a0
+009d6924	adrp x0,0x2d7000
+009d6928	adrp x2,0x2cb000
+009d692c	add x0,x0,#0xae0
+009d6930	add x2,x2,#0x625
+009d6934	orr w1,wzr,#0x38
+009d6938	bl 0x00c342b0
+009d693c	mov w1,#0x28
+009d6940	mov w2,#0x151
+009d6944	mov x0,x19
+009d6948	mov x3,xzr
+009d694c	bl 0x00c34410
+009d6950	mov w0,wzr
+009d6954	ldp x29,x30,[sp, #0x10]
+009d6958	ldr x19,[sp], #0x20
+009d695c	ret
+009d6960	mov w0,#0x1
+009d6964	str w0,[x19, #0x480]
+009d6968	b 0x009d6954

@@ -1,0 +1,5 @@
+; <EXTERNAL>::frexp @ 00c30910
+00c30910	adrp x16,0xcb6000
+00c30914	ldr x17,[x16, #0x470]
+00c30918	add x16,x16,#0x470
+00c3091c	br x17

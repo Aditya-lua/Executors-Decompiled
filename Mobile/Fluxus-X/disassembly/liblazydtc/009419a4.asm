@@ -1,0 +1,24 @@
+; FUN_009419a4 @ 009419a4
+009419a4	str x21,[sp, #-0x30]!
+009419a8	stp x20,x19,[sp, #0x10]
+009419ac	stp x29,x30,[sp, #0x20]
+009419b0	add x29,sp,#0x20
+009419b4	adrp x8,0xcc4000
+009419b8	add x8,x8,#0x680
+009419bc	mov x21,x1
+009419c0	mov x19,x0
+009419c4	ldr x8,[x8]
+009419c8	blr x8
+009419cc	mov x20,x0
+009419d0	cbz x21,0x009419ec
+009419d4	cbnz x20,0x009419ec
+009419d8	adrp x8,0xcc4000
+009419dc	add x8,x8,#0x678
+009419e0	mov x0,x19
+009419e4	ldr x8,[x8]
+009419e8	blr x8
+009419ec	mov x0,x20
+009419f0	ldp x29,x30,[sp, #0x20]
+009419f4	ldp x20,x19,[sp, #0x10]
+009419f8	ldr x21,[sp], #0x30
+009419fc	ret

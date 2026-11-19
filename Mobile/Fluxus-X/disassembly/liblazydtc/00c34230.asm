@@ -1,0 +1,5 @@
+; BIO_test_flags @ 00c34230
+00c34230	adrp x16,0xcb8000
+00c34234	ldr x17,[x16, #0x100]
+00c34238	add x16,x16,#0x100
+00c3423c	br x17

@@ -1,0 +1,125 @@
+; std::__ndk1::vector<std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>,std::__ndk1::allocator<std::__ndk1::basic_string<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>>>::__emplace_back_slow_path<char_const(&)[1]> @ 00901078
+00901078	stp x28,x27,[sp, #-0x60]!
+0090107c	stp x26,x25,[sp, #0x10]
+00901080	stp x24,x23,[sp, #0x20]
+00901084	stp x22,x21,[sp, #0x30]
+00901088	stp x20,x19,[sp, #0x40]
+0090108c	stp x29,x30,[sp, #0x50]
+00901090	add x29,sp,#0x50
+00901094	ldp x9,x8,[x0]
+00901098	orr x10,xzr,#-0x5555555555555556
+0090109c	movk x10,#0xaaab
+009010a0	orr x26,xzr,#-0x5555555555555556
+009010a4	sub x8,x8,x9
+009010a8	asr x8,x8,#0x3
+009010ac	mul x28,x8,x10
+009010b0	movk x26,#0xaaa, LSL #48
+009010b4	add x8,x28,#0x1
+009010b8	mov x19,x0
+009010bc	cmp x8,x26
+009010c0	mov x21,x1
+009010c4	b.hi 0x00901258
+009010c8	ldr x11,[x19, #0x10]
+009010cc	sub x9,x11,x9
+009010d0	asr x9,x9,#0x3
+009010d4	mul x9,x9,x10
+009010d8	orr x10,xzr,#0x5555555555555555
+009010dc	movk x10,#0x5554
+009010e0	movk x10,#0x555, LSL #48
+009010e4	cmp x9,x10
+009010e8	b.hi 0x009010fc
+009010ec	lsl x9,x9,#0x1
+009010f0	cmp x9,x8
+009010f4	csel x26,x8,x9,cc
+009010f8	cbz x26,0x0090124c
+009010fc	add x8,x26,x26, LSL #0x1
+00901100	lsl x0,x8,#0x3
+00901104	bl 0x00c2fed0
+00901108	mov x22,x0
+0090110c	mov x27,x0
+00901110	orr w25,wzr,#0x18
+00901114	madd x20,x28,x25,x27
+00901118	mov x0,x21
+0090111c	stp xzr,xzr,[x20]
+00901120	str xzr,[x20, #0x10]
+00901124	bl 0x00c2ff50
+00901128	mov x23,x0
+0090112c	cmn x0,#0x10
+00901130	b.cs 0x00901260
+00901134	cmp x23,#0x17
+00901138	b.cs 0x00901150
+0090113c	lsl w8,w23,#0x1
+00901140	mov x24,x20
+00901144	strb w8,[x24], #0x1
+00901148	cbnz x23,0x0090117c
+0090114c	b 0x0090118c
+00901150	add x8,x23,#0x10
+00901154	and x25,x8,#-0x10
+00901158	mov x0,x25
+0090115c	bl 0x00c2fed0
+00901160	orr w8,wzr,#0x18
+00901164	orr x9,x25,#0x1
+00901168	madd x8,x28,x8,x27
+0090116c	mov x24,x0
+00901170	stp x23,x0,[x8, #0x8]
+00901174	str x9,[x20]
+00901178	orr w25,wzr,#0x18
+0090117c	mov x0,x24
+00901180	mov x1,x21
+00901184	mov x2,x23
+00901188	bl 0x00c2ffd0
+0090118c	strb wzr,[x24, x23]
+00901190	ldp x8,x11,[x19]
+00901194	nop
+00901198	madd x9,x26,x25,x27
+0090119c	add x10,x20,#0x18
+009011a0	cmp x11,x8
+009011a4	b.eq 0x009011d8
+009011a8	ldur x12,[x11, #-0x8]
+009011ac	stur x12,[x20, #-0x8]
+009011b0	ldur q0,[x11, #-0x18]
+009011b4	stur q0,[x20, #-0x18]
+009011b8	stp xzr,xzr,[x11, #-0x18]
+009011bc	stur xzr,[x11, #-0x8]
+009011c0	sub x11,x11,#0x18
+009011c4	cmp x8,x11
+009011c8	sub x20,x20,#0x18
+009011cc	b.ne 0x009011a8
+009011d0	ldp x21,x8,[x19]
+009011d4	b 0x009011dc
+009011d8	mov x21,x8
+009011dc	cmp x8,x21
+009011e0	stp x20,x10,[x19]
+009011e4	str x9,[x19, #0x10]
+009011e8	b.eq 0x0090120c
+009011ec	mov x19,x8
+009011f0	ldrb w9,[x19, #-0x18]!
+009011f4	tbz w9,#0x0,0x00901200
+009011f8	ldur x0,[x8, #-0x8]
+009011fc	bl 0x00c301d0
+00901200	cmp x21,x19
+00901204	mov x8,x19
+00901208	b.ne 0x009011f0
+0090120c	cbz x21,0x00901230
+00901210	mov x0,x21
+00901214	ldp x29,x30,[sp, #0x50]
+00901218	ldp x20,x19,[sp, #0x40]
+0090121c	ldp x22,x21,[sp, #0x30]
+00901220	ldp x24,x23,[sp, #0x20]
+00901224	ldp x26,x25,[sp, #0x10]
+00901228	ldp x28,x27,[sp], #0x60
+0090122c	b 0x00c301d0
+00901230	ldp x29,x30,[sp, #0x50]
+00901234	ldp x20,x19,[sp, #0x40]
+00901238	ldp x22,x21,[sp, #0x30]
+0090123c	ldp x24,x23,[sp, #0x20]
+00901240	ldp x26,x25,[sp, #0x10]
+00901244	ldp x28,x27,[sp], #0x60
+00901248	ret
+0090124c	mov x22,xzr
+00901250	mov x27,xzr
+00901254	b 0x00901110
+00901258	mov x0,x19
+0090125c	bl 0x00c30bd0
+00901260	mov x0,x20
+00901264	bl 0x00c30ce0

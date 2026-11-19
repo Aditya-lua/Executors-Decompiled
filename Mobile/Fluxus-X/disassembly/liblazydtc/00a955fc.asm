@@ -1,0 +1,91 @@
+; FUN_00a955fc @ 00a955fc
+00a955fc	sub sp,sp,#0x90
+00a95600	stp x28,x27,[sp, #0x30]
+00a95604	stp x24,x23,[sp, #0x50]
+00a95608	stp x22,x21,[sp, #0x60]
+00a9560c	stp x20,x19,[sp, #0x70]
+00a95610	mov x19,x3
+00a95614	mov x23,x2
+00a95618	mov x27,x1
+00a9561c	lsr x8,x3,#0x1e
+00a95620	mov x21,x0
+00a95624	stp x26,x25,[sp, #0x40]
+00a95628	stp x29,x30,[sp, #0x80]
+00a9562c	add x29,sp,#0x80
+00a95630	cbz x8,0x00a956e4
+00a95634	orr x22,xzr,#-0x40000000
+00a95638	add x8,x19,x22
+00a9563c	str x8,[sp, #0x18]
+00a95640	and x8,x8,#-0x40000000
+00a95644	mov w20,#0x40000000
+00a95648	str x8,[sp, #0x10]
+00a9564c	add x8,x8,x20
+00a95650	add x24,x21,#0x28
+00a95654	str x8,[sp, #0x8]
+00a95658	add x8,x23,x8
+00a9565c	mov x25,x27
+00a95660	stp x8,x27,[sp, #0x20]
+00a95664	mov x0,x21
+00a95668	bl 0x00c3cea0
+00a9566c	mov x26,x0
+00a95670	mov x0,x21
+00a95674	bl 0x00c3cea0
+00a95678	add x27,x0,#0x80
+00a9567c	mov x0,x21
+00a95680	bl 0x00c3cea0
+00a95684	add x28,x0,#0x88
+00a95688	mov x0,x21
+00a9568c	bl 0x00c3cec0
+00a95690	mov w7,w0
+00a95694	mov w2,#0x40000000
+00a95698	mov x0,x23
+00a9569c	mov x1,x25
+00a956a0	mov x3,x26
+00a956a4	mov x4,x24
+00a956a8	mov x5,x27
+00a956ac	mov x6,x28
+00a956b0	bl 0x00c39a60
+00a956b4	add x19,x19,x22
+00a956b8	add x23,x23,x20
+00a956bc	lsr x8,x19,#0x1e
+00a956c0	add x25,x25,x20
+00a956c4	cbnz x8,0x00a95664
+00a956c8	ldp x9,x8,[sp, #0x10]
+00a956cc	ldp x20,x27,[sp, #0x20]
+00a956d0	sub x19,x8,x9
+00a956d4	ldr x8,[sp, #0x8]
+00a956d8	add x27,x27,x8
+00a956dc	cbnz x19,0x00a956ec
+00a956e0	b 0x00a95740
+00a956e4	mov x20,x23
+00a956e8	cbz x19,0x00a95740
+00a956ec	mov x0,x21
+00a956f0	bl 0x00c3cea0
+00a956f4	mov x23,x0
+00a956f8	mov x0,x21
+00a956fc	add x24,x21,#0x28
+00a95700	bl 0x00c3cea0
+00a95704	add x25,x0,#0x80
+00a95708	mov x0,x21
+00a9570c	bl 0x00c3cea0
+00a95710	add x26,x0,#0x88
+00a95714	mov x0,x21
+00a95718	bl 0x00c3cec0
+00a9571c	mov w7,w0
+00a95720	mov x0,x20
+00a95724	mov x1,x27
+00a95728	mov x2,x19
+00a9572c	mov x3,x23
+00a95730	mov x4,x24
+00a95734	mov x5,x25
+00a95738	mov x6,x26
+00a9573c	bl 0x00c39a60
+00a95740	ldp x29,x30,[sp, #0x80]
+00a95744	ldp x20,x19,[sp, #0x70]
+00a95748	ldp x22,x21,[sp, #0x60]
+00a9574c	ldp x24,x23,[sp, #0x50]
+00a95750	ldp x26,x25,[sp, #0x40]
+00a95754	ldp x28,x27,[sp, #0x30]
+00a95758	mov w0,#0x1
+00a9575c	add sp,sp,#0x90
+00a95760	ret

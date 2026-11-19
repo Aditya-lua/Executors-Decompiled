@@ -1,0 +1,32 @@
+; CMAC_CTX_free @ 00b53990
+00b53990	cbz x0,0x00b53a08
+00b53994	str x19,[sp, #-0x20]!
+00b53998	stp x29,x30,[sp, #0x10]
+00b5399c	mov x19,x0
+00b539a0	ldr x0,[x0]
+00b539a4	add x29,sp,#0x10
+00b539a8	bl 0x00c34ba0
+00b539ac	add x0,x19,#0x48
+00b539b0	mov w1,#0x20
+00b539b4	bl 0x00c34750
+00b539b8	add x0,x19,#0x8
+00b539bc	mov w1,#0x20
+00b539c0	bl 0x00c34750
+00b539c4	add x0,x19,#0x28
+00b539c8	mov w1,#0x20
+00b539cc	bl 0x00c34750
+00b539d0	add x0,x19,#0x68
+00b539d4	mov w1,#0x20
+00b539d8	bl 0x00c34750
+00b539dc	ldr x0,[x19]
+00b539e0	mov w8,#0xffffffff
+00b539e4	str w8,[x19, #0x88]
+00b539e8	bl 0x00c342d0
+00b539ec	ldp x29,x30,[sp, #0x10]
+00b539f0	adrp x1,0x2c6000
+00b539f4	add x1,x1,#0x767
+00b539f8	mov w2,#0x5a
+00b539fc	mov x0,x19
+00b53a00	ldr x19,[sp], #0x20
+00b53a04	b 0x00c32310
+00b53a08	ret

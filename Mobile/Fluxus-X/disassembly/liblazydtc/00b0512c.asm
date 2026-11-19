@@ -1,0 +1,45 @@
+; SXNET_add_id_ulong @ 00b0512c
+00b0512c	str x23,[sp, #-0x40]!
+00b05130	stp x22,x21,[sp, #0x10]
+00b05134	stp x20,x19,[sp, #0x20]
+00b05138	stp x29,x30,[sp, #0x30]
+00b0513c	add x29,sp,#0x30
+00b05140	mov w20,w3
+00b05144	mov x21,x2
+00b05148	mov x23,x1
+00b0514c	mov x22,x0
+00b05150	bl 0x00c37f30
+00b05154	mov x19,x0
+00b05158	cbz x0,0x00b0518c
+00b0515c	mov x0,x19
+00b05160	mov x1,x23
+00b05164	bl 0x00c375b0
+00b05168	cbz w0,0x00b0518c
+00b0516c	mov x0,x22
+00b05170	mov x1,x19
+00b05174	mov x2,x21
+00b05178	mov w3,w20
+00b0517c	bl 0x00b04ee8
+00b05180	cbz w0,0x00b051bc
+00b05184	mov w0,#0x1
+00b05188	b 0x00b051c8
+00b0518c	bl 0x00c342a0
+00b05190	adrp x0,0x2a6000
+00b05194	adrp x2,0x2b6000
+00b05198	add x0,x0,#0x8d3
+00b0519c	add x2,x2,#0x59b
+00b051a0	mov w1,#0x90
+00b051a4	bl 0x00c342b0
+00b051a8	mov w1,#0x100
+00b051ac	mov w0,#0x22
+00b051b0	movk w1,#0xc, LSL #16
+00b051b4	mov x2,xzr
+00b051b8	bl 0x00c342c0
+00b051bc	mov x0,x19
+00b051c0	bl 0x00c37c30
+00b051c4	mov w0,wzr
+00b051c8	ldp x29,x30,[sp, #0x30]
+00b051cc	ldp x20,x19,[sp, #0x20]
+00b051d0	ldp x22,x21,[sp, #0x10]
+00b051d4	ldr x23,[sp], #0x40
+00b051d8	ret

@@ -1,0 +1,5 @@
+; d2i_OCSP_RESPONSE @ 00c32d60
+00c32d60	adrp x16,0xcb7000
+00c32d64	ldr x17,[x16, #0x698]
+00c32d68	add x16,x16,#0x698
+00c32d6c	br x17

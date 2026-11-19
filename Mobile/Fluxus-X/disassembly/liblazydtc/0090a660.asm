@@ -1,0 +1,50 @@
+; FUN_0090a660 @ 0090a660
+0090a660	str x21,[sp, #-0x30]!
+0090a664	stp x20,x19,[sp, #0x10]
+0090a668	stp x29,x30,[sp, #0x20]
+0090a66c	add x29,sp,#0x20
+0090a670	ldr x21,[x0, #0x10]
+0090a674	mov x19,x1
+0090a678	ldr x20,[x21, #0x20]
+0090a67c	cbz x20,0x0090a6a8
+0090a680	mov x0,x20
+0090a684	ldr x8,[x0, #0x28]!
+0090a688	cbz x8,0x0090a694
+0090a68c	mov x1,x19
+0090a690	bl 0x00906ef0
+0090a694	adrp x8,0xcc4000
+0090a698	add x8,x8,#0x678
+0090a69c	mov x0,x20
+0090a6a0	ldr x8,[x8]
+0090a6a4	blr x8
+0090a6a8	ldr x20,[x21, #0x28]
+0090a6ac	str xzr,[x21, #0x20]
+0090a6b0	cbz x20,0x0090a6dc
+0090a6b4	mov x0,x20
+0090a6b8	ldr x8,[x0, #0x28]!
+0090a6bc	cbz x8,0x0090a6c8
+0090a6c0	mov x1,x19
+0090a6c4	bl 0x00906ef0
+0090a6c8	adrp x8,0xcc4000
+0090a6cc	add x8,x8,#0x678
+0090a6d0	mov x0,x20
+0090a6d4	ldr x8,[x8]
+0090a6d8	blr x8
+0090a6dc	ldr x20,[x21, #0x30]
+0090a6e0	str xzr,[x21, #0x28]
+0090a6e4	cbz x20,0x0090a710
+0090a6e8	mov x0,x20
+0090a6ec	ldr x8,[x0, #0x28]!
+0090a6f0	cbz x8,0x0090a6fc
+0090a6f4	mov x1,x19
+0090a6f8	bl 0x00906ef0
+0090a6fc	adrp x8,0xcc4000
+0090a700	add x8,x8,#0x678
+0090a704	mov x0,x20
+0090a708	ldr x8,[x8]
+0090a70c	blr x8
+0090a710	str xzr,[x21, #0x30]
+0090a714	ldp x29,x30,[sp, #0x20]
+0090a718	ldp x20,x19,[sp, #0x10]
+0090a71c	ldr x21,[sp], #0x30
+0090a720	ret

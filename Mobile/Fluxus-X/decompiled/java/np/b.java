@@ -1,0 +1,76 @@
+package np;
+
+import com.withpersona.sdk2.inquiry.network.dto.GpsCollectionRequirement;
+import com.withpersona.sdk2.inquiry.network.dto.GpsPrecisionRequirement;
+import org.jetbrains.annotations.NotNull;
+import p001kotlin.Metadata;
+import p001kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a\u0013\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0000¢\u0006\u0004\b\u0002\u0010\u0003\u001a\u0013\u0010\u0006\u001a\u00020\u0005*\u00020\u0004H\u0000¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lcom/withpersona/sdk2/inquiry/network/dto/GpsCollectionRequirement;", "Lhr/a;", "a", "(Lcom/withpersona/sdk2/inquiry/network/dto/GpsCollectionRequirement;)Lhr/a;", "Lcom/withpersona/sdk2/inquiry/network/dto/GpsPrecisionRequirement;", "Lhr/e;", "b", "(Lcom/withpersona/sdk2/inquiry/network/dto/GpsPrecisionRequirement;)Lhr/e;", "inquiry-internal_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class b {
+
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final /* synthetic */ class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f26279a;
+        public static final /* synthetic */ int[] b;
+
+        static {
+            int[] iArr = new int[GpsCollectionRequirement.values().length];
+            try {
+                iArr[GpsCollectionRequirement.REQUIRE.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                iArr[GpsCollectionRequirement.OPTIONAL.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                iArr[GpsCollectionRequirement.NONE.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            f26279a = iArr;
+            int[] iArr2 = new int[GpsPrecisionRequirement.values().length];
+            try {
+                iArr2[GpsPrecisionRequirement.PRECISE.ordinal()] = 1;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                iArr2[GpsPrecisionRequirement.ROUGH.ordinal()] = 2;
+            } catch (NoSuchFieldError unused5) {
+            }
+            b = iArr2;
+        }
+    }
+
+    @NotNull
+    public static final hr.a a(@NotNull GpsCollectionRequirement gpsCollectionRequirement) {
+        Intrinsics.checkNotNullParameter(gpsCollectionRequirement, "<this>");
+        int i10 = a.f26279a[gpsCollectionRequirement.ordinal()];
+        if (i10 == 1) {
+            return hr.a.REQUIRED;
+        }
+        if (i10 == 2) {
+            return hr.a.OPTIONAL;
+        }
+        if (i10 == 3) {
+            return hr.a.NONE;
+        }
+        throw new zt.l();
+    }
+
+    @NotNull
+    public static final hr.e b(@NotNull GpsPrecisionRequirement gpsPrecisionRequirement) {
+        Intrinsics.checkNotNullParameter(gpsPrecisionRequirement, "<this>");
+        int i10 = a.b[gpsPrecisionRequirement.ordinal()];
+        if (i10 == 1) {
+            return hr.e.PRECISE;
+        }
+        if (i10 == 2) {
+            return hr.e.ROUGH;
+        }
+        throw new zt.l();
+    }
+}

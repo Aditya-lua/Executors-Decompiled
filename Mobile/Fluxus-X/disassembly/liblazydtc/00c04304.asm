@@ -1,0 +1,35 @@
+; std::__ndk1::__time_get_c_storage<wchar_t>::__c @ 00c04304
+00c04304	paciasp
+00c04308	stp x29,x30,[sp, #-0x20]!
+00c0430c	str x19,[sp, #0x10]
+00c04310	mov x29,sp
+00c04314	adrp x8,0xd27000
+00c04318	add x8,x8,#0x3d0
+00c0431c	ldarb w8,[x8]
+00c04320	tbz w8,#0x0,0x00c0433c
+00c04324	adrp x0,0xd27000
+00c04328	add x0,x0,#0x3b8
+00c0432c	ldr x19,[sp, #0x10]
+00c04330	ldp x29,x30,[sp], #0x20
+00c04334	autiasp
+00c04338	ret
+00c0433c	adrp x0,0xd27000
+00c04340	add x0,x0,#0x3d0
+00c04344	bl 0x00c2fe90
+00c04348	cbz w0,0x00c04324
+00c0434c	adrp x0,0xd27000
+00c04350	add x0,x0,#0x3b8
+00c04354	adrp x1,0x789000
+00c04358	add x1,x1,#0xfb8
+00c0435c	bl 0x00c01f1c
+00c04360	adrp x0,0xcb5000
+00c04364	adrp x1,0xd27000
+00c04368	add x1,x1,#0x3b8
+00c0436c	ldr x0,[x0, #0xb10]
+00c04370	nop
+00c04374	adr x2,0xc48880
+00c04378	bl 0x00c2fe70
+00c0437c	adrp x0,0xd27000
+00c04380	add x0,x0,#0x3d0
+00c04384	bl 0x00c2fea0
+00c04388	b 0x00c04324

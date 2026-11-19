@@ -1,0 +1,27 @@
+; FUN_00851588 @ 00851588
+00851588	adrp x8,0x35f000
+0085158c	add x8,x8,#0x77c
+00851590	mov w9,#0x6fa
+00851594	lsr x10,x9,#0x1
+00851598	add x11,x8,x10, LSL #0x3
+0085159c	ldrb w12,[x11, #0x2]
+008515a0	ldrh w13,[x11], #0x8
+008515a4	orr w12,w13,w12, LSL #0x10
+008515a8	mvn x13,x10
+008515ac	add x9,x9,x13
+008515b0	cmp w0,w12
+008515b4	csel x9,x9,x10,hi
+008515b8	csel x8,x11,x8,hi
+008515bc	cbnz x9,0x00851594
+008515c0	adrp x9,0x362000
+008515c4	add x9,x9,#0xf4c
+008515c8	cmp x8,x9
+008515cc	b.eq 0x008515e8
+008515d0	ldrb w9,[x8, #0x2]
+008515d4	ldrh w10,[x8], #0x3
+008515d8	orr w9,w10,w9, LSL #0x10
+008515dc	cmp w0,w9
+008515e0	csel x0,x8,xzr,eq
+008515e4	ret
+008515e8	mov x0,xzr
+008515ec	ret

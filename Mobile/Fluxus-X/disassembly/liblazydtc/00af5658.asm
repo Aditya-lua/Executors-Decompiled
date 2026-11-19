@@ -1,0 +1,4 @@
+; d2i_AUTHORITY_INFO_ACCESS @ 00af5658
+00af5658	adrp x3,0xc7e000
+00af565c	add x3,x3,#0x6a0
+00af5660	b 0x00c36150

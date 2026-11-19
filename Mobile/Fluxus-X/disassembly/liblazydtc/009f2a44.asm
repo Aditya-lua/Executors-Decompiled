@@ -1,0 +1,4 @@
+; d2i_PKCS8_PRIV_KEY_INFO @ 009f2a44
+009f2a44	adrp x3,0xc58000
+009f2a48	add x3,x3,#0xa40
+009f2a4c	b 0x00c36150

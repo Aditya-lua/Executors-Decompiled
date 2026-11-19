@@ -1,0 +1,35 @@
+; OSSL_ENCODER_CTX_set_selection @ 00a62118
+00a62118	stp x29,x30,[sp, #-0x10]!
+00a6211c	mov x29,sp
+00a62120	cbz x0,0x00a62138
+00a62124	cbz w1,0x00a62164
+00a62128	str w1,[x0]
+00a6212c	mov w0,#0x1
+00a62130	ldp x29,x30,[sp], #0x10
+00a62134	ret
+00a62138	bl 0x00c342a0
+00a6213c	adrp x0,0x2a0000
+00a62140	adrp x2,0x2a5000
+00a62144	add x0,x0,#0x26d
+00a62148	add x2,x2,#0xfe4
+00a6214c	mov w1,#0x96
+00a62150	bl 0x00c342b0
+00a62154	mov w1,#0x102
+00a62158	mov w0,#0x3b
+00a6215c	movk w1,#0xc, LSL #16
+00a62160	b 0x00a6218c
+00a62164	bl 0x00c342a0
+00a62168	adrp x0,0x2a0000
+00a6216c	adrp x2,0x2a5000
+00a62170	add x0,x0,#0x26d
+00a62174	add x2,x2,#0xfe4
+00a62178	mov w1,#0x9b
+00a6217c	bl 0x00c342b0
+00a62180	mov w1,#0x106
+00a62184	mov w0,#0x3b
+00a62188	movk w1,#0x8, LSL #16
+00a6218c	mov x2,xzr
+00a62190	bl 0x00c342c0
+00a62194	mov w0,wzr
+00a62198	ldp x29,x30,[sp], #0x10
+00a6219c	ret

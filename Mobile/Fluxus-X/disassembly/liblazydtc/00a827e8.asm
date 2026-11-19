@@ -1,0 +1,80 @@
+; FUN_00a827e8 @ 00a827e8
+00a827e8	sub sp,sp,#0x50
+00a827ec	str x23,[sp, #0x10]
+00a827f0	stp x22,x21,[sp, #0x20]
+00a827f4	mov x22,x3
+00a827f8	mov x23,x2
+00a827fc	adrp x2,0x2bd000
+00a82800	stp x20,x19,[sp, #0x30]
+00a82804	mov w20,w1
+00a82808	mov x19,x0
+00a8280c	add x2,x2,#0xc0d
+00a82810	mov w3,#0xb6
+00a82814	mov x0,x23
+00a82818	mov x1,x22
+00a8281c	stp x29,x30,[sp, #0x40]
+00a82820	add x29,sp,#0x40
+00a82824	bl 0x00c36180
+00a82828	str x0,[sp]
+00a8282c	cbz x0,0x00a82868
+00a82830	str wzr,[sp, #0x8]
+00a82834	ldr x0,[x19, #0x10]
+00a82838	mov x1,sp
+00a8283c	bl 0x00c34de0
+00a82840	ldr x8,[sp]
+00a82844	adrp x1,0x2bd000
+00a82848	mov x21,x0
+00a8284c	add x1,x1,#0xc0d
+00a82850	mov w2,#0xbb
+00a82854	mov x0,x8
+00a82858	bl 0x00c32310
+00a8285c	cbz x21,0x00a82868
+00a82860	ldr w0,[x21, #0x8]
+00a82864	cbnz w0,0x00a82904
+00a82868	adrp x1,0x2bd000
+00a8286c	add x1,x1,#0xc0d
+00a82870	mov w0,#0x10
+00a82874	mov w2,#0x101
+00a82878	bl 0x00c34250
+00a8287c	mov x21,x0
+00a82880	cbz x0,0x00a828ec
+00a82884	adrp x2,0x2bd000
+00a82888	add x2,x2,#0xc0d
+00a8288c	mov w3,#0x102
+00a82890	mov x0,x23
+00a82894	mov x1,x22
+00a82898	bl 0x00c36180
+00a8289c	str x0,[x21]
+00a828a0	cbz x0,0x00a828dc
+00a828a4	cbnz w20,0x00a828bc
+00a828a8	add x8,x19,#0x18
+00a828ac	ldxr w9,[x8]
+00a828b0	add w20,w9,#0x1
+00a828b4	stxr w9,w20,[x8]
+00a828b8	cbnz w9,0x00a828ac
+00a828bc	str w20,[x21, #0x8]
+00a828c0	ldr x0,[x19, #0x10]
+00a828c4	mov x1,x21
+00a828c8	bl 0x00c34dc0
+00a828cc	ldr x0,[x19, #0x10]
+00a828d0	bl 0x00c395f0
+00a828d4	cbz w0,0x00a8291c
+00a828d8	ldr x0,[x21]
+00a828dc	adrp x1,0x2bd000
+00a828e0	add x1,x1,#0xc0d
+00a828e4	mov w2,#0x39
+00a828e8	bl 0x00c32310
+00a828ec	adrp x1,0x2bd000
+00a828f0	add x1,x1,#0xc0d
+00a828f4	mov w2,#0x3a
+00a828f8	mov x0,x21
+00a828fc	bl 0x00c32310
+00a82900	mov w0,wzr
+00a82904	ldp x29,x30,[sp, #0x40]
+00a82908	ldp x20,x19,[sp, #0x30]
+00a8290c	ldp x22,x21,[sp, #0x20]
+00a82910	ldr x23,[sp, #0x10]
+00a82914	add sp,sp,#0x50
+00a82918	ret
+00a8291c	ldr w0,[x21, #0x8]
+00a82920	b 0x00a82904

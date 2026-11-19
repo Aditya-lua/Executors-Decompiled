@@ -1,0 +1,38 @@
+; FUN_0089c550 @ 0089c550
+0089c550	stp x29,x30,[sp, #-0x30]!
+0089c554	stp x22,x21,[sp, #0x10]
+0089c558	stp x20,x19,[sp, #0x20]
+0089c55c	mov x29,sp
+0089c560	ldr x8,[x1, #0x40]
+0089c564	mov x20,x1
+0089c568	mov x19,x0
+0089c56c	cbz x8,0x0089c58c
+0089c570	ldr x21,[x20, #0x38]
+0089c574	lsl x22,x8,#0x3
+0089c578	ldr x1,[x21], #0x8
+0089c57c	mov x0,x19
+0089c580	bl 0x0089c9e8
+0089c584	subs x22,x22,#0x8
+0089c588	b.ne 0x0089c578
+0089c58c	ldrb w8,[x20, #0x48]
+0089c590	tbz w8,#0x0,0x0089c5d0
+0089c594	ldr x8,[x20, #0x20]
+0089c598	ldr w9,[x8, #0x8]
+0089c59c	cbz x8,0x0089c5b0
+0089c5a0	adrp x10,0xd1b000
+0089c5a4	ldr w10,[x10, #0x50]
+0089c5a8	cmp w9,w10
+0089c5ac	b.eq 0x0089c5c4
+0089c5b0	cbz x8,0x0089c5d0
+0089c5b4	adrp x10,0xd1b000
+0089c5b8	ldr w10,[x10, #0x60]
+0089c5bc	cmp w9,w10
+0089c5c0	b.ne 0x0089c5d0
+0089c5c4	ldr x1,[x8, #0x20]
+0089c5c8	mov x0,x19
+0089c5cc	bl 0x0089c9e8
+0089c5d0	mov w0,#0x1
+0089c5d4	ldp x20,x19,[sp, #0x20]
+0089c5d8	ldp x22,x21,[sp, #0x10]
+0089c5dc	ldp x29,x30,[sp], #0x30
+0089c5e0	ret

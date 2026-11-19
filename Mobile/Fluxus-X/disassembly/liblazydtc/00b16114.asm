@@ -1,0 +1,7 @@
+; i2d_RSA_PUBKEY_fp @ 00b16114
+00b16114	adrp x8,0xcb5000
+00b16118	ldr x8,[x8, #0x738]
+00b1611c	mov x2,x1
+00b16120	mov x1,x0
+00b16124	mov x0,x8
+00b16128	b 0x00c37500

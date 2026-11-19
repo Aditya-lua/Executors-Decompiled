@@ -1,0 +1,27 @@
+; ossl_cipher_hw_generic_cbc @ 00b6821c
+00b6821c	stp x29,x30,[sp, #-0x10]!
+00b68220	ldr x9,[x0, #0x38]
+00b68224	mov x8,x3
+00b68228	mov x29,sp
+00b6822c	cbz x9,0x00b68250
+00b68230	ldrb w10,[x0, #0x6c]
+00b68234	ldr x3,[x0, #0xb0]
+00b68238	add x4,x0,#0x20
+00b6823c	mov x0,x2
+00b68240	ubfx w5,w10,#0x1,#0x1
+00b68244	mov x2,x8
+00b68248	blr x9
+00b6824c	b 0x00b68278
+00b68250	ldrb w9,[x0, #0x6c]
+00b68254	ldr x3,[x0, #0xb0]
+00b68258	ldr x5,[x0, #0x30]
+00b6825c	add x4,x0,#0x20
+00b68260	mov x0,x2
+00b68264	mov x2,x8
+00b68268	tbnz w9,#0x1,0x00b68274
+00b6826c	bl 0x00c3e240
+00b68270	b 0x00b68278
+00b68274	bl 0x00c3e250
+00b68278	mov w0,#0x1
+00b6827c	ldp x29,x30,[sp], #0x10
+00b68280	ret

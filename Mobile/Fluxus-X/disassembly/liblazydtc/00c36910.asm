@@ -1,0 +1,5 @@
+; HMAC_CTX_new @ 00c36910
+00c36910	adrp x16,0xcb9000
+00c36914	ldr x17,[x16, #0x470]
+00c36918	add x16,x16,#0x470
+00c3691c	br x17

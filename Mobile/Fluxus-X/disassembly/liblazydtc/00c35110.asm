@@ -1,0 +1,5 @@
+; ssl_cert_dup @ 00c35110
+00c35110	adrp x16,0xcb8000
+00c35114	ldr x17,[x16, #0x870]
+00c35118	add x16,x16,#0x870
+00c3511c	br x17

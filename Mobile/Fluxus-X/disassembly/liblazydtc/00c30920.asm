@@ -1,0 +1,5 @@
+; <EXTERNAL>::modf @ 00c30920
+00c30920	adrp x16,0xcb6000
+00c30924	ldr x17,[x16, #0x478]
+00c30928	add x16,x16,#0x478
+00c3092c	br x17

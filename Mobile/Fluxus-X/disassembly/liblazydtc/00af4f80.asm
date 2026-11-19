@@ -1,0 +1,4 @@
+; i2d_GENERAL_NAMES @ 00af4f80
+00af4f80	adrp x2,0xc7e000
+00af4f84	add x2,x2,#0x330
+00af4f88	b 0x00c36170

@@ -1,0 +1,40 @@
+; extension_is_relevant @ 009d0224
+009d0224	ldr x10,[x0, #0x8]
+009d0228	ldr x8,[x10, #0xc0]
+009d022c	ldr w9,[x8, #0x60]
+009d0230	tbnz w2,#0xb,0x009d025c
+009d0234	mov w8,wzr
+009d0238	tbnz w9,#0x3,0x009d0260
+009d023c	ldr w9,[x10]
+009d0240	mov w8,wzr
+009d0244	cmp w9,#0x304
+009d0248	b.lt 0x009d0268
+009d024c	cmp w9,#0x10, LSL #12
+009d0250	cset w8,ne
+009d0254	tbz w1,#0x3,0x009d026c
+009d0258	b 0x009d0278
+009d025c	mov w8,#0x1
+009d0260	tbz w1,#0x2,0x009d0268
+009d0264	tbnz w9,#0x3,0x009d029c
+009d0268	tbnz w1,#0x3,0x009d0278
+009d026c	ldr w9,[x0]
+009d0270	cmp w9,#0x300
+009d0274	b.eq 0x009d029c
+009d0278	tbz w1,#0x4,0x009d0280
+009d027c	cbnz w8,0x009d029c
+009d0280	tbnz w2,#0x7,0x009d028c
+009d0284	tbz w1,#0x5,0x009d028c
+009d0288	cbz w8,0x009d029c
+009d028c	tbz w1,#0x5,0x009d02a4
+009d0290	cbnz w8,0x009d02a4
+009d0294	ldr w8,[x0, #0x38]
+009d0298	cbz w8,0x009d02a4
+009d029c	mov w0,wzr
+009d02a0	ret
+009d02a4	ldr w8,[x0, #0x4d0]
+009d02a8	mov w9,#0x1
+009d02ac	bic w9,w9,w1, LSR #0x6
+009d02b0	cmp w8,#0x0
+009d02b4	cset w8,eq
+009d02b8	orr w0,w9,w8
+009d02bc	ret

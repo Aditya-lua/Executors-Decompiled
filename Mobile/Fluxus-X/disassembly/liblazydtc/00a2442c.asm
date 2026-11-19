@@ -1,0 +1,4 @@
+; X9_62_PENTANOMIAL_free @ 00a2442c
+00a2442c	adrp x1,0xc5a000
+00a24430	add x1,x1,#0xe98
+00a24434	b 0x00c36160

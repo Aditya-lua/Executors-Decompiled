@@ -1,0 +1,5 @@
+; ASN1_GENERALIZEDTIME_new @ 00c38130
+00c38130	adrp x16,0xcba000
+00c38134	ldr x17,[x16, #0x80]
+00c38138	add x16,x16,#0x80
+00c3813c	br x17

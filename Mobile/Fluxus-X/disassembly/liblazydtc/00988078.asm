@@ -1,0 +1,22 @@
+; ix::SocketServer::logError @ 00988078
+00988078	stp x20,x19,[sp, #-0x20]!
+0098807c	stp x29,x30,[sp, #0x10]
+00988080	add x29,sp,#0x10
+00988084	add x20,x0,#0x44
+00988088	mov x0,x20
+0098808c	mov x19,x1
+00988090	bl 0x00c2ff10
+00988094	ldrb w8,[x19]
+00988098	ldr x9,[x19, #0x10]
+0098809c	adrp x1,0x2a7000
+009880a0	add x1,x1,#0x2d3
+009880a4	tst w8,#0x1
+009880a8	adrp x8,0xcb4000
+009880ac	ldr x8,[x8, #0xba0]
+009880b0	csinc x2,x9,x19,ne
+009880b4	add x0,x8,#0x130
+009880b8	bl 0x00c30940
+009880bc	ldp x29,x30,[sp, #0x10]
+009880c0	mov x0,x20
+009880c4	ldp x20,x19,[sp], #0x20
+009880c8	b 0x00c2ff20

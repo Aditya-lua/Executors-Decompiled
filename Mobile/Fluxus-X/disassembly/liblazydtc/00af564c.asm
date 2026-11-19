@@ -1,0 +1,4 @@
+; ACCESS_DESCRIPTION_free @ 00af564c
+00af564c	adrp x1,0xc7e000
+00af5650	add x1,x1,#0x668
+00af5654	b 0x00c36160

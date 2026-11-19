@@ -1,0 +1,5 @@
+; ssl3_send_alert @ 00c34890
+00c34890	adrp x16,0xcb8000
+00c34894	ldr x17,[x16, #0x430]
+00c34898	add x16,x16,#0x430
+00c3489c	br x17

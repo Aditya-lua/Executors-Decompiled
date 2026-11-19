@@ -1,0 +1,5 @@
+; X509_NAME_ENTRY_free @ 00c40940
+00c40940	adrp x16,0xcbe000
+00c40944	ldr x17,[x16, #0x488]
+00c40948	add x16,x16,#0x488
+00c4094c	br x17

@@ -1,0 +1,5 @@
+; DTLS_RECORD_LAYER_free @ 00c34270
+00c34270	adrp x16,0xcb8000
+00c34274	ldr x17,[x16, #0x120]
+00c34278	add x16,x16,#0x120
+00c3427c	br x17

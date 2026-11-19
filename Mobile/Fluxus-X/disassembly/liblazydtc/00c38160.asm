@@ -1,0 +1,5 @@
+; ASN1_NULL_new @ 00c38160
+00c38160	adrp x16,0xcba000
+00c38164	ldr x17,[x16, #0x98]
+00c38168	add x16,x16,#0x98
+00c3816c	br x17

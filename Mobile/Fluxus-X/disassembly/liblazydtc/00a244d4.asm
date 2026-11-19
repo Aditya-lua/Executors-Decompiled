@@ -1,0 +1,4 @@
+; EC_PRIVATEKEY_new @ 00a244d4
+00a244d4	adrp x0,0xc5b000
+00a244d8	add x0,x0,#0x2e0
+00a244dc	b 0x00c372e0

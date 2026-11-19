@@ -1,0 +1,22 @@
+; FUN_00873a18 @ 00873a18
+00873a18	stp x29,x30,[sp, #-0x20]!
+00873a1c	str x19,[sp, #0x10]
+00873a20	mov x29,sp
+00873a24	mov x19,x0
+00873a28	ldr x0,[x0]
+00873a2c	cbz x0,0x00873a5c
+00873a30	bl 0x00c301d0
+00873a34	ldr x0,[x19, #0x18]
+00873a38	str xzr,[x19]
+00873a3c	bl 0x00c301d0
+00873a40	mov x0,xzr
+00873a44	stp xzr,xzr,[x19, #0x8]
+00873a48	str xzr,[x19, #0x18]
+00873a4c	bl 0x00c301d0
+00873a50	mov w8,#0x40
+00873a54	str xzr,[x19, #0x20]
+00873a58	strb w8,[x19, #0x30]
+00873a5c	ldr x0,[x19, #0x18]
+00873a60	ldr x19,[sp, #0x10]
+00873a64	ldp x29,x30,[sp], #0x20
+00873a68	b 0x00c301d0

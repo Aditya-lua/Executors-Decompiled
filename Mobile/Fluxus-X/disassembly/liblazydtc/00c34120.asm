@@ -1,0 +1,5 @@
+; dtls1_min_mtu @ 00c34120
+00c34120	adrp x16,0xcb8000
+00c34124	ldr x17,[x16, #0x78]
+00c34128	add x16,x16,#0x78
+00c3412c	br x17

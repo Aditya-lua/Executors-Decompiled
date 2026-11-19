@@ -1,0 +1,37 @@
+; FUN_00911d38 @ 00911d38
+00911d38	str x21,[sp, #-0x30]!
+00911d3c	stp x20,x19,[sp, #0x10]
+00911d40	stp x29,x30,[sp, #0x20]
+00911d44	add x29,sp,#0x20
+00911d48	ldr x21,[x0, #0x1a8]
+00911d4c	mov x19,x0
+00911d50	cbz x21,0x00911db8
+00911d54	mov x20,x21
+00911d58	ldr x1,[x20, #0x8]!
+00911d5c	cbz x1,0x00911d74
+00911d60	ldr x0,[x1, #0xc0]
+00911d64	cbz x0,0x00911d6c
+00911d68	bl 0x00c31b00
+00911d6c	mov x0,x20
+00911d70	bl 0x00946590
+00911d74	ldr x1,[x21, #0x240]
+00911d78	cbz x1,0x00911d94
+00911d7c	ldr x0,[x1, #0xc0]
+00911d80	add x20,x21,#0x240
+00911d84	cbz x0,0x00911d8c
+00911d88	bl 0x00c31b00
+00911d8c	mov x0,x20
+00911d90	bl 0x00946590
+00911d94	ldr x0,[x21]
+00911d98	bl 0x00c31040
+00911d9c	ldr x0,[x19, #0x1a8]
+00911da0	adrp x8,0xcb4000
+00911da4	str xzr,[x0]
+00911da8	ldr x8,[x8, #0xdd8]
+00911dac	ldr x8,[x8]
+00911db0	blr x8
+00911db4	str xzr,[x19, #0x1a8]
+00911db8	ldp x29,x30,[sp, #0x20]
+00911dbc	ldp x20,x19,[sp, #0x10]
+00911dc0	ldr x21,[sp], #0x30
+00911dc4	ret

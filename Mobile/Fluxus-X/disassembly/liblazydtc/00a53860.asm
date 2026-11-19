@@ -1,0 +1,31 @@
+; ENGINE_register_all_EC @ 00a53860
+00a53860	stp x22,x21,[sp, #-0x30]!
+00a53864	stp x20,x19,[sp, #0x10]
+00a53868	stp x29,x30,[sp, #0x20]
+00a5386c	add x29,sp,#0x20
+00a53870	bl 0x00c32380
+00a53874	cbz x0,0x00a538c8
+00a53878	adrp x20,0xd21000
+00a5387c	adrp x21,0xa53000
+00a53880	adrp x22,0x766000
+00a53884	mov x19,x0
+00a53888	add x20,x20,#0x9f8
+00a5388c	add x21,x21,#0x854
+00a53890	add x22,x22,#0x8
+00a53894	ldr x8,[x19, #0x28]
+00a53898	cbz x8,0x00a538b8
+00a5389c	mov w4,#0x1
+00a538a0	mov x0,x20
+00a538a4	mov x1,x21
+00a538a8	mov x2,x19
+00a538ac	mov x3,x22
+00a538b0	mov w5,wzr
+00a538b4	bl 0x00c3bce0
+00a538b8	mov x0,x19
+00a538bc	bl 0x00c323a0
+00a538c0	mov x19,x0
+00a538c4	cbnz x0,0x00a53894
+00a538c8	ldp x29,x30,[sp, #0x20]
+00a538cc	ldp x20,x19,[sp, #0x10]
+00a538d0	ldp x22,x21,[sp], #0x30
+00a538d4	ret

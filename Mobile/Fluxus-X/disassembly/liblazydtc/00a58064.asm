@@ -1,0 +1,85 @@
+; EVP_DigestFinal_ex @ 00a58064
+00a58064	sub sp,sp,#0x40
+00a58068	stp x22,x21,[sp, #0x10]
+00a5806c	stp x20,x19,[sp, #0x20]
+00a58070	stp x29,x30,[sp, #0x30]
+00a58074	str xzr,[sp, #0x8]
+00a58078	mov x19,x0
+00a5807c	ldr x0,[x0, #0x8]
+00a58080	add x29,sp,#0x30
+00a58084	cbz x0,0x00a58180
+00a58088	mov x21,x2
+00a5808c	mov x20,x1
+00a58090	bl 0x00c34c20
+00a58094	mov w22,w0
+00a58098	tbnz w0,#0x1f,0x00a58180
+00a5809c	ldr x8,[x19, #0x8]
+00a580a0	ldr x9,[x8, #0x70]
+00a580a4	cbz x9,0x00a580e0
+00a580a8	ldr x8,[x8, #0xa0]
+00a580ac	cbz x8,0x00a58138
+00a580b0	ldr x0,[x19, #0x38]
+00a580b4	sxtw x3,w22
+00a580b8	add x2,sp,#0x8
+00a580bc	mov x1,x20
+00a580c0	blr x8
+00a580c4	mov w20,w0
+00a580c8	cbz x21,0x00a58184
+00a580cc	ldr x8,[sp, #0x8]
+00a580d0	lsr x9,x8,#0x20
+00a580d4	cbnz x9,0x00a58154
+00a580d8	str w8,[x21]
+00a580dc	b 0x00a58184
+00a580e0	cmp w22,#0x41
+00a580e4	b.cs 0x00a5819c
+00a580e8	ldr x8,[x8, #0x30]
+00a580ec	mov x0,x19
+00a580f0	mov x1,x20
+00a580f4	blr x8
+00a580f8	mov w20,w0
+00a580fc	cbz x21,0x00a58104
+00a58100	str w22,[x21]
+00a58104	ldr x8,[x19, #0x8]
+00a58108	ldr x9,[x8, #0x40]
+00a5810c	cbz x9,0x00a58128
+00a58110	mov x0,x19
+00a58114	blr x9
+00a58118	mov w1,#0x2
+00a5811c	mov x0,x19
+00a58120	bl 0x00c3c1b0
+00a58124	ldr x8,[x19, #0x8]
+00a58128	ldr x0,[x19, #0x20]
+00a5812c	ldrsw x1,[x8, #0x4c]
+00a58130	bl 0x00c34750
+00a58134	b 0x00a58184
+00a58138	bl 0x00c342a0
+00a5813c	adrp x0,0x2b7000
+00a58140	adrp x2,0x2ac000
+00a58144	add x0,x0,#0xc61
+00a58148	add x2,x2,#0xa9
+00a5814c	mov w1,#0x1ba
+00a58150	b 0x00a5816c
+00a58154	bl 0x00c342a0
+00a58158	adrp x0,0x2b7000
+00a5815c	adrp x2,0x2ac000
+00a58160	add x0,x0,#0xc61
+00a58164	add x2,x2,#0xa9
+00a58168	mov w1,#0x1c4
+00a5816c	bl 0x00c342b0
+00a58170	orr w0,wzr,#0x6
+00a58174	mov w1,#0xbc
+00a58178	mov x2,xzr
+00a5817c	bl 0x00c342c0
+00a58180	mov w20,wzr
+00a58184	mov w0,w20
+00a58188	ldp x29,x30,[sp, #0x30]
+00a5818c	ldp x20,x19,[sp, #0x20]
+00a58190	ldp x22,x21,[sp, #0x10]
+00a58194	add sp,sp,#0x40
+00a58198	ret
+00a5819c	adrp x0,0x2a0000
+00a581a0	adrp x1,0x2b7000
+00a581a4	add x0,x0,#0x1dd
+00a581a8	add x1,x1,#0xc61
+00a581ac	mov w2,#0x1cd
+00a581b0	bl 0x00c3c240

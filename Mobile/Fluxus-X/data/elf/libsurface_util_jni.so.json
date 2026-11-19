@@ -1,0 +1,269 @@
+{
+  "path": "lib/arm64-v8a/libsurface_util_jni.so",
+  "bytes": 4896,
+  "sha256": "6cb2eac3c68e6a82ce2a5ea5aba86749eb8c609914392e125f6cdfbc208992f8",
+  "machine": "EM_AARCH64",
+  "class": 64,
+  "little_endian": true,
+  "needed": [
+    "libandroid.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+  ],
+  "imports": 9,
+  "exports": 1,
+  "defined_functions": 1,
+  "sections": [
+    {
+      "name": "",
+      "address": "0x0",
+      "file_offset": "0x0",
+      "bytes": 0,
+      "type": "SHT_NULL",
+      "flags": 0
+    },
+    {
+      "name": ".note.android.ident",
+      "address": "0x200",
+      "file_offset": "0x200",
+      "bytes": 152,
+      "type": "SHT_NOTE",
+      "flags": 2
+    },
+    {
+      "name": ".note.gnu.build-id",
+      "address": "0x298",
+      "file_offset": "0x298",
+      "bytes": 36,
+      "type": "SHT_NOTE",
+      "flags": 2
+    },
+    {
+      "name": ".dynsym",
+      "address": "0x2c0",
+      "file_offset": "0x2c0",
+      "bytes": 264,
+      "type": "SHT_DYNSYM",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version",
+      "address": "0x3c8",
+      "file_offset": "0x3c8",
+      "bytes": 22,
+      "type": "SHT_GNU_versym",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version_d",
+      "address": "0x3e0",
+      "file_offset": "0x3e0",
+      "bytes": 56,
+      "type": "SHT_GNU_verdef",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.version_r",
+      "address": "0x418",
+      "file_offset": "0x418",
+      "bytes": 32,
+      "type": "SHT_GNU_verneed",
+      "flags": 2
+    },
+    {
+      "name": ".gnu.hash",
+      "address": "0x438",
+      "file_offset": "0x438",
+      "bytes": 32,
+      "type": "SHT_GNU_HASH",
+      "flags": 2
+    },
+    {
+      "name": ".dynstr",
+      "address": "0x458",
+      "file_offset": "0x458",
+      "bytes": 329,
+      "type": "SHT_STRTAB",
+      "flags": 2
+    },
+    {
+      "name": ".rela.dyn",
+      "address": "0x5a8",
+      "file_offset": "0x5a8",
+      "bytes": 72,
+      "type": "SHT_RELA",
+      "flags": 2
+    },
+    {
+      "name": ".rela.plt",
+      "address": "0x5f0",
+      "file_offset": "0x5f0",
+      "bytes": 216,
+      "type": "SHT_RELA",
+      "flags": 66
+    },
+    {
+      "name": ".eh_frame_hdr",
+      "address": "0x6c8",
+      "file_offset": "0x6c8",
+      "bytes": 68,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".eh_frame",
+      "address": "0x710",
+      "file_offset": "0x710",
+      "bytes": 200,
+      "type": "SHT_PROGBITS",
+      "flags": 2
+    },
+    {
+      "name": ".text",
+      "address": "0x7d8",
+      "file_offset": "0x7d8",
+      "bytes": 296,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".plt",
+      "address": "0x900",
+      "file_offset": "0x900",
+      "bytes": 176,
+      "type": "SHT_PROGBITS",
+      "flags": 6
+    },
+    {
+      "name": ".data.rel.ro",
+      "address": "0x49b0",
+      "file_offset": "0x9b0",
+      "bytes": 8,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".fini_array",
+      "address": "0x49b8",
+      "file_offset": "0x9b8",
+      "bytes": 16,
+      "type": "SHT_FINI_ARRAY",
+      "flags": 3
+    },
+    {
+      "name": ".dynamic",
+      "address": "0x49c8",
+      "file_offset": "0x9c8",
+      "bytes": 448,
+      "type": "SHT_DYNAMIC",
+      "flags": 3
+    },
+    {
+      "name": ".got.plt",
+      "address": "0x4b88",
+      "file_offset": "0xb88",
+      "bytes": 96,
+      "type": "SHT_PROGBITS",
+      "flags": 3
+    },
+    {
+      "name": ".relro_padding",
+      "address": "0x4be8",
+      "file_offset": "0xbe8",
+      "bytes": 1048,
+      "type": "SHT_NOBITS",
+      "flags": 3
+    },
+    {
+      "name": ".comment",
+      "address": "0x0",
+      "file_offset": "0xbe8",
+      "bytes": 203,
+      "type": "SHT_PROGBITS",
+      "flags": 48
+    },
+    {
+      "name": ".shstrtab",
+      "address": "0x0",
+      "file_offset": "0xcb3",
+      "bytes": 236,
+      "type": "SHT_STRTAB",
+      "flags": 0
+    }
+  ],
+  "imported_symbols": [
+    {
+      "name": "__cxa_finalize",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__cxa_atexit",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__register_atfork",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_fromSurface",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_getFormat",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_getWidth",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_getHeight",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "ANativeWindow_release",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    },
+    {
+      "name": "__stack_chk_fail",
+      "address": "0x0",
+      "bytes": 0,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    }
+  ],
+  "exported_symbols": [
+    {
+      "name": "Java_androidx_camera_core_impl_utils_SurfaceUtil_nativeGetSurfaceInfo",
+      "address": "0x838",
+      "bytes": 200,
+      "type": "STT_FUNC",
+      "binding": "STB_GLOBAL"
+    }
+  ]
+}

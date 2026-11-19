@@ -1,0 +1,43 @@
+; ossl_cmp_asn1_octet_string_set1_bytes @ 00a853bc
+00a853bc	stp x22,x21,[sp, #-0x30]!
+00a853c0	stp x20,x19,[sp, #0x10]
+00a853c4	stp x29,x30,[sp, #0x20]
+00a853c8	add x29,sp,#0x20
+00a853cc	cbz x0,0x00a8540c
+00a853d0	mov x22,x1
+00a853d4	mov x19,x0
+00a853d8	cbz x1,0x00a85440
+00a853dc	mov w21,w2
+00a853e0	bl 0x00c38170
+00a853e4	mov x20,x0
+00a853e8	cbz x0,0x00a85400
+00a853ec	mov x0,x20
+00a853f0	mov x1,x22
+00a853f4	mov w2,w21
+00a853f8	bl 0x00c377a0
+00a853fc	cbnz w0,0x00a85444
+00a85400	mov x0,x20
+00a85404	bl 0x00c35530
+00a85408	b 0x00a85438
+00a8540c	bl 0x00c342a0
+00a85410	adrp x0,0x2a8000
+00a85414	adrp x2,0x2bf000
+00a85418	add x0,x0,#0xa1
+00a8541c	add x2,x2,#0xe11
+00a85420	mov w1,#0x110
+00a85424	bl 0x00c342b0
+00a85428	mov w0,#0x3a
+00a8542c	mov w1,#0x67
+00a85430	mov x2,xzr
+00a85434	bl 0x00c342c0
+00a85438	mov w0,wzr
+00a8543c	b 0x00a85454
+00a85440	mov x20,xzr
+00a85444	ldr x0,[x19]
+00a85448	bl 0x00c35530
+00a8544c	str x20,[x19]
+00a85450	mov w0,#0x1
+00a85454	ldp x29,x30,[sp, #0x20]
+00a85458	ldp x20,x19,[sp, #0x10]
+00a8545c	ldp x22,x21,[sp], #0x30
+00a85460	ret

@@ -1,0 +1,33 @@
+; SSL_add1_host @ 009b274c
+009b274c	stp x20,x19,[sp, #-0x20]!
+009b2750	mov x19,x1
+009b2754	mov x20,x0
+009b2758	stp x29,x30,[sp, #0x10]
+009b275c	add x29,sp,#0x10
+009b2760	cbz x1,0x009b27a0
+009b2764	mov x0,x19
+009b2768	bl 0x00c35c60
+009b276c	cbz x0,0x009b27a0
+009b2770	bl 0x00c35530
+009b2774	ldr x0,[x20, #0x4d8]
+009b2778	bl 0x00c35bb0
+009b277c	cbz x0,0x009b27b8
+009b2780	adrp x1,0x2c5000
+009b2784	add x1,x1,#0x652
+009b2788	mov w2,#0x3ee
+009b278c	bl 0x00c32310
+009b2790	ldp x29,x30,[sp, #0x10]
+009b2794	mov w0,wzr
+009b2798	ldp x20,x19,[sp], #0x20
+009b279c	ret
+009b27a0	ldr x0,[x20, #0x4d8]
+009b27a4	ldp x29,x30,[sp, #0x10]
+009b27a8	mov x1,x19
+009b27ac	mov x2,xzr
+009b27b0	ldp x20,x19,[sp], #0x20
+009b27b4	b 0x00c35b80
+009b27b8	ldr x0,[x20, #0x4d8]
+009b27bc	ldp x29,x30,[sp, #0x10]
+009b27c0	mov x1,x19
+009b27c4	ldp x20,x19,[sp], #0x20
+009b27c8	b 0x00c35bf0

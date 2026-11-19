@@ -1,0 +1,24 @@
+; SSL_CTX_load_verify_locations @ 009b7930
+009b7930	stp x20,x19,[sp, #-0x20]!
+009b7934	mov x20,x0
+009b7938	orr x8,x1,x2
+009b793c	mov w0,wzr
+009b7940	stp x29,x30,[sp, #0x10]
+009b7944	add x29,sp,#0x10
+009b7948	cbz x8,0x009b7980
+009b794c	mov x19,x2
+009b7950	cbz x1,0x009b7968
+009b7954	ldr x0,[x20, #0x28]
+009b7958	ldr x2,[x20]
+009b795c	ldr x3,[x20, #0x440]
+009b7960	bl 0x00c35b50
+009b7964	cbz w0,0x009b7980
+009b7968	cbz x19,0x009b797c
+009b796c	ldr x0,[x20, #0x28]
+009b7970	mov x1,x19
+009b7974	bl 0x00c32c30
+009b7978	cbz w0,0x009b7980
+009b797c	mov w0,#0x1
+009b7980	ldp x29,x30,[sp, #0x10]
+009b7984	ldp x20,x19,[sp], #0x20
+009b7988	ret

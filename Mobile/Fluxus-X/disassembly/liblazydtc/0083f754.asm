@@ -1,0 +1,31 @@
+; _INIT_92 @ 0083f754
+0083f754	stp x29,x30,[sp, #-0x20]!
+0083f758	stp x20,x19,[sp, #0x10]
+0083f75c	mov x29,sp
+0083f760	movi v0.2D,#0x0
+0083f764	adrp x19,0xc48000
+0083f768	add x19,x19,#0x880
+0083f76c	adrp x1,0xd1e000
+0083f770	add x1,x1,#0x30
+0083f774	mov w20,#0x3f800000
+0083f778	nop
+0083f77c	adr x0,0x7fbc70
+0083f780	mov x2,x19
+0083f784	str w20,[x1, #0x20]
+0083f788	stp q0,q0,[x1]
+0083f78c	bl 0x00c2fe70
+0083f790	movi v0.2D,#0x0
+0083f794	adrp x8,0xcca000
+0083f798	adrp x1,0xd1e000
+0083f79c	add x1,x1,#0x58
+0083f7a0	ldr x8,[x8, #0x878]
+0083f7a4	adrp x9,0xd1e000
+0083f7a8	nop
+0083f7ac	adr x0,0x8379d8
+0083f7b0	mov x2,x19
+0083f7b4	str x8,[x9, #0x528]
+0083f7b8	stp q0,q0,[x1]
+0083f7bc	str w20,[x1, #0x20]
+0083f7c0	ldp x20,x19,[sp, #0x10]
+0083f7c4	ldp x29,x30,[sp], #0x20
+0083f7c8	b 0x00c2fe70

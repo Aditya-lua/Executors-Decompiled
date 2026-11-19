@@ -1,0 +1,5 @@
+; tls13_update_key @ 00c36860
+00c36860	adrp x16,0xcb9000
+00c36864	ldr x17,[x16, #0x418]
+00c36868	add x16,x16,#0x418
+00c3686c	br x17

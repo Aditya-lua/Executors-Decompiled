@@ -1,0 +1,13 @@
+; _INIT_110 @ 008518c0
+008518c0	adrp x8,0xd1e000
+008518c4	ldrb w9,[x8, #0xa18]
+008518c8	tbnz w9,#0x0,0x008518ec
+008518cc	adrp x9,0xd1e000
+008518d0	mov w11,#0x1
+008518d4	ldr w10,[x9, #0x930]
+008518d8	strb w11,[x8, #0xa18]
+008518dc	add w8,w10,#0x1
+008518e0	adrp x10,0xd1e000
+008518e4	str w8,[x9, #0x930]
+008518e8	str w8,[x10, #0xa10]
+008518ec	ret

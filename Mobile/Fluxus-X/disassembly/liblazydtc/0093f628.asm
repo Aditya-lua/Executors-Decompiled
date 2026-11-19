@@ -1,0 +1,23 @@
+; FUN_0093f628 @ 0093f628
+0093f628	ldr x8,[x0, #0xd0]
+0093f62c	cbz x8,0x0093f668
+0093f630	ldr w9,[x8, #0x4]
+0093f634	mov w10,#0x1
+0093f638	lsl w10,w10,w1
+0093f63c	tst w9,w10
+0093f640	b.eq 0x0093f670
+0093f644	ldr x9,[x8, #0x10]
+0093f648	cbz x9,0x0093f678
+0093f64c	stp x29,x30,[sp, #-0x10]!
+0093f650	mov x29,sp
+0093f654	ldr x3,[x8, #0x20]
+0093f658	blr x9
+0093f65c	mov w0,wzr
+0093f660	ldp x29,x30,[sp], #0x10
+0093f664	ret
+0093f668	orr w0,wzr,#0x3
+0093f66c	ret
+0093f670	mov w0,wzr
+0093f674	ret
+0093f678	mov w0,wzr
+0093f67c	ret

@@ -1,0 +1,60 @@
+; tls1_set_cert_validity @ 009c52d4
+009c52d4	str x19,[sp, #-0x20]!
+009c52d8	mov x1,xzr
+009c52dc	mov x2,xzr
+009c52e0	mov x3,xzr
+009c52e4	mov w4,wzr
+009c52e8	stp x29,x30,[sp, #0x10]
+009c52ec	add x29,sp,#0x10
+009c52f0	mov x19,x0
+009c52f4	bl 0x009c4740
+009c52f8	mov w4,#0x1
+009c52fc	mov x0,x19
+009c5300	mov x1,xzr
+009c5304	mov x2,xzr
+009c5308	mov x3,xzr
+009c530c	bl 0x009c4740
+009c5310	mov w4,#0x2
+009c5314	mov x0,x19
+009c5318	mov x1,xzr
+009c531c	mov x2,xzr
+009c5320	mov x3,xzr
+009c5324	bl 0x009c4740
+009c5328	orr w4,wzr,#0x3
+009c532c	mov x0,x19
+009c5330	mov x1,xzr
+009c5334	mov x2,xzr
+009c5338	mov x3,xzr
+009c533c	bl 0x009c4740
+009c5340	mov w4,#0x4
+009c5344	mov x0,x19
+009c5348	mov x1,xzr
+009c534c	mov x2,xzr
+009c5350	mov x3,xzr
+009c5354	bl 0x009c4740
+009c5358	mov w4,#0x5
+009c535c	mov x0,x19
+009c5360	mov x1,xzr
+009c5364	mov x2,xzr
+009c5368	mov x3,xzr
+009c536c	bl 0x009c4740
+009c5370	orr w4,wzr,#0x6
+009c5374	mov x0,x19
+009c5378	mov x1,xzr
+009c537c	mov x2,xzr
+009c5380	mov x3,xzr
+009c5384	bl 0x009c4740
+009c5388	orr w4,wzr,#0x7
+009c538c	mov x0,x19
+009c5390	mov x1,xzr
+009c5394	mov x2,xzr
+009c5398	mov x3,xzr
+009c539c	bl 0x009c4740
+009c53a0	ldp x29,x30,[sp, #0x10]
+009c53a4	mov w4,#0x8
+009c53a8	mov x0,x19
+009c53ac	mov x1,xzr
+009c53b0	mov x2,xzr
+009c53b4	mov x3,xzr
+009c53b8	ldr x19,[sp], #0x20
+009c53bc	b 0x009c4740

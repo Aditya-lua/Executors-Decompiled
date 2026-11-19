@@ -1,0 +1,4 @@
+; d2i_OCSP_SINGLERESP @ 00aaf910
+00aaf910	adrp x3,0xc7a000
+00aaf914	add x3,x3,#0x128
+00aaf918	b 0x00c36150

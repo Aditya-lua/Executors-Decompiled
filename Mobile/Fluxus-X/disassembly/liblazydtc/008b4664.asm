@@ -1,0 +1,82 @@
+; FUN_008b4664 @ 008b4664
+008b4664	stp x29,x30,[sp, #-0x40]!
+008b4668	stp x24,x23,[sp, #0x10]
+008b466c	stp x22,x21,[sp, #0x20]
+008b4670	stp x20,x19,[sp, #0x30]
+008b4674	mov x29,sp
+008b4678	ldrh w8,[x0, #0x28]
+008b467c	mov w20,w2
+008b4680	mov x21,x1
+008b4684	mov x19,x0
+008b4688	add w8,w8,#0x1
+008b468c	and w9,w8,#0xffff
+008b4690	strh w8,[x0, #0x28]
+008b4694	cmp w9,#0xc8
+008b4698	b.cc 0x008b46ac
+008b469c	b.eq 0x008b478c
+008b46a0	and w8,w8,#0xffff
+008b46a4	cmp w8,#0xe1
+008b46a8	b.cs 0x008b479c
+008b46ac	ldr x23,[x19, #0x58]
+008b46b0	mov x0,x19
+008b46b4	mov x1,x21
+008b46b8	mov w2,w20
+008b46bc	bl 0x008c8994
+008b46c0	cbnz w0,0x008b4724
+008b46c4	ldr x8,[x19, #0x50]
+008b46c8	ldrb w24,[x19, #0x6]
+008b46cc	mov w10,#0x1
+008b46d0	strb w10,[x19, #0x6]
+008b46d4	ldr w9,[x8, #0x2c]
+008b46d8	orr w9,w9,#0x1
+008b46dc	str w9,[x8, #0x2c]
+008b46e0	ldrb w9,[x19, #0x2]
+008b46e4	tbz w9,#0x2,0x008b46fc
+008b46e8	add x2,x19,#0x38
+008b46ec	mov x0,x19
+008b46f0	mov x1,x19
+008b46f4	bl 0x008b63a4
+008b46f8	ldr x8,[x19, #0x50]
+008b46fc	ldr x9,[x19, #0x20]
+008b4700	mov x0,x19
+008b4704	sub x8,x8,x9
+008b4708	sub x22,x8,#0x30
+008b470c	bl 0x008be71c
+008b4710	mov x0,x19
+008b4714	mov x1,x22
+008b4718	bl 0x008b4b80
+008b471c	tbnz w24,#0x0,0x008b4724
+008b4720	strb wzr,[x19, #0x6]
+008b4724	cmn w20,#0x1
+008b4728	b.eq 0x008b4740
+008b472c	ldr x8,[x19, #0x58]
+008b4730	sub x9,x21,x23
+008b4734	add x8,x8,x9
+008b4738	add x8,x8,w20, SXTW  #0x4
+008b473c	str x8,[x19, #0x68]
+008b4740	ldr x8,[x19, #0x60]
+008b4744	ldrh w9,[x19, #0x28]
+008b4748	ldp x8,x10,[x8, #0x8]
+008b474c	sub w9,w9,#0x1
+008b4750	strh w9,[x19, #0x28]
+008b4754	cmp x10,x8
+008b4758	b.cs 0x008b4770
+008b475c	ldp x20,x19,[sp, #0x30]
+008b4760	ldp x22,x21,[sp, #0x20]
+008b4764	ldp x24,x23,[sp, #0x10]
+008b4768	ldp x29,x30,[sp], #0x40
+008b476c	ret
+008b4770	mov x0,x19
+008b4774	mov w1,#0x1
+008b4778	ldp x20,x19,[sp, #0x30]
+008b477c	ldp x22,x21,[sp, #0x20]
+008b4780	ldp x24,x23,[sp, #0x10]
+008b4784	ldp x29,x30,[sp], #0x40
+008b4788	b 0x008b52c4
+008b478c	adrp x1,0x2a7000
+008b4790	add x1,x1,#0x1c7
+008b4794	mov x0,x19
+008b4798	bl 0x008b39cc
+008b479c	mov x0,x19
+008b47a0	mov w1,#0x5
+008b47a4	bl 0x008b3f9c

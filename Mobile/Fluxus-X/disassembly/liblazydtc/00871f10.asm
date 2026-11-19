@@ -1,0 +1,81 @@
+; FUN_00871f10 @ 00871f10
+00871f10	stp x29,x30,[sp, #-0x50]!
+00871f14	str x25,[sp, #0x10]
+00871f18	stp x24,x23,[sp, #0x20]
+00871f1c	stp x22,x21,[sp, #0x30]
+00871f20	stp x20,x19,[sp, #0x40]
+00871f24	mov x29,sp
+00871f28	ldp x8,x9,[x0, #0x8]
+00871f2c	mov x19,x0
+00871f30	mov x21,x1
+00871f34	cmp x8,x9
+00871f38	b.cs 0x00871f5c
+00871f3c	ldp q2,q0,[x21, #0x10]
+00871f40	ldr x9,[x21, #0x30]
+00871f44	ldr q1,[x21]
+00871f48	add x21,x8,#0x38
+00871f4c	str x9,[x8, #0x30]
+00871f50	stp q2,q0,[x8, #0x10]
+00871f54	str q1,[x8]
+00871f58	b 0x0087202c
+00871f5c	ldr x20,[x19]
+00871f60	mov x11,#0x6db7
+00871f64	mov x10,#0x1
+00871f68	movk x11,#0xb6db, LSL #16
+00871f6c	sub x23,x8,x20
+00871f70	movk x11,#0xdb6d, LSL #32
+00871f74	asr x8,x23,#0x3
+00871f78	movk x11,#0x6db6, LSL #48
+00871f7c	madd x10,x8,x11,x10
+00871f80	mov x8,#0x2492
+00871f84	movk x8,#0x9249, LSL #16
+00871f88	movk x8,#0x4924, LSL #32
+00871f8c	movk x8,#0x492, LSL #48
+00871f90	cmp x10,x8
+00871f94	b.hi 0x00872048
+00871f98	sub x22,x9,x20
+00871f9c	mov x12,#0x9249
+00871fa0	asr x9,x22,#0x3
+00871fa4	movk x12,#0x4924, LSL #16
+00871fa8	movk x12,#0x2492, LSL #32
+00871fac	mul x9,x9,x11
+00871fb0	movk x12,#0x249, LSL #48
+00871fb4	lsl x11,x9,#0x1
+00871fb8	cmp x11,x10
+00871fbc	csel x10,x11,x10,hi
+00871fc0	cmp x9,x12
+00871fc4	csel x9,x10,x8,cc
+00871fc8	cmp x9,x8
+00871fcc	b.hi 0x0087204c
+00871fd0	lsl x8,x9,#0x6
+00871fd4	sub x24,x8,x9, LSL #0x3
+00871fd8	mov x0,x24
+00871fdc	bl 0x00c2fed0
+00871fe0	ldp q0,q1,[x21]
+00871fe4	add x8,x0,x23
+00871fe8	ldr q2,[x21, #0x20]
+00871fec	ldr x9,[x21, #0x30]
+00871ff0	mov x1,x20
+00871ff4	mov x2,x23
+00871ff8	mov x25,x0
+00871ffc	add x24,x0,x24
+00872000	stp q0,q1,[x8]
+00872004	add x21,x8,#0x38
+00872008	str q2,[x8, #0x20]
+0087200c	str x9,[x8, #0x30]
+00872010	bl 0x00c2ffd0
+00872014	stp x25,x21,[x19]
+00872018	str x24,[x19, #0x10]
+0087201c	cbz x20,0x0087202c
+00872020	mov x0,x20
+00872024	mov x1,x22
+00872028	bl 0x00c2fe80
+0087202c	str x21,[x19, #0x8]
+00872030	ldp x20,x19,[sp, #0x40]
+00872034	ldr x25,[sp, #0x10]
+00872038	ldp x22,x21,[sp, #0x30]
+0087203c	ldp x24,x23,[sp, #0x20]
+00872040	ldp x29,x30,[sp], #0x50
+00872044	ret
+00872048	bl 0x00872050
+0087204c	bl 0x007fe1b8

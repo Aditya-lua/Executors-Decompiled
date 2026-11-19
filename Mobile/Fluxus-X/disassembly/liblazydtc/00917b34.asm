@@ -1,0 +1,9 @@
+; FUN_00917b34 @ 00917b34
+00917b34	mov x8,x3
+00917b38	str xzr,[x3]
+00917b3c	tbnz x4,#0x3f,0x00917b4c
+00917b40	mov w3,#0x1
+00917b44	mov x4,x8
+00917b48	b 0x00917358
+00917b4c	orr w0,wzr,#0xfffffffe
+00917b50	ret

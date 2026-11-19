@@ -1,0 +1,12 @@
+; _INIT_149 @ 008b232c
+008b232c	movi v0.2D,#0x0
+008b2330	adrp x1,0xd1f000
+008b2334	add x1,x1,#0x2d0
+008b2338	mov w8,#0x3f800000
+008b233c	nop
+008b2340	adr x0,0x7fbc70
+008b2344	adrp x2,0xc48000
+008b2348	add x2,x2,#0x880
+008b234c	str w8,[x1, #0x20]
+008b2350	stp q0,q0,[x1]
+008b2354	b 0x00c2fe70

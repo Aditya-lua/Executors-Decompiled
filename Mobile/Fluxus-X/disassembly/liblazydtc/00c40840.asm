@@ -1,0 +1,5 @@
+; AUTHORITY_INFO_ACCESS_free @ 00c40840
+00c40840	adrp x16,0xcbe000
+00c40844	ldr x17,[x16, #0x408]
+00c40848	add x16,x16,#0x408
+00c4084c	br x17

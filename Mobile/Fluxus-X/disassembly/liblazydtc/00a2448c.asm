@@ -1,0 +1,4 @@
+; d2i_ECPKPARAMETERS @ 00a2448c
+00a2448c	adrp x3,0xc5a000
+00a24490	add x3,x3,#0xde8
+00a24494	b 0x00c36150

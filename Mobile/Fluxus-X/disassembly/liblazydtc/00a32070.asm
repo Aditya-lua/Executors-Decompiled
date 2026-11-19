@@ -1,0 +1,100 @@
+; EC_POINT_mul @ 00a32070
+00a32070	sub sp,sp,#0x50
+00a32074	stp x24,x23,[sp, #0x10]
+00a32078	stp x22,x21,[sp, #0x20]
+00a3207c	stp x20,x19,[sp, #0x30]
+00a32080	stp x29,x30,[sp, #0x40]
+00a32084	stp x4,x3,[sp]
+00a32088	ldr x8,[x0]
+00a3208c	ldr x9,[x1]
+00a32090	add x29,sp,#0x40
+00a32094	cmp x8,x9
+00a32098	b.eq 0x00a320e8
+00a3209c	bl 0x00c342a0
+00a320a0	adrp x0,0x29e000
+00a320a4	adrp x2,0x2d1000
+00a320a8	add x0,x0,#0xa7
+00a320ac	add x2,x2,#0x85f
+00a320b0	mov w1,#0x465
+00a320b4	bl 0x00c342b0
+00a320b8	mov w0,#0x10
+00a320bc	mov w1,#0x65
+00a320c0	mov x2,xzr
+00a320c4	bl 0x00c342c0
+00a320c8	mov w19,wzr
+00a320cc	mov w0,w19
+00a320d0	ldp x29,x30,[sp, #0x40]
+00a320d4	ldp x20,x19,[sp, #0x30]
+00a320d8	ldp x22,x21,[sp, #0x20]
+00a320dc	ldp x24,x23,[sp, #0x10]
+00a320e0	add sp,sp,#0x50
+00a320e4	ret
+00a320e8	ldr w9,[x0, #0x20]
+00a320ec	mov x6,x5
+00a320f0	mov x22,x4
+00a320f4	mov x23,x3
+00a320f8	mov x19,x1
+00a320fc	mov x20,x0
+00a32100	mov x21,x2
+00a32104	cbz w9,0x00a32118
+00a32108	ldr w10,[x19, #0x8]
+00a3210c	cbz w10,0x00a32118
+00a32110	cmp w9,w10
+00a32114	b.ne 0x00a3209c
+00a32118	cbz x23,0x00a3213c
+00a3211c	ldr x10,[x23]
+00a32120	cmp x8,x10
+00a32124	b.ne 0x00a3209c
+00a32128	cbz w9,0x00a3213c
+00a3212c	ldr w10,[x23, #0x8]
+00a32130	cbz w10,0x00a3213c
+00a32134	cmp w9,w10
+00a32138	b.ne 0x00a3209c
+00a3213c	orr x9,x21,x22
+00a32140	cbnz x9,0x00a32164
+00a32144	mov x0,x20
+00a32148	mov x1,x19
+00a3214c	ldp x29,x30,[sp, #0x40]
+00a32150	ldp x20,x19,[sp, #0x30]
+00a32154	ldp x22,x21,[sp, #0x20]
+00a32158	ldp x24,x23,[sp, #0x10]
+00a3215c	add sp,sp,#0x50
+00a32160	b 0x00a31588
+00a32164	cbz x6,0x00a32170
+00a32168	mov x24,xzr
+00a3216c	b 0x00a32184
+00a32170	bl 0x00c38a70
+00a32174	cbz x0,0x00a321d0
+00a32178	ldr x8,[x20]
+00a3217c	mov x24,x0
+00a32180	mov x6,x0
+00a32184	cmp x23,#0x0
+00a32188	ldr x8,[x8, #0xe0]
+00a3218c	cset w9,ne
+00a32190	cmp x22,#0x0
+00a32194	cset w10,ne
+00a32198	and w3,w9,w10
+00a3219c	add x4,sp,#0x8
+00a321a0	mov x5,sp
+00a321a4	mov x0,x20
+00a321a8	mov x1,x19
+00a321ac	mov x2,x21
+00a321b0	cbz x8,0x00a321bc
+00a321b4	blr x8
+00a321b8	b 0x00a321c0
+00a321bc	bl 0x00c3af30
+00a321c0	mov w19,w0
+00a321c4	mov x0,x24
+00a321c8	bl 0x00c38a30
+00a321cc	b 0x00a320cc
+00a321d0	bl 0x00c342a0
+00a321d4	adrp x0,0x29e000
+00a321d8	adrp x2,0x2d1000
+00a321dc	add x0,x0,#0xa7
+00a321e0	add x2,x2,#0x85f
+00a321e4	mov w1,#0x471
+00a321e8	bl 0x00c342b0
+00a321ec	mov w1,#0x103
+00a321f0	mov w0,#0x10
+00a321f4	movk w1,#0xc, LSL #16
+00a321f8	b 0x00a320c0

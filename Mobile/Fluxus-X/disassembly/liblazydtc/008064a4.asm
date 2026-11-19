@@ -1,0 +1,14 @@
+; _INIT_61 @ 008064a4
+008064a4	adrp x8,0xd1b000
+008064a8	ldrb w9,[x8, #0x208]
+008064ac	tbnz w9,#0x0,0x008064d4
+008064b0	adrp x9,0xcb4000
+008064b4	mov w11,#0x1
+008064b8	ldr x9,[x9, #0x9b0]
+008064bc	strb w11,[x8, #0x208]
+008064c0	ldr w10,[x9]
+008064c4	add w8,w10,#0x1
+008064c8	adrp x10,0xd1b000
+008064cc	str w8,[x9]
+008064d0	str w8,[x10, #0x200]
+008064d4	ret

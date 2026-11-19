@@ -1,0 +1,5 @@
+; X509_STORE_lock @ 00c40440
+00c40440	adrp x16,0xcbe000
+00c40444	ldr x17,[x16, #0x208]
+00c40448	add x16,x16,#0x208
+00c4044c	br x17

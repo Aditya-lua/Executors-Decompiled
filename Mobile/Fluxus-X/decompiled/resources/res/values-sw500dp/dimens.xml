@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="captchaScreenWidth">400.0dp</dimen>
+    <dimen name="textSizeSignupHeader">23.0sp</dimen>
+</resources>

@@ -1,0 +1,28 @@
+; FUN_00850f24 @ 00850f24
+00850f24	stp x29,x30,[sp, #-0x30]!
+00850f28	str x21,[sp, #0x10]
+00850f2c	stp x20,x19,[sp, #0x20]
+00850f30	mov x29,sp
+00850f34	ldr x8,[x1]
+00850f38	mov x20,x0
+00850f3c	mov x19,x1
+00850f40	mov x0,x1
+00850f44	mov x1,x20
+00850f48	ldr x8,[x8, #0x1c0]
+00850f4c	blr x8
+00850f50	tbz w0,#0x0,0x00850f80
+00850f54	ldr x8,[x20, #0x28]
+00850f58	cbz x8,0x00850f80
+00850f5c	ldr x20,[x20, #0x20]
+00850f60	lsl x21,x8,#0x3
+00850f64	ldr x0,[x20], #0x8
+00850f68	mov x1,x19
+00850f6c	ldr x8,[x0]
+00850f70	ldr x8,[x8]
+00850f74	blr x8
+00850f78	subs x21,x21,#0x8
+00850f7c	b.ne 0x00850f64
+00850f80	ldp x20,x19,[sp, #0x20]
+00850f84	ldr x21,[sp, #0x10]
+00850f88	ldp x29,x30,[sp], #0x30
+00850f8c	ret

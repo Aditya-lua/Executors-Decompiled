@@ -1,0 +1,22 @@
+; cpr::Session::Post @ 008f00e4
+008f00e4	stp x20,x19,[sp, #-0x20]!
+008f00e8	stp x29,x30,[sp, #0x10]
+008f00ec	add x29,sp,#0x10
+008f00f0	mov x19,x0
+008f00f4	mov x20,x8
+008f00f8	bl 0x00c31210
+008f00fc	ldr x8,[x19, #0x2a0]
+008f0100	cbz x8,0x008f0118
+008f0104	ldp x29,x30,[sp, #0x10]
+008f0108	mov x8,x20
+008f010c	mov x0,x19
+008f0110	ldp x20,x19,[sp], #0x20
+008f0114	b 0x00c313b0
+008f0118	mov x0,x19
+008f011c	bl 0x00c31250
+008f0120	ldp x29,x30,[sp, #0x10]
+008f0124	mov w1,w0
+008f0128	mov x8,x20
+008f012c	mov x0,x19
+008f0130	ldp x20,x19,[sp], #0x20
+008f0134	b 0x00c31380

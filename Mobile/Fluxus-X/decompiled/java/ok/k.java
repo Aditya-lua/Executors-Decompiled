@@ -1,0 +1,16 @@
+package ok;
+
+import android.content.Context;
+import com.github.luben.zstd.BuildConfig;
+import org.jetbrains.annotations.NotNull;
+import p001kotlin.Metadata;
+import p001kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\u001a\u0011\u0010\u0002\u001a\u00020\u0001*\u00020\u0000¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Landroid/content/Context;", BuildConfig.FLAVOR, "a", "(Landroid/content/Context;)Z", "utils_googleRelease"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class k {
+    public static final boolean a(@NotNull Context context) {
+        Intrinsics.checkNotNullParameter(context, "<this>");
+        return context.getPackageManager().hasSystemFeature("android.software.leanback");
+    }
+}

@@ -1,0 +1,3 @@
+; X509_NAME_ENTRY_set @ 00b15618
+00b15618	ldr w0,[x0, #0x10]
+00b1561c	ret

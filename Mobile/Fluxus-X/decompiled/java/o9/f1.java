@@ -1,0 +1,64 @@
+package o9;
+
+import android.util.Log;
+import java.util.Objects;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class f1 {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public Object f26952a;
+    public boolean b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final /* synthetic */ d f26953c;
+
+    public f1(d dVar, Object obj) {
+        Objects.requireNonNull(dVar);
+        this.f26953c = dVar;
+        this.f26952a = obj;
+        this.b = false;
+    }
+
+    public abstract void a(Object obj);
+
+    public final void b() {
+        Object obj;
+        synchronized (this) {
+            try {
+                obj = this.f26952a;
+                if (this.b) {
+                    String string = toString();
+                    StringBuilder sb2 = new StringBuilder(string.length() + 47);
+                    sb2.append("Callback proxy ");
+                    sb2.append(string);
+                    sb2.append(" being reused. This is not safe.");
+                    Log.w("GmsClient", sb2.toString());
+                }
+            } catch (Throwable th2) {
+                throw th2;
+            }
+        }
+        if (obj != null) {
+            a(obj);
+        }
+        synchronized (this) {
+            this.b = true;
+        }
+        c();
+    }
+
+    public final void c() {
+        d();
+        d dVar = this.f26953c;
+        synchronized (dVar.zzj()) {
+            dVar.zzj().remove(this);
+        }
+    }
+
+    public final void d() {
+        synchronized (this) {
+            this.f26952a = null;
+        }
+    }
+}
